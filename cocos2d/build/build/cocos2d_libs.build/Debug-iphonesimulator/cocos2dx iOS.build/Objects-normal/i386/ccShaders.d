@@ -1,0 +1,33 @@
+dependencies: \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.cpp \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/renderer/ccShaders.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios/CCGL.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/ccConfig.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios/CCPlatformDefine.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Position_uColor.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Position_uColor.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionColor.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionColor.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTexture.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTexture.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureA8Color.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureA8Color.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureColor.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureColor.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureColor_noMVP.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureColor_noMVP.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTextureColorAlphaTest.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTexture_uColor.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionTexture_uColor.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionColorLengthTexture.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_PositionColorLengthTexture.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Label.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Label_df.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Label_df_glow.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Label_normal.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_Label_outline.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_3D_PositionTex.vert \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_3D_Color.frag \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShader_3D_ColorTex.frag

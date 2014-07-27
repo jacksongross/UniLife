@@ -1,0 +1,22 @@
+dependencies: \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.cpp \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCRef.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCPlatformMacros.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/ccConfig.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCPlatformConfig.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios/CCPlatformDefine.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCBool.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCDataVisitor.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCInteger.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/CCConsole.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/ccMacros.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios/CCStdC.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/CCCommon.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCFloat.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCDouble.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCString.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCArray.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/ccCArray.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCDictionary.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/base/uthash.h \
+  /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/deprecated/CCSet.h

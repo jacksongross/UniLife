@@ -1,0 +1,1552 @@
+TUniLife iOS
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Info.plist /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist
+cCpResource ios/Icon-120.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-120.png
+cCpResource ios/Icon-76.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-76.png
+cCpResource ios/Default@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default@2x.png
+cCpResource ios/Icon-100.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-100.png
+cCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseNormal.png
+cCpResource ios/Icon-152.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-152.png
+cCpResource ios/Default-568h@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default-568h@2x.png
+cCpResource ios/Icon-72.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-72.png
+cCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseSelected.png
+cCpResource ios/Icon-50.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-50.png
+cCpResource ios/Icon-114.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-114.png
+cCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/HelloWorld.png
+cCpResource ios/Icon-29.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-29.png
+cCpResource ios/Icon-40.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-40.png
+cCpResource ios/Icon-144.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-144.png
+cCpResource ios/Icon-80.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-80.png
+cCpResource ios/Icon-57.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-57.png
+cCpResource ios/Default.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default.png
+cCpResource ios/Icon-58.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-58.png
+cProcessPCH++ /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH++ /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.o /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.o /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS normal i386
+cGenerateDSYMFile /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app.dSYM /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS
+cTouch /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+c00000000000000000000000000000000
+t2
+s0
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c000000005353C5250000000000000198
+t1397998885
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000531F0DC600000000000003B4
+t1394544070
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531F0DD2000000000000019E
+t1394544082
+s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c00000000531F0DD30000000000484210
+t1394544083
+s4735504
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c00000000531F0DD40000000000904120
+t1394544084
+s9453856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005353C49C0000000000446820
+t1397998748
+s4483104
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000531F0DD5000000000088D8C0
+t1394544085
+s8968384
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c00000000531F0DD6000000000007C0D0
+t1394544086
+s508112
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c00000000531F0DD60000000000037680
+t1394544086
+s226944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c00000000531F0DD7000000000048F720
+t1394544087
+s4781856
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000531F0DDA0000000001F1DE10
+t1394544090
+s32628240
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib
+c00000000531F0DEF000000000002B700
+t1394544111
+s177920
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp
+c0000000053D49FA20000000000000556
+t1406443426
+s1366
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp
+c0000000053D49FA20000000000000AAD
+t1406443426
+s2733
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png
+c0000000053D49FA200000000000018A7
+t1406443426
+s6311
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png
+c0000000053D49FA2000000000000157B
+t1406443426
+s5499
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png
+c0000000053D49FA20000000000021E19
+t1406443426
+s138777
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app
+t1406443757
+s816
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app.dSYM
+t2
+s0
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseNormal.png
+t1406443738
+s6311
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseSelected.png
+t1406443738
+s5499
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default-568h@2x.png
+t1406443738
+s193731
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default.png
+t1406443738
+s89508
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default@2x.png
+t1406443738
+s580904
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/HelloWorld.png
+t1406443738
+s138777
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-100.png
+t1406443738
+s17283
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-114.png
+t1406443738
+s16537
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-120.png
+t1406443738
+s23871
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-144.png
+t1406443738
+s26403
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-152.png
+t1406443738
+s33665
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-29.png
+t1406443738
+s4038
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-40.png
+t1406443738
+s5478
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-50.png
+t1406443738
+s7038
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-57.png
+t1406443738
+s8960
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-58.png
+t1406443738
+s8433
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-72.png
+t1406443738
+s11453
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-76.png
+t1406443738
+s13250
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-80.png
+t1406443738
+s12489
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Info.plist
+t1406443738
+s1154
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/PkgInfo
+t1406443738
+s8
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/UniLife iOS
+t1406443757
+s8903512
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion iOS.a
+c0000000053D4A0DA0000000000055290
+t1406443738
+s348816
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libbox2d iOS.a
+c0000000053D4A0D500000000001CF200
+t1406443733
+s1896960
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libchipmunk iOS.a
+c0000000053D4A00B00000000000BF4E0
+t1406443531
+s783584
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx iOS.a
+c0000000053D4A0BE000000001193FAC0
+t1406443710
+s294910656
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx-extensions iOS.a
+c0000000053D4A0D10000000001A3ADA8
+t1406443729
+s27504040
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppController.o
+t1406443742
+s1378572
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppDelegate.o
+t1406443742
+s1574104
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/HelloWorldScene.o
+t1406443742
+s1989136
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/RootViewController.o
+t1406443742
+s1608284
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/UniLife iOS.LinkFileList
+c0000000053D4A0DA00000000000002FE
+t1406443738
+s766
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/main.o
+t1406443739
+s4108
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm
+c0000000053D49FA2000000000000164C
+t1406443426
+s5708
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default-568h@2x.png
+c0000000053D49FA2000000000002F4C3
+t1406443426
+s193731
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default.png
+c0000000053D49FA20000000000015DA4
+t1406443426
+s89508
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default@2x.png
+c0000000053D49FA2000000000008DD28
+t1406443426
+s580904
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-100.png
+c0000000053D49FA20000000000004383
+t1406443426
+s17283
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-114.png
+c0000000053D49FA20000000000004099
+t1406443426
+s16537
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-120.png
+c0000000053D49FA20000000000005D3F
+t1406443426
+s23871
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-144.png
+c0000000053D49FA20000000000006723
+t1406443426
+s26403
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-152.png
+c0000000053D49FA20000000000008381
+t1406443426
+s33665
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-29.png
+c0000000053D49FA20000000000000FC6
+t1406443426
+s4038
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-40.png
+c0000000053D49FA20000000000001566
+t1406443426
+s5478
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-50.png
+c0000000053D49FA20000000000001B7E
+t1406443426
+s7038
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-57.png
+c0000000053D49FA20000000000002300
+t1406443426
+s8960
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-58.png
+c0000000053D49FA200000000000020F1
+t1406443426
+s8433
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-72.png
+c0000000053D49FA20000000000002CBD
+t1406443426
+s11453
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-76.png
+c0000000053D49FA200000000000033C2
+t1406443426
+s13250
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-80.png
+c0000000053D49FA200000000000030C9
+t1406443426
+s12489
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist
+c0000000053D49FA200000000000007B2
+t1406443426
+s1970
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch
+c0000000053D49FB300000000000000B5
+t1406443443
+s181
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm
+c0000000053D49FA20000000000000E51
+t1406443426
+s3665
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m
+c0000000053D49FB300000000000000F2
+t1406443443
+s242
+
+N/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch
+t1406443739
+s5370040
+
+N/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch
+t1406443739
+s6318876
+
+N/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch
+t1406443738
+s123192
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies63993e5ad884b941^d592565ad884b941^---0#1#1#--18"Check dependencies36"D32B4B06-C91F-4598-AFE4-FCCA99EB8CE2-
+
+CCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136539.372164
+e428136542.675705
+r1
+xCompileC
+xbuild/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppController.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCEAGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCESRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/cocos2d.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRef.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRefPtr.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConsole.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCVector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCNS.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCGeometry.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMath.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMathBase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCValue.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccTypes.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConfiguration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDirector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListener.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEvent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCCommon.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProtocols.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScheduler.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/uthash.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/base64.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ZipUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProfiling.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUTF8.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCUserDefault.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventType.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCVertex.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimation.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionEase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTween.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabel.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransition.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenu.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSprite.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCImage.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCString.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrabber.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCDevice.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCThread.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMesh.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/Export.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCSet.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCBool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm212"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.o [1mios/AppController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compilere7895f5bd884b941^a400ad5ed884b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm0000000000000000^5059"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.o [1mios/AppController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -include /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/AppController.mm -o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppController.o36"6C43042A-D51D-4F14-A840-B3A75224264A-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.o /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136539.373671
+e428136542.498450
+r1
+xCompileC
+xbuild/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppDelegate.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/cocos2d.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRef.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRefPtr.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConsole.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCVector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCNS.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCGeometry.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMath.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMathBase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCValue.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccTypes.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConfiguration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDirector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListener.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEvent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCCommon.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProtocols.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScheduler.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/uthash.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/base64.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ZipUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProfiling.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUTF8.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCUserDefault.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventType.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCVertex.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimation.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionEase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTween.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabel.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransition.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenu.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSprite.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCImage.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCString.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrabber.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCDevice.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCThread.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMesh.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/Export.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCSet.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCBool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp248"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler7c29605bd884b941^459b7f5ed884b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp0000000000000000^4832"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -include /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/AppDelegate.cpp -o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/AppDelegate.o36"80A162AE-CD82-4720-B973-909BADBE5248-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.o /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136539.486187
+e428136542.923876
+r1
+xCompileC
+xbuild/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/HelloWorldScene.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp
+d/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/cocos2d.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRef.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRefPtr.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConsole.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCVector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCNS.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCGeometry.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMath.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMathBase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCValue.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccTypes.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConfiguration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDirector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListener.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEvent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCCommon.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProtocols.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScheduler.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/uthash.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/base64.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ZipUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProfiling.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUTF8.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCUserDefault.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventType.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCVertex.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimation.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionEase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTween.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabel.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransition.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenu.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSprite.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCImage.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCString.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrabber.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCDevice.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCThread.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMesh.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/Export.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCSet.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCBool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp256"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler15a97c5bd884b941^cb83ec5ed884b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp0000000000000000^4856"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp[0m normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -include /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/Classes/HelloWorldScene.cpp -o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/HelloWorldScene.o36"833246CC-C9BC-42CA-B2D5-1827948D80C6-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136539.372859
+e428136542.808813
+r1
+xCompileC
+xbuild/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/RootViewController.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/cocos2d.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRef.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRefPtr.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConsole.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCVector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCNS.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCGeometry.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMath.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMathBase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCValue.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccTypes.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConfiguration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDirector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListener.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEvent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCCommon.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProtocols.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScheduler.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/uthash.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/base64.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ZipUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProfiling.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUTF8.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCUserDefault.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventType.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCVertex.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimation.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionEase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTween.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabel.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransition.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenu.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSprite.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCImage.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCString.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrabber.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCDevice.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCThread.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMesh.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/Export.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCSet.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCBool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDeprecated.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCEAGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCESRenderer.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm222"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.o [1mios/RootViewController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler2ec75f5bd884b941^1310cf5ed884b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm0000000000000000^5089"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.o [1mios/RootViewController.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -include /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/RootViewController.mm -o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/RootViewController.o36"3BB5B2D4-B0CD-4AFB-9362-8A3C2F898F32-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCompileC build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136539.374756
+e428136539.485781
+r1
+xCompileC
+xbuild/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/main.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m191"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.o [1mios/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2a38605bd884b941^92af7c5bd884b941^---0#0#1#-19%DVTDocumentLocation2@75"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m0000000000000000^4874"[1mCompileC[0m build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.o [1mios/main.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -include /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/main.m -o /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/main.o36"E7E373ED-999B-4A48-AB60-054FD29F83F5-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseNormal.png
+s428136538.716372
+e428136538.738340
+r1
+xCpResource
+x/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseNormal.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseNormal.png189"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseNormal.png[0macc9b75ad884b941^7a1dbd5ad884b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/CloseNormal.png00345c3adfffdf42^1245"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseNormal.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseNormal.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"FB213CEF-55B2-41F8-993B-833DCE49ED1F-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseSelected.png
+s428136538.727827
+e428136538.738254
+r1
+xCpResource
+x/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseSelected.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/CloseSelected.png193"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseSelected.png[0m5c8fba5ad884b941^2d08bd5ad884b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/CloseSelected.png00345c3adfffdf42^1251"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/CloseSelected.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/CloseSelected.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"8BAAB34B-FC00-4556-908E-B8E3EB7DD6D5-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/HelloWorld.png
+s428136538.738995
+e428136538.756643
+r1
+xCpResource
+x/Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/HelloWorld.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/HelloWorld.png187"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/HelloWorld.png[0m4a7dbd5ad884b941^08cdc25ad884b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/HelloWorld.png00345c3adfffdf42^1242"[1mCpResource[0m /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/HelloWorld.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/Resources/HelloWorld.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"CF5AF36F-A993-4285-8A0A-4DC2BF0BE5BE-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Default-568h@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default-568h@2x.png
+s428136538.717298
+e428136538.756367
+r1
+xCpResource
+xios/Default-568h@2x.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default-568h@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default-568h@2x.png146"[1mCpResource[0m ios/Default-568h@2x.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default-568h@2x.png[0m15e4b75ad884b941^d2a7c15ad884b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Default-568h@2x.png00345c3adfffdf42^1213"[1mCpResource[0m ios/Default-568h@2x.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default-568h@2x.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default-568h@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"3C38E07D-E061-49D0-97F9-FE61CD79A85E-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Default.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default.png
+s428136538.759353
+e428136538.762222
+r1
+xCpResource
+xios/Default.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default.png130"[1mCpResource[0m ios/Default.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default.png[0m909ec25ad884b941^0d53c35ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Default.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Default.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"484C1D07-0C43-4BDF-B675-E816FFBD5B88-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Default@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default@2x.png
+s428136538.611668
+e428136538.726906
+r1
+xCpResource
+xios/Default@2x.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Default@2x.png136"[1mCpResource[0m ios/Default@2x.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default@2x.png[0mbdaba65ad884b941^8b18ba5ad884b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Default@2x.png00345c3adfffdf42^1198"[1mCpResource[0m ios/Default@2x.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Default@2x.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Default@2x.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"3019ED0F-91BD-467C-9F90-2970FAED4887-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-100.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-100.png
+s428136538.611956
+e428136538.715960
+r1
+xCpResource
+xios/Icon-100.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-100.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-100.png132"[1mCpResource[0m ios/Icon-100.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-100.png[0mc9b0a65ad884b941^724fb75ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-100.png00345c3adfffdf42^1192"[1mCpResource[0m ios/Icon-100.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-100.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-100.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"8F7C6F53-B2E0-43EA-8970-08ED97D55C48-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-114.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-114.png
+s428136538.738617
+e428136538.755168
+r1
+xCpResource
+xios/Icon-114.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-114.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-114.png132"[1mCpResource[0m ios/Icon-114.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-114.png[0mcb67bd5ad884b941^bc57c15ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-114.png00345c3adfffdf42^1192"[1mCpResource[0m ios/Icon-114.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-114.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-114.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"5A853B05-B532-4D5A-A0B1-480C0A714EF1-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-120.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-120.png
+s428136538.611280
+e428136538.715997
+r1
+xCpResource
+xios/Icon-120.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-120.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-120.png132"[1mCpResource[0m ios/Icon-120.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-120.png[0m32aca65ad884b941^8a74b75ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-120.png00345c3adfffdf42^1192"[1mCpResource[0m ios/Icon-120.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-120.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-120.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"DA776CED-A877-4F6D-A72E-136EB47B0AF8-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-144.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-144.png
+s428136538.756328
+e428136538.759685
+r1
+xCpResource
+xios/Icon-144.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-144.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-144.png132"[1mCpResource[0m ios/Icon-144.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-144.png[0m1effc15ad884b941^6d1ec35ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-144.png00345c3adfffdf42^1192"[1mCpResource[0m ios/Icon-144.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-144.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-144.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"6F744B21-734A-4817-95F1-8F17AE8AEF27-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-152.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-152.png
+s428136538.716889
+e428136538.727556
+r1
+xCpResource
+xios/Icon-152.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-152.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-152.png132"[1mCpResource[0m ios/Icon-152.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-152.png[0m5cccb75ad884b941^4771ba5ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-152.png00345c3adfffdf42^1192"[1mCpResource[0m ios/Icon-152.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-152.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-152.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"309A12EC-BD9C-44CC-A341-191B028257C5-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-29.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-29.png
+s428136538.739667
+e428136538.755087
+r1
+xCpResource
+xios/Icon-29.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-29.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-29.png130"[1mCpResource[0m ios/Icon-29.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-29.png[0m938fbd5ad884b941^ec4cc15ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-29.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-29.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-29.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-29.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"1C131845-B7B9-467E-88E5-BBF2F72B7FB1-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-40.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-40.png
+s428136538.755527
+e428136538.758738
+r1
+xCpResource
+xios/Icon-40.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-40.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-40.png130"[1mCpResource[0m ios/Icon-40.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-40.png[0mbdc7c15ad884b941^fcfdc25ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-40.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-40.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-40.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-40.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"8DFF6083-9FD3-46E6-99FF-7DD5437B7CA2-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-50.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-50.png
+s428136538.729839
+e428136538.738133
+r1
+xCpResource
+xios/Icon-50.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-50.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-50.png130"[1mCpResource[0m ios/Icon-50.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-50.png[0m94f6ba5ad884b941^b1f9bc5ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-50.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-50.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-50.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-50.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"6A706581-9261-4781-84BB-0616C7212A69-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-57.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-57.png
+s428136538.758357
+e428136538.760740
+r1
+xCpResource
+xios/Icon-57.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-57.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-57.png130"[1mCpResource[0m ios/Icon-57.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-57.png[0m6762c25ad884b941^3143c35ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-57.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-57.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-57.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-57.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"D7FC7A69-5A73-40DA-9557-02D521B140B0-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-58.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-58.png
+s428136538.759807
+e428136538.762212
+r1
+xCpResource
+xios/Icon-58.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-58.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-58.png130"[1mCpResource[0m ios/Icon-58.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-58.png[0m0fd3c25ad884b941^2d5fc35ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-58.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-58.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-58.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-58.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"7CEA09B1-2B3E-4652-9CAA-D7AC7166D059-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-72.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-72.png
+s428136538.727266
+e428136538.729616
+r1
+xCpResource
+xios/Icon-72.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-72.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-72.png130"[1mCpResource[0m ios/Icon-72.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-72.png[0m1974ba5ad884b941^7ec9ba5ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-72.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-72.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-72.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-72.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"8E95A552-5E6B-420E-8F3A-FD1E43E20B03-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-76.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-76.png
+s428136538.611464
+e428136538.715975
+r1
+xCpResource
+xios/Icon-76.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-76.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-76.png130"[1mCpResource[0m ios/Icon-76.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-76.png[0m3eb1a65ad884b941^8e58b75ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-76.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-76.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-76.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-76.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"D5C3E549-9BD7-4CF3-920E-2FC99C609330-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CCpResource ios/Icon-80.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-80.png
+s428136538.756995
+e428136538.759455
+r1
+xCpResource
+xios/Icon-80.png
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-80.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Copy /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Icon-80.png130"[1mCpResource[0m ios/Icon-80.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-80.png[0mbdfdc15ad884b941^d619c35ad884b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app/Icon-80.png00345c3adfffdf42^1189"[1mCpResource[0m ios/Icon-80.png [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Icon-80.png[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Icon-80.png /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app36"18D63955-1839-45DF-B163-5414150DAA34-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CGenerateDSYMFile /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app.dSYM /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS
+s428136558.132169
+e428136572.492679
+r1
+xGenerateDSYMFile
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app.dSYM
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/UniLife iOS
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Generate /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app.dSYM202"[1mGenerateDSYMFile[0m [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app.dSYM[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS3cf8216ed884b941^81227e7cd884b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife%20iOS.app.dSYM00345c3adfffdf42^1272"[1mGenerateDSYMFile[0m [1m/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app.dSYM[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS -o /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app.dSYM36"5024CCA2-58A0-433F-81A5-FE0362189014-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CLd /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS normal i386
+s428136543.093584
+e428136557.745215
+r1
+xLd
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/UniLife iOS
+xnormal
+xi386
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/UniLife iOS.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppController.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/RootViewController.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/AppDelegate.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/main.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife iOS.build/Objects-normal/i386/HelloWorldScene.o
+d/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libbox2d iOS.a
+d/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libchipmunk iOS.a
+d/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx iOS.a
+d/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx-extensions iOS.a
+d/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion iOS.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libz.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/arc/libarclite_iphonesimulator.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AVFoundation.framework/libAVFAudio.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_coreservices.dylib
+d/usr/lib/system/libsystem_coretls.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_networkextension.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libsystem_secinit.dylib
+d/usr/lib/system/libsystem_trace.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Link /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/UniLife iOS111"[1mLd[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS normal i386492d185fd884b941^75c7be6dd884b941^---0#0#1#--2516"[1mLd[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS normal i386    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export IPHONEOS_DEPLOYMENT_TARGET=5.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -filelist /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/UniLife\ iOS.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -stdlib=libc++ -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5.0 /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libbox2d\ iOS.a /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libchipmunk\ iOS.a /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx\ iOS.a /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libcocos2dx-extensions\ iOS.a /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a -framework CoreMotion -framework Foundation -framework UIKit -framework CoreGraphics -framework OpenGLES -lz -framework QuartzCore -framework OpenAL -framework AVFoundation -framework AudioToolbox -Xlinker -dependency_info -Xlinker /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/Objects-normal/i386/UniLife\ iOS_dependency_info.dat -o /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/UniLife\ iOS36"336925E7-5D91-406F-BB60-7D1F177DE6AF-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CProcessInfoPlistFile /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Info.plist /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist
+s428136538.339768
+e428136538.610617
+r1
+xProcessInfoPlistFile
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife iOS.app/Info.plist
+x/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Process /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist138"[1mProcessInfoPlistFile[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Info.plist [1mios/Info.plist[0ma4c6785ad884b941^2a539c5ad884b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist0000000000000000^1285"[1mProcessInfoPlistFile[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Info.plist [1mios/Info.plist[0m    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    builtin-infoPlistUtility /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Info.plist -genpkginfo /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app/Info.plist36"DBA376C0-D798-4FA0-A606-0E3BDAD58D36-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CProcessPCH /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136538.764317
+e428136539.283555
+r1
+xProcessPCH
+x/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch270"[1mProcessPCH[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler10e9c35ad884b941^0799485bd884b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch0000000000000000^4855"[1mProcessPCH[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios --serialize-diagnostics /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.d -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch -o /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-acpdjnfdawcbaahccjgnjwfycwqc/Prefix.pch.pch36"A8442CDF-7A28-48D8-A50A-75F72EB35FD2-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CProcessPCH++ /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136538.763229
+e428136539.370329
+r1
+xProcessPCH++
+x/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch274"[1mProcessPCH++[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler6ea1c35ad884b941^e2cd5e5bd884b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch0000000000000000^4986"[1mProcessPCH++[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch ios/Prefix.pch normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++-header -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios --serialize-diagnostics /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.d -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch -o /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-ggausuzanwpvyybdpyyyjciecpjs/Prefix.pch.pch36"1DA9CC04-B71A-45ED-AC5E-68E34B85D46E-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CProcessPCH++ /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136538.763755
+e428136538.824753
+r1
+xProcessPCH++
+x/var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch
+xios/Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection25"Precompile ios/Prefix.pch264"[1mProcessPCH++[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compilerfcabc35ad884b941^7424d35ad884b941^---0#0#1#-19%DVTDocumentLocation2@79"file:///Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch0000000000000000^4729"[1mProcessPCH++[0m /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch ios/Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DUSE_FILE32API -DCC_TARGET_OS_IPHONE -DCOCOS2D_DEBUG=1 -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -mios-simulator-version-min=5.0 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/UniLife\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/base -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/physics -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/math -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/2d -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/ui -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/network -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/audio/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/extensions -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/../cocos2d/cocos/platform/ios/Simulation -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/build/UniLife.build/Debug-iphonesimulator/UniLife\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios --serialize-diagnostics /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.d -c /Users/jackson_gross/Desktop/UniLife/UniLife/proj.ios_mac/ios/Prefix.pch -o /var/folders/12/wqplrf291sx16vt266cj7gs40000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/Prefix-hdtoljlaeiufiafktxkxsveptwtn/Prefix.pch.pch36"AD413E3F-8671-488A-B9CD-2773E0522432-
+b85DF6EEC-AAA7-4A8A-BE10-8975CF8BC08E
+
+CTouch /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/UniLife\ iOS.app
+r0
+

@@ -1,0 +1,370 @@
+TCocosDenshion iOS
+v6
+r1
+cCheck dependencies
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a normal i386
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
+c000000005353C5250000000000000198
+t1397998885
+s408
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
+c00000000531F0DC600000000000003B4
+t1394544070
+s948
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000531F0DD2000000000000019E
+t1394544082
+s414
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion iOS.a
+t2
+s0
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+t1406443736
+s91500
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+t1406443735
+s14412
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion iOS.LinkFileList
+c0000000053D4A0D5000000000000034E
+t1406443733
+s846
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+t1406443735
+s124864
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+t1406443738
+s72260
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+t1406443736
+s36368
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m
+c0000000053BF48A8000000000000787A
+t1405044904
+s30842
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+c0000000053BF48A80000000000002AA4
+t1405044904
+s10916
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m
+c0000000053BF48A8000000000000CE44
+t1405044904
+s52804
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+c0000000053BF7DD60000000000001DF3
+t1405058518
+s7667
+
+N/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+c0000000053BF48A80000000000001663
+t1405044904
+s5731
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesbff0ca55d884b941^328f0456d884b941^---0#1#1#--18"Check dependencies36"FCD37FC7-69D6-4602-A44C-63C707267D1D-
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136534.018664
+e428136536.511182
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDAudioManager.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m287"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler00540556d884b941^55de8258d884b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m0000000000000000^4201"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/.. -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.m -o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDAudioManager.o36"15445412-9A7D-4511-A398-5B3702799870-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136535.692832
+e428136535.973382
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CDOpenALSupport.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDConfig.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m289"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilercfbbb157d884b941^5e2ff957d884b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m0000000000000000^4207"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/.. -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.m -o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CDOpenALSupport.o36"C7567047-C325-41B2-9036-E7FC10AA37A2-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136534.019002
+e428136535.692166
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/CocosDenshion.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m285"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerea5c0556d884b941^0135b157d884b941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m0000000000000000^4195"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/.. -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.m -o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion.o36"25C8D7F6-6ED1-40C2-B118-0813E75BB91F-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s428136534.019341
+e428136538.209694
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+xnormal
+xi386
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/SimpleAudioEngine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/include/Export.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/cocos2d.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRef.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCPlatformMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCPlatformDefine.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCRefPtr.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccMacros.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConsole.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCStdC.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCVector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCAutoreleasePool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCNS.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCGeometry.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMath.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCMathBase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec2.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec3.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Vec4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Mat4.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/Quaternion.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCValue.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccTypes.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGL.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCConfiguration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDirector.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAtlasNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListener.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEvent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScriptSupport.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCCommon.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProtocols.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTexture2D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCAffineTransform.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccGLStateCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCQuadCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramState.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderCommandPool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCScheduler.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/uthash.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/base64.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ZipUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCProfiling.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUTF8.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCUserDefault.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDelegate.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCIMEDispatcher.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventType.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerTouch.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerKeyboard.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventMouse.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerAcceleration.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerCustom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCEventListenerFocus.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/MathUtil.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/math/CCVertex.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInterval.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrame.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimation.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCamera.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionEase.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionPageTurn3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionInstant.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTiledGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionTween.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCActionCatmullRom.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTweenFunction.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawingPrimitives.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCDrawNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCCustomCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabelBMFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLabel.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCBatchCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgram.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFontFNT.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFont.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsWorld.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCScene.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransition.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionPageTurn.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTransitionProgress.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenu.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMenuItem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCClippingNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGroupCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCMotionStreak.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCProgressTimer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSprite.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsBody.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsShape.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCRenderTexture.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCImage.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCNodeGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleBatchNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystem.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCString.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/ccCArray.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/base/CCDataVisitor.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleExamples.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParticleSystemQuad.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrabber.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCGrid.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCRenderer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCGLProgramCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/ccShaders.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCTextureCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsContact.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/physics/CCPhysicsJoint.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCDevice.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCFileUtils.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCSAXParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCThread.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCApplication.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCApplicationProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/ios/CCGLView.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/platform/CCGLViewProtocol.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCAnimationCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCSpriteFrameCache.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTextFieldTTF.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCParallaxNode.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXObjectGroup.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXXMLParser.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCTileMapAtlas.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXTiledMap.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCFastTMXLayer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponent.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/2d/CCComponentContainer.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/renderer/CCMeshCommand.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMesh.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCBundle3DData.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCMeshSkin.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimate3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimation3D.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCAnimationCurve.inl
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/3d/CCSprite3DMaterial.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDictionary.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCSet.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCInteger.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCFloat.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDouble.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCBool.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCNotificationCenter.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/deprecated/CCDeprecated.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm296"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler80460556d884b941^68b0355ad884b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm0000000000000000^4297"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm[0m normal i386 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c++11 -stdlib=libc++ -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wnon-virtual-dtor -Woverloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/.. -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine.mm -o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine.o36"E76BFD5A-AC94-4109-B487-9A9DBB7CE935-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
+CCompileC build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s428136534.019685
+e428136536.510003
+r1
+xCompileC
+xbuild/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
+x/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDAudioManager.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CocosDenshion.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDConfig.h
+d/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/CDOpenALSupport.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Compile /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m303"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler166e0556d884b941^00918258d884b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m0000000000000000^4249"[1mCompileC[0m build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o [1m/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m[0m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=80 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -fcolor-diagnostics -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror=incompatible-pointer-types -Werror-implicit-function-declaration -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wshadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wno-int-conversion -Wbool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -DCOCOS2D_DEBUG=1 -DUSE_FILE32API -DCC_ENABLE_CHIPMUNK_INTEGRATION=1 -DCC_TARGET_OS_IPHONE -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=5.1.1 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/CocosDenshion\ iOS.hmap -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/.. -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/editor-support -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external/chipmunk/include/chipmunk -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../external -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/../cocos/platform/ios -I/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/include -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources/i386 -I/Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/DerivedSources -F/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -MMD -MT dependencies -MF /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.d --serialize-diagnostics /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.dia -c /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/cocos/audio/ios/SimpleAudioEngine_objc.m -o /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o36"8D835BEB-9FA2-452F-A476-6C5182DF8FC2-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
+CLibtool /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a normal i386
+s428136538.211081
+e428136538.238379
+r1
+xLibtool
+x/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion iOS.a
+xnormal
+xi386
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"[1mLibtool[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a normal i386110"[1mLibtool[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a normal i3868e23365ad884b941^1c083d5ad884b941^---0#0#1#--1543"[1mLibtool[0m /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a normal i386    cd /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build    export IPHONEOS_DEPLOYMENT_TARGET=5.1.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/jackson_gross/Downloads/cocos2d-x-3.2/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/Downloads/cocos2d-x-3.0rc1/tools/cocos2d-console/bin:/opt/local/bin:/opt/local/sbin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@rails3tutorial/bin:/Users/jackson_gross/.rvm/gems/ruby-2.1.0@global/bin:/Users/jackson_gross/.rvm/rubies/ruby-2.1.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin:/Users/jackson_gross/.rvm/bin:/Users/jackson_gross/bin:/usr/local/mysql/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios -filelist /Users/jackson_gross/Desktop/UniLife/UniLife/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/CocosDenshion\ iOS.build/Objects-normal/i386/CocosDenshion\ iOS.LinkFileList -o /Users/jackson_gross/Desktop/UniLife/UniLife/bin/debug/ios/libCocosDenshion\ iOS.a36"A047F50A-1C67-44A5-927B-BC68C5FB5092-
+b61C21035-E92A-43C0-BBB5-3B58F6DCF031
+
