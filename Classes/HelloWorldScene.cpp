@@ -28,18 +28,24 @@ bool HelloWorld::init()
         return false;
     }
     
-    // create and open the db
-    cocos2d::CCFileUtils *file;
+    std::string dbPath = CCFileUtils::sharedFileUtils()->getWritablePath();
+    dbPath.append("save.db");
     
-    std::string path = file->getWritablePath() + "save.db3";
+    log("%s", dbPath.c_str());
+    
     
     sqlite3 *pdb=NULL;
     
     std::string sql;
     int result;
-    result=sqlite3_open(path.c_str(),&pdb);
+    result = sqlite3_open_v2(dbPath.c_str(), &pdb, SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE, NULL);
     if(result!=SQLITE_OK)
         log("open database failed,  number%d",result);
+    else
+        log("db open successful!");
+    
+    sqlite3_close(pdb);
+    
     
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
