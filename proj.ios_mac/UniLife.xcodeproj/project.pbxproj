@@ -13,7 +13,7 @@
 		1AC6FB31180E99EB004C840B /* libcocos2dx-extensions iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB09180E9839004C840B /* libcocos2dx-extensions iOS.a */; };
 		1AC6FB32180E99EB004C840B /* libCocosDenshion iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB0F180E9839004C840B /* libCocosDenshion iOS.a */; };
 		1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */; };
-		1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */; };
+		1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */; };
 		1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8B916D35E4900DB1158 /* CloseNormal.png */; };
 		1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */; };
 		1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */; };
@@ -41,6 +41,10 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		B607D16B1984F727000AFA9C /* Menu-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B607D16A1984F727000AFA9C /* Menu-bg.jpg */; };
 		B607D17919850A6E000AFA9C /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B607D17719850A6E000AFA9C /* sqlite3.c */; };
+		B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18119875BE7000AFA9C /* PlayerModel.cpp */; };
+		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
+		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
+		B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18A19878BCA000AFA9C /* TimeHelper.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -163,8 +167,8 @@
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		1AFAF8B416D35DE700DB1158 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
-		1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = ../Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
-		1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = ../Classes/HelloWorldScene.h; sourceTree = "<group>"; };
+		1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
+		1AFAF8B616D35DE700DB1158 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		1AFAF8B916D35E4900DB1158 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -206,6 +210,14 @@
 		B607D16A1984F727000AFA9C /* Menu-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Menu-bg.jpg"; sourceTree = "<group>"; };
 		B607D17719850A6E000AFA9C /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = "../../../Downloads/sqlite-amalgamation-3080500/sqlite3.c"; sourceTree = "<group>"; };
 		B607D17819850A6E000AFA9C /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = "../../../Downloads/sqlite-amalgamation-3080500/sqlite3.h"; sourceTree = "<group>"; };
+		B607D18019875BD3000AFA9C /* PlayerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../Classes/PlayerModel.h; sourceTree = "<group>"; };
+		B607D18119875BE7000AFA9C /* PlayerModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerModel.cpp; path = ../Classes/PlayerModel.cpp; sourceTree = "<group>"; };
+		B607D18319875EEB000AFA9C /* PlayerStatsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerStatsModel.h; path = ../Classes/PlayerStatsModel.h; sourceTree = "<group>"; };
+		B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerStatsModel.cpp; path = ../Classes/PlayerStatsModel.cpp; sourceTree = "<group>"; };
+		B607D1861987660F000AFA9C /* SqlHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SqlHelper.h; path = ../Classes/SqlHelper.h; sourceTree = "<group>"; };
+		B607D1871987661B000AFA9C /* SqlHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SqlHelper.cpp; path = ../Classes/SqlHelper.cpp; sourceTree = "<group>"; };
+		B607D18919878BBE000AFA9C /* TimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimeHelper.h; path = ../Classes/TimeHelper.h; sourceTree = "<group>"; };
+		B607D18A19878BCA000AFA9C /* TimeHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeHelper.cpp; path = ../Classes/TimeHelper.cpp; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -259,11 +271,12 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B607D16C1985001A000AFA9C /* SQLite */,
+				B607D17F19875B67000AFA9C /* Controllers */,
+				B607D17E19875B5F000AFA9C /* Scenes */,
+				B607D17D19875B54000AFA9C /* Models */,
+				B607D16C1985001A000AFA9C /* Helpers */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
-				1AFAF8B516D35DE700DB1158 /* HelloWorldScene.cpp */,
-				1AFAF8B616D35DE700DB1158 /* HelloWorldScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -387,13 +400,44 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		B607D16C1985001A000AFA9C /* SQLite */ = {
+		B607D16C1985001A000AFA9C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				B607D17719850A6E000AFA9C /* sqlite3.c */,
 				B607D17819850A6E000AFA9C /* sqlite3.h */,
+				B607D1861987660F000AFA9C /* SqlHelper.h */,
+				B607D1871987661B000AFA9C /* SqlHelper.cpp */,
+				B607D18919878BBE000AFA9C /* TimeHelper.h */,
+				B607D18A19878BCA000AFA9C /* TimeHelper.cpp */,
 			);
-			name = SQLite;
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B607D17D19875B54000AFA9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B607D18019875BD3000AFA9C /* PlayerModel.h */,
+				B607D18119875BE7000AFA9C /* PlayerModel.cpp */,
+				B607D18319875EEB000AFA9C /* PlayerStatsModel.h */,
+				B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B607D17E19875B5F000AFA9C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */,
+				1AFAF8B616D35DE700DB1158 /* MenuScene.h */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		B607D17F19875B67000AFA9C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,10 +613,14 @@
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D17919850A6E000AFA9C /* sqlite3.c in Sources */,
+				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
+				B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */,
+				B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
