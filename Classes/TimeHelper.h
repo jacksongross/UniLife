@@ -12,79 +12,45 @@
 #include <string>
 #include <sstream>
 
-enum Day
-{
-    Monday = 1,
-    Tuesday = 2,
-    Wednesday = 3,
-    Thursday = 4,
-    Friday = 5,
-    Saturday = 6,
-    Sunday = 7
-};
-
-enum Month
-{
-    January = 1,
-    Febuary = 2,
-    March = 3,
-    April = 4,
-    May = 5,
-    June = 6,
-    July = 7,
-    August = 8,
-    September = 9,
-    October = 10,
-    November = 11,
-    December = 12
-};
-
-struct GameTime
-{
-    double hours, minutes, seconds;
-};
-
 class TimeHelper
 {
     
 private:
     
     // current day
-    Day currentDay;
+    int day;
     
-    // current month
-    Month currentMonth;
+    // current week
+    int week;
     
-    // current year
-    int currentYear;
+    // current semester
+    int semester;
     
-    GameTime currentGameTime;
+    //hours in 30 min blocks e.g 14.5 = 2:30pm
+    double hoursMinutes;
     
 public:
     
     TimeHelper();
-    TimeHelper(Day currentDay, Month currentMonth, int currentYear);
-    TimeHelper(Day currentDay, Month currentMonth, int currentYear, GameTime currentTime);
+    TimeHelper(int day, int week, int semester, double hoursMinutes);
     
     /********************************
                 Getters
      *******************************/
     
-    Day getCurrentDay();
-    Month getCurrentMonth();
-    int getCurrentYear();
-    GameTime getCurrentGameTime();
-    std::string getDate();
-    std::string getTime();
+    int getDay();
+    int getWeek();
+    int getSemester();
+    double getHoursMinutes();
     
     /********************************
                 Setters
      *******************************/
     
-    void setCurrentDay(Day currentDay);
-    void setCurrentMonth(Month currentMonth);
-    void setCurrentYear(int currentYear);
-    void setCurrentGameTime(GameTime currentTime);
+    void setDay(int day);
+    void setWeek(int week);
+    void setSemester(int semester);
+    void setHoursMinutes(double hoursMinutes);
 
 };
 

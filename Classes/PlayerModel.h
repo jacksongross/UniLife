@@ -43,7 +43,7 @@ public:
     PlayerModel();
     
     // new player constructor with values
-    PlayerModel(std::string name, std::string degree, PlayerStatsModel stats);
+    PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeHelper gameTime);
     
     /********************************
                 Getters
@@ -54,6 +54,8 @@ public:
     std::string getDegree();
     
     PlayerStatsModel getStats();
+    
+    std::string getScene();
     
     TimeHelper getGameTime();
     
@@ -66,6 +68,8 @@ public:
     void setDegree(std::string degree);
     
     void setStats(PlayerStatsModel stats);
+    
+    void setScene(std::string scene);
     
     void setGameTime(TimeHelper gameTime);
     

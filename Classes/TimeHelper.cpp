@@ -10,82 +10,62 @@
 
 TimeHelper::TimeHelper()
 {
-
+    day = week = semester = 0;
+    hoursMinutes = 0;
 }
 
-TimeHelper::TimeHelper(Day currentDay, Month currentMonth, int currentYear)
+TimeHelper::TimeHelper(int day, int week, int semester, double hoursMinutes)
 {
-    this->currentDay = currentDay;
-    this->currentMonth = currentMonth;
-    this->currentYear = currentYear;
-}
-
-TimeHelper::TimeHelper(Day currentDay, Month currentMonth, int currentYear, GameTime currentGameTime)
-{
-    this->currentDay = currentDay;
-    this->currentMonth = currentMonth;
-    this->currentYear = currentYear;
-    this->currentGameTime = currentGameTime;
+    this->day = day;
+    this->week = week;
+    this->semester = semester;
+    this->hoursMinutes = hoursMinutes;
 }
 
 /********************************
             Getters
  *******************************/
 
-Day TimeHelper::getCurrentDay()
+int TimeHelper::getDay()
 {
-    return currentDay;
+    return day;
 }
 
-Month TimeHelper::getCurrentMonth()
+int TimeHelper::getWeek()
 {
-    return currentMonth;
+    return week;
 }
 
-int TimeHelper::getCurrentYear()
+int TimeHelper::getSemester()
 {
-    return currentYear;
+    return semester;
 }
 
-GameTime TimeHelper::getCurrentGameTime()
+double TimeHelper::getHoursMinutes()
 {
-    return currentGameTime;
-}
-
-std::string TimeHelper::getDate()
-{
-    std::stringstream ss;
-    ss << currentDay << "/" << currentMonth << "/" << currentYear;
-    return ss.str();
-}
-
-std::string TimeHelper::getTime()
-{
-    std::stringstream ss;
-    ss << currentGameTime.hours << ":" << currentGameTime.minutes << ":" << currentGameTime.seconds;
-    return ss.str();
+    return hoursMinutes;
 }
 
 /********************************
             Setters
  *******************************/
 
-void TimeHelper::setCurrentDay(Day currentDay)
+void TimeHelper::setDay(int day)
 {
-    this->currentDay = currentDay;
+    this->day = day;
 }
 
-void TimeHelper::setCurrentMonth(Month currentMonth)
+void TimeHelper::setWeek(int week)
 {
-    this->currentMonth = currentMonth;
+    this->week = week;
 }
 
-void TimeHelper::setCurrentYear(int currentYear)
+void TimeHelper::setSemester(int semester)
 {
-    this->currentYear = currentYear;
+    this->semester = semester;
 }
 
-void TimeHelper::setCurrentGameTime(GameTime currentGameTime)
+void TimeHelper::setHoursMinutes(double hoursMinutes)
 {
-    this->currentGameTime = currentGameTime;
+    this->hoursMinutes = hoursMinutes;
 }
