@@ -46,7 +46,7 @@ bool MenuScene::init()
     
     auto quitItem = MenuItemFont::create("Quit the Game", CC_CALLBACK_1(MenuScene::quitCallBack, this));
     
-    quitItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height - quitItem->getContentSize().height));
+    quitItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - quitItem->getContentSize().height - 200));
                           
                           
     // add menu items to array
@@ -60,12 +60,17 @@ bool MenuScene::init()
     
 
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("Menu-bg.jpg");
+    auto sprite = Sprite::create("background.png");
 
     // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width + origin.x, visibleSize.height + origin.y));
+    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer
+    this->addChild(sprite, 0);
+    
+    sprite = Sprite::create("title.png");
+    sprite->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
+    
     this->addChild(sprite, 0);
     
     return true;

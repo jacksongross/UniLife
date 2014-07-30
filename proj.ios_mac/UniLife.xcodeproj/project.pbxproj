@@ -45,6 +45,8 @@
 		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
 		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
 		B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18A19878BCA000AFA9C /* TimeHelper.cpp */; };
+		B607D18E19892739000AFA9C /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B607D18C19892739000AFA9C /* background.png */; };
+		B607D18F19892739000AFA9C /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = B607D18D19892739000AFA9C /* title.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -218,6 +220,8 @@
 		B607D1871987661B000AFA9C /* SqlHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SqlHelper.cpp; path = ../Classes/SqlHelper.cpp; sourceTree = "<group>"; };
 		B607D18919878BBE000AFA9C /* TimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimeHelper.h; path = ../Classes/TimeHelper.h; sourceTree = "<group>"; };
 		B607D18A19878BCA000AFA9C /* TimeHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeHelper.cpp; path = ../Classes/TimeHelper.cpp; sourceTree = "<group>"; };
+		B607D18C19892739000AFA9C /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = ../../../Desktop/background.png; sourceTree = "<group>"; };
+		B607D18D19892739000AFA9C /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = ../../../Desktop/title.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -391,6 +395,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B607D18C19892739000AFA9C /* background.png */,
+				B607D18D19892739000AFA9C /* title.png */,
 				B607D16A1984F727000AFA9C /* Menu-bg.jpg */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -591,12 +597,14 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				B607D18F19892739000AFA9C /* title.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				B607D18E19892739000AFA9C /* background.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
