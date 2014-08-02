@@ -11,6 +11,7 @@
 
 #include "SqlHelper.h"
 #include <string>
+#include <vector>
 #include "sqlite3.h"
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"
@@ -20,19 +21,14 @@ class SqlHelper
 {
     
 private:
-    static SqlHelper instance;
     
 public:
     
-    //database name
-    std::string dbName;
+    // open a connection to the database
+    static sqlite3* openDatabase();
     
-    // sqlite database pointer
-    sqlite3 *db;
-    
-    std::string getDbName();
-    
-    sqlite3* getDbPointer();
+    // close database connection
+    static void closeDatabase(sqlite3* db);
     
     // seed the database
     static void initDatabase();
@@ -40,8 +36,14 @@ public:
     // serialize a player to the database
     static void serialize(PlayerModel player);
     
+    // get list of all players
+    static std::vector<PlayerModel> getAllPlayers();
+    
     // retrieve player data from database
-    static PlayerModel getPlayer();
+    static PlayerModel getPlayer(int playerId);
+    
+    // builds a player object from a database query
+    static void buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeHelper &t);
 
 };
 

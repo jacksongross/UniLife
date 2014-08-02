@@ -1,6 +1,8 @@
 #include "MenuScene.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
+#include "cocos2d.h"
+#include <vector>
 
 USING_NS_CC;
 
@@ -29,7 +31,33 @@ bool MenuScene::init()
         return false;
     }
     
+    std::stringstream strm;
+    
+    // run this once to create and seed tables
     SqlHelper::initDatabase();
+    
+    // get a list of all players in the database
+    std::vector<PlayerModel> playersList = SqlHelper::getAllPlayers();
+    
+    for(int i=0; i < playersList.size(); i++)
+    {
+        strm << "Player data: " << playersList[i].getName() << "','" << playersList[i].getDegree() << "'," << playersList[i].getStats().getIntelligence() << "," << playersList[i].getStats().getStamina() << "," << playersList[i].getStats().getSocial() << "," << playersList[i].getStats().getMoney() << "," << playersList[i].getStats().getEnergy() << "," << playersList[i].getStats().getStress() << ",'" << playersList[i].getScene() << "'," << playersList[i].getGameTime().getDay() << "," << playersList[i].getGameTime().getWeek() << "," << playersList[i].getGameTime().getSemester() << "," << playersList[i].getGameTime().getHoursMinutes() << ")";
+        
+        std::string sql = strm.str();
+        strm.clear();
+        
+        cocos2d::log(sql.c_str());
+        cocos2d::log("\n");
+    }
+    
+    // get a specific player
+    PlayerModel p = SqlHelper::getPlayer(8);
+    
+    strm << "Player data: " << p.getName() << "','" << p.getDegree() << "'," << p.getStats().getIntelligence() << "," << p.getStats().getStamina() << "," << p.getStats().getSocial() << "," << p.getStats().getMoney() << "," << p.getStats().getEnergy() << "," << p.getStats().getStress() << ",'" << p.getScene() << "'," << p.getGameTime().getDay() << "," << p.getGameTime().getWeek() << "," << p.getGameTime().getSemester() << "," << p.getGameTime().getHoursMinutes() << ")";
+    
+    std::string sql = strm.str();
+    
+    cocos2d::log(sql.c_str());
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();

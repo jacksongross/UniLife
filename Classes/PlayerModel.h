@@ -19,7 +19,7 @@ class PlayerModel
 private:
     
     // player id
-    int id;
+    int Id;
     
     // player name
     std::string name;
@@ -49,6 +49,8 @@ public:
                 Getters
      *******************************/
     
+    int getId();
+    
     std::string getName();
     
     std::string getDegree();
@@ -62,6 +64,8 @@ public:
     /********************************
                 Setters
      *******************************/
+    
+    void setId(int Id);
     
     void setName(std::string name);
     

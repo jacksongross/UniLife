@@ -13,7 +13,7 @@
 // default constructor
 PlayerModel::PlayerModel()
 {
-    id = 0;
+    Id = 0;
     name = "";
     degree = "";
 }
@@ -31,6 +31,11 @@ PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel 
 /********************************
             Getters
  *******************************/
+
+int PlayerModel::getId()
+{
+    return Id;
+}
 
 std::string PlayerModel::getName()
 {
@@ -62,6 +67,11 @@ TimeHelper PlayerModel::getGameTime()
 /********************************
             Setters
  *******************************/
+
+void PlayerModel::setId(int Id)
+{
+    this->Id = Id;
+}
 
 void PlayerModel::setName(std::string name)
 {

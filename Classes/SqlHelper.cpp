@@ -17,31 +17,14 @@
 
 USING_NS_CC;
 
-
-std::string SqlHelper::getDbName()
+// open a connection to the database
+sqlite3* SqlHelper::openDatabase()
 {
-    return dbName;
-}
-
-sqlite3* SqlHelper::getDbPointer()
-{
-    return db;
-}
-
-// seed the database
-void SqlHelper::initDatabase()
-{
-    SqlHelper instance;
     
     // set the db pointer to null ready for a query
-    sqlite3 *db = instance.getDbPointer();
+    sqlite3 *db;
     
     std::string dbName = "save.db";
-    
-    // string for sql query
-    std::string sql;
-    
-    sqlite3_stmt *createStmt;
     
     // get a path to write database to
     std::string dbPath = CCFileUtils::sharedFileUtils()->getWritablePath();
@@ -58,6 +41,28 @@ void SqlHelper::initDatabase()
         log("open database failed,  number%d",result);
     else
         log("db open successful!");
+    
+    return db;
+
+}
+
+// close database connection
+void SqlHelper::closeDatabase(sqlite3* db)
+{
+    if( db != NULL) sqlite3_close(db);
+}
+
+// seed the database
+void SqlHelper::initDatabase()
+{
+    // string for sql query
+    std::string sql;
+    
+    sqlite3_stmt *createStmt;
+    
+    sqlite3 *db = SqlHelper::openDatabase();
+    
+    int result;
     
     // create a player table
     
@@ -81,38 +86,8 @@ void SqlHelper::initDatabase()
     // save player data to database
     SqlHelper::serialize(p);
     
-    // check to see if it is saving correctly
-    sql =  "select * from player";
-    
-    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &createStmt, NULL ) == SQLITE_OK)
-    {
-        int ctotal = sqlite3_column_count(createStmt);
-        int res = 0;
-        
-        while ( 1 )
-        {
-            res = sqlite3_step(createStmt);
-            
-            if ( res == SQLITE_ROW )
-            {
-                for ( int i = 0; i < ctotal; i++ )
-                {
-                    std::string s = (char*)sqlite3_column_text(createStmt, i);
-                    // print or format the output as you want
-                    log(s.c_str());
-                }
-            }
-            
-            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
-            {
-                break;
-            }
-        }
-    }
-    
     // close the database
-    
-    sqlite3_close(db);
+    SqlHelper::closeDatabase(db);
     
 
 }
@@ -121,17 +96,11 @@ void SqlHelper::initDatabase()
 // serialize a player to the database
 void SqlHelper::serialize(PlayerModel p)
 {
-    // to get access to db pointer
-    SqlHelper instance;
-    
     // set the db pointer to null ready for a query
-    sqlite3 *db = instance.getDbPointer();
+    sqlite3 *db = SqlHelper::openDatabase();
     
     // used to create the query
     std::string sql;
-    
-    // store name of db
-    std::string dbName = "save.db";
     
     // store sqlite result
     int result;
@@ -141,20 +110,6 @@ void SqlHelper::serialize(PlayerModel p)
     
     PlayerStatsModel m = p.getStats();
     TimeHelper t = p.getGameTime();
-    
-    // get a path to write database to
-    std::string dbPath = CCFileUtils::sharedFileUtils()->getWritablePath();
-    dbPath.append(dbName);
-    
-    // open the database and create if it hasn't been already
-    result = sqlite3_open_v2(dbPath.c_str(), &db, SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE, NULL);
-    
-    // checks if the operation was successful
-    
-    if(result!=SQLITE_OK)
-        log("open database failed,  number%d",result);
-    else
-        log("db open successful!");
     
     std::stringstream strm;
     strm << "INSERT INTO player (name, degree, intelligence, stamina, social, money, energy, stress, scene, day, week, semester, hoursminutes) VALUES('" << p.getName() << "','" << p.getDegree() << "'," << m.getIntelligence() << "," << m.getStamina() << "," << m.getSocial() << "," << m.getMoney() << "," << m.getEnergy() << "," << m.getStress() << ",'" << p.getScene() << "'," << t.getDay() << "," << t.getWeek() << "," << t.getSemester() << "," << t.getHoursMinutes() << ")";
@@ -168,12 +123,121 @@ void SqlHelper::serialize(PlayerModel p)
         sqlite3_finalize(Stmt);
         log("player added!");
     }
+    
+    SqlHelper::closeDatabase(db);
+
+}
+
+// get list of all players
+std::vector<PlayerModel> SqlHelper::getAllPlayers()
+{
+    std::vector<PlayerModel> playersList;
+    PlayerModel p;
+    PlayerStatsModel s;
+    TimeHelper t;
+    
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase();
+    
+    // check to see if it is saving correctly
+    sql =  "select * from player";
+    
+    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            if ( res == SQLITE_ROW )
+            {
+                SqlHelper::buildPlayerObjectFromDb(Stmnt, p, s, t);
+                playersList.push_back(p);
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
+    return playersList;
 
 }
 
 // retrieve player data from database
-PlayerModel SqlHelper::getPlayer()
+PlayerModel SqlHelper::getPlayer(int playerId)
 {
     PlayerModel p;
+    PlayerStatsModel s;
+    TimeHelper t;
+    
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase();
+    
+    // check to see if it is saving correctly
+    sql =  "select * from player where ID = ";
+    sql.append(std::to_string(playerId));
+    
+    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            // scene, day, week, semester, hoursminutes
+            
+            if ( res == SQLITE_ROW )
+            {
+                SqlHelper::buildPlayerObjectFromDb(Stmnt, p, s, t);
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
     return p;
+}
+
+void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeHelper &t)
+{
+    p.setId(sqlite3_column_int(Stmnt, 0));
+    p.setName((char*)sqlite3_column_text(Stmnt, 1));
+    p.setDegree((char*)sqlite3_column_text(Stmnt, 2));
+    
+    s.setIntelligence(sqlite3_column_int(Stmnt, 3));
+    s.setStamina(sqlite3_column_int(Stmnt, 4));
+    s.setSocial(sqlite3_column_int(Stmnt, 5));
+    s.setMoney(sqlite3_column_int(Stmnt, 6));
+    s.setEnergy(sqlite3_column_int(Stmnt, 7));
+    s.setStress(sqlite3_column_int(Stmnt, 8));
+    
+    p.setScene((char*)sqlite3_column_text(Stmnt, 9));
+    
+    t.setDay(sqlite3_column_int(Stmnt, 10));
+    t.setWeek(sqlite3_column_int(Stmnt, 11));
+    t.setSemester(sqlite3_column_int(Stmnt, 12));
+    t.setHoursMinutes(sqlite3_column_double(Stmnt, 13));
+    
+    p.setStats(s);
+    p.setGameTime(t);
 }
