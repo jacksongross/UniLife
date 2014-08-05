@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>682BB6E9-A6DA-4042-AA8D-2C1C15826648</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UniLife</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
+		<string>https://github.com/jacksonGross/UniLife.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.ios_mac/UniLife.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jacksonGross/UniLife.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UniLife</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -422,10 +422,10 @@
 		B607D17D19875B54000AFA9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B607D18019875BD3000AFA9C /* PlayerModel.h */,
 				B607D18119875BE7000AFA9C /* PlayerModel.cpp */,
-				B607D18319875EEB000AFA9C /* PlayerStatsModel.h */,
+				B607D18019875BD3000AFA9C /* PlayerModel.h */,
 				B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */,
+				B607D18319875EEB000AFA9C /* PlayerStatsModel.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
