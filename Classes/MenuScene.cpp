@@ -86,7 +86,6 @@ bool MenuScene::init()
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
     
-
     // add "MenuScene" splash screen"
     auto sprite = Sprite::create("background.png");
 
