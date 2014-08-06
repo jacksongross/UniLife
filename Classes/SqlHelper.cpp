@@ -27,7 +27,7 @@ sqlite3* SqlHelper::openDatabase()
     std::string dbName = "save.db";
     
     // get a path to write database to
-    std::string dbPath = CCFileUtils::sharedFileUtils()->getWritablePath();
+    std::string dbPath = CCFileUtils::getInstance()->getWritablePath();
     dbPath.append(dbName);
     
     log("%s", dbPath.c_str());
