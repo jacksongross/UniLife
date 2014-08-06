@@ -44,6 +44,8 @@
 		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
 		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
 		B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18A19878BCA000AFA9C /* TimeHelper.cpp */; };
+		B6A84C5819920E5600339B0B /* subjectBlockClassModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6A84C5419920E5600339B0B /* subjectBlockClassModel.cpp */; };
+		B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6A84C5619920E5600339B0B /* timeTableClassModel.cpp */; };
 		B9AC20861990D9FC0067A5FE /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = B9AC20851990D9FC0067A5FE /* sqlite3.c */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -218,6 +220,10 @@
 		B607D1871987661B000AFA9C /* SqlHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SqlHelper.cpp; path = ../Classes/SqlHelper.cpp; sourceTree = "<group>"; };
 		B607D18919878BBE000AFA9C /* TimeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimeHelper.h; path = ../Classes/TimeHelper.h; sourceTree = "<group>"; };
 		B607D18A19878BCA000AFA9C /* TimeHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TimeHelper.cpp; path = ../Classes/TimeHelper.cpp; sourceTree = "<group>"; };
+		B6A84C5419920E5600339B0B /* subjectBlockClassModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = subjectBlockClassModel.cpp; sourceTree = "<group>"; };
+		B6A84C5519920E5600339B0B /* subjectBlockClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subjectBlockClassModel.h; sourceTree = "<group>"; };
+		B6A84C5619920E5600339B0B /* timeTableClassModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeTableClassModel.cpp; sourceTree = "<group>"; };
+		B6A84C5719920E5600339B0B /* timeTableClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeTableClassModel.h; sourceTree = "<group>"; };
 		B9AC20851990D9FC0067A5FE /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = sqlite3.c; path = ../Classes/sqlite3.c; sourceTree = "<group>"; };
 		B9AC208E1990DA020067A5FE /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sqlite3.h; path = ../Classes/sqlite3.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -422,6 +428,10 @@
 		B607D17D19875B54000AFA9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6A84C5419920E5600339B0B /* subjectBlockClassModel.cpp */,
+				B6A84C5519920E5600339B0B /* subjectBlockClassModel.h */,
+				B6A84C5619920E5600339B0B /* timeTableClassModel.cpp */,
+				B6A84C5719920E5600339B0B /* timeTableClassModel.h */,
 				B607D18119875BE7000AFA9C /* PlayerModel.cpp */,
 				B607D18019875BD3000AFA9C /* PlayerModel.h */,
 				B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */,
@@ -625,10 +635,12 @@
 				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
 				B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */,
 				B9AC20861990D9FC0067A5FE /* sqlite3.c in Sources */,
 				B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */,
+				B6A84C5819920E5600339B0B /* subjectBlockClassModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
