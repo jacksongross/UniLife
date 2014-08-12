@@ -13,11 +13,8 @@
 USING_NS_CC;
 
 // create the buttons for the main menu
-cocos2d::Vector<cocos2d::MenuItem*> MenuController::CreateMenuButtons(MenuScene *that)
+cocos2d::Vector<cocos2d::MenuItem*> MenuController::CreateMenuButtons(MenuScene *that, Size visibleSize, Vec2 origin)
 {
-    // get the visible screen size
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
@@ -61,7 +58,7 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuController::CreateMenuButtons(MenuScene 
 void MenuController::CreateMainMenu(MenuScene *that, Size visibleSize, Vec2 origin)
 {
     // create the a vector to hold the menu items
-    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that);
+    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);
     
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);

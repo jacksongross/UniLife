@@ -26,7 +26,7 @@ private:
 public:
     
     // create buttons for main menu
-    static cocos2d::Vector<cocos2d::MenuItem*> CreateMenuButtons(MenuScene *that);
+    static cocos2d::Vector<cocos2d::MenuItem*> CreateMenuButtons(MenuScene *that, Size visibleSize, Vec2 origin);
     
     // creates the main menu
     static void CreateMainMenu(MenuScene *that, Size visibleSize, Vec2 origin);
