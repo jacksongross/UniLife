@@ -15,6 +15,7 @@ USING_NS_CC;
 // create the buttons for the main menu
 cocos2d::Vector<cocos2d::MenuItem*> MenuController::CreateMenuButtons(MenuScene *that)
 {
+    // get the visible screen size
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
