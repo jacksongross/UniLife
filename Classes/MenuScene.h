@@ -18,6 +18,15 @@ public:
     //close callback method
     void quitCallBack(cocos2d::Ref* pSender);
     
+    // new game callback method
+    void newGameCallback(Ref* pSender);
+    
+    // load game callback method
+    void loadGameCallback(Ref* pSender);
+    
+    // options callback method
+    void optionsCallback(Ref* pSender);
+    
     // implement the "static create()" method manually
     CREATE_FUNC(MenuScene);
 };

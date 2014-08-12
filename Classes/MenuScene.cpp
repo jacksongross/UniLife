@@ -38,47 +38,45 @@ bool MenuScene::init()
     
     // get a list of all players in the database
     std::vector<PlayerModel> playersList = SqlHelper::getAllPlayers();
-    
-    for(int i=0; i < playersList.size(); i++)
-    {
-        strm << "Player data: " << playersList[i].getName() << "','" << playersList[i].getDegree() << "'," << playersList[i].getStats().getIntelligence() << "," << playersList[i].getStats().getStamina() << "," << playersList[i].getStats().getSocial() << "," << playersList[i].getStats().getMoney() << "," << playersList[i].getStats().getEnergy() << "," << playersList[i].getStats().getStress() << ",'" << playersList[i].getScene() << "'," << playersList[i].getGameTime().getDay() << "," << playersList[i].getGameTime().getWeek() << "," << playersList[i].getGameTime().getSemester() << "," << playersList[i].getGameTime().getHoursMinutes() << ")";
-        
-        std::string sql = strm.str();
-        strm.clear();
-        
-        cocos2d::log(sql.c_str());
-        cocos2d::log("\n");
-    }
-    
+
     // get a specific player
-    PlayerModel p = SqlHelper::getPlayer(8);
-    
-    strm << "Player data: " << p.getName() << "','" << p.getDegree() << "'," << p.getStats().getIntelligence() << "," << p.getStats().getStamina() << "," << p.getStats().getSocial() << "," << p.getStats().getMoney() << "," << p.getStats().getEnergy() << "," << p.getStats().getStress() << ",'" << p.getScene() << "'," << p.getGameTime().getDay() << "," << p.getGameTime().getWeek() << "," << p.getGameTime().getSemester() << "," << p.getGameTime().getHoursMinutes() << ")";
-    
-    std::string sql = strm.str();
-    
-    cocos2d::log(sql.c_str());
+    PlayerModel p = SqlHelper::getPlayer(1);
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(MenuScene::menuCloseCallback, this));
     
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
+    // create the new game button and place onto screen
+    auto newGameItem = MenuItemImage::create("new_game_off.png",
+                                             "new_game_on.png",
+                                             CC_CALLBACK_1(MenuScene::newGameCallback, this));
     
-    auto quitItem = MenuItemFont::create("Quit the Game", CC_CALLBACK_1(MenuScene::quitCallBack, this));
+    newGameItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
+                                  origin.y + (visibleSize.height - newGameItem->getContentSize().height - 120)));
     
-    quitItem->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - quitItem->getContentSize().height - 200));
-                          
-                          
+    
+    // create the load game button and place onto screen
+    auto loadGameItem = MenuItemImage::create("load_game_off.png",
+                                             "load_game_on.png",
+                                             CC_CALLBACK_1(MenuScene::loadGameCallback, this));
+    
+    loadGameItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
+                                  origin.y + (visibleSize.height - loadGameItem->getContentSize().height - newGameItem->getContentSize().height - 140)));
+    
+    // create the options button and place onto screen
+    auto optionsItem = MenuItemImage::create("options_off.png",
+                                              "options_on.png",
+                                              CC_CALLBACK_1(MenuScene::optionsCallback, this));
+    
+    optionsItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
+                                   origin.y + (visibleSize.height - loadGameItem->getContentSize().height - newGameItem->getContentSize().height - newGameItem->getContentSize().height - 160)));
+    
     // add menu items to array
-    pMenuItems.pushBack(quitItem);
+    pMenuItems.pushBack(newGameItem);
+    pMenuItems.pushBack(loadGameItem);
+    pMenuItems.pushBack(optionsItem);
 
     // create menu, it's an autorelease object
                           
@@ -106,9 +104,26 @@ bool MenuScene::init()
 void MenuScene::quitCallBack(Ref* pSender)
 {
     Director::getInstance()->end();
-    exit(0);
+    
+    #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        exit(0);
+    #endif
+}
+                             
+void MenuScene::newGameCallback(Ref* pSender)
+{
+    log("new game button pressed!");
 }
 
+void MenuScene::loadGameCallback(Ref* pSender)
+{
+    log("load game button pressed!");
+}
+
+void MenuScene::optionsCallback(Ref* pSender)
+{
+    log("options button pressed!");
+}
 
 void MenuScene::menuCloseCallback(Ref* pSender)
 {
