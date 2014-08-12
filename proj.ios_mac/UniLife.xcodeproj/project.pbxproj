@@ -40,6 +40,7 @@
 		D0DF70251999B7AD00C96742 /* options_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF701D1999B7AD00C96742 /* options_off.png */; };
 		D0DF70261999B7AD00C96742 /* options_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF701E1999B7AD00C96742 /* options_on.png */; };
 		D0DF70271999B7AD00C96742 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF701F1999B7AD00C96742 /* title.png */; };
+		D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70311999DFB900C96742 /* MenuController.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -162,7 +163,7 @@
 		1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuScene.cpp; path = ../Classes/MenuScene.cpp; sourceTree = "<group>"; };
 		1AFAF8B616D35DE700DB1158 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuScene.h; path = ../Classes/MenuScene.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* UniLife iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UniLife iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* UniLife iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "UniLife iOS.app"; path = UniLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		503AE0F617EB97AB00D1A890 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
@@ -210,6 +211,8 @@
 		D0DF701D1999B7AD00C96742 /* options_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = options_off.png; path = ../../UniLife_Documentation/Images/Assets/home_screen/options_off.png; sourceTree = "<group>"; };
 		D0DF701E1999B7AD00C96742 /* options_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = options_on.png; path = ../../UniLife_Documentation/Images/Assets/home_screen/options_on.png; sourceTree = "<group>"; };
 		D0DF701F1999B7AD00C96742 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = ../../UniLife_Documentation/Images/Assets/home_screen/title.png; sourceTree = "<group>"; };
+		D0DF70301999DFAC00C96742 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuController.h; path = ../Classes/MenuController.h; sourceTree = "<group>"; };
+		D0DF70311999DFB900C96742 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -412,6 +415,8 @@
 		B607D17F19875B67000AFA9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0DF70301999DFAC00C96742 /* MenuController.h */,
+				D0DF70311999DFB900C96742 /* MenuController.cpp */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -606,6 +611,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */,
 				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

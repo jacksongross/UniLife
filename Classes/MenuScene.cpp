@@ -2,6 +2,7 @@
 #include "PlayerModel.h"
 #include "SqlHelper.h"
 #include "cocos2d.h"
+#include "MenuController.h"
 #include <vector>
 
 USING_NS_CC;
@@ -42,73 +43,14 @@ bool MenuScene::init()
     // get a specific player
     PlayerModel p = SqlHelper::getPlayer(1);
     
+    // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    // create the a vector to hold the menu items
-    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
-    
-    
-    // create the new game button and place onto screen
-    auto newGameItem = MenuItemImage::create("new_game_off.png",
-                                             "new_game_on.png",
-                                             CC_CALLBACK_1(MenuScene::newGameCallback, this));
-    
-    newGameItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
-                                  origin.y + (visibleSize.height - newGameItem->getContentSize().height - 120)));
-    
-    
-    // create the load game button and place onto screen
-    auto loadGameItem = MenuItemImage::create("load_game_off.png",
-                                             "load_game_on.png",
-                                             CC_CALLBACK_1(MenuScene::loadGameCallback, this));
-    
-    loadGameItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
-                                  origin.y + (visibleSize.height - loadGameItem->getContentSize().height - newGameItem->getContentSize().height - 140)));
-    
-    // create the options button and place onto screen
-    auto optionsItem = MenuItemImage::create("options_off.png",
-                                              "options_on.png",
-                                              CC_CALLBACK_1(MenuScene::optionsCallback, this));
-    
-    optionsItem->setPosition(Vec2(origin.x + visibleSize.width / 2,
-                                   origin.y + (visibleSize.height - loadGameItem->getContentSize().height - newGameItem->getContentSize().height - newGameItem->getContentSize().height - 160)));
-    
-    // add menu items to array
-    pMenuItems.pushBack(newGameItem);
-    pMenuItems.pushBack(loadGameItem);
-    pMenuItems.pushBack(optionsItem);
-
-    // create menu, it's an autorelease object
-                          
-    auto menu = Menu::createWithArray(pMenuItems);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-    
-    // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("background.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    
-    sprite = Sprite::create("title.png");
-    sprite->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
-    
-    this->addChild(sprite, 0);
+    // create the main menu
+    MenuController::CreateMainMenu(this, visibleSize, origin);
     
     return true;
-}
-                          
-void MenuScene::quitCallBack(Ref* pSender)
-{
-    Director::getInstance()->end();
-    
-    #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-        exit(0);
-    #endif
 }
                              
 void MenuScene::newGameCallback(Ref* pSender)
@@ -124,18 +66,4 @@ void MenuScene::loadGameCallback(Ref* pSender)
 void MenuScene::optionsCallback(Ref* pSender)
 {
     log("options button pressed!");
-}
-
-void MenuScene::menuCloseCallback(Ref* pSender)
-{
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
-    return;
-#endif
-
-    Director::getInstance()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
 }
