@@ -32,8 +32,6 @@ bool MenuScene::init()
         return false;
     }
     
-    std::stringstream strm;
-    
     // run this once to create and seed tables
     SqlHelper::initDatabase();
     
