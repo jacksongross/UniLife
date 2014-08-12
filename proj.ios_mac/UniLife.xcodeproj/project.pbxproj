@@ -41,6 +41,15 @@
 		D0DF70261999B7AD00C96742 /* options_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF701E1999B7AD00C96742 /* options_on.png */; };
 		D0DF70271999B7AD00C96742 /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF701F1999B7AD00C96742 /* title.png */; };
 		D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70311999DFB900C96742 /* MenuController.cpp */; };
+		D0DF70421999E8CB00C96742 /* options-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF703D1999E8CB00C96742 /* options-back.png */; };
+		D0DF70431999E8CB00C96742 /* options-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF703E1999E8CB00C96742 /* options-bg.png */; };
+		D0DF70441999E8CB00C96742 /* options-border.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF703F1999E8CB00C96742 /* options-border.png */; };
+		D0DF70451999E8CB00C96742 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF70401999E8CB00C96742 /* slider.png */; };
+		D0DF70461999E8CB00C96742 /* options-title.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DF70411999E8CB00C96742 /* options-title.png */; };
+		D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70481999E92200C96742 /* MenuOptionScene.cpp */; };
+		D0DF704D1999ED9600C96742 /* MenuOptionController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF704C1999ED9600C96742 /* MenuOptionController.cpp */; };
+		D0DF70521999F6BD00C96742 /* MenuLoadController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70511999F6BD00C96742 /* MenuLoadController.cpp */; };
+		D0DF70561999F74800C96742 /* MenuLoadScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70551999F74800C96742 /* MenuLoadScene.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -213,6 +222,19 @@
 		D0DF701F1999B7AD00C96742 /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = title.png; path = ../../UniLife_Documentation/Images/Assets/home_screen/title.png; sourceTree = "<group>"; };
 		D0DF70301999DFAC00C96742 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuController.h; path = ../Classes/MenuController.h; sourceTree = "<group>"; };
 		D0DF70311999DFB900C96742 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
+		D0DF703D1999E8CB00C96742 /* options-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "options-back.png"; path = "../../UniLife_Documentation/Images/Assets/options/options-back.png"; sourceTree = "<group>"; };
+		D0DF703E1999E8CB00C96742 /* options-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "options-bg.png"; path = "../../UniLife_Documentation/Images/Assets/options/options-bg.png"; sourceTree = "<group>"; };
+		D0DF703F1999E8CB00C96742 /* options-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "options-border.png"; path = "../../UniLife_Documentation/Images/Assets/options/options-border.png"; sourceTree = "<group>"; };
+		D0DF70401999E8CB00C96742 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider.png; path = ../../UniLife_Documentation/Images/Assets/options/slider.png; sourceTree = "<group>"; };
+		D0DF70411999E8CB00C96742 /* options-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "options-title.png"; path = "../../UniLife_Documentation/Images/Assets/options/options-title.png"; sourceTree = "<group>"; };
+		D0DF70471999E91400C96742 /* MenuOptionScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuOptionScene.h; sourceTree = "<group>"; };
+		D0DF70481999E92200C96742 /* MenuOptionScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuOptionScene.cpp; sourceTree = "<group>"; };
+		D0DF704B1999ED8700C96742 /* MenuOptionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuOptionController.h; sourceTree = "<group>"; };
+		D0DF704C1999ED9600C96742 /* MenuOptionController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuOptionController.cpp; sourceTree = "<group>"; };
+		D0DF70501999F6B300C96742 /* MenuLoadController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuLoadController.h; sourceTree = "<group>"; };
+		D0DF70511999F6BD00C96742 /* MenuLoadController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuLoadController.cpp; sourceTree = "<group>"; };
+		D0DF70541999F73F00C96742 /* MenuLoadScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuLoadScene.h; sourceTree = "<group>"; };
+		D0DF70551999F74800C96742 /* MenuLoadScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuLoadScene.cpp; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -368,6 +390,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0DF703C1999E8B800C96742 /* Home-Options */,
 				D0DF70171999B79000C96742 /* Home-Menu */,
 				D0DF6FCB1999B13900C96742 /* Images.xcassets */,
 			);
@@ -378,12 +401,8 @@
 		B607D16C1985001A000AFA9C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B9AC20851990D9FC0067A5FE /* sqlite3.c */,
-				B9AC208E1990DA020067A5FE /* sqlite3.h */,
-				B607D1861987660F000AFA9C /* SqlHelper.h */,
-				B607D1871987661B000AFA9C /* SqlHelper.cpp */,
-				B607D18919878BBE000AFA9C /* TimeHelper.h */,
-				B607D18A19878BCA000AFA9C /* TimeHelper.cpp */,
+				D0DF70381999E80700C96742 /* SqlHelper */,
+				D0DF70391999E80F00C96742 /* TimeHelper */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -391,14 +410,10 @@
 		B607D17D19875B54000AFA9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B6A84C5419920E5600339B0B /* subjectBlockClassModel.cpp */,
-				B6A84C5519920E5600339B0B /* subjectBlockClassModel.h */,
-				B6A84C5619920E5600339B0B /* timeTableClassModel.cpp */,
-				B6A84C5719920E5600339B0B /* timeTableClassModel.h */,
-				B607D18119875BE7000AFA9C /* PlayerModel.cpp */,
-				B607D18019875BD3000AFA9C /* PlayerModel.h */,
-				B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */,
-				B607D18319875EEB000AFA9C /* PlayerStatsModel.h */,
+				D0DF70371999E7EB00C96742 /* subjectBlockClassModel */,
+				D0DF70351999E7D400C96742 /* timeTableClassModel */,
+				D0DF70341999E7C800C96742 /* PlayerModel */,
+				D0DF70361999E7E000C96742 /* PlayerStatsModel */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -406,8 +421,9 @@
 		B607D17E19875B5F000AFA9C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */,
-				1AFAF8B616D35DE700DB1158 /* MenuScene.h */,
+				D0DF70531999F73200C96742 /* MenuLoadScene */,
+				D0DF703A1999E81B00C96742 /* MenuScene */,
+				D0DF704A1999E92600C96742 /* MenuOptionScene */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -415,8 +431,9 @@
 		B607D17F19875B67000AFA9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0DF70301999DFAC00C96742 /* MenuController.h */,
-				D0DF70311999DFB900C96742 /* MenuController.cpp */,
+				D0DF704F1999F69E00C96742 /* MenuLoadController */,
+				D0DF703B1999E82400C96742 /* MenuController */,
+				D0DF704E1999ED9A00C96742 /* MenuOptionController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +462,128 @@
 				D0DF701F1999B7AD00C96742 /* title.png */,
 			);
 			name = "Home-Menu";
+			sourceTree = "<group>";
+		};
+		D0DF70341999E7C800C96742 /* PlayerModel */ = {
+			isa = PBXGroup;
+			children = (
+				B607D18119875BE7000AFA9C /* PlayerModel.cpp */,
+				B607D18019875BD3000AFA9C /* PlayerModel.h */,
+			);
+			name = PlayerModel;
+			sourceTree = "<group>";
+		};
+		D0DF70351999E7D400C96742 /* timeTableClassModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6A84C5619920E5600339B0B /* timeTableClassModel.cpp */,
+				B6A84C5719920E5600339B0B /* timeTableClassModel.h */,
+			);
+			name = timeTableClassModel;
+			sourceTree = "<group>";
+		};
+		D0DF70361999E7E000C96742 /* PlayerStatsModel */ = {
+			isa = PBXGroup;
+			children = (
+				B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */,
+				B607D18319875EEB000AFA9C /* PlayerStatsModel.h */,
+			);
+			name = PlayerStatsModel;
+			sourceTree = "<group>";
+		};
+		D0DF70371999E7EB00C96742 /* subjectBlockClassModel */ = {
+			isa = PBXGroup;
+			children = (
+				B6A84C5419920E5600339B0B /* subjectBlockClassModel.cpp */,
+				B6A84C5519920E5600339B0B /* subjectBlockClassModel.h */,
+			);
+			name = subjectBlockClassModel;
+			sourceTree = "<group>";
+		};
+		D0DF70381999E80700C96742 /* SqlHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B9AC20851990D9FC0067A5FE /* sqlite3.c */,
+				B9AC208E1990DA020067A5FE /* sqlite3.h */,
+				B607D1861987660F000AFA9C /* SqlHelper.h */,
+				B607D1871987661B000AFA9C /* SqlHelper.cpp */,
+			);
+			name = SqlHelper;
+			sourceTree = "<group>";
+		};
+		D0DF70391999E80F00C96742 /* TimeHelper */ = {
+			isa = PBXGroup;
+			children = (
+				B607D18919878BBE000AFA9C /* TimeHelper.h */,
+				B607D18A19878BCA000AFA9C /* TimeHelper.cpp */,
+			);
+			name = TimeHelper;
+			sourceTree = "<group>";
+		};
+		D0DF703A1999E81B00C96742 /* MenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAF8B516D35DE700DB1158 /* MenuScene.cpp */,
+				1AFAF8B616D35DE700DB1158 /* MenuScene.h */,
+			);
+			name = MenuScene;
+			sourceTree = "<group>";
+		};
+		D0DF703B1999E82400C96742 /* MenuController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF70301999DFAC00C96742 /* MenuController.h */,
+				D0DF70311999DFB900C96742 /* MenuController.cpp */,
+			);
+			name = MenuController;
+			sourceTree = "<group>";
+		};
+		D0DF703C1999E8B800C96742 /* Home-Options */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF703D1999E8CB00C96742 /* options-back.png */,
+				D0DF703E1999E8CB00C96742 /* options-bg.png */,
+				D0DF703F1999E8CB00C96742 /* options-border.png */,
+				D0DF70401999E8CB00C96742 /* slider.png */,
+				D0DF70411999E8CB00C96742 /* options-title.png */,
+			);
+			name = "Home-Options";
+			sourceTree = "<group>";
+		};
+		D0DF704A1999E92600C96742 /* MenuOptionScene */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF70471999E91400C96742 /* MenuOptionScene.h */,
+				D0DF70481999E92200C96742 /* MenuOptionScene.cpp */,
+			);
+			name = MenuOptionScene;
+			sourceTree = "<group>";
+		};
+		D0DF704E1999ED9A00C96742 /* MenuOptionController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF704B1999ED8700C96742 /* MenuOptionController.h */,
+				D0DF704C1999ED9600C96742 /* MenuOptionController.cpp */,
+			);
+			name = MenuOptionController;
+			sourceTree = "<group>";
+		};
+		D0DF704F1999F69E00C96742 /* MenuLoadController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF70501999F6B300C96742 /* MenuLoadController.h */,
+				D0DF70511999F6BD00C96742 /* MenuLoadController.cpp */,
+			);
+			name = MenuLoadController;
+			sourceTree = "<group>";
+		};
+		D0DF70531999F73200C96742 /* MenuLoadScene */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF70541999F73F00C96742 /* MenuLoadScene.h */,
+				D0DF70551999F74800C96742 /* MenuLoadScene.cpp */,
+			);
+			name = MenuLoadScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,15 +728,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DF70221999B7AD00C96742 /* load_game_on.png in Resources */,
+				D0DF70441999E8CB00C96742 /* options-border.png in Resources */,
+				D0DF70431999E8CB00C96742 /* options-bg.png in Resources */,
 				D0DF70251999B7AD00C96742 /* options_off.png in Resources */,
+				D0DF70451999E8CB00C96742 /* slider.png in Resources */,
 				D0DF70261999B7AD00C96742 /* options_on.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
 				D0DF70151999B57800C96742 /* Icon-57@2x~iphone.png in Resources */,
 				D0DF70231999B7AD00C96742 /* new_game_off.png in Resources */,
 				D0DF70201999B7AD00C96742 /* background.png in Resources */,
+				D0DF70421999E8CB00C96742 /* options-back.png in Resources */,
 				D0DF70241999B7AD00C96742 /* new_game_on.png in Resources */,
 				D0DF70271999B7AD00C96742 /* title.png in Resources */,
 				D0DF70211999B7AD00C96742 /* load_game_off.png in Resources */,
+				D0DF70461999E8CB00C96742 /* options-title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,15 +752,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DF70521999F6BD00C96742 /* MenuLoadController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */,
 				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				D0DF704D1999ED9600C96742 /* MenuOptionController.cpp in Sources */,
 				B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
+				D0DF70561999F74800C96742 /* MenuLoadScene.cpp in Sources */,
 				B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */,
 				B9AC20861990D9FC0067A5FE /* sqlite3.c in Sources */,
 				B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */,

@@ -3,6 +3,8 @@
 #include "SqlHelper.h"
 #include "cocos2d.h"
 #include "MenuController.h"
+#include "MenuOptionScene.h"
+#include <CCTransition.h>
 #include <vector>
 
 USING_NS_CC;
@@ -33,7 +35,7 @@ bool MenuScene::init()
     }
     
     // run this once to create and seed tables
-    SqlHelper::initDatabase();
+    //SqlHelper::initDatabase();
     
     // get a list of all players in the database
     std::vector<PlayerModel> playersList = SqlHelper::getAllPlayers();
@@ -59,9 +61,20 @@ void MenuScene::newGameCallback(Ref* pSender)
 void MenuScene::loadGameCallback(Ref* pSender)
 {
     log("load game button pressed!");
+    
+    // transition to the load game scene
+    auto scene = MenuOptionScene::createScene();
+    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    CCDirector::sharedDirector()->replaceScene(crosssfade);
 }
 
 void MenuScene::optionsCallback(Ref* pSender)
 {
     log("options button pressed!");
+    
+    // transition to the menu options scene
+    auto scene = MenuOptionScene::createScene();
+    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    
 }
