@@ -31,15 +31,6 @@ public:
     // creates the main menu
     static void CreateMainMenu(MenuScene *that, Size visibleSize, Vec2 origin);
     
-    // new game callback method
-    static void newGameCallback(Ref* pSender);
-    
-    // load game callback method
-    static void loadGameCallback(Ref* pSender);
-    
-    // options callback method
-    static void optionsCallback(Ref* pSender);
-    
 };
 
 #endif

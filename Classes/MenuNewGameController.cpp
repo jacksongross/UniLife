@@ -143,7 +143,6 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     
     
     
-    
 }
 
 

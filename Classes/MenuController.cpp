@@ -80,4 +80,3 @@ void MenuController::CreateMainMenu(MenuScene *that, Size visibleSize, Vec2 orig
     
     that->addChild(sprite, 0);
 }
-
