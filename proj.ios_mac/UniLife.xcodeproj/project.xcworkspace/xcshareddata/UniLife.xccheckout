@@ -5,11 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>682BB6E9-A6DA-4042-AA8D-2C1C15826648</string>
+	<string>8E4088A8-53D6-4FEB-BA8C-97A8EC9EDB48</string>
 	<key>IDESourceControlProjectName</key>
 	<string>UniLife</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>362BF958-1157-4481-8D46-39F0D7121E03</key>
+		<string>https://github.com/KurtRobo/UniLife_Documentation.git</string>
 		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
 		<string>https://github.com/jacksonGross/UniLife.git</string>
 	</dict>
@@ -17,6 +19,8 @@
 	<string>proj.ios_mac/UniLife.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>362BF958-1157-4481-8D46-39F0D7121E03</key>
+		<string>../../../../UniLife_Documentation</string>
 		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
 		<string>../../..</string>
 	</dict>
@@ -35,6 +39,14 @@
 			<string>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UniLife</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>362BF958-1157-4481-8D46-39F0D7121E03</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UniLife_Documentation</string>
 		</dict>
 	</array>
 </dict>
