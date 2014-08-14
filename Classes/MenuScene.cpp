@@ -6,6 +6,7 @@
 #include "MenuOptionScene.h"
 #include <CCTransition.h>
 #include <vector>
+#include "DormScene.h"
 
 USING_NS_CC;
 
@@ -73,7 +74,13 @@ void MenuScene::optionsCallback(Ref* pSender)
     log("options button pressed!");
     
     // transition to the menu options scene
-    auto scene = MenuOptionScene::createScene();
+    
+    PlayerModel p;
+    p.setName("Jackson Gross");
+    
+    log(p.getName().c_str());
+    
+    auto scene = DormScene::createScene(p);
     CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
     CCDirector::sharedDirector()->replaceScene(crosssfade);
     
