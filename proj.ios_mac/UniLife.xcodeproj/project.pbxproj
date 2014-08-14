@@ -47,6 +47,19 @@
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
 		D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */; };
+		D05E7B0F199C2D9300208DAC /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05E7B0D199C2D9300208DAC /* MenuNewGame.cpp */; };
+		D05E7B1B199C2F7900208DAC /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05E7B19199C2F7900208DAC /* MenuNewGameController.cpp */; };
+		D05E7B28199C3FDF00208DAC /* New-Game-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B1D199C3FDF00208DAC /* New-Game-Back.png */; };
+		D05E7B29199C3FDF00208DAC /* New-Game-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B1E199C3FDF00208DAC /* New-Game-background.png */; };
+		D05E7B2A199C3FDF00208DAC /* New-Game-Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B1F199C3FDF00208DAC /* New-Game-Border.png */; };
+		D05E7B2B199C3FDF00208DAC /* New-Game-next_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B20199C3FDF00208DAC /* New-Game-next_off.png */; };
+		D05E7B2C199C3FDF00208DAC /* New-Game-next_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B21199C3FDF00208DAC /* New-Game-next_on.png */; };
+		D05E7B2D199C3FDF00208DAC /* New-Game-slider.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B22199C3FDF00208DAC /* New-Game-slider.png */; };
+		D05E7B2E199C3FDF00208DAC /* New-Game-take_quiz_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B23199C3FDF00208DAC /* New-Game-take_quiz_off.png */; };
+		D05E7B2F199C3FDF00208DAC /* New-Game-take_quiz_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B24199C3FDF00208DAC /* New-Game-take_quiz_on.png */; };
+		D05E7B30199C3FDF00208DAC /* New-Game-text.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B25199C3FDF00208DAC /* New-Game-text.png */; };
+		D05E7B31199C3FDF00208DAC /* New-Game-textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B26199C3FDF00208DAC /* New-Game-textbox.png */; };
+		D05E7B32199C3FDF00208DAC /* New-Game-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D05E7B27199C3FDF00208DAC /* New-Game-Title.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70311999DFB900C96742 /* MenuController.cpp */; };
 		D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70481999E92200C96742 /* MenuOptionScene.cpp */; };
@@ -227,6 +240,21 @@
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
+		D05E7B0D199C2D9300208DAC /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGame.cpp; path = ../Classes/MenuNewGame.cpp; sourceTree = "<group>"; };
+		D05E7B0E199C2D9300208DAC /* MenuNewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNewGame.h; path = ../Classes/MenuNewGame.h; sourceTree = "<group>"; };
+		D05E7B19199C2F7900208DAC /* MenuNewGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGameController.cpp; path = ../Classes/MenuNewGameController.cpp; sourceTree = "<group>"; };
+		D05E7B1A199C2F7900208DAC /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNewGameController.h; path = ../Classes/MenuNewGameController.h; sourceTree = "<group>"; };
+		D05E7B1D199C3FDF00208DAC /* New-Game-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Back.png"; sourceTree = "<group>"; };
+		D05E7B1E199C3FDF00208DAC /* New-Game-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-background.png"; sourceTree = "<group>"; };
+		D05E7B1F199C3FDF00208DAC /* New-Game-Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Border.png"; sourceTree = "<group>"; };
+		D05E7B20199C3FDF00208DAC /* New-Game-next_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-next_off.png"; sourceTree = "<group>"; };
+		D05E7B21199C3FDF00208DAC /* New-Game-next_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-next_on.png"; sourceTree = "<group>"; };
+		D05E7B22199C3FDF00208DAC /* New-Game-slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-slider.png"; sourceTree = "<group>"; };
+		D05E7B23199C3FDF00208DAC /* New-Game-take_quiz_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-take_quiz_off.png"; sourceTree = "<group>"; };
+		D05E7B24199C3FDF00208DAC /* New-Game-take_quiz_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-take_quiz_on.png"; sourceTree = "<group>"; };
+		D05E7B25199C3FDF00208DAC /* New-Game-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-text.png"; sourceTree = "<group>"; };
+		D05E7B26199C3FDF00208DAC /* New-Game-textbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-textbox.png"; sourceTree = "<group>"; };
+		D05E7B27199C3FDF00208DAC /* New-Game-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Title.png"; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0DF70301999DFAC00C96742 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuController.h; path = ../Classes/MenuController.h; sourceTree = "<group>"; };
 		D0DF70311999DFB900C96742 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -393,6 +421,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D05E7B1C199C3E1E00208DAC /* New-Game-Screen */,
 				D0DF703C1999E8B800C96742 /* Home-Options */,
 				D0DF70171999B79000C96742 /* Home-Menu */,
 				D0DF6FCB1999B13900C96742 /* Images.xcassets */,
@@ -424,6 +453,7 @@
 		B607D17E19875B5F000AFA9C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D05E7B17199C2DA000208DAC /* MenuNewGame */,
 				D0DF70531999F73200C96742 /* MenuLoadScene */,
 				D0DF703A1999E81B00C96742 /* MenuScene */,
 				D0DF704A1999E92600C96742 /* MenuOptionScene */,
@@ -434,11 +464,48 @@
 		B607D17F19875B67000AFA9C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D05E7B18199C2F3600208DAC /* MenuNewGameController */,
 				D0DF704F1999F69E00C96742 /* MenuLoadController */,
 				D0DF703B1999E82400C96742 /* MenuController */,
 				D0DF704E1999ED9A00C96742 /* MenuOptionController */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D05E7B17199C2DA000208DAC /* MenuNewGame */ = {
+			isa = PBXGroup;
+			children = (
+				D05E7B0D199C2D9300208DAC /* MenuNewGame.cpp */,
+				D05E7B0E199C2D9300208DAC /* MenuNewGame.h */,
+			);
+			name = MenuNewGame;
+			sourceTree = "<group>";
+		};
+		D05E7B18199C2F3600208DAC /* MenuNewGameController */ = {
+			isa = PBXGroup;
+			children = (
+				D05E7B19199C2F7900208DAC /* MenuNewGameController.cpp */,
+				D05E7B1A199C2F7900208DAC /* MenuNewGameController.h */,
+			);
+			name = MenuNewGameController;
+			sourceTree = "<group>";
+		};
+		D05E7B1C199C3E1E00208DAC /* New-Game-Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D05E7B1D199C3FDF00208DAC /* New-Game-Back.png */,
+				D05E7B1E199C3FDF00208DAC /* New-Game-background.png */,
+				D05E7B1F199C3FDF00208DAC /* New-Game-Border.png */,
+				D05E7B20199C3FDF00208DAC /* New-Game-next_off.png */,
+				D05E7B21199C3FDF00208DAC /* New-Game-next_on.png */,
+				D05E7B22199C3FDF00208DAC /* New-Game-slider.png */,
+				D05E7B23199C3FDF00208DAC /* New-Game-take_quiz_off.png */,
+				D05E7B24199C3FDF00208DAC /* New-Game-take_quiz_on.png */,
+				D05E7B25199C3FDF00208DAC /* New-Game-text.png */,
+				D05E7B26199C3FDF00208DAC /* New-Game-textbox.png */,
+				D05E7B27199C3FDF00208DAC /* New-Game-Title.png */,
+			);
+			name = "New-Game-Screen";
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -730,24 +797,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05E7B2E199C3FDF00208DAC /* New-Game-take_quiz_off.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
 				D03642BB199C288600ECA5DA /* new_game_on.png in Resources */,
 				D03642B7199C288600ECA5DA /* background.png in Resources */,
+				D05E7B32199C3FDF00208DAC /* New-Game-Title.png in Resources */,
 				D03642BC199C288600ECA5DA /* options_off.png in Resources */,
 				D03642B9199C288600ECA5DA /* load_game_on.png in Resources */,
+				D05E7B31199C3FDF00208DAC /* New-Game-textbox.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				D05E7B2C199C3FDF00208DAC /* New-Game-next_on.png in Resources */,
 				D036429D199C285000ECA5DA /* options-title.png in Resources */,
 				D036429C199C285000ECA5DA /* options-border.png in Resources */,
 				D03642BD199C288600ECA5DA /* options_on.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
+				D05E7B2F199C3FDF00208DAC /* New-Game-take_quiz_on.png in Resources */,
+				D05E7B2B199C3FDF00208DAC /* New-Game-next_off.png in Resources */,
 				D03642BA199C288600ECA5DA /* new_game_off.png in Resources */,
 				D03642B8199C288600ECA5DA /* load_game_off.png in Resources */,
 				D036429E199C285000ECA5DA /* slider.png in Resources */,
+				D05E7B2A199C3FDF00208DAC /* New-Game-Border.png in Resources */,
+				D05E7B30199C3FDF00208DAC /* New-Game-text.png in Resources */,
 				D036429A199C285000ECA5DA /* options-back.png in Resources */,
+				D05E7B28199C3FDF00208DAC /* New-Game-Back.png in Resources */,
+				D05E7B29199C3FDF00208DAC /* New-Game-background.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				D036429B199C285000ECA5DA /* options-bg.png in Resources */,
 				D03642BE199C288600ECA5DA /* title.png in Resources */,
+				D05E7B2D199C3FDF00208DAC /* New-Game-slider.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -767,9 +845,11 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				D05E7B0F199C2D9300208DAC /* MenuNewGame.cpp in Sources */,
 				D0DF704D1999ED9600C96742 /* MenuOptionController.cpp in Sources */,
 				B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
+				D05E7B1B199C2F7900208DAC /* MenuNewGameController.cpp in Sources */,
 				D0DF70561999F74800C96742 /* MenuLoadScene.cpp in Sources */,
 				B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */,
 				B9AC20861990D9FC0067A5FE /* sqlite3.c in Sources */,
