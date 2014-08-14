@@ -56,6 +56,21 @@
 		D03642D5199C2FB700ECA5DA /* dorm-stool.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642CE199C2FB700ECA5DA /* dorm-stool.png */; };
 		D03642D8199C305900ECA5DA /* DormScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03642D7199C305900ECA5DA /* DormScene.cpp */; };
 		D03642DC199C31DB00ECA5DA /* DormController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03642DB199C31DB00ECA5DA /* DormController.cpp */; };
+		D03642E8199C4DE100ECA5DA /* MapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03642E7199C4DE100ECA5DA /* MapScene.cpp */; };
+		D03642EC199C4E1400ECA5DA /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03642EB199C4E1400ECA5DA /* MapController.cpp */; };
+		D03642FA199C51A500ECA5DA /* map-art.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642EF199C51A500ECA5DA /* map-art.png */; };
+		D03642FB199C51A500ECA5DA /* map-business.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F0199C51A500ECA5DA /* map-business.png */; };
+		D03642FC199C51A500ECA5DA /* map-computing_engineering.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F1199C51A500ECA5DA /* map-computing_engineering.png */; };
+		D03642FD199C51A500ECA5DA /* map-library.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F2199C51A500ECA5DA /* map-library.png */; };
+		D03642FE199C51A500ECA5DA /* map_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F3199C51A500ECA5DA /* map_background.png */; };
+		D03642FF199C51A500ECA5DA /* map-science_medicine.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F4199C51A500ECA5DA /* map-science_medicine.png */; };
+		D0364300199C51A500ECA5DA /* map-shop.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F5199C51A500ECA5DA /* map-shop.png */; };
+		D0364301199C51A500ECA5DA /* map-social_science.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F6199C51A500ECA5DA /* map-social_science.png */; };
+		D0364302199C51A500ECA5DA /* map-sun.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F7199C51A500ECA5DA /* map-sun.png */; };
+		D0364303199C51A500ECA5DA /* map-tavern.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F8199C51A500ECA5DA /* map-tavern.png */; };
+		D0364304199C51A500ECA5DA /* map-uni_centre.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642F9199C51A500ECA5DA /* map-uni_centre.png */; };
+		D0364308199C52A000ECA5DA /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = D0364306199C52A000ECA5DA /* bill_inside.png */; };
+		D0364309199C52A000ECA5DA /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = D0364307199C52A000ECA5DA /* bill_outside.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70311999DFB900C96742 /* MenuController.cpp */; };
 		D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DF70481999E92200C96742 /* MenuOptionScene.cpp */; };
@@ -247,6 +262,23 @@
 		D03642D7199C305900ECA5DA /* DormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormScene.cpp; sourceTree = "<group>"; };
 		D03642DA199C31D100ECA5DA /* DormController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DormController.h; sourceTree = "<group>"; };
 		D03642DB199C31DB00ECA5DA /* DormController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormController.cpp; sourceTree = "<group>"; };
+		D03642DF199C4DD700ECA5DA /* MapScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapScene.h; sourceTree = "<group>"; };
+		D03642E7199C4DE100ECA5DA /* MapScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapScene.cpp; sourceTree = "<group>"; };
+		D03642EA199C4E0300ECA5DA /* MapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
+		D03642EB199C4E1400ECA5DA /* MapController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapController.cpp; sourceTree = "<group>"; };
+		D03642EF199C51A500ECA5DA /* map-art.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-art.png"; sourceTree = "<group>"; };
+		D03642F0199C51A500ECA5DA /* map-business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-business.png"; sourceTree = "<group>"; };
+		D03642F1199C51A500ECA5DA /* map-computing_engineering.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-computing_engineering.png"; sourceTree = "<group>"; };
+		D03642F2199C51A500ECA5DA /* map-library.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-library.png"; sourceTree = "<group>"; };
+		D03642F3199C51A500ECA5DA /* map_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_background.png; sourceTree = "<group>"; };
+		D03642F4199C51A500ECA5DA /* map-science_medicine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-science_medicine.png"; sourceTree = "<group>"; };
+		D03642F5199C51A500ECA5DA /* map-shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-shop.png"; sourceTree = "<group>"; };
+		D03642F6199C51A500ECA5DA /* map-social_science.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-social_science.png"; sourceTree = "<group>"; };
+		D03642F7199C51A500ECA5DA /* map-sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-sun.png"; sourceTree = "<group>"; };
+		D03642F8199C51A500ECA5DA /* map-tavern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-tavern.png"; sourceTree = "<group>"; };
+		D03642F9199C51A500ECA5DA /* map-uni_centre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-uni_centre.png"; sourceTree = "<group>"; };
+		D0364306199C52A000ECA5DA /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_inside.png; sourceTree = "<group>"; };
+		D0364307199C52A000ECA5DA /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_outside.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0DF70301999DFAC00C96742 /* MenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuController.h; path = ../Classes/MenuController.h; sourceTree = "<group>"; };
 		D0DF70311999DFB900C96742 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -413,6 +445,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0364305199C529200ECA5DA /* Bill */,
+				D03642EE199C519300ECA5DA /* Map */,
 				D03642C7199C2F5900ECA5DA /* Dorm */,
 				D0DF703C1999E8B800C96742 /* Home-Options */,
 				D0DF70171999B79000C96742 /* Home-Menu */,
@@ -449,6 +483,7 @@
 				D0DF703A1999E81B00C96742 /* MenuScene */,
 				D0DF704A1999E92600C96742 /* MenuOptionScene */,
 				D03642D9199C305E00ECA5DA /* DormScene */,
+				D03642E9199C4DEF00ECA5DA /* MapScene */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -460,6 +495,7 @@
 				D0DF703B1999E82400C96742 /* MenuController */,
 				D0DF704E1999ED9A00C96742 /* MenuOptionController */,
 				D03642DD199C31E000ECA5DA /* DormController */,
+				D03642ED199C4E1B00ECA5DA /* MapController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -494,6 +530,51 @@
 				D03642DB199C31DB00ECA5DA /* DormController.cpp */,
 			);
 			name = DormController;
+			sourceTree = "<group>";
+		};
+		D03642E9199C4DEF00ECA5DA /* MapScene */ = {
+			isa = PBXGroup;
+			children = (
+				D03642DF199C4DD700ECA5DA /* MapScene.h */,
+				D03642E7199C4DE100ECA5DA /* MapScene.cpp */,
+			);
+			name = MapScene;
+			sourceTree = "<group>";
+		};
+		D03642ED199C4E1B00ECA5DA /* MapController */ = {
+			isa = PBXGroup;
+			children = (
+				D03642EA199C4E0300ECA5DA /* MapController.h */,
+				D03642EB199C4E1400ECA5DA /* MapController.cpp */,
+			);
+			name = MapController;
+			sourceTree = "<group>";
+		};
+		D03642EE199C519300ECA5DA /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				D03642EF199C51A500ECA5DA /* map-art.png */,
+				D03642F0199C51A500ECA5DA /* map-business.png */,
+				D03642F1199C51A500ECA5DA /* map-computing_engineering.png */,
+				D03642F2199C51A500ECA5DA /* map-library.png */,
+				D03642F3199C51A500ECA5DA /* map_background.png */,
+				D03642F4199C51A500ECA5DA /* map-science_medicine.png */,
+				D03642F5199C51A500ECA5DA /* map-shop.png */,
+				D03642F6199C51A500ECA5DA /* map-social_science.png */,
+				D03642F7199C51A500ECA5DA /* map-sun.png */,
+				D03642F8199C51A500ECA5DA /* map-tavern.png */,
+				D03642F9199C51A500ECA5DA /* map-uni_centre.png */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		D0364305199C529200ECA5DA /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				D0364306199C52A000ECA5DA /* bill_inside.png */,
+				D0364307199C52A000ECA5DA /* bill_outside.png */,
+			);
+			name = Bill;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -785,23 +866,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03642FC199C51A500ECA5DA /* map-computing_engineering.png in Resources */,
+				D0364304199C51A500ECA5DA /* map-uni_centre.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
 				D03642BB199C288600ECA5DA /* new_game_on.png in Resources */,
 				D03642B7199C288600ECA5DA /* background.png in Resources */,
 				D03642BC199C288600ECA5DA /* options_off.png in Resources */,
+				D0364301199C51A500ECA5DA /* map-social_science.png in Resources */,
 				D03642B9199C288600ECA5DA /* load_game_on.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D036429D199C285000ECA5DA /* options-title.png in Resources */,
+				D0364308199C52A000ECA5DA /* bill_inside.png in Resources */,
 				D03642CF199C2FB700ECA5DA /* dorm-background.png in Resources */,
 				D036429C199C285000ECA5DA /* options-border.png in Resources */,
+				D03642FB199C51A500ECA5DA /* map-business.png in Resources */,
 				D03642BD199C288600ECA5DA /* options_on.png in Resources */,
+				D03642FD199C51A500ECA5DA /* map-library.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
 				D03642BA199C288600ECA5DA /* new_game_off.png in Resources */,
 				D03642D0199C2FB700ECA5DA /* dorm-bed.png in Resources */,
 				D03642B8199C288600ECA5DA /* load_game_off.png in Resources */,
+				D03642FF199C51A500ECA5DA /* map-science_medicine.png in Resources */,
+				D0364302199C51A500ECA5DA /* map-sun.png in Resources */,
 				D03642D3199C2FB700ECA5DA /* dorm-desk.png in Resources */,
 				D036429E199C285000ECA5DA /* slider.png in Resources */,
+				D0364303199C51A500ECA5DA /* map-tavern.png in Resources */,
+				D0364309199C52A000ECA5DA /* bill_outside.png in Resources */,
+				D0364300199C51A500ECA5DA /* map-shop.png in Resources */,
 				D036429A199C285000ECA5DA /* options-back.png in Resources */,
 				D03642D1199C2FB700ECA5DA /* dorm-book_shelf.png in Resources */,
 				D03642D4199C2FB700ECA5DA /* dorm-door.png in Resources */,
@@ -810,6 +902,8 @@
 				D036429B199C285000ECA5DA /* options-bg.png in Resources */,
 				D03642D5199C2FB700ECA5DA /* dorm-stool.png in Resources */,
 				D03642BE199C288600ECA5DA /* title.png in Resources */,
+				D03642FE199C51A500ECA5DA /* map_background.png in Resources */,
+				D03642FA199C51A500ECA5DA /* map-art.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,12 +919,14 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D03642E8199C4DE100ECA5DA /* MapScene.cpp in Sources */,
 				D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */,
 				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				D0DF704D1999ED9600C96742 /* MenuOptionController.cpp in Sources */,
+				D03642EC199C4E1400ECA5DA /* MapController.cpp in Sources */,
 				B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
 				D0DF70561999F74800C96742 /* MenuLoadScene.cpp in Sources */,

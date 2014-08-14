@@ -1,18 +1,18 @@
 //
-//  DormScene.h
+//  MapScene.h
 //  UniLife
 //
 //  Created by csci321ga2a on 8/14/14.
 //
 //
 
-#ifndef UniLife_DormScene_h
-#define UniLife_DormScene_h
+#ifndef UniLife_MapScene_h
+#define UniLife_MapScene_h
 
 #include "PlayerModel.h"
 #include "cocos2d.h"
 
-class DormScene : public cocos2d::Layer
+class MapScene : public cocos2d::Layer
 {
     
 private:
@@ -29,13 +29,13 @@ public:
     static cocos2d::Scene* createScene(PlayerModel player);
     
     // overloaded create method to take player data
-    static DormScene* create(PlayerModel player);
+    static MapScene* create(PlayerModel player);
     
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
     // implement the "static create()" method manually
-    CREATE_FUNC(DormScene);
+    CREATE_FUNC(MapScene);
     
     /********************************
                 Getters
