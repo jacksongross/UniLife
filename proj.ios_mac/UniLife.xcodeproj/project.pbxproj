@@ -31,8 +31,8 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		D00C8409199C9517006F2625 /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D00C8408199C9517006F2625 /* MenuNewGame.cpp */; };
-		D00C840D199C956D006F2625 /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D00C840B199C956D006F2625 /* MenuNewGameController.cpp */; };
+		D00C8419199C9885006F2625 /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D00C8417199C9885006F2625 /* MenuNewGameController.cpp */; };
+		D00C841C199C9895006F2625 /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D00C841A199C9895006F2625 /* MenuNewGame.cpp */; };
 		D036429A199C285000ECA5DA /* options-back.png in Resources */ = {isa = PBXBuildFile; fileRef = D0364295199C285000ECA5DA /* options-back.png */; };
 		D036429B199C285000ECA5DA /* options-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D0364296199C285000ECA5DA /* options-bg.png */; };
 		D036429C199C285000ECA5DA /* options-border.png in Resources */ = {isa = PBXBuildFile; fileRef = D0364297199C285000ECA5DA /* options-border.png */; };
@@ -238,10 +238,10 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D00C8408199C9517006F2625 /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGame.cpp; path = /Users/csci321ga2a/Documents/UniLife/classes/MenuNewGame.cpp; sourceTree = "<absolute>"; };
-		D00C840A199C952B006F2625 /* MenuNewGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuNewGame.h; sourceTree = "<group>"; };
-		D00C840B199C956D006F2625 /* MenuNewGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGameController.cpp; path = /Users/csci321ga2a/Documents/UniLife/classes/MenuNewGameController.cpp; sourceTree = "<absolute>"; };
-		D00C840C199C956D006F2625 /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNewGameController.h; path = /Users/csci321ga2a/Documents/UniLife/classes/MenuNewGameController.h; sourceTree = "<absolute>"; };
+		D00C8417199C9885006F2625 /* MenuNewGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGameController.cpp; path = ../Classes/MenuNewGameController.cpp; sourceTree = "<group>"; };
+		D00C8418199C9885006F2625 /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNewGameController.h; path = ../Classes/MenuNewGameController.h; sourceTree = "<group>"; };
+		D00C841A199C9895006F2625 /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MenuNewGame.cpp; path = ../Classes/MenuNewGame.cpp; sourceTree = "<group>"; };
+		D00C841B199C9895006F2625 /* MenuNewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuNewGame.h; path = ../Classes/MenuNewGame.h; sourceTree = "<group>"; };
 		D0364295199C285000ECA5DA /* options-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-back.png"; sourceTree = "<group>"; };
 		D0364296199C285000ECA5DA /* options-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-bg.png"; sourceTree = "<group>"; };
 		D0364297199C285000ECA5DA /* options-border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-border.png"; sourceTree = "<group>"; };
@@ -514,8 +514,8 @@
 		D00C83FF199C94ED006F2625 /* MenuNewGameController */ = {
 			isa = PBXGroup;
 			children = (
-				D00C840B199C956D006F2625 /* MenuNewGameController.cpp */,
-				D00C840C199C956D006F2625 /* MenuNewGameController.h */,
+				D00C8417199C9885006F2625 /* MenuNewGameController.cpp */,
+				D00C8418199C9885006F2625 /* MenuNewGameController.h */,
 			);
 			name = MenuNewGameController;
 			sourceTree = "<group>";
@@ -523,8 +523,8 @@
 		D00C8407199C94F9006F2625 /* MenuNewGame */ = {
 			isa = PBXGroup;
 			children = (
-				D00C8408199C9517006F2625 /* MenuNewGame.cpp */,
-				D00C840A199C952B006F2625 /* MenuNewGame.h */,
+				D00C841A199C9895006F2625 /* MenuNewGame.cpp */,
+				D00C841B199C9895006F2625 /* MenuNewGame.h */,
 			);
 			name = MenuNewGame;
 			sourceTree = "<group>";
@@ -948,20 +948,20 @@
 				D0DF70521999F6BD00C96742 /* MenuLoadController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
+				D00C841C199C9895006F2625 /* MenuNewGame.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				D03642E8199C4DE100ECA5DA /* MapScene.cpp in Sources */,
 				D0DF70321999DFB900C96742 /* MenuController.cpp in Sources */,
 				B607D18B19878BCA000AFA9C /* TimeHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				D00C8419199C9885006F2625 /* MenuNewGameController.cpp in Sources */,
 				D0DF70491999E92200C96742 /* MenuOptionScene.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
-				D00C8409199C9517006F2625 /* MenuNewGame.cpp in Sources */,
 				D0DF704D1999ED9600C96742 /* MenuOptionController.cpp in Sources */,
 				D03642EC199C4E1400ECA5DA /* MapController.cpp in Sources */,
 				B6A84C5919920E5600339B0B /* timeTableClassModel.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* MenuScene.cpp in Sources */,
 				D0DF70561999F74800C96742 /* MenuLoadScene.cpp in Sources */,
-				D00C840D199C956D006F2625 /* MenuNewGameController.cpp in Sources */,
 				B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */,
 				B9AC20861990D9FC0067A5FE /* sqlite3.c in Sources */,
 				B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */,
