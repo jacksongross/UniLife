@@ -20,6 +20,7 @@
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
+		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18119875BE7000AFA9C /* PlayerModel.cpp */; };
 		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
 		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
@@ -217,6 +218,7 @@
 		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B607D18019875BD3000AFA9C /* PlayerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../Classes/PlayerModel.h; sourceTree = "<group>"; };
 		B607D18119875BE7000AFA9C /* PlayerModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerModel.cpp; path = ../Classes/PlayerModel.cpp; sourceTree = "<group>"; };
 		B607D18319875EEB000AFA9C /* PlayerStatsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerStatsModel.h; path = ../Classes/PlayerStatsModel.h; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				B6012572199C96A3006A6778 /* Default-568h@2x.png */,
 				D0DF70161999B77600C96742 /* icons */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				15AA9C4015B7EC450033D6C2 /* Classes */,
@@ -901,6 +904,7 @@
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				D036429B199C285000ECA5DA /* options-bg.png in Resources */,
 				D03642D5199C2FB700ECA5DA /* dorm-stool.png in Resources */,
+				B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */,
 				D03642BE199C288600ECA5DA /* title.png in Resources */,
 				D03642FE199C51A500ECA5DA /* map_background.png in Resources */,
 				D03642FA199C51A500ECA5DA /* map-art.png in Resources */,
