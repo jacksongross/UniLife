@@ -8,6 +8,10 @@
 #include "MenuNewGameController.h"
 #include "MenuNewGame.h"
 #include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+
+using namespace cocos2d::extension;
+
 
 USING_NS_CC;
 
@@ -120,13 +124,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(ttf6, 0);
     
     
-    CCEditBox* m_pEditName = CCEditBox::create(ccp(100,100),CCScale9Sprite::create("input_field.png"));
-    m_pEditName->setPosition(ccp(origin.x+visibleSize.width/2, origin.y+visibleSize.height*3/4));
-    m_pEditName->setFontColor(ccRED);
-    m_pEditName->setPlaceHolder("Name:");
-    m_pEditName->setMaxLength(8);
-    m_pEditName->setReturnType(kKeyboardReturnTypeDone);
-    addChild(m_pEditName,0);
+
     
     
     
