@@ -54,3 +54,11 @@ bool MenuNewGame::init()
 }
 
 
+void MenuNewGame::dostuffcallback(Ref* pSender)
+{
+    
+    auto scene = MenuNewGame::createScene();
+    
+    
+}
+

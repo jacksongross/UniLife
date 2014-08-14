@@ -34,7 +34,17 @@ public:
 };
 
 
-
+enum KeyboardReturnType {
+    kKeyboardReturnTypeDefault = 0,
+    
+    kKeyboardReturnTypeDone = 1,
+    
+    kKeyboardReturnTypeSend = 2,
+    
+    kKeyboardReturnTypeSearch = 3,
+    
+    kKeyboardReturnTypeGo = 4
+};
 
 
 

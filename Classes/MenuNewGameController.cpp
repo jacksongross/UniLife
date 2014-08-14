@@ -7,6 +7,7 @@
 //
 #include "MenuNewGameController.h"
 #include "MenuNewGame.h"
+#include "ExtensionMacros.h"
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 
@@ -23,9 +24,15 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(Men
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
+    // create the new game button and place onto screen
+    auto PlayerNameReturn = MenuItemImage::create("New-Game-next_off.png",
+                                             "New-Game-next_on.png",
+                                             CC_CALLBACK_1(MenuNewGame::dostuffcallback, that));
     
+    PlayerNameReturn->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400,
+                                  origin.y + (visibleSize.height / 2 - 250)));
     
-    
+    pMenuItems.pushBack(PlayerNameReturn);
     
     
     
@@ -64,12 +71,12 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(sprite, 0);
     
     
-    // add the Next Button sprite to the menu
+    /* add the Next Button sprite to the menu
     sprite = Sprite::create("New-Game-next_off.png");
     sprite->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, visibleSize.height / 2 -250));
     
     that->addChild(sprite, 0);
-    
+    */
     
     
     // add the Take Quiz Button Sprite to the menu
@@ -124,10 +131,21 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(ttf6, 0);
     
     
-
     
+    EditBox* m_pEditName = EditBox::create((CCSizeMake(300, 50)), Scale9Sprite::create("New-Game-textbox.png"));
+    m_pEditName->setPosition(ccp(origin.x + visibleSize.width / 2 - 150, origin.y + visibleSize.height / 2 + 150));
+    m_pEditName->setFontColor(ccc3(0,0,0));
+    m_pEditName->setPlaceHolder("   ");
+    m_pEditName->setMaxLength(8);
+    //m_pEditName->setReturnType(kKeyboardReturnTypeDone);
+    //m_pEditName->setDelegate(this);
+    that->addChild(m_pEditName);
     
     
     
     
 }
+
+
+
+
