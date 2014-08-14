@@ -4,7 +4,6 @@
 #include "cocos2d.h"
 #include "MenuController.h"
 #include "MenuOptionScene.h"
-#include "MenuNewGame.h"
 #include <CCTransition.h>
 #include <vector>
 #include "DormScene.h"
@@ -58,9 +57,6 @@ bool MenuScene::init()
 void MenuScene::newGameCallback(Ref* pSender)
 {
     log("new game button pressed!");
-    auto scene = MenuNewGame::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
 }
 
 void MenuScene::loadGameCallback(Ref* pSender)
