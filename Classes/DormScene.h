@@ -22,6 +22,8 @@ private:
     
 public:
     
+    cocos2d::Label* timer;
+    
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
     
@@ -30,6 +32,8 @@ public:
     
     // overloaded create method to take player data
     static DormScene* create(PlayerModel player);
+    
+    void UpdateTimer(float dt);
     
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();

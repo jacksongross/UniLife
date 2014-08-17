@@ -19,7 +19,7 @@
 
 USING_NS_CC;
 
-class DormController
+class DormController : public CCNode
 {
     
 private:
@@ -31,6 +31,12 @@ public:
     
     // creates the dorm room
     static void CreateDormRoom(DormScene *that, Size visibleSize, Vec2 origin);
+    
+    void UpdateTimer(float dt);
+    
+    void timeLost(float dt);//The countdown
+    
+    void doSomething();
 
 };
 

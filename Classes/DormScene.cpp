@@ -15,6 +15,7 @@
 #include <vector>
 #include "DormScene.h"
 #include "DormController.h"
+#include <sstream>
 
 USING_NS_CC;
 
@@ -82,7 +83,49 @@ bool DormScene::init()
     // create the dorm scene
     DormController::CreateDormRoom(this, visibleSize, origin);
     
+    this->schedule(schedule_selector(DormScene::UpdateTimer),1.0f);
+    
     return true;
+}
+
+void DormScene::UpdateTimer(float dt)
+{
+    int hh, mm;
+    std::string ampm;
+    
+    std::stringstream ss;
+    ss << this->timer->getString();
+
+    char s;
+    
+    ss >> hh >> s >> mm >> ampm;
+    
+    mm += 5;
+    
+    if(mm == 60)
+    {
+        mm = 0;
+        hh++;
+    }
+    
+    ampm == "pm" && hh == 12 ? ampm = "am" : ampm;
+    ampm == "am" && hh == 12 ? ampm = "pm" : ampm;
+    
+    hh > 12 ? hh = 1 : hh;
+
+    std::ostringstream stringStream;
+    stringStream << hh << ":";
+    
+    if(mm < 10)
+    {
+        stringStream << "0" << mm << ampm;
+    }
+    else
+    {
+        stringStream << mm << ampm;
+    }
+    
+    this->timer->setString(stringStream.str());
 }
 
 
