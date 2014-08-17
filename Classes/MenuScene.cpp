@@ -7,6 +7,7 @@
 #include <CCTransition.h>
 #include <vector>
 #include "DormScene.h"
+#include "MenuLoadScene.h"
 
 USING_NS_CC;
 
@@ -64,9 +65,9 @@ void MenuScene::loadGameCallback(Ref* pSender)
     log("load game button pressed!");
     
     // transition to the load game scene
-    auto scene = MenuOptionScene::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    auto scene = MenuLoadScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 void MenuScene::optionsCallback(Ref* pSender)
@@ -78,10 +79,8 @@ void MenuScene::optionsCallback(Ref* pSender)
     PlayerModel p;
     p.setName("Jackson Gross");
     
-    log(p.getName().c_str());
-    
     auto scene = DormScene::createScene(p);
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }

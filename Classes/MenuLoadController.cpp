@@ -43,9 +43,11 @@ void MenuLoadController::CreateMainMenu(MenuLoadScene *that, Size visibleSize, V
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
     
-    // add the title sprite to the menu
-    sprite = Sprite::create("title.png");
-    sprite->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
+    auto label = Label::createWithSystemFont("Load Game", "Helvetica", 74);
+
+    label->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
     
-    that->addChild(sprite, 0);
+    that->addChild(label, 0);
+    
+    
 }

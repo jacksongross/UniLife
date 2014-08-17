@@ -57,8 +57,8 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
     log("test!");
     
     auto scene = MenuScene::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 

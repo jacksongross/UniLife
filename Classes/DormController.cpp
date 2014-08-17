@@ -35,23 +35,23 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     that->addChild(menu, 1);
     
     // create dorm room
-    auto sprite = Sprite::create("dorm-background.png");
+    auto bg = Sprite::create("dorm-background.png");
     
     // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    bg->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
     
     // add the sprite as a child to this layer
-    that->addChild(sprite, 0);
+    that->addChild(bg, 0);
     
     // add bill to the screen
-    sprite = Sprite::create("bill_inside.png");
+    auto player = Sprite::create("bill_inside.png");
     
-    sprite->setPosition(Vec2(visibleSize.width / 2 - 130, visibleSize.height / 2 - 135 ));
+    player->setPosition(Vec2(visibleSize.width / 2 - 130, visibleSize.height / 2 - 135 ));
     
-    that->addChild(sprite, 6);
+    that->addChild(player, 6);
     
     // add the door
-    sprite = Sprite::create("dorm-door.png");
+    auto sprite = Sprite::create("dorm-door.png");
     
     sprite->setPosition(Vec2(visibleSize.width / 2 - origin.x - sprite->getContentSize().width - 39, visibleSize.height / 2 + origin.y - 10));
     
@@ -80,8 +80,8 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
             
             // transition to the load game scene
             auto scene = MapScene::createScene();
-            CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-            CCDirector::sharedDirector()->replaceScene(crosssfade);
+            TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+            Director::getInstance()->replaceScene(crosssfade);
             
             return true;
         }
@@ -109,7 +109,7 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
         {
             sprite->setZOrder(0);
         }
-         */
+        */
     };
     
     that->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener1, sprite);
@@ -148,5 +148,26 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 15, origin.y + sprite->getContentSize().height / 2));
     
     that->addChild(sprite, 5);
+    
+    sprite = Sprite::create("options-hb.png");
+    
+    sprite->setScale(.3, .3);
+    
+    sprite->setPosition(Vec2(visibleSize.width - sprite->getContentSize().width * .3 + 30, visibleSize.height - sprite->getContentSize().height * .3 + 40));
+    
+    that->addChild(sprite, 6);
+    
+    that->timer = Label::createWithSystemFont("11:30pm", "Verdana", 64);
+    
+    that->timer->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - 22));
+    
+    that->addChild(that->timer);
+    
+}
+
+void DormController::UpdateTimer(float dt)
+{
+    //something
+    //((GameLayer*)this->getParent())->_peaShooterLayer->_peaShooterSprite->setPosition(pTouch->getLocation());
     
 }

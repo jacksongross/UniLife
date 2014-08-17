@@ -21,6 +21,14 @@
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
+		B601258A19A07276006A6778 /* LoadTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B601258919A07276006A6778 /* LoadTableCell.cpp */; };
+		B601258F19A099F9006A6778 /* load-table-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B601258E19A099F9006A6778 /* load-table-cell.png */; };
+		B601259719A0B67C006A6778 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259119A0B67C006A6778 /* bars.png */; };
+		B601259819A0B67C006A6778 /* options_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259219A0B67C006A6778 /* options_button.png */; };
+		B601259919A0B67C006A6778 /* options-hb.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259319A0B67C006A6778 /* options-hb.png */; };
+		B601259A19A0B67C006A6778 /* phone_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259419A0B67C006A6778 /* phone_button.png */; };
+		B601259B19A0B67C006A6778 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259519A0B67C006A6778 /* phone_selection.png */; };
+		B601259C19A0B67C006A6778 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259619A0B67C006A6778 /* phone.png */; };
 		B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18119875BE7000AFA9C /* PlayerModel.cpp */; };
 		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
 		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
@@ -219,6 +227,15 @@
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B601258119A07268006A6778 /* LoadTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoadTableCell.h; path = ../Classes/LoadTableCell.h; sourceTree = "<group>"; };
+		B601258919A07276006A6778 /* LoadTableCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadTableCell.cpp; path = ../Classes/LoadTableCell.cpp; sourceTree = "<group>"; };
+		B601258E19A099F9006A6778 /* load-table-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "load-table-cell.png"; path = "../../UniLife_Documentation/Images/assets/options/load-table-cell.png"; sourceTree = "<group>"; };
+		B601259119A0B67C006A6778 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
+		B601259219A0B67C006A6778 /* options_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options_button.png; sourceTree = "<group>"; };
+		B601259319A0B67C006A6778 /* options-hb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-hb.png"; sourceTree = "<group>"; };
+		B601259419A0B67C006A6778 /* phone_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_button.png; sourceTree = "<group>"; };
+		B601259519A0B67C006A6778 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
+		B601259619A0B67C006A6778 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		B607D18019875BD3000AFA9C /* PlayerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../Classes/PlayerModel.h; sourceTree = "<group>"; };
 		B607D18119875BE7000AFA9C /* PlayerModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerModel.cpp; path = ../Classes/PlayerModel.cpp; sourceTree = "<group>"; };
 		B607D18319875EEB000AFA9C /* PlayerStatsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerStatsModel.h; path = ../Classes/PlayerStatsModel.h; sourceTree = "<group>"; };
@@ -448,6 +465,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B601259019A0B653006A6778 /* HUD */,
 				D0364305199C529200ECA5DA /* Bill */,
 				D03642EE199C519300ECA5DA /* Map */,
 				D03642C7199C2F5900ECA5DA /* Dorm */,
@@ -457,6 +475,19 @@
 			);
 			name = Resources;
 			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		B601259019A0B653006A6778 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				B601259119A0B67C006A6778 /* bars.png */,
+				B601259219A0B67C006A6778 /* options_button.png */,
+				B601259319A0B67C006A6778 /* options-hb.png */,
+				B601259419A0B67C006A6778 /* phone_button.png */,
+				B601259519A0B67C006A6778 /* phone_selection.png */,
+				B601259619A0B67C006A6778 /* phone.png */,
+			);
+			name = HUD;
 			sourceTree = "<group>";
 		};
 		B607D16C1985001A000AFA9C /* Helpers */ = {
@@ -683,6 +714,7 @@
 		D0DF703C1999E8B800C96742 /* Home-Options */ = {
 			isa = PBXGroup;
 			children = (
+				B601258E19A099F9006A6778 /* load-table-cell.png */,
 				D0364295199C285000ECA5DA /* options-back.png */,
 				D0364296199C285000ECA5DA /* options-bg.png */,
 				D0364297199C285000ECA5DA /* options-border.png */,
@@ -724,6 +756,8 @@
 			children = (
 				D0DF70541999F73F00C96742 /* MenuLoadScene.h */,
 				D0DF70551999F74800C96742 /* MenuLoadScene.cpp */,
+				B601258119A07268006A6778 /* LoadTableCell.h */,
+				B601258919A07276006A6778 /* LoadTableCell.cpp */,
 			);
 			name = MenuLoadScene;
 			sourceTree = "<group>";
@@ -869,19 +903,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B601259C19A0B67C006A6778 /* phone.png in Resources */,
+				B601259919A0B67C006A6778 /* options-hb.png in Resources */,
 				D03642FC199C51A500ECA5DA /* map-computing_engineering.png in Resources */,
 				D0364304199C51A500ECA5DA /* map-uni_centre.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
+				B601259819A0B67C006A6778 /* options_button.png in Resources */,
 				D03642BB199C288600ECA5DA /* new_game_on.png in Resources */,
 				D03642B7199C288600ECA5DA /* background.png in Resources */,
 				D03642BC199C288600ECA5DA /* options_off.png in Resources */,
 				D0364301199C51A500ECA5DA /* map-social_science.png in Resources */,
 				D03642B9199C288600ECA5DA /* load_game_on.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				B601259A19A0B67C006A6778 /* phone_button.png in Resources */,
 				D036429D199C285000ECA5DA /* options-title.png in Resources */,
 				D0364308199C52A000ECA5DA /* bill_inside.png in Resources */,
 				D03642CF199C2FB700ECA5DA /* dorm-background.png in Resources */,
+				B601259B19A0B67C006A6778 /* phone_selection.png in Resources */,
 				D036429C199C285000ECA5DA /* options-border.png in Resources */,
 				D03642FB199C51A500ECA5DA /* map-business.png in Resources */,
 				D03642BD199C288600ECA5DA /* options_on.png in Resources */,
@@ -893,9 +932,11 @@
 				D03642FF199C51A500ECA5DA /* map-science_medicine.png in Resources */,
 				D0364302199C51A500ECA5DA /* map-sun.png in Resources */,
 				D03642D3199C2FB700ECA5DA /* dorm-desk.png in Resources */,
+				B601258F19A099F9006A6778 /* load-table-cell.png in Resources */,
 				D036429E199C285000ECA5DA /* slider.png in Resources */,
 				D0364303199C51A500ECA5DA /* map-tavern.png in Resources */,
 				D0364309199C52A000ECA5DA /* bill_outside.png in Resources */,
+				B601259719A0B67C006A6778 /* bars.png in Resources */,
 				D0364300199C51A500ECA5DA /* map-shop.png in Resources */,
 				D036429A199C285000ECA5DA /* options-back.png in Resources */,
 				D03642D1199C2FB700ECA5DA /* dorm-book_shelf.png in Resources */,
@@ -920,6 +961,7 @@
 			files = (
 				D03642DC199C31DB00ECA5DA /* DormController.cpp in Sources */,
 				D0DF70521999F6BD00C96742 /* MenuLoadController.cpp in Sources */,
+				B601258A19A07276006A6778 /* LoadTableCell.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
