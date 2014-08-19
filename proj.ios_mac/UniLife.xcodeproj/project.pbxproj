@@ -22,13 +22,13 @@
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		B601258A19A07276006A6778 /* LoadTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B601258919A07276006A6778 /* LoadTableCell.cpp */; };
-		B601258F19A099F9006A6778 /* load-table-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B601258E19A099F9006A6778 /* load-table-cell.png */; };
 		B601259719A0B67C006A6778 /* bars.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259119A0B67C006A6778 /* bars.png */; };
 		B601259819A0B67C006A6778 /* options_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259219A0B67C006A6778 /* options_button.png */; };
 		B601259919A0B67C006A6778 /* options-hb.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259319A0B67C006A6778 /* options-hb.png */; };
 		B601259A19A0B67C006A6778 /* phone_button.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259419A0B67C006A6778 /* phone_button.png */; };
 		B601259B19A0B67C006A6778 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259519A0B67C006A6778 /* phone_selection.png */; };
 		B601259C19A0B67C006A6778 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259619A0B67C006A6778 /* phone.png */; };
+		B601259E19A31D51006A6778 /* load-table-cell.png in Resources */ = {isa = PBXBuildFile; fileRef = B601259D19A31D51006A6778 /* load-table-cell.png */; };
 		B607D18219875BE7000AFA9C /* PlayerModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18119875BE7000AFA9C /* PlayerModel.cpp */; };
 		B607D18519875EF8000AFA9C /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D18419875EF8000AFA9C /* PlayerStatsModel.cpp */; };
 		B607D1881987661B000AFA9C /* SqlHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B607D1871987661B000AFA9C /* SqlHelper.cpp */; };
@@ -231,13 +231,13 @@
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B601258119A07268006A6778 /* LoadTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LoadTableCell.h; path = ../Classes/LoadTableCell.h; sourceTree = "<group>"; };
 		B601258919A07276006A6778 /* LoadTableCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LoadTableCell.cpp; path = ../Classes/LoadTableCell.cpp; sourceTree = "<group>"; };
-		B601258E19A099F9006A6778 /* load-table-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "load-table-cell.png"; path = "../../UniLife_Documentation/Images/assets/options/load-table-cell.png"; sourceTree = "<group>"; };
 		B601259119A0B67C006A6778 /* bars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars.png; sourceTree = "<group>"; };
 		B601259219A0B67C006A6778 /* options_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = options_button.png; sourceTree = "<group>"; };
 		B601259319A0B67C006A6778 /* options-hb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "options-hb.png"; sourceTree = "<group>"; };
 		B601259419A0B67C006A6778 /* phone_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_button.png; sourceTree = "<group>"; };
 		B601259519A0B67C006A6778 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		B601259619A0B67C006A6778 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		B601259D19A31D51006A6778 /* load-table-cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "load-table-cell.png"; sourceTree = "<group>"; };
 		B607D18019875BD3000AFA9C /* PlayerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerModel.h; path = ../Classes/PlayerModel.h; sourceTree = "<group>"; };
 		B607D18119875BE7000AFA9C /* PlayerModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlayerModel.cpp; path = ../Classes/PlayerModel.cpp; sourceTree = "<group>"; };
 		B607D18319875EEB000AFA9C /* PlayerStatsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlayerStatsModel.h; path = ../Classes/PlayerStatsModel.h; sourceTree = "<group>"; };
@@ -740,7 +740,7 @@
 		D0DF703C1999E8B800C96742 /* Home-Options */ = {
 			isa = PBXGroup;
 			children = (
-				B601258E19A099F9006A6778 /* load-table-cell.png */,
+				B601259D19A31D51006A6778 /* load-table-cell.png */,
 				D0364295199C285000ECA5DA /* options-back.png */,
 				D0364296199C285000ECA5DA /* options-bg.png */,
 				D0364297199C285000ECA5DA /* options-border.png */,
@@ -958,7 +958,6 @@
 				D03642FF199C51A500ECA5DA /* map-science_medicine.png in Resources */,
 				D0364302199C51A500ECA5DA /* map-sun.png in Resources */,
 				D03642D3199C2FB700ECA5DA /* dorm-desk.png in Resources */,
-				B601258F19A099F9006A6778 /* load-table-cell.png in Resources */,
 				D036429E199C285000ECA5DA /* slider.png in Resources */,
 				D0364303199C51A500ECA5DA /* map-tavern.png in Resources */,
 				D0364309199C52A000ECA5DA /* bill_outside.png in Resources */,
@@ -974,6 +973,7 @@
 				B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */,
 				D03642BE199C288600ECA5DA /* title.png in Resources */,
 				D03642FE199C51A500ECA5DA /* map_background.png in Resources */,
+				B601259E19A31D51006A6778 /* load-table-cell.png in Resources */,
 				D03642FA199C51A500ECA5DA /* map-art.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
