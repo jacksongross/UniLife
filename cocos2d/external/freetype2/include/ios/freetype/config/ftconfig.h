@@ -405,8 +405,8 @@ FT_BEGIN_HEADER
   FT_MulFix_i386( FT_Int32  a,
                   FT_Int32  b )
   {
-    register FT_Int32  result;
-
+    FT_Int32  result;
+    //register FT_Int32  result;
 
     __asm__ __volatile__ (
       "imul  %%edx\n"
