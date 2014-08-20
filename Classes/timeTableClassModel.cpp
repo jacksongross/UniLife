@@ -111,7 +111,7 @@ int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
     
     int timeInt = -1;
     int dayInt = -1;
-    //bool checker = false;
+    bool checker = false;
     
     srand(time(NULL));
     
