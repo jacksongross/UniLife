@@ -25,7 +25,7 @@ private:
 public:
     
     // open a connection to the database
-    static sqlite3* openDatabase();
+    static sqlite3* openDatabase(std::string name);
     
     // close database connection
     static void closeDatabase(sqlite3* db);
@@ -45,6 +45,8 @@ public:
     // builds a player object from a database query
     static void buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeHelper &t);
 
+    
+    static std::vector<std::string> getDegrees();
 };
 
 #endif

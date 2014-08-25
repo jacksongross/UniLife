@@ -18,13 +18,13 @@
 USING_NS_CC;
 
 // open a connection to the database
-sqlite3* SqlHelper::openDatabase()
+sqlite3* SqlHelper::openDatabase(std::string name)
 {
     
     // set the db pointer to null ready for a query
     sqlite3 *db;
     
-    std::string dbName = "save.db";
+    std::string dbName = name;
     
     // get a path to write database to
     std::string dbPath = CCFileUtils::getInstance()->getWritablePath();
@@ -60,7 +60,7 @@ void SqlHelper::initDatabase()
     
     sqlite3_stmt *createStmt;
     
-    sqlite3 *db = SqlHelper::openDatabase();
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
     
     int result;
     
@@ -97,7 +97,7 @@ void SqlHelper::initDatabase()
 void SqlHelper::serialize(PlayerModel p)
 {
     // set the db pointer to null ready for a query
-    sqlite3 *db = SqlHelper::openDatabase();
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
     
     // used to create the query
     std::string sql;
@@ -140,7 +140,7 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
     
     sqlite3_stmt *Stmnt;
     
-    sqlite3 *db = SqlHelper::openDatabase();
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
     
     // check to see if it is saving correctly
     sql =  "select * from player";
@@ -184,7 +184,7 @@ PlayerModel SqlHelper::getPlayer(int playerId)
     
     sqlite3_stmt *Stmnt;
     
-    sqlite3 *db = SqlHelper::openDatabase();
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
     
     // check to see if it is saving correctly
     sql =  "select * from player where ID = ";
@@ -240,4 +240,44 @@ void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, Pla
     
     p.setStats(s);
     p.setGameTime(t);
+}
+
+std::vector<std::string> SqlHelper::getDegrees(){
+    
+    sqlite3 *db = openDatabase("academic.db");
+    std::string sql=  "select * from Degree;";
+    sqlite3_stmt *Stmnt;
+    std::vector<std::string> dList;
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+              dList.push_back((char*)sqlite3_column_text(Stmnt, 1));
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
+    return dList;
+    
 }
