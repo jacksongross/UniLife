@@ -20,14 +20,14 @@
 #include "LoadTableCell.h"
 #include "LoadTableDataSource.h"
 #include "DormScene.h"
+#include <UIListView.h>
+#include <UIButton.h>
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 using namespace cocos2d;
 using namespace cocos2d::extension;
-
-#define RANK_TABLE_WIDTH 200
-#define RANK_TABLE_HEIGHT 400
 
 Scene* MenuLoadScene::createScene()
 {
@@ -64,87 +64,93 @@ bool MenuLoadScene::init()
     MenuLoadController::CreateMainMenu(this, visibleSize, origin);
     
     //for creating a table view
-    
-    TableView* tableView = TableView::create(this, Size(visibleSize.width, visibleSize.height));
+    TableView* tableView = TableView::create(this, Size(900, 400));
     tableView->setDirection(TableView::Direction::VERTICAL);
-    tableView->setPosition(Vec2(0, visibleSize.height / 2 - 300));
+    tableView->setPosition(Point(145,100));
     tableView->setDelegate(this);
-    tableView->setBounceable(false);
     tableView->setVerticalFillOrder(TableView::VerticalFillOrder::TOP_DOWN);
-    
-    this -> addChild (tableView, 0);
-    //tableView-> reloadData ();
+    this->addChild(tableView);
+    tableView->reloadData();
     
     return true;
 }
 
-cocos2d::extension::TableViewCell* MenuLoadScene::tableCellAtIndex(cocos2d::extension::TableView *table, ssize_t idx)
-{
+Size MenuLoadScene::cellSizeForTable(TableView *table) {
+    return Size(100, 400);
+}
+
+TableViewCell* MenuLoadScene::tableCellAtIndex(TableView *table, unsigned int idx) {
+    
     LoadTableCell *cell = (LoadTableCell*)table->dequeueCell();
-    Size visibleSize = Director::getInstance()->getVisibleSize();
     
     if (cell == NULL)
     {
         cell = new LoadTableCell;
-        cell->setContentSize(Size(visibleSize.width, visibleSize.height / 2));
+        cell->setScale(0.5f);
+        cell->setContentSize(Size(100, 400));
     }
     
     cell->setColor(Color3B(255, 255, 255));
+    auto bg = Sprite::create("load-table-cell.png");
+    bg->setContentSize(Size(200,400));
+    bg->setScale(0.5f);
+    cell->setCellBackground(bg);
     
     cell->getNickNameLabel()->setString(this->players[idx].getName().c_str());
-    //cell->getPlayCountLabel()->setString(this->players[idx].getDegree().c_str());
-    //cell->getTotalScoreLabel()->setString(this->players[idx].getScene().c_str());
+    cell->getPlayCountLabel()->setString(this->players[idx].getDegree().c_str());
+    cell->getTotalScoreLabel()->setString(this->players[idx].getScene().c_str());
     
     return cell;
 }
+
+
+
+cocos2d::extension::TableViewCell* MenuLoadScene::tableCellAtIndex(cocos2d::extension::TableView *table, ssize_t idx)
+{
+    LoadTableCell *cell = (LoadTableCell*)table->dequeueCell();
+    
+    if (cell == NULL)
+    {
+        cell = new LoadTableCell;
+        cell->setContentSize(Size(100,400));
+        cell->setScale(0.8, 0.5f);
+    }
+    
+    cell->setColor(Color3B(255, 255, 255));
+    auto bg = Sprite::create("load-table-cell.png");
+    bg->setContentSize(Size(100,400));
+    cell->setCellBackground(bg);
+    
+    cell->getNickNameLabel()->setString(this->players[idx].getName().c_str());
+    cell->getPlayCountLabel()->setString(this->players[idx].getDegree().c_str());
+    cell->getTotalScoreLabel()->setString(this->players[idx].getScene().c_str());
+    
+    return cell;
+}
+
 
 ssize_t MenuLoadScene::numberOfCellsInTableView(cocos2d::extension::TableView *table)
 {
     return this->players.size();
 }
 
+
 cocos2d::Size MenuLoadScene::tableCellSizeForIndex(cocos2d::extension::TableView *table, ssize_t idx)
 {
-    return Size (RANK_TABLE_WIDTH, RANK_TABLE_WIDTH);
+    return Size (100, 300);
 }
-
-cocos2d::extension::TableViewCell* MenuLoadScene::tableCellAtIndex (cocos2d::extension::TableView * table, unsigned int idx)
-{
-    LoadTableCell *cell = (LoadTableCell*)table->dequeueCell();
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    
-    if (cell == NULL)
-    {
-        cell = new LoadTableCell;
-        cell->setContentSize(Size(visibleSize.width, visibleSize.height / 2));
-    }
-    
-    cell->setColor(Color3B(255, 255, 255));
-    
-    cell->getNickNameLabel()->setString(this->players[idx].getName().c_str());
-    //cell->getPlayCountLabel()->setString(this->players[idx].getDegree().c_str());
-    //cell->getTotalScoreLabel()->setString(this->players[idx].getScene().c_str());
-    
-    return cell;
-}
-
-cocos2d::Size MenuLoadScene::cellSizeForTable (cocos2d::extension::TableView * table)
-{
-    return Size (RANK_TABLE_WIDTH, RANK_TABLE_WIDTH);
-}
-
 
 void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos2d::extension::TableViewCell *cell)
 {
     log ("cell touched at index:% zi", cell->getIdx());
+    PlayerModel player = this->players[cell->getIdx()];
     
-    PlayerModel p = this->players[cell->getIdx()];
-    
-    auto scene = DormScene::createScene(p);
+    auto scene = DormScene::createScene(player);
     TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
 
 void MenuLoadScene::scrollViewDidScroll(cocos2d::extension::ScrollView *view)
 {

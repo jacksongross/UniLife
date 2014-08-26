@@ -37,14 +37,16 @@ bool MenuScene::init()
         return false;
     }
     
-    // run this once to create and seed tables
-    //SqlHelper::initDatabase();
+    // checks if the database initialisation has been run before
+    // to ensure it gets seeded once
+    bool isSeeded = UserDefault::getInstance()->getBoolForKey("seeded");
     
-    // get a list of all players in the database
-    std::vector<PlayerModel> playersList = SqlHelper::getAllPlayers();
-
-    // get a specific player
-    PlayerModel p = SqlHelper::getPlayer(1);
+    if(isSeeded == false)
+    {
+        log("seeding the database!");
+        SqlHelper::initDatabase();
+        UserDefault::getInstance()->setBoolForKey("seeded", true);
+    }
     
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();

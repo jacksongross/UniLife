@@ -159,7 +159,7 @@ void ActionManagerEx::releaseActions()
     for (iter = _actionDic.begin(); iter != _actionDic.end(); iter++)
     {
         cocos2d::Vector<ActionObject*> objList = iter->second;
-        int listCount = objList.size();
+        long listCount = objList.size();
         for (int i = 0; i < listCount; i++) {
             ActionObject* action = objList.at(i);
             if (action != nullptr) {

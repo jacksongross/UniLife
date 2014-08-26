@@ -68,7 +68,7 @@ void SqlHelper::initDatabase()
     
     sql = "CREATE TABLE IF NOT EXISTS player(ID INTEGER primary key autoincrement,name text,degree text,intelligence INTEGER,stamina INTEGER,social INTEGER,money INTEGER,energy INTEGER,stress INTEGER,scene text,day INTEGER,week INTEGER,semester INTEGER,hoursminutes REAL)";
     
-    sqlite3_prepare(db, sql.c_str(), sql.size(), &createStmt, NULL);
+    sqlite3_prepare(db, sql.c_str(), static_cast<unsigned int>(sql.size()), &createStmt, NULL);
     
     result = sqlite3_step(createStmt);
     
@@ -85,6 +85,9 @@ void SqlHelper::initDatabase()
     
     // save player data to database
     SqlHelper::serialize(p);
+    
+    PlayerModel q("Jackson", "Computer Science", PlayerStatsModel(1, 2, 3, 4, 5, 6), "DormScene", TimeHelper(4, 3, 2, 14.5));
+    SqlHelper::serialize(q);
     
     // close the database
     SqlHelper::closeDatabase(db);
@@ -116,7 +119,7 @@ void SqlHelper::serialize(PlayerModel p)
     
     sql = strm.str();
     
-    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmt, NULL ) == SQLITE_OK)
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmt, NULL ) == SQLITE_OK)
     {
         int res=sqlite3_step(Stmt);
         result=res;
@@ -145,7 +148,7 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
     // check to see if it is saving correctly
     sql =  "select * from player";
     
-    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
     {
         int res = 0;
         
@@ -190,7 +193,7 @@ PlayerModel SqlHelper::getPlayer(int playerId)
     sql =  "select * from player where ID = ";
     sql.append(std::to_string(playerId));
     
-    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
     {
         int res = 0;
         
@@ -250,7 +253,7 @@ std::vector<std::string> SqlHelper::getDegrees(){
     std::vector<std::string> dList;
     
     
-    if(sqlite3_prepare( db, sql.c_str(), sql.size(), &Stmnt, NULL ) == SQLITE_OK)
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
     {
         int res = 0;
         

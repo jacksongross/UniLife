@@ -23,9 +23,9 @@ public:
     ~LoadTableCell();
     
     CC_SYNTHESIZE(cocos2d::Sprite*, _cellBackground, CellBackground);
-    CC_SYNTHESIZE(cocos2d::Label*, _lbNickName, NickNameLabel);
-    CC_SYNTHESIZE(cocos2d::Label*, _lbPlayCount, PlayCountLabel);
-    CC_SYNTHESIZE(cocos2d::Label*, _lbTotalScore, TotalScoreLabel);
+    CC_SYNTHESIZE(cocos2d::Label*, Name, NickNameLabel);
+    CC_SYNTHESIZE(cocos2d::Label*, Degree, PlayCountLabel);
+    CC_SYNTHESIZE(cocos2d::Label*, Scene, TotalScoreLabel);
 };
 
 #endif

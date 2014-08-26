@@ -45,7 +45,7 @@ public:
     // builds a player object from a database query
     static void buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeHelper &t);
 
-    
+    // retrieve degree names from the database
     static std::vector<std::string> getDegrees();
 };
 

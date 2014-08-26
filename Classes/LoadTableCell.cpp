@@ -8,56 +8,36 @@
 
 #include "LoadTableCell.h"
 
-#define RANK_TABLE_WIDTH 400
-#define RANK_TABLE_CELL_HEIGHT 400
-
-LoadTableCell::LoadTableCell():_cellBackground(NULL), _lbNickName(NULL), _lbPlayCount(NULL), _lbTotalScore(NULL)
+LoadTableCell::LoadTableCell():_cellBackground(NULL), Name(NULL), Degree(NULL), Scene(NULL)
 {
-    
-    const float gapLeft = 10.0f;
-    const float gapRight = 10.0f;
-    
-    const float widthPlayCount  = 40.0f;
-    const float widthTotalScore = 80.0f;
-    const float widthNickName   = RANK_TABLE_WIDTH - (widthPlayCount + widthTotalScore) - (gapLeft + gapRight);
-    
-    const float posNickName = gapLeft;
-    const float posPlayCount = posNickName + widthNickName;
-    const float posTotalScore = posPlayCount + widthPlayCount;
     
     // Background
     
     Sprite *sprite = Sprite::create("options-border.png");
     Size spriteSize = sprite->getContentSize();
-    sprite->setPosition( Vec2(spriteSize.width/2, spriteSize.height/2) );
+    sprite->setPosition( Vec2(spriteSize.width / 2, spriteSize.height/2) );
     this->addChild(sprite);
     
-    // Label : NickName
+    // Label : Character Name
     
-    _lbNickName = Label::createWithSystemFont("", "Arial", 64);
-
-    _lbNickName->setColor( Color3B(192, 64, 64) );
+    Name = Label::createWithSystemFont("", "Arial", 64);
+    Name->setColor(Color3B(0, 0, 0));
+    Name->setPosition( Vec2(spriteSize.width / 2, 350) );
+    this->addChild(Name);
     
-    _lbNickName->setPosition( Vec2(RANK_TABLE_WIDTH / 2, RANK_TABLE_CELL_HEIGHT/2) );
-    this->addChild(_lbNickName);
+    // Label : Degree
     
-    // Label : PlayCount
+    Degree = Label::createWithSystemFont("", "Arial", 64);
+    Degree->setColor(Color3B(0, 0, 0));
+    Degree->setPosition( Vec2(spriteSize.width / 2, 250) );
+    this->addChild(Degree);
     
-    _lbPlayCount = Label::createWithSystemFont("", "Arial", 32);
+    // Label : Scene
     
-    _lbPlayCount->setColor( Color3B(64, 64, 192) );
-    
-    _lbPlayCount->setPosition( Vec2(posPlayCount + widthPlayCount/2, RANK_TABLE_CELL_HEIGHT/2) );
-    //this->addChild(_lbPlayCount);
-    
-    // Label : TotalScore
-    
-    _lbTotalScore = Label::createWithSystemFont("", "Arial", 32);
-
-    _lbTotalScore->setColor( Color3B(64, 128, 128) );
-    
-    _lbTotalScore->setPosition( Vec2(posTotalScore + widthTotalScore/2, RANK_TABLE_CELL_HEIGHT/2) );
-    //this->addChild(_lbTotalScore);
+    Scene = Label::createWithSystemFont("", "Arial", 64);
+    Scene->setColor(Color3B(0, 0, 0));
+    Scene->setPosition( Vec2(spriteSize.width / 2, 150) );
+    this->addChild(Scene);
 }
 
 LoadTableCell::~LoadTableCell()

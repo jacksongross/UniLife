@@ -19,7 +19,7 @@
 
 USING_NS_CC;
 
-class DormController : public CCNode
+class DormController : public Node
 {
     
 private:
