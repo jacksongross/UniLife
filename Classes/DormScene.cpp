@@ -2,7 +2,7 @@
 //  DormScene.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 8/14/14.
+//  Created by Jackson Gross on 8/14/14.
 //
 //
 #include "MenuScene.h"
