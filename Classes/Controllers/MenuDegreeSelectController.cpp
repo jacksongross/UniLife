@@ -131,7 +131,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     DegreeSelected->setContentSize(Size(490, 64));
     DegreeSelected->setPosition(Vec2(origin.x + visibleSize.width / 2 - 200, visibleSize.height / 2 + 300));
     DegreeSelected->setTextHorizontalAlignment(TextHAlignment::CENTER);
-    DegreeSelected->setColor(ccc3(0,0,0));
+    DegreeSelected->setColor(Color3B(0,0,0));
     DegreeSelected->setTag(15);
     that->addChild(DegreeSelected, 0);
     
@@ -141,7 +141,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     DegreeIntro->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, visibleSize.height / 2 + 150));
     DegreeIntro->setTextHorizontalAlignment(TextHAlignment::CENTER);
     DegreeIntro->setTextVerticalAlignment(TextVAlignment::TOP);
-    DegreeIntro->setColor(ccc3(0,0,0));
+    DegreeIntro->setColor(Color3B(0,0,0));
     DegreeIntro->setTag(16);
     that->addChild(DegreeIntro, 0);
     
@@ -152,7 +152,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     NameHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350, visibleSize.height / 2 ));
     NameHolder->setTextHorizontalAlignment(TextHAlignment::CENTER);
     NameHolder->setTextVerticalAlignment(TextVAlignment::TOP);
-    NameHolder->setColor(ccc3(0,0,0));
+    NameHolder->setColor(Color3B(0,0,0));
     NameHolder->setTag(17);
     that->addChild(NameHolder, 0);
     
@@ -162,7 +162,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     INTHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350, visibleSize.height / 2 - 50));
     INTHolder->setTextHorizontalAlignment(TextHAlignment::CENTER);
     INTHolder->setTextVerticalAlignment(TextVAlignment::TOP);
-    INTHolder->setColor(ccc3(0,0,0));
+    INTHolder->setColor(Color3B(0,0,0));
     INTHolder->setTag(18);
     that->addChild(INTHolder, 0);
     
@@ -172,7 +172,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     STAHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350, visibleSize.height / 2 - 75));
     STAHolder->setTextHorizontalAlignment(TextHAlignment::CENTER);
     STAHolder->setTextVerticalAlignment(TextVAlignment::TOP);
-    STAHolder->setColor(ccc3(0,0,0));
+    STAHolder->setColor(Color3B(0,0,0));
     STAHolder->setTag(19);
     that->addChild(STAHolder, 0);
     
@@ -182,7 +182,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     SOCHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350, visibleSize.height / 2 - 100));
     SOCHolder->setTextHorizontalAlignment(TextHAlignment::CENTER);
     SOCHolder->setTextVerticalAlignment(TextVAlignment::TOP);
-    SOCHolder->setColor(ccc3(0,0,0));
+    SOCHolder->setColor(Color3B(0,0,0));
     SOCHolder->setTag(20);
     that->addChild(SOCHolder, 0);
     

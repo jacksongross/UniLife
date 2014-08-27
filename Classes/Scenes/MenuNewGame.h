@@ -37,7 +37,10 @@ public:
 private:
     bool slideenabled = true;
     int limiter = 5;
-    int pointsleft, maxpoints = 20, prev;
+    int maxpoints = 20;
+    int totpoints;
+    int prev;
+    int pointsleft;
     
 };
 

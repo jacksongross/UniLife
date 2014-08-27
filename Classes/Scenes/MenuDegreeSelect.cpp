@@ -84,8 +84,8 @@ void MenuDegreeSelect::BackButtonCallback(Ref* pSender)
     log("Going Back to Menu!");
     
     auto scene = MenuScene::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 
@@ -106,7 +106,7 @@ void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Widget::TouchEventType
             break;
             
         case cocos2d::ui::Widget::TouchEventType::ENDED:{
-            log("Touch Began, Sent By: %d" ,whosent+1 , " Passing Event");
+            log("Touch Began, Sent By: %d" , whosent+1);
             auto Header = (cocos2d::ui::Text*)this->getChildByTag(15);
             auto Body = (cocos2d::ui::Text*)this->getChildByTag(16);
             

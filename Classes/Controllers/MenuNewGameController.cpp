@@ -100,53 +100,71 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     //STATIC LABELS FOR THE PAGE
     
     //New Character Label
-    CCLabelTTF* ttf1 = CCLabelTTF::create("New Character", "Verdana", 64,
-                                          CCSizeMake(490, 64), kCCTextAlignmentCenter);
-    ttf1->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
-    ttf1->setColor(ccc3(0,0,0));
-    that->addChild(ttf1, 0);
+    std::string stringholder ="New Character: ";
     
-    
-    //Create Input Titles
-    CCLabelTTF* ttf2 = CCLabelTTF::create("Name: ", "Verdana", 30,
-                                          CCSizeMake(245, 32), kCCTextAlignmentCenter);
-    ttf2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +150));
-    ttf2->setColor(ccc3(0,0,0));
-    that->addChild(ttf2, 0);
-    
-    
-    //Stat Labels
-    CCLabelTTF* ttf3 = CCLabelTTF::create("Intelligence: ", "Verdana", 30,
-                                          CCSizeMake(245, 32), kCCTextAlignmentCenter);
-    ttf3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +100));
-    ttf3->setColor(ccc3(0,0,0));
-    that->addChild(ttf3, 0);
-    
-    
-    CCLabelTTF* ttf4 = CCLabelTTF::create("Stamina: ", "Verdana", 30,
-                                          CCSizeMake(245, 32), kCCTextAlignmentCenter);
-    ttf4->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +50));
-    ttf4->setColor(ccc3(0,0,0));
-    that->addChild(ttf4, 0);
-    
-    CCLabelTTF* ttf5 = CCLabelTTF::create("Social: ", "Verdana", 30,
-                                          CCSizeMake(245, 32), kCCTextAlignmentCenter);
-    ttf5->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +10));
-    ttf5->setColor(ccc3(0,0,0));
-    that->addChild(ttf5, 0);
-    
-    //Points Remaining Label
-    CCLabelTTF* ttf6 = CCLabelTTF::create("Points Remaining: ", "Verdana", 30,
-                                          CCSizeMake(300, 50), kCCTextAlignmentCenter);
-    ttf6->setPosition(Vec2(origin.x + visibleSize.width / 2 -350 , visibleSize.height / 2 -125));
-    ttf6->setColor(ccc3(0,0,0));
-    that->addChild(ttf6, 0);
+    cocos2d::ui::Text* TL_NewChar = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_NewChar->setContentSize(Size(300, 50));
+    TL_NewChar->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
+    TL_NewChar->setTextHorizontalAlignment(TextHAlignment::CENTER);
+    TL_NewChar->setColor(Color3B(0,0,0));
+    that->addChild(TL_NewChar);
     
     
     
-    EditBox* m_pEditName = EditBox::create((CCSizeMake(300, 50)), Scale9Sprite::create("New-Game-textbox.png"));
-    m_pEditName->setPosition(ccp(origin.x + visibleSize.width / 2 - 150, origin.y + visibleSize.height / 2 + 150));
-    m_pEditName->setFontColor(ccc3(0,0,0));
+    
+    stringholder = "Name: ";
+    cocos2d::ui::Text* TL_Name = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Name->setContentSize(Size(300, 50));
+    TL_Name->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +150));
+    TL_Name->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_Name->setColor(Color3B(0,0,0));
+    that->addChild(TL_Name);
+    
+
+    
+    
+    stringholder = "Intelligence: ";
+    cocos2d::ui::Text* TL_Intel = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Intel->setContentSize(Size(300, 50));
+    TL_Intel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +100));
+    TL_Intel->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_Intel->setColor(Color3B(0,0,0));
+    that->addChild(TL_Intel);
+    
+    
+    
+    stringholder = "Stamina: ";
+    cocos2d::ui::Text* TL_Stamina = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Stamina->setContentSize(Size(300, 50));
+    TL_Stamina->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +50));
+    TL_Stamina->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_Stamina->setColor(Color3B(0,0,0));
+    that->addChild(TL_Stamina);
+    
+    
+    stringholder = "Social: ";
+    cocos2d::ui::Text* TL_Social = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Social->setContentSize(Size(300, 50));
+    TL_Social->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +10));
+    TL_Social->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_Social->setColor(Color3B(0,0,0));
+    that->addChild(TL_Social);
+    
+    
+    stringholder = "Points Remaining: ";
+    cocos2d::ui::Text* Tl_Points = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    Tl_Points->setContentSize(Size(300, 50));
+    Tl_Points->setPosition(Vec2(origin.x + visibleSize.width / 2 -350 , visibleSize.height / 2 -125));
+    Tl_Points->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    Tl_Points->setColor(Color3B(0,0,0));
+    that->addChild(Tl_Points);
+    
+    
+    
+    
+    EditBox* m_pEditName = EditBox::create((Size(300, 50)), Scale9Sprite::create("New-Game-textbox.png"));
+    m_pEditName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 150, origin.y + visibleSize.height / 2 + 150));
+    m_pEditName->setFontColor(Color3B(0,0,0));
     m_pEditName->setPlaceHolder("   ");
     m_pEditName->setMaxLength(8);
     m_pEditName->setTag(1);
@@ -155,7 +173,15 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     
     
     
-    // THE INTELLIGENCE SLIDER & ASSOCIATED LABEL END
+
+    
+    
+    
+    stringholder = "0";
+    
+    
+    
+    // THE INTELLIGENCE SLIDER & ASSOCIATED LABEL
     cocos2d::ui::Slider* slider = cocos2d::ui::Slider::create();
     slider->loadBarTexture("sliderTrack2.png");
     slider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
@@ -169,14 +195,14 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(slider);
     
     
-    CCLabelTTF* ttf7 = CCLabelTTF::create("0 ", "Verdana", 30,
-                                          Size(300, 50), kCCTextAlignmentCenter);
-    ttf7->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 + 95));
-    ttf7->setColor(ccc3(0,0,0));
-    ttf7->setTag(3);
-    that->addChild(ttf7, 0);
+    cocos2d::ui::Text* TL_DispINT = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_DispINT->setContentSize(Size(300, 50));
+    TL_DispINT->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 + 95));
+    TL_DispINT->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_DispINT->setTag(3);
+    TL_DispINT->setColor(Color3B(0,0,0));
+    that->addChild(TL_DispINT);
     // THE INTELLIGENCE SLIDER & ASSOCIATED LABEL END
-    
     
     
     
@@ -193,15 +219,14 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     slider2->setTag(4);
     that->addChild(slider2);
     
-    
-    CCLabelTTF* ttf8 = CCLabelTTF::create("0 ", "Verdana", 30,
-                                          Size(300, 50), kCCTextAlignmentCenter);
-    ttf8->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +50));
-    ttf8->setColor(ccc3(0,0,0));
-    ttf8->setTag(5);
-    that->addChild(ttf8, 0);
+    cocos2d::ui::Text* TL_DispSTA = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_DispSTA->setContentSize(Size(300, 50));
+    TL_DispSTA->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +50));
+    TL_DispSTA->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_DispSTA->setTag(5);
+    TL_DispSTA->setColor(Color3B(0,0,0));
+    that->addChild(TL_DispSTA);
     // THE STAMINA SLIDER & ASSOCIATED LABEL END
-    
     
     
     // THE SOCIAL SLIDER & ASSOCIATED LABEL
@@ -215,28 +240,29 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     slider3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 110, origin.y + visibleSize.height / 2 + 10));
     slider3->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent3, that));
     slider3->setTag(6);
-    
     that->addChild(slider3);
     
+    cocos2d::ui::Text* TL_DispSOC = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_DispSOC->setContentSize(Size(300, 50));
+    TL_DispSOC->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +10));
+    TL_DispSOC->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_DispSOC->setTag(7);
+    TL_DispSOC->setColor(Color3B(0,0,0));
+    that->addChild(TL_DispSOC);
     
-    CCLabelTTF* ttf9 = CCLabelTTF::create("0 ", "Verdana", 30,
-                                          Size(300, 50), kCCTextAlignmentCenter);
-    ttf9->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +10));
-    ttf9->setColor(ccc3(0,0,0));
-    ttf9->setTag(7);
-    that->addChild(ttf9, 0);
     // THE SOCIAL SLIDER & ASSOCIATED LABEL END
     
+
     
-    
-    
-    CCLabelTTF* ttf10 = CCLabelTTF::create("20 ", "Verdana", 30,
-                                           Size(300, 50), kCCTextAlignmentCenter);
-    ttf10->setPosition(Vec2(origin.x + visibleSize.width / 2 -200, origin.y + visibleSize.height / 2 -125));
-    ttf10->setColor(ccc3(0,0,0));
-    ttf10->setTag(8);
-    that->addChild(ttf10, 0);
-    
+    //TEXT DISPLAY THAT HOLDS THE POINTS REMAINING INFORMATION
+    stringholder = "20";
+    cocos2d::ui::Text* TL_DispPOINTS = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_DispPOINTS->setContentSize(Size(300, 50));
+    TL_DispPOINTS->setPosition(Vec2(origin.x + visibleSize.width / 2 -50, origin.y + visibleSize.height / 2 -125));
+    TL_DispPOINTS->setTextHorizontalAlignment(TextHAlignment::LEFT);
+    TL_DispPOINTS->setTag(8);
+    TL_DispPOINTS->setColor(Color3B(0,0,0));
+    that->addChild(TL_DispPOINTS);
     
     
 }

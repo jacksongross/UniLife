@@ -24,7 +24,6 @@ std::string g_PNAME;
 int g_PINT;
 int g_PSOC;
 int g_PSTA;
-int totpoints;
 
 Scene* MenuNewGame::createScene()
 {
@@ -88,8 +87,8 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
         
         
         auto scene = MenuDegreeSelect::createScene();
-        CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-        CCDirector::sharedDirector()->replaceScene(crosssfade);
+        TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+        Director::getInstance()->replaceScene(crosssfade);
     }else{
         log("Cannot Go Until 20 Points Spent");
     }
@@ -103,8 +102,8 @@ void MenuNewGame::backButtonCallback(Ref* pSender)
     log("Going Back to Menu!");
     
     auto scene = MenuScene::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 
@@ -118,27 +117,30 @@ void MenuNewGame::sliderEvent(Ref *pSender, cocos2d::ui::Slider::EventType type)
     
     int totalperc = 0;
     totalperc += (s1->getPercent() / 5) + (s2->getPercent() / 5) + (s3->getPercent() / 5);
-    
     totpoints = totalperc;
+    
+    
     if(totalperc < 21){
         if (type == cocos2d::ui::Slider::EventType::ON_PERCENTAGE_CHANGED)
         {
             cocos2d::ui::Slider* slider = dynamic_cast<cocos2d::ui::Slider*>(pSender);
             int percent = slider->getPercent() / limiter;
-            auto displayInt = (CCLabelTTF*)this->getChildByTag(3);//Access to Slider via tag
+            auto displayInt = (cocos2d::ui::Text*)this->getChildByTag(3);//Access to Slider via tag
             displayInt->setString(String::createWithFormat("%d", percent)->getCString());
+            displayInt->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{
-        log("Slider Disabled", totalperc);
+        log("Slider Disabled: %d", totalperc);
         s1->setPercent(prev);
-        log("Previous", prev);
+        log("Previous: %d", prev);
         
     }
     
     pointsleft = maxpoints - ((s1->getPercent() / 5) + (s2->getPercent() / 5) + (s3->getPercent() / 5));
-    auto setremaining = (CCLabelTTF*)this->getChildByTag(8);//Access to Slider via tag
+    auto setremaining = (cocos2d::ui::Text*)this->getChildByTag(8);//Access to Slider via tag
     setremaining->setString(String::createWithFormat("%d", pointsleft)->getCString());
+
     
     
 }
@@ -155,26 +157,28 @@ void MenuNewGame::sliderEvent2(Ref *pSender, cocos2d::ui::Slider::EventType type
     totalperc += (s1->getPercent() / 5) + (s2->getPercent() / 5) + (s3->getPercent() / 5);
     totpoints = totalperc;
     
+    
     if(totalperc < 21){
         if (type == cocos2d::ui::Slider::EventType::ON_PERCENTAGE_CHANGED)
         {
             cocos2d::ui::Slider* slider = dynamic_cast<cocos2d::ui::Slider*>(pSender);
             int percent = slider->getPercent() / limiter;
-            auto displayInt = (CCLabelTTF*)this->getChildByTag(5);//Access to Slider via tag
-            displayInt->setString(String::createWithFormat("%d", percent)->getCString());
+            auto displaySta = (cocos2d::ui::Text*)this->getChildByTag(5);//Access to Slider via tag
+            displaySta->setString(String::createWithFormat("%d", percent)->getCString());
+            displaySta->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{
-        log("Slider Disabled", totalperc);
+        log("Slider Disabled: %d", totalperc);
         s2->setPercent(prev);
-        log("Previous", prev);
+        log("Previous: %d", prev);
         
     }
     
     pointsleft = maxpoints - ((s1->getPercent() / 5) + (s2->getPercent() / 5) + (s3->getPercent() / 5));
-    auto setremaining = (CCLabelTTF*)this->getChildByTag(8);//Access to Slider via tag
+    auto setremaining = (cocos2d::ui::Text*)this->getChildByTag(8);//Access to Slider via tag
     setremaining->setString(String::createWithFormat("%d", pointsleft)->getCString());
-    
+
     
 }
 
@@ -196,21 +200,22 @@ void MenuNewGame::sliderEvent3(Ref *pSender, cocos2d::ui::Slider::EventType type
         {
             cocos2d::ui::Slider* slider = dynamic_cast<cocos2d::ui::Slider*>(pSender);
             int percent = slider->getPercent() / limiter;
-            auto displayInt = (CCLabelTTF*)this->getChildByTag(7);//Access to Slider via tag
-            displayInt->setString(String::createWithFormat("%d", percent)->getCString());
+            auto displaySoc = (cocos2d::ui::Text*)this->getChildByTag(7);//Access to Slider via tag
+            displaySoc->setString(String::createWithFormat("%d", percent)->getCString());
+            displaySoc->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{
-        log("Slider Disabled: ", totalperc);
+        log("Slider Disabled: %d", totalperc);
         s3->setPercent(prev);
-        log("Previous: ", prev);
+        log("Previous: %d", prev);
         
     }
     
     pointsleft = maxpoints - ((s1->getPercent() / 5) + (s2->getPercent() / 5) + (s3->getPercent() / 5));
-    auto setremaining = (CCLabelTTF*)this->getChildByTag(8);//Access to Slider via tag
+    auto setremaining = (cocos2d::ui::Text*)this->getChildByTag(8);//Access to Slider via tag
     setremaining->setString(String::createWithFormat("%d", pointsleft)->getCString());
-    
+
     
 }
 

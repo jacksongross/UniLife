@@ -62,8 +62,8 @@ void MenuScene::newGameCallback(Ref* pSender)
 {
     log("new game button pressed!");
    auto scene = MenuNewGame::createScene();
-    CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    CCDirector::sharedDirector()->replaceScene(crosssfade);
+    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 void MenuScene::loadGameCallback(Ref* pSender)
