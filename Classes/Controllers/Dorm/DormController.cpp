@@ -163,6 +163,24 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     
     that->addChild(that->timer);
     
+    
+    cocos2d::ui::Text* SOCHolder = cocos2d::ui::Text::create("Energy ", "Verdana", 20);
+    SOCHolder->setContentSize(Size(400, 40));
+    SOCHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
+    SOCHolder->setColor(Color3B(0,0,0));
+    that->addChild(SOCHolder, 0);
+    
+    
+    Sprite* pgsprite = Sprite::create("green_bar.png");
+    pgsprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 +300));
+    ProgressTimer* pg = ProgressTimer::create(pgsprite);
+    pgsprite->setScale(0.2 , 0.5);
+    pgsprite->setTag(1);
+    that->addChild(pgsprite);
+    that->addChild(pg);
+
+    
+    
 }
 
 void DormController::UpdateTimer(float dt)

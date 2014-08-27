@@ -134,6 +134,16 @@ void DormScene::UpdateTimer(float dt)
     }
     
     this->timer->setString(stringStream.str());
+    
+    
+    
+    
+    //Added an update for the HUD
+    auto pgsprite = (ProgressTimer*)this->getChildByTag(1);
+    pgsprite->setPercentage(player.getStats().getEnergy());
+    
+    
+    
 }
 
 

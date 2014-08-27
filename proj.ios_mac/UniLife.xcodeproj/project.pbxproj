@@ -89,6 +89,27 @@
 		D098A98819ADF012005B13D3 /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98619ADF012005B13D3 /* MenuNewGame.cpp */; };
 		D098A98C19ADF07D005B13D3 /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98A19ADF07D005B13D3 /* MenuNewGameController.cpp */; };
 		D098A98F19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98D19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp */; };
+		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
+		D098A9A719AE386C005B13D3 /* backtotopnormal.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99319AE386C005B13D3 /* backtotopnormal.png */; };
+		D098A9A819AE386C005B13D3 /* backtotoppressed.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99419AE386C005B13D3 /* backtotoppressed.png */; };
+		D098A9A919AE386C005B13D3 /* Blue-button.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99519AE386C005B13D3 /* Blue-button.png */; };
+		D098A9AA19AE386C005B13D3 /* new_game_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99619AE386C005B13D3 /* new_game_off.png */; };
+		D098A9AB19AE386C005B13D3 /* new_game_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99719AE386C005B13D3 /* new_game_on.png */; };
+		D098A9AC19AE386C005B13D3 /* New-Game-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99819AE386C005B13D3 /* New-Game-Back.png */; };
+		D098A9AD19AE386C005B13D3 /* New-Game-background.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99919AE386C005B13D3 /* New-Game-background.png */; };
+		D098A9AE19AE386C005B13D3 /* New-Game-Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99A19AE386C005B13D3 /* New-Game-Border.png */; };
+		D098A9AF19AE386C005B13D3 /* New-Game-next_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99B19AE386C005B13D3 /* New-Game-next_off.png */; };
+		D098A9B019AE386C005B13D3 /* New-Game-next_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99C19AE386C005B13D3 /* New-Game-next_on.png */; };
+		D098A9B119AE386C005B13D3 /* New-Game-slider.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99D19AE386C005B13D3 /* New-Game-slider.png */; };
+		D098A9B219AE386C005B13D3 /* New-Game-take_quiz_off.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99E19AE386C005B13D3 /* New-Game-take_quiz_off.png */; };
+		D098A9B319AE386C005B13D3 /* New-Game-take_quiz_on.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99F19AE386C005B13D3 /* New-Game-take_quiz_on.png */; };
+		D098A9B419AE386C005B13D3 /* New-Game-text.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A019AE386C005B13D3 /* New-Game-text.png */; };
+		D098A9B519AE386C005B13D3 /* New-Game-textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A119AE386C005B13D3 /* New-Game-textbox.png */; };
+		D098A9B619AE386C005B13D3 /* New-Game-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A219AE386C005B13D3 /* New-Game-Title.png */; };
+		D098A9B719AE386C005B13D3 /* slider_bar_active_9patch.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A319AE386C005B13D3 /* slider_bar_active_9patch.png */; };
+		D098A9B819AE386C005B13D3 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A419AE386C005B13D3 /* slider.png */; };
+		D098A9B919AE386C005B13D3 /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A519AE386C005B13D3 /* sliderThumb.png */; };
+		D098A9BA19AE386C005B13D3 /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9A619AE386C005B13D3 /* sliderTrack2.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
@@ -320,6 +341,27 @@
 		D098A98B19ADF07D005B13D3 /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNewGameController.h; sourceTree = "<group>"; };
 		D098A98D19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelectController.cpp; sourceTree = "<group>"; };
 		D098A98E19ADF0B9005B13D3 /* MenuDegreeSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelectController.h; sourceTree = "<group>"; };
+		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_bar.png; path = ../green_bar.png; sourceTree = "<group>"; };
+		D098A99319AE386C005B13D3 /* backtotopnormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtotopnormal.png; sourceTree = "<group>"; };
+		D098A99419AE386C005B13D3 /* backtotoppressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtotoppressed.png; sourceTree = "<group>"; };
+		D098A99519AE386C005B13D3 /* Blue-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue-button.png"; sourceTree = "<group>"; };
+		D098A99619AE386C005B13D3 /* new_game_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_game_off.png; sourceTree = "<group>"; };
+		D098A99719AE386C005B13D3 /* new_game_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_game_on.png; sourceTree = "<group>"; };
+		D098A99819AE386C005B13D3 /* New-Game-Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Back.png"; sourceTree = "<group>"; };
+		D098A99919AE386C005B13D3 /* New-Game-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-background.png"; sourceTree = "<group>"; };
+		D098A99A19AE386C005B13D3 /* New-Game-Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Border.png"; sourceTree = "<group>"; };
+		D098A99B19AE386C005B13D3 /* New-Game-next_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-next_off.png"; sourceTree = "<group>"; };
+		D098A99C19AE386C005B13D3 /* New-Game-next_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-next_on.png"; sourceTree = "<group>"; };
+		D098A99D19AE386C005B13D3 /* New-Game-slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-slider.png"; sourceTree = "<group>"; };
+		D098A99E19AE386C005B13D3 /* New-Game-take_quiz_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-take_quiz_off.png"; sourceTree = "<group>"; };
+		D098A99F19AE386C005B13D3 /* New-Game-take_quiz_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-take_quiz_on.png"; sourceTree = "<group>"; };
+		D098A9A019AE386C005B13D3 /* New-Game-text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-text.png"; sourceTree = "<group>"; };
+		D098A9A119AE386C005B13D3 /* New-Game-textbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-textbox.png"; sourceTree = "<group>"; };
+		D098A9A219AE386C005B13D3 /* New-Game-Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New-Game-Title.png"; sourceTree = "<group>"; };
+		D098A9A319AE386C005B13D3 /* slider_bar_active_9patch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_bar_active_9patch.png; sourceTree = "<group>"; };
+		D098A9A419AE386C005B13D3 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
+		D098A9A519AE386C005B13D3 /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
+		D098A9A619AE386C005B13D3 /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -750,6 +792,7 @@
 		7A89458619ADAF3F008E1EA7 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
+				D098A99119AE3096005B13D3 /* green_bar.png */,
 				7A89458719ADAF3F008E1EA7 /* bars.png */,
 				7A89458819ADAF3F008E1EA7 /* options-hb.png */,
 				7A89458919ADAF3F008E1EA7 /* options_button.png */,
@@ -803,6 +846,26 @@
 		D098A99019ADF0EA005B13D3 /* NewCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				D098A99319AE386C005B13D3 /* backtotopnormal.png */,
+				D098A99419AE386C005B13D3 /* backtotoppressed.png */,
+				D098A99519AE386C005B13D3 /* Blue-button.png */,
+				D098A99619AE386C005B13D3 /* new_game_off.png */,
+				D098A99719AE386C005B13D3 /* new_game_on.png */,
+				D098A99819AE386C005B13D3 /* New-Game-Back.png */,
+				D098A99919AE386C005B13D3 /* New-Game-background.png */,
+				D098A99A19AE386C005B13D3 /* New-Game-Border.png */,
+				D098A99B19AE386C005B13D3 /* New-Game-next_off.png */,
+				D098A99C19AE386C005B13D3 /* New-Game-next_on.png */,
+				D098A99D19AE386C005B13D3 /* New-Game-slider.png */,
+				D098A99E19AE386C005B13D3 /* New-Game-take_quiz_off.png */,
+				D098A99F19AE386C005B13D3 /* New-Game-take_quiz_on.png */,
+				D098A9A019AE386C005B13D3 /* New-Game-text.png */,
+				D098A9A119AE386C005B13D3 /* New-Game-textbox.png */,
+				D098A9A219AE386C005B13D3 /* New-Game-Title.png */,
+				D098A9A319AE386C005B13D3 /* slider_bar_active_9patch.png */,
+				D098A9A419AE386C005B13D3 /* slider.png */,
+				D098A9A519AE386C005B13D3 /* sliderThumb.png */,
+				D098A9A619AE386C005B13D3 /* sliderTrack2.png */,
 			);
 			name = NewCharacter;
 			sourceTree = "<group>";
@@ -960,49 +1023,70 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
+				D098A9A819AE386C005B13D3 /* backtotoppressed.png in Resources */,
+				D098A9AA19AE386C005B13D3 /* new_game_off.png in Resources */,
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
 				7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */,
+				D098A99219AE3096005B13D3 /* green_bar.png in Resources */,
+				D098A9A719AE386C005B13D3 /* backtotopnormal.png in Resources */,
 				7A8945B419ADAF3F008E1EA7 /* phone_button.png in Resources */,
 				7A8945BD19ADAF3F008E1EA7 /* map-sun.png in Resources */,
+				D098A9B319AE386C005B13D3 /* New-Game-take_quiz_on.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
 				7A8945BF19ADAF3F008E1EA7 /* map-uni_centre.png in Resources */,
 				7A89459D19ADAF3F008E1EA7 /* dorm-book_shelf.png in Resources */,
 				7A8945A419ADAF3F008E1EA7 /* load_game_off.png in Resources */,
+				D098A9B519AE386C005B13D3 /* New-Game-textbox.png in Resources */,
 				7A8945B719ADAF3F008E1EA7 /* map-business.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
 				7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
+				D098A9AD19AE386C005B13D3 /* New-Game-background.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
+				D098A9B819AE386C005B13D3 /* slider.png in Resources */,
 				7A8945B619ADAF3F008E1EA7 /* map-art.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
+				D098A9B419AE386C005B13D3 /* New-Game-text.png in Resources */,
+				D098A9A919AE386C005B13D3 /* Blue-button.png in Resources */,
 				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
 				7A8945A019ADAF3F008E1EA7 /* dorm-door.png in Resources */,
+				D098A9B119AE386C005B13D3 /* New-Game-slider.png in Resources */,
 				7A8945A219ADAF3F008E1EA7 /* Marker Felt.ttf in Resources */,
 				7A8945AF19ADAF3F008E1EA7 /* options-title.png in Resources */,
 				7A8945A119ADAF3F008E1EA7 /* dorm-stool.png in Resources */,
 				7A8945AA19ADAF3F008E1EA7 /* title.png in Resources */,
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				D098A9B719AE386C005B13D3 /* slider_bar_active_9patch.png in Resources */,
+				D098A9B919AE386C005B13D3 /* sliderThumb.png in Resources */,
+				D098A9B019AE386C005B13D3 /* New-Game-next_on.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
+				D098A9AC19AE386C005B13D3 /* New-Game-Back.png in Resources */,
+				D098A9AF19AE386C005B13D3 /* New-Game-next_off.png in Resources */,
+				D098A9B619AE386C005B13D3 /* New-Game-Title.png in Resources */,
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
+				D098A9BA19AE386C005B13D3 /* sliderTrack2.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
 				7A8945A619ADAF3F008E1EA7 /* new_game_off.png in Resources */,
 				7A89459919ADAF3F008E1EA7 /* bill_inside.png in Resources */,
 				7A8945AC19ADAF3F008E1EA7 /* options-back.png in Resources */,
+				D098A9B219AE386C005B13D3 /* New-Game-take_quiz_off.png in Resources */,
 				7A8945BC19ADAF3F008E1EA7 /* map-social_science.png in Resources */,
+				D098A9AE19AE386C005B13D3 /* New-Game-Border.png in Resources */,
 				7A8945B819ADAF3F008E1EA7 /* map-computing_engineering.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */,
 				B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */,
+				D098A9AB19AE386C005B13D3 /* new_game_on.png in Resources */,
 				7A8945AB19ADAF3F008E1EA7 /* load-table-cell.png in Resources */,
 				7A8945B119ADAF3F008E1EA7 /* options-hb.png in Resources */,
 			);
