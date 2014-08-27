@@ -37,6 +37,8 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(MapScene);
     
+    void GoToDorm(Ref* pSender);
+    
     /********************************
                 Getters
      *******************************/

@@ -17,6 +17,13 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
+    
+    
+    auto GoNext = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
+    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
+    GoNext->setScale(0.3,0.3);
+    pMenuItems.pushBack(GoNext);
+
     return pMenuItems;
     
 }
@@ -40,5 +47,5 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
-  
+    
 }

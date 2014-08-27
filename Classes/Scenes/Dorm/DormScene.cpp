@@ -12,9 +12,9 @@
 #include "MenuController.h"
 #include "MenuOptionController.h"
 #include "MenuOptionScene.h"
-#include <vector>
 #include "DormScene.h"
 #include "DormController.h"
+#include <vector>
 #include <sstream>
 
 USING_NS_CC;
@@ -35,42 +35,42 @@ Scene* DormScene::createScene()
 }
 
 // overloaded createScene to pass in player
-cocos2d::Scene* DormScene::createScene(PlayerModel player)
+cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = DormScene::create(player);
+    auto layer = DormScene::create(inplayer);
     
     // add layer as a child to scene
     scene->addChild(layer);
     
+    
     // Report on the loaded player object
-    log("==========PLAYER==========");
-    log("NAME: %s", player.getName().c_str());
-    log("INT: %d", player.getStats().getIntelligence());
-    log("STA: %d", player.getStats().getStamina());
-    log("SOC: %d", player.getStats().getSocial());
-    log("DEGREE: %s", player.getDegree().c_str());
+    log("==========PLAYER IN DORM==========");
+    log("NAME: %s", inplayer.getName().c_str());
+    log("INT: %d", inplayer.getStats().getIntelligence());
+    log("STA: %d", inplayer.getStats().getStamina());
+    log("SOC: %d", inplayer.getStats().getSocial());
+    log("DEGREE: %s", inplayer.getDegree().c_str());
     
     // return the scene
     return scene;
 }
 
 // overloaded create method to take player data
-DormScene* DormScene::create(PlayerModel player)
+DormScene* DormScene::create(PlayerModel inplayer)
 {
     DormScene *ds = new DormScene();
-    
     if (ds->init())
     {
         ds->autorelease();
-        ds->setPlayer(player);
+        ds->setPlayer(inplayer);
     }
-    else
+    else{
         ds = NULL;
-    
+    }
     return ds;
 }
 
@@ -138,11 +138,12 @@ void DormScene::UpdateTimer(float dt)
     
     
     
-    //Added an update for the HUD
-    auto pgsprite = (ProgressTimer*)this->getChildByTag(1);
-    pgsprite->setPercentage(player.getStats().getEnergy());
+    //Added an update for the HUD Stress & Energy Bars
+    auto engSprite = (ProgressTimer*)this->getChildByTag(1);
+    engSprite->setPercentage(player.getStats().getEnergy());
     
-    
+    auto streSprite = (ProgressTimer*)this->getChildByTag(2);
+    streSprite->setPercentage(player.getStats().getStress());
     
 }
 

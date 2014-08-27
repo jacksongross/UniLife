@@ -23,6 +23,7 @@ USING_NS_CC;
 
 Scene* MapScene::createScene()
 {
+    log("\nCreated Without passed Player\n");
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
@@ -37,34 +38,46 @@ Scene* MapScene::createScene()
 }
 
 // overloaded createScene to pass in player
-cocos2d::Scene* MapScene::createScene(PlayerModel player)
+Scene* MapScene::createScene(PlayerModel inplayer)
 {
+    log("\nCreated With passed Player\n");
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = MapScene::create(player);
+    auto layer = MapScene::create(inplayer);
     
     // add layer as a child to scene
     scene->addChild(layer);
+    
+    
+    // Report on the loaded player object
+    log("==========PLAYER IN MAP==========");
+    log("NAME: %s", inplayer.getName().c_str());
+    log("INT: %d", inplayer.getStats().getIntelligence());
+    log("STA: %d", inplayer.getStats().getStamina());
+    log("SOC: %d", inplayer.getStats().getSocial());
+    log("DEGREE: %s", inplayer.getDegree().c_str());
     
     // return the scene
     return scene;
 }
 
 // overloaded create method to take player data
-MapScene* MapScene::create(PlayerModel player)
+MapScene* MapScene::create(PlayerModel inplayer)
 {
     MapScene *ds = new MapScene();
-    
+    log("FLAGG");
     if (ds->init())
     {
         ds->autorelease();
-        ds->setPlayer(player);
+        ds->setPlayer(inplayer);
+        log("FLAGG2");
     }
-    else
+    else{
         ds = NULL;
-    
+        log("FLAGG3");
+    }
     return ds;
 }
 
@@ -89,6 +102,17 @@ bool MapScene::init()
 }
 
 
+void MapScene::GoToDorm(Ref* pSender)
+{
+    log("Going Back to Menu!");
+    
+    auto scene = DormScene::createScene(player);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+
 /********************************
             Getters
  *******************************/
@@ -102,7 +126,7 @@ PlayerModel MapScene::getPlayer()
             Setters
  *******************************/
 
-void MapScene::setPlayer(PlayerModel player)
+void MapScene::setPlayer(PlayerModel inplayer)
 {
-    this->player = player;
+    this->player = inplayer;
 }

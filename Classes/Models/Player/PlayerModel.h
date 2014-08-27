@@ -64,7 +64,6 @@ public:
     /********************************
                 Setters
      *******************************/
-    
     void setId(int Id);
     
     void setName(std::string name);

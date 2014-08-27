@@ -67,7 +67,6 @@ TimeHelper PlayerModel::getGameTime()
 /********************************
             Setters
  *******************************/
-
 void PlayerModel::setId(int Id)
 {
     this->Id = Id;
