@@ -85,6 +85,10 @@
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
 		D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */; };
+		D098A98519ADEFAD005B13D3 /* MenuDegreeSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98319ADEFAD005B13D3 /* MenuDegreeSelect.cpp */; };
+		D098A98819ADF012005B13D3 /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98619ADF012005B13D3 /* MenuNewGame.cpp */; };
+		D098A98C19ADF07D005B13D3 /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98A19ADF07D005B13D3 /* MenuNewGameController.cpp */; };
+		D098A98F19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A98D19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
@@ -308,6 +312,14 @@
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
+		D098A98319ADEFAD005B13D3 /* MenuDegreeSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelect.cpp; sourceTree = "<group>"; };
+		D098A98419ADEFAD005B13D3 /* MenuDegreeSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelect.h; sourceTree = "<group>"; };
+		D098A98619ADF012005B13D3 /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGame.cpp; sourceTree = "<group>"; };
+		D098A98719ADF012005B13D3 /* MenuNewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNewGame.h; sourceTree = "<group>"; };
+		D098A98A19ADF07D005B13D3 /* MenuNewGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGameController.cpp; sourceTree = "<group>"; };
+		D098A98B19ADF07D005B13D3 /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNewGameController.h; sourceTree = "<group>"; };
+		D098A98D19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelectController.cpp; sourceTree = "<group>"; };
+		D098A98E19ADF0B9005B13D3 /* MenuDegreeSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelectController.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -465,6 +477,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D098A99019ADF0EA005B13D3 /* NewCharacter */,
 				7A89456A19ADAF3F008E1EA7 /* Bill */,
 				7A89456D19ADAF3F008E1EA7 /* Dorm */,
 				7A89457519ADAF3F008E1EA7 /* fonts */,
@@ -481,6 +494,7 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D098A98919ADF05B005B13D3 /* NewCharacter */,
 				7A89451E19ADACFC008E1EA7 /* Dorm */,
 				7A89452119ADACFC008E1EA7 /* Map */,
 				7A89452419ADACFC008E1EA7 /* Menu */,
@@ -617,6 +631,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D098A97B19ADEF1E005B13D3 /* NewCharacter */,
 				7A89454C19ADAD23008E1EA7 /* Dorm */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
 				7A89455219ADAD23008E1EA7 /* Menu */,
@@ -761,6 +776,35 @@
 				7A89459819ADAF3F008E1EA7 /* map_background.png */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		D098A97B19ADEF1E005B13D3 /* NewCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				D098A98319ADEFAD005B13D3 /* MenuDegreeSelect.cpp */,
+				D098A98419ADEFAD005B13D3 /* MenuDegreeSelect.h */,
+				D098A98619ADF012005B13D3 /* MenuNewGame.cpp */,
+				D098A98719ADF012005B13D3 /* MenuNewGame.h */,
+			);
+			name = NewCharacter;
+			sourceTree = "<group>";
+		};
+		D098A98919ADF05B005B13D3 /* NewCharacter */ = {
+			isa = PBXGroup;
+			children = (
+				D098A98A19ADF07D005B13D3 /* MenuNewGameController.cpp */,
+				D098A98B19ADF07D005B13D3 /* MenuNewGameController.h */,
+				D098A98D19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp */,
+				D098A98E19ADF0B9005B13D3 /* MenuDegreeSelectController.h */,
+			);
+			name = NewCharacter;
+			sourceTree = "<group>";
+		};
+		D098A99019ADF0EA005B13D3 /* NewCharacter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NewCharacter;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -973,6 +1017,7 @@
 			files = (
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
+				D098A98F19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
@@ -980,8 +1025,10 @@
 				7A89456319ADAD23008E1EA7 /* DormScene.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
+				D098A98819ADF012005B13D3 /* MenuNewGame.cpp in Sources */,
 				7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D098A98519ADEFAD005B13D3 /* MenuDegreeSelect.cpp in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
@@ -991,6 +1038,7 @@
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
 				7A89456019ADAD23008E1EA7 /* PlayerStatsModel.cpp in Sources */,
+				D098A98C19ADF07D005B13D3 /* MenuNewGameController.cpp in Sources */,
 				7A89452D19ADACFC008E1EA7 /* DormController.cpp in Sources */,
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,
 			);
