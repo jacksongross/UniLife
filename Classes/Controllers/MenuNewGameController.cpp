@@ -177,7 +177,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     
     
     
-    stringholder = "0";
+    stringholder = " 0 ";
     
     
     
@@ -196,9 +196,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     
     
     cocos2d::ui::Text* TL_DispINT = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispINT->setContentSize(Size(300, 50));
     TL_DispINT->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 + 95));
-    TL_DispINT->setTextHorizontalAlignment(TextHAlignment::LEFT);
     TL_DispINT->setTag(3);
     TL_DispINT->setColor(Color3B(0,0,0));
     that->addChild(TL_DispINT);
@@ -220,9 +218,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(slider2);
     
     cocos2d::ui::Text* TL_DispSTA = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispSTA->setContentSize(Size(300, 50));
     TL_DispSTA->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +50));
-    TL_DispSTA->setTextHorizontalAlignment(TextHAlignment::LEFT);
     TL_DispSTA->setTag(5);
     TL_DispSTA->setColor(Color3B(0,0,0));
     that->addChild(TL_DispSTA);
@@ -243,9 +239,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(slider3);
     
     cocos2d::ui::Text* TL_DispSOC = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispSOC->setContentSize(Size(300, 50));
     TL_DispSOC->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +10));
-    TL_DispSOC->setTextHorizontalAlignment(TextHAlignment::LEFT);
     TL_DispSOC->setTag(7);
     TL_DispSOC->setColor(Color3B(0,0,0));
     that->addChild(TL_DispSOC);
@@ -257,9 +251,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     //TEXT DISPLAY THAT HOLDS THE POINTS REMAINING INFORMATION
     stringholder = "20";
     cocos2d::ui::Text* TL_DispPOINTS = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispPOINTS->setContentSize(Size(300, 50));
     TL_DispPOINTS->setPosition(Vec2(origin.x + visibleSize.width / 2 -50, origin.y + visibleSize.height / 2 -125));
-    TL_DispPOINTS->setTextHorizontalAlignment(TextHAlignment::LEFT);
     TL_DispPOINTS->setTag(8);
     TL_DispPOINTS->setColor(Color3B(0,0,0));
     that->addChild(TL_DispPOINTS);

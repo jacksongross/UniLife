@@ -32,7 +32,7 @@ public:
     CREATE_FUNC(MenuDegreeSelect);
     std::vector<std::string> clist;
     std::vector<std::string> ilist;
-    
+    std::string g_DEGREE;
     
     
 private:

@@ -127,7 +127,6 @@ void MenuNewGame::sliderEvent(Ref *pSender, cocos2d::ui::Slider::EventType type)
             int percent = slider->getPercent() / limiter;
             auto displayInt = (cocos2d::ui::Text*)this->getChildByTag(3);//Access to Slider via tag
             displayInt->setString(String::createWithFormat("%d", percent)->getCString());
-            displayInt->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{
@@ -165,7 +164,6 @@ void MenuNewGame::sliderEvent2(Ref *pSender, cocos2d::ui::Slider::EventType type
             int percent = slider->getPercent() / limiter;
             auto displaySta = (cocos2d::ui::Text*)this->getChildByTag(5);//Access to Slider via tag
             displaySta->setString(String::createWithFormat("%d", percent)->getCString());
-            displaySta->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{
@@ -202,7 +200,6 @@ void MenuNewGame::sliderEvent3(Ref *pSender, cocos2d::ui::Slider::EventType type
             int percent = slider->getPercent() / limiter;
             auto displaySoc = (cocos2d::ui::Text*)this->getChildByTag(7);//Access to Slider via tag
             displaySoc->setString(String::createWithFormat("%d", percent)->getCString());
-            displaySoc->setTextHorizontalAlignment(TextHAlignment::LEFT);
             prev = slider->getPercent();
         }
     }else{

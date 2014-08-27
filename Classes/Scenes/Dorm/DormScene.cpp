@@ -46,6 +46,14 @@ cocos2d::Scene* DormScene::createScene(PlayerModel player)
     // add layer as a child to scene
     scene->addChild(layer);
     
+    // Report on the loaded player object
+    log("==========PLAYER==========");
+    log("NAME: %s", player.getName().c_str());
+    log("INT: %d", player.getStats().getIntelligence());
+    log("STA: %d", player.getStats().getStamina());
+    log("SOC: %d", player.getStats().getSocial());
+    log("DEGREE: %s", player.getDegree().c_str());
+    
     // return the scene
     return scene;
 }

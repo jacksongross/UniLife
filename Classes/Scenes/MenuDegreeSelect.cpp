@@ -14,6 +14,7 @@
 #include "cocos2d.h"
 #include "MenuDegreeSelectController.h"
 #include "MenuOptionScene.h"
+#include "DormScene.h"
 #include <CCTransition.h>
 #include <string>
 #include <vector>
@@ -117,6 +118,8 @@ void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Widget::TouchEventType
                 Body->setString("Degree Information: N/A");
                 
             }
+            g_DEGREE = Header->getString();
+            
         }
             break;
             
@@ -135,14 +138,19 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     log("Next Button Pressed");
     
     
-    /*
-     COPIED NEXT PLACEHOLDER
-     
-     auto scene = MenuDegreeSelect::createScene();
-     CCTransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-     CCDirector::sharedDirector()->replaceScene(crosssfade);
-     */
+    if(g_DEGREE.length() > 2){
+    PlayerStatsModel a(g_PINT, g_PSTA, g_PSOC, 100, 100, 0);
+    TimeHelper b(1, 1, 1, 8.0);
+    PlayerModel player(g_PNAME, g_DEGREE, a, "Dorm", b);
     
+    
+    auto scene = DormScene::createScene(player);
+    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    }else{
+        
+        log("You Have Not Selected A Degree");
+    }
     
 }
 
