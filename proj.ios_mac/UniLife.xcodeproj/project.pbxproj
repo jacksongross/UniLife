@@ -113,6 +113,8 @@
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
 		D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */; };
+		D098A9CA19AE72A2005B13D3 /* Inside_EIS_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A9C819AE72A2005B13D3 /* Inside_EIS_Controller.cpp */; };
+		D098A9CE19AE73BA005B13D3 /* Inside_EIS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D098A9CC19AE73BA005B13D3 /* Inside_EIS.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
@@ -368,6 +370,10 @@
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
+		D098A9C819AE72A2005B13D3 /* Inside_EIS_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS_Controller.cpp; sourceTree = "<group>"; };
+		D098A9C919AE72A2005B13D3 /* Inside_EIS_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS_Controller.h; sourceTree = "<group>"; };
+		D098A9CC19AE73BA005B13D3 /* Inside_EIS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS.cpp; sourceTree = "<group>"; };
+		D098A9CD19AE73BA005B13D3 /* Inside_EIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -542,6 +548,7 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D098A9C119AE7082005B13D3 /* InsideViews */,
 				D098A98919ADF05B005B13D3 /* NewCharacter */,
 				7A89451E19ADACFC008E1EA7 /* Dorm */,
 				7A89452119ADACFC008E1EA7 /* Map */,
@@ -679,6 +686,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D098A9CB19AE737F005B13D3 /* InsideViews */,
 				D098A97B19ADEF1E005B13D3 /* NewCharacter */,
 				7A89454C19ADAD23008E1EA7 /* Dorm */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
@@ -877,6 +885,24 @@
 				D098A9A619AE386C005B13D3 /* sliderTrack2.png */,
 			);
 			name = NewCharacter;
+			sourceTree = "<group>";
+		};
+		D098A9C119AE7082005B13D3 /* InsideViews */ = {
+			isa = PBXGroup;
+			children = (
+				D098A9C819AE72A2005B13D3 /* Inside_EIS_Controller.cpp */,
+				D098A9C919AE72A2005B13D3 /* Inside_EIS_Controller.h */,
+			);
+			name = InsideViews;
+			sourceTree = "<group>";
+		};
+		D098A9CB19AE737F005B13D3 /* InsideViews */ = {
+			isa = PBXGroup;
+			children = (
+				D098A9CC19AE73BA005B13D3 /* Inside_EIS.cpp */,
+				D098A9CD19AE73BA005B13D3 /* Inside_EIS.h */,
+			);
+			name = InsideViews;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -1111,8 +1137,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D098A9CA19AE72A2005B13D3 /* Inside_EIS_Controller.cpp in Sources */,
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
+				D098A9CE19AE73BA005B13D3 /* Inside_EIS.cpp in Sources */,
 				D098A98F19ADF0B9005B13D3 /* MenuDegreeSelectController.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,

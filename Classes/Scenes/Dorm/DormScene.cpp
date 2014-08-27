@@ -18,6 +18,7 @@
 #include <sstream>
 
 USING_NS_CC;
+PlayerModel pm;
 
 Scene* DormScene::createScene()
 {
@@ -45,7 +46,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     
     // add layer as a child to scene
     scene->addChild(layer);
-    
+    pm = inplayer;
     
     // Report on the loaded player object
     log("==========PLAYER IN DORM==========");

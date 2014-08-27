@@ -38,6 +38,7 @@ public:
     CREATE_FUNC(MapScene);
     
     void GoToDorm(Ref* pSender);
+    void GoToEIS(Ref* pSender);
     
     /********************************
                 Getters

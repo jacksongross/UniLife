@@ -18,6 +18,7 @@
 #include "DormScene.h"
 #include "DormController.h"
 #include "MapController.h"
+#include "Inside_EIS.h"
 
 USING_NS_CC;
 
@@ -67,16 +68,13 @@ Scene* MapScene::createScene(PlayerModel inplayer)
 MapScene* MapScene::create(PlayerModel inplayer)
 {
     MapScene *ds = new MapScene();
-    log("FLAGG");
     if (ds->init())
     {
         ds->autorelease();
         ds->setPlayer(inplayer);
-        log("FLAGG2");
     }
     else{
         ds = NULL;
-        log("FLAGG3");
     }
     return ds;
 }
@@ -112,7 +110,15 @@ void MapScene::GoToDorm(Ref* pSender)
     
 }
 
-
+void MapScene:: GoToEIS(Ref* pSender)
+{
+    log("Going To Inside EIS Building!");
+    
+    auto scene = Inside_EIS::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
 /********************************
             Getters
  *******************************/

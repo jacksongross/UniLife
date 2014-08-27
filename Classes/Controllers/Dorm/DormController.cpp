@@ -10,6 +10,8 @@
 #include "MapScene.h"
 #include "MapController.h"
 
+extern PlayerModel pm;
+
 USING_NS_CC;
 
 // create the buttons for the main menu
@@ -78,7 +80,7 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
         {
             log("you have touched the door!");
             // transition to the load game scene
-            auto scene = MapScene::createScene();
+            auto scene = MapScene::createScene(pm);
             TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
             Director::getInstance()->replaceScene(crosssfade);
             

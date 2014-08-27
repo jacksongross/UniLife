@@ -24,6 +24,13 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoNext->setScale(0.3,0.3);
     pMenuItems.pushBack(GoNext);
 
+    
+    auto GoEIS = MenuItemImage::create("map-computing_engineering.png", "map-computing_engineering.png", CC_CALLBACK_1(MapScene::GoToEIS, that));
+    GoEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 375, origin.y + visibleSize.height / 2));
+    GoEIS->setScale(0.5, 0.5);
+    pMenuItems.pushBack(GoEIS);
+    
+    
     return pMenuItems;
     
 }
