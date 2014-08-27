@@ -68,29 +68,14 @@ void Inside_EIS::UpdateMeters()
 
     
     //Added an update for the HUD Stress & Energy Bars
-    auto engSprite = (ProgressTimer*)this->getChildByTag(1);
-    engSprite->setPercentage(oldStats.getEnergy() / 1.0);
-    log("%f",oldStats.getEnergy() / 1.0 );
-    
-    auto streSprite = (ProgressTimer*)this->getChildByTag(2);
-    streSprite->setPercentage(oldStats.getStress() / 1.0);
-    log("%f",oldStats.getStress() / 1.0 );
+
 }
 
 
 void Inside_EIS::MinusEnergy(Ref* pSender)
 {
     log("Lower Energeeezzeee");
-    int newEnergy;
-    PlayerStatsModel oldStats;
-    oldStats = pm.getStats();
-    
-    
-    newEnergy = pm.getStats().getEnergy();
-    log("%d", newEnergy);
-    newEnergy -= 5;
-    oldStats.setEnergy(newEnergy);
-    pm.setStats(oldStats);
+
     
     UpdateMeters();
     
@@ -99,16 +84,7 @@ void Inside_EIS::MinusEnergy(Ref* pSender)
 void Inside_EIS:: PlusEnergy(Ref* pSender)
 {
     log("Raise Energeeezzeee");
-    int newEnergy;
-    PlayerStatsModel oldStats;
-    oldStats = pm.getStats();
-    
-    
-    newEnergy = pm.getStats().getEnergy();
-    log("%d", newEnergy);
-    newEnergy += 5;
-    oldStats.setEnergy(newEnergy);
-    pm.setStats(oldStats);
+
     
     UpdateMeters();
 }

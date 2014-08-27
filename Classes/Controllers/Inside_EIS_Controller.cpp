@@ -76,6 +76,14 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(engText, 1);
     
     Sprite* engSprite = Sprite::create("HUD_energy_bar.png");
+    ProgressTimer* pg = ProgressTimer::create(engSprite);
+    pg->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 265));
+    pg->setType(cocos2d::ProgressTimer::Type::BAR);
+    pg->setMidpoint(Vec2(0,1));
+    pg->setBarChangeRate(Vec2(1,0));
+    
+    /*
+    Sprite* engSprite = Sprite::create("HUD_energy_bar.png");
     engSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 300));
     ProgressTimer* pg = ProgressTimer::create(engSprite);
     engSprite->setScale(0.5 , 0.5);
@@ -84,8 +92,10 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     pg->setMidpoint(Vec2(0, 1));
     that->addChild(engSprite);
     that->addChild(pg);
+    */
     
     
+    /*
     //Stress HUD
     cocos2d::ui::Text* strText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
     strText->setContentSize(Size(400, 40));
@@ -102,11 +112,10 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     pg2->setMidpoint(Vec2(0, 1));
     that->addChild(streSprite);
     that->addChild(pg2);
+    */
     
     
-    
-    
-    
+        
     
 }
 
