@@ -85,6 +85,8 @@ bool DormScene::init()
         return false;
     }
     
+    isPaused = false;
+    
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -146,6 +148,22 @@ void DormScene::UpdateTimer(float dt)
     auto streSprite = (ProgressTimer*)this->getChildByTag(2);
     streSprite->setPercentage(player.getStats().getStress());
     
+}
+
+void DormScene::PausedPressed(Ref* pSender)
+{
+    if(isPaused == false)
+    {
+        Director::getInstance()->pause();
+        isPaused = true;
+        log("Pausing the game");
+    }
+    else
+    {
+        Director::getInstance()->resume();
+        isPaused = false;
+        log("Resuming the game");
+    }
 }
 
 

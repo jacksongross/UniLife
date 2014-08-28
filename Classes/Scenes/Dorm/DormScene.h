@@ -22,6 +22,8 @@ private:
     
 public:
     
+    bool isPaused;
+    
     cocos2d::Label* timer;
     
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -34,6 +36,8 @@ public:
     static DormScene* create(PlayerModel player);
     
     void UpdateTimer(float dt);
+    
+    void PausedPressed(Ref* pSender);
     
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();

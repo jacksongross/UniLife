@@ -9,6 +9,8 @@
 #include "DormController.h"
 #include "MapScene.h"
 #include "MapController.h"
+#include "CCActionInterval.h"
+#include "CCAction.h"
 
 extern PlayerModel pm;
 
@@ -20,6 +22,20 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
+    
+    // animate the menu button to spin
+    auto pauseButton = MenuItemImage::create("cog-110.png", "cog-110.png", CC_CALLBACK_1(DormScene::PausedPressed, that));
+    
+    pauseButton->setPosition(Vec2(visibleSize.width * .95, visibleSize.height * .90));
+    
+    auto rotate = RotateBy::create(5.0f, 360);
+    
+    // run this forever so it keeps on spinning
+    auto action = RepeatForever::create(rotate);
+    
+    pauseButton->runAction(action);
+    
+    pMenuItems.pushBack(pauseButton);
     
     return pMenuItems;
     
@@ -56,6 +72,8 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     auto sprite = Sprite::create("dorm-door.png");
     
     sprite->setPosition(Vec2(visibleSize.width / 2 - origin.x - sprite->getContentSize().width - 39, visibleSize.height / 2 + origin.y - 10));
+    
+    sprite->setTag(8);
     
     that->addChild(sprite, 0);
     
@@ -132,7 +150,7 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     // add the desk
     sprite = Sprite::create("dorm-desk.png");
     
-    sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 11, visibleSize.height / 2 - 121));
+    sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 11, visibleSize.height / 2 - 120));
     
     that->addChild(sprite, 3);
     
@@ -150,13 +168,11 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     
     that->addChild(sprite, 5);
     
-    sprite = Sprite::create("options-hb.png");
+    //sprite->runAction(action);
     
-    sprite->setScale(.3, .3);
+    //that->addChild(sprite, 6);
     
-    sprite->setPosition(Vec2(visibleSize.width - sprite->getContentSize().width * .3 + 30, visibleSize.height - sprite->getContentSize().height * .3 + 40));
-    
-    that->addChild(sprite, 6);
+    // set up the timer
     
     that->timer = Label::createWithSystemFont("11:30pm", "Verdana", 64);
     
@@ -201,9 +217,3 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     
 }
 
-void DormController::UpdateTimer(float dt)
-{
-    //something
-    //((GameLayer*)this->getParent())->_peaShooterLayer->_peaShooterSprite->setPosition(pTouch->getLocation());
-    
-}
