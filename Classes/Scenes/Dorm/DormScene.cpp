@@ -47,6 +47,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     // add layer as a child to scene
     scene->addChild(layer);
     pm = inplayer;
+    pm.setStats(inplayer.getStats());
     
     // Report on the loaded player object
     log("==========PLAYER IN DORM==========");
@@ -55,6 +56,8 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("STA: %d", inplayer.getStats().getStamina());
     log("SOC: %d", inplayer.getStats().getSocial());
     log("DEGREE: %s", inplayer.getDegree().c_str());
+    log("ENERGY: %d" , inplayer.getStats().getEnergy());
+    log("STRESS: %d", inplayer.getStats().getStress());
     
     // return the scene
     return scene;
@@ -93,6 +96,7 @@ bool DormScene::init()
     
     // create the dorm scene
     DormController::CreateDormRoom(this, visibleSize, origin);
+    UpdateMeters(pm.getStats());
     
     this->schedule(schedule_selector(DormScene::UpdateTimer),1.0f);
     
@@ -142,11 +146,7 @@ void DormScene::UpdateTimer(float dt)
     
     
     //Added an update for the HUD Stress & Energy Bars
-    auto engSprite = (ProgressTimer*)this->getChildByTag(1);
-    engSprite->setPercentage(player.getStats().getEnergy());
-    
-    auto streSprite = (ProgressTimer*)this->getChildByTag(2);
-    streSprite->setPercentage(player.getStats().getStress());
+    UpdateMeters(pm.getStats());
     
 }
 
@@ -165,6 +165,19 @@ void DormScene::PausedPressed(Ref* pSender)
         log("Resuming the game");
     }
 }
+
+
+
+void DormScene::UpdateMeters(PlayerStatsModel updateModel)
+{
+    
+    //Added an update for the HUD Stress & Energy Bars
+    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
+    
+    pgTimer->setScaleX(updateModel.getEnergy()/100.0);
+    pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
+}
+
 
 
 /********************************

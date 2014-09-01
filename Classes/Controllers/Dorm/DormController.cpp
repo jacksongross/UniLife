@@ -186,32 +186,43 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     engText->setContentSize(Size(400, 40));
     engText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
     engText->setColor(Color3B(0,0,0));
-    that->addChild(engText, 0);
+    that->addChild(engText, 1);
     
     
     Sprite* engSprite = Sprite::create("HUD_energy_bar.png");
-    engSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 300));
+    engSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 300));
+    engSprite->setAnchorPoint(Vec2(0.f,0.5f));
     ProgressTimer* pg = ProgressTimer::create(engSprite);
     engSprite->setScale(0.5 , 0.5);
     engSprite->setTag(1);
+    pg->setBarChangeRate(Vec2(1, 0));
+    pg->setScaleX(pm.getStats().getEnergy()/100.0);
+    pg->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(engSprite);
     that->addChild(pg);
     
     
-    //Stress HUD
-    cocos2d::ui::Text* strText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
-    strText->setContentSize(Size(400, 40));
-    strText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
-    strText->setColor(Color3B(0,0,0));
-    that->addChild(strText, 0);
+    //Energy HUD
+    cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
+    streText->setContentSize(Size(400, 40));
+    streText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
+    streText->setColor(Color3B(0,0,0));
+    that->addChild(streText, 1);
+    
+    
     
     Sprite* streSprite = Sprite::create("HUD_stress_bar.png");
-    streSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 265));
+    streSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 265));
+    streSprite->setAnchorPoint(Vec2(0.f,0.5f));
     ProgressTimer* pg2 = ProgressTimer::create(streSprite);
+    pg2->setScaleX(pm.getStats().getStress()/100.0);
     streSprite->setScale(0.5 , 0.5);
     streSprite->setTag(2);
+    pg->setBarChangeRate(Vec2(1, 0));
+    pg->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(streSprite);
     that->addChild(pg2);
+
     
     
     

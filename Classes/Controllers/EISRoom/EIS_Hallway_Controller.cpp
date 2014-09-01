@@ -7,6 +7,7 @@
 //
 
 #include "EIS_Hallway_Controller.h"
+extern PlayerModel pm;
 USING_NS_CC;
 
 // create the buttons for the main menu
@@ -62,7 +63,6 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     that->addChild(engText, 1);
     
     
-    
     Sprite* engSprite = Sprite::create("HUD_energy_bar.png");
     engSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 300));
     engSprite->setAnchorPoint(Vec2(0.f,0.5f));
@@ -70,6 +70,7 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     engSprite->setScale(0.5 , 0.5);
     engSprite->setTag(1);
     pg->setBarChangeRate(Vec2(1, 0));
+    pg->setScaleX(pm.getStats().getEnergy()/100.0);
     pg->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(engSprite);
     that->addChild(pg);
@@ -88,6 +89,7 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     streSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 265));
     streSprite->setAnchorPoint(Vec2(0.f,0.5f));
     ProgressTimer* pg2 = ProgressTimer::create(streSprite);
+    pg2->setScaleX(pm.getStats().getStress()/100.0);
     streSprite->setScale(0.5 , 0.5);
     streSprite->setTag(2);
     pg->setBarChangeRate(Vec2(1, 0));
@@ -95,7 +97,7 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     that->addChild(streSprite);
     that->addChild(pg2);
     
-    
+
     
     
     
