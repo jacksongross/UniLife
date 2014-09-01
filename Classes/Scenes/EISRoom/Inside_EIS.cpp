@@ -6,7 +6,6 @@
 //
 //
 
-#include "Inside_EIS.h"
 #include "MenuDegreeSelect.h"
 #include "MenuNewGame.h"
 #include "MenuScene.h"
@@ -15,10 +14,10 @@
 #include "cocos2d.h"
 #include "Inside_EIS_Controller.h"
 #include "MenuOptionScene.h"
-#include "DormScene.h"
 #include <CCTransition.h>
 #include <string>
 #include <vector>
+#include "MapScene.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -55,37 +54,29 @@ bool Inside_EIS::init()
     
     // create the main menu
     Inside_EIS_Controller::CreateMainMenu(this, visibleSize, origin);
-    
+    UpdateMeters(pm.getStats());
     
     return true;
 }
 
 
-void Inside_EIS::UpdateMeters()
+void Inside_EIS::UpdateMeters(PlayerStatsModel updateModel)
 {
-    PlayerStatsModel oldStats;
-    oldStats = pm.getStats();
 
-    
     //Added an update for the HUD Stress & Energy Bars
+    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
 
+        pgTimer->setScaleX(updateModel.getEnergy()/100.0);
+        pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
+        log("%d",updateModel.getEnergy());
 }
 
-
-void Inside_EIS::MinusEnergy(Ref* pSender)
+void Inside_EIS::ToHallway(Ref* pSender)
 {
-    log("Lower Energeeezzeee");
-
+    log("Going To EIS Hallway!");
     
-    UpdateMeters();
+    //auto scene = Inside_EIS_Hallway::createScene();
+    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    //Director::getInstance()->replaceScene(crosssfade);
     
 }
-
-void Inside_EIS:: PlusEnergy(Ref* pSender)
-{
-    log("Raise Energeeezzeee");
-
-    
-    UpdateMeters();
-}
-

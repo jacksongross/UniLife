@@ -32,20 +32,6 @@ public:
     
     // creates the main menu
     static void CreateMainMenu(Inside_EIS *that, Size visibleSize, Vec2 origin);
-    
-};
-
-
-enum KeyboardReturnType {
-    kKeyboardReturnTypeDefault = 0,
-    
-    kKeyboardReturnTypeDone = 1,
-    
-    kKeyboardReturnTypeSend = 2,
-    
-    kKeyboardReturnTypeSearch = 3,
-    
-    kKeyboardReturnTypeGo = 4
 };
 
 #endif /* defined(__UniLife__Inside_EIS_Controller__) */

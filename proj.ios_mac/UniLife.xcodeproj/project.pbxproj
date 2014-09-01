@@ -118,6 +118,11 @@
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
 		D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
+		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
+		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
+		D0E73DD619B3F5FE00F4F720 /* foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD119B3F5FE00F4F720 /* foyer.png */; };
+		D0E73DD719B3F5FE00F4F720 /* rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD219B3F5FE00F4F720 /* rooms.png */; };
+		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -379,6 +384,11 @@
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
+		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door.png; sourceTree = "<group>"; };
+		D0E73DD119B3F5FE00F4F720 /* foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foyer.png; sourceTree = "<group>"; };
+		D0E73DD219B3F5FE00F4F720 /* rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooms.png; sourceTree = "<group>"; };
+		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteboard.png; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -535,6 +545,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0E73DC719B3F5A200F4F720 /* InsideEIS */,
 				7AB6AB1319AEDDF5003CCD7E /* NewCharacter */,
 				7A89456A19ADAF3F008E1EA7 /* Bill */,
 				7A89456D19ADAF3F008E1EA7 /* Dorm */,
@@ -922,6 +933,18 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
+		D0E73DC719B3F5A200F4F720 /* InsideEIS */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73DCF19B3F5FE00F4F720 /* desk.png */,
+				D0E73DD019B3F5FE00F4F720 /* door.png */,
+				D0E73DD119B3F5FE00F4F720 /* foyer.png */,
+				D0E73DD219B3F5FE00F4F720 /* rooms.png */,
+				D0E73DD319B3F5FE00F4F720 /* whiteboard.png */,
+			);
+			name = InsideEIS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1064,6 +1087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */,
+				D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				7AB6AB2B19AEDDF5003CCD7E /* Blue-button.png in Resources */,
 				7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */,
@@ -1091,17 +1115,20 @@
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
+				D0E73DD719B3F5FE00F4F720 /* rooms.png in Resources */,
 				7A8945B619ADAF3F008E1EA7 /* map-art.png in Resources */,
 				D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
+				D0E73DD619B3F5FE00F4F720 /* foyer.png in Resources */,
 				7AB6AB2C19AEDDF5003CCD7E /* green_bar.png in Resources */,
 				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
 				7AB6AB2A19AEDDF5003CCD7E /* backtotoppressed.png in Resources */,
 				7A8945A019ADAF3F008E1EA7 /* dorm-door.png in Resources */,
+				D0E73DD519B3F5FE00F4F720 /* door.png in Resources */,
 				7A8945A219ADAF3F008E1EA7 /* Marker Felt.ttf in Resources */,
 				7A8945AF19ADAF3F008E1EA7 /* options-title.png in Resources */,
 				7AB6AB3819AEDDF5003CCD7E /* new_game_off.png in Resources */,
@@ -1130,6 +1157,7 @@
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
+				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,
 				7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */,
 				B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */,
 				7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */,

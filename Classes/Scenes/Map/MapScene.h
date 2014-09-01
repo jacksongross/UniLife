@@ -11,6 +11,7 @@
 
 #include "PlayerModel.h"
 #include "cocos2d.h"
+#include "Inside_EIS.h"
 
 class MapScene : public cocos2d::Layer
 {
