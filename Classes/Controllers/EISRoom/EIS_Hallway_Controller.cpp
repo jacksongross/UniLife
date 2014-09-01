@@ -1,43 +1,37 @@
 //
-//  Inside_EIS_Controller.cpp
+//  EIS_Hallway_Controller.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 28/08/2014.
+//  Created by csci321ga2a on 1/09/2014.
 //
 //
 
-#include "Inside_EIS_Controller.h"
-#include "ExtensionMacros.h"
-#include "cocos2d.h"
-#include "extensions/cocos-ext.h"
-#include "ui/CocosGUI.h"
-using namespace cocos2d::extension;
-
-
+#include "EIS_Hallway_Controller.h"
 USING_NS_CC;
 
 // create the buttons for the main menu
-cocos2d::Vector<cocos2d::MenuItem*> Inside_EIS_Controller::CreateMenuButtons(Inside_EIS *that, Size visibleSize, Vec2 origin)
+cocos2d::Vector<cocos2d::MenuItem*> EIS_Hallway_Controller::CreateMenuButtons(EIS_Hallway *that, Size visibleSize, Vec2 origin)
 {
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
-    auto ToHallway = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(Inside_EIS::ToHallway, that));
-    ToHallway->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + (visibleSize.height / 2 )));
-    ToHallway->setScale(0.3,0.3);
-    pMenuItems.pushBack(ToHallway);
-
+    auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(EIS_Hallway::ToFoyer, that));
+    ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2 + 475, origin.y + (visibleSize.height / 2 )));
+    ToFoyer->setScale(0.3,0.3);
+    ToFoyer->setRotation(180);
+    pMenuItems.pushBack(ToFoyer);
+    
     
     return pMenuItems;
     
 }
 
 // call this method in the main menu scene to create the main menu
-void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, Vec2 origin)
+void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize, Vec2 origin)
 {
-    log("You Went to the EIS Foyer");
+    log("You Went to the EIS Hallway");
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);
@@ -48,7 +42,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("foyer.png");
+    auto sprite = Sprite::create("rooms.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -103,29 +97,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     
     
     
-    Sprite *foyerDesk = Sprite::create("desk.png");
-    foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
-    foyerDesk->setScale(1.25);
-    that->addChild(foyerDesk,2);
-    
-    Sprite *foyerBoard = Sprite::create("whiteboard.png");
-    foyerBoard->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 + 100));
-    foyerBoard->setScale(1);
-    that->addChild(foyerBoard);
-    
-    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("Engineering & Information Sciences\n Notice Board", "Verdana", 15);
-    LocName->setColor(Color3B(0,0,0));
-    LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-    LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
-    that->addChild(LocName);
-    
-    Sprite *officePerson = Sprite::create("bill_inside.png");
-    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
-    that->addChild(officePerson, 1);
-    
-    
     
     
 }
-
 

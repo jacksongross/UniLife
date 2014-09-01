@@ -1,16 +1,16 @@
 //
-//  Inside_EIS.cpp
+//  EIS_Hallway.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 28/08/2014.
+//  Created by csci321ga2a on 1/09/2014.
 //
 //
 
+#include "EIS_Hallway.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
 #include "cocos2d.h"
-#include "Inside_EIS_Controller.h"
-#include "EIS_Hallway.h"
+#include "EIS_Hallway_Controller.h"
 #include "MenuOptionScene.h"
 #include <CCTransition.h>
 #include <string>
@@ -20,13 +20,13 @@
 USING_NS_CC;
 extern PlayerModel pm;
 
-Scene* Inside_EIS::createScene()
+Scene* EIS_Hallway::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = Inside_EIS::create();
+    auto layer = EIS_Hallway::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -36,7 +36,7 @@ Scene* Inside_EIS::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool Inside_EIS::init()
+bool EIS_Hallway::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -51,29 +51,29 @@ bool Inside_EIS::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     // create the main menu
-    Inside_EIS_Controller::CreateMainMenu(this, visibleSize, origin);
+    EIS_Hallway_Controller::CreateMainMenu(this, visibleSize, origin);
     UpdateMeters(pm.getStats());
     
     return true;
 }
 
 
-void Inside_EIS::UpdateMeters(PlayerStatsModel updateModel)
+void EIS_Hallway::UpdateMeters(PlayerStatsModel updateModel)
 {
-
+    
     //Added an update for the HUD Stress & Energy Bars
     auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
-
-        pgTimer->setScaleX(updateModel.getEnergy()/100.0);
-        pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
-        log("%d",updateModel.getEnergy());
+    
+    pgTimer->setScaleX(updateModel.getEnergy()/100.0);
+    pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
+    log("%d",updateModel.getEnergy());
 }
 
-void Inside_EIS::ToHallway(Ref* pSender)
+void EIS_Hallway::ToFoyer(Ref* pSender)
 {
-    log("Going To EIS Hallway!");
+    log("Going To EIS Foyer!");
     
-    auto scene = EIS_Hallway::createScene();
+    auto scene = Inside_EIS::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     

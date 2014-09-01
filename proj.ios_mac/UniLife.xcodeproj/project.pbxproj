@@ -123,6 +123,8 @@
 		D0E73DD619B3F5FE00F4F720 /* foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD119B3F5FE00F4F720 /* foyer.png */; };
 		D0E73DD719B3F5FE00F4F720 /* rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD219B3F5FE00F4F720 /* rooms.png */; };
 		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
+		D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */; };
+		D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -389,6 +391,10 @@
 		D0E73DD119B3F5FE00F4F720 /* foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foyer.png; sourceTree = "<group>"; };
 		D0E73DD219B3F5FE00F4F720 /* rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooms.png; sourceTree = "<group>"; };
 		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteboard.png; sourceTree = "<group>"; };
+		D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway.cpp; sourceTree = "<group>"; };
+		D0E73DE019B410F400F4F720 /* EIS_Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway.h; sourceTree = "<group>"; };
+		D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway_Controller.cpp; sourceTree = "<group>"; };
+		D0E73DE319B4110C00F4F720 /* EIS_Hallway_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway_Controller.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -870,6 +876,8 @@
 			children = (
 				7AB6AB0519AEDD58003CCD7E /* Inside_EIS_Controller.cpp */,
 				7AB6AB0619AEDD58003CCD7E /* Inside_EIS_Controller.h */,
+				D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */,
+				D0E73DE319B4110C00F4F720 /* EIS_Hallway_Controller.h */,
 			);
 			path = EISRoom;
 			sourceTree = "<group>";
@@ -890,6 +898,8 @@
 			children = (
 				7AB6AB1019AEDD60003CCD7E /* Inside_EIS.cpp */,
 				7AB6AB1119AEDD60003CCD7E /* Inside_EIS.h */,
+				D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */,
+				D0E73DE019B410F400F4F720 /* EIS_Hallway.h */,
 			);
 			path = EISRoom;
 			sourceTree = "<group>";
@@ -1175,6 +1185,7 @@
 			files = (
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
+				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
@@ -1192,6 +1203,7 @@
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
+				D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
