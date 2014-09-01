@@ -25,6 +25,16 @@ cocos2d::Vector<cocos2d::MenuItem*> EIS_Hallway_Controller::CreateMenuButtons(EI
     pMenuItems.pushBack(ToFoyer);
     
     
+    auto LectDoor = MenuItemImage::create("door.png","door.png" , CC_CALLBACK_1(EIS_Hallway::ToLecture, that));
+    LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
+    pMenuItems.pushBack(LectDoor);
+
+    auto TutDoor = MenuItemImage::create("door.png","door.png" , CC_CALLBACK_1(EIS_Hallway::ToTutorial, that));
+    TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 397, origin.y + (visibleSize.height / 2 - 26)));
+    pMenuItems.pushBack(TutDoor);
+
+    
+    
     return pMenuItems;
     
 }

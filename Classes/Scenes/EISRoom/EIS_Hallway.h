@@ -24,8 +24,8 @@ public:
     void UpdateMeters(PlayerStatsModel updateModel);
     
     void ToFoyer(Ref* pSender);
-    
-    
+    void ToLecture(Ref* pSender);
+    void ToTutorial(Ref* pSender);
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     // implement the "static create()" method manually

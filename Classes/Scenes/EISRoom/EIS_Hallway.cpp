@@ -78,3 +78,53 @@ void EIS_Hallway::ToFoyer(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+
+void EIS_Hallway::ToLecture(Ref* pSender){
+    log("Going To EIS Lecture!");
+    
+    //Temporary Code for Debugging Purposes
+    if(pm.getStats().getEnergy() < 5){
+        log("Not Enough Energy To Go To A Lecture");
+    }else{
+        log("You Went To A Lecture (+1 INT, +10 Stress)");
+        
+        PlayerStatsModel updateStats;
+        updateStats = pm.getStats();
+        
+        updateStats.setIntelligence(updateStats.getIntelligence() + 1);
+        updateStats.setStress(updateStats.getStress());
+        updateStats.setEnergy(updateStats.getEnergy() - 5);
+        pm.setStats(updateStats);
+        UpdateMeters(pm.getStats());
+    }
+    
+    
+    
+}
+
+
+void EIS_Hallway::ToTutorial(Ref* pSender){
+    log("Going To EIS Tutorial!");
+    
+    //Temporary Code for Debugging Purposes
+    if(pm.getStats().getEnergy() < 5){
+        log("Not Enough Energy To Go To A Tutorial");
+    }else{
+        log("You Went To A Tutorial (+1 INT, +10 Stress)");
+        
+        PlayerStatsModel updateStats;
+        updateStats = pm.getStats();
+        
+        updateStats.setIntelligence(updateStats.getIntelligence() + 1);
+        updateStats.setStress(updateStats.getStress());
+        updateStats.setEnergy(updateStats.getEnergy() - 5);
+        pm.setStats(updateStats);
+        UpdateMeters(pm.getStats());
+    }
+    
+    
+    
+}
+
+

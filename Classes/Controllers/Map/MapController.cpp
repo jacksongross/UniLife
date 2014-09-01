@@ -26,8 +26,8 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
 
     
     auto GoEIS = MenuItemImage::create("map-computing_engineering.png", "map-computing_engineering.png", CC_CALLBACK_1(MapScene::GoToEIS, that));
-    GoEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 375, origin.y + visibleSize.height / 2));
-    GoEIS->setScale(0.5, 0.5);
+    GoEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
+    GoEIS->setScale(0.8);
     pMenuItems.pushBack(GoEIS);
     
     
@@ -54,5 +54,51 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
+    
+    Sprite *mpHolder = Sprite::create("map-art.png");
+    mpHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
+    mpHolder->setScale(0.9);
+    that->addChild(mpHolder,2);
+    
+    Sprite *mpHolder2 = Sprite::create("map-business.png");
+    mpHolder2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
+    mpHolder2->setScale(0.9);
+    that->addChild(mpHolder2,2);
+    
+    Sprite *mpHolder3 = Sprite::create("map-library.png");
+    mpHolder3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2));
+    mpHolder3->setScale(0.9);
+    that->addChild(mpHolder3,2);
+    
+    Sprite *mpHolder4 = Sprite::create("map-science_medicine.png");
+    mpHolder4->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
+    mpHolder4->setScale(0.9);
+    that->addChild(mpHolder4,2);
+    
+    Sprite *mpHolder5 = Sprite::create("map-shop.png");
+    mpHolder5->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - 200));
+    mpHolder5->setScale(1.1);
+    that->addChild(mpHolder5,2);
+    
+    Sprite *mpHolder6 = Sprite::create("map-social_science.png");
+    mpHolder6->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
+    mpHolder6->setScale(0.9);
+    that->addChild(mpHolder6,2);
+    
+    Sprite *mpHolder7 = Sprite::create("map-sun.png");
+    mpHolder7->setPosition(Vec2(origin.x + visibleSize.width / 2 - 425, origin.y + visibleSize.height / 2 + 280));
+    mpHolder7->setScale(0.9);
+    that->addChild(mpHolder7,2);
+    
+    Sprite *mpHolder8 = Sprite::create("map-tavern.png");
+    mpHolder8->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));
+    mpHolder8->setScale(0.9);
+    that->addChild(mpHolder8,2);
+    
+    Sprite *mpHolder9 = Sprite::create("map-uni_centre.png");
+    mpHolder9->setPosition(Vec2(origin.x + visibleSize.width / 2 + 320, origin.y + visibleSize.height / 2 - 200));
+    mpHolder9->setScale(0.9);
+    that->addChild(mpHolder9,2);
+    
     
 }
