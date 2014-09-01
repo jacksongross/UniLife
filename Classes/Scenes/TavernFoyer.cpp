@@ -1,15 +1,16 @@
 //
-//  Inside_EIS.cpp
+//  TavernFoyer.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 28/08/2014.
+//  Created by csci321ga2a on 1/09/2014.
 //
 //
 
+#include "TavernFoyer.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
 #include "cocos2d.h"
-#include "Inside_EIS_Controller.h"
+#include "TavernFoyerController.h"
 #include "EIS_Hallway.h"
 #include "MenuOptionScene.h"
 #include <CCTransition.h>
@@ -20,13 +21,13 @@
 USING_NS_CC;
 extern PlayerModel pm;
 
-Scene* Inside_EIS::createScene()
+Scene* TavernFoyer::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = Inside_EIS::create();
+    auto layer = TavernFoyer::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -36,7 +37,7 @@ Scene* Inside_EIS::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool Inside_EIS::init()
+bool TavernFoyer::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -51,30 +52,20 @@ bool Inside_EIS::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     // create the main menu
-    Inside_EIS_Controller::CreateMainMenu(this, visibleSize, origin);
+    TavernFoyerController::CreateMainMenu(this, visibleSize, origin);
     UpdateMeters(pm.getStats());
     
     return true;
 }
 
 
-void Inside_EIS::UpdateMeters(PlayerStatsModel updateModel)
+void TavernFoyer::UpdateMeters(PlayerStatsModel updateModel)
 {
-
+    
     //Added an update for the HUD Stress & Energy Bars
     auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
-
-        pgTimer->setScaleX(updateModel.getEnergy()/100.0);
-        pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
-        log("%d",updateModel.getEnergy());
-}
-
-void Inside_EIS::ToHallway(Ref* pSender)
-{
-    log("Going To EIS Hallway!");
     
-    auto scene = EIS_Hallway::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
-    
+    pgTimer->setScaleX(updateModel.getEnergy()/100.0);
+    pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
+    log("%d",updateModel.getEnergy());
 }

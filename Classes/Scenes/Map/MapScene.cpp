@@ -19,6 +19,7 @@
 #include "DormController.h"
 #include "MapController.h"
 #include "Inside_EIS.h"
+#include "TavernFoyer.h"
 
 USING_NS_CC;
 
@@ -124,9 +125,9 @@ void MapScene::GoToTavern(Ref* pSender)
 {
     log("Going To Tavern!");
     
-    //auto scene = Inside_EIS::createScene();
-    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    //Director::getInstance()->replaceScene(crosssfade);
+    auto scene = TavernFoyer::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 

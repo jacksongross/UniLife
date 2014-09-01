@@ -109,6 +109,12 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		D031092C19B441990030B59F /* TavernFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D031092A19B441990030B59F /* TavernFoyer.cpp */; };
+		D031092F19B441AA0030B59F /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D031092D19B441AA0030B59F /* TavernFoyerController.cpp */; };
+		D031093519B447C20030B59F /* Tavern_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093119B447C20030B59F /* Tavern_background.png */; };
+		D031093619B447C20030B59F /* Tavern_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093219B447C20030B59F /* Tavern_bar.png */; };
+		D031093719B447C20030B59F /* Tavern_couches.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093319B447C20030B59F /* Tavern_couches.png */; };
+		D031093819B447C20030B59F /* Tavern_table.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093419B447C20030B59F /* Tavern_table.png */; };
 		D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */ = {isa = PBXBuildFile; fileRef = D03642BF199C290B00ECA5DA /* AppIcon60x60@2x[1].png */; };
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
@@ -377,6 +383,14 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D031092A19B441990030B59F /* TavernFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyer.cpp; sourceTree = "<group>"; };
+		D031092B19B441990030B59F /* TavernFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyer.h; sourceTree = "<group>"; };
+		D031092D19B441AA0030B59F /* TavernFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyerController.cpp; sourceTree = "<group>"; };
+		D031092E19B441AA0030B59F /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
+		D031093119B447C20030B59F /* Tavern_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_background.png; sourceTree = "<group>"; };
+		D031093219B447C20030B59F /* Tavern_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_bar.png; sourceTree = "<group>"; };
+		D031093319B447C20030B59F /* Tavern_couches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_couches.png; sourceTree = "<group>"; };
+		D031093419B447C20030B59F /* Tavern_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_table.png; sourceTree = "<group>"; };
 		D03642BF199C290B00ECA5DA /* AppIcon60x60@2x[1].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x[1].png"; sourceTree = "<group>"; };
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
@@ -551,6 +565,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D031093019B447A20030B59F /* Tavern */,
 				D0E73DC719B3F5A200F4F720 /* InsideEIS */,
 				7AB6AB1319AEDDF5003CCD7E /* NewCharacter */,
 				7A89456A19ADAF3F008E1EA7 /* Bill */,
@@ -937,6 +952,8 @@
 		D031092119B43F960030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
+				D031092A19B441990030B59F /* TavernFoyer.cpp */,
+				D031092B19B441990030B59F /* TavernFoyer.h */,
 			);
 			name = Tavern;
 			sourceTree = "<group>";
@@ -944,6 +961,19 @@
 		D031092919B43FA00030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
+				D031092D19B441AA0030B59F /* TavernFoyerController.cpp */,
+				D031092E19B441AA0030B59F /* TavernFoyerController.h */,
+			);
+			name = Tavern;
+			sourceTree = "<group>";
+		};
+		D031093019B447A20030B59F /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+				D031093119B447C20030B59F /* Tavern_background.png */,
+				D031093219B447C20030B59F /* Tavern_bar.png */,
+				D031093319B447C20030B59F /* Tavern_couches.png */,
+				D031093419B447C20030B59F /* Tavern_table.png */,
 			);
 			name = Tavern;
 			sourceTree = "<group>";
@@ -1120,6 +1150,7 @@
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
+				D031093719B447C20030B59F /* Tavern_couches.png in Resources */,
 				7AB6AB3919AEDDF5003CCD7E /* new_game_on.png in Resources */,
 				7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */,
 				7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */,
@@ -1146,6 +1177,7 @@
 				D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
+				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
 				D0E73DD619B3F5FE00F4F720 /* foyer.png in Resources */,
 				7AB6AB2C19AEDDF5003CCD7E /* green_bar.png in Resources */,
@@ -1162,6 +1194,7 @@
 				7A8945AA19ADAF3F008E1EA7 /* title.png in Resources */,
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
 				7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */,
 				7AB6AB2D19AEDDF5003CCD7E /* New-Game-Back.png in Resources */,
@@ -1179,6 +1212,7 @@
 				7A8945B819ADAF3F008E1EA7 /* map-computing_engineering.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */,
+				D031093519B447C20030B59F /* Tavern_background.png in Resources */,
 				7AB6AB2F19AEDDF5003CCD7E /* New-Game-Border.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
@@ -1200,7 +1234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
+				D031092C19B441990030B59F /* TavernFoyer.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
+				D031092F19B441AA0030B59F /* TavernFoyerController.cpp in Sources */,
 				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */,
