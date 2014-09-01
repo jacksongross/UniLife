@@ -569,6 +569,7 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D031092919B43FA00030B59F /* Tavern */,
 				7AB6AB0419AEDD58003CCD7E /* EISRoom */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
 				7A89451E19ADACFC008E1EA7 /* Dorm */,
@@ -707,6 +708,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D031092119B43F960030B59F /* Tavern */,
 				7AB6AB0F19AEDD60003CCD7E /* EISRoom */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
 				7A89454C19ADAD23008E1EA7 /* Dorm */,
@@ -930,6 +932,20 @@
 				7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */,
 			);
 			path = NewCharacter;
+			sourceTree = "<group>";
+		};
+		D031092119B43F960030B59F /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tavern;
+			sourceTree = "<group>";
+		};
+		D031092919B43FA00030B59F /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tavern;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {

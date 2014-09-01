@@ -31,6 +31,13 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     pMenuItems.pushBack(GoEIS);
     
     
+    auto GoTavern = MenuItemImage::create("map-tavern.png", "map-tavern.png", CC_CALLBACK_1(MapScene::GoToTavern, that));
+    GoTavern->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));
+    GoTavern->setScale(0.9);
+    pMenuItems.pushBack(GoTavern);
+    
+    
+    
     return pMenuItems;
     
 }
@@ -90,10 +97,6 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     mpHolder7->setScale(0.9);
     that->addChild(mpHolder7,2);
     
-    Sprite *mpHolder8 = Sprite::create("map-tavern.png");
-    mpHolder8->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));
-    mpHolder8->setScale(0.9);
-    that->addChild(mpHolder8,2);
     
     Sprite *mpHolder9 = Sprite::create("map-uni_centre.png");
     mpHolder9->setPosition(Vec2(origin.x + visibleSize.width / 2 + 320, origin.y + visibleSize.height / 2 - 200));

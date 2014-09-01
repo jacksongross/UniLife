@@ -110,7 +110,7 @@ void MapScene::GoToDorm(Ref* pSender)
     
 }
 
-void MapScene:: GoToEIS(Ref* pSender)
+void MapScene::GoToEIS(Ref* pSender)
 {
     log("Going To Inside EIS Building!");
     
@@ -119,6 +119,18 @@ void MapScene:: GoToEIS(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+void MapScene::GoToTavern(Ref* pSender)
+{
+    log("Going To Tavern!");
+    
+    //auto scene = Inside_EIS::createScene();
+    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    //Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+
 /********************************
             Getters
  *******************************/
