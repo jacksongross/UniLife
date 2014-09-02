@@ -14,7 +14,9 @@
 #include "MenuOptionScene.h"
 #include "DormScene.h"
 #include "DormController.h"
+#include "MapScene.h"
 #include <vector>
+#include <cmath>
 #include <sstream>
 
 USING_NS_CC;
@@ -105,45 +107,33 @@ bool DormScene::init()
 
 void DormScene::UpdateTimer(float dt)
 {
-    int hh, mm;
     std::string ampm;
-    
-    std::stringstream ss;
-    ss << this->timer->getString();
-
-    char s;
-    
-    ss >> hh >> s >> mm >> ampm;
-    
-    mm += 5;
-    
-    if(mm == 60)
-    {
-        mm = 0;
-        hh++;
-    }
-    
-    ampm == "pm" && hh == 12 ? ampm = "am" : ampm;
-    ampm == "am" && hh == 12 ? ampm = "pm" : ampm;
-    
-    hh > 12 ? hh = 1 : hh;
-
     std::ostringstream stringStream;
-    stringStream << hh << ":";
     
-    if(mm < 10)
+    TimeHelper th = pm.getGameTime();
+    double time = th.getHoursMinutes() + 0.5;
+    log("Time currently: %.2f", time);
+    
+    time > 12 ? ampm = "pm" : ampm = "am";
+
+    time > 23.5 ? time = 0 : time;
+    
+    stringStream << (int)time << ":";
+    
+    if((time + 0.5) == ceil(time))
     {
-        stringStream << "0" << mm << ampm;
+        stringStream << "30" << ampm;
     }
     else
     {
-        stringStream << mm << ampm;
+        stringStream << "00" << ampm;
     }
     
     this->timer->setString(stringStream.str());
     
+    th.setHoursMinutes(time);
     
-    
+    pm.setGameTime(th);
     
     //Added an update for the HUD Stress & Energy Bars
     UpdateMeters(pm.getStats());
@@ -166,6 +156,63 @@ void DormScene::PausedPressed(Ref* pSender)
     }
 }
 
+void DormScene::DoorPressed(cocos2d::Ref *pSender)
+{
+    log("you have touched the door!");
+    // transition to the load game scene
+    auto scene = MapScene::createScene(pm);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+}
+
+void DormScene::BedPressed(cocos2d::Ref *pSender)
+{
+    log("You will rest and restore all energy and decrease stress by 5");
+    
+    PlayerStatsModel updateStats;
+    TimeHelper newTime;
+    updateStats = pm.getStats();
+    newTime = pm.getGameTime();
+    
+    if(updateStats.getStress() > 10)
+        updateStats.setStress(updateStats.getStress() - 10);
+    else
+        updateStats.setStress(0);
+    
+    updateStats.setEnergy(100);
+    newTime.setHoursMinutes(newTime.getHoursMinutes() + 8.0);
+    pm.setStats(updateStats);
+    pm.setGameTime(newTime);
+    UpdateMeters(pm.getStats());
+    
+    log("NAME: %s", pm.getName().c_str());
+    log("INT: %d", pm.getStats().getIntelligence());
+    log("STA: %d", pm.getStats().getStamina());
+    log("SOC: %d", pm.getStats().getSocial());
+    log("DEGREE: %s", pm.getDegree().c_str());
+    log("ENERGY: %d" , pm.getStats().getEnergy());
+    log("STRESS: %d", pm.getStats().getStress());
+    log("DAY: %d", pm.getGameTime().getDay());
+    log("WEEK: %d", pm.getGameTime().getWeek());
+    log("SEMESTER: %d", pm.getGameTime().getSemester());
+    log("TIME: %f", pm.getGameTime().getHoursMinutes());
+
+}
+
+void DormScene::ShelfPressed(cocos2d::Ref *pSender)
+{
+    log("You touched the shelf");
+}
+
+void DormScene::DeskPressed(cocos2d::Ref *pSender)
+{
+    log("You touched the desk!");
+}
+
+void DormScene::ComputerPressed(cocos2d::Ref *pSender)
+{
+    log("You touched the computer!");
+}
 
 
 void DormScene::UpdateMeters(PlayerStatsModel updateModel)
@@ -173,9 +220,13 @@ void DormScene::UpdateMeters(PlayerStatsModel updateModel)
     
     //Added an update for the HUD Stress & Energy Bars
     auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
+    auto stressMeter = (cocos2d::ProgressTimer*)this->getChildByTag(2);
     
     pgTimer->setScaleX(updateModel.getEnergy()/100.0);
     pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
+    
+    stressMeter->setScaleX(updateModel.getStress()/100.0);
+    stressMeter->setAnchorPoint(Vec2(0.f, 0.5f));
 }
 
 

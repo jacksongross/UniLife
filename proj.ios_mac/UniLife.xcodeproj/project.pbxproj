@@ -19,6 +19,8 @@
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
+		7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */; };
+		7A44EF8419B4671D001EF26B /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
 		7A89452D19ADACFC008E1EA7 /* DormController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89451F19ADACFC008E1EA7 /* DormController.cpp */; };
 		7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452219ADACFC008E1EA7 /* MapController.cpp */; };
@@ -109,8 +111,6 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		D031092C19B441990030B59F /* TavernFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D031092A19B441990030B59F /* TavernFoyer.cpp */; };
-		D031092F19B441AA0030B59F /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D031092D19B441AA0030B59F /* TavernFoyerController.cpp */; };
 		D031093519B447C20030B59F /* Tavern_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093119B447C20030B59F /* Tavern_background.png */; };
 		D031093619B447C20030B59F /* Tavern_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093219B447C20030B59F /* Tavern_bar.png */; };
 		D031093719B447C20030B59F /* Tavern_couches.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093319B447C20030B59F /* Tavern_couches.png */; };
@@ -269,6 +269,10 @@
 		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyer.cpp; sourceTree = "<group>"; };
+		7A44EF7F19B4670E001EF26B /* TavernFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyer.h; sourceTree = "<group>"; };
+		7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyerController.cpp; sourceTree = "<group>"; };
+		7A44EF8319B4671D001EF26B /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
 		7A89451F19ADACFC008E1EA7 /* DormController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormController.cpp; sourceTree = "<group>"; };
 		7A89452019ADACFC008E1EA7 /* DormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormController.h; sourceTree = "<group>"; };
@@ -383,10 +387,6 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D031092A19B441990030B59F /* TavernFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyer.cpp; sourceTree = "<group>"; };
-		D031092B19B441990030B59F /* TavernFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyer.h; sourceTree = "<group>"; };
-		D031092D19B441AA0030B59F /* TavernFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyerController.cpp; sourceTree = "<group>"; };
-		D031092E19B441AA0030B59F /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
 		D031093119B447C20030B59F /* Tavern_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_background.png; sourceTree = "<group>"; };
 		D031093219B447C20030B59F /* Tavern_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_bar.png; sourceTree = "<group>"; };
 		D031093319B447C20030B59F /* Tavern_couches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_couches.png; sourceTree = "<group>"; };
@@ -581,10 +581,28 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
+		7A44EF7D19B4670E001EF26B /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+				7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */,
+				7A44EF7F19B4670E001EF26B /* TavernFoyer.h */,
+			);
+			path = Tavern;
+			sourceTree = "<group>";
+		};
+		7A44EF8119B4671D001EF26B /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+				7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */,
+				7A44EF8319B4671D001EF26B /* TavernFoyerController.h */,
+			);
+			path = Tavern;
+			sourceTree = "<group>";
+		};
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D031092919B43FA00030B59F /* Tavern */,
+				7A44EF8119B4671D001EF26B /* Tavern */,
 				7AB6AB0419AEDD58003CCD7E /* EISRoom */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
 				7A89451E19ADACFC008E1EA7 /* Dorm */,
@@ -723,7 +741,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D031092119B43F960030B59F /* Tavern */,
+				7A44EF7D19B4670E001EF26B /* Tavern */,
 				7AB6AB0F19AEDD60003CCD7E /* EISRoom */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
 				7A89454C19ADAD23008E1EA7 /* Dorm */,
@@ -947,24 +965,6 @@
 				7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */,
 			);
 			path = NewCharacter;
-			sourceTree = "<group>";
-		};
-		D031092119B43F960030B59F /* Tavern */ = {
-			isa = PBXGroup;
-			children = (
-				D031092A19B441990030B59F /* TavernFoyer.cpp */,
-				D031092B19B441990030B59F /* TavernFoyer.h */,
-			);
-			name = Tavern;
-			sourceTree = "<group>";
-		};
-		D031092919B43FA00030B59F /* Tavern */ = {
-			isa = PBXGroup;
-			children = (
-				D031092D19B441AA0030B59F /* TavernFoyerController.cpp */,
-				D031092E19B441AA0030B59F /* TavernFoyerController.h */,
-			);
-			name = Tavern;
 			sourceTree = "<group>";
 		};
 		D031093019B447A20030B59F /* Tavern */ = {
@@ -1234,10 +1234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
-				D031092C19B441990030B59F /* TavernFoyer.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
-				D031092F19B441AA0030B59F /* TavernFoyerController.cpp in Sources */,
 				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
+				7A44EF8419B4671D001EF26B /* TavernFoyerController.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
@@ -1255,6 +1254,7 @@
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
+				7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */,
 				D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,

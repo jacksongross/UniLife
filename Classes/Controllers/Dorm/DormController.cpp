@@ -35,23 +35,6 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     
     pauseButton->runAction(action);
     
-    pMenuItems.pushBack(pauseButton);
-    
-    return pMenuItems;
-    
-}
-
-// call this method in the main menu scene to create the main menu
-void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 origin)
-{
-    // create the a vector to hold the menu items
-    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateDormButtons(that, visibleSize, origin);
-    
-    // create menu, it's an autorelease object
-    auto menu = Menu::createWithArray(pMenuItems);
-    menu->setPosition(Vec2::ZERO);
-    that->addChild(menu, 1);
-    
     // create dorm room
     auto bg = Sprite::create("dorm-background.png");
     
@@ -69,116 +52,75 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     that->addChild(player2, 6);
     
     // add the door
-    auto sprite = Sprite::create("dorm-door.png");
     
-    sprite->setPosition(Vec2(visibleSize.width / 2 - origin.x - sprite->getContentSize().width - 39, visibleSize.height / 2 + origin.y - 10));
+    auto doorSprite = MenuItemImage::create("dorm-door.png", "dorm-door.png", CC_CALLBACK_1(DormScene::DoorPressed, that));
     
-    sprite->setTag(8);
+    doorSprite->setPosition(Vec2(visibleSize.width / 2 - origin.x - doorSprite->getContentSize().width - 39, visibleSize.height / 2 + origin.y - 10));
     
-    that->addChild(sprite, 0);
-    
-    
-    //Create a "one by one" touch event listener (processes one touch at a time)
-    auto listener1 = EventListenerTouchOneByOne::create();
-    // When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
-    listener1->setSwallowTouches(true);
-    
-    // Example of using a lambda expression to implement onTouchBegan event callback function
-    listener1->onTouchBegan = [](Touch* touch, Event* event){
-        // event->getCurrentTarget() returns the *listener's* sceneGraphPriority node.
-        auto target = static_cast<Sprite*>(event->getCurrentTarget());
-        
-        //Get the position of the current point relative to the button
-        Point locationInNode = target->convertToNodeSpace(touch->getLocation());
-        Size s = target->getContentSize();
-        Rect rect = Rect(0, 0, s.width, s.height);
-        
-        //Check the click area
-        if (rect.containsPoint(locationInNode))
-        {
-            log("you have touched the door!");
-            // transition to the load game scene
-            auto scene = MapScene::createScene(pm);
-            TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-            Director::getInstance()->replaceScene(crosssfade);
-            
-            return true;
-        }
-        return false;
-    };
-    
-    //Trigger when moving touch
-    listener1->onTouchMoved = [](Touch* touch, Event* event){
-        //auto target = static_cast<Sprite*>(event->getCurrentTarget());
-        //Move the position of current button sprite
-        //target->setPosition(target->getPosition() + touch->getDelta());
-    };
-    
-    //Process the touch end event
-    listener1->onTouchEnded = [=](Touch* touch, Event* event){
-        //auto target = static_cast<Sprite*>(event->getCurrentTarget());
-        //log("sprite onTouchesEnded.. ");
-        //target->setOpacity(255);
-        //Reset zOrder and the display sequence will change
-        /*if (target == sprite)
-        {
-            sprite->setZOrder(100);
-        }
-        else if(target == sprite)
-        {
-            sprite->setZOrder(0);
-        }
-        */
-    };
-    
-    that->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener1, sprite);
+    doorSprite->setTag(8);
     
     // add the bed
-    sprite = Sprite::create("dorm-bed.png");
+    auto bedSprite = MenuItemImage::create("dorm-bed.png", "dorm-bed.png", CC_CALLBACK_1(DormScene::BedPressed, that));
+
     
-    sprite->setPosition(Vec2(visibleSize.width - origin.x - sprite->getContentSize().width + 202, visibleSize.height - sprite->getContentSize().height - 220));
+    bedSprite->setPosition(Vec2(visibleSize.width - origin.x - bedSprite->getContentSize().width + 202, visibleSize.height - bedSprite->getContentSize().height - 220));
     
-    that->addChild(sprite, 1);
     
     // add the book shelf
-    sprite = Sprite::create("dorm-book_shelf.png");
+    auto shelfSprite = MenuItemImage::create("dorm-book_shelf.png", "dorm-book_shelf.png", CC_CALLBACK_1(DormScene::ShelfPressed, that));
     
-    sprite->setPosition(Vec2(visibleSize.width - sprite->getContentSize().width - 333, visibleSize.height / 2 + origin.y - 91));
     
-    that->addChild(sprite, 2);
+    shelfSprite->setPosition(Vec2(visibleSize.width - shelfSprite->getContentSize().width - 333, visibleSize.height / 2 + origin.y - 91));
     
     // add the desk
-    sprite = Sprite::create("dorm-desk.png");
+    auto deskSprite = MenuItemImage::create("dorm-desk.png", "dorm-desk.png", CC_CALLBACK_1(DormScene::DeskPressed, that));
     
-    sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 11, visibleSize.height / 2 - 120));
-    
-    that->addChild(sprite, 3);
+    deskSprite->setPosition(Vec2(origin.x + deskSprite->getContentSize().width / 2 + 11, visibleSize.height / 2 - 120));
     
     // add the computer
-    sprite = Sprite::create("dorm-computer.png");
+    auto computerSprite = MenuItemImage::create("dorm-computer.png", "dorm-computer.png", CC_CALLBACK_1(DormScene::ComputerPressed, that));
     
-    sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 12, visibleSize.height / 2 + 58));
-    
-    that->addChild(sprite, 4);
+    computerSprite->setPosition(Vec2(origin.x + computerSprite->getContentSize().width / 2 + 12, visibleSize.height / 2 + 58));
     
     // add the stool
-    sprite = Sprite::create("dorm-stool.png");
+    auto sprite = Sprite::create("dorm-stool.png");
     
     sprite->setPosition(Vec2(origin.x + sprite->getContentSize().width / 2 + 15, origin.y + sprite->getContentSize().height / 2));
     
     that->addChild(sprite, 5);
     
-    //sprite->runAction(action);
-    
-    //that->addChild(sprite, 6);
-    
     // set up the timer
     
-    that->timer = Label::createWithSystemFont("11:30pm", "Verdana", 64);
+    that->timer = Label::createWithSystemFont("", "Verdana", 64);
     
     that->timer->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - 22));
     
     that->addChild(that->timer);
+    
+    
+    // push the sprites onto the scene
+    pMenuItems.pushBack(pauseButton);
+    pMenuItems.pushBack(doorSprite);
+    pMenuItems.pushBack(bedSprite);
+    pMenuItems.pushBack(shelfSprite);
+    pMenuItems.pushBack(deskSprite);
+    pMenuItems.pushBack(computerSprite);
+    
+    
+    return pMenuItems;
+    
+}
+
+// call this method in the main menu scene to create the main menu
+void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 origin)
+{
+    // create the a vector to hold the menu items
+    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateDormButtons(that, visibleSize, origin);
+    
+    // create menu, it's an autorelease object
+    auto menu = Menu::createWithArray(pMenuItems);
+    menu->setPosition(Vec2::ZERO);
+    that->addChild(menu, 1);
     
     
     //Energy HUD
@@ -202,7 +144,7 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     that->addChild(pg);
     
     
-    //Energy HUD
+    //Stress HUD
     cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
     streText->setContentSize(Size(400, 40));
     streText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
@@ -222,9 +164,7 @@ void DormController::CreateDormRoom(DormScene *that, Size visibleSize, Vec2 orig
     pg->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(streSprite);
     that->addChild(pg2);
-
-    
-    
     
 }
+
 
