@@ -680,8 +680,8 @@
 			children = (
 				D0B760F619BD5E1000E53B52 /* SciMed-Controller */,
 				D0B760F519BD5E0700E53B52 /* Buis-Controller */,
-				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
 				D0B760F419BD5DFB00E53B52 /* Art-Controller */,
+				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
 				7AB6AB0419AEDD58003CCD7E /* EIS-Controller */,
 				7A44EF8119B4671D001EF26B /* Tavern */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
@@ -1078,10 +1078,10 @@
 		D0B760F419BD5DFB00E53B52 /* Art-Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */,
-				D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */,
 				D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */,
 				D0B7612619BD744000E53B52 /* Art-Foyer-Controller.h */,
+				D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */,
+				D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */,
 			);
 			name = "Art-Controller";
 			sourceTree = "<group>";
@@ -1133,10 +1133,10 @@
 		D0B760F919BD5EC600E53B52 /* Art-Scene */ = {
 			isa = PBXGroup;
 			children = (
-				D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */,
-				D0B7610E19BD731B00E53B52 /* Art-Foyer.h */,
 				D0B7611019BD733400E53B52 /* Art-Hallway.cpp */,
 				D0B7611119BD733400E53B52 /* Art-Hallway.h */,
+				D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */,
+				D0B7610E19BD731B00E53B52 /* Art-Foyer.h */,
 			);
 			name = "Art-Scene";
 			sourceTree = "<group>";

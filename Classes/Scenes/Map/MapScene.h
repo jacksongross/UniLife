@@ -43,6 +43,7 @@ public:
     void GoToTavern(Ref* pSender);
     void GoToMedSci(Ref* pSender);
     void GoToBuis(Ref* pSender);
+    void GoToArt(Ref* pSender);
     /********************************
                 Getters
      *******************************/

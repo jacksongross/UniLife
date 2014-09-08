@@ -45,6 +45,11 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoToBuis->setScale(0.9);
     pMenuItems.pushBack(GoToBuis);
     
+    auto GoToArt = MenuItemImage::create("map-art.png", "map-art.png", CC_CALLBACK_1(MapScene::GoToArt, that));
+    GoToArt->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
+    GoToArt->setScale(0.9);
+    pMenuItems.pushBack(GoToArt);
+    
     return pMenuItems;
     
 }
@@ -69,10 +74,6 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
     
-    Sprite *mpHolder = Sprite::create("map-art.png");
-    mpHolder->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
-    mpHolder->setScale(0.9);
-    that->addChild(mpHolder,2);
     
     Sprite *mpHolder3 = Sprite::create("map-library.png");
     mpHolder3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2));

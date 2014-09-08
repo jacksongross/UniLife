@@ -22,6 +22,7 @@
 #include "TavernFoyer.h"
 #include "SciMed-Foyer.h"
 #include "Buis-Foyer.h"
+#include "Art-Foyer.h"
 USING_NS_CC;
 
 Scene* MapScene::createScene()
@@ -152,7 +153,15 @@ void MapScene::GoToBuis(Ref* pSender)
     
 }
 
-
+void MapScene::GoToArt(Ref* pSender)
+{
+    log("Going To Buisness!");
+    
+    auto scene = ArtFoyer::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
 /********************************
             Getters
  *******************************/

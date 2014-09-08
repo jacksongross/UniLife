@@ -123,7 +123,7 @@ void BuisFoyerController::CreateMainMenu(BuisFoyer *that, Size visibleSize, Vec2
     foyerBoard->setScale(1);
     that->addChild(foyerBoard);
     
-    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("BUISNESS BITCH!", "Verdana", 15);
+    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("Buisness & Commerce Building!", "Verdana", 15);
     LocName->setColor(Color3B(0,0,0));
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
