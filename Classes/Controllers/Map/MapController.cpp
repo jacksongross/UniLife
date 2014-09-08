@@ -55,6 +55,21 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoToSocSci->setScale(0.9);
     pMenuItems.pushBack(GoToSocSci);
     
+    auto GoToLibrary = MenuItemImage::create("map-library.png", "map-library.png", CC_CALLBACK_1(MapScene::GoToLibrary, that));
+    GoToLibrary->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2));
+    GoToLibrary->setScale(0.9);
+    pMenuItems.pushBack(GoToLibrary);
+    
+    auto GoToShop = MenuItemImage::create("map-shop.png", "map-shop.png", CC_CALLBACK_1(MapScene::GoToShop, that));
+    GoToShop->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - 200));
+    GoToShop->setScale(1.1);
+    pMenuItems.pushBack(GoToShop);
+    
+    auto GoToUniCentre = MenuItemImage::create("map-uni_centre.png", "map-uni_centre.png", CC_CALLBACK_1(MapScene::GoToUniCentre, that));
+    GoToUniCentre->setPosition(Vec2(origin.x + visibleSize.width / 2 + 320, origin.y + visibleSize.height / 2 - 200));
+    GoToUniCentre->setScale(0.9);
+    pMenuItems.pushBack(GoToUniCentre);
+    
     return pMenuItems;
     
 }
@@ -80,27 +95,13 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     that->addChild(sprite, 0);
     
     
-    Sprite *mpHolder3 = Sprite::create("map-library.png");
-    mpHolder3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2));
-    mpHolder3->setScale(0.9);
-    that->addChild(mpHolder3,2);
-    
-    Sprite *mpHolder5 = Sprite::create("map-shop.png");
-    mpHolder5->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - 200));
-    mpHolder5->setScale(1.1);
-    that->addChild(mpHolder5,2);
-    
     
     Sprite *mpHolder7 = Sprite::create("map-sun.png");
     mpHolder7->setPosition(Vec2(origin.x + visibleSize.width / 2 - 425, origin.y + visibleSize.height / 2 + 280));
     mpHolder7->setScale(0.9);
     that->addChild(mpHolder7,2);
     
-    
-    Sprite *mpHolder9 = Sprite::create("map-uni_centre.png");
-    mpHolder9->setPosition(Vec2(origin.x + visibleSize.width / 2 + 320, origin.y + visibleSize.height / 2 - 200));
-    mpHolder9->setScale(0.9);
-    that->addChild(mpHolder9,2);
+
     
     
 }

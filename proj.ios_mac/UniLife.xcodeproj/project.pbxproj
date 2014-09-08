@@ -119,6 +119,7 @@
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
 		D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */; };
+		D0831C2A19BD8DD700444F9C /* LibraryFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
@@ -422,6 +423,8 @@
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
+		D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyer.cpp; sourceTree = "<group>"; };
+		D0831C2919BD8DD700444F9C /* LibraryFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyer.h; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
@@ -678,14 +681,8 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0B760F619BD5E1000E53B52 /* SciMed-Controller */,
-				D0B760F519BD5E0700E53B52 /* Buis-Controller */,
-				D0B760F419BD5DFB00E53B52 /* Art-Controller */,
-				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
-				7AB6AB0419AEDD58003CCD7E /* EIS-Controller */,
-				7A44EF8119B4671D001EF26B /* Tavern */,
+				D0831C1F19BD8CE200444F9C /* Building Controllers */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
-				7A89451E19ADACFC008E1EA7 /* Dorm */,
 				7A89452119ADACFC008E1EA7 /* Map */,
 				7A89452419ADACFC008E1EA7 /* Menu */,
 				7A89452719ADACFC008E1EA7 /* MenuLoad */,
@@ -821,14 +818,8 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D0B760F719BD5E6600E53B52 /* SciMed-Scene */,
-				D0B760FA19BD5ED300E53B52 /* Buis-Scene */,
-				D0B760F919BD5EC600E53B52 /* Art-Scene */,
-				D0B760F819BD5EBA00E53B52 /* SocSci-Scene */,
-				7AB6AB0F19AEDD60003CCD7E /* EIS-Scene */,
-				7A44EF7D19B4670E001EF26B /* Tavern */,
+				D0831C2219BD8D2A00444F9C /* Building Scenes */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
-				7A89454C19ADAD23008E1EA7 /* Dorm */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
 				7A89455219ADAD23008E1EA7 /* Menu */,
 				7A89455519ADAD23008E1EA7 /* MenuLoad */,
@@ -1062,6 +1053,84 @@
 				D031093419B447C20030B59F /* Tavern_table.png */,
 			);
 			name = Tavern;
+			sourceTree = "<group>";
+		};
+		D0831C1F19BD8CE200444F9C /* Building Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0831C2119BD8D0B00444F9C /* Other Buildings */,
+				D0831C2019BD8CF300444F9C /* Faculties */,
+			);
+			name = "Building Controllers";
+			sourceTree = "<group>";
+		};
+		D0831C2019BD8CF300444F9C /* Faculties */ = {
+			isa = PBXGroup;
+			children = (
+				D0B760F619BD5E1000E53B52 /* SciMed-Controller */,
+				D0B760F519BD5E0700E53B52 /* Buis-Controller */,
+				D0B760F419BD5DFB00E53B52 /* Art-Controller */,
+				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
+				7AB6AB0419AEDD58003CCD7E /* EIS-Controller */,
+			);
+			name = Faculties;
+			sourceTree = "<group>";
+		};
+		D0831C2119BD8D0B00444F9C /* Other Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				D0831C2519BD8D7900444F9C /* Library */,
+				7A44EF8119B4671D001EF26B /* Tavern */,
+				7A89451E19ADACFC008E1EA7 /* Dorm */,
+			);
+			name = "Other Buildings";
+			sourceTree = "<group>";
+		};
+		D0831C2219BD8D2A00444F9C /* Building Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D0831C2419BD8D3A00444F9C /* Other Buldings */,
+				D0831C2319BD8D3300444F9C /* Faculties */,
+			);
+			name = "Building Scenes";
+			sourceTree = "<group>";
+		};
+		D0831C2319BD8D3300444F9C /* Faculties */ = {
+			isa = PBXGroup;
+			children = (
+				D0B760F719BD5E6600E53B52 /* SciMed-Scene */,
+				D0B760FA19BD5ED300E53B52 /* Buis-Scene */,
+				D0B760F919BD5EC600E53B52 /* Art-Scene */,
+				D0B760F819BD5EBA00E53B52 /* SocSci-Scene */,
+				7AB6AB0F19AEDD60003CCD7E /* EIS-Scene */,
+			);
+			name = Faculties;
+			sourceTree = "<group>";
+		};
+		D0831C2419BD8D3A00444F9C /* Other Buldings */ = {
+			isa = PBXGroup;
+			children = (
+				D0831C2719BD8D9500444F9C /* Library */,
+				7A44EF7D19B4670E001EF26B /* Tavern */,
+				7A89454C19ADAD23008E1EA7 /* Dorm */,
+			);
+			name = "Other Buldings";
+			sourceTree = "<group>";
+		};
+		D0831C2519BD8D7900444F9C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		D0831C2719BD8D9500444F9C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */,
+				D0831C2919BD8DD700444F9C /* LibraryFoyer.h */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		D0B760F319BD5DE400E53B52 /* SocSci-Controller */ = {
@@ -1434,6 +1503,7 @@
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
+				D0831C2A19BD8DD700444F9C /* LibraryFoyer.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
 				D0B7612419BD742900E53B52 /* Art-Hallway-Controller.cpp in Sources */,

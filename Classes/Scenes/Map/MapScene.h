@@ -45,6 +45,9 @@ public:
     void GoToBuis(Ref* pSender);
     void GoToArt(Ref* pSender);
     void GoToSocSci(Ref* pSender);
+    void GoToLibrary(Ref* pSender);
+    void GoToShop(Ref* pSender);
+    void GoToUniCentre(Ref* pSender);
     /********************************
                 Getters
      *******************************/
