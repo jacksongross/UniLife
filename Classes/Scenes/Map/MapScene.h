@@ -44,6 +44,7 @@ public:
     void GoToMedSci(Ref* pSender);
     void GoToBuis(Ref* pSender);
     void GoToArt(Ref* pSender);
+    void GoToSocSci(Ref* pSender);
     /********************************
                 Getters
      *******************************/

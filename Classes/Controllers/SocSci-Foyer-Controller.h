@@ -10,5 +10,28 @@
 #define __UniLife__SocSci_Foyer_Controller__
 
 #include <iostream>
+#include <vector>
+#include "MenuNewGame.h"
+#include "PlayerModel.h"
+#include "SqlHelper.h"
+#include "cocos2d.h"
+#include "MenuController.h"
+#include "SocSci-Hallway.h"
+#include "SocSci-Foyer.h"
+
+USING_NS_CC;
+class SocSciFoyerController
+{
+    
+private:
+    
+public:
+    
+    // create buttons for main menu
+    static cocos2d::Vector<cocos2d::MenuItem*> CreateMenuButtons(SocSciFoyer *that, Size visibleSize, Vec2 origin);
+    
+    // creates the main menu
+    static void CreateMainMenu(SocSciFoyer *that, Size visibleSize, Vec2 origin);
+};
 
 #endif /* defined(__UniLife__SocSci_Foyer_Controller__) */

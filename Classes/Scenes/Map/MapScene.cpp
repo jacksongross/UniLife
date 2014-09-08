@@ -23,6 +23,7 @@
 #include "SciMed-Foyer.h"
 #include "Buis-Foyer.h"
 #include "Art-Foyer.h"
+#include "SocSci-Foyer.h"
 USING_NS_CC;
 
 Scene* MapScene::createScene()
@@ -162,6 +163,17 @@ void MapScene::GoToArt(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+void MapScene::GoToSocSci(Ref* pSender)
+{
+    log("Going To Buisness!");
+    
+    auto scene = SocSciFoyer::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
 /********************************
             Getters
  *******************************/

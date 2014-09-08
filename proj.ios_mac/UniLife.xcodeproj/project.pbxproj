@@ -1122,10 +1122,10 @@
 		D0B760F819BD5EBA00E53B52 /* SocSci-Scene */ = {
 			isa = PBXGroup;
 			children = (
-				D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */,
-				D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */,
 				D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */,
 				D0B7610B19BD730D00E53B52 /* SocSci-Hallway.h */,
+				D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */,
+				D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */,
 			);
 			name = "SocSci-Scene";
 			sourceTree = "<group>";

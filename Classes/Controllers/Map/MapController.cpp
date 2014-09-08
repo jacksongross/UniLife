@@ -19,26 +19,26 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     
     
     
-    auto GoNext = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
-    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
-    GoNext->setScale(0.3,0.3);
-    pMenuItems.pushBack(GoNext);
+    auto GoToNext = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
+    GoToNext->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
+    GoToNext->setScale(0.3,0.3);
+    pMenuItems.pushBack(GoToNext);
 
     
-    auto GoEIS = MenuItemImage::create("map-computing_engineering.png", "map-computing_engineering.png", CC_CALLBACK_1(MapScene::GoToEIS, that));
-    GoEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
-    GoEIS->setScale(0.8);
-    pMenuItems.pushBack(GoEIS);
+    auto GoToEIS = MenuItemImage::create("map-computing_engineering.png", "map-computing_engineering.png", CC_CALLBACK_1(MapScene::GoToEIS, that));
+    GoToEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
+    GoToEIS->setScale(0.8);
+    pMenuItems.pushBack(GoToEIS);
     
-    auto GoSciMed = MenuItemImage::create("map-science_medicine.png", "map-science_medicine.png", CC_CALLBACK_1(MapScene::GoToMedSci, that));
-    GoSciMed->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
-    GoSciMed->setScale(0.8);
-    pMenuItems.pushBack(GoSciMed);
+    auto GoToSciMed = MenuItemImage::create("map-science_medicine.png", "map-science_medicine.png", CC_CALLBACK_1(MapScene::GoToMedSci, that));
+    GoToSciMed->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
+    GoToSciMed->setScale(0.8);
+    pMenuItems.pushBack(GoToSciMed);
     
-    auto GoTavern = MenuItemImage::create("map-tavern.png", "map-tavern.png", CC_CALLBACK_1(MapScene::GoToTavern, that));
-    GoTavern->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));
-    GoTavern->setScale(0.9);
-    pMenuItems.pushBack(GoTavern);
+    auto GoToTavern = MenuItemImage::create("map-tavern.png", "map-tavern.png", CC_CALLBACK_1(MapScene::GoToTavern, that));
+    GoToTavern->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));
+    GoToTavern->setScale(0.9);
+    pMenuItems.pushBack(GoToTavern);
     
     auto GoToBuis = MenuItemImage::create("map-business.png", "map-business.png", CC_CALLBACK_1(MapScene::GoToBuis, that));
     GoToBuis->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
@@ -49,6 +49,11 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoToArt->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
     GoToArt->setScale(0.9);
     pMenuItems.pushBack(GoToArt);
+    
+    auto GoToSocSci = MenuItemImage::create("map-social_science.png", "map-social_science.png", CC_CALLBACK_1(MapScene::GoToSocSci, that));
+    GoToSocSci->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
+    GoToSocSci->setScale(0.9);
+    pMenuItems.pushBack(GoToSocSci);
     
     return pMenuItems;
     
@@ -85,10 +90,6 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     mpHolder5->setScale(1.1);
     that->addChild(mpHolder5,2);
     
-    Sprite *mpHolder6 = Sprite::create("map-social_science.png");
-    mpHolder6->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
-    mpHolder6->setScale(0.9);
-    that->addChild(mpHolder6,2);
     
     Sprite *mpHolder7 = Sprite::create("map-sun.png");
     mpHolder7->setPosition(Vec2(origin.x + visibleSize.width / 2 - 425, origin.y + visibleSize.height / 2 + 280));
