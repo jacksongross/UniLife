@@ -1,39 +1,34 @@
 //
-//  TavernFoyerController.cpp
+//  TavernRoomController.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 1/09/2014.
+//  Created by csci321ga2a on 8/09/2014.
 //
 //
 
-#include "TavernFoyerController.h"
+#include "TavernRoomController.h"
 extern PlayerModel pm;
+
 // create the buttons for the main menu
-cocos2d::Vector<cocos2d::MenuItem*> TavernFoyerController::CreateMenuButtons(TavernFoyer *that, Size visibleSize, Vec2 origin)
+cocos2d::Vector<cocos2d::MenuItem*> TavernRoomController::CreateMenuButtons(TavernRoom *that, Size visibleSize, Vec2 origin)
 {
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
-    auto ToMap = MenuItemImage::create("map_background.png","map_background.png" , CC_CALLBACK_1(TavernFoyer::ToMap, that));
-    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.15);
-    pMenuItems.pushBack(ToMap);
+    auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(TavernRoom::ToFoyer, that));
+    ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2 - 450, origin.y + (visibleSize.height / 2)));
+    ToFoyer->setScale(0.25);
+    pMenuItems.pushBack(ToFoyer);
     
-    
-    auto ToTavernRoom = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(TavernFoyer::ToTavernRoom, that));
-    ToTavernRoom->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450 , origin.y + (visibleSize.height / 2 )));
-    ToTavernRoom->setScale(0.25);
-    ToTavernRoom->setRotation(180.0);
-    pMenuItems.pushBack(ToTavernRoom);
     
     return pMenuItems;
     
 }
 
 // call this method in the main menu scene to create the main menu
-void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, Vec2 origin)
+void TavernRoomController::CreateMainMenu(TavernRoom *that, Size visibleSize, Vec2 origin)
 {
     log("You Went to the EIS Foyer");
     
@@ -43,7 +38,7 @@ void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, 
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
-    that->addChild(menu, 3);
+    that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
     auto sprite = Sprite::create("Tavern_background.png");
@@ -56,11 +51,7 @@ void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, 
     
     
     
-    auto ToTavernRoom = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(TavernFoyer::ToTavernRoom, that));
-    ToTavernRoom->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450 , origin.y + (visibleSize.height / 2 )));
-    ToTavernRoom->setScale(0.25);
-    ToTavernRoom->setRotation(180.0);
-    pMenuItems.pushBack(ToTavernRoom);
+    
     
     //Energy HUD
     cocos2d::ui::Text* engText = cocos2d::ui::Text::create("Energy ", "Verdana", 20);
@@ -103,23 +94,6 @@ void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, 
     pg2->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(streSprite);
     that->addChild(pg2);
-    
-    
-    
-    
-    Sprite* barCounter = Sprite::create("Tavern_bar.png");
-    barCounter->setPosition(Vec2(origin.x + visibleSize.width / 2 - 340, origin.y + visibleSize.height / 2 - 40 ));
-    that->addChild(barCounter);
-    
-    
-    Sprite* barTable = Sprite::create("Tavern_table.png");
-    barTable->setPosition(Vec2(origin.x + visibleSize.width / 2 + 260, origin.y + visibleSize.height / 2 - 80));
-    that->addChild(barTable,2);
-    
-    Sprite* barCouches = Sprite::create("Tavern_couches.png");
-    barCouches->setPosition(Vec2(origin.x + visibleSize.width / 2 + 260, origin.y + visibleSize.height / 2 - 60));
-    that->addChild(barCouches,1);
-    
     
     
     

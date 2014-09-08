@@ -1,34 +1,33 @@
 //
-//  TavernFoyer.cpp
+//  TavernRoom.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 1/09/2014.
+//  Created by csci321ga2a on 8/09/2014.
 //
 //
-
 #include "TavernFoyer.h"
+#include "TavernRoom.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
 #include "cocos2d.h"
-#include "TavernFoyerController.h"
+#include "TavernRoomController.h"
 #include "EIS_Hallway.h"
 #include "MenuOptionScene.h"
 #include <CCTransition.h>
 #include <string>
 #include <vector>
 #include "MapScene.h"
-#include "TavernRoom.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
 
-Scene* TavernFoyer::createScene()
+Scene* TavernRoom::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = TavernFoyer::create();
+    auto layer = TavernRoom::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -38,7 +37,7 @@ Scene* TavernFoyer::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool TavernFoyer::init()
+bool TavernRoom::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -53,14 +52,14 @@ bool TavernFoyer::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     // create the main menu
-    TavernFoyerController::CreateMainMenu(this, visibleSize, origin);
+    TavernRoomController::CreateMainMenu(this, visibleSize, origin);
     UpdateMeters(pm.getStats());
     
     return true;
 }
 
 
-void TavernFoyer::UpdateMeters(PlayerStatsModel updateModel)
+void TavernRoom::UpdateMeters(PlayerStatsModel updateModel)
 {
     
     //Added an update for the HUD Stress & Energy Bars
@@ -79,21 +78,11 @@ void TavernFoyer::UpdateMeters(PlayerStatsModel updateModel)
 
 
 
-void TavernFoyer::ToMap(Ref* pSender)
+void TavernRoom::ToFoyer(Ref* pSender)
 {
     log("Going To The Map!");
     
-    auto scene = MapScene::createScene(pm);
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
-    
-}
-
-void TavernFoyer::ToTavernRoom(Ref* pSender)
-{
-    log("Going To The Tavern Games Room!");
-    
-    auto scene = TavernRoom::createScene();
+    auto scene = TavernFoyer::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     

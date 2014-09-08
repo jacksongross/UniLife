@@ -17,7 +17,6 @@ cocos2d::Vector<cocos2d::MenuItem*> EIS_Hallway_Controller::CreateMenuButtons(EI
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
-    
     auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(EIS_Hallway::ToFoyer, that));
     ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2 + 475, origin.y + (visibleSize.height / 2 )));
     ToFoyer->setScale(0.3,0.3);
@@ -25,11 +24,11 @@ cocos2d::Vector<cocos2d::MenuItem*> EIS_Hallway_Controller::CreateMenuButtons(EI
     pMenuItems.pushBack(ToFoyer);
     
     
-    auto LectDoor = MenuItemImage::create("door.png","door.png" , CC_CALLBACK_1(EIS_Hallway::ToLecture, that));
+    auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(EIS_Hallway::ToLecture, that));
     LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
     pMenuItems.pushBack(LectDoor);
 
-    auto TutDoor = MenuItemImage::create("door.png","door.png" , CC_CALLBACK_1(EIS_Hallway::ToTutorial, that));
+    auto TutDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(EIS_Hallway::ToTutorial, that));
     TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 397, origin.y + (visibleSize.height / 2 - 26)));
     pMenuItems.pushBack(TutDoor);
 

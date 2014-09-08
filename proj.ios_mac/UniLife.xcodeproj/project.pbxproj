@@ -123,6 +123,9 @@
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
 		D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */; };
+		D0B760CF19BD3AB400E53B52 /* TavernRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */; };
+		D0B760D219BD3AC300E53B52 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */; };
+		D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760DD19BD43F500E53B52 /* door_opened.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
@@ -399,6 +402,11 @@
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
+		D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoom.cpp; sourceTree = "<group>"; };
+		D0B760CE19BD3AB400E53B52 /* TavernRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoom.h; sourceTree = "<group>"; };
+		D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
+		D0B760D119BD3AC300E53B52 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
+		D0B760DD19BD43F500E53B52 /* door_opened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door_opened.png; path = InsideViewSprites/door_opened.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
@@ -586,6 +594,8 @@
 			children = (
 				7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */,
 				7A44EF7F19B4670E001EF26B /* TavernFoyer.h */,
+				D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */,
+				D0B760CE19BD3AB400E53B52 /* TavernRoom.h */,
 			);
 			path = Tavern;
 			sourceTree = "<group>";
@@ -595,6 +605,8 @@
 			children = (
 				7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */,
 				7A44EF8319B4671D001EF26B /* TavernFoyerController.h */,
+				D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */,
+				D0B760D119BD3AC300E53B52 /* TavernRoomController.h */,
 			);
 			path = Tavern;
 			sourceTree = "<group>";
@@ -992,6 +1004,7 @@
 		D0E73DC719B3F5A200F4F720 /* InsideViewSprites */ = {
 			isa = PBXGroup;
 			children = (
+				D0B760DD19BD43F500E53B52 /* door_opened.png */,
 				D0E73DCF19B3F5FE00F4F720 /* desk.png */,
 				D0E73DD019B3F5FE00F4F720 /* door.png */,
 				D0E73DD119B3F5FE00F4F720 /* foyer.png */,
@@ -1214,6 +1227,7 @@
 				7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */,
 				D031093519B447C20030B59F /* Tavern_background.png in Resources */,
 				7AB6AB2F19AEDDF5003CCD7E /* New-Game-Border.png in Resources */,
+				D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
@@ -1233,6 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B760D219BD3AC300E53B52 /* TavernRoomController.cpp in Sources */,
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
 				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
@@ -1245,6 +1260,7 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
 				7A89456319ADAD23008E1EA7 /* DormScene.cpp in Sources */,
+				D0B760CF19BD3AB400E53B52 /* TavernRoom.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
 				7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */,
