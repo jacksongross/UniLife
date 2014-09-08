@@ -40,7 +40,10 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoTavern->setScale(0.9);
     pMenuItems.pushBack(GoTavern);
     
-    
+    auto GoToBuis = MenuItemImage::create("map-business.png", "map-business.png", CC_CALLBACK_1(MapScene::GoToBuis, that));
+    GoToBuis->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
+    GoToBuis->setScale(0.9);
+    pMenuItems.pushBack(GoToBuis);
     
     return pMenuItems;
     
@@ -71,20 +74,10 @@ void MapController::CreateMapView(MapScene *that, Size visibleSize, Vec2 origin)
     mpHolder->setScale(0.9);
     that->addChild(mpHolder,2);
     
-    Sprite *mpHolder2 = Sprite::create("map-business.png");
-    mpHolder2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
-    mpHolder2->setScale(0.9);
-    that->addChild(mpHolder2,2);
-    
     Sprite *mpHolder3 = Sprite::create("map-library.png");
     mpHolder3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2));
     mpHolder3->setScale(0.9);
     that->addChild(mpHolder3,2);
-    
-    Sprite *mpHolder4 = Sprite::create("map-science_medicine.png");
-    mpHolder4->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
-    mpHolder4->setScale(0.9);
-    that->addChild(mpHolder4,2);
     
     Sprite *mpHolder5 = Sprite::create("map-shop.png");
     mpHolder5->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 2 - 200));

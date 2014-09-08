@@ -140,6 +140,18 @@
 		D0B7610019BD60B600E53B52 /* SciMed-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760FE19BD60B600E53B52 /* SciMed-Hallway.cpp */; };
 		D0B7610319BD619B00E53B52 /* SciMed-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610119BD619B00E53B52 /* SciMed-Foyer-Controller.cpp */; };
 		D0B7610619BD61B100E53B52 /* SciMed-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610419BD61B100E53B52 /* SciMed-Hallway-Controller.cpp */; };
+		D0B7610919BD72F800E53B52 /* SocSci-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */; };
+		D0B7610C19BD730D00E53B52 /* SocSci-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */; };
+		D0B7610F19BD731B00E53B52 /* Art-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */; };
+		D0B7611219BD733400E53B52 /* Art-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611019BD733400E53B52 /* Art-Hallway.cpp */; };
+		D0B7611E19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */; };
+		D0B7612119BD741500E53B52 /* Buis-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */; };
+		D0B7612419BD742900E53B52 /* Art-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */; };
+		D0B7612719BD744000E53B52 /* Art-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */; };
+		D0B7612A19BD747000E53B52 /* SocSci-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */; };
+		D0B7612D19BD749800E53B52 /* SocSci-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */; };
+		D0B7613019BD754A00E53B52 /* Buis-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */; };
+		D0B7613319BD755C00E53B52 /* Buis-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
@@ -437,6 +449,30 @@
 		D0B7610219BD619B00E53B52 /* SciMed-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Foyer-Controller.h"; sourceTree = "<group>"; };
 		D0B7610419BD61B100E53B52 /* SciMed-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Hallway-Controller.cpp"; sourceTree = "<group>"; };
 		D0B7610519BD61B100E53B52 /* SciMed-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Hallway-Controller.h"; sourceTree = "<group>"; };
+		D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer.cpp"; sourceTree = "<group>"; };
+		D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer.h"; sourceTree = "<group>"; };
+		D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway.cpp"; sourceTree = "<group>"; };
+		D0B7610B19BD730D00E53B52 /* SocSci-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway.h"; sourceTree = "<group>"; };
+		D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer.cpp"; sourceTree = "<group>"; };
+		D0B7610E19BD731B00E53B52 /* Art-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer.h"; sourceTree = "<group>"; };
+		D0B7611019BD733400E53B52 /* Art-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway.cpp"; sourceTree = "<group>"; };
+		D0B7611119BD733400E53B52 /* Art-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway.h"; sourceTree = "<group>"; };
+		D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7611D19BD73FE00E53B52 /* Buis-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway-Controller.h"; sourceTree = "<group>"; };
+		D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7612019BD741500E53B52 /* Buis-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer-Controller.h"; sourceTree = "<group>"; };
+		D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway-Controller.h"; sourceTree = "<group>"; };
+		D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7612619BD744000E53B52 /* Art-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer-Controller.h"; sourceTree = "<group>"; };
+		D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7612919BD747000E53B52 /* SocSci-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer-Controller.h"; sourceTree = "<group>"; };
+		D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		D0B7612C19BD749800E53B52 /* SocSci-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway-Controller.h"; sourceTree = "<group>"; };
+		D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway.cpp"; sourceTree = "<group>"; };
+		D0B7612F19BD754A00E53B52 /* Buis-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway.h"; sourceTree = "<group>"; };
+		D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; };
+		D0B7613219BD755C00E53B52 /* Buis-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer.h"; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
@@ -644,9 +680,9 @@
 			children = (
 				D0B760F619BD5E1000E53B52 /* SciMed-Controller */,
 				D0B760F519BD5E0700E53B52 /* Buis-Controller */,
+				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
 				D0B760F419BD5DFB00E53B52 /* Art-Controller */,
 				7AB6AB0419AEDD58003CCD7E /* EIS-Controller */,
-				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
 				7A44EF8119B4671D001EF26B /* Tavern */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
 				7A89451E19ADACFC008E1EA7 /* Dorm */,
@@ -785,10 +821,10 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D0B760F719BD5E6600E53B52 /* SciMed-Scene */,
 				D0B760FA19BD5ED300E53B52 /* Buis-Scene */,
 				D0B760F919BD5EC600E53B52 /* Art-Scene */,
 				D0B760F819BD5EBA00E53B52 /* SocSci-Scene */,
-				D0B760F719BD5E6600E53B52 /* SciMed-Scene */,
 				7AB6AB0F19AEDD60003CCD7E /* EIS-Scene */,
 				7A44EF7D19B4670E001EF26B /* Tavern */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
@@ -1031,6 +1067,10 @@
 		D0B760F319BD5DE400E53B52 /* SocSci-Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */,
+				D0B7612919BD747000E53B52 /* SocSci-Foyer-Controller.h */,
+				D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */,
+				D0B7612C19BD749800E53B52 /* SocSci-Hallway-Controller.h */,
 			);
 			name = "SocSci-Controller";
 			sourceTree = "<group>";
@@ -1038,6 +1078,10 @@
 		D0B760F419BD5DFB00E53B52 /* Art-Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */,
+				D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */,
+				D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */,
+				D0B7612619BD744000E53B52 /* Art-Foyer-Controller.h */,
 			);
 			name = "Art-Controller";
 			sourceTree = "<group>";
@@ -1045,6 +1089,10 @@
 		D0B760F519BD5E0700E53B52 /* Buis-Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */,
+				D0B7612019BD741500E53B52 /* Buis-Foyer-Controller.h */,
+				D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */,
+				D0B7611D19BD73FE00E53B52 /* Buis-Hallway-Controller.h */,
 			);
 			name = "Buis-Controller";
 			sourceTree = "<group>";
@@ -1074,6 +1122,10 @@
 		D0B760F819BD5EBA00E53B52 /* SocSci-Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */,
+				D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */,
+				D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */,
+				D0B7610B19BD730D00E53B52 /* SocSci-Hallway.h */,
 			);
 			name = "SocSci-Scene";
 			sourceTree = "<group>";
@@ -1081,6 +1133,10 @@
 		D0B760F919BD5EC600E53B52 /* Art-Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */,
+				D0B7610E19BD731B00E53B52 /* Art-Foyer.h */,
+				D0B7611019BD733400E53B52 /* Art-Hallway.cpp */,
+				D0B7611119BD733400E53B52 /* Art-Hallway.h */,
 			);
 			name = "Art-Scene";
 			sourceTree = "<group>";
@@ -1088,6 +1144,10 @@
 		D0B760FA19BD5ED300E53B52 /* Buis-Scene */ = {
 			isa = PBXGroup;
 			children = (
+				D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */,
+				D0B7612F19BD754A00E53B52 /* Buis-Hallway.h */,
+				D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */,
+				D0B7613219BD755C00E53B52 /* Buis-Foyer.h */,
 			);
 			name = "Buis-Scene";
 			sourceTree = "<group>";
@@ -1376,30 +1436,42 @@
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
+				D0B7612419BD742900E53B52 /* Art-Hallway-Controller.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
 				7A89456319ADAD23008E1EA7 /* DormScene.cpp in Sources */,
 				D0B760CF19BD3AB400E53B52 /* TavernRoom.cpp in Sources */,
+				D0B7610F19BD731B00E53B52 /* Art-Foyer.cpp in Sources */,
+				D0B7612119BD741500E53B52 /* Buis-Foyer-Controller.cpp in Sources */,
 				D0B7610019BD60B600E53B52 /* SciMed-Hallway.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
+				D0B7612A19BD747000E53B52 /* SocSci-Foyer-Controller.cpp in Sources */,
 				7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */,
 				7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */,
 				7AB6AB0C19AEDD58003CCD7E /* Inside_EIS_Controller.cpp in Sources */,
 				D0B7610619BD61B100E53B52 /* SciMed-Hallway-Controller.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D0B7611219BD733400E53B52 /* Art-Hallway.cpp in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
+				D0B7612D19BD749800E53B52 /* SocSci-Hallway-Controller.cpp in Sources */,
+				D0B7611E19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp in Sources */,
+				D0B7613319BD755C00E53B52 /* Buis-Foyer.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
 				7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */,
 				D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				D0B7610319BD619B00E53B52 /* SciMed-Foyer-Controller.cpp in Sources */,
+				D0B7612719BD744000E53B52 /* Art-Foyer-Controller.cpp in Sources */,
+				D0B7610C19BD730D00E53B52 /* SocSci-Hallway.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
+				D0B7610919BD72F800E53B52 /* SocSci-Foyer.cpp in Sources */,
 				7A89456019ADAD23008E1EA7 /* PlayerStatsModel.cpp in Sources */,
+				D0B7613019BD754A00E53B52 /* Buis-Hallway.cpp in Sources */,
 				7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */,
 				7A89452D19ADACFC008E1EA7 /* DormController.cpp in Sources */,
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,

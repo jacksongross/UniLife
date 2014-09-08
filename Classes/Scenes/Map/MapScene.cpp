@@ -21,7 +21,7 @@
 #include "Inside_EIS.h"
 #include "TavernFoyer.h"
 #include "SciMed-Foyer.h"
-
+#include "Buis-Foyer.h"
 USING_NS_CC;
 
 Scene* MapScene::createScene()
@@ -137,6 +137,16 @@ void MapScene::GoToMedSci(Ref* pSender)
     log("Going To SciMed!");
     
     auto scene = SciMedFoyer::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+void MapScene::GoToBuis(Ref* pSender)
+{
+    log("Going To Buisness!");
+    
+    auto scene = BuisFoyer::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
