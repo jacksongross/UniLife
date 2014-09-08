@@ -30,6 +30,13 @@ cocos2d::Vector<cocos2d::MenuItem*> Inside_EIS_Controller::CreateMenuButtons(Ins
     pMenuItems.pushBack(ToHallway);
 
     
+    auto ToMap = MenuItemImage::create("map_background.png","map_background.png" , CC_CALLBACK_1(Inside_EIS::ToMap, that));
+    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
+    ToMap->setScale(0.15);
+    pMenuItems.pushBack(ToMap);
+
+    
+    
     return pMenuItems;
     
 }
@@ -81,7 +88,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(pg);
     
     
-    //Energy HUD
+    //Stress HUD
     cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
     streText->setContentSize(Size(400, 40));
     streText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
@@ -97,8 +104,8 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     pg2->setScaleX(pm.getStats().getStress()/100.0);
     streSprite->setScale(0.5 , 0.5);
     streSprite->setTag(2);
-    pg->setBarChangeRate(Vec2(1, 0));
-    pg->setAnchorPoint(Vec2(0.f,0.5f));
+    pg2->setBarChangeRate(Vec2(1, 0));
+    pg2->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(streSprite);
     that->addChild(pg2);
     

@@ -387,24 +387,24 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D031093119B447C20030B59F /* Tavern_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_background.png; sourceTree = "<group>"; };
-		D031093219B447C20030B59F /* Tavern_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_bar.png; sourceTree = "<group>"; };
-		D031093319B447C20030B59F /* Tavern_couches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_couches.png; sourceTree = "<group>"; };
-		D031093419B447C20030B59F /* Tavern_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tavern_table.png; sourceTree = "<group>"; };
+		D031093119B447C20030B59F /* Tavern_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_background.png; path = TavernSprites/Tavern_background.png; sourceTree = "<group>"; };
+		D031093219B447C20030B59F /* Tavern_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_bar.png; path = TavernSprites/Tavern_bar.png; sourceTree = "<group>"; };
+		D031093319B447C20030B59F /* Tavern_couches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_couches.png; path = TavernSprites/Tavern_couches.png; sourceTree = "<group>"; };
+		D031093419B447C20030B59F /* Tavern_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_table.png; path = TavernSprites/Tavern_table.png; sourceTree = "<group>"; };
 		D03642BF199C290B00ECA5DA /* AppIcon60x60@2x[1].png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x[1].png"; sourceTree = "<group>"; };
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
-		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_bar.png; path = ../green_bar.png; sourceTree = "<group>"; };
+		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
-		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = desk.png; sourceTree = "<group>"; };
-		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door.png; sourceTree = "<group>"; };
-		D0E73DD119B3F5FE00F4F720 /* foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foyer.png; sourceTree = "<group>"; };
-		D0E73DD219B3F5FE00F4F720 /* rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooms.png; sourceTree = "<group>"; };
-		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteboard.png; sourceTree = "<group>"; };
+		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
+		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
+		D0E73DD119B3F5FE00F4F720 /* foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foyer.png; path = InsideViewSprites/foyer.png; sourceTree = "<group>"; };
+		D0E73DD219B3F5FE00F4F720 /* rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rooms.png; path = InsideViewSprites/rooms.png; sourceTree = "<group>"; };
+		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = InsideViewSprites/whiteboard.png; sourceTree = "<group>"; };
 		D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway.cpp; sourceTree = "<group>"; };
 		D0E73DE019B410F400F4F720 /* EIS_Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway.h; sourceTree = "<group>"; };
 		D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway_Controller.cpp; sourceTree = "<group>"; };
@@ -566,7 +566,7 @@
 			isa = PBXGroup;
 			children = (
 				D031093019B447A20030B59F /* Tavern */,
-				D0E73DC719B3F5A200F4F720 /* InsideEIS */,
+				D0E73DC719B3F5A200F4F720 /* InsideViewSprites */,
 				7AB6AB1319AEDDF5003CCD7E /* NewCharacter */,
 				7A89456A19ADAF3F008E1EA7 /* Bill */,
 				7A89456D19ADAF3F008E1EA7 /* Dorm */,
@@ -989,7 +989,7 @@
 			name = icons;
 			sourceTree = "<group>";
 		};
-		D0E73DC719B3F5A200F4F720 /* InsideEIS */ = {
+		D0E73DC719B3F5A200F4F720 /* InsideViewSprites */ = {
 			isa = PBXGroup;
 			children = (
 				D0E73DCF19B3F5FE00F4F720 /* desk.png */,
@@ -998,7 +998,7 @@
 				D0E73DD219B3F5FE00F4F720 /* rooms.png */,
 				D0E73DD319B3F5FE00F4F720 /* whiteboard.png */,
 			);
-			name = InsideEIS;
+			name = InsideViewSprites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

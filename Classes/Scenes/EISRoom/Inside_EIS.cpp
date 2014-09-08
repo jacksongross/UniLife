@@ -67,6 +67,13 @@ void Inside_EIS::UpdateMeters(PlayerStatsModel updateModel)
         pgTimer->setScaleX(updateModel.getEnergy()/100.0);
         pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
         log("%d",updateModel.getEnergy());
+    
+    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByTag(2);
+    
+      pgTimer2->setScaleX(updateModel.getStress()/100.0);
+      pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
+      log("%d",updateModel.getStress());
+    
 }
 
 void Inside_EIS::ToHallway(Ref* pSender)
@@ -78,3 +85,16 @@ void Inside_EIS::ToHallway(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+
+void Inside_EIS::ToMap(Ref* pSender)
+{
+    log("Going To The Map!");
+    
+    auto scene = MapScene::createScene(pm);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+

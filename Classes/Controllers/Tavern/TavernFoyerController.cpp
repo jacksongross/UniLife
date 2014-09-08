@@ -16,6 +16,11 @@ cocos2d::Vector<cocos2d::MenuItem*> TavernFoyerController::CreateMenuButtons(Tav
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
+    auto ToMap = MenuItemImage::create("map_background.png","map_background.png" , CC_CALLBACK_1(TavernFoyer::ToMap, that));
+    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
+    ToMap->setScale(0.15);
+    pMenuItems.pushBack(ToMap);
+    
     
     return pMenuItems;
     
@@ -84,8 +89,8 @@ void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, 
     pg2->setScaleX(pm.getStats().getStress()/100.0);
     streSprite->setScale(0.5 , 0.5);
     streSprite->setTag(2);
-    pg->setBarChangeRate(Vec2(1, 0));
-    pg->setAnchorPoint(Vec2(0.f,0.5f));
+    pg2->setBarChangeRate(Vec2(1, 0));
+    pg2->setAnchorPoint(Vec2(0.f,0.5f));
     that->addChild(streSprite);
     that->addChild(pg2);
     

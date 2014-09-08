@@ -67,6 +67,13 @@ void EIS_Hallway::UpdateMeters(PlayerStatsModel updateModel)
     pgTimer->setScaleX(updateModel.getEnergy()/100.0);
     pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
     log("%d",updateModel.getEnergy());
+    
+    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByTag(2);
+    
+    pgTimer2->setScaleX(updateModel.getStress()/100.0);
+    pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
+    log("%d",updateModel.getStress());
+    
 }
 
 void EIS_Hallway::ToFoyer(Ref* pSender)
@@ -86,6 +93,8 @@ void EIS_Hallway::ToLecture(Ref* pSender){
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
         log("Not Enough Energy To Go To A Lecture");
+    }else if(pm.getStats().getStress() > 95){
+        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
     }else{
         log("You Went To A Lecture (+1 INT, +10 Stress)");
         
@@ -93,7 +102,7 @@ void EIS_Hallway::ToLecture(Ref* pSender){
         updateStats = pm.getStats();
         
         updateStats.setIntelligence(updateStats.getIntelligence() + 1);
-        updateStats.setStress(updateStats.getStress());
+        updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
         UpdateMeters(pm.getStats());
@@ -109,15 +118,16 @@ void EIS_Hallway::ToTutorial(Ref* pSender){
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
-        log("Not Enough Energy To Go To A Tutorial");
+        log("Not Enough Energy To Go To A Lecture");
+    }else if(pm.getStats().getStress() > 95){
+        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
     }else{
-        log("You Went To A Tutorial (+1 INT, +10 Stress)");
-        
+        log("You Went To A Lecture (+1 INT, +10 Stress)");
         PlayerStatsModel updateStats;
         updateStats = pm.getStats();
         
         updateStats.setIntelligence(updateStats.getIntelligence() + 1);
-        updateStats.setStress(updateStats.getStress());
+        updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
         UpdateMeters(pm.getStats());
