@@ -30,6 +30,10 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoEIS->setScale(0.8);
     pMenuItems.pushBack(GoEIS);
     
+    auto GoSciMed = MenuItemImage::create("map-science_medicine.png", "map-science_medicine.png", CC_CALLBACK_1(MapScene::GoToMedSci, that));
+    GoSciMed->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
+    GoSciMed->setScale(0.8);
+    pMenuItems.pushBack(GoSciMed);
     
     auto GoTavern = MenuItemImage::create("map-tavern.png", "map-tavern.png", CC_CALLBACK_1(MapScene::GoToTavern, that));
     GoTavern->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 - 50));

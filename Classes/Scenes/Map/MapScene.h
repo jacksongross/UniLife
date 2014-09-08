@@ -41,6 +41,7 @@ public:
     void GoToDorm(Ref* pSender);
     void GoToEIS(Ref* pSender);
     void GoToTavern(Ref* pSender);
+    void GoToMedSci(Ref* pSender);
     /********************************
                 Getters
      *******************************/

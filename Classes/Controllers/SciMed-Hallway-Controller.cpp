@@ -1,40 +1,37 @@
 //
-//  Inside_EIS_Controller.cpp
+//  SciMed-Hallway-Controller.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 28/08/2014.
+//  Created by csci321ga2a on 8/09/2014.
 //
 //
 
-#include "Inside_EIS_Controller.h"
-#include "ExtensionMacros.h"
-#include "cocos2d.h"
-#include "extensions/cocos-ext.h"
-#include "ui/CocosGUI.h"
-using namespace cocos2d::extension;
+#include "SciMed-Hallway-Controller.h"
 extern PlayerModel pm;
-
 USING_NS_CC;
 
 // create the buttons for the main menu
-cocos2d::Vector<cocos2d::MenuItem*> Inside_EIS_Controller::CreateMenuButtons(Inside_EIS *that, Size visibleSize, Vec2 origin)
+cocos2d::Vector<cocos2d::MenuItem*> SciMedHallwayController::CreateMenuButtons(SciMedHallway *that, Size visibleSize, Vec2 origin)
 {
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
+    auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(SciMedHallway::ToFoyer, that));
+    ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2 + 475, origin.y + (visibleSize.height / 2 )));
+    ToFoyer->setScale(0.3,0.3);
+    ToFoyer->setRotation(180);
+    pMenuItems.pushBack(ToFoyer);
     
-    auto ToHallway = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(Inside_EIS::ToHallway, that));
-    ToHallway->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + (visibleSize.height / 2 )));
-    ToHallway->setScale(0.3,0.3);
-    pMenuItems.pushBack(ToHallway);
-
     
-    auto ToMap = MenuItemImage::create("map_background.png","map_background.png" , CC_CALLBACK_1(Inside_EIS::ToMap, that));
-    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.15);
-    pMenuItems.pushBack(ToMap);
-
+    auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(SciMedHallway::ToLecture, that));
+    LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
+    pMenuItems.pushBack(LectDoor);
+    
+    auto TutDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(SciMedHallway::ToTutorial, that));
+    TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 397, origin.y + (visibleSize.height / 2 - 26)));
+    pMenuItems.pushBack(TutDoor);
+    
     
     
     return pMenuItems;
@@ -42,9 +39,9 @@ cocos2d::Vector<cocos2d::MenuItem*> Inside_EIS_Controller::CreateMenuButtons(Ins
 }
 
 // call this method in the main menu scene to create the main menu
-void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, Vec2 origin)
+void SciMedHallwayController::CreateMainMenu(SciMedHallway *that, Size visibleSize, Vec2 origin)
 {
-    log("You Went to the EIS Foyer");
+    log("You Went to the MedSci Hallway");
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);
@@ -55,7 +52,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("EIS_Foyer.png");
+    auto sprite = Sprite::create("SciMed_Rooms.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -88,7 +85,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(pg);
     
     
-    //Stress HUD
+    //Energy HUD
     cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
     streText->setContentSize(Size(400, 40));
     streText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
@@ -109,33 +106,9 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     that->addChild(streSprite);
     that->addChild(pg2);
     
-
-    
-    
-    
-    Sprite *foyerDesk = Sprite::create("desk.png");
-    foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
-    foyerDesk->setScale(1.25);
-    that->addChild(foyerDesk,2);
-    
-    Sprite *foyerBoard = Sprite::create("whiteboard.png");
-    foyerBoard->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 + 100));
-    foyerBoard->setScale(1);
-    that->addChild(foyerBoard);
-    
-    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("Engineering & Information Sciences\n Notice Board", "Verdana", 15);
-    LocName->setColor(Color3B(0,0,0));
-    LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-    LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
-    that->addChild(LocName);
-    
-    Sprite *officePerson = Sprite::create("bill_inside.png");
-    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
-    that->addChild(officePerson, 1);
     
     
     
     
 }
-
 

@@ -52,7 +52,7 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("rooms.png");
+    auto sprite = Sprite::create("EIS_Rooms.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
