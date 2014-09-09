@@ -19,10 +19,37 @@
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
-		7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */; };
-		7A44EF8419B4671D001EF26B /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */; };
+		7A0F1A5119BEE2FC00679823 /* Art-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A2B19BEE2FC00679823 /* Art-Foyer.cpp */; };
+		7A0F1A5219BEE2FC00679823 /* Art-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A2D19BEE2FC00679823 /* Art-Hallway.cpp */; };
+		7A0F1A5319BEE2FC00679823 /* Buis-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3019BEE2FC00679823 /* Buis-Foyer.cpp */; };
+		7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3219BEE2FC00679823 /* Buis-Hallway.cpp */; };
+		7A0F1A5519BEE2FC00679823 /* EIS_Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3519BEE2FC00679823 /* EIS_Hallway.cpp */; };
+		7A0F1A5619BEE2FC00679823 /* Inside_EIS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3719BEE2FC00679823 /* Inside_EIS.cpp */; };
+		7A0F1A5719BEE2FC00679823 /* SciMed-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3A19BEE2FC00679823 /* SciMed-Foyer.cpp */; };
+		7A0F1A5819BEE2FC00679823 /* SciMed-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3C19BEE2FC00679823 /* SciMed-Hallway.cpp */; };
+		7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A3F19BEE2FC00679823 /* SocSci-Foyer.cpp */; };
+		7A0F1A5A19BEE2FC00679823 /* SocSci-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4119BEE2FC00679823 /* SocSci-Hallway.cpp */; };
+		7A0F1A5B19BEE2FC00679823 /* DormScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4519BEE2FC00679823 /* DormScene.cpp */; };
+		7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4819BEE2FC00679823 /* LibraryFoyer.cpp */; };
+		7A0F1A5D19BEE2FC00679823 /* LibraryRooms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4A19BEE2FC00679823 /* LibraryRooms.cpp */; };
+		7A0F1A5E19BEE2FC00679823 /* TavernFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4D19BEE2FC00679823 /* TavernFoyer.cpp */; };
+		7A0F1A5F19BEE2FC00679823 /* TavernRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A4F19BEE2FC00679823 /* TavernRoom.cpp */; };
+		7A0F1A8919BEE3F400679823 /* Art-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6319BEE3F400679823 /* Art-Foyer-Controller.cpp */; };
+		7A0F1A8A19BEE3F400679823 /* Art-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6519BEE3F400679823 /* Art-Hallway-Controller.cpp */; };
+		7A0F1A8B19BEE3F400679823 /* Buis-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6819BEE3F400679823 /* Buis-Foyer-Controller.cpp */; };
+		7A0F1A8C19BEE3F400679823 /* Buis-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6A19BEE3F400679823 /* Buis-Hallway-Controller.cpp */; };
+		7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6D19BEE3F400679823 /* EIS_Hallway_Controller.cpp */; };
+		7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A6F19BEE3F400679823 /* Inside_EIS_Controller.cpp */; };
+		7A0F1A8F19BEE3F400679823 /* SciMed-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A7219BEE3F400679823 /* SciMed-Foyer-Controller.cpp */; };
+		7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A7419BEE3F400679823 /* SciMed-Hallway-Controller.cpp */; };
+		7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A7719BEE3F400679823 /* SocSci-Foyer-Controller.cpp */; };
+		7A0F1A9219BEE3F400679823 /* SocSci-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A7919BEE3F400679823 /* SocSci-Hallway-Controller.cpp */; };
+		7A0F1A9319BEE3F400679823 /* DormController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A7D19BEE3F400679823 /* DormController.cpp */; };
+		7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8019BEE3F400679823 /* LibraryFoyerController.cpp */; };
+		7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */; };
+		7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */; };
+		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
-		7A89452D19ADACFC008E1EA7 /* DormController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89451F19ADACFC008E1EA7 /* DormController.cpp */; };
 		7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452219ADACFC008E1EA7 /* MapController.cpp */; };
 		7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452519ADACFC008E1EA7 /* MenuController.cpp */; };
 		7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452819ADACFC008E1EA7 /* MenuLoadController.cpp */; };
@@ -34,7 +61,6 @@
 		7A89456019ADAD23008E1EA7 /* PlayerStatsModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89454319ADAD23008E1EA7 /* PlayerStatsModel.cpp */; };
 		7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89454619ADAD23008E1EA7 /* subjectBlockClassModel.cpp */; };
 		7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89454919ADAD23008E1EA7 /* timeTableClassModel.cpp */; };
-		7A89456319ADAD23008E1EA7 /* DormScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89454D19ADAD23008E1EA7 /* DormScene.cpp */; };
 		7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455019ADAD23008E1EA7 /* MapScene.cpp */; };
 		7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455319ADAD23008E1EA7 /* MenuScene.cpp */; };
 		7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455619ADAD23008E1EA7 /* LoadTableCell.cpp */; };
@@ -82,10 +108,8 @@
 		7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89459819ADAF3F008E1EA7 /* map_background.png */; };
 		7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */; };
 		7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */; };
-		7AB6AB0C19AEDD58003CCD7E /* Inside_EIS_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0519AEDD58003CCD7E /* Inside_EIS_Controller.cpp */; };
 		7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0819AEDD58003CCD7E /* MenuDegreeSelectController.cpp */; };
 		7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0A19AEDD58003CCD7E /* MenuNewGameController.cpp */; };
-		7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1019AEDD60003CCD7E /* Inside_EIS.cpp */; };
 		7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1419AEDDF5003CCD7E /* backtotopnormal.png */; };
 		7AB6AB2A19AEDDF5003CCD7E /* backtotoppressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1519AEDDF5003CCD7E /* backtotoppressed.png */; };
 		7AB6AB2B19AEDDF5003CCD7E /* Blue-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1619AEDDF5003CCD7E /* Blue-button.png */; };
@@ -116,13 +140,10 @@
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
 		D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */; };
-		D0831C2A19BD8DD700444F9C /* LibraryFoyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
 		D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */; };
-		D0B760CF19BD3AB400E53B52 /* TavernRoom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */; };
-		D0B760D219BD3AC300E53B52 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */; };
 		D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760DD19BD43F500E53B52 /* door_opened.png */; };
 		D0B760E919BD5B6D00E53B52 /* Art_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760DF19BD5B6D00E53B52 /* Art_Foyer.png */; };
 		D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760E019BD5B6D00E53B52 /* Art_Rooms.png */; };
@@ -134,35 +155,14 @@
 		D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760E619BD5B6D00E53B52 /* SciMed_Rooms.png */; };
 		D0B760F119BD5B6D00E53B52 /* SocSci_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760E719BD5B6D00E53B52 /* SocSci_Foyer.png */; };
 		D0B760F219BD5B6D00E53B52 /* SocSci_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760E819BD5B6D00E53B52 /* SocSci_Rooms.png */; };
-		D0B760FD19BD5F3500E53B52 /* SciMed-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760FB19BD5F3500E53B52 /* SciMed-Foyer.cpp */; };
-		D0B7610019BD60B600E53B52 /* SciMed-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B760FE19BD60B600E53B52 /* SciMed-Hallway.cpp */; };
-		D0B7610319BD619B00E53B52 /* SciMed-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610119BD619B00E53B52 /* SciMed-Foyer-Controller.cpp */; };
-		D0B7610619BD61B100E53B52 /* SciMed-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610419BD61B100E53B52 /* SciMed-Hallway-Controller.cpp */; };
-		D0B7610919BD72F800E53B52 /* SocSci-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */; };
-		D0B7610C19BD730D00E53B52 /* SocSci-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */; };
-		D0B7610F19BD731B00E53B52 /* Art-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */; };
-		D0B7611219BD733400E53B52 /* Art-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611019BD733400E53B52 /* Art-Hallway.cpp */; };
-		D0B7611E19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */; };
-		D0B7612119BD741500E53B52 /* Buis-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */; };
-		D0B7612419BD742900E53B52 /* Art-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */; };
-		D0B7612719BD744000E53B52 /* Art-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */; };
-		D0B7612A19BD747000E53B52 /* SocSci-Foyer-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */; };
-		D0B7612D19BD749800E53B52 /* SocSci-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */; };
-		D0B7613019BD754A00E53B52 /* Buis-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */; };
-		D0B7613319BD755C00E53B52 /* Buis-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */; };
-		D0D709CC19BEB4310023B5A6 /* LibraryFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */; };
 		D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D519BEB6290023B5A6 /* Library_book_shelf.png */; };
 		D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D619BEB6290023B5A6 /* Library_couch.png */; };
 		D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D719BEB6290023B5A6 /* Library_Foyer.png */; };
 		D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D819BEB6290023B5A6 /* Library_Rooms.png */; };
-		D0D709DF19BEBC160023B5A6 /* LibraryRooms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */; };
-		D0D709E219BEBC270023B5A6 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
 		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
-		D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */; };
-		D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -301,13 +301,67 @@
 		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyer.cpp; sourceTree = "<group>"; };
-		7A44EF7F19B4670E001EF26B /* TavernFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyer.h; sourceTree = "<group>"; };
-		7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyerController.cpp; sourceTree = "<group>"; };
-		7A44EF8319B4671D001EF26B /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
+		7A0F1A2B19BEE2FC00679823 /* Art-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer.cpp"; sourceTree = "<group>"; };
+		7A0F1A2C19BEE2FC00679823 /* Art-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer.h"; sourceTree = "<group>"; };
+		7A0F1A2D19BEE2FC00679823 /* Art-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway.cpp"; sourceTree = "<group>"; };
+		7A0F1A2E19BEE2FC00679823 /* Art-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway.h"; sourceTree = "<group>"; };
+		7A0F1A3019BEE2FC00679823 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; };
+		7A0F1A3119BEE2FC00679823 /* Buis-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer.h"; sourceTree = "<group>"; };
+		7A0F1A3219BEE2FC00679823 /* Buis-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway.cpp"; sourceTree = "<group>"; };
+		7A0F1A3319BEE2FC00679823 /* Buis-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway.h"; sourceTree = "<group>"; };
+		7A0F1A3519BEE2FC00679823 /* EIS_Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway.cpp; sourceTree = "<group>"; };
+		7A0F1A3619BEE2FC00679823 /* EIS_Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway.h; sourceTree = "<group>"; };
+		7A0F1A3719BEE2FC00679823 /* Inside_EIS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS.cpp; sourceTree = "<group>"; };
+		7A0F1A3819BEE2FC00679823 /* Inside_EIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS.h; sourceTree = "<group>"; };
+		7A0F1A3A19BEE2FC00679823 /* SciMed-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Foyer.cpp"; sourceTree = "<group>"; };
+		7A0F1A3B19BEE2FC00679823 /* SciMed-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Foyer.h"; sourceTree = "<group>"; };
+		7A0F1A3C19BEE2FC00679823 /* SciMed-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Hallway.cpp"; sourceTree = "<group>"; };
+		7A0F1A3D19BEE2FC00679823 /* SciMed-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Hallway.h"; sourceTree = "<group>"; };
+		7A0F1A3F19BEE2FC00679823 /* SocSci-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer.cpp"; sourceTree = "<group>"; };
+		7A0F1A4019BEE2FC00679823 /* SocSci-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer.h"; sourceTree = "<group>"; };
+		7A0F1A4119BEE2FC00679823 /* SocSci-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway.cpp"; sourceTree = "<group>"; };
+		7A0F1A4219BEE2FC00679823 /* SocSci-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway.h"; sourceTree = "<group>"; };
+		7A0F1A4519BEE2FC00679823 /* DormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormScene.cpp; sourceTree = "<group>"; };
+		7A0F1A4619BEE2FC00679823 /* DormScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormScene.h; sourceTree = "<group>"; };
+		7A0F1A4819BEE2FC00679823 /* LibraryFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyer.cpp; sourceTree = "<group>"; };
+		7A0F1A4919BEE2FC00679823 /* LibraryFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyer.h; sourceTree = "<group>"; };
+		7A0F1A4A19BEE2FC00679823 /* LibraryRooms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRooms.cpp; sourceTree = "<group>"; };
+		7A0F1A4B19BEE2FC00679823 /* LibraryRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRooms.h; sourceTree = "<group>"; };
+		7A0F1A4D19BEE2FC00679823 /* TavernFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyer.cpp; sourceTree = "<group>"; };
+		7A0F1A4E19BEE2FC00679823 /* TavernFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyer.h; sourceTree = "<group>"; };
+		7A0F1A4F19BEE2FC00679823 /* TavernRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoom.cpp; sourceTree = "<group>"; };
+		7A0F1A5019BEE2FC00679823 /* TavernRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoom.h; sourceTree = "<group>"; };
+		7A0F1A6319BEE3F400679823 /* Art-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6419BEE3F400679823 /* Art-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A6519BEE3F400679823 /* Art-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6619BEE3F400679823 /* Art-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A6819BEE3F400679823 /* Buis-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6919BEE3F400679823 /* Buis-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A6A19BEE3F400679823 /* Buis-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6B19BEE3F400679823 /* Buis-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A6D19BEE3F400679823 /* EIS_Hallway_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway_Controller.cpp; sourceTree = "<group>"; };
+		7A0F1A6E19BEE3F400679823 /* EIS_Hallway_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway_Controller.h; sourceTree = "<group>"; };
+		7A0F1A6F19BEE3F400679823 /* Inside_EIS_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS_Controller.cpp; sourceTree = "<group>"; };
+		7A0F1A7019BEE3F400679823 /* Inside_EIS_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS_Controller.h; sourceTree = "<group>"; };
+		7A0F1A7219BEE3F400679823 /* SciMed-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A7319BEE3F400679823 /* SciMed-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Foyer-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A7419BEE3F400679823 /* SciMed-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A7519BEE3F400679823 /* SciMed-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Hallway-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A7719BEE3F400679823 /* SocSci-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A7819BEE3F400679823 /* SocSci-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A7919BEE3F400679823 /* SocSci-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A7A19BEE3F400679823 /* SocSci-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway-Controller.h"; sourceTree = "<group>"; };
+		7A0F1A7D19BEE3F400679823 /* DormController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormController.cpp; sourceTree = "<group>"; };
+		7A0F1A7E19BEE3F400679823 /* DormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormController.h; sourceTree = "<group>"; };
+		7A0F1A8019BEE3F400679823 /* LibraryFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyerController.cpp; sourceTree = "<group>"; };
+		7A0F1A8119BEE3F400679823 /* LibraryFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyerController.h; sourceTree = "<group>"; };
+		7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRoomsController.cpp; sourceTree = "<group>"; };
+		7A0F1A8319BEE3F400679823 /* LibraryRoomsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRoomsController.h; sourceTree = "<group>"; };
+		7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernFoyerController.cpp; sourceTree = "<group>"; };
+		7A0F1A8619BEE3F400679823 /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
+		7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
+		7A0F1A8819BEE3F400679823 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
-		7A89451F19ADACFC008E1EA7 /* DormController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormController.cpp; sourceTree = "<group>"; };
-		7A89452019ADACFC008E1EA7 /* DormController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormController.h; sourceTree = "<group>"; };
 		7A89452219ADACFC008E1EA7 /* MapController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapController.cpp; sourceTree = "<group>"; };
 		7A89452319ADACFC008E1EA7 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		7A89452519ADACFC008E1EA7 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -330,8 +384,6 @@
 		7A89454719ADAD23008E1EA7 /* subjectBlockClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = subjectBlockClassModel.h; sourceTree = "<group>"; };
 		7A89454919ADAD23008E1EA7 /* timeTableClassModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeTableClassModel.cpp; sourceTree = "<group>"; };
 		7A89454A19ADAD23008E1EA7 /* timeTableClassModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeTableClassModel.h; sourceTree = "<group>"; };
-		7A89454D19ADAD23008E1EA7 /* DormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormScene.cpp; sourceTree = "<group>"; };
-		7A89454E19ADAD23008E1EA7 /* DormScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormScene.h; sourceTree = "<group>"; };
 		7A89455019ADAD23008E1EA7 /* MapScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapScene.cpp; sourceTree = "<group>"; };
 		7A89455119ADAD23008E1EA7 /* MapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapScene.h; sourceTree = "<group>"; };
 		7A89455319ADAD23008E1EA7 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
@@ -386,14 +438,10 @@
 		7AB6AAFF19AEDCE6003CCD7E /* MenuDegreeSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelect.h; sourceTree = "<group>"; };
 		7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGame.cpp; sourceTree = "<group>"; };
 		7AB6AB0119AEDCE6003CCD7E /* MenuNewGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNewGame.h; sourceTree = "<group>"; };
-		7AB6AB0519AEDD58003CCD7E /* Inside_EIS_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS_Controller.cpp; sourceTree = "<group>"; };
-		7AB6AB0619AEDD58003CCD7E /* Inside_EIS_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS_Controller.h; sourceTree = "<group>"; };
 		7AB6AB0819AEDD58003CCD7E /* MenuDegreeSelectController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelectController.cpp; sourceTree = "<group>"; };
 		7AB6AB0919AEDD58003CCD7E /* MenuDegreeSelectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelectController.h; sourceTree = "<group>"; };
 		7AB6AB0A19AEDD58003CCD7E /* MenuNewGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGameController.cpp; sourceTree = "<group>"; };
 		7AB6AB0B19AEDD58003CCD7E /* MenuNewGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuNewGameController.h; sourceTree = "<group>"; };
-		7AB6AB1019AEDD60003CCD7E /* Inside_EIS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Inside_EIS.cpp; sourceTree = "<group>"; };
-		7AB6AB1119AEDD60003CCD7E /* Inside_EIS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inside_EIS.h; sourceTree = "<group>"; };
 		7AB6AB1419AEDDF5003CCD7E /* backtotopnormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtotopnormal.png; sourceTree = "<group>"; };
 		7AB6AB1519AEDDF5003CCD7E /* backtotoppressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backtotoppressed.png; sourceTree = "<group>"; };
 		7AB6AB1619AEDDF5003CCD7E /* Blue-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue-button.png"; sourceTree = "<group>"; };
@@ -427,16 +475,10 @@
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
-		D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyer.cpp; sourceTree = "<group>"; };
-		D0831C2919BD8DD700444F9C /* LibraryFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyer.h; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
-		D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoom.cpp; sourceTree = "<group>"; };
-		D0B760CE19BD3AB400E53B52 /* TavernRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoom.h; sourceTree = "<group>"; };
-		D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
-		D0B760D119BD3AC300E53B52 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
 		D0B760DD19BD43F500E53B52 /* door_opened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door_opened.png; path = InsideViewSprites/door_opened.png; sourceTree = "<group>"; };
 		D0B760DF19BD5B6D00E53B52 /* Art_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Art_Foyer.png; path = InsideViewSprites/Art_Foyer.png; sourceTree = "<group>"; };
 		D0B760E019BD5B6D00E53B52 /* Art_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Art_Rooms.png; path = InsideViewSprites/Art_Rooms.png; sourceTree = "<group>"; };
@@ -448,56 +490,14 @@
 		D0B760E619BD5B6D00E53B52 /* SciMed_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SciMed_Rooms.png; path = InsideViewSprites/SciMed_Rooms.png; sourceTree = "<group>"; };
 		D0B760E719BD5B6D00E53B52 /* SocSci_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SocSci_Foyer.png; path = InsideViewSprites/SocSci_Foyer.png; sourceTree = "<group>"; };
 		D0B760E819BD5B6D00E53B52 /* SocSci_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SocSci_Rooms.png; path = InsideViewSprites/SocSci_Rooms.png; sourceTree = "<group>"; };
-		D0B760FB19BD5F3500E53B52 /* SciMed-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Foyer.cpp"; sourceTree = "<group>"; };
-		D0B760FC19BD5F3500E53B52 /* SciMed-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Foyer.h"; sourceTree = "<group>"; };
-		D0B760FE19BD60B600E53B52 /* SciMed-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Hallway.cpp"; sourceTree = "<group>"; };
-		D0B760FF19BD60B600E53B52 /* SciMed-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Hallway.h"; sourceTree = "<group>"; };
-		D0B7610119BD619B00E53B52 /* SciMed-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Foyer-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7610219BD619B00E53B52 /* SciMed-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Foyer-Controller.h"; sourceTree = "<group>"; };
-		D0B7610419BD61B100E53B52 /* SciMed-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SciMed-Hallway-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7610519BD61B100E53B52 /* SciMed-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SciMed-Hallway-Controller.h"; sourceTree = "<group>"; };
-		D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer.cpp"; sourceTree = "<group>"; };
-		D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer.h"; sourceTree = "<group>"; };
-		D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway.cpp"; sourceTree = "<group>"; };
-		D0B7610B19BD730D00E53B52 /* SocSci-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway.h"; sourceTree = "<group>"; };
-		D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer.cpp"; sourceTree = "<group>"; };
-		D0B7610E19BD731B00E53B52 /* Art-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer.h"; sourceTree = "<group>"; };
-		D0B7611019BD733400E53B52 /* Art-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway.cpp"; sourceTree = "<group>"; };
-		D0B7611119BD733400E53B52 /* Art-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway.h"; sourceTree = "<group>"; };
-		D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7611D19BD73FE00E53B52 /* Buis-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway-Controller.h"; sourceTree = "<group>"; };
-		D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7612019BD741500E53B52 /* Buis-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer-Controller.h"; sourceTree = "<group>"; };
-		D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway-Controller.h"; sourceTree = "<group>"; };
-		D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Foyer-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7612619BD744000E53B52 /* Art-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer-Controller.h"; sourceTree = "<group>"; };
-		D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Foyer-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7612919BD747000E53B52 /* SocSci-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer-Controller.h"; sourceTree = "<group>"; };
-		D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway-Controller.cpp"; sourceTree = "<group>"; };
-		D0B7612C19BD749800E53B52 /* SocSci-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway-Controller.h"; sourceTree = "<group>"; };
-		D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway.cpp"; sourceTree = "<group>"; };
-		D0B7612F19BD754A00E53B52 /* Buis-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway.h"; sourceTree = "<group>"; };
-		D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; };
-		D0B7613219BD755C00E53B52 /* Buis-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer.h"; sourceTree = "<group>"; };
-		D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyerController.cpp; sourceTree = "<group>"; };
-		D0D709CB19BEB4310023B5A6 /* LibraryFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyerController.h; sourceTree = "<group>"; };
 		D0D709D519BEB6290023B5A6 /* Library_book_shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_book_shelf.png; path = LibraryAssets/Library_book_shelf.png; sourceTree = "<group>"; };
 		D0D709D619BEB6290023B5A6 /* Library_couch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_couch.png; path = LibraryAssets/Library_couch.png; sourceTree = "<group>"; };
 		D0D709D719BEB6290023B5A6 /* Library_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Foyer.png; path = LibraryAssets/Library_Foyer.png; sourceTree = "<group>"; };
 		D0D709D819BEB6290023B5A6 /* Library_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Rooms.png; path = LibraryAssets/Library_Rooms.png; sourceTree = "<group>"; };
-		D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRooms.cpp; sourceTree = "<group>"; };
-		D0D709DE19BEBC160023B5A6 /* LibraryRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRooms.h; sourceTree = "<group>"; };
-		D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRoomsController.cpp; sourceTree = "<group>"; };
-		D0D709E119BEBC270023B5A6 /* LibraryRoomsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRoomsController.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
 		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = InsideViewSprites/whiteboard.png; sourceTree = "<group>"; };
-		D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway.cpp; sourceTree = "<group>"; };
-		D0E73DE019B410F400F4F720 /* EIS_Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway.h; sourceTree = "<group>"; };
-		D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway_Controller.cpp; sourceTree = "<group>"; };
-		D0E73DE319B4110C00F4F720 /* EIS_Hallway_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway_Controller.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -671,24 +671,236 @@
 			path = ../Resources;
 			sourceTree = "<group>";
 		};
-		7A44EF7D19B4670E001EF26B /* Tavern */ = {
+		7A0F1A2819BEE2FC00679823 /* Buildings */ = {
 			isa = PBXGroup;
 			children = (
-				7A44EF7E19B4670E001EF26B /* TavernFoyer.cpp */,
-				7A44EF7F19B4670E001EF26B /* TavernFoyer.h */,
-				D0B760CD19BD3AB400E53B52 /* TavernRoom.cpp */,
-				D0B760CE19BD3AB400E53B52 /* TavernRoom.h */,
+				7A0F1A2919BEE2FC00679823 /* Faculties */,
+				7A0F1A4319BEE2FC00679823 /* Other */,
+			);
+			path = Buildings;
+			sourceTree = "<group>";
+		};
+		7A0F1A2919BEE2FC00679823 /* Faculties */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A2A19BEE2FC00679823 /* Art */,
+				7A0F1A2F19BEE2FC00679823 /* Business */,
+				7A0F1A3419BEE2FC00679823 /* EIS */,
+				7A0F1A3919BEE2FC00679823 /* ScienceMedicine */,
+				7A0F1A3E19BEE2FC00679823 /* SocialScience */,
+			);
+			path = Faculties;
+			sourceTree = "<group>";
+		};
+		7A0F1A2A19BEE2FC00679823 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A2B19BEE2FC00679823 /* Art-Foyer.cpp */,
+				7A0F1A2C19BEE2FC00679823 /* Art-Foyer.h */,
+				7A0F1A2D19BEE2FC00679823 /* Art-Hallway.cpp */,
+				7A0F1A2E19BEE2FC00679823 /* Art-Hallway.h */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		7A0F1A2F19BEE2FC00679823 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A3019BEE2FC00679823 /* Buis-Foyer.cpp */,
+				7A0F1A3119BEE2FC00679823 /* Buis-Foyer.h */,
+				7A0F1A3219BEE2FC00679823 /* Buis-Hallway.cpp */,
+				7A0F1A3319BEE2FC00679823 /* Buis-Hallway.h */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7A0F1A3419BEE2FC00679823 /* EIS */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A3519BEE2FC00679823 /* EIS_Hallway.cpp */,
+				7A0F1A3619BEE2FC00679823 /* EIS_Hallway.h */,
+				7A0F1A3719BEE2FC00679823 /* Inside_EIS.cpp */,
+				7A0F1A3819BEE2FC00679823 /* Inside_EIS.h */,
+			);
+			path = EIS;
+			sourceTree = "<group>";
+		};
+		7A0F1A3919BEE2FC00679823 /* ScienceMedicine */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A3A19BEE2FC00679823 /* SciMed-Foyer.cpp */,
+				7A0F1A3B19BEE2FC00679823 /* SciMed-Foyer.h */,
+				7A0F1A3C19BEE2FC00679823 /* SciMed-Hallway.cpp */,
+				7A0F1A3D19BEE2FC00679823 /* SciMed-Hallway.h */,
+			);
+			path = ScienceMedicine;
+			sourceTree = "<group>";
+		};
+		7A0F1A3E19BEE2FC00679823 /* SocialScience */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A3F19BEE2FC00679823 /* SocSci-Foyer.cpp */,
+				7A0F1A4019BEE2FC00679823 /* SocSci-Foyer.h */,
+				7A0F1A4119BEE2FC00679823 /* SocSci-Hallway.cpp */,
+				7A0F1A4219BEE2FC00679823 /* SocSci-Hallway.h */,
+			);
+			path = SocialScience;
+			sourceTree = "<group>";
+		};
+		7A0F1A4319BEE2FC00679823 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A4419BEE2FC00679823 /* Dorm */,
+				7A0F1A4719BEE2FC00679823 /* Library */,
+				7A0F1A4C19BEE2FC00679823 /* Tavern */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7A0F1A4419BEE2FC00679823 /* Dorm */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A4519BEE2FC00679823 /* DormScene.cpp */,
+				7A0F1A4619BEE2FC00679823 /* DormScene.h */,
+			);
+			path = Dorm;
+			sourceTree = "<group>";
+		};
+		7A0F1A4719BEE2FC00679823 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A4819BEE2FC00679823 /* LibraryFoyer.cpp */,
+				7A0F1A4919BEE2FC00679823 /* LibraryFoyer.h */,
+				7A0F1A4A19BEE2FC00679823 /* LibraryRooms.cpp */,
+				7A0F1A4B19BEE2FC00679823 /* LibraryRooms.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7A0F1A4C19BEE2FC00679823 /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A4D19BEE2FC00679823 /* TavernFoyer.cpp */,
+				7A0F1A4E19BEE2FC00679823 /* TavernFoyer.h */,
+				7A0F1A4F19BEE2FC00679823 /* TavernRoom.cpp */,
+				7A0F1A5019BEE2FC00679823 /* TavernRoom.h */,
 			);
 			path = Tavern;
 			sourceTree = "<group>";
 		};
-		7A44EF8119B4671D001EF26B /* Tavern */ = {
+		7A0F1A6019BEE3F400679823 /* Buildings */ = {
 			isa = PBXGroup;
 			children = (
-				7A44EF8219B4671D001EF26B /* TavernFoyerController.cpp */,
-				7A44EF8319B4671D001EF26B /* TavernFoyerController.h */,
-				D0B760D019BD3AC300E53B52 /* TavernRoomController.cpp */,
-				D0B760D119BD3AC300E53B52 /* TavernRoomController.h */,
+				7A0F1A6119BEE3F400679823 /* Faculties */,
+				7A0F1A7B19BEE3F400679823 /* Other */,
+			);
+			path = Buildings;
+			sourceTree = "<group>";
+		};
+		7A0F1A6119BEE3F400679823 /* Faculties */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A6219BEE3F400679823 /* Art */,
+				7A0F1A6719BEE3F400679823 /* Business */,
+				7A0F1A6C19BEE3F400679823 /* EIS */,
+				7A0F1A7119BEE3F400679823 /* ScienceMedicine */,
+				7A0F1A7619BEE3F400679823 /* SocialScience */,
+			);
+			path = Faculties;
+			sourceTree = "<group>";
+		};
+		7A0F1A6219BEE3F400679823 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A6319BEE3F400679823 /* Art-Foyer-Controller.cpp */,
+				7A0F1A6419BEE3F400679823 /* Art-Foyer-Controller.h */,
+				7A0F1A6519BEE3F400679823 /* Art-Hallway-Controller.cpp */,
+				7A0F1A6619BEE3F400679823 /* Art-Hallway-Controller.h */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		7A0F1A6719BEE3F400679823 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A6819BEE3F400679823 /* Buis-Foyer-Controller.cpp */,
+				7A0F1A6919BEE3F400679823 /* Buis-Foyer-Controller.h */,
+				7A0F1A6A19BEE3F400679823 /* Buis-Hallway-Controller.cpp */,
+				7A0F1A6B19BEE3F400679823 /* Buis-Hallway-Controller.h */,
+			);
+			path = Business;
+			sourceTree = "<group>";
+		};
+		7A0F1A6C19BEE3F400679823 /* EIS */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A6D19BEE3F400679823 /* EIS_Hallway_Controller.cpp */,
+				7A0F1A6E19BEE3F400679823 /* EIS_Hallway_Controller.h */,
+				7A0F1A6F19BEE3F400679823 /* Inside_EIS_Controller.cpp */,
+				7A0F1A7019BEE3F400679823 /* Inside_EIS_Controller.h */,
+			);
+			path = EIS;
+			sourceTree = "<group>";
+		};
+		7A0F1A7119BEE3F400679823 /* ScienceMedicine */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A7219BEE3F400679823 /* SciMed-Foyer-Controller.cpp */,
+				7A0F1A7319BEE3F400679823 /* SciMed-Foyer-Controller.h */,
+				7A0F1A7419BEE3F400679823 /* SciMed-Hallway-Controller.cpp */,
+				7A0F1A7519BEE3F400679823 /* SciMed-Hallway-Controller.h */,
+			);
+			path = ScienceMedicine;
+			sourceTree = "<group>";
+		};
+		7A0F1A7619BEE3F400679823 /* SocialScience */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A7719BEE3F400679823 /* SocSci-Foyer-Controller.cpp */,
+				7A0F1A7819BEE3F400679823 /* SocSci-Foyer-Controller.h */,
+				7A0F1A7919BEE3F400679823 /* SocSci-Hallway-Controller.cpp */,
+				7A0F1A7A19BEE3F400679823 /* SocSci-Hallway-Controller.h */,
+			);
+			path = SocialScience;
+			sourceTree = "<group>";
+		};
+		7A0F1A7B19BEE3F400679823 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A7C19BEE3F400679823 /* Dorm */,
+				7A0F1A7F19BEE3F400679823 /* Library */,
+				7A0F1A8419BEE3F400679823 /* Tavern */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		7A0F1A7C19BEE3F400679823 /* Dorm */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A7D19BEE3F400679823 /* DormController.cpp */,
+				7A0F1A7E19BEE3F400679823 /* DormController.h */,
+			);
+			path = Dorm;
+			sourceTree = "<group>";
+		};
+		7A0F1A7F19BEE3F400679823 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A8019BEE3F400679823 /* LibraryFoyerController.cpp */,
+				7A0F1A8119BEE3F400679823 /* LibraryFoyerController.h */,
+				7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */,
+				7A0F1A8319BEE3F400679823 /* LibraryRoomsController.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7A0F1A8419BEE3F400679823 /* Tavern */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */,
+				7A0F1A8619BEE3F400679823 /* TavernFoyerController.h */,
+				7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */,
+				7A0F1A8819BEE3F400679823 /* TavernRoomController.h */,
 			);
 			path = Tavern;
 			sourceTree = "<group>";
@@ -696,7 +908,7 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0831C1F19BD8CE200444F9C /* Building Controllers */,
+				7A0F1A6019BEE3F400679823 /* Buildings */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
 				7A89452119ADACFC008E1EA7 /* Map */,
 				7A89452419ADACFC008E1EA7 /* Menu */,
@@ -705,15 +917,6 @@
 			);
 			name = Controllers;
 			path = ../Classes/Controllers;
-			sourceTree = "<group>";
-		};
-		7A89451E19ADACFC008E1EA7 /* Dorm */ = {
-			isa = PBXGroup;
-			children = (
-				7A89451F19ADACFC008E1EA7 /* DormController.cpp */,
-				7A89452019ADACFC008E1EA7 /* DormController.h */,
-			);
-			path = Dorm;
 			sourceTree = "<group>";
 		};
 		7A89452119ADACFC008E1EA7 /* Map */ = {
@@ -833,7 +1036,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D0831C2219BD8D2A00444F9C /* Building Scenes */,
+				7A0F1A2819BEE2FC00679823 /* Buildings */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
 				7A89455219ADAD23008E1EA7 /* Menu */,
@@ -842,15 +1045,6 @@
 			);
 			name = Scenes;
 			path = ../Classes/Scenes;
-			sourceTree = "<group>";
-		};
-		7A89454C19ADAD23008E1EA7 /* Dorm */ = {
-			isa = PBXGroup;
-			children = (
-				7A89454D19ADAD23008E1EA7 /* DormScene.cpp */,
-				7A89454E19ADAD23008E1EA7 /* DormScene.h */,
-			);
-			path = Dorm;
 			sourceTree = "<group>";
 		};
 		7A89454F19ADAD23008E1EA7 /* Map */ = {
@@ -996,18 +1190,6 @@
 			path = NewGame;
 			sourceTree = "<group>";
 		};
-		7AB6AB0419AEDD58003CCD7E /* EIS-Controller */ = {
-			isa = PBXGroup;
-			children = (
-				7AB6AB0519AEDD58003CCD7E /* Inside_EIS_Controller.cpp */,
-				7AB6AB0619AEDD58003CCD7E /* Inside_EIS_Controller.h */,
-				D0E73DE219B4110C00F4F720 /* EIS_Hallway_Controller.cpp */,
-				D0E73DE319B4110C00F4F720 /* EIS_Hallway_Controller.h */,
-			);
-			name = "EIS-Controller";
-			path = EISRoom;
-			sourceTree = "<group>";
-		};
 		7AB6AB0719AEDD58003CCD7E /* NewGame */ = {
 			isa = PBXGroup;
 			children = (
@@ -1017,18 +1199,6 @@
 				7AB6AB0B19AEDD58003CCD7E /* MenuNewGameController.h */,
 			);
 			path = NewGame;
-			sourceTree = "<group>";
-		};
-		7AB6AB0F19AEDD60003CCD7E /* EIS-Scene */ = {
-			isa = PBXGroup;
-			children = (
-				7AB6AB1019AEDD60003CCD7E /* Inside_EIS.cpp */,
-				7AB6AB1119AEDD60003CCD7E /* Inside_EIS.h */,
-				D0E73DDF19B410F400F4F720 /* EIS_Hallway.cpp */,
-				D0E73DE019B410F400F4F720 /* EIS_Hallway.h */,
-			);
-			name = "EIS-Scene";
-			path = EISRoom;
 			sourceTree = "<group>";
 		};
 		7AB6AB1319AEDDF5003CCD7E /* NewCharacter */ = {
@@ -1068,178 +1238,6 @@
 				D031093419B447C20030B59F /* Tavern_table.png */,
 			);
 			name = Tavern;
-			sourceTree = "<group>";
-		};
-		D0831C1F19BD8CE200444F9C /* Building Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D0831C2119BD8D0B00444F9C /* Other Buildings */,
-				D0831C2019BD8CF300444F9C /* Faculties */,
-			);
-			name = "Building Controllers";
-			sourceTree = "<group>";
-		};
-		D0831C2019BD8CF300444F9C /* Faculties */ = {
-			isa = PBXGroup;
-			children = (
-				D0B760F619BD5E1000E53B52 /* SciMed-Controller */,
-				D0B760F519BD5E0700E53B52 /* Buis-Controller */,
-				D0B760F419BD5DFB00E53B52 /* Art-Controller */,
-				D0B760F319BD5DE400E53B52 /* SocSci-Controller */,
-				7AB6AB0419AEDD58003CCD7E /* EIS-Controller */,
-			);
-			name = Faculties;
-			sourceTree = "<group>";
-		};
-		D0831C2119BD8D0B00444F9C /* Other Buildings */ = {
-			isa = PBXGroup;
-			children = (
-				D0831C2519BD8D7900444F9C /* Library */,
-				7A44EF8119B4671D001EF26B /* Tavern */,
-				7A89451E19ADACFC008E1EA7 /* Dorm */,
-			);
-			name = "Other Buildings";
-			sourceTree = "<group>";
-		};
-		D0831C2219BD8D2A00444F9C /* Building Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				D0831C2419BD8D3A00444F9C /* Other Buldings */,
-				D0831C2319BD8D3300444F9C /* Faculties */,
-			);
-			name = "Building Scenes";
-			sourceTree = "<group>";
-		};
-		D0831C2319BD8D3300444F9C /* Faculties */ = {
-			isa = PBXGroup;
-			children = (
-				D0B760F719BD5E6600E53B52 /* SciMed-Scene */,
-				D0B760FA19BD5ED300E53B52 /* Buis-Scene */,
-				D0B760F919BD5EC600E53B52 /* Art-Scene */,
-				D0B760F819BD5EBA00E53B52 /* SocSci-Scene */,
-				7AB6AB0F19AEDD60003CCD7E /* EIS-Scene */,
-			);
-			name = Faculties;
-			sourceTree = "<group>";
-		};
-		D0831C2419BD8D3A00444F9C /* Other Buldings */ = {
-			isa = PBXGroup;
-			children = (
-				D0831C2719BD8D9500444F9C /* Library */,
-				7A44EF7D19B4670E001EF26B /* Tavern */,
-				7A89454C19ADAD23008E1EA7 /* Dorm */,
-			);
-			name = "Other Buldings";
-			sourceTree = "<group>";
-		};
-		D0831C2519BD8D7900444F9C /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */,
-				D0D709CB19BEB4310023B5A6 /* LibraryFoyerController.h */,
-				D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */,
-				D0D709E119BEBC270023B5A6 /* LibraryRoomsController.h */,
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		D0831C2719BD8D9500444F9C /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */,
-				D0831C2919BD8DD700444F9C /* LibraryFoyer.h */,
-				D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */,
-				D0D709DE19BEBC160023B5A6 /* LibraryRooms.h */,
-			);
-			name = Library;
-			sourceTree = "<group>";
-		};
-		D0B760F319BD5DE400E53B52 /* SocSci-Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7612819BD747000E53B52 /* SocSci-Foyer-Controller.cpp */,
-				D0B7612919BD747000E53B52 /* SocSci-Foyer-Controller.h */,
-				D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */,
-				D0B7612C19BD749800E53B52 /* SocSci-Hallway-Controller.h */,
-			);
-			name = "SocSci-Controller";
-			sourceTree = "<group>";
-		};
-		D0B760F419BD5DFB00E53B52 /* Art-Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7612519BD744000E53B52 /* Art-Foyer-Controller.cpp */,
-				D0B7612619BD744000E53B52 /* Art-Foyer-Controller.h */,
-				D0B7612219BD742900E53B52 /* Art-Hallway-Controller.cpp */,
-				D0B7612319BD742900E53B52 /* Art-Hallway-Controller.h */,
-			);
-			name = "Art-Controller";
-			sourceTree = "<group>";
-		};
-		D0B760F519BD5E0700E53B52 /* Buis-Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7611F19BD741500E53B52 /* Buis-Foyer-Controller.cpp */,
-				D0B7612019BD741500E53B52 /* Buis-Foyer-Controller.h */,
-				D0B7611C19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp */,
-				D0B7611D19BD73FE00E53B52 /* Buis-Hallway-Controller.h */,
-			);
-			name = "Buis-Controller";
-			sourceTree = "<group>";
-		};
-		D0B760F619BD5E1000E53B52 /* SciMed-Controller */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7610119BD619B00E53B52 /* SciMed-Foyer-Controller.cpp */,
-				D0B7610219BD619B00E53B52 /* SciMed-Foyer-Controller.h */,
-				D0B7610419BD61B100E53B52 /* SciMed-Hallway-Controller.cpp */,
-				D0B7610519BD61B100E53B52 /* SciMed-Hallway-Controller.h */,
-			);
-			name = "SciMed-Controller";
-			sourceTree = "<group>";
-		};
-		D0B760F719BD5E6600E53B52 /* SciMed-Scene */ = {
-			isa = PBXGroup;
-			children = (
-				D0B760FB19BD5F3500E53B52 /* SciMed-Foyer.cpp */,
-				D0B760FC19BD5F3500E53B52 /* SciMed-Foyer.h */,
-				D0B760FE19BD60B600E53B52 /* SciMed-Hallway.cpp */,
-				D0B760FF19BD60B600E53B52 /* SciMed-Hallway.h */,
-			);
-			name = "SciMed-Scene";
-			sourceTree = "<group>";
-		};
-		D0B760F819BD5EBA00E53B52 /* SocSci-Scene */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7610A19BD730D00E53B52 /* SocSci-Hallway.cpp */,
-				D0B7610B19BD730D00E53B52 /* SocSci-Hallway.h */,
-				D0B7610719BD72F800E53B52 /* SocSci-Foyer.cpp */,
-				D0B7610819BD72F800E53B52 /* SocSci-Foyer.h */,
-			);
-			name = "SocSci-Scene";
-			sourceTree = "<group>";
-		};
-		D0B760F919BD5EC600E53B52 /* Art-Scene */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7611019BD733400E53B52 /* Art-Hallway.cpp */,
-				D0B7611119BD733400E53B52 /* Art-Hallway.h */,
-				D0B7610D19BD731B00E53B52 /* Art-Foyer.cpp */,
-				D0B7610E19BD731B00E53B52 /* Art-Foyer.h */,
-			);
-			name = "Art-Scene";
-			sourceTree = "<group>";
-		};
-		D0B760FA19BD5ED300E53B52 /* Buis-Scene */ = {
-			isa = PBXGroup;
-			children = (
-				D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */,
-				D0B7612F19BD754A00E53B52 /* Buis-Hallway.h */,
-				D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */,
-				D0B7613219BD755C00E53B52 /* Buis-Foyer.h */,
-			);
-			name = "Buis-Scene";
 			sourceTree = "<group>";
 		};
 		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
@@ -1527,60 +1525,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B760D219BD3AC300E53B52 /* TavernRoomController.cpp in Sources */,
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
-				D0D709E219BEBC270023B5A6 /* LibraryRoomsController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
-				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
-				7A44EF8419B4671D001EF26B /* TavernFoyerController.cpp in Sources */,
-				D0B760FD19BD5F3500E53B52 /* SciMed-Foyer.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
-				7AB6AB1219AEDD60003CCD7E /* Inside_EIS.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
-				D0831C2A19BD8DD700444F9C /* LibraryFoyer.cpp in Sources */,
+				7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */,
+				7A0F1A8C19BEE3F400679823 /* Buis-Hallway-Controller.cpp in Sources */,
+				7A0F1A5E19BEE2FC00679823 /* TavernFoyer.cpp in Sources */,
+				7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */,
+				7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */,
+				7A0F1A5B19BEE2FC00679823 /* DormScene.cpp in Sources */,
+				7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
+				7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */,
+				7A0F1A9219BEE3F400679823 /* SocSci-Hallway-Controller.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
-				D0B7612419BD742900E53B52 /* Art-Hallway-Controller.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				7A0F1A5D19BEE2FC00679823 /* LibraryRooms.cpp in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
-				7A89456319ADAD23008E1EA7 /* DormScene.cpp in Sources */,
-				D0B760CF19BD3AB400E53B52 /* TavernRoom.cpp in Sources */,
-				D0B7610F19BD731B00E53B52 /* Art-Foyer.cpp in Sources */,
-				D0B7612119BD741500E53B52 /* Buis-Foyer-Controller.cpp in Sources */,
-				D0B7610019BD60B600E53B52 /* SciMed-Hallway.cpp in Sources */,
+				7A0F1A5219BEE2FC00679823 /* Art-Hallway.cpp in Sources */,
+				7A0F1A5A19BEE2FC00679823 /* SocSci-Hallway.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
-				D0B7612A19BD747000E53B52 /* SocSci-Foyer-Controller.cpp in Sources */,
+				7A0F1A8F19BEE3F400679823 /* SciMed-Foyer-Controller.cpp in Sources */,
 				7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */,
+				7A0F1A8A19BEE3F400679823 /* Art-Hallway-Controller.cpp in Sources */,
+				7A0F1A5819BEE2FC00679823 /* SciMed-Hallway.cpp in Sources */,
 				7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */,
-				7AB6AB0C19AEDD58003CCD7E /* Inside_EIS_Controller.cpp in Sources */,
-				D0B7610619BD61B100E53B52 /* SciMed-Hallway-Controller.cpp in Sources */,
+				7A0F1A5319BEE2FC00679823 /* Buis-Foyer.cpp in Sources */,
+				7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */,
+				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				D0B7611219BD733400E53B52 /* Art-Hallway.cpp in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
+				7A0F1A9319BEE3F400679823 /* DormController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
-				D0B7612D19BD749800E53B52 /* SocSci-Hallway-Controller.cpp in Sources */,
-				D0B7611E19BD73FE00E53B52 /* Buis-Hallway-Controller.cpp in Sources */,
-				D0B7613319BD755C00E53B52 /* Buis-Foyer.cpp in Sources */,
+				7A0F1A8B19BEE3F400679823 /* Buis-Foyer-Controller.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
-				7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */,
-				D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */,
-				D0D709CC19BEB4310023B5A6 /* LibraryFoyerController.cpp in Sources */,
+				7A0F1A5519BEE2FC00679823 /* EIS_Hallway.cpp in Sources */,
+				7A0F1A5619BEE2FC00679823 /* Inside_EIS.cpp in Sources */,
+				7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
-				D0B7610319BD619B00E53B52 /* SciMed-Foyer-Controller.cpp in Sources */,
-				D0B7612719BD744000E53B52 /* Art-Foyer-Controller.cpp in Sources */,
-				D0B7610C19BD730D00E53B52 /* SocSci-Hallway.cpp in Sources */,
+				7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */,
+				7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
-				D0D709DF19BEBC160023B5A6 /* LibraryRooms.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
+				7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
-				D0B7610919BD72F800E53B52 /* SocSci-Foyer.cpp in Sources */,
 				7A89456019ADAD23008E1EA7 /* PlayerStatsModel.cpp in Sources */,
-				D0B7613019BD754A00E53B52 /* Buis-Hallway.cpp in Sources */,
+				7A0F1A5F19BEE2FC00679823 /* TavernRoom.cpp in Sources */,
+				7A0F1A8919BEE3F400679823 /* Art-Foyer-Controller.cpp in Sources */,
 				7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */,
-				7A89452D19ADACFC008E1EA7 /* DormController.cpp in Sources */,
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,
+				7A0F1A5719BEE2FC00679823 /* SciMed-Foyer.cpp in Sources */,
+				7A0F1A5119BEE2FC00679823 /* Art-Foyer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
