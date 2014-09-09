@@ -37,12 +37,13 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(Men
     // create the back button
     auto backButton = MenuItemImage::create("options-back.png", "options-back.png", CC_CALLBACK_1(MenuNewGame::backButtonCallback, that));
     
-    backButton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 -250));
+    backButton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 + 250));
     pMenuItems.pushBack(backButton);
     
     
-    
-    
+    auto quizbutton = MenuItemImage::create("New-Game-take_quiz_off.png","New-Game-take_quiz_off.png");
+    quizbutton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, visibleSize.height / 2 -250));
+    pMenuItems.pushBack(quizbutton);
     
     
     
@@ -62,7 +63,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
-    that->addChild(menu, 1);
+    that->addChild(menu, 2);
     
     // add "MenuScene" splash screen"
     auto sprite = Sprite::create("New-Game-background.png");
@@ -74,187 +75,161 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     that->addChild(sprite, 0);
     
     
-    // add the Back Button sprite to the menu
-    sprite = Sprite::create("New-Game-Back.png");
-    sprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 -250));
     
-    that->addChild(sprite, 0);
+    Sprite *border = Sprite::create("New-Game-Border.png");
+    border->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y - 50));
+    that->addChild(border,1);
     
-    
-    /* add the Next Button sprite to the menu
-     sprite = Sprite::create("New-Game-next_off.png");
-     sprite->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, visibleSize.height / 2 -250));
-     
-     that->addChild(sprite, 0);
-     */
-    
-    
-    // add the Take Quiz Button Sprite to the menu
-    sprite = Sprite::create("New-Game-take_quiz_off.png");
-    sprite->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 -250));
-    
-    that->addChild(sprite, 0);
+    Sprite *title = Sprite::create("New-Game-Title.png");
+    title->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
+    that->addChild(title,1);
     
     
     
-    //STATIC LABELS FOR THE PAGE
-    
-    //New Character Label
-    std::string stringholder ="New Character: ";
-    
-    cocos2d::ui::Text* TL_NewChar = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_NewChar->setContentSize(Size(300, 50));
-    TL_NewChar->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
-    TL_NewChar->setTextHorizontalAlignment(TextHAlignment::CENTER);
-    TL_NewChar->setColor(Color3B(0,0,0));
-    that->addChild(TL_NewChar);
-    
-    
-    
-    
+    //NAME ENTRY DATA
+    std::string stringholder;
     stringholder = "Name: ";
     cocos2d::ui::Text* TL_Name = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
     TL_Name->setContentSize(Size(300, 50));
-    TL_Name->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +150));
-    TL_Name->setTextHorizontalAlignment(TextHAlignment::LEFT);
-    TL_Name->setColor(Color3B(0,0,0));
-    that->addChild(TL_Name);
+    TL_Name->setPosition(Vec2(origin.x + visibleSize.width / 2 - 325 , visibleSize.height / 2 +140));
+    TL_Name->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    TL_Name->setColor(Color3B::BLACK);
+    that->addChild(TL_Name,2);
+    
+    
+    EditBox *EnterName = EditBox::create(Size(350,50), Scale9Sprite::create("New-Game-textbox.png"));
+    EnterName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2 + 130));
+    EnterName->setInputMode(cocos2d::extension::EditBox::InputMode::SINGLE_LINE);
+    EnterName->setMaxLength(20);
+    EnterName->setFontColor(Color3B::BLACK);
+    EnterName->setPlaceHolder("   ");
+    EnterName->setReturnType(EditBox::KeyboardReturnType::DONE);
+    EnterName->setTag(1);
+    that->addChild(EnterName,3);
+    
     
 
     
-    
-    stringholder = "Intelligence: ";
+    //INTELLIGENCE STAT DISPLAY DATA
+    stringholder = "Intelligence ";
     cocos2d::ui::Text* TL_Intel = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
     TL_Intel->setContentSize(Size(300, 50));
-    TL_Intel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +100));
-    TL_Intel->setTextHorizontalAlignment(TextHAlignment::LEFT);
-    TL_Intel->setColor(Color3B(0,0,0));
-    that->addChild(TL_Intel);
+    TL_Intel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 + 40));
+    TL_Intel->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    TL_Intel->setColor(Color3B::BLACK);
+    that->addChild(TL_Intel,2);
     
+    cocos2d::ui::Slider* intSlider = cocos2d::ui::Slider::create();
+    intSlider->loadBarTexture("sliderTrack2.png");
+    intSlider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
+    intSlider->loadProgressBarTexture("slider_bar_active_9patch.png");
+    intSlider->setScale9Enabled(true);
+    intSlider->setCapInsets(Rect(0, 0, 0, 0));
+    intSlider->setContentSize(Size(250.0f, 19));
+    intSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 30));
+    intSlider->setScale(1.3);
+    intSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent, that));
+    intSlider->setTag(2);
+    that->addChild(intSlider,3);
     
-    
-    stringholder = "Stamina: ";
-    cocos2d::ui::Text* TL_Stamina = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_Stamina->setContentSize(Size(300, 50));
-    TL_Stamina->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +50));
-    TL_Stamina->setTextHorizontalAlignment(TextHAlignment::LEFT);
-    TL_Stamina->setColor(Color3B(0,0,0));
-    that->addChild(TL_Stamina);
-    
-    
-    stringholder = "Social: ";
-    cocos2d::ui::Text* TL_Social = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_Social->setContentSize(Size(300, 50));
-    TL_Social->setPosition(Vec2(origin.x + visibleSize.width / 2 - 350 , visibleSize.height / 2 +10));
-    TL_Social->setTextHorizontalAlignment(TextHAlignment::LEFT);
-    TL_Social->setColor(Color3B(0,0,0));
-    that->addChild(TL_Social);
-    
-    
-    stringholder = "Points Remaining: ";
-    cocos2d::ui::Text* Tl_Points = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    Tl_Points->setContentSize(Size(300, 50));
-    Tl_Points->setPosition(Vec2(origin.x + visibleSize.width / 2 -350 , visibleSize.height / 2 -125));
-    Tl_Points->setTextHorizontalAlignment(TextHAlignment::LEFT);
-    Tl_Points->setColor(Color3B(0,0,0));
-    that->addChild(Tl_Points);
-    
-    
-    
-    
-    EditBox* m_pEditName = EditBox::create((Size(300, 50)), Scale9Sprite::create("New-Game-textbox.png"));
-    m_pEditName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 150, origin.y + visibleSize.height / 2 + 150));
-    m_pEditName->setFontColor(Color3B(0,0,0));
-    m_pEditName->setPlaceHolder("   ");
-    m_pEditName->setMaxLength(8);
-    m_pEditName->setTag(1);
-    that->addChild(m_pEditName);
-    
-    
-    
-    
-
-    
-    
-    
-    stringholder = " 0 ";
-    
-    
-    
-    // THE INTELLIGENCE SLIDER & ASSOCIATED LABEL
-    cocos2d::ui::Slider* slider = cocos2d::ui::Slider::create();
-    slider->loadBarTexture("sliderTrack2.png");
-    slider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
-    slider->loadProgressBarTexture("slider_bar_active_9patch.png");
-    slider->setScale9Enabled(true);
-    slider->setCapInsets(Rect(0, 0, 0, 0));
-    slider->setContentSize(Size(250.0f, 19));
-    slider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 110, origin.y + visibleSize.height / 2 + 95));
-    slider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent, that));
-    slider->setTag(2);
-    that->addChild(slider);
-    
-    
+    stringholder = "0";
     cocos2d::ui::Text* TL_DispINT = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispINT->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 + 95));
+    TL_DispINT->setPosition(Vec2(origin.x + visibleSize.width / 2 + 330, origin.y + visibleSize.height / 2 + 40));
     TL_DispINT->setTag(3);
     TL_DispINT->setColor(Color3B(0,0,0));
-    that->addChild(TL_DispINT);
-    // THE INTELLIGENCE SLIDER & ASSOCIATED LABEL END
+    that->addChild(TL_DispINT,3);
     
     
     
-    // THE STAMINA SLIDER & ASSOCIATED LABEL
-    cocos2d::ui::Slider* slider2 = cocos2d::ui::Slider::create();
-    slider2->loadBarTexture("sliderTrack2.png");
-    slider2->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
-    slider2->loadProgressBarTexture("slider_bar_active_9patch.png");
-    slider2->setScale9Enabled(true);
-    slider2->setCapInsets(Rect(0, 0, 0, 0));
-    slider2->setContentSize(Size(250.0f, 19));
-    slider2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 110, origin.y + visibleSize.height / 2 + 50));
-    slider2->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent2, that));
-    slider2->setTag(4);
-    that->addChild(slider2);
     
+    //STAMINA STAT DISPLAY DATA
+    stringholder = "\tStamina ";
+    cocos2d::ui::Text* TL_Stamina = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Stamina->setContentSize(Size(300, 50));
+    TL_Stamina->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 - 40));
+    TL_Stamina->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    TL_Stamina->setColor(Color3B::BLACK);
+    that->addChild(TL_Stamina,2);
+    
+    cocos2d::ui::Slider* staSlider = cocos2d::ui::Slider::create();
+    staSlider->loadBarTexture("sliderTrack2.png");
+    staSlider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
+    staSlider->loadProgressBarTexture("slider_bar_active_9patch.png");
+    staSlider->setScale9Enabled(true);
+    staSlider->setCapInsets(Rect(0, 0, 0, 0));
+    staSlider->setContentSize(Size(250.0f, 19));
+    staSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 - 50));
+    staSlider->setScale(1.3);
+    staSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent2, that));
+    staSlider->setTag(4);
+    that->addChild(staSlider,3);
+    
+    stringholder = "0";
     cocos2d::ui::Text* TL_DispSTA = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispSTA->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +50));
+    TL_DispSTA->setPosition(Vec2(origin.x + visibleSize.width / 2 + 330, origin.y + visibleSize.height / 2 - 40));
     TL_DispSTA->setTag(5);
     TL_DispSTA->setColor(Color3B(0,0,0));
-    that->addChild(TL_DispSTA);
-    // THE STAMINA SLIDER & ASSOCIATED LABEL END
+    that->addChild(TL_DispSTA,3);
     
     
-    // THE SOCIAL SLIDER & ASSOCIATED LABEL
-    cocos2d::ui::Slider* slider3 = cocos2d::ui::Slider::create();
-    slider3->loadBarTexture("sliderTrack2.png");
-    slider3->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
-    slider3->loadProgressBarTexture("slider_bar_active_9patch.png");
-    slider3->setScale9Enabled(true);
-    slider3->setCapInsets(Rect(0, 0, 0, 0));
-    slider3->setContentSize(Size(250.0f, 19));
-    slider3->setPosition(Vec2(origin.x + visibleSize.width / 2 - 110, origin.y + visibleSize.height / 2 + 10));
-    slider3->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent3, that));
-    slider3->setTag(6);
-    that->addChild(slider3);
     
+    
+    //SOCIAL STAT DISPLAY DATA
+    stringholder = "\t\tSocial ";
+    cocos2d::ui::Text* TL_Social = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    TL_Social->setContentSize(Size(300, 50));
+    TL_Social->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 - 120));
+    TL_Social->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    TL_Social->setColor(Color3B::BLACK);
+    that->addChild(TL_Social,2);
+    
+    
+    cocos2d::ui::Slider* socSlider = cocos2d::ui::Slider::create();
+    socSlider->loadBarTexture("sliderTrack2.png");
+    socSlider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
+    socSlider->loadProgressBarTexture("slider_bar_active_9patch.png");
+    socSlider->setScale9Enabled(true);
+    socSlider->setCapInsets(Rect(0, 0, 0, 0));
+    socSlider->setContentSize(Size(250.0f, 19));
+    socSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 - 130));
+    socSlider->setScale(1.3);
+    socSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent3, that));
+    socSlider->setTag(6);
+    that->addChild(socSlider,3);
+    
+    stringholder = "0";
     cocos2d::ui::Text* TL_DispSOC = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispSOC->setPosition(Vec2(origin.x + visibleSize.width / 2 + 300, origin.y + visibleSize.height / 2 +10));
+    TL_DispSOC->setPosition(Vec2(origin.x + visibleSize.width / 2 + 330, origin.y + visibleSize.height / 2 - 120));
     TL_DispSOC->setTag(7);
     TL_DispSOC->setColor(Color3B(0,0,0));
-    that->addChild(TL_DispSOC);
+    that->addChild(TL_DispSOC,3);
+
     
-    // THE SOCIAL SLIDER & ASSOCIATED LABEL END
+    
     
 
     
-    //TEXT DISPLAY THAT HOLDS THE POINTS REMAINING INFORMATION
+    //POINTS AVAILABLE DISPLAY DATA
+    stringholder = "Points Available: ";
+    cocos2d::ui::Text* Tl_Points = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
+    Tl_Points->setContentSize(Size(300, 50));
+    Tl_Points->setPosition(Vec2(origin.x + visibleSize.width / 2 , visibleSize.height / 2 - 225));
+    Tl_Points->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    Tl_Points->setColor(Color3B::BLACK);
+    that->addChild(Tl_Points,2);
+    
+    
     stringholder = "20";
     cocos2d::ui::Text* TL_DispPOINTS = cocos2d::ui::Text::create(stringholder, "Verdana", 30);
-    TL_DispPOINTS->setPosition(Vec2(origin.x + visibleSize.width / 2 -50, origin.y + visibleSize.height / 2 -125));
+    TL_DispPOINTS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 135, origin.y + visibleSize.height / 2 - 232));
     TL_DispPOINTS->setTag(8);
-    TL_DispPOINTS->setColor(Color3B(0,0,0));
-    that->addChild(TL_DispPOINTS);
+    TL_DispPOINTS->setColor(Color3B::RED);
+    that->addChild(TL_DispPOINTS,3);
+    
+    
+
+    
+   
     
     
 }
