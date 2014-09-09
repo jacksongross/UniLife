@@ -1,11 +1,12 @@
 //
-//  Library-Foyer.cpp
+//  LibraryRooms.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 8/09/2014.
+//  Created by csci321ga2a on 9/09/2014.
 //
 //
 
+#include "LibraryRoomsController.h"
 #include "LibraryFoyer.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
@@ -15,19 +16,17 @@
 #include <string>
 #include <vector>
 #include "MapScene.h"
-#include "LibraryRooms.h"
-#include "LibraryFoyerController.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
 
-Scene* LibraryFoyer::createScene()
+Scene* LibraryRooms::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = LibraryFoyer::create();
+    auto layer = LibraryRooms::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -37,7 +36,7 @@ Scene* LibraryFoyer::createScene()
 }
 
 // on "init" you need to initialize your instance
-bool LibraryFoyer::init()
+bool LibraryRooms::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -52,14 +51,14 @@ bool LibraryFoyer::init()
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     // create the main menu
-    LibraryFoyerController::CreateMainMenu(this, visibleSize, origin);
+    LibraryRoomsController::CreateMainMenu(this, visibleSize, origin);
     UpdateMeters(pm.getStats());
     
     return true;
 }
 
 
-void LibraryFoyer::UpdateMeters(PlayerStatsModel updateModel)
+void LibraryRooms::UpdateMeters(PlayerStatsModel updateModel)
 {
     
     //Added an update for the HUD Stress & Energy Bars
@@ -74,27 +73,32 @@ void LibraryFoyer::UpdateMeters(PlayerStatsModel updateModel)
     pgTimer2->setScaleX(updateModel.getStress()/100.0);
     pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
     log("%d",updateModel.getStress());
+    
 }
 
-
-
-void LibraryFoyer::ToMap(Ref* pSender)
+void LibraryRooms::ToFoyer(Ref* pSender)
 {
-    log("Going To The Map!");
+    log("Going To Library Foyer!");
     
-    auto scene = MapScene::createScene(pm);
+    auto scene = LibraryFoyer::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
 
-void LibraryFoyer::ToMeetingRoom(Ref* pSender)
-{
-    log("Going To The Library Meeting Room!");
-    
-   auto scene = LibraryRooms::createScene();
-   TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+
+void LibraryRooms::ToMeet1(Ref* pSender){
+  
+    log("You Went To Meeting Room 1");
     
 }
+
+
+void LibraryRooms::ToMeet2(Ref* pSender){
+    
+    log("You Went To Meeting Room 2");
+    
+    
+}
+
 

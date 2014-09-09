@@ -153,6 +153,13 @@
 		D0B7612D19BD749800E53B52 /* SocSci-Hallway-Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612B19BD749800E53B52 /* SocSci-Hallway-Controller.cpp */; };
 		D0B7613019BD754A00E53B52 /* Buis-Hallway.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7612E19BD754A00E53B52 /* Buis-Hallway.cpp */; };
 		D0B7613319BD755C00E53B52 /* Buis-Foyer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */; };
+		D0D709CC19BEB4310023B5A6 /* LibraryFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */; };
+		D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D519BEB6290023B5A6 /* Library_book_shelf.png */; };
+		D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D619BEB6290023B5A6 /* Library_couch.png */; };
+		D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D719BEB6290023B5A6 /* Library_Foyer.png */; };
+		D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D819BEB6290023B5A6 /* Library_Rooms.png */; };
+		D0D709DF19BEBC160023B5A6 /* LibraryRooms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */; };
+		D0D709E219BEBC270023B5A6 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
@@ -476,6 +483,16 @@
 		D0B7612F19BD754A00E53B52 /* Buis-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway.h"; sourceTree = "<group>"; };
 		D0B7613119BD755C00E53B52 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; };
 		D0B7613219BD755C00E53B52 /* Buis-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer.h"; sourceTree = "<group>"; };
+		D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyerController.cpp; sourceTree = "<group>"; };
+		D0D709CB19BEB4310023B5A6 /* LibraryFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyerController.h; sourceTree = "<group>"; };
+		D0D709D519BEB6290023B5A6 /* Library_book_shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_book_shelf.png; path = LibraryAssets/Library_book_shelf.png; sourceTree = "<group>"; };
+		D0D709D619BEB6290023B5A6 /* Library_couch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_couch.png; path = LibraryAssets/Library_couch.png; sourceTree = "<group>"; };
+		D0D709D719BEB6290023B5A6 /* Library_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Foyer.png; path = LibraryAssets/Library_Foyer.png; sourceTree = "<group>"; };
+		D0D709D819BEB6290023B5A6 /* Library_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Rooms.png; path = LibraryAssets/Library_Rooms.png; sourceTree = "<group>"; };
+		D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRooms.cpp; sourceTree = "<group>"; };
+		D0D709DE19BEBC160023B5A6 /* LibraryRooms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRooms.h; sourceTree = "<group>"; };
+		D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryRoomsController.cpp; sourceTree = "<group>"; };
+		D0D709E119BEBC270023B5A6 /* LibraryRoomsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryRoomsController.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
@@ -640,6 +657,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0D709D419BEB56E0023B5A6 /* LibraryAssets */,
 				D031093019B447A20030B59F /* Tavern */,
 				D0E73DC719B3F5A200F4F720 /* InsideViewSprites */,
 				7AB6AB1319AEDDF5003CCD7E /* NewCharacter */,
@@ -1120,6 +1138,10 @@
 		D0831C2519BD8D7900444F9C /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				D0D709CA19BEB4310023B5A6 /* LibraryFoyerController.cpp */,
+				D0D709CB19BEB4310023B5A6 /* LibraryFoyerController.h */,
+				D0D709E019BEBC270023B5A6 /* LibraryRoomsController.cpp */,
+				D0D709E119BEBC270023B5A6 /* LibraryRoomsController.h */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -1129,6 +1151,8 @@
 			children = (
 				D0831C2819BD8DD700444F9C /* LibraryFoyer.cpp */,
 				D0831C2919BD8DD700444F9C /* LibraryFoyer.h */,
+				D0D709DD19BEBC160023B5A6 /* LibraryRooms.cpp */,
+				D0D709DE19BEBC160023B5A6 /* LibraryRooms.h */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -1219,6 +1243,17 @@
 				D0B7613219BD755C00E53B52 /* Buis-Foyer.h */,
 			);
 			name = "Buis-Scene";
+			sourceTree = "<group>";
+		};
+		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
+			isa = PBXGroup;
+			children = (
+				D0D709D519BEB6290023B5A6 /* Library_book_shelf.png */,
+				D0D709D619BEB6290023B5A6 /* Library_couch.png */,
+				D0D709D719BEB6290023B5A6 /* Library_Foyer.png */,
+				D0D709D819BEB6290023B5A6 /* Library_Rooms.png */,
+			);
+			name = LibraryAssets;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -1408,6 +1443,7 @@
 				D0B760E919BD5B6D00E53B52 /* Art_Foyer.png in Resources */,
 				D0B760ED19BD5B6D00E53B52 /* EIS_Foyer.png in Resources */,
 				7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */,
+				D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */,
 				7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */,
 				D098A99219AE3096005B13D3 /* green_bar.png in Resources */,
 				7A8945B419ADAF3F008E1EA7 /* phone_button.png in Resources */,
@@ -1453,6 +1489,7 @@
 				7A8945AA19ADAF3F008E1EA7 /* title.png in Resources */,
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */,
+				D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
@@ -1462,6 +1499,7 @@
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
 				7AB6AB3419AEDDF5003CCD7E /* New-Game-take_quiz_on.png in Resources */,
+				D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */,
 				7AB6AB3519AEDDF5003CCD7E /* New-Game-text.png in Resources */,
 				D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */,
 				7A8945A619ADAF3F008E1EA7 /* new_game_off.png in Resources */,
@@ -1476,6 +1514,7 @@
 				7AB6AB2F19AEDDF5003CCD7E /* New-Game-Border.png in Resources */,
 				D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
+				D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
 				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,
@@ -1496,6 +1535,7 @@
 			files = (
 				D0B760D219BD3AC300E53B52 /* TavernRoomController.cpp in Sources */,
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
+				D0D709E219BEBC270023B5A6 /* LibraryRoomsController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
 				D0E73DE119B410F400F4F720 /* EIS_Hallway.cpp in Sources */,
 				7A44EF8419B4671D001EF26B /* TavernFoyerController.cpp in Sources */,
@@ -1531,11 +1571,13 @@
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
 				7A44EF8019B4670E001EF26B /* TavernFoyer.cpp in Sources */,
 				D0E73DE419B4110C00F4F720 /* EIS_Hallway_Controller.cpp in Sources */,
+				D0D709CC19BEB4310023B5A6 /* LibraryFoyerController.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				D0B7610319BD619B00E53B52 /* SciMed-Foyer-Controller.cpp in Sources */,
 				D0B7612719BD744000E53B52 /* Art-Foyer-Controller.cpp in Sources */,
 				D0B7610C19BD730D00E53B52 /* SocSci-Hallway.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				D0D709DF19BEBC160023B5A6 /* LibraryRooms.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,

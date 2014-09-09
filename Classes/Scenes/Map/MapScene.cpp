@@ -24,6 +24,7 @@
 #include "Buis-Foyer.h"
 #include "Art-Foyer.h"
 #include "SocSci-Foyer.h"
+#include "LibraryFoyer.h"
 USING_NS_CC;
 
 Scene* MapScene::createScene()
@@ -178,9 +179,9 @@ void MapScene::GoToLibrary(Ref* pSender)
 {
     log("Going To Library!");
     
-    //auto scene = SocSciFoyer::createScene();
-    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    //Director::getInstance()->replaceScene(crosssfade);
+    auto scene = LibraryFoyer::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 
