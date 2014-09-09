@@ -89,7 +89,6 @@
 		7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1419AEDDF5003CCD7E /* backtotopnormal.png */; };
 		7AB6AB2A19AEDDF5003CCD7E /* backtotoppressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1519AEDDF5003CCD7E /* backtotoppressed.png */; };
 		7AB6AB2B19AEDDF5003CCD7E /* Blue-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1619AEDDF5003CCD7E /* Blue-button.png */; };
-		7AB6AB2C19AEDDF5003CCD7E /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1719AEDDF5003CCD7E /* green_bar.png */; };
 		7AB6AB2D19AEDDF5003CCD7E /* New-Game-Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1819AEDDF5003CCD7E /* New-Game-Back.png */; };
 		7AB6AB2E19AEDDF5003CCD7E /* New-Game-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1919AEDDF5003CCD7E /* New-Game-background.png */; };
 		7AB6AB2F19AEDDF5003CCD7E /* New-Game-Border.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB1A19AEDDF5003CCD7E /* New-Game-Border.png */; };
@@ -101,8 +100,6 @@
 		7AB6AB3519AEDDF5003CCD7E /* New-Game-text.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2019AEDDF5003CCD7E /* New-Game-text.png */; };
 		7AB6AB3619AEDDF5003CCD7E /* New-Game-textbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2119AEDDF5003CCD7E /* New-Game-textbox.png */; };
 		7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2219AEDDF5003CCD7E /* New-Game-Title.png */; };
-		7AB6AB3819AEDDF5003CCD7E /* new_game_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2319AEDDF5003CCD7E /* new_game_off.png */; };
-		7AB6AB3919AEDDF5003CCD7E /* new_game_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2419AEDDF5003CCD7E /* new_game_on.png */; };
 		7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2519AEDDF5003CCD7E /* slider.png */; };
 		7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2619AEDDF5003CCD7E /* slider_bar_active_9patch.png */; };
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
@@ -1439,7 +1436,6 @@
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
 				D031093719B447C20030B59F /* Tavern_couches.png in Resources */,
-				7AB6AB3919AEDDF5003CCD7E /* new_game_on.png in Resources */,
 				D0B760E919BD5B6D00E53B52 /* Art_Foyer.png in Resources */,
 				D0B760ED19BD5B6D00E53B52 /* EIS_Foyer.png in Resources */,
 				7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */,
@@ -1473,7 +1469,6 @@
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
 				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
-				7AB6AB2C19AEDDF5003CCD7E /* green_bar.png in Resources */,
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
 				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
@@ -1484,7 +1479,6 @@
 				D0E73DD519B3F5FE00F4F720 /* door.png in Resources */,
 				7A8945A219ADAF3F008E1EA7 /* Marker Felt.ttf in Resources */,
 				7A8945AF19ADAF3F008E1EA7 /* options-title.png in Resources */,
-				7AB6AB3819AEDDF5003CCD7E /* new_game_off.png in Resources */,
 				7A8945A119ADAF3F008E1EA7 /* dorm-stool.png in Resources */,
 				7A8945AA19ADAF3F008E1EA7 /* title.png in Resources */,
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
