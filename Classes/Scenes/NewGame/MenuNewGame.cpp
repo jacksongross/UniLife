@@ -109,7 +109,7 @@ void MenuNewGame::backButtonCallback(Ref* pSender)
 
 
 
-void MenuNewGame::sliderEvent(Ref *pSender, cocos2d::ui::Slider::EventType type)
+void MenuNewGame::intSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType type)
 {
     auto s1 = (cocos2d::ui::Slider*)this->getChildByTag(2);
     auto s2 = (cocos2d::ui::Slider*)this->getChildByTag(4);
@@ -144,7 +144,7 @@ void MenuNewGame::sliderEvent(Ref *pSender, cocos2d::ui::Slider::EventType type)
     
 }
 
-void MenuNewGame::sliderEvent2(Ref *pSender, cocos2d::ui::Slider::EventType type)
+void MenuNewGame::staSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType type)
 {
     
     
@@ -181,7 +181,7 @@ void MenuNewGame::sliderEvent2(Ref *pSender, cocos2d::ui::Slider::EventType type
 }
 
 
-void MenuNewGame::sliderEvent3(Ref *pSender, cocos2d::ui::Slider::EventType type)
+void MenuNewGame::socSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType type)
 {
     
     auto s1 = (cocos2d::ui::Slider*)this->getChildByTag(2);

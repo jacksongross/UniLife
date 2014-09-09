@@ -128,7 +128,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     intSlider->setContentSize(Size(250.0f, 19));
     intSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 30));
     intSlider->setScale(1.3);
-    intSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent, that));
+    intSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::intSliderChange, that));
     intSlider->setTag(2);
     that->addChild(intSlider,3);
     
@@ -160,7 +160,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     staSlider->setContentSize(Size(250.0f, 19));
     staSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 - 50));
     staSlider->setScale(1.3);
-    staSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent2, that));
+    staSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::staSliderChange, that));
     staSlider->setTag(4);
     that->addChild(staSlider,3);
     
@@ -193,7 +193,7 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     socSlider->setContentSize(Size(250.0f, 19));
     socSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 - 130));
     socSlider->setScale(1.3);
-    socSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::sliderEvent3, that));
+    socSlider->addEventListener(CC_CALLBACK_2(MenuNewGame::socSliderChange, that));
     socSlider->setTag(6);
     that->addChild(socSlider,3);
     

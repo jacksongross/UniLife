@@ -26,9 +26,9 @@ public:
     // new game callback method
     void NextButtonCallback(Ref* pSender);
     void backButtonCallback(Ref* pSender);
-    void sliderEvent(Ref* pSender, cocos2d::ui::Slider::EventType type);
-    void sliderEvent2(Ref* pSender, cocos2d::ui::Slider::EventType type);
-    void sliderEvent3(Ref* pSender, cocos2d::ui::Slider::EventType type);
+    void intSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
+    void staSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
+    void socSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     // implement the "static create()" method manually
