@@ -31,7 +31,7 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuDegreeSelectController::CreateMenuButton
     
     
     auto GoNext = MenuItemImage::create("New-Game-next_off.png","New-Game-next_on.png",CC_CALLBACK_1(MenuDegreeSelect::NextButtonCallback, that));
-    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, origin.y + (visibleSize.height / 2 - 250)));
+    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 + 265, origin.y + (visibleSize.height / 2 - 250)));
     
     pMenuItems.pushBack(GoNext);
     
@@ -69,7 +69,8 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     
     
     Sprite *border = Sprite::create("New-Game-Border.png");
-    border->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y - 50));
+    border->setPosition(Vec2(visibleSize.width / 2 + 250, visibleSize.height/2 + origin.y - 50));
+    border->setScaleX(0.5);
     that->addChild(border,1);
     
     
@@ -78,6 +79,27 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     that->addChild(degreetitle,1);
     
     
+    
+    Sprite *Box1 = Sprite::create("EIS_Border.png");
+    Box1->setPosition(Vec2(origin.x + visibleSize.width / 2 - 420, visibleSize.height / 2 + 60));
+    that->addChild(Box1,2);
+    
+    
+    Sprite *Box2 = Sprite::create("EIS_Border.png");
+    Box2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 420, visibleSize.height / 2 - 185));
+    that->addChild(Box2,2);
+  
+    Sprite *Box3 = Sprite::create("Buis_Border.png");
+    Box3->setPosition(Vec2(origin.x + visibleSize.width / 2 -150, visibleSize.height / 2 + 100));
+    that->addChild(Box3,2);
+    
+    Sprite *Box4 = Sprite::create("Art_Border.png");
+    Box4->setPosition(Vec2(origin.x + visibleSize.width / 2 -150, visibleSize.height / 2 - 60));
+    that->addChild(Box4,2);
+    
+      Sprite *Box5 = Sprite::create("SocSci_Border.png");
+    Box5->setPosition(Vec2(origin.x + visibleSize.width / 2 -150, visibleSize.height / 2 - 225));
+    that->addChild(Box5,2);
     
     
     /*
