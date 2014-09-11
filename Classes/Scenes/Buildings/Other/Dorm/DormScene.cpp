@@ -18,6 +18,8 @@
 #include <vector>
 #include <cmath>
 #include <sstream>
+#include "BrickBreaker.h"
+#include "GameView.h"
 
 USING_NS_CC;
 PlayerModel pm;
@@ -212,6 +214,10 @@ void DormScene::DeskPressed(cocos2d::Ref *pSender)
 void DormScene::ComputerPressed(cocos2d::Ref *pSender)
 {
     log("You touched the computer!");
+    // transition to the load game scene
+    auto scene = GameView::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 

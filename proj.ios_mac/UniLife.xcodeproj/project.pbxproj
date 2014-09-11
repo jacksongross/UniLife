@@ -49,7 +49,11 @@
 		7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */; };
 		7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */; };
 		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
+		7A0F1AA419BEEEE800679823 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */; };
+		7A0F1AA719BF03AB00679823 /* GameView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA619BF03AB00679823 /* GameView.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
+		7A78809619C17C4200BFF491 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809419C17C4200BFF491 /* circle.png */; };
+		7A78809719C17C4200BFF491 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809519C17C4200BFF491 /* paddle.png */; };
 		7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452219ADACFC008E1EA7 /* MapController.cpp */; };
 		7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452519ADACFC008E1EA7 /* MenuController.cpp */; };
 		7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452819ADACFC008E1EA7 /* MenuLoadController.cpp */; };
@@ -366,7 +370,13 @@
 		7A0F1A8619BEE3F400679823 /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
 		7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
 		7A0F1A8819BEE3F400679823 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
+		7A0F1AA219BEEEDF00679823 /* BrickBreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrickBreaker.h; sourceTree = "<group>"; };
+		7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrickBreaker.cpp; sourceTree = "<group>"; };
+		7A0F1AA519BF03A200679823 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		7A0F1AA619BF03AB00679823 /* GameView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameView.cpp; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
+		7A78809419C17C4200BFF491 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		7A78809519C17C4200BFF491 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
 		7A89452219ADACFC008E1EA7 /* MapController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapController.cpp; sourceTree = "<group>"; };
 		7A89452319ADACFC008E1EA7 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		7A89452519ADACFC008E1EA7 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -664,6 +674,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A78809319C17C4200BFF491 /* BrickBreaker */,
 				D0D709D419BEB56E0023B5A6 /* LibraryAssets */,
 				D031093019B447A20030B59F /* Tavern */,
 				D0E73DC719B3F5A200F4F720 /* InsideViewSprites */,
@@ -915,6 +926,26 @@
 			path = Tavern;
 			sourceTree = "<group>";
 		};
+		7A0F1A9819BEE89F00679823 /* BrickBreaker */ = {
+			isa = PBXGroup;
+			children = (
+				7A0F1AA219BEEEDF00679823 /* BrickBreaker.h */,
+				7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */,
+				7A0F1AA519BF03A200679823 /* GameView.h */,
+				7A0F1AA619BF03AB00679823 /* GameView.cpp */,
+			);
+			name = BrickBreaker;
+			sourceTree = "<group>";
+		};
+		7A78809319C17C4200BFF491 /* BrickBreaker */ = {
+			isa = PBXGroup;
+			children = (
+				7A78809419C17C4200BFF491 /* circle.png */,
+				7A78809519C17C4200BFF491 /* paddle.png */,
+			);
+			path = BrickBreaker;
+			sourceTree = "<group>";
+		};
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1046,6 +1077,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7A0F1A9819BEE89F00679823 /* BrickBreaker */,
 				7A0F1A2819BEE2FC00679823 /* Buildings */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
@@ -1474,6 +1506,7 @@
 				D03F389019C00804001956BD /* Buis_Border.png in Resources */,
 				7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */,
 				D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */,
+				7A78809719C17C4200BFF491 /* paddle.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
@@ -1481,6 +1514,7 @@
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
 				7A8945B619ADAF3F008E1EA7 /* map-art.png in Resources */,
 				D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */,
+				7A78809619C17C4200BFF491 /* circle.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
 				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
@@ -1555,6 +1589,7 @@
 				7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */,
 				7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */,
 				7A0F1A5B19BEE2FC00679823 /* DormScene.cpp in Sources */,
+				7A0F1AA719BF03AB00679823 /* GameView.cpp in Sources */,
 				7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */,
@@ -1599,6 +1634,7 @@
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,
 				7A0F1A5719BEE2FC00679823 /* SciMed-Foyer.cpp in Sources */,
 				7A0F1A5119BEE2FC00679823 /* Art-Foyer.cpp in Sources */,
+				7A0F1AA419BEEEE800679823 /* BrickBreaker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
