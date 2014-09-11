@@ -25,11 +25,8 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(Men
     
     
     // create the new game button and place onto screen
-    auto PlayerNameReturn = MenuItemImage::create("New-Game-next_off.png",
-                                                  "New-Game-next_on.png",
-                                                  CC_CALLBACK_1(MenuNewGame::NextButtonCallback, that));
-    PlayerNameReturn->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400,
-                                       origin.y + (visibleSize.height / 2 - 250)));
+    auto PlayerNameReturn = MenuItemImage::create("New-Game-next_off.png","New-Game-next_on.png",CC_CALLBACK_1(MenuNewGame::NextButtonCallback, that));
+    PlayerNameReturn->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, origin.y + (visibleSize.height / 2 - 250)));
     
     pMenuItems.pushBack(PlayerNameReturn);
     

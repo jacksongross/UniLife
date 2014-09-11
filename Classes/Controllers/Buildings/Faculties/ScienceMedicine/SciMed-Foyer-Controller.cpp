@@ -123,7 +123,7 @@ void SciMedFoyerController::CreateMainMenu(SciMedFoyer *that, Size visibleSize, 
     foyerBoard->setScale(1);
     that->addChild(foyerBoard);
     
-    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("SCIENCE BITCH!", "Verdana", 15);
+    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("SCIENCE & MEDICINE", "Verdana", 15);
     LocName->setColor(Color3B(0,0,0));
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));

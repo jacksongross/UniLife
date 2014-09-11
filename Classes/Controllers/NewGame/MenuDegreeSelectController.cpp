@@ -23,21 +23,15 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuDegreeSelectController::CreateMenuButton
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
-    // create the new game button and place onto screen
-    auto backbutton = MenuItemImage::create("New-Game-Back.png",
-                                            "New-Game-Back.png",
-                                            CC_CALLBACK_1(MenuDegreeSelect::BackButtonCallback, that));
-    backbutton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 450,
-                                 origin.y + (visibleSize.height / 2 - 250)));
     
-    pMenuItems.pushBack(backbutton);
+    auto backButton = MenuItemImage::create("options-back.png", "options-back.png", CC_CALLBACK_1(MenuDegreeSelect::BackButtonCallback, that));
+    
+    backButton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 + 250));
+    pMenuItems.pushBack(backButton);
     
     
-    auto GoNext = MenuItemImage::create("New-Game-next_off.png",
-                                        "New-Game-next_on.png",
-                                        CC_CALLBACK_1(MenuDegreeSelect::NextButtonCallback, that));
-    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 + 100,
-                             origin.y + (visibleSize.height / 2 - 250)));
+    auto GoNext = MenuItemImage::create("New-Game-next_off.png","New-Game-next_on.png",CC_CALLBACK_1(MenuDegreeSelect::NextButtonCallback, that));
+    GoNext->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, origin.y + (visibleSize.height / 2 - 250)));
     
     pMenuItems.pushBack(GoNext);
     
@@ -62,7 +56,7 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
-    that->addChild(menu, 1);
+    that->addChild(menu, 6);
     
     // add "MenuScene" splash screen"
     auto sprite = Sprite::create("New-Game-background.png");
@@ -74,31 +68,22 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     that->addChild(sprite, 0);
     
     
+    Sprite *border = Sprite::create("New-Game-Border.png");
+    border->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y - 50));
+    that->addChild(border,1);
+    
+    
+    Sprite *degreetitle = Sprite::create("DegreeSelect_Title.png");
+    degreetitle->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
+    that->addChild(degreetitle,1);
+    
+    
+    
+    
     /*
-     ::JG::
-     Create Array From SQL Data
-     Set an Integer to the Size of the Vector (Or Use the Direct function Vector.size())
-     Make the Loop Below create Buttons to the size of the Vector
-     Use { model->setTitleText(<#const std::string &text#>); } to set the name of each button to its corresponding Data
-     Use { model->setTag to give the Button a unique tag ID
      
-     */
-    
-    
-    that->clist.push_back("Bachelor Of Computer Science");
-    that->ilist.push_back("Degree Information: \nCourse Duration: 3 Years\n The Bachelor of Computer Science is for People who\n\t A) Dont like Sleeping\n\t B) Are Masochists\n\t C) Like to Spend their free time doing assignments \ninstead of having fun \n D) Oh Dam");
-    that->clist.push_back("Bachelor Of Info Tech");
-    that->clist.push_back("Bachelor Of Swaggery");
-    that->clist.push_back("Master of Funk");
-    that->clist.push_back("PHD in Awesome");
-    that->clist.push_back("Bachelor of Sciency Stuff");
-    that->clist.push_back("PHD in Mediciney Stuff");
-    that->clist.push_back("Masters of Birdwatching");
-    that->clist.push_back("PHD in Kicking Ass");
-    that->clist.push_back("Bachelor of Chewing Gum");
-    that->clist.push_back("Bachelor Of Using Crayons");
-    
-    
+     THIS IS THE OLD CODE FOR THE MENU DEGREE SELECTION
+     
     
     cocos2d::ui::ListView* lv = cocos2d::ui::ListView::create();
     cocos2d::ui::Button* model = cocos2d::ui::Button::create("backtotoppressed.png", "backtotopnormal.png");
@@ -123,7 +108,8 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     lv->scrollToPercentBothDirection(Vec2(100,100), 0.1, false);
     lv->setPosition(Point(visibleSize.width/2 + origin.x - 100, visibleSize.height/2 + origin.y - 300));
     that->addChild(lv);
-    
+     
+
     
     std::string stringholder ="Selected Degree: ";
     
@@ -185,6 +171,8 @@ void MenuDegreeSelectController::CreateMainMenu(MenuDegreeSelect *that, Size vis
     SOCHolder->setColor(Color3B(0,0,0));
     SOCHolder->setTag(20);
     that->addChild(SOCHolder, 0);
+    
+    */
     
 }
 

@@ -140,6 +140,11 @@
 		D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C0199C290B00ECA5DA /* Icon-57.png */; };
 		D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C1199C290B00ECA5DA /* Icon-57@2x.png */; };
 		D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */; };
+		D03F388F19C00804001956BD /* Art_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388A19C00804001956BD /* Art_Border.png */; };
+		D03F389019C00804001956BD /* Buis_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388B19C00804001956BD /* Buis_Border.png */; };
+		D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388C19C00804001956BD /* DegreeSelect_Title.png */; };
+		D03F389219C00804001956BD /* EIS_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388D19C00804001956BD /* EIS_Border.png */; };
+		D03F389319C00804001956BD /* SocSci_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388E19C00804001956BD /* SocSci_Border.png */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
@@ -475,6 +480,11 @@
 		D03642C0199C290B00ECA5DA /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		D03642C1199C290B00ECA5DA /* Icon-57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x.png"; sourceTree = "<group>"; };
 		D03642C2199C290B00ECA5DA /* Icon-57@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57@2x~iphone.png"; sourceTree = "<group>"; };
+		D03F388A19C00804001956BD /* Art_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Art_Border.png; sourceTree = "<group>"; };
+		D03F388B19C00804001956BD /* Buis_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Buis_Border.png; sourceTree = "<group>"; };
+		D03F388C19C00804001956BD /* DegreeSelect_Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DegreeSelect_Title.png; sourceTree = "<group>"; };
+		D03F388D19C00804001956BD /* EIS_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EIS_Border.png; sourceTree = "<group>"; };
+		D03F388E19C00804001956BD /* SocSci_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SocSci_Border.png; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
@@ -1204,6 +1214,11 @@
 		7AB6AB1319AEDDF5003CCD7E /* NewCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				D03F388A19C00804001956BD /* Art_Border.png */,
+				D03F388B19C00804001956BD /* Buis_Border.png */,
+				D03F388C19C00804001956BD /* DegreeSelect_Title.png */,
+				D03F388D19C00804001956BD /* EIS_Border.png */,
+				D03F388E19C00804001956BD /* SocSci_Border.png */,
 				7AB6AB1419AEDDF5003CCD7E /* backtotopnormal.png */,
 				7AB6AB1519AEDDF5003CCD7E /* backtotoppressed.png */,
 				7AB6AB1619AEDDF5003CCD7E /* Blue-button.png */,
@@ -1456,11 +1471,14 @@
 				7AB6AB3019AEDDF5003CCD7E /* New-Game-next_off.png in Resources */,
 				7AB6AB3619AEDDF5003CCD7E /* New-Game-textbox.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
+				D03F389019C00804001956BD /* Buis_Border.png in Resources */,
 				7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */,
 				D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
+				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
+				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
 				7A8945B619ADAF3F008E1EA7 /* map-art.png in Resources */,
 				D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
@@ -1494,11 +1512,13 @@
 				D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */,
 				7AB6AB3519AEDDF5003CCD7E /* New-Game-text.png in Resources */,
 				D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */,
+				D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */,
 				7A8945A619ADAF3F008E1EA7 /* new_game_off.png in Resources */,
 				7AB6AB3219AEDDF5003CCD7E /* New-Game-slider.png in Resources */,
 				7A89459919ADAF3F008E1EA7 /* bill_inside.png in Resources */,
 				7A8945AC19ADAF3F008E1EA7 /* options-back.png in Resources */,
 				7A8945BC19ADAF3F008E1EA7 /* map-social_science.png in Resources */,
+				D03F389219C00804001956BD /* EIS_Border.png in Resources */,
 				7A8945B819ADAF3F008E1EA7 /* map-computing_engineering.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */,
