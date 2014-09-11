@@ -20,6 +20,7 @@
 #include <sstream>
 #include "BrickBreaker.h"
 #include "GameView.h"
+#include "PauseMenu.h"
 
 USING_NS_CC;
 PlayerModel pm;
@@ -114,7 +115,7 @@ void DormScene::UpdateTimer(float dt)
     
     TimeHelper th = pm.getGameTime();
     double time = th.getHoursMinutes() + 0.5;
-    log("Time currently: %.2f", time);
+    //log("Time currently: %.2f", time);
     
     time > 12 ? ampm = "pm" : ampm = "am";
 
@@ -144,18 +145,11 @@ void DormScene::UpdateTimer(float dt)
 
 void DormScene::PausedPressed(Ref* pSender)
 {
-    if(isPaused == false)
-    {
         Director::getInstance()->pause();
-        isPaused = true;
         log("Pausing the game");
-    }
-    else
-    {
-        Director::getInstance()->resume();
-        isPaused = false;
-        log("Resuming the game");
-    }
+        
+        auto scene = PauseMenu::createScene();
+        Director::getInstance()->pushScene(scene);
 }
 
 void DormScene::DoorPressed(cocos2d::Ref *pSender)

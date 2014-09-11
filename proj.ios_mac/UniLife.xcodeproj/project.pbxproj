@@ -54,6 +54,7 @@
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
 		7A78809619C17C4200BFF491 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809419C17C4200BFF491 /* circle.png */; };
 		7A78809719C17C4200BFF491 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809519C17C4200BFF491 /* paddle.png */; };
+		7A7880A419C18F4B00BFF491 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */; };
 		7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452219ADACFC008E1EA7 /* MapController.cpp */; };
 		7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452519ADACFC008E1EA7 /* MenuController.cpp */; };
 		7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452819ADACFC008E1EA7 /* MenuLoadController.cpp */; };
@@ -377,6 +378,8 @@
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
 		7A78809419C17C4200BFF491 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		7A78809519C17C4200BFF491 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		7A7880A219C18F3F00BFF491 /* PauseMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
+		7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseMenu.cpp; sourceTree = "<group>"; };
 		7A89452219ADACFC008E1EA7 /* MapController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapController.cpp; sourceTree = "<group>"; };
 		7A89452319ADACFC008E1EA7 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		7A89452519ADACFC008E1EA7 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -946,9 +949,26 @@
 			path = BrickBreaker;
 			sourceTree = "<group>";
 		};
+		7A78809919C18F1C00BFF491 /* PauseMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7A7880A219C18F3F00BFF491 /* PauseMenu.h */,
+				7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */,
+			);
+			name = PauseMenu;
+			sourceTree = "<group>";
+		};
+		7A7880A119C18F2500BFF491 /* PauseMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PauseMenu;
+			sourceTree = "<group>";
+		};
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7A7880A119C18F2500BFF491 /* PauseMenu */,
 				7A0F1A6019BEE3F400679823 /* Buildings */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
 				7A89452119ADACFC008E1EA7 /* Map */,
@@ -1077,6 +1097,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7A78809919C18F1C00BFF491 /* PauseMenu */,
 				7A0F1A9819BEE89F00679823 /* BrickBreaker */,
 				7A0F1A2819BEE2FC00679823 /* Buildings */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
@@ -1599,6 +1620,7 @@
 				7A0F1A5D19BEE2FC00679823 /* LibraryRooms.cpp in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
 				7A0F1A5219BEE2FC00679823 /* Art-Hallway.cpp in Sources */,
+				7A7880A419C18F4B00BFF491 /* PauseMenu.cpp in Sources */,
 				7A0F1A5A19BEE2FC00679823 /* SocSci-Hallway.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,

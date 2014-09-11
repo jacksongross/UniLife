@@ -96,7 +96,7 @@ void GameView::addNewSpriteAtPosition(Point p)
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
-    for(int i=0; i < 1; i++)
+    for(int i=0; i < 10; i++)
     {
         auto sprite = Sprite::create("circle.png");
         sprite->setScale(0.05f);
@@ -140,9 +140,6 @@ void GameView::addPaddle()
     paddle->setPhysicsBody(body);
     paddle->setPosition(Point(visibleSize.width / 2, 200));
     this->addChild(paddle);
-  
-    
-    
     
 }
 
