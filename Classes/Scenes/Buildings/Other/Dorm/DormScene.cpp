@@ -114,16 +114,52 @@ void DormScene::UpdateTimer(float dt)
     std::ostringstream stringStream;
     
     TimeHelper th = pm.getGameTime();
-    double time = th.getHoursMinutes() + 0.5;
-    //log("Time currently: %.2f", time);
     
-    time > 12 ? ampm = "pm" : ampm = "am";
+    // set some local variables for manipulation
+    double hour = th.getHoursMinutes() + 0.5;
+    int day = th.getDay();
+    int week = th.getWeek();
+    int semester = th.getSemester();
+    
+    if( hour > 11.5) // roll over to afternoon
+    {
+        ampm = "pm";
+    }
+    else
+    {
+        ampm = "am";
+    }
+    
+    if(hour > 23.5) // roll over to new day
+    {
+        hour = 12;
+        ampm = "am";
+        
+        if(day ==  7) // roll over to new week
+        {
+            day = 1;
+            
+            if(week == 16) // roll over to new semester
+            {
+                week = 1;
+                
+                if(semester == 6) // game over
+                {
+                    log("...GAME OVER...");
+                }
+                
+                else semester++;
+            }
+            
+            else week++;
+        }
+        
+        else day++;
+    }
 
-    time > 23.5 ? time = 0 : time;
+    stringStream << (int)hour << ":";
     
-    stringStream << (int)time << ":";
-    
-    if((time + 0.5) == ceil(time))
+    if((hour + 0.5) == ceil(hour))
     {
         stringStream << "30" << ampm;
     }
@@ -132,10 +168,16 @@ void DormScene::UpdateTimer(float dt)
         stringStream << "00" << ampm;
     }
     
+    // update the timer with the new time
     this->timer->setString(stringStream.str());
     
-    th.setHoursMinutes(time);
+    // persist stat changes
+    th.setHoursMinutes(hour);
+    th.setDay(day);
+    th.setWeek(week);
+    th.setSemester(semester);
     
+    // persist changes to player object
     pm.setGameTime(th);
     
     //Added an update for the HUD Stress & Energy Bars
