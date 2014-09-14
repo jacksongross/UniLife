@@ -10,8 +10,8 @@
 
 TimeHelper::TimeHelper()
 {
-    day = week = semester = 0;
-    hoursMinutes = 0;
+    day = week = semester = 1; // year one, week one, day one
+    hoursMinutes = 8; // 8am start !! get up!!
 }
 
 TimeHelper::TimeHelper(int day, int week, int semester, double hoursMinutes)

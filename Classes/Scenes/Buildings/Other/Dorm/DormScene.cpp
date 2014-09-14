@@ -21,6 +21,7 @@
 #include "BrickBreaker.h"
 #include "GameView.h"
 #include "PauseMenu.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 PlayerModel pm;
@@ -196,6 +197,7 @@ void DormScene::PausedPressed(Ref* pSender)
 
 void DormScene::DoorPressed(cocos2d::Ref *pSender)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("doorOpen.wav");
     log("you have touched the door!");
     // transition to the load game scene
     auto scene = MapScene::createScene(pm);

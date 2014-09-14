@@ -12,10 +12,13 @@
 #include "MenuScene.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
-#include "cocos2d.h"
 #include "MenuController.h"
 #include "MenuOptionScene.h"
 #include <vector>
+#include "ExtensionMacros.h"
+#include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+#include "ui/CocosGUI.h"
 
 USING_NS_CC;
 

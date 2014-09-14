@@ -23,6 +23,8 @@ public:
     void resumeCallback(cocos2d::Ref *pSender);
     
     void saveCallback(cocos2d::Ref *pSender);
+    
+    void quitCallback(cocos2d::Ref *pSender);
 
     // implement the "static create()" method manually
     CREATE_FUNC(PauseMenu);

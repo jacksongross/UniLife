@@ -52,6 +52,7 @@
 		7A0F1AA419BEEEE800679823 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */; };
 		7A0F1AA719BF03AB00679823 /* GameView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA619BF03AB00679823 /* GameView.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
+		7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DBD7419C576FF006A83CB /* doorOpen.wav */; };
 		7A78809619C17C4200BFF491 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809419C17C4200BFF491 /* circle.png */; };
 		7A78809719C17C4200BFF491 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809519C17C4200BFF491 /* paddle.png */; };
 		7A7880A419C18F4B00BFF491 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */; };
@@ -376,6 +377,7 @@
 		7A0F1AA519BF03A200679823 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
 		7A0F1AA619BF03AB00679823 /* GameView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameView.cpp; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
+		7A6DBD7419C576FF006A83CB /* doorOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorOpen.wav; sourceTree = "<group>"; };
 		7A78809419C17C4200BFF491 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		7A78809519C17C4200BFF491 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
 		7A7880A219C18F3F00BFF491 /* PauseMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A6DBD7319C576FF006A83CB /* SoundEffects */,
 				7A78809319C17C4200BFF491 /* BrickBreaker */,
 				D0D709D419BEB56E0023B5A6 /* LibraryAssets */,
 				D031093019B447A20030B59F /* Tavern */,
@@ -938,6 +941,14 @@
 				7A0F1AA619BF03AB00679823 /* GameView.cpp */,
 			);
 			name = BrickBreaker;
+			sourceTree = "<group>";
+		};
+		7A6DBD7319C576FF006A83CB /* SoundEffects */ = {
+			isa = PBXGroup;
+			children = (
+				7A6DBD7419C576FF006A83CB /* doorOpen.wav */,
+			);
+			path = SoundEffects;
 			sourceTree = "<group>";
 		};
 		7A78809319C17C4200BFF491 /* BrickBreaker */ = {
@@ -1530,6 +1541,7 @@
 				7A78809719C17C4200BFF491 /* paddle.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
+				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,

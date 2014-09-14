@@ -62,3 +62,13 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
     
 }
 
+void MenuOptionScene::backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type)
+{
+    auto bgMusicSlider = (cocos2d::ui::Slider*) this->getChildByTag(2);
+    double audioLevel = bgMusicSlider->getPercent() / 10 / 10;
+    
+    log("%f", audioLevel);
+
+    
+}
+

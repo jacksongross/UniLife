@@ -10,6 +10,8 @@
 #define UniLife_MenuOptionScene_h
 
 #include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+#include "ui/CocosGUI.h"
 
 class MenuOptionScene : public cocos2d::Layer
 {
@@ -22,8 +24,11 @@ public:
     
     void backButtonCallback(Ref* pSender);
     
+    void backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
+    
     // implement the "static create()" method manually
     CREATE_FUNC(MenuOptionScene);
+    
 };
 
 #endif

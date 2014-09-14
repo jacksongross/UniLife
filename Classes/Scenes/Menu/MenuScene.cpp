@@ -82,10 +82,7 @@ void MenuScene::optionsCallback(Ref* pSender)
     
     // transition to the menu options scene
     
-    PlayerModel p;
-    p.setName("Jackson Gross");
-    
-    auto scene = DormScene::createScene(p);
+    auto scene = MenuOptionScene::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
