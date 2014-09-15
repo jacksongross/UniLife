@@ -9,6 +9,7 @@
 #include <vector>
 #include "DormScene.h"
 #include "MenuLoadScene.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
@@ -36,6 +37,8 @@ bool MenuScene::init()
     {
         return false;
     }
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("background-music-aac.wav", true);
     
     // checks if the database initialisation has been run before
     // to ensure it gets seeded once
