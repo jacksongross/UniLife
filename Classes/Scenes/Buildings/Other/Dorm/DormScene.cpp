@@ -57,6 +57,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     
     // Report on the loaded player object
     log("==========PLAYER IN DORM==========");
+    log("PLAYER ID: %d", inplayer.getId());
     log("NAME: %s", inplayer.getName().c_str());
     log("INT: %d", inplayer.getStats().getIntelligence());
     log("STA: %d", inplayer.getStats().getStamina());
@@ -197,6 +198,7 @@ void DormScene::PausedPressed(Ref* pSender)
 
 void DormScene::DoorPressed(cocos2d::Ref *pSender)
 {
+    log("playing the door sound effect");
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("doorOpen.wav");
     log("you have touched the door!");
     // transition to the load game scene
@@ -225,6 +227,7 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     pm.setGameTime(newTime);
     UpdateMeters(pm.getStats());
     
+    log("PLAYER ID: %d", pm.getId());
     log("NAME: %s", pm.getName().c_str());
     log("INT: %d", pm.getStats().getIntelligence());
     log("STA: %d", pm.getStats().getStamina());

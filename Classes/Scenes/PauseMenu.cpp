@@ -125,7 +125,9 @@ void PauseMenu::saveCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the save button!");
     
-    SqlHelper::serialize(pm);
+    SqlHelper::autosave(pm);
+    
+    //SqlHelper::serialize(pm);
     
     log("game saved!");
     

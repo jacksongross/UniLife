@@ -36,6 +36,9 @@ public:
     // serialize a player to the database
     static void serialize(PlayerModel player);
     
+    // overwrite existing player data in database
+    static void autosave(PlayerModel player);
+    
     // get list of all players
     static std::vector<PlayerModel> getAllPlayers();
     

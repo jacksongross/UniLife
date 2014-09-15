@@ -131,6 +131,46 @@ void SqlHelper::serialize(PlayerModel p)
 
 }
 
+// overwrite existing player data in database
+void SqlHelper::autosave(PlayerModel p)
+{
+    // set the db pointer to null ready for a query
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    // used to create the query
+    std::string sql;
+    
+    // store sqlite result
+    int result;
+    
+    // create statement with this
+    sqlite3_stmt *Stmt;
+    
+    PlayerStatsModel m = p.getStats();
+    TimeHelper t = p.getGameTime();
+    
+    std::stringstream strm;
+    
+    strm << "UPDATE player SET intelligence = " << m.getIntelligence() << ", stamina = " << m.getStamina() << ", social = " << m.getSocial() << ", money = " << m.getMoney() << ", energy = " << m.getEnergy() << ", stress = " << m.getStress() << ", scene = '" << p.getScene() << "', day = " << t.getDay() << ", week = " << t.getWeek() << ", semester = " << t.getSemester() << ", hoursminutes = " << t.getHoursMinutes() << " WHERE id = " << p.getId();
+    
+    
+    //strm << "INSERT INTO player (name, degree, intelligence, stamina, social, money, energy, stress, scene, day, week, semester, hoursminutes) VALUES('" << p.getName() << "','" << p.getDegree() << "'," << m.getIntelligence() << "," << m.getStamina() << "," << m.getSocial() << "," << m.getMoney() << "," << m.getEnergy() << "," << m.getStress() << ",'" << p.getScene() << "'," << t.getDay() << "," << t.getWeek() << "," << t.getSemester() << "," << t.getHoursMinutes() << ")";
+    
+    sql = strm.str();
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmt, NULL ) == SQLITE_OK)
+    {
+        int res=sqlite3_step(Stmt);
+        result=res;
+        sqlite3_finalize(Stmt);
+        log("player save updated!");
+    }
+    
+    SqlHelper::closeDatabase(db);
+
+}
+
+
 // get list of all players
 std::vector<PlayerModel> SqlHelper::getAllPlayers()
 {
