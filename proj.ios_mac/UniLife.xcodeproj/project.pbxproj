@@ -171,6 +171,7 @@
 		D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D719BEB6290023B5A6 /* Library_Foyer.png */; };
 		D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D819BEB6290023B5A6 /* Library_Rooms.png */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
+		D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E4680819C6A2D800254367 /* SciMed_Border.png */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
 		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
@@ -520,6 +521,7 @@
 		D0D709D719BEB6290023B5A6 /* Library_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Foyer.png; path = LibraryAssets/Library_Foyer.png; sourceTree = "<group>"; };
 		D0D709D819BEB6290023B5A6 /* Library_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Rooms.png; path = LibraryAssets/Library_Rooms.png; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		D0E4680819C6A2D800254367 /* SciMed_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SciMed_Border.png; sourceTree = "<group>"; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
 		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = InsideViewSprites/whiteboard.png; sourceTree = "<group>"; };
@@ -1278,6 +1280,7 @@
 		7AB6AB1319AEDDF5003CCD7E /* NewCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				D0E4680819C6A2D800254367 /* SciMed_Border.png */,
 				D03F388A19C00804001956BD /* Art_Border.png */,
 				D03F388B19C00804001956BD /* Buis_Border.png */,
 				D03F388C19C00804001956BD /* DegreeSelect_Title.png */,
@@ -1509,6 +1512,7 @@
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				7AB6AB2B19AEDDF5003CCD7E /* Blue-button.png in Resources */,
 				7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */,
+				D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */,
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,

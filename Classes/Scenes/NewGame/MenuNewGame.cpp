@@ -10,6 +10,7 @@
 
 #include "MenuScene.h"
 #include "PlayerModel.h"
+#include "PlayerStatsModel.h"
 #include "SqlHelper.h"
 #include "cocos2d.h"
 #include "MenuNewGameController.h"
@@ -20,10 +21,7 @@
 #include <MenuDegreeSelect.h>
 
 USING_NS_CC;
-std::string g_PNAME;
-int g_PINT;
-int g_PSOC;
-int g_PSTA;
+PlayerModel newplayer;
 
 Scene* MenuNewGame::createScene()
 {
@@ -62,6 +60,10 @@ bool MenuNewGame::init()
 
 void MenuNewGame::NextButtonCallback(Ref* pSender)
 {
+    std::string g_PNAME;
+    int g_PINT;
+    int g_PSOC;
+    int g_PSTA;
     
     log("Next Button Pressed");
     
@@ -84,15 +86,23 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
             log("%d",inteperc->getPercent()/5);
         }
         
+        PlayerStatsModel tmp;
         
-        
-        auto scene = MenuDegreeSelect::createScene();
+        newplayer.setName(g_PNAME);
+        tmp = newplayer.getStats();
+        tmp.setIntelligence(g_PINT);
+        tmp.setStamina(g_PSTA);
+        tmp.setSocial(g_PSOC);
+        tmp.setEnergy(100);
+        tmp.setStress(0);
+        newplayer.setStats(tmp);
+        newplayer.setScene("DormScene");
+        auto scene = MenuDegreeSelect::createScene(newplayer);
         TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
         Director::getInstance()->replaceScene(crosssfade);
     }else{
         log("Cannot Go Until 20 Points Spent");
     }
-    
     
 }
 
