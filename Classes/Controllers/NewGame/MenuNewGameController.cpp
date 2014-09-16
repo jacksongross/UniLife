@@ -27,22 +27,21 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(Men
     // create the new game button and place onto screen
     auto PlayerNameReturn = MenuItemImage::create("New-Game-next_off.png","New-Game-next_on.png",CC_CALLBACK_1(MenuNewGame::NextButtonCallback, that));
     PlayerNameReturn->setPosition(Vec2(origin.x + visibleSize.width / 2 + 400, origin.y + (visibleSize.height / 2 - 250)));
-    
+    PlayerNameReturn->setName("NextButton");
     pMenuItems.pushBack(PlayerNameReturn);
     
     
     // create the back button
     auto backButton = MenuItemImage::create("options-back.png", "options-back.png", CC_CALLBACK_1(MenuNewGame::backButtonCallback, that));
-    
     backButton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 + 250));
+    backButton->setName("BackButton");
     pMenuItems.pushBack(backButton);
     
     
     auto quizbutton = MenuItemImage::create("New-Game-take_quiz_off.png","New-Game-take_quiz_off.png");
     quizbutton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, visibleSize.height / 2 -250));
+    quizbutton->setName("QuizButton");
     pMenuItems.pushBack(quizbutton);
-    
-    
     
     
     return pMenuItems;
@@ -70,7 +69,6 @@ void MenuNewGameController::CreateMainMenu(MenuNewGame *that, Size visibleSize, 
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
-    
     
     
     Sprite *border = Sprite::create("New-Game-Border.png");

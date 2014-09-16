@@ -24,8 +24,6 @@
 USING_NS_CC;
 
 extern PlayerModel newplayer;
-int last;
-int facultySelected;
 
 Scene* MenuDegreeSelect::createScene()
 {
@@ -144,39 +142,7 @@ void MenuDegreeSelect::EIS_Selected(Ref* pSender)
     
     log("Faculty 1 Selected :: EIS");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    auto s1 = (cocos2d::ui::ListView*)this->getChildByTag(20);
-    this->removeChild(s1);
-    
-    ui::ListView* lv = ui::ListView::create();
-    ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
-    model->setFontSize(40);
-    
-    lv->setItemModel(model);
-    
-    for (int i=0; i < degrees.size(); i++)
-    {
-        if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            model->setTag(50+i);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
-        }
-    }
-    lv->setItemsMargin(10);
-    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
-    lv->setSize(Size(500, 350));
-    lv->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 - 190));
-    lv->setTag(20);
-
-    this->addChild(lv, 6);
+    loadthelist(last);
 
     
     
@@ -189,39 +155,7 @@ void MenuDegreeSelect::Buis_Selected(Ref* pSender)
     
     log("Faculty 2 Selected :: Buis");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    auto s1 = (cocos2d::ui::ListView*)this->getChildByTag(20);
-    this->removeChild(s1);
-    
-    ui::ListView* lv = ui::ListView::create();
-    ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
-    model->setFontSize(40);
-    
-    lv->setItemModel(model);
-    
-    for (int i=0; i < degrees.size(); i++)
-    {
-        if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            model->setTag(50+i);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
-        }
-    }
-    lv->setItemsMargin(10);
-    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
-    lv->setSize(Size(500, 350));
-    lv->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 - 190));
-    lv->setTag(20);
-    
-    this->addChild(lv, 6);
+    loadthelist(last);
 
 }
 
@@ -232,39 +166,7 @@ void MenuDegreeSelect::Art_Selected(Ref* pSender)
     
     log("Faculty 3 Selected :: Art");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    auto s1 = (cocos2d::ui::ListView*)this->getChildByTag(20);
-    this->removeChild(s1);
-    
-    ui::ListView* lv = ui::ListView::create();
-    ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
-    model->setFontSize(40);
-    
-    lv->setItemModel(model);
-    
-    for (int i=0; i < degrees.size(); i++)
-    {
-        if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            model->setTag(50+i);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
-        }
-    }
-    lv->setItemsMargin(10);
-    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
-    lv->setSize(Size(500, 350));
-    lv->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 - 190));
-    lv->setTag(20);
-    
-    this->addChild(lv, 6);
+    loadthelist(last);
 
 }
 
@@ -274,39 +176,8 @@ void MenuDegreeSelect::SocSci_Selected(Ref* pSender)
     
     log("Faculty 4 Selected :: SocSci");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    auto s1 = (cocos2d::ui::ListView*)this->getChildByTag(20);
-    this->removeChild(s1);
-    
-    ui::ListView* lv = ui::ListView::create();
-    ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
-    model->setFontSize(40);
-    
-    lv->setItemModel(model);
-    
-    for (int i=0; i < degrees.size(); i++)
-    {
-        if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            model->setTag(50+i);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
-        }
-    }
-    lv->setItemsMargin(10);
-    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
-    lv->setSize(Size(500, 350));
-    lv->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 - 190));
-    lv->setTag(20);
-    
-    this->addChild(lv, 6);
+    loadthelist(last);
     
     
 }
@@ -317,41 +188,7 @@ void MenuDegreeSelect::SciMed_Selected(Ref* pSender)
     
     log("Faculty 5 Selected :: SciMed");
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    auto s1 = (cocos2d::ui::ListView*)this->getChildByTag(20);
-    this->removeChild(s1);
-    
-    ui::ListView* lv = ui::ListView::create();
-    ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
-    model->setFontSize(40);
-    
-    lv->setItemModel(model);
-    std::string setter;
-    
-    for (int i=0; i < degrees.size(); i++)
-    {
-        if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            model->setTag(50+i);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
-        }
-    }
-    lv->setItemsMargin(10);
-    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
-    lv->setSize(Size(500, 350));
-    lv->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 - 190));
-    lv->setTag(20);
-    
-    this->addChild(lv, 6);
-
+    loadthelist(last);
     
 }
 
@@ -370,6 +207,7 @@ void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Text::TouchEventType t
         {
             log("Selected: %s",degrees[whosent].getDegreeName().c_str());
             newplayer.setDegree(degrees[whosent].getDegreeName());
+            loadthelist(whosent);
             break;
 
         }
@@ -379,7 +217,7 @@ void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Text::TouchEventType t
 
 }
 
-void MenuDegreeSelect::loadthelist(){
+void MenuDegreeSelect::loadthelist(int withopt){
 
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -388,7 +226,6 @@ void MenuDegreeSelect::loadthelist(){
     this->removeChild(s1);
     ui::ListView* lv = ui::ListView::create();
     ui::Text* model = ui::Text::create();
-    model->setColor(Color3B::BLACK);
     model->setFontSize(40);
     
     lv->setItemModel(model);
@@ -397,19 +234,39 @@ void MenuDegreeSelect::loadthelist(){
     for (int i=0; i < degrees.size(); i++)
     {
         if(facultySelected == degrees[i].getFacultyID()){
-            model->setString(degrees[i].getDegreeName());
-            model->setTouchEnabled(true);
-            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-            
-            compiled = facultySelected;
-            compiled += " ";
-            compiled += i;
-            
-            model->setName(compiled);
-            model->setTextAreaSize(Size(500,80));
-            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-            lv->pushBackDefaultItem();
+            if(withopt == i){
+                model->setString(degrees[i].getDegreeName());
+                model->setTouchEnabled(true);
+                model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
+                model->setScale(1.2);
+                model->setColor(Color3B::RED);
+                model->setBrightStyle(cocos2d::ui::Widget::BrightStyle::HIGHLIGHT);
+                compiled = facultySelected;
+                compiled += " ";
+                compiled += i;
+                last = i;
+                model->setName(compiled);
+                model->setTextAreaSize(Size(500,80));
+                model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+                model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
+                lv->pushBackDefaultItem();
+            }else{
+                model->setColor(Color3B::BLACK);
+                model->setString(degrees[i].getDegreeName());
+                model->setTouchEnabled(true);
+                model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
+                
+                compiled = facultySelected;
+                compiled += " ";
+                compiled += i;
+                model->setScale(1.0);
+                model->setName(compiled);
+                model->setTextAreaSize(Size(500,80));
+                model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+                model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
+                lv->pushBackDefaultItem();
+                
+            }
         }
     }
     lv->setItemsMargin(10);
