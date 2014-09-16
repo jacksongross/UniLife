@@ -19,7 +19,6 @@
 #include <string>
 #include <vector>
 #include <MenuDegreeSelect.h>
-#include "MenuNewGameHandler.h"
 
 USING_NS_CC;
 PlayerModel newplayer;
