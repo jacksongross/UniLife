@@ -49,6 +49,8 @@ bool MenuOptionScene::init()
     // create the main menu
     MenuOptionController::CreateMainMenu(this, visibleSize, origin);
     
+    
+    
     return true;
 }
 
@@ -65,7 +67,7 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
 
 void MenuOptionScene::debugButtonCallback(Ref* pSender)
 {
-    log("Running Minigame 1!");
+    log("Debug Screen!");
     
     auto scene = Debugger::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -89,6 +91,25 @@ void MenuOptionScene::backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Sli
     log("Background music volume changed to %0.2f", actualLevel);
     
 
+    
+}
+
+
+
+void MenuOptionScene::soundEffectsSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type)
+{
+    auto effectsSlider = (cocos2d::ui::Slider*) this->getChildByTag(3);
+    double audioLevel = effectsSlider->getPercent() / 10;
+    
+    float actualLevel = audioLevel / 10;
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->setEffectsVolume(actualLevel);
+    
+    actualLevel = CocosDenshion::SimpleAudioEngine::getInstance()->getEffectsVolume();
+    
+    log("Sound Effects volume changed to %0.2f", actualLevel);
+    
+    
     
 }
 

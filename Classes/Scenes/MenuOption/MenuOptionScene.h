@@ -26,7 +26,7 @@ public:
     void debugButtonCallback(Ref* pSender);
     
     void backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
-    
+    void soundEffectsSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
     // implement the "static create()" method manually
     CREATE_FUNC(MenuOptionScene);
     

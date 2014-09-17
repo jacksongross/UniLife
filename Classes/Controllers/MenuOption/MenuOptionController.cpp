@@ -75,9 +75,9 @@ void MenuOptionController::CreateMainMenu(MenuOptionScene *that, Size visibleSiz
     
     //INTELLIGENCE STAT DISPLAY DATA
     
-    cocos2d::ui::Text* backgroundLabel = cocos2d::ui::Text::create("Background Music", "Verdana", 30);
+    cocos2d::ui::Text* backgroundLabel = cocos2d::ui::Text::create("Music", "Verdana", 30);
     backgroundLabel->setContentSize(Size(300, 50));
-    backgroundLabel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 + 40));
+    backgroundLabel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 + 120));
     backgroundLabel->setTextHorizontalAlignment(TextHAlignment::RIGHT);
     backgroundLabel->setColor(Color3B::BLACK);
     that->addChild(backgroundLabel, 2);
@@ -89,10 +89,38 @@ void MenuOptionController::CreateMainMenu(MenuOptionScene *that, Size visibleSiz
     backgroundSlider->setScale9Enabled(true);
     backgroundSlider->setCapInsets(Rect(0, 0, 0, 0));
     backgroundSlider->setContentSize(Size(250.0f, 19));
-    backgroundSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 30));
+    backgroundSlider->setPercent(100);
+    backgroundSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 110));
     backgroundSlider->setScale(2.0);
     backgroundSlider->addEventListener(CC_CALLBACK_2(MenuOptionScene::backgroundMusicSliderChange, that));
     backgroundSlider->setTag(2);
     that->addChild(backgroundSlider, 3);
+    
+    
+    
+    cocos2d::ui::Text* soundEffectLabel = cocos2d::ui::Text::create("Effects", "Verdana", 30);
+    soundEffectLabel->setContentSize(Size(300, 50));
+    soundEffectLabel->setPosition(Vec2(origin.x + visibleSize.width / 2 - 270 , visibleSize.height / 2 ));
+    soundEffectLabel->setTextHorizontalAlignment(TextHAlignment::RIGHT);
+    soundEffectLabel->setColor(Color3B::BLACK);
+    that->addChild(soundEffectLabel, 2);
+    
+    cocos2d::ui::Slider* soundEffectSlider = cocos2d::ui::Slider::create();
+    soundEffectSlider->loadBarTexture("sliderTrack2.png");
+    soundEffectSlider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
+    soundEffectSlider->loadProgressBarTexture("slider_bar_active_9patch.png");
+    soundEffectSlider->setScale9Enabled(true);
+    soundEffectSlider->setCapInsets(Rect(0, 0, 0, 0));
+    soundEffectSlider->setContentSize(Size(250.0f, 19));
+    soundEffectSlider->setPercent(100);
+    soundEffectSlider->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 -10));
+    soundEffectSlider->setScale(2.0);
+    soundEffectSlider->addEventListener(CC_CALLBACK_2(MenuOptionScene::soundEffectsSliderChange, that));
+    soundEffectSlider->setTag(3);
+    that->addChild(soundEffectSlider, 3);
+    
+    
+    
+    
     
 }
