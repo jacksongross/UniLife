@@ -14,7 +14,7 @@
 #include "MenuOptionController.h"
 #include "MenuOptionScene.h"
 #include <vector>
-
+#include "Debugger.h"
 USING_NS_CC;
 
 Scene* MenuOptionScene::createScene()
@@ -61,6 +61,19 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+
+void MenuOptionScene::debugButtonCallback(Ref* pSender)
+{
+    log("Running Minigame 1!");
+    
+    auto scene = Debugger::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+
 
 void MenuOptionScene::backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type)
 {

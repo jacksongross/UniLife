@@ -102,7 +102,6 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
         Director::getInstance()->replaceScene(crosssfade);
     }else{
         log("Cannot Go Until 20 Points Spent");
-        createoverlay(1);
     }
     
 }
@@ -117,7 +116,6 @@ void MenuNewGame::backButtonCallback(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
-
 
 
 void MenuNewGame::intSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType type)
@@ -226,20 +224,5 @@ void MenuNewGame::socSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType t
 
     
 }
-
-
-
-
-void MenuNewGame::createoverlay(int code){
-    
-    
-    auto scene = MenuDegreeSelect::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
-    
-}
-
-
-
 
 

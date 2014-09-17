@@ -16,6 +16,7 @@
 #include <string>
 #include <vector>
 #include "MapScene.h"
+#include "LogicGame.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -90,6 +91,7 @@ void LibraryRooms::ToFoyer(Ref* pSender)
 void LibraryRooms::ToMeet1(Ref* pSender){
   
     log("You Went To Meeting Room 1");
+    
     
 }
 
