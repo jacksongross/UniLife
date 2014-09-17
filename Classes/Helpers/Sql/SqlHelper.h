@@ -16,6 +16,7 @@
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"
 #include "cocos2d.h"
+#include "subjectBlockClassModel.h"
 
 class SqlHelper
 {
@@ -50,6 +51,18 @@ public:
 
     // retrieve degree names from the database
     static std::vector<std::string> getDegrees();
+    
+    
+   static int getDegreeCode(std::string dname);
+    
+    //below code pulls class data from the database in order to allocate to timetable
+    static std::vector<std::string> getClasses(int degnum, int year);
+    
+    static std::vector<subjectBlockClassModel> getBlocks(std::vector<std::string> code);
+    
+    //gets assignments for one subject
+   static std::vector<int> getAssignments(std::string code);
+    
 };
 
 #endif

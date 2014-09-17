@@ -14,11 +14,12 @@ subjectBlockClassModel::subjectBlockClassModel(){
     subjNameString = "Free";
 }
 
-subjectBlockClassModel::subjectBlockClassModel(int timeInt, string nameString){
+subjectBlockClassModel::subjectBlockClassModel(char cID, int timeInt, string nameString){
     
     theTimeInt = timeInt;
     subjNameString = nameString;
     startTimeInt = -1;
+    classID=cID;
 }
 
 

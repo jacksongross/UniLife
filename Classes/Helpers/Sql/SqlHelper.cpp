@@ -14,6 +14,7 @@
 #include "PlayerStatsModel.h"
 #include "cocos2d.h"
 #include <cstdlib>
+#include <fstream>
 
 USING_NS_CC;
 
@@ -92,7 +93,27 @@ void SqlHelper::initDatabase()
     // close the database
     SqlHelper::closeDatabase(db);
     
-
+    //THE BELOW CODE MOVES THE ACADAMIA DATABASE TO A WORKING DIRECTORY
+    
+    CCFileUtils* fileUtils = CCFileUtils::sharedFileUtils();
+    long size = 5;
+    
+    unsigned char* smth;
+    smth = fileUtils->getFileData("acadamia.db","r", &size);
+    
+    
+        //shoudl do a file check here somewhere- will write this later
+    std::string path =  CCFileUtils::getInstance()->getWritablePath();
+    path += "acadamia.db";
+    
+    char buffer[300];
+    sprintf(buffer,"PATH: %s\n",path.c_str());
+   
+    std::fstream outfile(path.c_str(),std::fstream::out);
+    outfile.write((const char*)smth,size-1);
+    outfile.close();
+  
+    
 }
 
 
@@ -287,7 +308,7 @@ void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, Pla
 
 std::vector<std::string> SqlHelper::getDegrees(){
     
-    sqlite3 *db = openDatabase("academic.db");
+    sqlite3 *db = openDatabase("acadamia.db");
     std::string sql=  "select * from Degree;";
     sqlite3_stmt *Stmnt;
     std::vector<std::string> dList;
@@ -322,5 +343,202 @@ std::vector<std::string> SqlHelper::getDegrees(){
     SqlHelper::closeDatabase(db);
     
     return dList;
+    
+}
+
+int SqlHelper::getDegreeCode(std::string dname){
+    
+    sqlite3 *db = openDatabase("acadamia.db");
+    std::string sql=  "select dcode from Degree where dname=\'" +dname+"\';";
+    sqlite3_stmt *Stmnt;
+    int dcode = -1;
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+                dcode = sqlite3_column_int(Stmnt, 0);
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
+    return dcode;
+    
+}
+
+
+
+
+
+std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
+    
+    sqlite3 *db = openDatabase("acadamia.db");
+    std::stringstream sqlstream;
+    sqlstream << "select scode from Subject where dcode=" << degnum << "AND year=" << semester << ";";
+    
+    std::string sql=sqlstream.str();
+    
+    sqlite3_stmt *Stmnt;
+    std::vector<std::string> cList;
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+                cList.push_back((char*)sqlite3_column_text(Stmnt, 0));
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    // close the database
+    closeDatabase(db);
+    
+    
+    return cList;
+    
+}
+
+
+std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string> code){
+    
+    sqlite3 *db = openDatabase("acadamia.db");
+std:vector<subjectBlockClassModel> sList;
+    
+    for (int i = 0; i < code.size(); ++i) {
+        
+        std::stringstream streamer;
+        
+        streamer << "select * from Classblock where subcode = \'" << code[i] << "\';";
+        
+    std::string sql=  streamer.str();
+    sqlite3_stmt *Stmnt;
+    
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        
+        while ( 1 )
+        {
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+                //sList.push_back((char*)sqlite3_column_text(Stmnt, 1));
+                
+                //INSERTION WILL OCCURE HERE
+                
+                char blockID = sqlite3_column_int(Stmnt, 2);
+                int timelength = sqlite3_column_int(Stmnt, 3);
+                
+                subjectBlockClassModel temp(blockID, timelength, code[i]);
+                                            
+                                            
+                sList.push_back(temp);
+
+                
+                
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    }
+    // close the database
+    closeDatabase(db);
+    
+    return sList;
+
+}
+
+std::vector<int> SqlHelper::getAssignments(std::string code){
+    
+    sqlite3 *db = openDatabase("acadamia.db");
+    std::stringstream sqlstream;
+    sqlstream << "select anum, percentage from Assessment where scode=" << code <<";";
+    
+    std::string sql=sqlstream.str();
+    
+    sqlite3_stmt *Stmnt;
+    std::vector<int> aList;
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+                aList.push_back(sqlite3_column_int(Stmnt, 0));
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    // close the database
+    closeDatabase(db);
+    
+    
+    return aList;
     
 }

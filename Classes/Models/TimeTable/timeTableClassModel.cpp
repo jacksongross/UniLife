@@ -9,7 +9,81 @@
 #include "timeTableClassModel.h"
 #include <ctime>
 #include <cstdlib>
+#include "SqlHelper.h"
+#include "cocos2d.h"
+#include <string>
 
+
+timeTableClassModel::timeTableClassModel(int dCode, int year){
+    
+    degreeCode = dCode;
+    currYear = year;
+    
+    
+    SqlHelper getSubjects;
+    
+   classQueue = getSubjects.getBlocks( getSubjects.getClasses(degreeCode, currYear));
+    
+    
+    
+    for (int i=0; i < classQueue.size(); ++i) {
+        randomAllocationInt(classQueue[i]);
+    }
+    
+    
+    classQueue.clear();
+    
+   }
+
+int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
+    
+    int timeInt = -1;
+    int dayInt = -1;
+    //bool checker = false;
+    unsigned int key = 0;
+    srand(static_cast<unsigned int>(time(NULL)));
+    
+    do{
+        timeInt = rand()%(DAYEND-DAYSTART);
+        dayInt = rand()%3;
+        key = dayInt*100+timeInt;
+    }while(!checkTimeBool(key));
+    
+    classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key, ins));
+    
+    for (int i = 1; i<ins.getTotalTimeInt(); ++i) {
+        classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key+i, subjectBlockClassModel()));
+    }
+    //insertSubj(ins, timeInt, dayInt);
+    
+    
+    return timeInt;
+}
+
+bool timeTableClassModel::checkTimeBool(unsigned int key){
+    
+    if (classTable.count(key)==0) {
+        return true;
+    }else{
+        return false;
+    }
+    
+}
+
+
+void timeTableClassModel::printAll(){
+    
+    
+    
+    for ( std::map< unsigned int, subjectBlockClassModel, std::less< int > >::const_iterator iter = classTable.begin();
+         iter != classTable.end(); ++iter ){
+        cout << iter->first << '\t' << iter->second << '\n';
+    }
+    
+    
+}
+
+/*
 timeTableClassModel::timeTableClassModel(){
     
     totalTimeInt = 0;
@@ -22,7 +96,10 @@ timeTableClassModel::timeTableClassModel(){
 
 
 }
+*/
 
+
+/*
 
 timeTableClassModel::~timeTableClassModel(){
     
@@ -51,6 +128,8 @@ void timeTableClassModel::push(subjectBlockClassModel obj){
     
     return;
 }
+*/
+
 
 
 subjectBlockClassModel timeTableClassModel::popClass(){
@@ -69,24 +148,29 @@ subjectBlockClassModel timeTableClassModel::popClass(){
 
 
 
-subjectBlockClassModel timeTableClassModel::retElementSBCM(unsigned int day, unsigned int hour){
+subjectBlockClassModel timeTableClassModel::getObjAtTime(unsigned int day, unsigned int hour){
     
     int testTime = DAYEND-DAYSTART;
     
     if(day-1<NUMBERDAYS && hour-DAYSTART < testTime){
-    
-        return timetableClassArray[day-1][hour-DAYSTART];}
-    else
-    return subjectBlockClassModel(0, "NO CLASS");
+        int tmptime = day*100+hour;
+        return classTable.find(tmptime)->second;
+    //    return timetableClassArray[day-1][hour-DAYSTART];
+    }else{
+            return subjectBlockClassModel();}
 
 }
 
+
+
+
+
 void timeTableClassModel::insertSubj(subjectBlockClassModel ins, int timeInt, int dayInt){
     
-    timetableClassArray[dayInt][timeInt] = ins;
+  //  timetableClassArray[dayInt][timeInt] = ins;
     
     for (int i = timeInt; i<ins.getTotalTimeInt()+timeInt; ++i) {
-        timetableClassArray[dayInt][timeInt] = subjectBlockClassModel(1, "BLOCKED");
+     //   timetableClassArray[dayInt][timeInt] = subjectBlockClassModel(1, "BLOCKED");
     }
     
     return;
@@ -97,35 +181,13 @@ bool timeTableClassModel::freeSpaceCheck(subjectBlockClassModel ins, int timeInt
     if (timeInt+ins.getTotalTimeInt()+DAYSTART > DAYEND) {
         return false;
     }
-    
+    /*
     for (int i = timeInt; i<ins.getTotalTimeInt()+timeInt; ++i) {
         if (timetableClassArray[dayInt][i].getNameString()!="NO CLASS"){
             return false;
         }
     }
-    
+    */
     return true;
 }
-
-int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
-    
-    int timeInt = -1;
-    int dayInt = -1;
-    //bool checker = false;
-    
-    srand(static_cast<unsigned int>(time(NULL)));
-    
-    do{
-        timeInt = rand()%(DAYEND-DAYSTART);
-        dayInt = rand()%3;
-        
-    }while(!freeSpaceCheck(ins, timeInt, dayInt));
-    
-    
-    insertSubj(ins, timeInt, dayInt);
-    
-    
-    return timeInt;
-}
-
 
