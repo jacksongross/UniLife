@@ -135,6 +135,7 @@
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
+		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -496,6 +497,7 @@
 		7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
 		7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "background-music-aac.wav"; sourceTree = "<group>"; };
+		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -705,6 +707,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D7B39CA19CA086F00C80D1F /* acadamia.db */,
 				D0ED65C119C9393B0072EDD0 /* LogicGame */,
 				D0ED65BC19C933A80072EDD0 /* Miscellaneous */,
 				7A6DBD7319C576FF006A83CB /* SoundEffects */,
@@ -1613,6 +1616,7 @@
 				7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */,
 				D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */,
 				7A78809719C17C4200BFF491 /* paddle.png in Resources */,
+				7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
 				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
