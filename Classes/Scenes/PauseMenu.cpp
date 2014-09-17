@@ -125,19 +125,18 @@ void PauseMenu::saveCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the save button!");
     
-    SqlHelper::autosave(pm);
-    
-    //SqlHelper::serialize(pm);
+    if(pm.getId() > 0)
+    {
+        SqlHelper::autosave(pm);
+    }
+    else
+    {
+        log("First time saving game!");
+        SqlHelper::serialize(pm);
+    }
     
     log("game saved!");
     
-    
-    // transition to the load game scene
-    //auto scene = MapScene::createScene(pm);
-    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    //Director::getInstance()->replaceScene(crosssfade);
-    //Director::getInstance()->popScene();
-    //Director::getInstance()->resume();
 }
 
 void PauseMenu::quitCallback(cocos2d::Ref *pSender)
