@@ -21,11 +21,11 @@ private:
     int theTimeInt;
     string subjNameString;
     int startTimeInt;
-    
+    char classID;
 public:
 
     subjectBlockClassModel();
-    subjectBlockClassModel(int, string);
+    subjectBlockClassModel(char, int, string);
     
     subjectBlockClassModel& operator=(const subjectBlockClassModel rhs);
     
@@ -33,6 +33,7 @@ public:
     //GET FUNCTIONS
     string getNameString(){return subjNameString;};
     int getTotalTimeInt(){return theTimeInt;};
+    char getClassIDChar(){return classID;};
     friend ostream& operator<<(ostream& output,const subjectBlockClassModel print);
     //INSERT FUNCTIONS
     void putNameVoid(string nameString){subjNameString = nameString;};

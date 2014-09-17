@@ -9,7 +9,8 @@
 #include <string>
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"
-
+#include "SqlHelper.h"
+#include "timeTableClassModel.h"
 // default constructor
 PlayerModel::PlayerModel()
 {
@@ -26,6 +27,10 @@ PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel 
     this->stats = stats;
     this->scene = scene;
     this->gameTime = gameTime;
+    
+    SqlHelper temp;
+    
+    this->timetable = new timeTableClassModel(temp.getDegreeCode(degree), gameTime.getSemester());
 }
 
 /********************************
@@ -63,6 +68,10 @@ TimeHelper PlayerModel::getGameTime()
     return gameTime;
 }
 
+timeTableClassModel PlayerModel::getTimeTable()
+{
+    return *timetable;
+}
 
 /********************************
             Setters

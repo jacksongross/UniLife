@@ -22,47 +22,18 @@ timeTableClassModel::timeTableClassModel(int dCode, int year){
     
     SqlHelper getSubjects;
     
-    sqlite3* db=getSubjects.openDatabase("acadamia.db");
-    
-    std::string sql=  "select * from Subject where scode="+std::to_string(dCode)+";";
-    sqlite3_stmt *Stmnt;
-    std::vector<std::string> sList;
+   classQueue = getSubjects.getBlocks( getSubjects.getClasses(degreeCode, currYear));
     
     
-    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
-    {
-        int res = 0;
-        
-        while ( 1 )
-        {
-            res = sqlite3_step(Stmnt);
-            
-            
-            
-            if ( res == SQLITE_ROW )
-            {
-                std::string subjectTemp =(char*)sqlite3_column_text(Stmnt, 1);
-               
-                sList.push_back(subjectTemp);
-                
-                
-                
-                
-            }
-            
-            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
-            {
-                break;
-            }
-        }
-    }else{
-       cocos2d::log("ERROR WITH ACADEMIC DATABASE");
-        
+    
+    for (int i=0; i < classQueue.size(); ++i) {
+        randomAllocationInt(classQueue[i]);
     }
     
-    // close the database
-    SqlHelper::closeDatabase(db);
-}
+    
+    classQueue.clear();
+    
+   }
 
 int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
     
@@ -81,7 +52,7 @@ int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
     classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key, ins));
     
     for (int i = 1; i<ins.getTotalTimeInt(); ++i) {
-        classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key+i, subjectBlockClassModel(1, "NO CLASS")));
+        classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key+i, subjectBlockClassModel()));
     }
     //insertSubj(ins, timeInt, dayInt);
     
@@ -177,15 +148,16 @@ subjectBlockClassModel timeTableClassModel::popClass(){
 
 
 
-subjectBlockClassModel timeTableClassModel::retElementSBCM(unsigned int day, unsigned int hour){
+subjectBlockClassModel timeTableClassModel::getObjAtTime(unsigned int day, unsigned int hour){
     
     int testTime = DAYEND-DAYSTART;
     
     if(day-1<NUMBERDAYS && hour-DAYSTART < testTime){
-    
+        int tmptime = day*100+hour;
+        return classTable.find(tmptime)->second;
     //    return timetableClassArray[day-1][hour-DAYSTART];
     }else{
-            return subjectBlockClassModel(0, "NO CLASS");}
+            return subjectBlockClassModel();}
 
 }
 

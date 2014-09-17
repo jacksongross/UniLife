@@ -12,7 +12,7 @@
 #include <string>
 #include "PlayerStatsModel.h"
 #include "TimeHelper.h"
-
+#include "timeTableClassModel.h"
 class PlayerModel
 {
     
@@ -26,6 +26,7 @@ private:
     
     // player degree title
     std::string degree;
+    int degreeCode;
     
     // player stats
     PlayerStatsModel stats;
@@ -36,6 +37,10 @@ private:
     // player game time
     TimeHelper gameTime;
     
+    
+    //timetable
+    
+    timeTableClassModel *timetable;
 
 public:
     
@@ -60,6 +65,9 @@ public:
     std::string getScene();
     
     TimeHelper getGameTime();
+    
+    timeTableClassModel getTimeTable();
+    
     
     /********************************
                 Setters

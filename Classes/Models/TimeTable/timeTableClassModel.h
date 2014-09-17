@@ -10,10 +10,9 @@
 #define __Timetabler__timeTableClassModel__
 
 #include <iostream>
-#include <queue>
 #include "subjectBlockClassModel.h"
 #include <map>
-
+#include <vector>
 //using namespace std;
 
 const int NUMBERDAYS = 3;
@@ -25,7 +24,7 @@ class timeTableClassModel{
 
 private:
     
-    queue<subjectBlockClassModel> classQueue;
+    vector<subjectBlockClassModel> classQueue;
     int totalTimeInt;
     int currentTimeInt;
     int currentDayInt;
@@ -40,11 +39,15 @@ public:
     
     subjectBlockClassModel popClass(); //will return first element and remove from queue
     bool executeBool(); //will allocate times to classes-return T if ok
-    subjectBlockClassModel retElementSBCM(unsigned int day, unsigned int hour);
+    subjectBlockClassModel getObjAtTime(unsigned int day, unsigned int hour); //returns free of time=0 when not found otherwise returns subjblock at time
+    
     
     
     int randomAllocationInt(subjectBlockClassModel insert);
     bool checkTimeBool(unsigned int );
+    
+    
+    bool checkTimeBool(unsigned int day, unsigned int time){return checkTimeBool(day*100+time);};
     
     void printAll();
     
