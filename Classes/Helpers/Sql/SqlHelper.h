@@ -62,6 +62,9 @@ public:
     
     //gets assignments for one subject
    static std::vector<int> getAssignments(std::string code);
+   
+    static std::vector<std::string> getFaculties();
+    
     
 };
 

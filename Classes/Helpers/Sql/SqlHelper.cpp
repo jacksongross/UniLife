@@ -545,3 +545,44 @@ std::vector<int> SqlHelper::getAssignments(std::string code){
     return aList;
     
 }
+
+
+std::vector<std::string> SqlHelper::getFaculties(){
+    
+    sqlite3 *db = openDatabase("acadamia.db");
+    std::string sql=  "select * from Faculty;";
+    sqlite3_stmt *Stmnt;
+    std::vector<std::string> fList;
+    
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            
+            
+            if ( res == SQLITE_ROW )
+            {
+                fList.push_back((char*)sqlite3_column_text(Stmnt, 0));
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }else{
+        log("ERROR WITH ACADEMIC DATABASE");
+        
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
+    return fList;
+    
+}
