@@ -69,7 +69,7 @@ void PersonalityQuiz::SpawnQuiz(){
     this->addChild(title,1);
     
 
-    
+    //Button To Go To The Next Screen
     auto NextButton = ui::Button::create();
     NextButton->setTouchEnabled(true);
     NextButton->loadTextures("New-Game-next_off.png", "New-Game-next_on.png", "");
@@ -79,12 +79,16 @@ void PersonalityQuiz::SpawnQuiz(){
     addChild(NextButton,1);
     
     
+    //Text Element Which Will Store the Question Number
     ui::Text* QNum = ui::Text::create("Intro ", "Arial", 30);
     QNum->setColor(Color3B::BLACK);
     QNum->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 350, visibleSize.height/2 + 250));
     QNum->setName("QNum");
     this->addChild(QNum,1);
 
+    
+    
+    //The Introductory Text For the Personality Quiz
     ui::Text* IntroText = ui::Text::create("You Will Be Asked A Series Of Questions To Determine Your Personality Type, Select The Answer that Suits You The Best, Your Personality Profile Will Be Determined At The End Of the Quiz ", "Arial", 30);
     IntroText->setColor(Color3B::BLACK);
     IntroText->cocos2d::Node::setPosition(Point(visibleSize.width/2 , visibleSize.height/2 + 50));
@@ -105,7 +109,7 @@ void PersonalityQuiz::SpawnQuiz(){
     this->addChild(IntroText2,1);
     
     
-    
+    //This is the Text Element Which Will Hold the Question To be Used
     ui::Text* Question = ui::Text::create("Q) This is a Placeholder for a Question ", "Arial", 30);
     Question->setColor(Color3B::BLACK);
     Question->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 150));
@@ -114,6 +118,7 @@ void PersonalityQuiz::SpawnQuiz(){
     Question->setVisible(false);
     this->addChild(Question,1);
     
+    //These are the Answer Statment Text Elements which contain callbacks to their respective functions
     ui::Text* AnswerA = ui::Text::create("A: ", "Arial", 30);
     AnswerA->setColor(Color3B::BLACK);
     AnswerA->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 200, visibleSize.height/2 + 50));
@@ -152,6 +157,8 @@ void PersonalityQuiz::SpawnQuiz(){
 
     
     
+    
+    //This is The Spawning Of the Quiz Questions and Elements
     questions.push_back("People interest me more than ideas or feelings.");
     code.push_back('E');
     
@@ -202,19 +209,26 @@ void PersonalityQuiz::SpawnQuiz(){
     questions.push_back("I am a curious person.");
     code.push_back('P');
     
+    
+    //Pushes back the score for 0 because it corresponds to an unreferenced element
     score.push_back(0);
     
 }
 
 
+
+//Function to load the Data From the Vectors into the Text Elements
 void PersonalityQuiz::LoadData(int indexer){
     
+    
+    //Create a Dynamic element Which is Assigned to Their Name Address
     auto *Question = (cocos2d::ui::Text*)this->getChildByName("Question");
     auto *A = (cocos2d::ui::Text*)this->getChildByName("AnswerA");
     auto *B = (cocos2d::ui::Text*)this->getChildByName("AnswerB");
     auto *C = (cocos2d::ui::Text*)this->getChildByName("AnswerC");
     auto *D = (cocos2d::ui::Text*)this->getChildByName("AnswerD");
     
+    //Make them Visible
     Question->setVisible(true);
     A->setVisible(true);
     B->setVisible(true);
@@ -222,6 +236,7 @@ void PersonalityQuiz::LoadData(int indexer){
     D->setVisible(true);
     
     
+    //Set the Question String and 
     Question->setString(questions[indexer]);
     A->setString("A) A Lot Like Me");
     B->setString("B) A Little Like Me");

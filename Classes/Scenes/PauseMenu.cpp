@@ -81,41 +81,6 @@ Scene* PauseMenu::createScene()
     quitButton->setTouchEnabled(true);
     layer->addChild(quitButton,5);
     
-    /*
-    auto resumeButton = MenuItemFont::create("Resume", CC_CALLBACK_1(PauseMenu::resumeCallback, layer));
-    
-    auto saveButton = MenuItemFont::create("Save Game", CC_CALLBACK_1(PauseMenu::saveCallback, layer));
-    
-    auto quitButton = MenuItemFont::create("Quit Game", CC_CALLBACK_1(PauseMenu::quitCallback, layer));
-    
-    resumeButton->setFontSize(88);
-    
-    saveButton->setFontSize(88);
-    
-    quitButton->setFontSize(88);
-    
-    resumeButton->setColor(Color3B(0, 0, 0));
-    
-    saveButton->setColor(Color3B(0, 0, 0));
-    
-    quitButton->setColor(Color3B(0, 0, 0));
-    
-    resumeButton->setPosition(Vec2(visibleSize.width / 2,
-                                   visibleSize.height / 2));
-    
-    saveButton->setPosition(Vec2(visibleSize.width / 2,
-                                 visibleSize.height / 2 * 0.60));
-    
-    quitButton->setPosition(Vec2(visibleSize.width / 2,
-                                 visibleSize.height / 2 * 0.20));
-    
-    
-    
-    pMenuItems.pushBack(resumeButton);
-    pMenuItems.pushBack(saveButton);
-    pMenuItems.pushBack(quitButton);
-    */
-    
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
     layer->addChild(menu, 1);

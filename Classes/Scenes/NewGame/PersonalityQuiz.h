@@ -40,29 +40,52 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
+    
+    //Next Page Callback
     void gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEventType);
+    
+    
+    //Create the Quiz
     void SpawnQuiz();
+    
+    //Reset The Text Items to their Base States
     void resetall();
+    
+    //Win Game Event Function
     void EndQuiz();
     
+    
+    //Callbacks For Each Text Item That Is Pressed
     void AnswerA(Ref* sender);
     void AnswerB(Ref* pSender);
     void AnswerC(Ref* sender);
     void AnswerD(Ref* pSender);
+    
+    //Add the Points to the Score Variables
     void addPoints();
+    
+    //Hide or Make Visible the Next Button
     void makevisible();
     void hidebutton();
     
+    
     void LoadData(int);
+    
+    
     // implement the "static create()" method manually
     CREATE_FUNC(PersonalityQuiz);
 private:
     
+    
+    //Vector Containers
     std::vector<std::string> questions;
     std::vector<char> code;
     std::vector<int> score;
+    
+    //Current Question
     int index = 0;
 
+    //Currently Selected Text Item
     int current = 0;
     
     //Add For Extrovert Subtract for Introvert
