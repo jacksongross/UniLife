@@ -108,7 +108,8 @@ void PersonalityQuiz::SpawnQuiz(){
     
     ui::Text* Question = ui::Text::create("Q) This is a Placeholder for a Question ", "Arial", 30);
     Question->setColor(Color3B::BLACK);
-    Question->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 300, visibleSize.height/2 + 150));
+    Question->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 150));
+    Question->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     Question->setName("Question");
     Question->setVisible(false);
     this->addChild(Question,1);

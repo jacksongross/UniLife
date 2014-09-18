@@ -36,19 +36,6 @@ Scene* PauseMenu::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
     
-    // return the scene
-    return scene;
-}
-
-// on "init" you need to initialize your instance
-bool PauseMenu::init()
-{
-    //////////////////////////////
-    // 1. super init first
-    if( !LayerColor::initWithColor(Color4B(255,255,255,100)) )
-    {
-        return false;
-    }
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
@@ -61,7 +48,7 @@ bool PauseMenu::init()
     bg->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
     
     // add the sprite as a child to this layer
-    this->addChild(bg, 0);
+    layer->addChild(bg, 0);
     
     auto label = Label::createWithSystemFont("Game Paused", "Helvetica", 74);
     
@@ -69,14 +56,37 @@ bool PauseMenu::init()
     
     label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.90));
     
-    this->addChild(label, 0);
+    layer->addChild(label, 0);
     
     
-    auto resumeButton = MenuItemFont::create("Resume", CC_CALLBACK_1(PauseMenu::resumeCallback, this));
     
-    auto saveButton = MenuItemFont::create("Save Game", CC_CALLBACK_1(PauseMenu::saveCallback, this));
+    ui::Text* resumeButton = ui::Text::create("Resume", "Arial", 88);
+    resumeButton->addTouchEventListener(CC_CALLBACK_1(PauseMenu::resumeCallback, layer));
+    resumeButton->setColor(Color3B::BLACK);
+    resumeButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    resumeButton->setTouchEnabled(true);
+    layer->addChild(resumeButton,5);
     
-    auto quitButton = MenuItemFont::create("Quit Game", CC_CALLBACK_1(PauseMenu::quitCallback, this));
+    ui::Text* saveButton = ui::Text::create("Save Game", "Arial", 88);
+    saveButton->addTouchEventListener(CC_CALLBACK_1(PauseMenu::saveCallback, layer));
+    saveButton->setColor(Color3B::BLACK);
+    saveButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 * 0.60));
+    saveButton->setTouchEnabled(true);
+    layer->addChild(saveButton,5);
+    
+    ui::Text* quitButton = ui::Text::create("Quit Game", "Arial", 88);
+    quitButton->addTouchEventListener(CC_CALLBACK_1(PauseMenu::quitCallback, layer));
+    quitButton->setColor(Color3B::BLACK);
+    quitButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 * 0.20));
+    quitButton->setTouchEnabled(true);
+    layer->addChild(quitButton,5);
+    
+    /*
+    auto resumeButton = MenuItemFont::create("Resume", CC_CALLBACK_1(PauseMenu::resumeCallback, layer));
+    
+    auto saveButton = MenuItemFont::create("Save Game", CC_CALLBACK_1(PauseMenu::saveCallback, layer));
+    
+    auto quitButton = MenuItemFont::create("Quit Game", CC_CALLBACK_1(PauseMenu::quitCallback, layer));
     
     resumeButton->setFontSize(88);
     
@@ -104,10 +114,27 @@ bool PauseMenu::init()
     pMenuItems.pushBack(resumeButton);
     pMenuItems.pushBack(saveButton);
     pMenuItems.pushBack(quitButton);
+    */
     
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+    layer->addChild(menu, 1);
+
+    
+    
+    // return the scene
+    return scene;
+}
+
+// on "init" you need to initialize your instance
+bool PauseMenu::init()
+{
+    //////////////////////////////
+    // 1. super init first
+    if( !LayerColor::initWithColor(Color4B(255,255,255,100)) )
+    {
+        return false;
+    }
     
 
     
