@@ -314,19 +314,126 @@ void PersonalityQuiz::EndQuiz(){
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    log("PRETEST: %s", pCode.c_str());
+    
+    for(int i = 0; i < pCode.size(); i++){
+        if(pCode[i] == 'X' && i == 0){
+            pCode[i] = 'I';
+        }else if(pCode[i] == 'X' && i == 1){
+            pCode[i] = 'N';
+        }else if(pCode[i] == 'X' && i == 2){
+            pCode[i] = 'F';
+        }else if(pCode[i] == 'X' && i == 3){
+            pCode[i] = 'P';
+        }
+        
+    }
+    
     std::string stringcreate;
     stringcreate = "Your Personality Profile Is:  ";
     stringcreate.append(pCode);
     
     ui::Text* Result = ui::Text::create(stringcreate, "Arial", 45);
     Result->setColor(Color3B::BLACK);
-    Result->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
+    Result->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 175));
     Result->setName("Result");
     Result->setVisible(true);
     this->addChild(Result,2);
-    
-    
 
+    
+    std::string resultdesc;
+    std::string resultname;
+    
+    if(pCode == "INFP"){
+        resultname =("The Healer");
+        resultdesc = "INFPs are imaginative idealists, guided by their own core values and beliefs. To a Healer, possibilities are paramount; the realism of the moment is only of passing concern. They see potential for a better future, and pursue truth and meaning with their own individual flair.";
+        
+    }else if(pCode == "INFJ" ){
+        resultname =("The Counselor");
+        resultdesc = "INFJs are creative nurturers with a strong sense of personal integrity and a drive to help others realize their potential. Creative and dedicated, they have a talent for helping others with original solutions to their personal challenges.";
+        
+    }else if(pCode == "INTJ" ){
+        resultname =("The Mastermind");
+        resultdesc = "INTJs are analytical problem-solvers, eager to improve systems and processes with their innovative ideas. They have a talent for seeing possibilities for improvement, whether at work, at home, or in themselves.";
+        
+        
+    }else if(pCode == "INTP" ){
+        resultname =("The Architect");
+        resultdesc = "INTPs are philosophical innovators, fascinated by logical analysis, systems, and design. They are preoccupied with theory, and search for the universal law behind everything they see. They want to understand the unifying themes of life, in all their complexity.";
+        
+    }else if(pCode == "ISFJ" ){
+        resultname =("The Protector");
+        resultdesc = "ISFJs are industrious caretakers, loyal to traditions and organizations. They are practical, compassionate, and caring, and are motivated to provide for others and protect them from the perils of life.";
+        
+    }else if(pCode == "ISFP" ){
+        resultname =("The Composer");
+        resultdesc = "ISFPs are gentle caretakers who live in the present moment and enjoy their surroundings with cheerful, low-key enthusiasm. They are flexible and spontaneous, and like to go with the flow to enjoy what life has to offer. ISFPs are quiet and unassuming, and may be hard to get to know. However, to those who know them well, the ISFP is warm and friendly, eager to share in life's many experiences.";
+        
+    }else if(pCode == "ISTJ" ){
+        resultname =("The Inspector");
+        resultdesc = "ISTJs are responsible organizers, driven to create and enforce order within systems and institutions. They are neat and orderly, inside and out, and tend to have a procedure for everything they do. Reliable and dutiful, ISTJs want to uphold tradition and follow regulations.";
+        
+    }else if(pCode == "ISTP" ){
+        resultname =("The Craftsman");
+        resultdesc = "ISTPs are observant artisans with an understanding of mechanics and an interest in troubleshooting. They approach their environments with a flexible logic, looking for practical solutions to the problems at hand. They are independent and adaptable, and typically interact with the world around them in a self-directed, spontaneous manner.";
+        
+    }else if(pCode == "ENFJ" ){
+        resultname =("The Teacher");
+        resultdesc = "ENFJs are idealist organizers, driven to implement their vision of what is best for humanity. They often act as catalysts for human growth because of their ability to see potential in other people and their charisma in persuading others to their ideas. They are focused on values and vision, and are passionate about the possibilities for people.";
+        
+    }else if(pCode == "ENFP" ){
+        resultname =("The Champion");
+        resultdesc = "ENFPs are people-centered creators with a focus on possibilities and a contagious enthusiasm for new ideas, people and activities. Energetic, warm, and passionate, ENFPs love to help other people explore their their creative potential.";
+        
+    }else if(pCode == "ENTJ" ){
+        resultname =("The Commander");
+        resultdesc = "ENTJs are strategic leaders, motivated to organize change. They are quick to see inefficiency and conceptualize new solutions, and enjoy developing long-range plans to accomplish their vision. They excel at logical reasoning and are usually articulate and quick-witted.";
+        
+    }else if(pCode == "ENTP" ){
+        resultname =("The Visionary");
+        resultdesc = "ENTPs are inspired innovators, motivated to find new solutions to intellectually challenging problems. They are curious and clever, and seek to comprehend the people, systems, and principles that surround them. Open-minded and unconventional, Visionaries want to analyze, understand, and influence other people.";
+        
+    }else if(pCode == "ESFJ" ){
+        resultname =("The Provider");
+        resultdesc = "ENTPs are inspired innovators, motivated to find new solutions to intellectually challenging problems. They are curious and clever, and seek to comprehend the people, systems, and principles that surround them. Open-minded and unconventional, Visionaries want to analyze, understand, and influence other people.";
+        
+    }else if(pCode == "ESFP" ){
+        resultname =("The Performer");
+        resultdesc = "ESFJs are conscientious helpers, sensitive to the needs of others and energetically dedicated to their responsibilities. They are highly attuned to their emotional environment and attentive to both the feelings of others and the perception others have of them. ESFJs like a sense of harmony and cooperation around them, and are eager to please and provide.";
+        
+    }else if(pCode == "ESTJ" ){
+        resultname =("The Supervisor");
+        resultdesc = "ESTJs are hardworking traditionalists, eager to take charge in organizing projects and people. Orderly, rule-abiding, and conscientious, ESTJs like to get things done, and tend to go about projects in a systematic, methodical way.";
+        
+    }else if(pCode == "ESTP" ){
+        resultname =("The Dynamo");
+        resultdesc = "ESTPs are energetic thrillseekers who are at their best when putting out fires, whether literal or metaphorical. They bring a sense of dynamic energy to their interactions with others and the world around them. They assess situations quickly and move adeptly to respond to immediate problems with practical solutions.";
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    ui::Text* ResultDesc = ui::Text::create(resultdesc, "Arial", 30);
+    ResultDesc->setColor(Color3B::BLACK);
+    ResultDesc->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 200));
+    ResultDesc->setName("ResultDesc");
+    ResultDesc->setTextAreaSize(Size(600,200));
+    ResultDesc->setVisible(true);
+    this->addChild(ResultDesc,2);
+
+    
+    ui::Text* ResultName = ui::Text::create(resultname, "Arial", 30);
+    ResultName->setColor(Color3B::BLACK);
+    ResultName->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 110));
+    ResultName->setName("ResultName");
+    ResultName->setVisible(true);
+    this->addChild(ResultName,2);
+    
+    
     
 }
 
@@ -438,8 +545,7 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
     std::string newstring;
     
     
-    if (eEventType != ui::Widget::TouchEventType::ENDED){
-        
+    if (eEventType == ui::Widget::TouchEventType::ENDED){
         
         if(index == 0){
              auto *Intro1 = (cocos2d::ui::Text*)this->getChildByName("IntroText1");
@@ -455,7 +561,7 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
             auto *Qnum = (cocos2d::ui::Text*)this->getChildByName("QNum");
             Qnum->setString(newstring);
             log("Curr Page %d", index);
-            LoadData(index);
+            LoadData(index-1);
             log("Page Loaded");
             resetall();
             hidebutton();
@@ -468,7 +574,7 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
             Qnum->setString(newstring);
             log("Curr Page %d", index);
             if(index != questions.size()){
-                LoadData(index);
+                LoadData(index-1);
                 log("Page Loaded");
                 resetall();
                 hidebutton();
