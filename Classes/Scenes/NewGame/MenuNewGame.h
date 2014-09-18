@@ -26,6 +26,7 @@ public:
     // new game callback method
     void NextButtonCallback(Ref* pSender);
     void backButtonCallback(Ref* pSender);
+    void quizButtonCallback(Ref* pSender);
     void intSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
     void staSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
     void socSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);

@@ -18,8 +18,8 @@
 #include <CCTransition.h>
 #include <string>
 #include <vector>
-#include <MenuDegreeSelect.h>
-
+#include "MenuDegreeSelect.h"
+#include "PersonalityQuiz.h"
 USING_NS_CC;
 PlayerModel newplayer;
 
@@ -224,5 +224,17 @@ void MenuNewGame::socSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType t
 
     
 }
+
+void MenuNewGame::quizButtonCallback(Ref* pSender)
+{
+    log("Going To Personality Quiz!");
+    
+    auto scene = PersonalityQuiz::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+
+}
+
+
 
 

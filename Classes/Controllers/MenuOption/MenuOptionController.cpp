@@ -121,6 +121,11 @@ void MenuOptionController::CreateMainMenu(MenuOptionScene *that, Size visibleSiz
     
     
     
-    
+    cocos2d::ui::Text* debugLabel = cocos2d::ui::Text::create("Go To Debugger", "Verdana", 20);
+    debugLabel->setContentSize(Size(300, 50));
+    debugLabel->setPosition(Vec2(origin.x + visibleSize.width / 2 + 435 , visibleSize.height / 2 - 120));
+    debugLabel->setTextHorizontalAlignment(TextHAlignment::CENTER);
+    debugLabel->setColor(Color3B::BLACK);
+    that->addChild(debugLabel, 2);
     
 }

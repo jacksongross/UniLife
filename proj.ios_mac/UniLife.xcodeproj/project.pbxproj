@@ -187,6 +187,7 @@
 		D0ED65C919C96ACF0072EDD0 /* Boat.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65C819C96ACF0072EDD0 /* Boat.png */; };
 		D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65CC19C96C4E0072EDD0 /* river-blue.png */; };
 		D0ED65D119C9EDB60072EDD0 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0ED65CF19C9EDB60072EDD0 /* Debugger.cpp */; };
+		D0ED65E119CA02C70072EDD0 /* PersonalityQuiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0ED65DF19CA02C70072EDD0 /* PersonalityQuiz.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
@@ -551,6 +552,8 @@
 		D0ED65CC19C96C4E0072EDD0 /* river-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "river-blue.png"; path = "LogicGame/river-blue.png"; sourceTree = "<group>"; };
 		D0ED65CF19C9EDB60072EDD0 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
 		D0ED65D019C9EDB60072EDD0 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
+		D0ED65DF19CA02C70072EDD0 /* PersonalityQuiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonalityQuiz.cpp; sourceTree = "<group>"; };
+		D0ED65E019CA02C70072EDD0 /* PersonalityQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalityQuiz.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -1062,8 +1065,8 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7A89453319ADAD16008E1EA7 /* Sql */,
 				7A89453819ADAD16008E1EA7 /* Time */,
+				7A89453319ADAD16008E1EA7 /* Sql */,
 			);
 			name = Helpers;
 			path = ../Classes/Helpers;
@@ -1291,6 +1294,7 @@
 		7AB6AAFD19AEDCE6003CCD7E /* NewGame */ = {
 			isa = PBXGroup;
 			children = (
+				D0ED65D719CA02A90072EDD0 /* PersonalityQuiz */,
 				7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */,
 				7AB6AAFF19AEDCE6003CCD7E /* MenuDegreeSelect.h */,
 				7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */,
@@ -1435,6 +1439,15 @@
 				D0ED65D019C9EDB60072EDD0 /* Debugger.h */,
 			);
 			name = Debugger;
+			sourceTree = "<group>";
+		};
+		D0ED65D719CA02A90072EDD0 /* PersonalityQuiz */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED65DF19CA02C70072EDD0 /* PersonalityQuiz.cpp */,
+				D0ED65E019CA02C70072EDD0 /* PersonalityQuiz.h */,
+			);
+			name = PersonalityQuiz;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1741,6 +1754,7 @@
 				7A0F1A5519BEE2FC00679823 /* EIS_Hallway.cpp in Sources */,
 				7A0F1A5619BEE2FC00679823 /* Inside_EIS.cpp in Sources */,
 				7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */,
+				D0ED65E119CA02C70072EDD0 /* PersonalityQuiz.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */,

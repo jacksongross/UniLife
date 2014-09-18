@@ -38,7 +38,7 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(Men
     pMenuItems.pushBack(backButton);
     
     
-    auto quizbutton = MenuItemImage::create("New-Game-take_quiz_off.png","New-Game-take_quiz_off.png");
+    auto quizbutton = MenuItemImage::create("New-Game-take_quiz_off.png","New-Game-take_quiz_off.png",CC_CALLBACK_1(MenuNewGame::quizButtonCallback, that));
     quizbutton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, visibleSize.height / 2 -250));
     quizbutton->setName("QuizButton");
     pMenuItems.pushBack(quizbutton);
