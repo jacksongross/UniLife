@@ -118,7 +118,7 @@ void SqlHelper::initDatabase()
 
 
 // serialize a player to the database
-void SqlHelper::serialize(PlayerModel p)
+void SqlHelper::serialize(PlayerModel &p)
 {
     // set the db pointer to null ready for a query
     sqlite3 *db = SqlHelper::openDatabase("save.db");
@@ -148,6 +148,12 @@ void SqlHelper::serialize(PlayerModel p)
         log("player added!");
     }
     
+    // get the newly saved player's id so autosave can function
+    // from here on out
+    int playerId = sqlite3_last_insert_rowid(db);
+    
+    p.setId(playerId);
+    
     SqlHelper::closeDatabase(db);
 
 }
@@ -173,9 +179,6 @@ void SqlHelper::autosave(PlayerModel p)
     std::stringstream strm;
     
     strm << "UPDATE player SET intelligence = " << m.getIntelligence() << ", stamina = " << m.getStamina() << ", social = " << m.getSocial() << ", money = " << m.getMoney() << ", energy = " << m.getEnergy() << ", stress = " << m.getStress() << ", scene = '" << p.getScene() << "', day = " << t.getDay() << ", week = " << t.getWeek() << ", semester = " << t.getSemester() << ", hoursminutes = " << t.getHoursMinutes() << " WHERE id = " << p.getId();
-    
-    
-    //strm << "INSERT INTO player (name, degree, intelligence, stamina, social, money, energy, stress, scene, day, week, semester, hoursminutes) VALUES('" << p.getName() << "','" << p.getDegree() << "'," << m.getIntelligence() << "," << m.getStamina() << "," << m.getSocial() << "," << m.getMoney() << "," << m.getEnergy() << "," << m.getStress() << ",'" << p.getScene() << "'," << t.getDay() << "," << t.getWeek() << "," << t.getSemester() << "," << t.getHoursMinutes() << ")";
     
     sql = strm.str();
     

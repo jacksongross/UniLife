@@ -35,7 +35,7 @@ public:
     static void initDatabase();
     
     // serialize a player to the database
-    static void serialize(PlayerModel player);
+    static void serialize(PlayerModel &player);
     
     // overwrite existing player data in database
     static void autosave(PlayerModel player);
