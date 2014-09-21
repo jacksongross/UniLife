@@ -49,13 +49,10 @@
 		7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */; };
 		7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */; };
 		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
-		7A0F1AA419BEEEE800679823 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */; };
-		7A0F1AA719BF03AB00679823 /* GameView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1AA619BF03AB00679823 /* GameView.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
 		7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DBD7419C576FF006A83CB /* doorOpen.wav */; };
 		7A78809619C17C4200BFF491 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809419C17C4200BFF491 /* circle.png */; };
 		7A78809719C17C4200BFF491 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809519C17C4200BFF491 /* paddle.png */; };
-		7A7880A419C18F4B00BFF491 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */; };
 		7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452219ADACFC008E1EA7 /* MapController.cpp */; };
 		7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452519ADACFC008E1EA7 /* MenuController.cpp */; };
 		7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89452819ADACFC008E1EA7 /* MenuLoadController.cpp */; };
@@ -112,6 +109,8 @@
 		7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89459619ADAF3F008E1EA7 /* map-tavern.png */; };
 		7A8945BF19ADAF3F008E1EA7 /* map-uni_centre.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89459719ADAF3F008E1EA7 /* map-uni_centre.png */; };
 		7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89459819ADAF3F008E1EA7 /* map_background.png */; };
+		7A8D461919CE680F0079C858 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A8D461819CE680F0079C858 /* ball.png */; };
+		7A8D461B19CE691F0079C858 /* block.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A8D461A19CE691F0079C858 /* block.png */; };
 		7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */; };
 		7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */; };
 		7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0819AEDD58003CCD7E /* MenuDegreeSelectController.cpp */; };
@@ -135,6 +134,12 @@
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
+		7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */; };
+		7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */; };
+		7ADE1F0619CE6F3200AEFF00 /* MyContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */; };
+		7ADE1F0719CE6F3200AEFF00 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */; };
+		7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */; };
+		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
 		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -177,7 +182,6 @@
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
 		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
-		D0ED65B519C9234A0072EDD0 /* LogicGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0ED65B319C9234A0072EDD0 /* LogicGame.cpp */; };
 		D0ED65BB19C9314B0072EDD0 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BA19C9314B0072EDD0 /* Fred.png */; };
 		D0ED65BF19C934160072EDD0 /* speech_big.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BD19C934160072EDD0 /* speech_big.png */; };
 		D0ED65C019C934160072EDD0 /* speech_small.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BE19C934160072EDD0 /* speech_small.png */; };
@@ -186,7 +190,6 @@
 		D0ED65C719C939B90072EDD0 /* wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65C419C939B90072EDD0 /* wheat.png */; };
 		D0ED65C919C96ACF0072EDD0 /* Boat.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65C819C96ACF0072EDD0 /* Boat.png */; };
 		D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65CC19C96C4E0072EDD0 /* river-blue.png */; };
-		D0ED65D119C9EDB60072EDD0 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0ED65CF19C9EDB60072EDD0 /* Debugger.cpp */; };
 		D0ED65E119CA02C70072EDD0 /* PersonalityQuiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0ED65DF19CA02C70072EDD0 /* PersonalityQuiz.cpp */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
@@ -386,16 +389,10 @@
 		7A0F1A8619BEE3F400679823 /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
 		7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
 		7A0F1A8819BEE3F400679823 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
-		7A0F1AA219BEEEDF00679823 /* BrickBreaker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BrickBreaker.h; sourceTree = "<group>"; };
-		7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrickBreaker.cpp; sourceTree = "<group>"; };
-		7A0F1AA519BF03A200679823 /* GameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
-		7A0F1AA619BF03AB00679823 /* GameView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameView.cpp; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
 		7A6DBD7419C576FF006A83CB /* doorOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorOpen.wav; sourceTree = "<group>"; };
 		7A78809419C17C4200BFF491 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		7A78809519C17C4200BFF491 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
-		7A7880A219C18F3F00BFF491 /* PauseMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
-		7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseMenu.cpp; sourceTree = "<group>"; };
 		7A89452219ADACFC008E1EA7 /* MapController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapController.cpp; sourceTree = "<group>"; };
 		7A89452319ADACFC008E1EA7 /* MapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		7A89452519ADACFC008E1EA7 /* MenuController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuController.cpp; sourceTree = "<group>"; };
@@ -468,6 +465,8 @@
 		7A89459619ADAF3F008E1EA7 /* map-tavern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-tavern.png"; sourceTree = "<group>"; };
 		7A89459719ADAF3F008E1EA7 /* map-uni_centre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-uni_centre.png"; sourceTree = "<group>"; };
 		7A89459819ADAF3F008E1EA7 /* map_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_background.png; sourceTree = "<group>"; };
+		7A8D461819CE680F0079C858 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = ../../../../Desktop/ball.png; sourceTree = "<group>"; };
+		7A8D461A19CE691F0079C858 /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = block.png; path = ../../../../Desktop/block.png; sourceTree = "<group>"; };
 		7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelect.cpp; sourceTree = "<group>"; };
 		7AB6AAFF19AEDCE6003CCD7E /* MenuDegreeSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelect.h; sourceTree = "<group>"; };
 		7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGame.cpp; sourceTree = "<group>"; };
@@ -498,6 +497,18 @@
 		7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
 		7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "background-music-aac.wav"; sourceTree = "<group>"; };
+		7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrickBreaker.cpp; sourceTree = "<group>"; };
+		7ADE1EF619CE6F3200AEFF00 /* BrickBreaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrickBreaker.h; sourceTree = "<group>"; };
+		7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
+		7ADE1EF819CE6F3200AEFF00 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverScene.h; sourceTree = "<group>"; };
+		7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyContactListener.cpp; sourceTree = "<group>"; };
+		7ADE1EFA19CE6F3200AEFF00 /* MyContactListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyContactListener.h; sourceTree = "<group>"; };
+		7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseMenu.cpp; sourceTree = "<group>"; };
+		7ADE1EFD19CE6F3200AEFF00 /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
+		7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogicGame.cpp; sourceTree = "<group>"; };
+		7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGame.h; sourceTree = "<group>"; };
+		7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
+		7ADE1F0319CE6F3200AEFF00 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
 		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -540,8 +551,6 @@
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
 		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = InsideViewSprites/whiteboard.png; sourceTree = "<group>"; };
-		D0ED65B319C9234A0072EDD0 /* LogicGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogicGame.cpp; sourceTree = "<group>"; };
-		D0ED65B419C9234A0072EDD0 /* LogicGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGame.h; sourceTree = "<group>"; };
 		D0ED65BA19C9314B0072EDD0 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fred.png; sourceTree = "<group>"; };
 		D0ED65BD19C934160072EDD0 /* speech_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_big.png; path = Miscellaneous/speech_big.png; sourceTree = "<group>"; };
 		D0ED65BE19C934160072EDD0 /* speech_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_small.png; path = Miscellaneous/speech_small.png; sourceTree = "<group>"; };
@@ -550,8 +559,6 @@
 		D0ED65C419C939B90072EDD0 /* wheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wheat.png; path = LogicGame/wheat.png; sourceTree = "<group>"; };
 		D0ED65C819C96ACF0072EDD0 /* Boat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Boat.png; path = LogicGame/Boat.png; sourceTree = "<group>"; };
 		D0ED65CC19C96C4E0072EDD0 /* river-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "river-blue.png"; path = "LogicGame/river-blue.png"; sourceTree = "<group>"; };
-		D0ED65CF19C9EDB60072EDD0 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
-		D0ED65D019C9EDB60072EDD0 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
 		D0ED65DF19CA02C70072EDD0 /* PersonalityQuiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonalityQuiz.cpp; sourceTree = "<group>"; };
 		D0ED65E019CA02C70072EDD0 /* PersonalityQuiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalityQuiz.h; sourceTree = "<group>"; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -966,17 +973,6 @@
 			path = Tavern;
 			sourceTree = "<group>";
 		};
-		7A0F1A9819BEE89F00679823 /* BrickBreaker */ = {
-			isa = PBXGroup;
-			children = (
-				7A0F1AA219BEEEDF00679823 /* BrickBreaker.h */,
-				7A0F1AA319BEEEE800679823 /* BrickBreaker.cpp */,
-				7A0F1AA519BF03A200679823 /* GameView.h */,
-				7A0F1AA619BF03AB00679823 /* GameView.cpp */,
-			);
-			name = BrickBreaker;
-			sourceTree = "<group>";
-		};
 		7A6DBD7319C576FF006A83CB /* SoundEffects */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,19 +985,12 @@
 		7A78809319C17C4200BFF491 /* BrickBreaker */ = {
 			isa = PBXGroup;
 			children = (
+				7A8D461A19CE691F0079C858 /* block.png */,
+				7A8D461819CE680F0079C858 /* ball.png */,
 				7A78809419C17C4200BFF491 /* circle.png */,
 				7A78809519C17C4200BFF491 /* paddle.png */,
 			);
 			path = BrickBreaker;
-			sourceTree = "<group>";
-		};
-		7A78809919C18F1C00BFF491 /* PauseMenu */ = {
-			isa = PBXGroup;
-			children = (
-				7A7880A219C18F3F00BFF491 /* PauseMenu.h */,
-				7A7880A319C18F4B00BFF491 /* PauseMenu.cpp */,
-			);
-			name = PauseMenu;
 			sourceTree = "<group>";
 		};
 		7A7880A119C18F2500BFF491 /* PauseMenu */ = {
@@ -1143,10 +1132,10 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				D0ED65CE19C9EDA40072EDD0 /* Debugger */,
-				D0ED65B619C923550072EDD0 /* LogicGame */,
-				7A78809919C18F1C00BFF491 /* PauseMenu */,
-				7A0F1A9819BEE89F00679823 /* BrickBreaker */,
+				7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */,
+				7ADE1EFB19CE6F3200AEFF00 /* PauseMenu */,
+				7ADE1EFE19CE6F3200AEFF00 /* LogicGame */,
+				7ADE1F0119CE6F3200AEFF00 /* Debugger */,
 				7A0F1A2819BEE2FC00679823 /* Buildings */,
 				7AB6AAFD19AEDCE6003CCD7E /* NewGame */,
 				7A89454F19ADAD23008E1EA7 /* Map */,
@@ -1348,6 +1337,46 @@
 			path = NewCharacter;
 			sourceTree = "<group>";
 		};
+		7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */ = {
+			isa = PBXGroup;
+			children = (
+				7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */,
+				7ADE1EF619CE6F3200AEFF00 /* BrickBreaker.h */,
+				7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */,
+				7ADE1EF819CE6F3200AEFF00 /* GameOverScene.h */,
+				7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */,
+				7ADE1EFA19CE6F3200AEFF00 /* MyContactListener.h */,
+			);
+			path = BrickBreaker;
+			sourceTree = "<group>";
+		};
+		7ADE1EFB19CE6F3200AEFF00 /* PauseMenu */ = {
+			isa = PBXGroup;
+			children = (
+				7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */,
+				7ADE1EFD19CE6F3200AEFF00 /* PauseMenu.h */,
+			);
+			path = PauseMenu;
+			sourceTree = "<group>";
+		};
+		7ADE1EFE19CE6F3200AEFF00 /* LogicGame */ = {
+			isa = PBXGroup;
+			children = (
+				7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */,
+				7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */,
+			);
+			path = LogicGame;
+			sourceTree = "<group>";
+		};
+		7ADE1F0119CE6F3200AEFF00 /* Debugger */ = {
+			isa = PBXGroup;
+			children = (
+				7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */,
+				7ADE1F0319CE6F3200AEFF00 /* Debugger.h */,
+			);
+			path = Debugger;
+			sourceTree = "<group>";
+		};
 		D031093019B447A20030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
@@ -1402,15 +1431,6 @@
 			name = InsideViewSprites;
 			sourceTree = "<group>";
 		};
-		D0ED65B619C923550072EDD0 /* LogicGame */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED65B319C9234A0072EDD0 /* LogicGame.cpp */,
-				D0ED65B419C9234A0072EDD0 /* LogicGame.h */,
-			);
-			name = LogicGame;
-			sourceTree = "<group>";
-		};
 		D0ED65BC19C933A80072EDD0 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
@@ -1430,15 +1450,6 @@
 				D0ED65C419C939B90072EDD0 /* wheat.png */,
 			);
 			name = LogicGame;
-			sourceTree = "<group>";
-		};
-		D0ED65CE19C9EDA40072EDD0 /* Debugger */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED65CF19C9EDB60072EDD0 /* Debugger.cpp */,
-				D0ED65D019C9EDB60072EDD0 /* Debugger.h */,
-			);
-			name = Debugger;
 			sourceTree = "<group>";
 		};
 		D0ED65D719CA02A90072EDD0 /* PersonalityQuiz */ = {
@@ -1647,6 +1658,7 @@
 				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
+				7A8D461919CE680F0079C858 /* ball.png in Resources */,
 				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
@@ -1661,6 +1673,7 @@
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */,
 				D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */,
+				7A8D461B19CE691F0079C858 /* block.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
@@ -1713,6 +1726,7 @@
 			files = (
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
+				7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */,
@@ -1721,7 +1735,7 @@
 				7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */,
 				7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */,
 				7A0F1A5B19BEE2FC00679823 /* DormScene.cpp in Sources */,
-				7A0F1AA719BF03AB00679823 /* GameView.cpp in Sources */,
+				7ADE1F0719CE6F3200AEFF00 /* PauseMenu.cpp in Sources */,
 				7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */,
@@ -1731,7 +1745,6 @@
 				7A0F1A5D19BEE2FC00679823 /* LibraryRooms.cpp in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
 				7A0F1A5219BEE2FC00679823 /* Art-Hallway.cpp in Sources */,
-				7A7880A419C18F4B00BFF491 /* PauseMenu.cpp in Sources */,
 				7A0F1A5A19BEE2FC00679823 /* SocSci-Hallway.cpp in Sources */,
 				7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */,
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
@@ -1741,16 +1754,15 @@
 				7A0F1A5819BEE2FC00679823 /* SciMed-Hallway.cpp in Sources */,
 				7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */,
 				7A0F1A5319BEE2FC00679823 /* Buis-Foyer.cpp in Sources */,
-				D0ED65B519C9234A0072EDD0 /* LogicGame.cpp in Sources */,
 				7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */,
 				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
+				7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */,
 				7A0F1A9319BEE3F400679823 /* DormController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
 				7A0F1A8B19BEE3F400679823 /* Buis-Foyer-Controller.cpp in Sources */,
 				7A89453D19ADAD16008E1EA7 /* TimeHelper.cpp in Sources */,
-				D0ED65D119C9EDB60072EDD0 /* Debugger.cpp in Sources */,
 				7A0F1A5519BEE2FC00679823 /* EIS_Hallway.cpp in Sources */,
 				7A0F1A5619BEE2FC00679823 /* Inside_EIS.cpp in Sources */,
 				7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */,
@@ -1758,8 +1770,10 @@
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */,
+				7ADE1F0619CE6F3200AEFF00 /* MyContactListener.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
@@ -1768,9 +1782,9 @@
 				7A0F1A8919BEE3F400679823 /* Art-Foyer-Controller.cpp in Sources */,
 				7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */,
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,
+				7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */,
 				7A0F1A5719BEE2FC00679823 /* SciMed-Foyer.cpp in Sources */,
 				7A0F1A5119BEE2FC00679823 /* Art-Foyer.cpp in Sources */,
-				7A0F1AA419BEEEE800679823 /* BrickBreaker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

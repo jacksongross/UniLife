@@ -19,7 +19,6 @@
 #include <cmath>
 #include <sstream>
 #include "BrickBreaker.h"
-#include "GameView.h"
 #include "PauseMenu.h"
 #include "SimpleAudioEngine.h"
 
@@ -256,7 +255,7 @@ void DormScene::ComputerPressed(cocos2d::Ref *pSender)
 {
     log("You touched the computer!");
     // transition to the load game scene
-    auto scene = GameView::createScene();
+    auto scene = BrickBreaker::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 }

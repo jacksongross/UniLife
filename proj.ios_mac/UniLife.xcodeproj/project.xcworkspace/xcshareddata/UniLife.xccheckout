@@ -12,7 +12,7 @@
 	<dict>
 		<key>362BF958-1157-4481-8D46-39F0D7121E03</key>
 		<string>https://github.com/KurtRobo/UniLife_Documentation.git</string>
-		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
+		<key>8CFF8ACDA95F1570F62655C1A934FF89DC1B95C3</key>
 		<string>https://github.com/jacksonGross/UniLife.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -20,23 +20,23 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>362BF958-1157-4481-8D46-39F0D7121E03</key>
-		<string>../../../../UniLife_Documentation</string>
-		<key>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</key>
+		<string>../../.._Documentation</string>
+		<key>8CFF8ACDA95F1570F62655C1A934FF89DC1B95C3</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/jacksonGross/UniLife.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</string>
+	<string>8CFF8ACDA95F1570F62655C1A934FF89DC1B95C3</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CEB5ACBE-EEA0-4182-BFA4-54778C40E296</string>
+			<string>8CFF8ACDA95F1570F62655C1A934FF89DC1B95C3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UniLife</string>
 		</dict>

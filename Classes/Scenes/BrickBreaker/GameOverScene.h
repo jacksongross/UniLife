@@ -15,7 +15,7 @@ class GameOverLayer : public cocos2d::LayerColor
 {
 public:
     CREATE_FUNC(GameOverLayer);
-    CC_SYNTHESIZE_READONLY(cocos2d::CCLabelTTF*, _label, Label);
+    CC_SYNTHESIZE_READONLY(cocos2d::Label*, _label, Label);
 	
     virtual ~GameOverLayer();
     bool init();

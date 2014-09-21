@@ -22,7 +22,7 @@
 #include "MenuNewGame.h"
 #include "DormScene.h"
 #include "MenuLoadScene.h"
-#include "GameView.h"
+#include "BrickBreaker.h"
 
 USING_NS_CC;
 using namespace cocos2d;
@@ -109,7 +109,7 @@ void Debugger::gotoLogicGame(Ref* pSender){
 
 void Debugger::gotoBrickBreaker(Ref* pSender){
     log("BrickBreakInit");
-    auto scene = GameView::createScene();
+    auto scene = BrickBreaker::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     

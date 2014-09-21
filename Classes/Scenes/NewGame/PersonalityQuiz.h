@@ -27,7 +27,6 @@
 #include "MenuNewGame.h"
 #include "DormScene.h"
 #include "MenuLoadScene.h"
-#include "GameView.h"
 
 using namespace cocos2d;
 

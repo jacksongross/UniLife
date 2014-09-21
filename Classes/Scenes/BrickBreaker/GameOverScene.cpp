@@ -7,7 +7,7 @@
 //
 
 #include "GameOverScene.h"
-#include "GameView.h"
+#include "BrickBreaker.h"
 
 USING_NS_CC;
 
@@ -18,24 +18,27 @@ bool GameOverLayer::init()
 		return false;
 	}
 	
-	Size winSize = CCDirector::sharedDirector()->getWinSize();
-	this->_label = Label::labelWithString("", "Arial", 12);
-    this->_label = LabelTTF
+	Size winSize = Director::getInstance()->getWinSize();
+	this->_label = Label::createWithSystemFont("", "Arial", 12);
 	this->_label->retain();
 	this->getLabel()->setColor(Color3B(0,0,0));
-	this->getLabel()->setPosition(ccp(winSize.width/2, winSize.height/2));
+	this->getLabel()->setPosition(Point(winSize.width/2, winSize.height/2));
 	this->addChild(_label);
-	
-	this->runAction(CCSequence::actions(CCDelayTime::actionWithDuration(3),
-										CCCallFunc::actionWithTarget(this, callfunc_selector(GameOverLayer::gameOverDone)),
-										NULL));
+    
+    DelayTime *delay = DelayTime::create(3);
+    
+    // perform the selector call
+    CallFunc *callback = CallFunc::create(this, callfunc_selector(GameOverLayer::gameOverDone));
+    
+    // run the action
+    this->runAction( Sequence::createWithTwoActions(delay, callback));
 	
 	return true;
 }
 
 void GameOverLayer::gameOverDone()
 {
-	Director::sharedDirector()->replaceScene(GameView::scene());
+	Director::getInstance()->replaceScene(BrickBreaker::createScene());
 }
 
 GameOverLayer::~GameOverLayer()
@@ -47,7 +50,7 @@ bool GameOverScene::init()
 {
 	if( CCScene::init() )
 	{
-		this->_layer = GameOverLayer::node();
+		this->_layer = GameOverLayer::create();
 		this->_layer->retain();
 		this->addChild(_layer);
 		

@@ -7,7 +7,6 @@
 //
 
 #include "PauseMenu.h"
-#include "GameView.h"
 #include "MenuScene.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
