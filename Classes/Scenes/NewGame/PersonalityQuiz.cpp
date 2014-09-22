@@ -464,7 +464,7 @@ void PersonalityQuiz::EndQuiz(){
 
     ui::Text* ResultDesc = ui::Text::create(resultdesc, "Arial", 30);
     ResultDesc->setColor(Color3B::BLACK);
-    ResultDesc->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 200));
+    ResultDesc->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 50));
     ResultDesc->setName("ResultDesc");
     ResultDesc->setTextAreaSize(Size(600,200));
     ResultDesc->setVisible(true);
@@ -482,8 +482,8 @@ void PersonalityQuiz::EndQuiz(){
     
     ui::Text* StatHeader = ui::Text::create("STATISTICS", "Arial", 30);
     StatHeader->setColor(Color3B::BLACK);
-    StatHeader->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 150));
-    StatHeader->setName("Intel");
+    StatHeader->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2));
+    StatHeader->setName("StatHeader");
     StatHeader->setVisible(true);
     this->addChild(StatHeader,2);
     
@@ -494,7 +494,7 @@ void PersonalityQuiz::EndQuiz(){
     
     ui::Text* Intel = ui::Text::create(statistics, "Arial", 30);
     Intel->setColor(Color3B::BLACK);
-    Intel->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 200));
+    Intel->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 50));
     Intel->setName("Intel");
     Intel->setVisible(true);
     this->addChild(Intel,2);
@@ -503,7 +503,7 @@ void PersonalityQuiz::EndQuiz(){
     statistics.append(to_string(newplayer.getStats().getStamina()));
     ui::Text* Stam = ui::Text::create(statistics, "Arial", 30);
     Stam->setColor(Color3B::BLACK);
-    Stam->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 225));
+    Stam->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 75));
     Stam->setName("Stam");
     Stam->setVisible(true);
     this->addChild(Stam,2);
@@ -512,7 +512,7 @@ void PersonalityQuiz::EndQuiz(){
     statistics.append(to_string(newplayer.getStats().getSocial()));
     ui::Text* Soc = ui::Text::create(statistics, "Arial", 30);
     Soc->setColor(Color3B::BLACK);
-    Soc->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 250));
+    Soc->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 100));
     Soc->setName("Soc");
     Soc->setVisible(true);
     this->addChild(Soc,2);
@@ -527,6 +527,17 @@ void PersonalityQuiz::EndQuiz(){
     log("DEGREE: %s", newplayer.getDegree().c_str());
     log("ENERGY: %d" , newplayer.getStats().getEnergy());
     log("STRESS: %d", newplayer.getStats().getStress());
+    
+    
+    
+    //Button To Go To The Next Screen
+    auto EndButton = ui::Button::create();
+    EndButton->setTouchEnabled(true);
+    EndButton->loadTextures("New-Game-next_off.png", "New-Game-next_on.png", "");
+    EndButton->setPosition(Point(visibleSize.width/2 + 400, visibleSize.height/2 - 250));
+    EndButton->addTouchEventListener(CC_CALLBACK_2(PersonalityQuiz::gotoEnterName, this));
+    EndButton->setName("EndButton");
+    addChild(EndButton,3);
     
     
 }
@@ -680,10 +691,6 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
             }
         }
         
-        if(index == questions.size()){
-            //createnamecap();
-        }
-        
     
     
     }
@@ -704,14 +711,14 @@ void PersonalityQuiz::createnamecap(){
     
     ui::Text* EnterNameText = ui::Text::create(abc, "Arial", 30);
     EnterNameText->setColor(Color3B::BLACK);
-    EnterNameText->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 200));
+    EnterNameText->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 100));
     EnterNameText->setName("ResultDesc");
     EnterNameText->setTextAreaSize(Size(600,200));
     EnterNameText->setVisible(true);
     this->addChild(EnterNameText,2);
     
     EditBox *EnterName = EditBox::create(Size(350,50), Scale9Sprite::create("New-Game-textbox.png"));
-    EnterName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 190, origin.y + visibleSize.height / 2 + 130));
+    EnterName->setPosition(Vec2(visibleSize.width / 2, + visibleSize.height / 2 - 130));
     EnterName->setInputMode(cocos2d::extension::EditBox::InputMode::SINGLE_LINE);
     EnterName->setMaxLength(20);
     EnterName->setFontColor(Color3B::BLACK);
@@ -721,6 +728,78 @@ void PersonalityQuiz::createnamecap(){
     this->addChild(EnterName,3);
 
     
+}
+
+void PersonalityQuiz::gotoEnterName(Ref* pSender, ui::Widget::TouchEventType eEventType){
+    
+    std::string newstring;
+    
+    
+    if (eEventType == ui::Widget::TouchEventType::ENDED){
+        
+        
+        log("End Game Button Pressed");
+        
+        auto button = (ui::Button*)this->getChildByName("EndButton");
+        button->addTouchEventListener(CC_CALLBACK_2(PersonalityQuiz::gotoDormScene, this));
+        button->setTouchEnabled(true);
+        button->setVisible(true);
+        
+        auto ResultDesc = (ui::Text*)this->getChildByName("ResultDesc");
+        ResultDesc->setTouchEnabled(false);
+        ResultDesc->setVisible(false);
+        
+        auto ResultName = (ui::Text*)this->getChildByName("ResultName");
+        ResultName->setTouchEnabled(false);
+        ResultName->setVisible(false);
+        
+        auto StatHeader = (ui::Text*)this->getChildByName("StatHeader");
+        StatHeader->setTouchEnabled(false);
+        StatHeader->setVisible(false);
+        
+        auto Intel = (ui::Text*)this->getChildByName("Intel");
+        Intel->setTouchEnabled(false);
+        Intel->setVisible(false);
+        
+        auto Stam = (ui::Text*)this->getChildByName("Stam");
+        Stam->setTouchEnabled(false);
+        Stam->setVisible(false);
+        
+        auto Soc = (ui::Text*)this->getChildByName("Soc");
+        Soc->setTouchEnabled(false);
+        Soc->setVisible(false);
+        
+        createnamecap();
+        
+        
+        
+    }
+    
+    
+}
+
+void PersonalityQuiz::gotoDormScene(Ref* pSender, ui::Widget::TouchEventType eEventType){
+    
+    std::string newstring;
+    
+    
+    if (eEventType == ui::Widget::TouchEventType::ENDED){
+        
+        log("==========PLAYER BEING SENT==========");
+        log("NAME: %s", newplayer.getName().c_str());
+        log("INT: %d", newplayer.getStats().getIntelligence());
+        log("STA: %d", newplayer.getStats().getStamina());
+        log("SOC: %d", newplayer.getStats().getSocial());
+        log("DEGREE: %s", newplayer.getDegree().c_str());
+        log("ENERGY: %d" , newplayer.getStats().getEnergy());
+        log("STRESS: %d", newplayer.getStats().getStress());
+        
+        auto scene = DormScene::createScene(newplayer);
+        TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+        Director::getInstance()->replaceScene(crosssfade);
+        
+        
+    }
     
     
     

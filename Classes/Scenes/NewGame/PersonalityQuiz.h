@@ -43,7 +43,9 @@ public:
     //Next Page Callback
     void gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEventType);
     
+    void gotoEnterName(Ref* pSender, ui::Widget::TouchEventType eEventType);
     
+    void gotoDormScene(Ref* pSender, ui::Widget::TouchEventType eEventType);
     //Create the Quiz
     void SpawnQuiz();
     
@@ -52,6 +54,11 @@ public:
     
     //Win Game Event Function
     void EndQuiz();
+    
+    void editBoxEditingDidBegin(cocos2d::extension::EditBox* editBox);
+    void editBoxEditingDidEnd(cocos2d::extension::EditBox* editBox);
+    void editBoxTextChanged(cocos2d::extension::EditBox* editBox, const std::string& text);
+    void editBoxReturn(cocos2d::extension::EditBox* editBox);
     
     
     //Callbacks For Each Text Item That Is Pressed
