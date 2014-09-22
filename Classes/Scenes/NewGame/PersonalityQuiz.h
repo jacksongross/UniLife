@@ -68,7 +68,6 @@ public:
     void hidebutton();
     
     //Add the Points to the Score Variables
-    void findDegree(std::string);
     void createnamecap();
     
     void LoadData(int);
