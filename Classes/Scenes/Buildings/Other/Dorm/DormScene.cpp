@@ -21,7 +21,7 @@
 #include "BrickBreaker.h"
 #include "PauseMenu.h"
 #include "SimpleAudioEngine.h"
-
+#include "HUDHelper.h"
 USING_NS_CC;
 PlayerModel pm;
 
@@ -53,6 +53,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     scene->addChild(layer);
     pm = inplayer;
     pm.setStats(inplayer.getStats());
+    
     
     // Report on the loaded player object
     log("==========PLAYER IN DORM==========");
@@ -102,6 +103,9 @@ bool DormScene::init()
     
     // create the dorm scene
     DormController::CreateDormRoom(this, visibleSize, origin);
+    //Added an update for the HUD Stress & Energy Bars
+    HUDLayer newHUD;
+    newHUD.create(this, pm);
     UpdateMeters(pm.getStats());
     
     this->schedule(schedule_selector(DormScene::UpdateTimer),1.0f);
@@ -265,14 +269,15 @@ void DormScene::UpdateMeters(PlayerStatsModel updateModel)
 {
     
     //Added an update for the HUD Stress & Energy Bars
-    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
-    auto stressMeter = (cocos2d::ProgressTimer*)this->getChildByTag(2);
+    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByName("EnergyHUD");
     
     pgTimer->setScaleX(updateModel.getEnergy()/100.0);
     pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
     
-    stressMeter->setScaleX(updateModel.getStress()/100.0);
-    stressMeter->setAnchorPoint(Vec2(0.f, 0.5f));
+    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByName("StressHUD");
+    
+    pgTimer2->setScaleX(updateModel.getStress()/100.0);
+    pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
 }
 
 

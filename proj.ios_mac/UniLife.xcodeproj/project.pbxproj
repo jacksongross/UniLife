@@ -177,6 +177,7 @@
 		D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D619BEB6290023B5A6 /* Library_couch.png */; };
 		D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D719BEB6290023B5A6 /* Library_Foyer.png */; };
 		D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D819BEB6290023B5A6 /* Library_Rooms.png */; };
+		D0D71D2519CFD9BA007BCEAB /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E4680819C6A2D800254367 /* SciMed_Border.png */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
@@ -546,6 +547,8 @@
 		D0D709D619BEB6290023B5A6 /* Library_couch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_couch.png; path = LibraryAssets/Library_couch.png; sourceTree = "<group>"; };
 		D0D709D719BEB6290023B5A6 /* Library_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Foyer.png; path = LibraryAssets/Library_Foyer.png; sourceTree = "<group>"; };
 		D0D709D819BEB6290023B5A6 /* Library_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Rooms.png; path = LibraryAssets/Library_Rooms.png; sourceTree = "<group>"; };
+		D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDHelper.cpp; sourceTree = "<group>"; };
+		D0D71D2419CFD9BA007BCEAB /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E4680819C6A2D800254367 /* SciMed_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SciMed_Border.png; sourceTree = "<group>"; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
@@ -1054,6 +1057,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D0D71D1B19CFD9A8007BCEAB /* HUDHelper */,
 				7A89453819ADAD16008E1EA7 /* Time */,
 				7A89453319ADAD16008E1EA7 /* Sql */,
 			);
@@ -1399,6 +1403,15 @@
 			name = LibraryAssets;
 			sourceTree = "<group>";
 		};
+		D0D71D1B19CFD9A8007BCEAB /* HUDHelper */ = {
+			isa = PBXGroup;
+			children = (
+				D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */,
+				D0D71D2419CFD9BA007BCEAB /* HUDHelper.h */,
+			);
+			name = HUDHelper;
+			sourceTree = "<group>";
+		};
 		D0DF70161999B77600C96742 /* icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1731,6 +1744,7 @@
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */,
 				7A0F1A8C19BEE3F400679823 /* Buis-Hallway-Controller.cpp in Sources */,
+				D0D71D2519CFD9BA007BCEAB /* HUDHelper.cpp in Sources */,
 				7A0F1A5E19BEE2FC00679823 /* TavernFoyer.cpp in Sources */,
 				7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */,
 				7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */,

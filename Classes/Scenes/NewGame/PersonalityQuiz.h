@@ -27,7 +27,7 @@
 #include "MenuNewGame.h"
 #include "DormScene.h"
 #include "MenuLoadScene.h"
-
+#include "HUDHelper.h"
 using namespace cocos2d;
 
 class PersonalityQuiz : public cocos2d::Layer
@@ -67,6 +67,9 @@ public:
     void makevisible();
     void hidebutton();
     
+    //Add the Points to the Score Variables
+    void findDegree(std::string);
+    void createnamecap();
     
     void LoadData(int);
     
@@ -75,6 +78,7 @@ public:
     CREATE_FUNC(PersonalityQuiz);
 private:
     
+    PlayerModel newplayer;
     
     //Vector Containers
     std::vector<std::string> questions;
@@ -101,6 +105,8 @@ private:
     
     std::string pCode;
     
+    
+    bool finished = false;
     /*
     
      Favorite world: Do you prefer to focus on the outer world or on your own inner world? This is called Extraversion (E) or Introversion (I).

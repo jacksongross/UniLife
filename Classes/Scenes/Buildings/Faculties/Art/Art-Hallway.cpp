@@ -18,7 +18,7 @@
 #include <string>
 #include <vector>
 #include "MapScene.h"
-
+#include "HUDHelper.h"
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -54,6 +54,9 @@ bool ArtHallway::init()
     
     // create the main menu
     ArtHallwayController::CreateMainMenu(this, visibleSize, origin);
+    
+    HUDLayer newHUD;
+    newHUD.create(this, pm);
     UpdateMeters(pm.getStats());
     
     return true;
@@ -64,14 +67,13 @@ void ArtHallway::UpdateMeters(PlayerStatsModel updateModel)
 {
     
     //Added an update for the HUD Stress & Energy Bars
-    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByTag(1);
+    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByName("EnergyHUD");
     
     pgTimer->setScaleX(updateModel.getEnergy()/100.0);
     pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
     log("%d",updateModel.getEnergy());
     
-    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByTag(2);
-    
+    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByName("StressHUD");
     pgTimer2->setScaleX(updateModel.getStress()/100.0);
     pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
     log("%d",updateModel.getStress());
@@ -91,7 +93,7 @@ void ArtHallway::ToFoyer(Ref* pSender)
 
 
 void ArtHallway::ToLecture(Ref* pSender){
-    log("Going To Buisness Lecture!");
+    log("Going To Art Lecture!");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
@@ -117,7 +119,7 @@ void ArtHallway::ToLecture(Ref* pSender){
 
 
 void ArtHallway::ToTutorial(Ref* pSender){
-    log("Going To Buisness Tutorial!");
+    log("Going To Art Tutorial!");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){

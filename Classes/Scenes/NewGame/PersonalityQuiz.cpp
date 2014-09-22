@@ -15,6 +15,7 @@ Scene* PersonalityQuiz::createScene()
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
+    
     // 'layer' is an autorelease object
     auto layer = PersonalityQuiz::create();
     
@@ -46,7 +47,7 @@ bool PersonalityQuiz::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
-    
+
     
     
     SpawnQuiz();
@@ -182,8 +183,6 @@ void PersonalityQuiz::SpawnQuiz(){
     
     questions.push_back("I like frequent changes in my life.");
     code.push_back('P');
-    
-    
     
     questions.push_back("I am energized by being with people.");
     code.push_back('E');
@@ -595,11 +594,20 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
                 resetall();
                 hidebutton();
             }else{
+                Qnum->setVisible(false);
                 resetall();
                 hidebutton();
                 EndQuiz();
             }
         }
+        
+        
+        if(finished == true){
+            createnamecap();
+            
+            
+        }
+        
     
     
     }
@@ -608,4 +616,118 @@ void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEve
     
     
 }
+
+
+void PersonalityQuiz::findDegree(std::string inPcode){
+    
+    //Here Add Degree Recommendations based on the code provided
+    
+    if(pCode == "INFP"){
+        PlayerStatsModel newstats(8, 5, 7, 100, 100, 0);
+        newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Nursing & Medicine");
+    }else if(pCode == "INFJ"){
+        PlayerStatsModel newstats(8, 4, 8, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Psychology");
+    }else if(pCode == "INTJ" ){
+        PlayerStatsModel newstats(12, 4, 4, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Engineering");
+    }else if(pCode == "INTP" ){
+        PlayerStatsModel newstats(11, 4, 5, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Computer Science");
+    }else if(pCode == "ISFJ" ){
+        PlayerStatsModel newstats(8, 5, 5, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Biological Sciences");
+    }else if(pCode == "ISFP" ){
+        PlayerStatsModel newstats(5, 7, 8, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Music");
+    }else if(pCode == "ISTJ" ){
+        PlayerStatsModel newstats(8, 6, 6, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Law");
+    }else if(pCode == "ISTP" ){
+        PlayerStatsModel newstats(9, 7, 4, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Architecture");
+    }else if(pCode == "ENFJ" ){
+        PlayerStatsModel newstats(6, 6, 8, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Teaching");
+    }else if(pCode == "ENFP" ){
+        PlayerStatsModel newstats(5, 10, 5, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Sport Sciences");
+    }else if(pCode == "ENTJ" ){
+        PlayerStatsModel newstats(4, 8, 8, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Commerce");
+    }else if(pCode == "ENTP" ){
+        PlayerStatsModel newstats(4, 7, 9, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Creative Arts");
+    }else if(pCode == "ESFJ" ){
+        PlayerStatsModel newstats(5, 9, 6, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Political Science");
+    }else if(pCode == "ESFP" ){
+        PlayerStatsModel newstats(4, 6, 10, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Performing Arts");
+    }else if(pCode == "ESTJ" ){
+        PlayerStatsModel newstats(6, 6, 8, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Management");
+    }else if(pCode == "ESTP" ){
+        PlayerStatsModel newstats(7, 7, 6, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("Marketing");
+    }else{
+        PlayerStatsModel newstats(6, 6, 6, 100, 100, 0);
+         newplayer.setStats(newstats);
+        newplayer.setScene("DormScene");
+        newplayer.setDegree("General Studies");
+    }
+    
+    
+    log("==========PLAYER CREATED==========");
+    log("NAME: %s", newplayer.getName().c_str());
+    log("INT: %d", newplayer.getStats().getIntelligence());
+    log("STA: %d", newplayer.getStats().getStamina());
+    log("SOC: %d", newplayer.getStats().getSocial());
+    log("DEGREE: %s", newplayer.getDegree().c_str());
+    log("ENERGY: %d" , newplayer.getStats().getEnergy());
+    log("STRESS: %d", newplayer.getStats().getStress());
+
+}
+
+void PersonalityQuiz::createnamecap(){
+    
+    
+
+    
+}
+
+
+
 
