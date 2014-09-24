@@ -47,7 +47,9 @@ bool PersonalityQuiz::init()
     this->addChild(sprite, 0);
     
 
-    
+    Sprite *border = Sprite::create("New-Game-Border.png");
+    border->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y - 50));
+    this->addChild(border,1);
     
     SpawnQuiz();
     
@@ -62,13 +64,18 @@ void PersonalityQuiz::SpawnQuiz(){
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-    //Create Personality Quiz Title
+    /*Create Personality Quiz Title
     ui::Text* title = ui::Text::create("PERSONALITY QUIZ", "Arial", 30);
     title->setColor(Color3B::BLACK);
     title->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 250));
-    this->addChild(title,1);
+    this->addChild(title,2);
+    */
     
-
+    Sprite* title = Sprite::create("PQuiz_title.png");
+    title->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 250));
+    this->addChild(title,2);
+    
+    
     //Button To Go To The Next Screen
     auto NextButton = ui::Button::create();
     NextButton->setTouchEnabled(true);
@@ -76,15 +83,15 @@ void PersonalityQuiz::SpawnQuiz(){
     NextButton->setPosition(Point(visibleSize.width/2 + 400, visibleSize.height/2 - 250));
     NextButton->addTouchEventListener(CC_CALLBACK_2(PersonalityQuiz::gotoNextPage, this));
     NextButton->setName("NextButton");
-    addChild(NextButton,1);
+    addChild(NextButton,2);
     
     
     //Text Element Which Will Store the Question Number
     ui::Text* QNum = ui::Text::create("Intro ", "Arial", 30);
     QNum->setColor(Color3B::BLACK);
-    QNum->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 350, visibleSize.height/2 + 250));
+    QNum->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 410, visibleSize.height/2 + 150));
     QNum->setName("QNum");
-    this->addChild(QNum,1);
+    this->addChild(QNum,2);
 
     
     
@@ -96,64 +103,64 @@ void PersonalityQuiz::SpawnQuiz(){
     IntroText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     IntroText->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
     IntroText->setName("IntroText1");
-    this->addChild(IntroText,1);
+    this->addChild(IntroText,2);
     
     
     
     ui::Text* IntroText2 = ui::Text::create("Press The Next Button To Start The Quiz  - - >", "Arial", 30);
     IntroText2->setColor(Color3B::BLACK);
-    IntroText2->cocos2d::Node::setPosition(Point(visibleSize.width/2  - 200, visibleSize.height/2 - 250));
+    IntroText2->cocos2d::Node::setPosition(Point(visibleSize.width/2  - 200, visibleSize.height/2 - 230));
     IntroText2->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     IntroText2->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
     IntroText2->setName("IntroText2");
-    this->addChild(IntroText2,1);
+    this->addChild(IntroText2,2);
     
     
     //This is the Text Element Which Will Hold the Question To be Used
     ui::Text* Question = ui::Text::create("Q) This is a Placeholder for a Question ", "Arial", 30);
     Question->setColor(Color3B::BLACK);
-    Question->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 150));
+    Question->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 120));
     Question->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     Question->setName("Question");
     Question->setVisible(false);
-    this->addChild(Question,1);
+    this->addChild(Question,2);
     
     //These are the Answer Statment Text Elements which contain callbacks to their respective functions
     ui::Text* AnswerA = ui::Text::create("A: ", "Arial", 30);
     AnswerA->setColor(Color3B::BLACK);
-    AnswerA->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 200, visibleSize.height/2 + 50));
+    AnswerA->cocos2d::Node::setPosition(Point(visibleSize.width/2 - 200, visibleSize.height/2));
     AnswerA->setName("AnswerA");
     AnswerA->addTouchEventListener(CC_CALLBACK_1(PersonalityQuiz::AnswerA, this));
     AnswerA->setTouchEnabled(true);
     AnswerA->setVisible(false);
-    this->addChild(AnswerA,1);
+    this->addChild(AnswerA,2);
     
     ui::Text* AnswerB = ui::Text::create("B: ", "Arial", 30);
     AnswerB->setColor(Color3B::BLACK);
-    AnswerB->cocos2d::Node::setPosition(Point(visibleSize.width/2  + 200, visibleSize.height/2 + 50));
+    AnswerB->cocos2d::Node::setPosition(Point(visibleSize.width/2  + 200, visibleSize.height/2));
     AnswerB->setName("AnswerB");
     AnswerB->addTouchEventListener(CC_CALLBACK_1(PersonalityQuiz::AnswerB, this));
     AnswerB->setTouchEnabled(true);
     AnswerB->setVisible(false);
-    this->addChild(AnswerB,1);
+    this->addChild(AnswerB,2);
     
     ui::Text* AnswerC = ui::Text::create("C: ", "Arial", 30);
     AnswerC->setColor(Color3B::BLACK);
-    AnswerC->cocos2d::Node::setPosition(Point(visibleSize.width/2 -200, visibleSize.height/2  - 50));
+    AnswerC->cocos2d::Node::setPosition(Point(visibleSize.width/2 -200, visibleSize.height/2  - 100));
     AnswerC->setName("AnswerC");
     AnswerC->addTouchEventListener(CC_CALLBACK_1(PersonalityQuiz::AnswerC, this));
     AnswerC->setTouchEnabled(true);
     AnswerC->setVisible(false);
-    this->addChild(AnswerC,1);
+    this->addChild(AnswerC,2);
     
     ui::Text* AnswerD = ui::Text::create("D: ", "Arial", 30);
     AnswerD->setColor(Color3B::BLACK);
-    AnswerD->cocos2d::Node::setPosition(Point(visibleSize.width/2 +200, visibleSize.height/2  - 50));
+    AnswerD->cocos2d::Node::setPosition(Point(visibleSize.width/2 +200, visibleSize.height/2  - 100));
     AnswerD->setName("AnswerD");
     AnswerD->addTouchEventListener(CC_CALLBACK_1(PersonalityQuiz::AnswerD, this));
     AnswerD->setTouchEnabled(true);
     AnswerD->setVisible(false);
-    this->addChild(AnswerD,1);
+    this->addChild(AnswerD,2);
 
     
     
@@ -334,7 +341,7 @@ void PersonalityQuiz::EndQuiz(){
     
     ui::Text* Result = ui::Text::create(stringcreate, "Arial", 45);
     Result->setColor(Color3B::BLACK);
-    Result->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 175));
+    Result->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 100));
     Result->setName("Result");
     Result->setVisible(true);
     this->addChild(Result,2);
@@ -464,16 +471,16 @@ void PersonalityQuiz::EndQuiz(){
 
     ui::Text* ResultDesc = ui::Text::create(resultdesc, "Arial", 30);
     ResultDesc->setColor(Color3B::BLACK);
-    ResultDesc->setPosition(Point(visibleSize.width/2 + 150, visibleSize.height/2 - 50));
+    ResultDesc->setPosition(Point(visibleSize.width/2 + 120, visibleSize.height/2 - 100));
     ResultDesc->setName("ResultDesc");
-    ResultDesc->setTextAreaSize(Size(600,200));
+    ResultDesc->setTextAreaSize(Size(800,200));
     ResultDesc->setVisible(true);
     this->addChild(ResultDesc,2);
 
     
     ui::Text* ResultName = ui::Text::create(resultname, "Arial", 30);
     ResultName->setColor(Color3B::BLACK);
-    ResultName->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 110));
+    ResultName->setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 50));
     ResultName->setName("ResultName");
     ResultName->setVisible(true);
     this->addChild(ResultName,2);
@@ -482,7 +489,7 @@ void PersonalityQuiz::EndQuiz(){
     
     ui::Text* StatHeader = ui::Text::create("STATISTICS", "Arial", 30);
     StatHeader->setColor(Color3B::BLACK);
-    StatHeader->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2));
+    StatHeader->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 45));
     StatHeader->setName("StatHeader");
     StatHeader->setVisible(true);
     this->addChild(StatHeader,2);
@@ -494,7 +501,7 @@ void PersonalityQuiz::EndQuiz(){
     
     ui::Text* Intel = ui::Text::create(statistics, "Arial", 30);
     Intel->setColor(Color3B::BLACK);
-    Intel->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 50));
+    Intel->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 100));
     Intel->setName("Intel");
     Intel->setVisible(true);
     this->addChild(Intel,2);
@@ -503,7 +510,7 @@ void PersonalityQuiz::EndQuiz(){
     statistics.append(to_string(newplayer.getStats().getStamina()));
     ui::Text* Stam = ui::Text::create(statistics, "Arial", 30);
     Stam->setColor(Color3B::BLACK);
-    Stam->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 75));
+    Stam->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 125));
     Stam->setName("Stam");
     Stam->setVisible(true);
     this->addChild(Stam,2);
@@ -512,7 +519,7 @@ void PersonalityQuiz::EndQuiz(){
     statistics.append(to_string(newplayer.getStats().getSocial()));
     ui::Text* Soc = ui::Text::create(statistics, "Arial", 30);
     Soc->setColor(Color3B::BLACK);
-    Soc->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 100));
+    Soc->setPosition(Point(visibleSize.width/2 - 400, visibleSize.height/2 - 150));
     Soc->setName("Soc");
     Soc->setVisible(true);
     this->addChild(Soc,2);
@@ -782,6 +789,10 @@ void PersonalityQuiz::gotoDormScene(Ref* pSender, ui::Widget::TouchEventType eEv
     
     std::string newstring;
     
+    auto ebox = (EditBox*)this->getChildByName("NameBox");//Access to EditBox via tag
+    
+    newplayer.setName(ebox->getText());
+
     
     if (eEventType == ui::Widget::TouchEventType::ENDED){
         

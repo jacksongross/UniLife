@@ -158,6 +158,8 @@
 		D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388C19C00804001956BD /* DegreeSelect_Title.png */; };
 		D03F389219C00804001956BD /* EIS_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388D19C00804001956BD /* EIS_Border.png */; };
 		D03F389319C00804001956BD /* SocSci_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388E19C00804001956BD /* SocSci_Border.png */; };
+		D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A019D26A6D0042DB83 /* PQuiz_back.png */; };
+		D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A119D26A6D0042DB83 /* PQuiz_title.png */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
@@ -528,6 +530,8 @@
 		D03F388C19C00804001956BD /* DegreeSelect_Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DegreeSelect_Title.png; sourceTree = "<group>"; };
 		D03F388D19C00804001956BD /* EIS_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EIS_Border.png; sourceTree = "<group>"; };
 		D03F388E19C00804001956BD /* SocSci_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SocSci_Border.png; sourceTree = "<group>"; };
+		D06135A019D26A6D0042DB83 /* PQuiz_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_back.png; sourceTree = "<group>"; };
+		D06135A119D26A6D0042DB83 /* PQuiz_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_title.png; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
@@ -1310,6 +1314,8 @@
 		7AB6AB1319AEDDF5003CCD7E /* NewCharacter */ = {
 			isa = PBXGroup;
 			children = (
+				D06135A019D26A6D0042DB83 /* PQuiz_back.png */,
+				D06135A119D26A6D0042DB83 /* PQuiz_title.png */,
 				D0E4680819C6A2D800254367 /* SciMed_Border.png */,
 				D03F388A19C00804001956BD /* Art_Border.png */,
 				D03F388B19C00804001956BD /* Buis_Border.png */,
@@ -1654,6 +1660,7 @@
 				D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */,
 				7A78809719C17C4200BFF491 /* paddle.png in Resources */,
 				7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */,
+				D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
 				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
@@ -1672,6 +1679,7 @@
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
 				7A01645919CF956B0021009A /* ball.png in Resources */,
+				D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */,
 				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
