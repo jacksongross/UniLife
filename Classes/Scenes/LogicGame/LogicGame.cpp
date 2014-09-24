@@ -77,7 +77,7 @@ void LogicGame::RunLogicGame(){
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto title = ui::Text::create("Get Them All To The Other Side Of The River Safely", "Arial Bold", 30);
-    title->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 300));
+    title->cocos2d::Node::setPosition(Point(visibleSize.width/2 + 85, visibleSize.height/2 + 300));
     title->setColor(Color3B::BLACK);
     this->addChild(title,5);
     
