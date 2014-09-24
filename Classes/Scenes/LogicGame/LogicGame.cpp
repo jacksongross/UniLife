@@ -18,6 +18,7 @@
 #include <vector>
 #include "DormScene.h"
 #include "MenuLoadScene.h"
+#include "LogicGameMessages.h"
 
 USING_NS_CC;
 using namespace cocos2d;
@@ -422,14 +423,15 @@ void LogicGame::checkwin(){
     if(onleft[1] == false && onleft[1] == onleft[2] && onleft[2] == onleft[3]){
         log("They All Made It Safely Across");
         log("You Win!");
-        
+        PushMessage("You Win!");
     }
     //IF FOX AND CHICKEN LEFT TOGETHER
     else if(onleft[1] == onleft[2] && onleft[0] != onleft[1]){
         log("You Left the Fox with The Chicken!");
+        //log("The Fox Ate The Chicken");
         
-        log("The Fox Ate The Chicken");
-        
+        PushMessage("The Fox Ate The Chicken");
+        resetgame();
         log("GameOver");
         
         resetgame();
@@ -440,8 +442,9 @@ void LogicGame::checkwin(){
     else if(onleft[2] == onleft[3] && onleft[0] != onleft[2]){
         log("You Left the Chicken with The Grain!");
         
-        log("The Chicken Ate The Grain");
-        
+        //log("The Chicken Ate The Grain");
+        PushMessage("The Chicken Ate The Grain");
+        resetgame();
         log("GameOver");
         
         resetgame();
@@ -490,6 +493,16 @@ void LogicGame::updatemoves(){
     
     
     
+}
+
+
+void LogicGame::PushMessage(std::string inMessage)
+{
+    Director::getInstance()->pause();
+    log("Pausing the game");
+    
+    auto scene = LogicGameMessages::createScene(inMessage);
+    Director::getInstance()->pushScene(scene);
 }
 
 

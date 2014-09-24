@@ -38,7 +38,7 @@ public:
     void checkwin();
     void resetgame();
     void updatemoves();
-    
+    void PushMessage(std::string inMessage);
     
     // implement the "static create()" method manually
     CREATE_FUNC(LogicGame);
