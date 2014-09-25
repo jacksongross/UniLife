@@ -21,8 +21,6 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
     
-    void UpdateMeters(PlayerStatsModel updateModel);
-    
     void ToTavernRoom(Ref* pSender);
     void ToMap(Ref* pSender);
     
@@ -31,8 +29,12 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(TavernFoyer);
     
-private:
+    cocos2d::Scene* getHUDScene(){return this->HUDScene;};
     
+    void setHUDScene(cocos2d::Scene* HUDScene){this->HUDScene = HUDScene;};
+    
+private:
+    cocos2d::Scene* HUDScene;
 };
 
 #endif /* defined(__UniLife__TavernFoyer__) */

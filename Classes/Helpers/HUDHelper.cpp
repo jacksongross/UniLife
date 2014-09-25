@@ -8,254 +8,75 @@
 
 #include "HUDHelper.h"
 
-HUDLayer::HUDLayer(){
+// this method is used to create the HUD for each scene
+void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
+{
+    cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
+    cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
     
+    cocos2d::log(pm.getName().c_str());
+    cocos2d::log("energy: %d", pm.getStats().getEnergy());
+    cocos2d::log("stress: %d", pm.getStats().getStress());
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    cocos2d::ui::Text* engText = cocos2d::ui::Text::create("Energy ", "Verdana", 20);
+    cocos2d::Sprite* engSprite = cocos2d::Sprite::create("HUD_energy_bar.png");
+    cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);
+    cocos2d::Sprite* streSprite = cocos2d::Sprite::create("HUD_stress_bar.png");
+    cocos2d::ProgressTimer* pg = cocos2d::ProgressTimer::create(engSprite);
+    cocos2d::ProgressTimer* pg2 = cocos2d::ProgressTimer::create(streSprite);
     
-    engText->setContentSize(Size(400, 40));
-    engText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
-    engText->setColor(Color3B(0,0,0));
+    engText->setContentSize(cocos2d::Size(400, 40));
+    engText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
+    engText->setColor(cocos2d::Color3B(0,0,0));
     
-    engSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 300));
-    engSprite->setAnchorPoint(Vec2(0.f,0.5f));
+    engSprite->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 300));
+    engSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     engSprite->setScale(0.5 , 0.5);
     engSprite->setName("EnergyHUD");
     
-    
-    
-    streText->setContentSize(Size(400, 40));
-    streText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
-    streText->setColor(Color3B(0,0,0));
-    streSprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 265));
-    streSprite->setAnchorPoint(Vec2(0.f,0.5f));
+    streText->setContentSize(cocos2d::Size(400, 40));
+    streText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
+    streText->setColor(cocos2d::Color3B(0,0,0));
+    streSprite->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 265));
+    streSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     streSprite->setScale(0.5 , 0.5);
     streSprite->setName("StressHUD");
     
-    
-    pg->setBarChangeRate(Vec2(1, 0));
-    pg->setAnchorPoint(Vec2(0.f,0.5f));
-    pg2->setBarChangeRate(Vec2(1, 0));
-    pg2->setAnchorPoint(Vec2(0.f,0.5f));
-    
-}
-
-void HUDLayer::create(ArtFoyer *that, PlayerModel pm){
+    pg->setBarChangeRate(cocos2d::Vec2(1, 0));
+    pg->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
+    pg->setTag(98);
+    pg2->setTag(99);
+    pg2->setBarChangeRate(cocos2d::Vec2(1, 0));
+    pg2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     
     pg->setScaleX(pm.getStats().getEnergy()/100.0);
     pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
+    pg->setPercentage(pm.getStats().getEnergy()/100.0);
+    pg2->setPercentage(pm.getStats().getStress()/100.0);
 
-}
-
-
-void HUDLayer::create(ArtHallway *that, PlayerModel pm){
+    scene->addChild(engText, 1);
+    scene->addChild(engSprite);
+    scene->addChild(pg);
+    scene->addChild(streText, 1);
+    scene->addChild(streSprite);
+    scene->addChild(pg2);
     
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
     
 }
 
-void HUDLayer::create(BuisFoyer *that, PlayerModel pm){
+// this method is used to update the HUD bars
+void HUDLayer::updateHUD(cocos2d::Scene* scene, PlayerModel pm)
+{
+    auto pgTimer = (cocos2d::ProgressTimer*)scene->getChildByName("EnergyHUD");
     
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
+    pgTimer->setScaleX(pm.getStats().getEnergy()/100.0);
+    pgTimer->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
+    cocos2d::log("%d",pm.getStats().getEnergy());
     
-}
-
-
-void HUDLayer::create(BuisHallway *that, PlayerModel pm){
+    auto pgTimer2 = (cocos2d::ProgressTimer*)scene->getChildByName("StressHUD");
     
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-
-void HUDLayer::create(SocSciFoyer *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-
-void HUDLayer::create(SocSciHallway *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(SciMedFoyer *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-
-void HUDLayer::create(SciMedHallway *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(Inside_EIS *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-
-void HUDLayer::create(EIS_Hallway *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(DormScene *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(TavernFoyer *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(TavernRoom *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(LibraryRooms *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::create(LibraryFoyer *that, PlayerModel pm){
-    
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    that->addChild(engText, 1);
-    that->addChild(engSprite);
-    that->addChild(pg);
-    that->addChild(streText, 1);
-    that->addChild(streSprite);
-    that->addChild(pg2);
-    
-}
-
-void HUDLayer::update(PlayerModel pm){
-    
-    
-    //Added an update for the HUD Stress & Energy Bars
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg->setAnchorPoint(Vec2(0.f,0.5f));
-    log("%d",pm.getStats().getEnergy());
-    
-    pg2->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setAnchorPoint(Vec2(0.f,0.5f));
-    log("%d",pm.getStats().getStress());
-    
-    
-
-    
+    pgTimer2->setScaleX(pm.getStats().getStress()/100.0);
+    pgTimer2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
+    cocos2d::log("%d",pm.getStats().getStress());
     
 }

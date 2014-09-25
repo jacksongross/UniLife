@@ -23,13 +23,16 @@ public:
     
     void ToHallway(Ref* pSender);
     void ToMap(Ref* pSender);
-    void UpdateMeters(PlayerStatsModel updateModel);
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     // implement the "static create()" method manually
     CREATE_FUNC(ArtFoyer);
     
-private:
+    cocos2d::Scene* getHUDScene(){return this->HUDScene;};
     
+    void setHUDScene(cocos2d::Scene* HUDScene){this->HUDScene = HUDScene;};
+    
+private:
+    cocos2d::Scene* HUDScene;
 };
 #endif /* defined(__UniLife__Art_Foyer__) */

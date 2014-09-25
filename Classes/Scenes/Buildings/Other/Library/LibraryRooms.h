@@ -21,8 +21,6 @@ public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
     
-    void UpdateMeters(PlayerStatsModel updateModel);
-    
     void ToFoyer(Ref* pSender);
     void ToMeet1(Ref* pSender);
     void ToMeet2(Ref* pSender);
@@ -31,7 +29,15 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(LibraryRooms);
     
+    cocos2d::Scene* getHUDScene(){return this->HUDScene;};
+    
+    void setHUDScene(cocos2d::Scene* HUDScene){this->HUDScene = HUDScene;};
+    
+    
+    
 private:
+    // holds reference to parent scene
+    cocos2d::Scene* HUDScene;
     
 };
 #endif /* defined(__UniLife__LibraryRooms__) */

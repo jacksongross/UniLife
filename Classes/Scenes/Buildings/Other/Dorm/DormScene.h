@@ -20,6 +20,9 @@ private:
     // player data
     PlayerModel player;
     
+    // hold reference to parent scene
+    Scene* HUDScene;    
+    
 public:
     
     bool isPaused;
@@ -36,8 +39,6 @@ public:
     static DormScene* create(PlayerModel player);
     
     void UpdateTimer(float dt);
-    
-    void UpdateMeters(PlayerStatsModel updateModel);
     
     void PausedPressed(Ref* pSender);
     
@@ -63,11 +64,15 @@ public:
     
     PlayerModel getPlayer();
     
+    Scene* getHUDScene();
+    
     /********************************
                 Setters
      *******************************/
     
     void setPlayer(PlayerModel player);
+    
+    void setHUDScene(Scene* HUDScene);
     
 };
 

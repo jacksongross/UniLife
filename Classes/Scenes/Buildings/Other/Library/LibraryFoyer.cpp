@@ -32,6 +32,12 @@ Scene* LibraryFoyer::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
     
+    layer->setHUDScene(scene);
+    
+    // create the HUD
+    HUDLayer::createHUD(scene, pm);
+    HUDLayer::updateHUD(scene, pm);
+    
     // return the scene
     return scene;
 }
@@ -53,32 +59,9 @@ bool LibraryFoyer::init()
     
     // create the main menu
     LibraryFoyerController::CreateMainMenu(this, visibleSize, origin);
-    HUDLayer newHUD;
-    newHUD.create(this, pm);
-    UpdateMeters(pm.getStats());
     
     return true;
 }
-
-
-void LibraryFoyer::UpdateMeters(PlayerStatsModel updateModel)
-{
-    
-    //Added an update for the HUD Stress & Energy Bars
-    auto pgTimer = (cocos2d::ProgressTimer*)this->getChildByName("EnergyHUD");
-    
-    pgTimer->setScaleX(updateModel.getEnergy()/100.0);
-    pgTimer->setAnchorPoint(Vec2(0.f,0.5f));
-    log("%d",updateModel.getEnergy());
-    
-    auto pgTimer2 = (cocos2d::ProgressTimer*)this->getChildByName("StressHUD");
-    
-    pgTimer2->setScaleX(updateModel.getStress()/100.0);
-    pgTimer2->setAnchorPoint(Vec2(0.f,0.5f));
-    log("%d",updateModel.getStress());
-}
-
-
 
 void LibraryFoyer::ToMap(Ref* pSender)
 {
