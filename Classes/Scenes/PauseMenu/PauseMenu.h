@@ -25,6 +25,8 @@ public:
     void saveCallback(cocos2d::Ref *pSender);
     
     void quitCallback(cocos2d::Ref *pSender);
+    
+    bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 
     // implement the "static create()" method manually
     CREATE_FUNC(PauseMenu);

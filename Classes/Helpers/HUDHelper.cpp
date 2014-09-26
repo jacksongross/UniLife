@@ -14,10 +14,6 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
     
-    cocos2d::log(pm.getName().c_str());
-    cocos2d::log("energy: %d", pm.getStats().getEnergy());
-    cocos2d::log("stress: %d", pm.getStats().getStress());
-    
     cocos2d::ui::Text* engText = cocos2d::ui::Text::create("Energy ", "Verdana", 20);
     cocos2d::Sprite* engSprite = cocos2d::Sprite::create("HUD_energy_bar.png");
     cocos2d::ui::Text* streText = cocos2d::ui::Text::create("Stress ", "Verdana", 20);

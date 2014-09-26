@@ -196,9 +196,13 @@ void DormScene::PausedPressed(Ref* pSender)
 {
         Director::getInstance()->pause();
         log("Pausing the game");
-        
-        auto scene = PauseMenu::createScene();
-        Director::getInstance()->pushScene(scene);
+    
+        auto *p = PauseMenu::createScene();
+    
+        this->addChild(p, 10);
+    
+        //auto scene = PauseMenu::createScene();
+        //Director::getInstance()->pushScene(scene);
 }
 
 void DormScene::DoorPressed(cocos2d::Ref *pSender)

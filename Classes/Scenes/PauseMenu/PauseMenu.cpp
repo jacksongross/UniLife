@@ -35,7 +35,6 @@ Scene* PauseMenu::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
     
-    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
     // create the a vector to hold the menu items
@@ -47,7 +46,7 @@ Scene* PauseMenu::createScene()
     bg->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
     
     // add the sprite as a child to this layer
-    layer->addChild(bg, 0);
+    //layer->addChild(bg, 0);
     
     auto label = Label::createWithSystemFont("Game Paused", "Helvetica", 74);
     
@@ -56,7 +55,6 @@ Scene* PauseMenu::createScene()
     label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.90));
     
     layer->addChild(label, 0);
-    
     
     
     ui::Text* resumeButton = ui::Text::create("Resume", "Arial", 88);
@@ -100,15 +98,31 @@ bool PauseMenu::init()
         return false;
     }
     
-
+    // this is needed so that all layers below the pause screen layer
+    // don't take touch events!!
+    auto touchListener = EventListenerTouchOneByOne::create();
+    touchListener->setSwallowTouches(true);
+    touchListener->onTouchBegan = CC_CALLBACK_2(PauseMenu::touchBegan, this);
     
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
+
+    return true;
+}
+
+// handles touches on the pause layer
+bool PauseMenu::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
+{
+    log("touches on the layer!");
     return true;
 }
 
 void PauseMenu::resumeCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the resume button!");
-    Director::getInstance()->popScene();
+    
+    this->getParent()->removeChild(this);
+    
+    //Director::getInstance()->popScene();
     Director::getInstance()->resume();
 }
 
