@@ -23,6 +23,7 @@
 #include "SimpleAudioEngine.h"
 #include "HUDHelper.h"
 USING_NS_CC;
+
 PlayerModel pm;
 
 Scene* DormScene::createScene()
@@ -192,19 +193,6 @@ void DormScene::UpdateTimer(float dt)
     
 }
 
-void DormScene::PausedPressed(Ref* pSender)
-{
-        Director::getInstance()->pause();
-        log("Pausing the game");
-    
-        auto *p = PauseMenu::createScene();
-    
-        this->addChild(p, 10);
-    
-        //auto scene = PauseMenu::createScene();
-        //Director::getInstance()->pushScene(scene);
-}
-
 void DormScene::DoorPressed(cocos2d::Ref *pSender)
 {
     log("playing the door sound effect");
@@ -270,9 +258,6 @@ void DormScene::ComputerPressed(cocos2d::Ref *pSender)
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 }
-
-
-
 
 /********************************
             Getters

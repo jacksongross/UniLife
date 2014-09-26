@@ -23,18 +23,6 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
-    // animate the menu button to spin
-    auto pauseButton = MenuItemImage::create("cog-110.png", "cog-110.png", CC_CALLBACK_1(DormScene::PausedPressed, that));
-    
-    pauseButton->setPosition(Vec2(visibleSize.width * .95, visibleSize.height * .90));
-    
-    auto rotate = RotateBy::create(5.0f, 360);
-    
-    // run this forever so it keeps on spinning
-    auto action = RepeatForever::create(rotate);
-    
-    pauseButton->runAction(action);
-    
     // create dorm room
     auto bg = Sprite::create("dorm-background.png");
     
@@ -99,7 +87,6 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     
     
     // push the sprites onto the scene
-    pMenuItems.pushBack(pauseButton);
     pMenuItems.pushBack(doorSprite);
     pMenuItems.pushBack(bedSprite);
     pMenuItems.pushBack(shelfSprite);

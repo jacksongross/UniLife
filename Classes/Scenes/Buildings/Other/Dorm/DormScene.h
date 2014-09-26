@@ -21,7 +21,7 @@ private:
     PlayerModel player;
     
     // hold reference to parent scene
-    Scene* HUDScene;    
+    cocos2d::Scene* HUDScene;
     
 public:
     
@@ -39,8 +39,6 @@ public:
     static DormScene* create(PlayerModel player);
     
     void UpdateTimer(float dt);
-    
-    void PausedPressed(Ref* pSender);
     
     void DoorPressed(Ref* pSender);
     
@@ -64,7 +62,7 @@ public:
     
     PlayerModel getPlayer();
     
-    Scene* getHUDScene();
+    cocos2d::Scene* getHUDScene();
     
     /********************************
                 Setters
@@ -72,7 +70,7 @@ public:
     
     void setPlayer(PlayerModel player);
     
-    void setHUDScene(Scene* HUDScene);
+    void setHUDScene(cocos2d::Scene* HUDScene);
     
 };
 

@@ -28,6 +28,7 @@ public:
     // this method is used to update the HUD bars
     static void updateHUD(cocos2d::Scene* scene, PlayerModel pm);
     
+    static void PausedPressed(cocos2d::Scene* scene);
     
 private:
 

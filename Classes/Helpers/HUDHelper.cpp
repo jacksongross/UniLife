@@ -7,6 +7,8 @@
 //
 
 #include "HUDHelper.h"
+#include "DormScene.h"
+#include "PauseMenu.h"
 
 // this method is used to create the HUD for each scene
 void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
@@ -20,6 +22,45 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     cocos2d::Sprite* streSprite = cocos2d::Sprite::create("HUD_stress_bar.png");
     cocos2d::ProgressTimer* pg = cocos2d::ProgressTimer::create(engSprite);
     cocos2d::ProgressTimer* pg2 = cocos2d::ProgressTimer::create(streSprite);
+    
+    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
+    
+    // animate the menu button to spin
+    auto pauseButton = cocos2d::Sprite::create("cog-110.png");
+    
+    pauseButton->setPosition(cocos2d::Vec2(visibleSize.width * .95, visibleSize.height * .90));
+    
+    auto rotate = cocos2d::RotateBy::create(5.0f, 360);
+    
+    // run this forever so it keeps on spinning
+    auto action = cocos2d::RepeatForever::create(rotate);
+    
+    pauseButton->runAction(action);
+    
+    auto listener1 = cocos2d::EventListenerTouchOneByOne::create();
+
+    listener1->setSwallowTouches(true);
+    
+    listener1->onTouchBegan = [](cocos2d::Touch* touch, cocos2d::Event* event){
+        
+        auto target = static_cast<cocos2d::Sprite*>(event->getCurrentTarget());
+        
+        //Get the position of the current point relative to the button
+        cocos2d::Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+        cocos2d::Size s = target->getContentSize();
+        cocos2d::Rect rect = cocos2d::Rect(0, 0, s.width, s.height);
+        
+        //Check the click area
+        if (rect.containsPoint(locationInNode))
+        {
+            // activate the pause overlay
+            HUDLayer::PausedPressed(event->getCurrentTarget()->getScene());
+            return true;
+        }
+        return false;
+    };
+    
+    scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener1, pauseButton);
     
     engText->setContentSize(cocos2d::Size(400, 40));
     engText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
@@ -56,6 +97,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     scene->addChild(streText, 1);
     scene->addChild(streSprite);
     scene->addChild(pg2);
+    scene->addChild(pauseButton);
     
     
 }
@@ -75,4 +117,14 @@ void HUDLayer::updateHUD(cocos2d::Scene* scene, PlayerModel pm)
     pgTimer2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     cocos2d::log("%d",pm.getStats().getStress());
     
+}
+
+void HUDLayer::PausedPressed(cocos2d::Scene* scene)
+{
+    cocos2d::Director::getInstance()->pause();
+    cocos2d::log("Pausing the game");
+    
+    auto *p = PauseMenu::createScene();
+    
+    scene->addChild(p, 10);
 }

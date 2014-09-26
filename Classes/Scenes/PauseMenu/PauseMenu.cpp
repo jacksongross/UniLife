@@ -40,14 +40,6 @@ Scene* PauseMenu::createScene()
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
-    auto bg = Sprite::create("background.png");
-    
-    // position the sprite on the center of the screen
-    bg->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
-    
-    // add the sprite as a child to this layer
-    //layer->addChild(bg, 0);
-    
     auto label = Label::createWithSystemFont("Game Paused", "Helvetica", 74);
     
     label->setColor(Color3B(0, 0, 0));
@@ -55,7 +47,6 @@ Scene* PauseMenu::createScene()
     label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.90));
     
     layer->addChild(label, 0);
-    
     
     ui::Text* resumeButton = ui::Text::create("Resume", "Arial", 88);
     resumeButton->addTouchEventListener(CC_CALLBACK_1(PauseMenu::resumeCallback, layer));
