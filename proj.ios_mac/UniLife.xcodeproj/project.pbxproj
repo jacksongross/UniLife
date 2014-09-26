@@ -140,6 +140,7 @@
 		7ADE1F0719CE6F3200AEFF00 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */; };
 		7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */; };
 		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
+		7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5474719D545CD00243401 /* HUDHelper.cpp */; };
 		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -180,7 +181,6 @@
 		D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D619BEB6290023B5A6 /* Library_couch.png */; };
 		D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D719BEB6290023B5A6 /* Library_Foyer.png */; };
 		D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D709D819BEB6290023B5A6 /* Library_Rooms.png */; };
-		D0D71D2519CFD9BA007BCEAB /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */; };
 		D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF6FCB1999B13900C96742 /* Images.xcassets */; };
 		D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E4680819C6A2D800254367 /* SciMed_Border.png */; };
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
@@ -513,6 +513,8 @@
 		7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGame.h; sourceTree = "<group>"; };
 		7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
 		7ADE1F0319CE6F3200AEFF00 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
+		7AE5474719D545CD00243401 /* HUDHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDHelper.cpp; sourceTree = "<group>"; };
+		7AE5474819D545CD00243401 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -554,8 +556,6 @@
 		D0D709D619BEB6290023B5A6 /* Library_couch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_couch.png; path = LibraryAssets/Library_couch.png; sourceTree = "<group>"; };
 		D0D709D719BEB6290023B5A6 /* Library_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Foyer.png; path = LibraryAssets/Library_Foyer.png; sourceTree = "<group>"; };
 		D0D709D819BEB6290023B5A6 /* Library_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Library_Rooms.png; path = LibraryAssets/Library_Rooms.png; sourceTree = "<group>"; };
-		D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDHelper.cpp; sourceTree = "<group>"; };
-		D0D71D2419CFD9BA007BCEAB /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		D0DF6FCB1999B13900C96742 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "UniLife iOS/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		D0E4680819C6A2D800254367 /* SciMed_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SciMed_Border.png; sourceTree = "<group>"; };
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
@@ -1064,7 +1064,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				D0D71D1B19CFD9A8007BCEAB /* HUDHelper */,
+				7AE5474619D545CD00243401 /* HUD */,
 				7A89453819ADAD16008E1EA7 /* Time */,
 				7A89453319ADAD16008E1EA7 /* Sql */,
 			);
@@ -1392,6 +1392,15 @@
 			path = Debugger;
 			sourceTree = "<group>";
 		};
+		7AE5474619D545CD00243401 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5474719D545CD00243401 /* HUDHelper.cpp */,
+				7AE5474819D545CD00243401 /* HUDHelper.h */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
 		D031093019B447A20030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
@@ -1412,15 +1421,6 @@
 				D0D709D819BEB6290023B5A6 /* Library_Rooms.png */,
 			);
 			name = LibraryAssets;
-			sourceTree = "<group>";
-		};
-		D0D71D1B19CFD9A8007BCEAB /* HUDHelper */ = {
-			isa = PBXGroup;
-			children = (
-				D0D71D2319CFD9BA007BCEAB /* HUDHelper.cpp */,
-				D0D71D2419CFD9BA007BCEAB /* HUDHelper.h */,
-			);
-			name = HUDHelper;
 			sourceTree = "<group>";
 		};
 		D0DF70161999B77600C96742 /* icons */ = {
@@ -1757,7 +1757,6 @@
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */,
 				7A0F1A8C19BEE3F400679823 /* Buis-Hallway-Controller.cpp in Sources */,
-				D0D71D2519CFD9BA007BCEAB /* HUDHelper.cpp in Sources */,
 				7A0F1A5E19BEE2FC00679823 /* TavernFoyer.cpp in Sources */,
 				7A0F1A5C19BEE2FC00679823 /* LibraryFoyer.cpp in Sources */,
 				7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */,
@@ -1785,6 +1784,7 @@
 				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
+				7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */,
 				7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */,
 				7A0F1A9319BEE3F400679823 /* DormController.cpp in Sources */,
 				7A89456519ADAD23008E1EA7 /* MenuScene.cpp in Sources */,
