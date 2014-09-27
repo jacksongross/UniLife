@@ -9,6 +9,14 @@
 #include "HUDHelper.h"
 #include "DormScene.h"
 #include "PauseMenu.h"
+#include <ctime>
+
+// SOME GLOBALS FOR AUTOSAVE
+/////////////////////////////
+time_t start;
+int gametime;
+PlayerModel player;
+////////////////////////////
 
 // this method is used to create the HUD for each scene
 void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
@@ -99,23 +107,29 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     scene->addChild(pg2);
     scene->addChild(pauseButton);
     
+    // set up variables for game time
+    start = time(0);
+    gametime = 0;
+    
+    scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
     
 }
 
 // this method is used to update the HUD bars
 void HUDLayer::updateHUD(cocos2d::Scene* scene, PlayerModel pm)
 {
+    
+    player = pm;
+    
     auto pgTimer = (cocos2d::ProgressTimer*)scene->getChildByName("EnergyHUD");
     
     pgTimer->setScaleX(pm.getStats().getEnergy()/100.0);
     pgTimer->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
-    cocos2d::log("%d",pm.getStats().getEnergy());
     
     auto pgTimer2 = (cocos2d::ProgressTimer*)scene->getChildByName("StressHUD");
     
     pgTimer2->setScaleX(pm.getStats().getStress()/100.0);
     pgTimer2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
-    cocos2d::log("%d",pm.getStats().getStress());
     
 }
 
@@ -127,4 +141,29 @@ void HUDLayer::PausedPressed(cocos2d::Scene* scene)
     auto *p = PauseMenu::createScene();
     
     scene->addChild(p, 10);
+}
+
+void HUDLayer::updateGameTime(float t)
+{
+    double seconds_since_start = difftime( time(0), start);
+    
+    gametime = (int) seconds_since_start;
+    
+    // if the game has been played for 5 minute intervals
+    if( gametime % 300 == 0)
+    {
+        cocos2d::log("TIME TO AUTOSAVE");
+        cocos2d::log("Player: %d", player.getId());
+        
+        if(player.getId() > 0)
+        {
+            SqlHelper::autosave(player);
+        }
+        else
+        {
+            cocos2d::log("First time saving game!");
+            SqlHelper::serialize(player);
+        }
+        
+    }
 }

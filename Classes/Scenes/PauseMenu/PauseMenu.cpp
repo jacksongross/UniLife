@@ -19,6 +19,7 @@
 #include "DormScene.h"
 #include "MenuLoadScene.h"
 #include "box2D/box2D.h"
+#include "HUDHelper.h"
 
 USING_NS_CC;
 
@@ -113,7 +114,6 @@ void PauseMenu::resumeCallback(cocos2d::Ref *pSender)
     
     this->getParent()->removeChild(this);
     
-    //Director::getInstance()->popScene();
     Director::getInstance()->resume();
 }
 

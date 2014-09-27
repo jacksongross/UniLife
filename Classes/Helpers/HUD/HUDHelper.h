@@ -18,7 +18,7 @@
 
 
 
-class HUDLayer
+class HUDLayer : cocos2d::Layer
 {
 public:
     
@@ -29,6 +29,10 @@ public:
     static void updateHUD(cocos2d::Scene* scene, PlayerModel pm);
     
     static void PausedPressed(cocos2d::Scene* scene);
+    
+    void updateGameTime(float t);
+    
+    //int time = 0;
     
 private:
 

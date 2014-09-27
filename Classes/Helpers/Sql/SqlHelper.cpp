@@ -95,7 +95,7 @@ void SqlHelper::initDatabase()
     
     //THE BELOW CODE MOVES THE ACADAMIA DATABASE TO A WORKING DIRECTORY
     
-    CCFileUtils* fileUtils = CCFileUtils::sharedFileUtils();
+    FileUtils* fileUtils = FileUtils::sharedFileUtils();
     long size = 5;
     
     unsigned char* smth;
