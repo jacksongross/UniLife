@@ -19,9 +19,12 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
 {
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     
+    //cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("walk.plist");
+    
+    
     spritesheet = cocos2d::SpriteBatchNode::create("walk.png");
     
-    for(int i = 1; i <= 5; i++)
+    for(int i = 1; i <= 4; i++)
     {
         std::string file = "walk";
         file.append(std::to_string(i));

@@ -71,8 +71,6 @@
 		7A89456619ADAD23008E1EA7 /* LoadTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455619ADAD23008E1EA7 /* LoadTableCell.cpp */; };
 		7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455A19ADAD23008E1EA7 /* MenuLoadScene.cpp */; };
 		7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A89455D19ADAD23008E1EA7 /* MenuOptionScene.cpp */; };
-		7A89459919ADAF3F008E1EA7 /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89456B19ADAF3F008E1EA7 /* bill_inside.png */; };
-		7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89456C19ADAF3F008E1EA7 /* bill_outside.png */; };
 		7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89456E19ADAF3F008E1EA7 /* dorm-background.png */; };
 		7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89456F19ADAF3F008E1EA7 /* dorm-bed.png */; };
 		7A89459D19ADAF3F008E1EA7 /* dorm-book_shelf.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A89457019ADAF3F008E1EA7 /* dorm-book_shelf.png */; };
@@ -142,6 +140,15 @@
 		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
 		7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5474719D545CD00243401 /* HUDHelper.cpp */; };
 		7AE60C9219DA8D390063452F /* Movement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE60C9019DA8D390063452F /* Movement.cpp */; };
+		7AF557D719DA9BFF0024A631 /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CD19DA9BFF0024A631 /* bill_inside.png */; };
+		7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CE19DA9BFF0024A631 /* bill_outside.png */; };
+		7AF557D919DA9BFF0024A631 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CF19DA9BFF0024A631 /* Fred.png */; };
+		7AF557E719DA9E6F0024A631 /* walk1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E119DA9E6F0024A631 /* walk1.png */; };
+		7AF557E819DA9E6F0024A631 /* walk2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E219DA9E6F0024A631 /* walk2.png */; };
+		7AF557E919DA9E6F0024A631 /* walk3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E319DA9E6F0024A631 /* walk3.png */; };
+		7AF557EA19DA9E6F0024A631 /* walk4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E419DA9E6F0024A631 /* walk4.png */; };
+		7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E519DA9E6F0024A631 /* walk.plist */; };
+		7AF557EC19DA9E6F0024A631 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E619DA9E6F0024A631 /* walk.png */; };
 		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -189,7 +196,6 @@
 		D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DCF19B3F5FE00F4F720 /* desk.png */; };
 		D0E73DD519B3F5FE00F4F720 /* door.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD019B3F5FE00F4F720 /* door.png */; };
 		D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */ = {isa = PBXBuildFile; fileRef = D0E73DD319B3F5FE00F4F720 /* whiteboard.png */; };
-		D0ED65BB19C9314B0072EDD0 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BA19C9314B0072EDD0 /* Fred.png */; };
 		D0ED65BF19C934160072EDD0 /* speech_big.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BD19C934160072EDD0 /* speech_big.png */; };
 		D0ED65C019C934160072EDD0 /* speech_small.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65BE19C934160072EDD0 /* speech_small.png */; };
 		D0ED65C519C939B90072EDD0 /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = D0ED65C219C939B90072EDD0 /* chicken.png */; };
@@ -434,8 +440,6 @@
 		7A89455B19ADAD23008E1EA7 /* MenuLoadScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLoadScene.h; sourceTree = "<group>"; };
 		7A89455D19ADAD23008E1EA7 /* MenuOptionScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuOptionScene.cpp; sourceTree = "<group>"; };
 		7A89455E19ADAD23008E1EA7 /* MenuOptionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuOptionScene.h; sourceTree = "<group>"; };
-		7A89456B19ADAF3F008E1EA7 /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_inside.png; sourceTree = "<group>"; };
-		7A89456C19ADAF3F008E1EA7 /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_outside.png; sourceTree = "<group>"; };
 		7A89456E19ADAF3F008E1EA7 /* dorm-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dorm-background.png"; sourceTree = "<group>"; };
 		7A89456F19ADAF3F008E1EA7 /* dorm-bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dorm-bed.png"; sourceTree = "<group>"; };
 		7A89457019ADAF3F008E1EA7 /* dorm-book_shelf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dorm-book_shelf.png"; sourceTree = "<group>"; };
@@ -520,6 +524,15 @@
 		7AE5474819D545CD00243401 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		7AE60C9019DA8D390063452F /* Movement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movement.cpp; sourceTree = "<group>"; };
 		7AE60C9119DA8D390063452F /* Movement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movement.h; sourceTree = "<group>"; };
+		7AF557CD19DA9BFF0024A631 /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_inside.png; sourceTree = "<group>"; };
+		7AF557CE19DA9BFF0024A631 /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_outside.png; sourceTree = "<group>"; };
+		7AF557CF19DA9BFF0024A631 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fred.png; sourceTree = "<group>"; };
+		7AF557E119DA9E6F0024A631 /* walk1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk1.png; sourceTree = "<group>"; };
+		7AF557E219DA9E6F0024A631 /* walk2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk2.png; sourceTree = "<group>"; };
+		7AF557E319DA9E6F0024A631 /* walk3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk3.png; sourceTree = "<group>"; };
+		7AF557E419DA9E6F0024A631 /* walk4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk4.png; sourceTree = "<group>"; };
+		7AF557E519DA9E6F0024A631 /* walk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = walk.plist; sourceTree = "<group>"; };
+		7AF557E619DA9E6F0024A631 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -570,7 +583,6 @@
 		D0E73DCF19B3F5FE00F4F720 /* desk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = desk.png; path = InsideViewSprites/desk.png; sourceTree = "<group>"; };
 		D0E73DD019B3F5FE00F4F720 /* door.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door.png; path = InsideViewSprites/door.png; sourceTree = "<group>"; };
 		D0E73DD319B3F5FE00F4F720 /* whiteboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteboard.png; path = InsideViewSprites/whiteboard.png; sourceTree = "<group>"; };
-		D0ED65BA19C9314B0072EDD0 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fred.png; sourceTree = "<group>"; };
 		D0ED65BD19C934160072EDD0 /* speech_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_big.png; path = Miscellaneous/speech_big.png; sourceTree = "<group>"; };
 		D0ED65BE19C934160072EDD0 /* speech_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speech_small.png; path = Miscellaneous/speech_small.png; sourceTree = "<group>"; };
 		D0ED65C219C939B90072EDD0 /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chicken.png; path = LogicGame/chicken.png; sourceTree = "<group>"; };
@@ -736,6 +748,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AF557CC19DA9BFF0024A631 /* Bill */,
 				7D7B39CA19CA086F00C80D1F /* acadamia.db */,
 				D0ED65C119C9393B0072EDD0 /* LogicGame */,
 				D0ED65BC19C933A80072EDD0 /* Miscellaneous */,
@@ -745,7 +758,6 @@
 				D031093019B447A20030B59F /* Tavern */,
 				D0E73DC719B3F5A200F4F720 /* InsideViewSprites */,
 				7AB6AB1319AEDDF5003CCD7E /* NewCharacter */,
-				7A89456A19ADAF3F008E1EA7 /* Bill */,
 				7A89456D19ADAF3F008E1EA7 /* Dorm */,
 				7A89457519ADAF3F008E1EA7 /* fonts */,
 				7A89457719ADAF3F008E1EA7 /* Home-Menu */,
@@ -1209,16 +1221,6 @@
 			path = MenuOption;
 			sourceTree = "<group>";
 		};
-		7A89456A19ADAF3F008E1EA7 /* Bill */ = {
-			isa = PBXGroup;
-			children = (
-				D0ED65BA19C9314B0072EDD0 /* Fred.png */,
-				7A89456B19ADAF3F008E1EA7 /* bill_inside.png */,
-				7A89456C19ADAF3F008E1EA7 /* bill_outside.png */,
-			);
-			path = Bill;
-			sourceTree = "<group>";
-		};
 		7A89456D19ADAF3F008E1EA7 /* Dorm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1421,6 +1423,22 @@
 				7AE60C9119DA8D390063452F /* Movement.h */,
 			);
 			path = Movement;
+			sourceTree = "<group>";
+		};
+		7AF557CC19DA9BFF0024A631 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				7AF557E119DA9E6F0024A631 /* walk1.png */,
+				7AF557E219DA9E6F0024A631 /* walk2.png */,
+				7AF557E319DA9E6F0024A631 /* walk3.png */,
+				7AF557E419DA9E6F0024A631 /* walk4.png */,
+				7AF557E519DA9E6F0024A631 /* walk.plist */,
+				7AF557E619DA9E6F0024A631 /* walk.png */,
+				7AF557CD19DA9BFF0024A631 /* bill_inside.png */,
+				7AF557CE19DA9BFF0024A631 /* bill_outside.png */,
+				7AF557CF19DA9BFF0024A631 /* Fred.png */,
+			);
+			path = Bill;
 			sourceTree = "<group>";
 		};
 		D031093019B447A20030B59F /* Tavern */ = {
@@ -1675,11 +1693,14 @@
 				D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */,
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
+				7AF557EA19DA9E6F0024A631 /* walk4.png in Resources */,
+				7AF557E819DA9E6F0024A631 /* walk2.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
 				D031093719B447C20030B59F /* Tavern_couches.png in Resources */,
 				D0B760E919BD5B6D00E53B52 /* Art_Foyer.png in Resources */,
 				D0B760ED19BD5B6D00E53B52 /* EIS_Foyer.png in Resources */,
 				7A8945C019ADAF3F008E1EA7 /* map_background.png in Resources */,
+				7AF557E719DA9E6F0024A631 /* walk1.png in Resources */,
 				D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */,
 				7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */,
 				D098A99219AE3096005B13D3 /* green_bar.png in Resources */,
@@ -1689,6 +1710,7 @@
 				7A8945BD19ADAF3F008E1EA7 /* map-sun.png in Resources */,
 				D0B760F219BD5B6D00E53B52 /* SocSci_Rooms.png in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
+				7AF557EC19DA9E6F0024A631 /* walk.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
 				7AB6AB3119AEDDF5003CCD7E /* New-Game-next_on.png in Resources */,
@@ -1698,6 +1720,7 @@
 				7A8945A419ADAF3F008E1EA7 /* load_game_off.png in Resources */,
 				7A8945B719ADAF3F008E1EA7 /* map-business.png in Resources */,
 				7AB6AB3019AEDDF5003CCD7E /* New-Game-next_off.png in Resources */,
+				7AF557D719DA9BFF0024A631 /* bill_inside.png in Resources */,
 				7AB6AB3619AEDDF5003CCD7E /* New-Game-textbox.png in Resources */,
 				D0DF6FCC1999B13900C96742 /* Images.xcassets in Resources */,
 				D03F389019C00804001956BD /* Buis_Border.png in Resources */,
@@ -1713,6 +1736,7 @@
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
+				7AF557D919DA9BFF0024A631 /* Fred.png in Resources */,
 				7A8945B619ADAF3F008E1EA7 /* map-art.png in Resources */,
 				D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */,
 				7A78809619C17C4200BFF491 /* circle.png in Resources */,
@@ -1725,7 +1749,7 @@
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
 				7A01645919CF956B0021009A /* ball.png in Resources */,
 				D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */,
-				7A89459A19ADAF3F008E1EA7 /* bill_outside.png in Resources */,
+				7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
 				D0B760EF19BD5B6D00E53B52 /* SciMed_Foyer.png in Resources */,
@@ -1746,6 +1770,7 @@
 				7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */,
 				7AB6AB2D19AEDDF5003CCD7E /* New-Game-Back.png in Resources */,
 				7AB6AB2E19AEDDF5003CCD7E /* New-Game-background.png in Resources */,
+				7AF557E919DA9E6F0024A631 /* walk3.png in Resources */,
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
 				D0ED65BF19C934160072EDD0 /* speech_big.png in Resources */,
@@ -1755,10 +1780,8 @@
 				D0ED65C919C96ACF0072EDD0 /* Boat.png in Resources */,
 				D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */,
 				D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */,
-				D0ED65BB19C9314B0072EDD0 /* Fred.png in Resources */,
 				7A8945A619ADAF3F008E1EA7 /* new_game_off.png in Resources */,
 				7AB6AB3219AEDDF5003CCD7E /* New-Game-slider.png in Resources */,
-				7A89459919ADAF3F008E1EA7 /* bill_inside.png in Resources */,
 				7A8945AC19ADAF3F008E1EA7 /* options-back.png in Resources */,
 				7A8945BC19ADAF3F008E1EA7 /* map-social_science.png in Resources */,
 				D03F389219C00804001956BD /* EIS_Border.png in Resources */,
@@ -1772,6 +1795,7 @@
 				D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */,
+				7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
 				D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */,
 				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,

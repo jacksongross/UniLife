@@ -56,19 +56,6 @@
                 <key>sourceSize</key>
                 <string>{192,369}</string>
             </dict>
-            <key>walk5.png</key>
-            <dict>
-                <key>frame</key>
-                <string>{{2,2},{192,369}}</string>
-                <key>offset</key>
-                <string>{0,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{192,369}}</string>
-                <key>sourceSize</key>
-                <string>{192,369}</string>
-            </dict>
         </dict>
         <key>metadata</key>
         <dict>
@@ -79,7 +66,7 @@
             <key>size</key>
             <string>{196,1115}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e461a433fac4eedeeb29650fef473175:7c2f46856e4f1797a3b9e7a16dccfdd8:ee5a53230c137d81fadb9a88e71d34b6$</string>
+            <string>$TexturePacker:SmartUpdate:cee94cefa050abed9ff27a3a9008adb2:d293b370a14e3747668cd32968a76eb3:ee5a53230c137d81fadb9a88e71d34b6$</string>
             <key>textureFileName</key>
             <string>walk.png</string>
         </dict>
