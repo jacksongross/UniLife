@@ -123,13 +123,14 @@ void Debugger::gotoBrickBreaker(Ref* pSender){
 
 
 void Debugger::gotoPopUp(Ref* pSender){
+    
+    
+    isonreturn = true;
     log("PopupInit");
     
     cocos2d::Director::getInstance()->pause();
     cocos2d::log("Going to PopupMenu");
-    
     auto *p = PopUpLayer::createScene();
-    
     this->addChild(p, 10);
     
 }

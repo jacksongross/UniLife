@@ -65,7 +65,7 @@ bool PopUpLayer::init()
     }
     
     
-    bedPressed(Rect(0, 0, 100, 100),Vec2(100,100));
+    createPopUp(Rect(0, 0, 100, 100),Vec2(100,100));
     
 
     auto touchListener = EventListenerTouchOneByOne::create();
@@ -105,6 +105,8 @@ void PopUpLayer::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     {
         log("You Touched Me in All The Right Places ;)");
         return;
+    }else{
+        _eventDispatcher->removeAllEventListeners();
     }
     return;
     
@@ -112,7 +114,7 @@ void PopUpLayer::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 }
 
 
-void PopUpLayer::bedPressed(Rect inRect, Vec2 inLoc){
+void PopUpLayer::createPopUp(Rect inRect, Vec2 inLoc){
 
     
     auto optBox = Sprite::create();

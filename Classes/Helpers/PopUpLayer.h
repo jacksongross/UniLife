@@ -22,7 +22,7 @@ public:
     
     void offClick(Ref* pSender);
     
-    void bedPressed(cocos2d::Rect inRect, cocos2d::Vec2 inLoc);
+    void createPopUp(cocos2d::Rect inRect, cocos2d::Vec2 inLoc);
     
     bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
     void touchEnded(cocos2d::Touch* touch, cocos2d::Event* event);

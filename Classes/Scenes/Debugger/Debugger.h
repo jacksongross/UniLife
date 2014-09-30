@@ -33,7 +33,7 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(Debugger);
 private:
-    
+    bool isonreturn = false;
     
 };
 
