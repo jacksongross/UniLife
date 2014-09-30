@@ -163,6 +163,7 @@
 		D04F1C5C19DA4967006B7AA1 /* FCG_minigame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04F1C5A19DA4967006B7AA1 /* FCG_minigame.cpp */; };
 		D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A019D26A6D0042DB83 /* PQuiz_back.png */; };
 		D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A119D26A6D0042DB83 /* PQuiz_title.png */; };
+		D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D06F023319DA701600A36F84 /* PopUpLayer.cpp */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
@@ -540,6 +541,8 @@
 		D04F1C5B19DA4967006B7AA1 /* FCG_minigame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCG_minigame.h; sourceTree = "<group>"; };
 		D06135A019D26A6D0042DB83 /* PQuiz_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_back.png; sourceTree = "<group>"; };
 		D06135A119D26A6D0042DB83 /* PQuiz_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_title.png; sourceTree = "<group>"; };
+		D06F023319DA701600A36F84 /* PopUpLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopUpLayer.cpp; sourceTree = "<group>"; };
+		D06F023419DA701600A36F84 /* PopUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpLayer.h; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
@@ -1067,6 +1070,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D06F023D19DA701A00A36F84 /* PopUpLayer */,
 				D04F1C5919DA475B006B7AA1 /* MessageLayer */,
 				7AE5474619D545CD00243401 /* HUD */,
 				7A89453319ADAD16008E1EA7 /* Sql */,
@@ -1424,6 +1428,15 @@
 				D04F1C5019DA4755006B7AA1 /* MessageLayer.h */,
 			);
 			name = MessageLayer;
+			sourceTree = "<group>";
+		};
+		D06F023D19DA701A00A36F84 /* PopUpLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D06F023319DA701600A36F84 /* PopUpLayer.cpp */,
+				D06F023419DA701600A36F84 /* PopUpLayer.h */,
+			);
+			name = PopUpLayer;
 			sourceTree = "<group>";
 		};
 		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
@@ -1798,6 +1811,7 @@
 				7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */,
 				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,
 				7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */,
 				7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */,

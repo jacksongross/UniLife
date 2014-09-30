@@ -24,6 +24,7 @@
 #include "MenuLoadScene.h"
 #include "BrickBreaker.h"
 #include "FCG_minigame.h"
+#include "PopUpLayer.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -94,7 +95,12 @@ void Debugger::SpawnList(){
     BBGame->setTouchEnabled(true);
     this->addChild(BBGame,5);
 
-    
+    ui::Text* PopUp = ui::Text::create("POPUP MENU", "Arial", 30);
+    PopUp->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoPopUp, this));
+    PopUp->setColor(Color3B::BLACK);
+    PopUp->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 - 200));
+    PopUp->setTouchEnabled(true);
+    this->addChild(PopUp,5);
     
     
     
@@ -114,4 +120,18 @@ void Debugger::gotoBrickBreaker(Ref* pSender){
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+
+void Debugger::gotoPopUp(Ref* pSender){
+    log("PopupInit");
+    
+    cocos2d::Director::getInstance()->pause();
+    cocos2d::log("Going to PopupMenu");
+    
+    auto *p = PopUpLayer::createScene();
+    
+    this->addChild(p, 10);
+    
+}
+
 

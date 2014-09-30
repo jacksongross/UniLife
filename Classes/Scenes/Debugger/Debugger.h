@@ -23,7 +23,8 @@ public:
     
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
-    
+
+    void gotoPopUp(Ref* sender);
     void gotoLogicGame(Ref* sender);
     void gotoBrickBreaker(Ref* pSender);
 

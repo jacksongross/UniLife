@@ -41,6 +41,12 @@ bool MenuScene::init()
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("background-music-aac.wav", true);
     
+    
+    //REMOVE THIS TO ACTIVATE SOUND
+    CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0);
+    //REMOVE THIS TO ACTIVATE SOUND
+    
+    
     // checks if the database initialisation has been run before
     // to ensure it gets seeded once
     bool isSeeded = UserDefault::getInstance()->getBoolForKey("seeded");
