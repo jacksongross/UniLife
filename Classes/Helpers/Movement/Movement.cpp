@@ -21,7 +21,7 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
     
     spritesheet = cocos2d::SpriteBatchNode::create("walk.png");
     
-    for(int i = 1; i <= 5; i++)
+    for(int i = 1; i <= 4; i++)
     {
         std::string file = "walk";
         file.append(std::to_string(i));
