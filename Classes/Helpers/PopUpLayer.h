@@ -25,6 +25,7 @@ public:
     void bedPressed(cocos2d::Rect inRect, cocos2d::Vec2 inLoc);
     
     bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    void touchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
     
     // implement the "static create()" method manually
     CREATE_FUNC(PopUpLayer);

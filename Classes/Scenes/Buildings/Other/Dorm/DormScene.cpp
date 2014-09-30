@@ -76,7 +76,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("STRESS: %d", inplayer.getStats().getStress());
     
     // load the character
-    Movement::loadSpriteFrames(scene);
+    //Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
