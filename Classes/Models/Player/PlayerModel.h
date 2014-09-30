@@ -37,6 +37,7 @@ private:
     // player game time
     TimeModel gameTime;
     
+    
     //timetable
     
     timeTableClassModel *timetable;
@@ -67,6 +68,7 @@ public:
     
     timeTableClassModel getTimeTable();
     
+    
     /********************************
                 Setters
      *******************************/
@@ -81,6 +83,7 @@ public:
     void setScene(std::string scene);
     
     void setGameTime(TimeModel gameTime);
+    
     
 };
 
