@@ -124,6 +124,7 @@ void DormScene::DoorPressed(cocos2d::Ref *pSender)
     log("playing the door sound effect");
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("doorOpen.wav");
     log("you have touched the door!");
+    
     // transition to the load game scene
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
