@@ -146,7 +146,6 @@
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
-		D005304A19D31954007973B4 /* LogicGameMessages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D005304819D31954007973B4 /* LogicGameMessages.cpp */; };
 		D031093519B447C20030B59F /* Tavern_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093119B447C20030B59F /* Tavern_background.png */; };
 		D031093619B447C20030B59F /* Tavern_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093219B447C20030B59F /* Tavern_bar.png */; };
 		D031093719B447C20030B59F /* Tavern_couches.png in Resources */ = {isa = PBXBuildFile; fileRef = D031093319B447C20030B59F /* Tavern_couches.png */; };
@@ -160,6 +159,8 @@
 		D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388C19C00804001956BD /* DegreeSelect_Title.png */; };
 		D03F389219C00804001956BD /* EIS_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388D19C00804001956BD /* EIS_Border.png */; };
 		D03F389319C00804001956BD /* SocSci_Border.png in Resources */ = {isa = PBXBuildFile; fileRef = D03F388E19C00804001956BD /* SocSci_Border.png */; };
+		D04F1C5119DA4755006B7AA1 /* MessageLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04F1C4F19DA4755006B7AA1 /* MessageLayer.cpp */; };
+		D04F1C5C19DA4967006B7AA1 /* FCG_minigame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04F1C5A19DA4967006B7AA1 /* FCG_minigame.cpp */; };
 		D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A019D26A6D0042DB83 /* PQuiz_back.png */; };
 		D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A119D26A6D0042DB83 /* PQuiz_title.png */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
@@ -520,8 +521,6 @@
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		D005304819D31954007973B4 /* LogicGameMessages.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogicGameMessages.cpp; sourceTree = "<group>"; };
-		D005304919D31954007973B4 /* LogicGameMessages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGameMessages.h; sourceTree = "<group>"; };
 		D031093119B447C20030B59F /* Tavern_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_background.png; path = TavernSprites/Tavern_background.png; sourceTree = "<group>"; };
 		D031093219B447C20030B59F /* Tavern_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_bar.png; path = TavernSprites/Tavern_bar.png; sourceTree = "<group>"; };
 		D031093319B447C20030B59F /* Tavern_couches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tavern_couches.png; path = TavernSprites/Tavern_couches.png; sourceTree = "<group>"; };
@@ -535,6 +534,10 @@
 		D03F388C19C00804001956BD /* DegreeSelect_Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DegreeSelect_Title.png; sourceTree = "<group>"; };
 		D03F388D19C00804001956BD /* EIS_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EIS_Border.png; sourceTree = "<group>"; };
 		D03F388E19C00804001956BD /* SocSci_Border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SocSci_Border.png; sourceTree = "<group>"; };
+		D04F1C4F19DA4755006B7AA1 /* MessageLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MessageLayer.cpp; sourceTree = "<group>"; };
+		D04F1C5019DA4755006B7AA1 /* MessageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageLayer.h; sourceTree = "<group>"; };
+		D04F1C5A19DA4967006B7AA1 /* FCG_minigame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FCG_minigame.cpp; sourceTree = "<group>"; };
+		D04F1C5B19DA4967006B7AA1 /* FCG_minigame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCG_minigame.h; sourceTree = "<group>"; };
 		D06135A019D26A6D0042DB83 /* PQuiz_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_back.png; sourceTree = "<group>"; };
 		D06135A119D26A6D0042DB83 /* PQuiz_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_title.png; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
@@ -1064,6 +1067,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D04F1C5919DA475B006B7AA1 /* MessageLayer */,
 				7AE5474619D545CD00243401 /* HUD */,
 				7A89453319ADAD16008E1EA7 /* Sql */,
 			);
@@ -1378,8 +1382,8 @@
 			children = (
 				7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */,
 				7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */,
-				D005304819D31954007973B4 /* LogicGameMessages.cpp */,
-				D005304919D31954007973B4 /* LogicGameMessages.h */,
+				D04F1C5A19DA4967006B7AA1 /* FCG_minigame.cpp */,
+				D04F1C5B19DA4967006B7AA1 /* FCG_minigame.h */,
 			);
 			path = LogicGame;
 			sourceTree = "<group>";
@@ -1411,6 +1415,15 @@
 				D031093419B447C20030B59F /* Tavern_table.png */,
 			);
 			name = Tavern;
+			sourceTree = "<group>";
+		};
+		D04F1C5919DA475B006B7AA1 /* MessageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				D04F1C4F19DA4755006B7AA1 /* MessageLayer.cpp */,
+				D04F1C5019DA4755006B7AA1 /* MessageLayer.h */,
+			);
+			name = MessageLayer;
 			sourceTree = "<group>";
 		};
 		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
@@ -1754,6 +1767,7 @@
 				7A89453019ADACFC008E1EA7 /* MenuLoadController.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
 				7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */,
+				D04F1C5119DA4755006B7AA1 /* MessageLayer.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,
 				7A0F1A5919BEE2FC00679823 /* SocSci-Foyer.cpp in Sources */,
@@ -1797,7 +1811,6 @@
 				D0ED65E119CA02C70072EDD0 /* PersonalityQuiz.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
 				7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */,
-				D005304A19D31954007973B4 /* LogicGameMessages.cpp in Sources */,
 				7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */,
 				7ADE1F0619CE6F3200AEFF00 /* MyContactListener.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
@@ -1806,6 +1819,7 @@
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
+				D04F1C5C19DA4967006B7AA1 /* FCG_minigame.cpp in Sources */,
 				7A89456019ADAD23008E1EA7 /* PlayerStatsModel.cpp in Sources */,
 				7A0F1A5F19BEE2FC00679823 /* TavernRoom.cpp in Sources */,
 				7A0F1A8919BEE3F400679823 /* Art-Foyer-Controller.cpp in Sources */,

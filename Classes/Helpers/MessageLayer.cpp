@@ -1,12 +1,12 @@
 //
-//  LogicGameMessages.cpp
+//  MessageLayer.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 25/09/2014.
+//  Created by csci321ga2a on 30/09/2014.
 //
 //
 
-#include "LogicGameMessages.h"
+#include "MessageLayer.h"
 #include "MenuScene.h"
 #include "PlayerModel.h"
 #include "SqlHelper.h"
@@ -24,13 +24,13 @@ USING_NS_CC;
 
 extern PlayerModel pm;
 
-Scene* LogicGameMessages::createScene()
+Scene* MessageLayer::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = LogicGameMessages::create();
+    auto layer = MessageLayer::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -60,7 +60,7 @@ Scene* LogicGameMessages::createScene()
     
     
     ui::Text* retryButton = ui::Text::create("Resume", "Arial", 50);
-    retryButton->addTouchEventListener(CC_CALLBACK_1(LogicGameMessages::retryCallback, layer));
+    retryButton->addTouchEventListener(CC_CALLBACK_1(MessageLayer::retryCallback, layer));
     retryButton->setColor(Color3B::BLACK);
     retryButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 - 200));
     retryButton->setTouchEnabled(true);
@@ -78,13 +78,13 @@ Scene* LogicGameMessages::createScene()
 }
 
 
-Scene* LogicGameMessages::createScene(std::string inMessage)
+Scene* MessageLayer::createScene(std::string inMessage)
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = LogicGameMessages::create();
+    auto layer = MessageLayer::create();
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -114,7 +114,7 @@ Scene* LogicGameMessages::createScene(std::string inMessage)
     
     
     ui::Text* retryButton = ui::Text::create("Retry", "Arial", 50);
-    retryButton->addTouchEventListener(CC_CALLBACK_1(LogicGameMessages::retryCallback, layer));
+    retryButton->addTouchEventListener(CC_CALLBACK_1(MessageLayer::retryCallback, layer));
     retryButton->setColor(Color3B::BLACK);
     retryButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 - 200));
     retryButton->setTouchEnabled(true);
@@ -134,7 +134,7 @@ Scene* LogicGameMessages::createScene(std::string inMessage)
 
 
 // on "init" you need to initialize your instance
-bool LogicGameMessages::init()
+bool MessageLayer::init()
 {
     //////////////////////////////
     // 1. super init first
@@ -148,9 +148,10 @@ bool LogicGameMessages::init()
     return true;
 }
 
-void LogicGameMessages::retryCallback(cocos2d::Ref *pSender)
+void MessageLayer::retryCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the resume button!");
     Director::getInstance()->popScene();
     Director::getInstance()->resume();
 }
+

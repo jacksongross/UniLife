@@ -23,7 +23,7 @@
 #include "DormScene.h"
 #include "MenuLoadScene.h"
 #include "BrickBreaker.h"
-
+#include "FCG_minigame.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -102,7 +102,7 @@ void Debugger::SpawnList(){
 
 void Debugger::gotoLogicGame(Ref* pSender){
     log("LogicGameInit");
-    auto scene = LogicGame::createScene();
+    auto scene = FCGminigame::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 }

@@ -1,17 +1,17 @@
 //
-//  LogicGameMessages.h
+//  MessageLayer.h
 //  UniLife
 //
-//  Created by csci321ga2a on 25/09/2014.
+//  Created by csci321ga2a on 30/09/2014.
 //
 //
 
-#ifndef __UniLife__LogicGameMessages__
-#define __UniLife__LogicGameMessages__
+#ifndef __UniLife__MessageLayer__
+#define __UniLife__MessageLayer__
 
 #include "cocos2d.h"
 
-class LogicGameMessages : public cocos2d::LayerColor
+class MessageLayer : public cocos2d::LayerColor
 {
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -24,10 +24,9 @@ public:
     
     
     // implement the "static create()" method manually
-    CREATE_FUNC(LogicGameMessages);
+    CREATE_FUNC(MessageLayer);
     
 private:
     
 };
-
-#endif /* defined(__UniLife__LogicGameMessages__) */
+#endif /* defined(__UniLife__MessageLayer__) */
