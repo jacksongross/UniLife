@@ -15,6 +15,7 @@
 #include "MenuDegreeSelectController.h"
 #include "MenuOptionScene.h"
 #include "DormScene.h"
+#include "HUDHelper.h"
 #include <CCTransition.h>
 #include <string>
 #include <vector>
@@ -117,8 +118,6 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     
     log("Next Button Pressed");
     
-
-    
     log("==========PLAYER BEING SENT==========");
     log("NAME: %s", newplayer.getName().c_str());
     log("INT: %d", newplayer.getStats().getIntelligence());
@@ -127,6 +126,9 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     log("DEGREE: %s", newplayer.getDegree().c_str());
     log("ENERGY: %d" , newplayer.getStats().getEnergy());
     log("STRESS: %d", newplayer.getStats().getStress());
+    
+    // set the player for the HUD
+    HUDLayer::setPlayer(newplayer);
     
     auto scene = DormScene::createScene(newplayer);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

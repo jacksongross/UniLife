@@ -58,8 +58,8 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     layer->setHUDScene(scene);
     
     // create the HUD
-    HUDLayer::createHUD(scene, pm);
-    HUDLayer::updateHUD(scene, pm);
+    HUDLayer::createHUD(scene);
+    HUDLayer::updateHUD(pm);
     
     
     // Report on the loaded player object
@@ -111,86 +111,7 @@ bool DormScene::init()
     // create the dorm scene
     DormController::CreateDormRoom(this, visibleSize, origin);
     
-    this->schedule(schedule_selector(DormScene::UpdateTimer),1.0f);
-    
     return true;
-}
-
-void DormScene::UpdateTimer(float dt)
-{
-    std::string ampm;
-    std::ostringstream stringStream;
-    
-    TimeHelper th = pm.getGameTime();
-    
-    // set some local variables for manipulation
-    double hour = th.getHoursMinutes() + 0.5;
-    int day = th.getDay();
-    int week = th.getWeek();
-    int semester = th.getSemester();
-    
-    if( hour > 11.5) // roll over to afternoon
-    {
-        ampm = "pm";
-    }
-    else
-    {
-        ampm = "am";
-    }
-    
-    if(hour > 23.5) // roll over to new day
-    {
-        hour = 12;
-        ampm = "am";
-        
-        if(day ==  7) // roll over to new week
-        {
-            day = 1;
-            
-            if(week == 16) // roll over to new semester
-            {
-                week = 1;
-                
-                if(semester == 6) // game over
-                {
-                    log("...GAME OVER...");
-                }
-                
-                else semester++;
-            }
-            
-            else week++;
-        }
-        
-        else day++;
-    }
-
-    stringStream << (int)hour << ":";
-    
-    if((hour + 0.5) == ceil(hour))
-    {
-        stringStream << "30" << ampm;
-    }
-    else
-    {
-        stringStream << "00" << ampm;
-    }
-    
-    // update the timer with the new time
-    this->timer->setString(stringStream.str());
-    
-    // persist stat changes
-    th.setHoursMinutes(hour);
-    th.setDay(day);
-    th.setWeek(week);
-    th.setSemester(semester);
-    
-    // persist changes to player object
-    pm.setGameTime(th);
-    
-    //Added an update for the HUD Stress & Energy Bars
-    HUDLayer::updateHUD(this->getHUDScene(), pm);
-    
 }
 
 void DormScene::DoorPressed(cocos2d::Ref *pSender)
@@ -236,7 +157,7 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     log("SEMESTER: %d", pm.getGameTime().getSemester());
     log("TIME: %f", pm.getGameTime().getHoursMinutes());
     
-    HUDLayer::updateHUD(this->getHUDScene(), pm);
+    HUDLayer::updateHUD(pm);
 
 }
 

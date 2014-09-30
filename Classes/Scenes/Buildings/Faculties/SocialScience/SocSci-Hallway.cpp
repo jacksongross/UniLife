@@ -37,8 +37,8 @@ Scene* SocSciHallway::createScene()
     layer->setHUDScene(scene);
     
     // create the HUD
-    HUDLayer::createHUD(scene, pm);
-    HUDLayer::updateHUD(scene, pm);
+    HUDLayer::createHUD(scene);
+    HUDLayer::updateHUD(pm);
     
     // return the scene
     return scene;
@@ -95,7 +95,7 @@ void SocSciHallway::ToLecture(Ref* pSender){
         updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
-        HUDLayer::updateHUD(this->getHUDScene(), pm);
+        HUDLayer::updateHUD(pm);
     }
     
     
@@ -120,7 +120,7 @@ void SocSciHallway::ToTutorial(Ref* pSender){
         updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
-        HUDLayer::updateHUD(this->getHUDScene(), pm);
+        HUDLayer::updateHUD(pm);
     }
     
     

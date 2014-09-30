@@ -23,16 +23,24 @@ class HUDLayer : cocos2d::Layer
 public:
     
     // this method is used to create the HUD for each scene
-    static void createHUD(cocos2d::Scene* scene, PlayerModel pm);
+    static void createHUD(cocos2d::Scene* scene);
     
     // this method is used to update the HUD bars
-    static void updateHUD(cocos2d::Scene* scene, PlayerModel pm);
+    static void updateHUD(PlayerModel pm);
     
     static void PausedPressed(cocos2d::Scene* scene);
     
+    // used to set the player model for the HUD
+    static void setPlayer(PlayerModel pm);
+    
+    static void setScene(cocos2d::Scene* scene);
+    
+    // runs the code to validate autosaving
     void updateGameTime(float t);
     
-    //int time = 0;
+    // updates the timer in the HUD
+    void updateTimer();
+    
     
 private:
 

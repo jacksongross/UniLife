@@ -16,13 +16,17 @@
 time_t start;
 int gametime;
 PlayerModel player;
+cocos2d::Scene* activeScene;
 ////////////////////////////
 
 // this method is used to create the HUD for each scene
-void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
+void HUDLayer::createHUD(cocos2d::Scene* scene)
 {
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     cocos2d::Vec2 origin = cocos2d::Director::getInstance()->getVisibleOrigin();
+    
+    // set the active scene for the HUD
+    activeScene = scene;
     
     cocos2d::ui::Text* engText = cocos2d::ui::Text::create("Energy ", "Verdana", 20);
     cocos2d::Sprite* engSprite = cocos2d::Sprite::create("HUD_energy_bar.png");
@@ -30,6 +34,10 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     cocos2d::Sprite* streSprite = cocos2d::Sprite::create("HUD_stress_bar.png");
     cocos2d::ProgressTimer* pg = cocos2d::ProgressTimer::create(engSprite);
     cocos2d::ProgressTimer* pg2 = cocos2d::ProgressTimer::create(streSprite);
+    // set up the timer
+    cocos2d::Label* timer = cocos2d::Label::createWithSystemFont("", "Verdana", 64);
+    timer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height - 22));
+    timer->setName("Timer");
     
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
@@ -94,41 +102,38 @@ void HUDLayer::createHUD(cocos2d::Scene* scene, PlayerModel pm)
     pg2->setBarChangeRate(cocos2d::Vec2(1, 0));
     pg2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     
-    pg->setScaleX(pm.getStats().getEnergy()/100.0);
-    pg2->setScaleX(pm.getStats().getStress()/100.0);
-    pg->setPercentage(pm.getStats().getEnergy()/100.0);
-    pg2->setPercentage(pm.getStats().getStress()/100.0);
+    pg->setScaleX(player.getStats().getEnergy()/100.0);
+    pg2->setScaleX(player.getStats().getStress()/100.0);
+    pg->setPercentage(player.getStats().getEnergy()/100.0);
+    pg2->setPercentage(player.getStats().getStress()/100.0);
 
-    scene->addChild(engText, 1);
-    scene->addChild(engSprite);
-    scene->addChild(pg);
-    scene->addChild(streText, 1);
-    scene->addChild(streSprite);
-    scene->addChild(pg2);
-    scene->addChild(pauseButton);
-    
-    // set up variables for game time
-    start = time(0);
-    gametime = 0;
+    activeScene->addChild(engText, 1);
+    activeScene->addChild(engSprite);
+    activeScene->addChild(pg);
+    activeScene->addChild(streText, 1);
+    activeScene->addChild(streSprite);
+    activeScene->addChild(pg2);
+    activeScene->addChild(pauseButton);
+    activeScene->addChild(timer);
     
     scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
     
 }
 
 // this method is used to update the HUD bars
-void HUDLayer::updateHUD(cocos2d::Scene* scene, PlayerModel pm)
+void HUDLayer::updateHUD(PlayerModel pm)
 {
     
     player = pm;
     
-    auto pgTimer = (cocos2d::ProgressTimer*)scene->getChildByName("EnergyHUD");
+    auto pgTimer = (cocos2d::ProgressTimer*)activeScene->getChildByName("EnergyHUD");
     
-    pgTimer->setScaleX(pm.getStats().getEnergy()/100.0);
+    pgTimer->setScaleX(player.getStats().getEnergy()/100.0);
     pgTimer->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     
-    auto pgTimer2 = (cocos2d::ProgressTimer*)scene->getChildByName("StressHUD");
+    auto pgTimer2 = (cocos2d::ProgressTimer*)activeScene->getChildByName("StressHUD");
     
-    pgTimer2->setScaleX(pm.getStats().getStress()/100.0);
+    pgTimer2->setScaleX(player.getStats().getStress()/100.0);
     pgTimer2->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     
 }
@@ -141,6 +146,15 @@ void HUDLayer::PausedPressed(cocos2d::Scene* scene)
     auto *p = PauseMenu::createScene();
     
     scene->addChild(p, 10);
+}
+
+void HUDLayer::setPlayer(PlayerModel pm)
+{
+    player = pm;
+    
+    // start the timers for this player
+    start = time(0);
+    gametime = 0;
 }
 
 void HUDLayer::updateGameTime(float t)
@@ -164,6 +178,88 @@ void HUDLayer::updateGameTime(float t)
             cocos2d::log("First time saving game!");
             SqlHelper::serialize(player);
         }
-        
     }
+    
+    HUDLayer::updateTimer();
 }
+
+///SOME STUFF HERE FOR THE TIMER CODE
+
+void HUDLayer::updateTimer()
+{
+    std::string ampm;
+    std::ostringstream stringStream;
+    
+    TimeHelper th = player.getGameTime();
+    
+    // set some local variables for manipulation
+    double hour = th.getHoursMinutes() + 0.5;
+    int day = th.getDay();
+    int week = th.getWeek();
+    int semester = th.getSemester();
+    
+    if( hour > 11.5) // roll over to afternoon
+    {
+        ampm = "pm";
+    }
+    else
+    {
+        ampm = "am";
+    }
+    
+    if(hour > 23.5) // roll over to new day
+    {
+        hour = 12;
+        ampm = "am";
+        
+        if(day ==  7) // roll over to new week
+        {
+            day = 1;
+            
+            if(week == 16) // roll over to new semester
+            {
+                week = 1;
+                
+                if(semester == 6) // game over
+                {
+                    cocos2d::log("...GAME OVER...");
+                }
+                
+                else semester++;
+            }
+            
+            else week++;
+        }
+        
+        else day++;
+    }
+    
+    stringStream << (int)hour << ":";
+    
+    if((hour + 0.5) == ceil(hour))
+    {
+        stringStream << "30" << ampm;
+    }
+    else
+    {
+        stringStream << "00" << ampm;
+    }
+    
+    // update the timer with the new time
+    auto timer = (cocos2d::Label*)activeScene->getChildByName("Timer");
+    timer->setString(stringStream.str());
+    
+    // persist stat changes
+    th.setHoursMinutes(hour);
+    th.setDay(day);
+    th.setWeek(week);
+    th.setSemester(semester);
+    
+    // persist changes to player object
+    player.setGameTime(th);
+    
+    //Added an update for the HUD Stress & Energy Bars
+    HUDLayer::updateHUD(player);
+    
+}
+

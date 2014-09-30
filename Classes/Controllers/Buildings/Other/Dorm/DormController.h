@@ -32,8 +32,6 @@ public:
     
     // creates the dorm room
     static void CreateDormRoom(DormScene *that, Size visibleSize, Vec2 origin);
-    
-    void timeLost(float dt);//The countdown
 
 };
 

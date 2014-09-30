@@ -21,6 +21,7 @@
 #include "DormScene.h"
 #include <UIListView.h>
 #include <UIButton.h>
+#include "HUDHelper.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -143,6 +144,9 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
 {
     log ("cell touched at index:% zi", cell->getIdx());
     PlayerModel player = this->players[cell->getIdx()];
+    
+    // load the HUD player
+    HUDLayer::setPlayer(player);
     
     auto scene = DormScene::createScene(player);
     TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);

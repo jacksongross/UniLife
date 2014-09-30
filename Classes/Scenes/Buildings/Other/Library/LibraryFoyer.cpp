@@ -35,8 +35,8 @@ Scene* LibraryFoyer::createScene()
     layer->setHUDScene(scene);
     
     // create the HUD
-    HUDLayer::createHUD(scene, pm);
-    HUDLayer::updateHUD(scene, pm);
+    HUDLayer::createHUD(scene);
+    HUDLayer::updateHUD(pm);
     
     // return the scene
     return scene;

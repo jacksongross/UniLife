@@ -27,8 +27,6 @@ public:
     
     bool isPaused;
     
-    cocos2d::Label* timer;
-    
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
     
@@ -37,8 +35,6 @@ public:
     
     // overloaded create method to take player data
     static DormScene* create(PlayerModel player);
-    
-    void UpdateTimer(float dt);
     
     void DoorPressed(Ref* pSender);
     

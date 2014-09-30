@@ -35,8 +35,8 @@ Scene* EIS_Hallway::createScene()
     layer->setHUDScene(scene);
     
     // create the HUD
-    HUDLayer::createHUD(scene, pm);
-    HUDLayer::updateHUD(scene, pm);
+    HUDLayer::createHUD(scene);
+    HUDLayer::updateHUD(pm);
     
     // return the scene
     return scene;
@@ -92,7 +92,7 @@ void EIS_Hallway::ToLecture(Ref* pSender){
         updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
-        HUDLayer::updateHUD(this->getHUDScene(), pm);
+        HUDLayer::updateHUD(pm);
     }
     
     
@@ -117,7 +117,7 @@ void EIS_Hallway::ToTutorial(Ref* pSender){
         updateStats.setStress(updateStats.getStress() + 10);
         updateStats.setEnergy(updateStats.getEnergy() - 5);
         pm.setStats(updateStats);
-        HUDLayer::updateHUD(this->getHUDScene(), pm);
+        HUDLayer::updateHUD(pm);
     }
     
     

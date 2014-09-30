@@ -77,15 +77,6 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     
     that->addChild(sprite, 5);
     
-    // set up the timer
-    
-    that->timer = Label::createWithSystemFont("", "Verdana", 64);
-    
-    that->timer->setPosition(Vec2(visibleSize.width / 2, visibleSize.height - 22));
-    
-    that->addChild(that->timer);
-    
-    
     // push the sprites onto the scene
     pMenuItems.pushBack(doorSprite);
     pMenuItems.pushBack(bedSprite);
