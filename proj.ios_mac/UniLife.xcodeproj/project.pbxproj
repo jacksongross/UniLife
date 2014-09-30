@@ -149,6 +149,7 @@
 		7AF557EA19DA9E6F0024A631 /* walk4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E419DA9E6F0024A631 /* walk4.png */; };
 		7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E519DA9E6F0024A631 /* walk.plist */; };
 		7AF557EC19DA9E6F0024A631 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E619DA9E6F0024A631 /* walk.png */; };
+		7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */; };
 		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -533,6 +534,8 @@
 		7AF557E419DA9E6F0024A631 /* walk4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk4.png; sourceTree = "<group>"; };
 		7AF557E519DA9E6F0024A631 /* walk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = walk.plist; sourceTree = "<group>"; };
 		7AF557E619DA9E6F0024A631 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
+		7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneLayer.cpp; sourceTree = "<group>"; };
+		7AF557F219DAA6FC0024A631 /* PhoneLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneLayer.h; sourceTree = "<group>"; };
 		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1085,6 +1088,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7AF557F019DAA6FC0024A631 /* Phone */,
 				7AE60C8F19DA8D390063452F /* Movement */,
 				D06F023D19DA701A00A36F84 /* PopUpLayer */,
 				D04F1C5919DA475B006B7AA1 /* MessageLayer */,
@@ -1439,6 +1443,15 @@
 				7AF557CF19DA9BFF0024A631 /* Fred.png */,
 			);
 			path = Bill;
+			sourceTree = "<group>";
+		};
+		7AF557F019DAA6FC0024A631 /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */,
+				7AF557F219DAA6FC0024A631 /* PhoneLayer.h */,
+			);
+			path = Phone;
 			sourceTree = "<group>";
 		};
 		D031093019B447A20030B59F /* Tavern */ = {
@@ -1868,6 +1881,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,
+				7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */,
 				7A89453C19ADAD16008E1EA7 /* sqlite3.c in Sources */,
