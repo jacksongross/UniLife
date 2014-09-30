@@ -28,7 +28,8 @@ subjectBlockClassModel& subjectBlockClassModel::operator=(const subjectBlockClas
     this->theTimeInt= rhs.theTimeInt;
     this->subjNameString=rhs.subjNameString;
     this->startTimeInt=rhs.startTimeInt;
-    return *this;}
+    return *this;
+}
 
 
 ostream& operator<<(ostream& output, const subjectBlockClassModel print){
