@@ -260,7 +260,6 @@ void LogicGame::onTouchesEnded(const std::vector<Touch*>& touches, Event* event)
             
 			// animate letting go of the sprite
 			this->sprite->runAction(Sequence::create(ScaleBy::create(0.125f, 1.111f),ScaleBy::create(0.125f, 0.9f),nullptr));
-            
 		}
 	}
     

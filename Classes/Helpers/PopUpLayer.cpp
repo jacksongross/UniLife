@@ -68,52 +68,28 @@ bool PopUpLayer::init()
     bedPressed(Rect(0, 0, 100, 100),Vec2(100,100));
     
 
-    auto touchListener = EventListenerTouchOneByOne::create();
-    touchListener->setSwallowTouches(true);
-    touchListener->onTouchBegan = CC_CALLBACK_2(PopUpLayer::touchBegan, this);
-    touchListener->onTouchEnded = CC_CALLBACK_2(PopUpLayer::touchEnded, this);
-    _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
-
+    
+    
+    
     return true;
     
   
 }
 
-bool PopUpLayer::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
-{
-    log("TouchBegan");
-    auto *selected = (cocos2d::Sprite*)this->getChildByName("optBox");
-    //selected->getPosition().getDistance(CCDirector::getInstance()->convertToGL(touch->getLocationInView())) < 100.0f
-    if( touch && !(selected->getPosition().getDistance(touch->getLocation())<100.0f))
-    {
-        log("You Didnt touch Me Where I Wanted");
-        this->getParent()->removeChild(this);
-        Director::getInstance()->resume();
-        return true;
-    }
-    return true;
-    
-}
-
-
-void PopUpLayer::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
-{
-    log("Touchended");
-    auto *selected = (cocos2d::Sprite*)this->getChildByName("optBox");
-    //selected->getPosition().getDistance(CCDirector::getInstance()->convertToGL(touch->getLocationInView())) < 100.0f
-    if( touch && selected->getPosition().getDistance(touch->getLocation())<100.0f)
-    {
-        log("You Touched Me in All The Right Places ;)");
-        return;
-    }
-    return;
-    
-    
-}
 
 
 void PopUpLayer::bedPressed(Rect inRect, Vec2 inLoc){
 
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    
+    auto whoreBox = Sprite::create();
+    whoreBox->setTextureRect(Rect(0,0,visibleSize.width*2,visibleSize.height*2));
+    whoreBox->setVisible(true);
+    whoreBox->setPosition(inLoc);
+    whoreBox->setName("Whore");
+    this->addChild(whoreBox, 10);
+    
+    
     
     auto optBox = Sprite::create();
     optBox->setColor(Color3B::WHITE);
@@ -122,15 +98,6 @@ void PopUpLayer::bedPressed(Rect inRect, Vec2 inLoc){
     optBox->setPosition(inLoc);
     optBox->setName("optBox");
     this->addChild(optBox, 10);
-    
-    auto optBorder = Sprite::create();
-    optBorder->setColor(Color3B::WHITE);
-    optBorder->setTextureRect(inRect);
-    optBorder->setVisible(true);
-    optBorder->setPosition(inLoc);
-    optBorder->setName("optBox");
-    this->addChild(optBorder, 10);
-    
     
     
 }
