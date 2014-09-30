@@ -22,6 +22,8 @@
 #include "PauseMenu.h"
 #include "SimpleAudioEngine.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 
 PlayerModel pm;
@@ -49,6 +51,7 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     
     // 'layer' is an autorelease object
     auto layer = DormScene::create(inplayer);
+    layer->setName("dorm");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -61,7 +64,6 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     HUDLayer::createHUD(scene);
     HUDLayer::updateHUD(pm);
     
-    
     // Report on the loaded player object
     log("==========PLAYER IN DORM==========");
     log("PLAYER ID: %d", inplayer.getId());
@@ -72,6 +74,9 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("DEGREE: %s", inplayer.getDegree().c_str());
     log("ENERGY: %d" , inplayer.getStats().getEnergy());
     log("STRESS: %d", inplayer.getStats().getStress());
+    
+    // load the character
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -157,23 +162,72 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     log("SEMESTER: %d", pm.getGameTime().getSemester());
     log("TIME: %f", pm.getGameTime().getHoursMinutes());
     
+    // get the character and bed positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto bed = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("bed");
+    
+    float destination = bed->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
+    
     HUDLayer::updateHUD(pm);
-
+    
 }
 
 void DormScene::ShelfPressed(cocos2d::Ref *pSender)
 {
     log("You touched the shelf");
+    // get the character and bed positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto shelf = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("shelf");
+    
+    float destination = shelf->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
 }
 
 void DormScene::DeskPressed(cocos2d::Ref *pSender)
 {
     log("You touched the desk!");
+    
+    // get the character and desk positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto desk = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("desk");
+    
+    float destination = desk->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
+    
 }
 
 void DormScene::ComputerPressed(cocos2d::Ref *pSender)
 {
     log("You touched the computer!");
+    
+    // get the character and computer positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto computer = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("computer");
+    
+    float destination = computer->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
+    
     // transition to the load game scene
     auto scene = BrickBreaker::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
