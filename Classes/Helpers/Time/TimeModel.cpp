@@ -1,20 +1,20 @@
 //
-//  TimeHelper.cpp
+//  TimeModel.cpp
 //  UniLife
 //
 //  Created by Jackson Gross on 29/07/2014.
 //
 //
 
-#include "TimeHelper.h"
+#include "TimeModel.h"
 
-TimeHelper::TimeHelper()
+TimeModel::TimeModel()
 {
     day = week = semester = 1; // year one, week one, day one
     hoursMinutes = 8; // 8am start !! get up!!
 }
 
-TimeHelper::TimeHelper(int day, int week, int semester, double hoursMinutes)
+TimeModel::TimeModel(int day, int week, int semester, double hoursMinutes)
 {
     this->day = day;
     this->week = week;
@@ -26,22 +26,22 @@ TimeHelper::TimeHelper(int day, int week, int semester, double hoursMinutes)
             Getters
  *******************************/
 
-int TimeHelper::getDay()
+int TimeModel::getDay()
 {
     return day;
 }
 
-int TimeHelper::getWeek()
+int TimeModel::getWeek()
 {
     return week;
 }
 
-int TimeHelper::getSemester()
+int TimeModel::getSemester()
 {
     return semester;
 }
 
-double TimeHelper::getHoursMinutes()
+double TimeModel::getHoursMinutes()
 {
     return hoursMinutes;
 }
@@ -50,22 +50,22 @@ double TimeHelper::getHoursMinutes()
             Setters
  *******************************/
 
-void TimeHelper::setDay(int day)
+void TimeModel::setDay(int day)
 {
     this->day = day;
 }
 
-void TimeHelper::setWeek(int week)
+void TimeModel::setWeek(int week)
 {
     this->week = week;
 }
 
-void TimeHelper::setSemester(int semester)
+void TimeModel::setSemester(int semester)
 {
     this->semester = semester;
 }
 
-void TimeHelper::setHoursMinutes(double hoursMinutes)
+void TimeModel::setHoursMinutes(double hoursMinutes)
 {
     this->hoursMinutes = hoursMinutes;
 }

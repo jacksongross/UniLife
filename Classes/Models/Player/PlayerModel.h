@@ -11,7 +11,7 @@
 
 #include <string>
 #include "PlayerStatsModel.h"
-#include "TimeHelper.h"
+#include "TimeModel.h"
 #include "timeTableClassModel.h"
 class PlayerModel
 {
@@ -35,7 +35,7 @@ private:
     std::string scene;
     
     // player game time
-    TimeHelper gameTime;
+    TimeModel gameTime;
     
     
     //timetable
@@ -48,7 +48,7 @@ public:
     PlayerModel();
     
     // new player constructor with values
-    PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeHelper gameTime);
+    PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeModel gameTime);
     
     /********************************
                 Getters
@@ -64,7 +64,7 @@ public:
     
     std::string getScene();
     
-    TimeHelper getGameTime();
+    TimeModel getGameTime();
     
     timeTableClassModel getTimeTable();
     
@@ -82,7 +82,7 @@ public:
     
     void setScene(std::string scene);
     
-    void setGameTime(TimeHelper gameTime);
+    void setGameTime(TimeModel gameTime);
     
     
 };

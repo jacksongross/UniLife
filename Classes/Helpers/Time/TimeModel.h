@@ -1,18 +1,18 @@
 //
-//  TimeHelper.h
+//  TimeModel.h
 //  UniLife
 //
 //  Created by Jackson Gross on 29/07/2014.
 //
 //
 
-#ifndef UniLife_TimeHelper_h
-#define UniLife_TimeHelper_h
+#ifndef UniLife_TimeModel_h
+#define UniLife_TimeModel_h
 
 #include <string>
 #include <sstream>
 
-class TimeHelper
+class TimeModel
 {
     
 private:
@@ -31,8 +31,8 @@ private:
     
 public:
     
-    TimeHelper();
-    TimeHelper(int day, int week, int semester, double hoursMinutes);
+    TimeModel();
+    TimeModel(int day, int week, int semester, double hoursMinutes);
     
     /********************************
                 Getters

@@ -20,7 +20,7 @@ PlayerModel::PlayerModel()
 }
 
 // new player constructor with values
-PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeHelper gameTime)
+PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeModel gameTime)
 {
     this->name = name;
     this->degree = degree;
@@ -63,7 +63,7 @@ std::string PlayerModel::getScene()
 }
 
 
-TimeHelper PlayerModel::getGameTime()
+TimeModel PlayerModel::getGameTime()
 {
     return gameTime;
 }
@@ -101,7 +101,7 @@ void PlayerModel::setScene(std::string scene)
     this->scene = scene;
 }
 
-void PlayerModel::setGameTime(TimeHelper gameTime)
+void PlayerModel::setGameTime(TimeModel gameTime)
 {
     this->gameTime = gameTime;
 }

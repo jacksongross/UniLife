@@ -190,7 +190,7 @@ void HUDLayer::updateTimer()
     std::string ampm;
     std::ostringstream stringStream;
     
-    TimeHelper th = player.getGameTime();
+    TimeModel th = player.getGameTime();
     
     // set some local variables for manipulation
     double hour = th.getHoursMinutes() + 0.5;

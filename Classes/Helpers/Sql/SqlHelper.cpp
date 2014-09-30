@@ -82,12 +82,12 @@ void SqlHelper::initDatabase()
         log("create table success!");
     
     // create a test object
-    PlayerModel p("Charlie", "IT", PlayerStatsModel(1, 2, 3, 4, 5, 6), "LibraryScene", TimeHelper(4, 3, 2, 14.5));
+    PlayerModel p("Charlie", "IT", PlayerStatsModel(1, 2, 3, 4, 5, 6), "LibraryScene", TimeModel(4, 3, 2, 14.5));
     
     // save player data to database
     SqlHelper::serialize(p);
     
-    PlayerModel q("Jackson", "Computer Science", PlayerStatsModel(1, 2, 3, 4, 5, 6), "DormScene", TimeHelper(4, 3, 2, 14.5));
+    PlayerModel q("Jackson", "Computer Science", PlayerStatsModel(1, 2, 3, 4, 5, 6), "DormScene", TimeModel(4, 3, 2, 14.5));
     SqlHelper::serialize(q);
     
     // close the database
@@ -133,7 +133,7 @@ void SqlHelper::serialize(PlayerModel &p)
     sqlite3_stmt *Stmt;
     
     PlayerStatsModel m = p.getStats();
-    TimeHelper t = p.getGameTime();
+    TimeModel t = p.getGameTime();
     
     std::stringstream strm;
     strm << "INSERT INTO player (name, degree, intelligence, stamina, social, money, energy, stress, scene, day, week, semester, hoursminutes) VALUES('" << p.getName() << "','" << p.getDegree() << "'," << m.getIntelligence() << "," << m.getStamina() << "," << m.getSocial() << "," << m.getMoney() << "," << m.getEnergy() << "," << m.getStress() << ",'" << p.getScene() << "'," << t.getDay() << "," << t.getWeek() << "," << t.getSemester() << "," << t.getHoursMinutes() << ")";
@@ -174,7 +174,7 @@ void SqlHelper::autosave(PlayerModel p)
     sqlite3_stmt *Stmt;
     
     PlayerStatsModel m = p.getStats();
-    TimeHelper t = p.getGameTime();
+    TimeModel t = p.getGameTime();
     
     std::stringstream strm;
     
@@ -201,7 +201,7 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
     std::vector<PlayerModel> playersList;
     PlayerModel p;
     PlayerStatsModel s;
-    TimeHelper t;
+    TimeModel t;
     
     std::string sql;
     
@@ -245,7 +245,7 @@ PlayerModel SqlHelper::getPlayer(int playerId)
 {
     PlayerModel p;
     PlayerStatsModel s;
-    TimeHelper t;
+    TimeModel t;
     
     std::string sql;
     
@@ -285,7 +285,7 @@ PlayerModel SqlHelper::getPlayer(int playerId)
     return p;
 }
 
-void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeHelper &t)
+void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeModel &t)
 {
     p.setId(sqlite3_column_int(Stmnt, 0));
     p.setName((char*)sqlite3_column_text(Stmnt, 1));

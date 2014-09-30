@@ -130,7 +130,7 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     log("You will rest and restore all energy and decrease stress by 5");
     
     PlayerStatsModel updateStats;
-    TimeHelper newTime;
+    TimeModel newTime;
     updateStats = pm.getStats();
     newTime = pm.getGameTime();
     
