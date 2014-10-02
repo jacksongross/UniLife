@@ -30,9 +30,9 @@ cocos2d::Vector<cocos2d::MenuItem*> ArtFoyerController::CreateMenuButtons(ArtFoy
     pMenuItems.pushBack(ToHallway);
     
     
-    auto ToMap = MenuItemImage::create("map_background.png","map_background.png" , CC_CALLBACK_1(ArtFoyer::ToMap, that));
+    auto ToMap = MenuItemImage::create("Map-marker.png","Map-marker.png" , CC_CALLBACK_1(ArtFoyer::ToMap, that));
     ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.15);
+    ToMap->setScale(0.5);
     pMenuItems.pushBack(ToMap);
     
     

@@ -25,7 +25,7 @@ bool GameOverLayer::init()
 	this->getLabel()->setPosition(Point(winSize.width/2, winSize.height/2));
 	this->addChild(_label);
     
-    DelayTime *delay = DelayTime::create(3);
+    DelayTime *delay = DelayTime::create(1);
     
     // perform the selector call
     CallFunc *callback = CallFunc::create(this, callfunc_selector(GameOverLayer::gameOverDone));

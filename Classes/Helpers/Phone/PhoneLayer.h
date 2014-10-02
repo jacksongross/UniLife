@@ -21,6 +21,17 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
+    
+    void playerInfoCallback(Ref* pSender);
+    
+    void objectivesCallBack(Ref* pSender);
+    
+    void subjectsCallBack(Ref* pSender);
+    
+    void progressCallBack(Ref* pSender);
+    
+    void closeCallBack(Ref* pSender);
+    
     // implement the "static create()" method manually
     CREATE_FUNC(PhoneLayer);
     

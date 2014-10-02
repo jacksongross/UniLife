@@ -9,6 +9,7 @@
 #include "HUDHelper.h"
 #include "DormScene.h"
 #include "PauseMenu.h"
+#include "PhoneLayer.h"
 #include <ctime>
 
 // SOME GLOBALS FOR AUTOSAVE
@@ -53,11 +54,11 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     
     pauseButton->runAction(action);
     
-    auto listener1 = cocos2d::EventListenerTouchOneByOne::create();
+    auto pauseListener = cocos2d::EventListenerTouchOneByOne::create();
 
-    listener1->setSwallowTouches(true);
+    pauseListener->setSwallowTouches(true);
     
-    listener1->onTouchBegan = [](cocos2d::Touch* touch, cocos2d::Event* event){
+    pauseListener->onTouchBegan = [](cocos2d::Touch* touch, cocos2d::Event* event){
         
         auto target = static_cast<cocos2d::Sprite*>(event->getCurrentTarget());
         
@@ -76,7 +77,34 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
         return false;
     };
     
-    scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener1, pauseButton);
+    scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(pauseListener, pauseButton);
+    
+    auto phoneButton = cocos2d::Sprite::create("phone_button.png");
+    
+    phoneButton->setPosition(cocos2d::Vec2(visibleSize.width * .40, visibleSize.height * .90));
+    
+    auto phoneListener = cocos2d::EventListenerTouchOneByOne::create();
+    
+    phoneListener->onTouchBegan = [](cocos2d::Touch* touch, cocos2d::Event* event){
+        
+        auto target = static_cast<cocos2d::Sprite*>(event->getCurrentTarget());
+        
+        //Get the position of the current point relative to the button
+        cocos2d::Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+        cocos2d::Size s = target->getContentSize();
+        cocos2d::Rect rect = cocos2d::Rect(0, 0, s.width, s.height);
+        
+        //Check the click area
+        if (rect.containsPoint(locationInNode))
+        {
+            // activate the pause overlay
+            HUDLayer::PhonePressed(event->getCurrentTarget()->getScene());
+            return true;
+        }
+        return false;
+    };
+    
+    scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(phoneListener, phoneButton);
     
     engText->setContentSize(cocos2d::Size(400, 40));
     engText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
@@ -114,6 +142,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     activeScene->addChild(streSprite);
     activeScene->addChild(pg2);
     activeScene->addChild(pauseButton);
+    activeScene->addChild(phoneButton);
     activeScene->addChild(timer);
     
     scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
@@ -144,6 +173,15 @@ void HUDLayer::PausedPressed(cocos2d::Scene* scene)
     cocos2d::log("Pausing the game");
     
     auto *p = PauseMenu::createScene();
+    
+    scene->addChild(p, 10);
+}
+
+void HUDLayer::PhonePressed(cocos2d::Scene* scene)
+{
+    cocos2d::log("Showing the Phone screen game");
+    
+    auto *p = PhoneLayer::createScene();
     
     scene->addChild(p, 10);
 }

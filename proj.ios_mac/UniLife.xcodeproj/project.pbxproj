@@ -150,6 +150,11 @@
 		7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E519DA9E6F0024A631 /* walk.plist */; };
 		7AF557EC19DA9E6F0024A631 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557E619DA9E6F0024A631 /* walk.png */; };
 		7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */; };
+		7AF557FA19DCDA560024A631 /* Map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F619DCDA560024A631 /* Map-marker.png */; };
+		7AF557FB19DCDA560024A631 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F719DCDA560024A631 /* phone.png */; };
+		7AF557FC19DCDA560024A631 /* phone_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F819DCDA560024A631 /* phone_button.png */; };
+		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
+		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
 		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -536,6 +541,11 @@
 		7AF557E619DA9E6F0024A631 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = walk.png; sourceTree = "<group>"; };
 		7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneLayer.cpp; sourceTree = "<group>"; };
 		7AF557F219DAA6FC0024A631 /* PhoneLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneLayer.h; sourceTree = "<group>"; };
+		7AF557F619DCDA560024A631 /* Map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-marker.png"; sourceTree = "<group>"; };
+		7AF557F719DCDA560024A631 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		7AF557F819DCDA560024A631 /* phone_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_button.png; sourceTree = "<group>"; };
+		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
+		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
 		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -751,6 +761,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AF557F519DCDA560024A631 /* Interface */,
 				7AF557CC19DA9BFF0024A631 /* Bill */,
 				7D7B39CA19CA086F00C80D1F /* acadamia.db */,
 				D0ED65C119C9393B0072EDD0 /* LogicGame */,
@@ -1454,6 +1465,18 @@
 			path = Phone;
 			sourceTree = "<group>";
 		};
+		7AF557F519DCDA560024A631 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				7AF5580719DCE7ED0024A631 /* power-off-100.png */,
+				7AF557F619DCDA560024A631 /* Map-marker.png */,
+				7AF557F719DCDA560024A631 /* phone.png */,
+				7AF557F819DCDA560024A631 /* phone_button.png */,
+				7AF557F919DCDA560024A631 /* phone_selection.png */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		D031093019B447A20030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
@@ -1702,11 +1725,13 @@
 				D0B760F119BD5B6D00E53B52 /* SocSci_Foyer.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
 				7AB6AB2B19AEDDF5003CCD7E /* Blue-button.png in Resources */,
+				7AF557FC19DCDA560024A631 /* phone_button.png in Resources */,
 				7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */,
 				D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */,
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7AF557EA19DA9E6F0024A631 /* walk4.png in Resources */,
+				7AF557FB19DCDA560024A631 /* phone.png in Resources */,
 				7AF557E819DA9E6F0024A631 /* walk2.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
 				D031093719B447C20030B59F /* Tavern_couches.png in Resources */,
@@ -1724,6 +1749,7 @@
 				D0B760F219BD5B6D00E53B52 /* SocSci_Rooms.png in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
 				7AF557EC19DA9E6F0024A631 /* walk.png in Resources */,
+				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
 				7AB6AB3119AEDDF5003CCD7E /* New-Game-next_on.png in Resources */,
@@ -1744,6 +1770,7 @@
 				D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
+				7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */,
 				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
 				D0ED65C619C939B90072EDD0 /* fox.png in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
@@ -1810,6 +1837,7 @@
 				7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */,
 				7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
+				7AF557FA19DCDA560024A631 /* Map-marker.png in Resources */,
 				D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */,
 				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,
 				7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */,
