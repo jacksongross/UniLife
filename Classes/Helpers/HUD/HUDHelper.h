@@ -28,7 +28,11 @@ public:
     // this method is used to update the HUD bars
     static void updateHUD(PlayerModel pm);
     
+    // handles pause button being pressed in HUD
     static void PausedPressed(cocos2d::Scene* scene);
+    
+    // handles phone button being pressed in HUD
+    static void PhonePressed(cocos2d::Scene* scene);
     
     // used to set the player model for the HUD
     static void setPlayer(PlayerModel pm);

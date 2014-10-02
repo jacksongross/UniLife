@@ -153,16 +153,15 @@ BrickBreaker::BrickBreaker()
         
         // Create block and add it to the layer
         Sprite *block = Sprite::create("block.png");
-        int xOffset = padding+block->getContentSize().width/2+
-        ((block->getContentSize().width+padding)*i);
-        block->setPosition(Point(xOffset, 250));
+        int xOffset = padding+block->getContentSize().width / 2 + ((block->getContentSize().width + padding) * i);
+        block->setPosition(Point(xOffset, 550));
         block->setTag(2);
         this->addChild(block);
         
         // Create block body
         b2BodyDef blockBodyDef;
         blockBodyDef.type = b2_dynamicBody;
-        blockBodyDef.position.Set(xOffset/PTM_RATIO, 250/PTM_RATIO);
+        blockBodyDef.position.Set(xOffset/PTM_RATIO, 550/PTM_RATIO);
         blockBodyDef.userData = block;
         b2Body *blockBody = _world->CreateBody(&blockBodyDef);
         
