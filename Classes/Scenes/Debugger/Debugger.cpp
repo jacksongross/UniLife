@@ -124,13 +124,26 @@ void Debugger::gotoBrickBreaker(Ref* pSender){
 
 void Debugger::gotoPopUp(Ref* pSender){
     
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Rect a = Rect(visibleSize.width/2 - 300, visibleSize.height/2, 200, 200);
     
     isonreturn = true;
     log("PopupInit");
     
     cocos2d::Director::getInstance()->pause();
     cocos2d::log("Going to PopupMenu");
-    auto *p = PopUpLayer::createScene();
+    
+    //auto *p = PopUpLayer::createScene();
+    
+    vector<ui::Button*> list;
+    for(int i = 0; i < 20; i++){
+        ui::Button* defaultButt = ui::Button::create("options-border.png");
+        defaultButt->setScale(0.1);
+        list.push_back(defaultButt);
+    }
+
+    auto *p = PopUpLayer::createScene(a,list);
+
     this->addChild(p, 10);
     
 }
