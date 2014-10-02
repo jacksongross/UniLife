@@ -20,6 +20,7 @@ class BrickBreaker : public cocos2d::Layer
 public:
     
     ~BrickBreaker();
+    
     BrickBreaker();
     
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
@@ -33,11 +34,12 @@ public:
 
     // touch functions
     virtual void draw(cocos2d::Renderer *renderer, const cocos2d::Mat4& transform, bool transformUpdated);
-    virtual void ccTouchesBegan(cocos2d::Touch* touches, cocos2d::Event* event);
-    virtual void ccTouchesMoved(cocos2d::Touch* touches, cocos2d::Event* event);
-    virtual void ccTouchesCancelled(cocos2d::Touch* touches, cocos2d::Event* event);
-    virtual void ccTouchesEnded(cocos2d::Touch* touches, cocos2d::Event* event);
+    void touchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
+    void touchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
+    bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    void touchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
     void tick(float dt);
+    
     
 private:
     

@@ -34,7 +34,8 @@ BrickBreaker::~BrickBreaker()
 
 BrickBreaker::BrickBreaker()
 {
-    setTouchEnabled(true);
+    
+    //setTouchEnabled(true);
     
 	Size winSize = CCDirector::getInstance()->getWinSize();
     
@@ -78,7 +79,7 @@ BrickBreaker::BrickBreaker()
     
     // Create sprite and add it to the layer
 	Sprite *ball = CCSprite::create("ball.png");
-    ball->setPosition(Point(100, 100));
+    ball->setPosition(Point(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO));
     ball->setScale(0.25);
     ball->setTag(1);
     this->addChild(ball);
@@ -86,7 +87,7 @@ BrickBreaker::BrickBreaker()
     // Create ball body
     b2BodyDef ballBodyDef;
     ballBodyDef.type = b2_dynamicBody;
-    ballBodyDef.position.Set(100/PTM_RATIO, 100/PTM_RATIO);
+    ballBodyDef.position.Set(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO);
     ballBodyDef.userData = ball;
     
     b2Body *ballBody = _world->CreateBody(&ballBodyDef);
@@ -146,15 +147,15 @@ BrickBreaker::BrickBreaker()
     _contactListener = new MyContactListener();
     _world->SetContactListener(_contactListener);
     
-    for(int i = 0; i < 4; i++) {
+    for(int i = 0; i < 8; i++) {
         
-        static int padding=40;
+        static int padding = 40;
         
         // Create block and add it to the layer
         Sprite *block = Sprite::create("block.png");
         int xOffset = padding+block->getContentSize().width/2+
         ((block->getContentSize().width+padding)*i);
-        block->setPosition(Point(xOffset, 450));
+        block->setPosition(Point(xOffset, 250));
         block->setTag(2);
         this->addChild(block);
         
@@ -181,6 +182,16 @@ BrickBreaker::BrickBreaker()
     }
     
     this->schedule(schedule_selector(BrickBreaker::tick));
+    
+    auto touchListener = EventListenerTouchOneByOne::create();
+    touchListener->setSwallowTouches(true);
+    
+    touchListener->onTouchBegan = CC_CALLBACK_2(BrickBreaker::touchBegan, this);
+    touchListener->onTouchMoved = CC_CALLBACK_2(BrickBreaker::touchMoved, this);
+    touchListener->onTouchCancelled = CC_CALLBACK_2(BrickBreaker::touchCancelled, this);
+    touchListener->onTouchEnded = CC_CALLBACK_2(BrickBreaker::touchEnded, this);
+    
+    _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
 }
 
 void BrickBreaker::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated)
@@ -290,11 +301,11 @@ void BrickBreaker::tick(float dt)
     }
 }
 
-void BrickBreaker::ccTouchesBegan(cocos2d::Touch *touches, cocos2d::Event *event)
+bool BrickBreaker::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    if (_mouseJoint != NULL) return;
+    if (_mouseJoint != NULL) return false;
     
-    Point location = touches->getLocationInView();
+    Point location = touch->getLocationInView();
     location = CCDirector::getInstance()->convertToGL(location);
     b2Vec2 locationWorld = b2Vec2(location.x/PTM_RATIO, location.y/PTM_RATIO);
     
@@ -309,20 +320,23 @@ void BrickBreaker::ccTouchesBegan(cocos2d::Touch *touches, cocos2d::Event *event
         _mouseJoint = (b2MouseJoint *)_world->CreateJoint(&md);
         _paddleBody->SetAwake(true);
     }
+    
+    
+    return true;
 }
 
-void BrickBreaker::ccTouchesMoved(cocos2d::Touch *touches, cocos2d::Event *event)
+void BrickBreaker::touchMoved(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     if (_mouseJoint == NULL) return;
     
-    Point location = touches->getLocationInView();
+    Point location = touch->getLocationInView();
     location = CCDirector::getInstance()->convertToGL(location);
     b2Vec2 locationWorld = b2Vec2(location.x/PTM_RATIO, location.y/PTM_RATIO);
     
     _mouseJoint->SetTarget(locationWorld);
 }
 
-void BrickBreaker::ccTouchesCancelled(cocos2d::Touch *touches, cocos2d::Event *event)
+void BrickBreaker::touchCancelled(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     if (_mouseJoint)
     {
@@ -331,7 +345,7 @@ void BrickBreaker::ccTouchesCancelled(cocos2d::Touch *touches, cocos2d::Event *e
     }
 }
 
-void BrickBreaker::ccTouchesEnded(cocos2d::Touch *touches, cocos2d::Event *event)
+void BrickBreaker::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     if (_mouseJoint)
     {
@@ -339,22 +353,11 @@ void BrickBreaker::ccTouchesEnded(cocos2d::Touch *touches, cocos2d::Event *event
         _mouseJoint = NULL;
     }
 }
+
+
 
 Scene* BrickBreaker::createScene()
 {
-    // 'scene' is an autorelease object
-    //auto scene = Scene::create();
-    
-    // 'layer' is an autorelease object
-    //auto layer = GameView::create();
-    
-    // add layer as a child to scene
-    //scene->addChild(layer);
-    
-    // return the scene
-    //return scene;
-    
-    
     // 'scene' is an autorelease object
     Scene *scene = Scene::create();
     
