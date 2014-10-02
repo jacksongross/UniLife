@@ -84,7 +84,7 @@ void Debugger::SpawnList(){
     ui::Text* LGame = ui::Text::create("LOGIC GAME", "Arial", 30);
     LGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoLogicGame, this));
     LGame->setColor(Color3B::BLACK);
-    LGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 100));
+    LGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 ));
     LGame->setTouchEnabled(true);
     this->addChild(LGame,5);
     
@@ -125,7 +125,6 @@ void Debugger::gotoBrickBreaker(Ref* pSender){
 void Debugger::gotoPopUp(Ref* pSender){
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
-    Rect a = Rect(visibleSize.width/2 - 300, visibleSize.height/2, 200, 200);
     
     isonreturn = true;
     log("PopupInit");
@@ -134,14 +133,15 @@ void Debugger::gotoPopUp(Ref* pSender){
     cocos2d::log("Going to PopupMenu");
     
     //auto *p = PopUpLayer::createScene();
-    
+    ui::Button* defaultButt;
     vector<ui::Button*> list;
     for(int i = 0; i < 20; i++){
-        ui::Button* defaultButt = ui::Button::create("options-border.png");
-        defaultButt->setScale(0.1);
+        defaultButt = ui::Button::create("options_off.png");
         list.push_back(defaultButt);
     }
 
+    Rect a = Rect(visibleSize.width/2 - 350, visibleSize.height/2, 600, 300);
+    
     auto *p = PopUpLayer::createScene(a,list);
 
     this->addChild(p, 10);

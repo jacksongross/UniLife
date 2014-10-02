@@ -109,7 +109,7 @@ Scene* PopUpLayer::createScene(Rect inRect, vector<ui::Button*> inButtons)
     layer->addChild(label, 0);
     
     
-    createPopUpButtons(layer,Rect(visibleSize.width/2 - 300, visibleSize.height/2, 200, 200),inButtons);
+    createPopUpButtons(layer,inRect,inButtons);
     
     // return the scene
     return scene;
@@ -139,7 +139,6 @@ bool PopUpLayer::init()
 
 bool PopUpLayer::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    log("TouchBegan");
     auto *selected = (cocos2d::Sprite*)this->getChildByName("optBox");
     //selected->getPosition().getDistance(CCDirector::getInstance()->convertToGL(touch->getLocationInView())) < 100.0f
     if( touch && !(selected->getPosition().getDistance(touch->getLocation())<100.0f))
@@ -221,13 +220,32 @@ void PopUpLayer::createPopUpButtons(PopUpLayer* that, Rect inRect, vector<ui::Bu
     
     Rect newsize2 = Rect(inRect.origin.x, inRect.origin.y, inRect.size.width - 20, inRect.size.height - 20);
     
-    
+    /*
     ui::Layout* layout = ui::Layout::create();
     layout->setContentSize(Size(newsize2.size.width, newsize2.size.height));
     layout->setPosition(Vec2(inRect.origin.x - newsize2.size.width/2,inRect.origin.y - newsize2.size.height/2));
     layout->setBackGroundColor(Color3B::WHITE);
     layout->setBackGroundColorType(cocos2d::ui::Layout::BackGroundColorType::SOLID);
     that->addChild(layout,12);
+    */
+    
+    
+    ui::ListView* lv = ui::ListView::create();
+    
+    for (int i=0; i<inButtons.size(); i++)
+    {
+        ui::Button* model = inButtons[i];
+        lv->setItemModel(model);
+        lv->pushBackDefaultItem();
+    }
+    lv->setItemsMargin(10);
+    lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
+    lv->setContentSize(Size(newsize2.size.width, newsize2.size.height));
+    lv->setBackGroundColorType(cocos2d::ui::Layout::BackGroundColorType::SOLID);
+    lv->setBackGroundColor(Color3B::GREEN);
+    lv->setPosition(Vec2(inRect.origin.x - newsize2.size.width/2,inRect.origin.y - newsize2.size.height/2));
+    that->addChild(lv,12);
+    
     
 }
 
