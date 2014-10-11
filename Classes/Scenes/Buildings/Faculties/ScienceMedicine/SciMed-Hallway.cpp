@@ -78,6 +78,8 @@ void SciMedHallway::ToFoyer(Ref* pSender)
 void SciMedHallway::ToLecture(Ref* pSender){
     log("Going To SciMed Lecture!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
         log("Not Enough Energy To Go To A Lecture");
@@ -103,6 +105,8 @@ void SciMedHallway::ToLecture(Ref* pSender){
 
 void SciMedHallway::ToTutorial(Ref* pSender){
     log("Going To SciMed Tutorial!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){

@@ -76,6 +76,7 @@ void LibraryFoyer::ToMap(Ref* pSender)
 void LibraryFoyer::ToMeetingRoom(Ref* pSender)
 {
     log("Going To The Library Meeting Room!");
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
    auto scene = LibraryRooms::createScene();
    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

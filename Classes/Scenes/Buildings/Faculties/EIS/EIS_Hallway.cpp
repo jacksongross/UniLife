@@ -77,6 +77,8 @@ void EIS_Hallway::ToFoyer(Ref* pSender)
 void EIS_Hallway::ToLecture(Ref* pSender){
     log("Going To EIS Lecture!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
         log("Not Enough Energy To Go To A Lecture");
@@ -102,6 +104,8 @@ void EIS_Hallway::ToLecture(Ref* pSender){
 
 void EIS_Hallway::ToTutorial(Ref* pSender){
     log("Going To EIS Tutorial!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){

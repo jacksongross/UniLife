@@ -79,6 +79,8 @@ void ArtHallway::ToFoyer(Ref* pSender)
 void ArtHallway::ToLecture(Ref* pSender){
     log("Going To Art Lecture!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
         log("Not Enough Energy To Go To A Lecture");
@@ -104,6 +106,8 @@ void ArtHallway::ToLecture(Ref* pSender){
 
 void ArtHallway::ToTutorial(Ref* pSender){
     log("Going To Art Tutorial!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){

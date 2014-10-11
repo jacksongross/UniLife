@@ -19,6 +19,12 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuLoadController::CreateMenuButtons(MenuLo
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
+    // create the back button
+    auto backButton = MenuItemImage::create("options-back.png", "options-back.png", CC_CALLBACK_1(MenuLoadScene::backButtonCallback, that));
+    backButton->setPosition(Vec2(origin.x + visibleSize.width / 2 - 500, visibleSize.height / 2 + 250));
+    backButton->setName("BackButton");
+    pMenuItems.pushBack(backButton);
+    
     return pMenuItems;
     
 }

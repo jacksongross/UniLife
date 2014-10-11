@@ -15,6 +15,7 @@
 #include "sqlite3.h"
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"
+#include "AssessmentModel.h"
 #include "cocos2d.h"
 #include "subjectBlockClassModel.h"
 
@@ -61,7 +62,7 @@ public:
     static std::vector<subjectBlockClassModel> getBlocks(std::vector<std::string> code);
     
     //gets assignments for one subject
-    static std::vector<int> getAssignments(std::string code);
+    static std::vector<AssessmentModel> getAssignments(std::string code);
    
     static std::vector<std::string> getFaculties();
     

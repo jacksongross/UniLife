@@ -11,6 +11,7 @@
 #include "DormScene.h"
 #include "MenuLoadScene.h"
 #include "SimpleAudioEngine.h"
+#include "AssessmentModel.h"
 
 USING_NS_CC;
 
@@ -39,14 +40,6 @@ bool MenuScene::init()
         return false;
     }
     
-    CocosDenshion::SimpleAudioEngine::getInstance()->playBackgroundMusic("background-music-aac.wav", true);
-    
-    
-    //REMOVE THIS TO ACTIVATE SOUND
-    CocosDenshion::SimpleAudioEngine::getInstance()->setBackgroundMusicVolume(0);
-    //REMOVE THIS TO ACTIVATE SOUND
-    
-    
     // checks if the database initialisation has been run before
     // to ensure it gets seeded once
     bool isSeeded = UserDefault::getInstance()->getBoolForKey("seeded");
@@ -57,6 +50,39 @@ bool MenuScene::init()
         SqlHelper::initDatabase();
         UserDefault::getInstance()->setBoolForKey("seeded", true);
     }
+    
+    std::vector<string> list =  SqlHelper::getDegrees();
+    
+    for(int i = 0 ; i < list.size(); i++)
+    {
+        int code = SqlHelper::getDegreeCode(list[i]);
+        cout << list[i] << ", Code: " << code <<endl << endl;
+        
+        std::vector<string> classes = SqlHelper::getClasses(code, 1);
+        std::vector<subjectBlockClassModel> subjects = SqlHelper::getBlocks(classes);
+        
+        for(int j = 0; j < subjects.size(); j++)
+        {
+            cout << subjects[i] << endl;
+            
+            std::vector<AssessmentModel> marks = SqlHelper::getAssignments(subjects[i].getNameString());
+            
+            subjects[i].setAssessments(marks);
+            
+            for(int z = 0; z < subjects[i].getAssessments().size(); z++)
+            {
+                cout << subjects[i].getAssessments()[z].getSubject() << " " << subjects[i].getAssessments()[z].getAssessmentId() << " " << subjects[i].getAssessments()[z].getPercentage() << endl;
+            }
+            cout << endl;
+            
+            
+        }
+        cout << endl;
+
+    }
+    
+    
+    
     
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -71,7 +97,10 @@ bool MenuScene::init()
 void MenuScene::newGameCallback(Ref* pSender)
 {
     log("new game button pressed!");
-   auto scene = MenuNewGame::createScene();
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
+    auto scene = MenuNewGame::createScene();
     TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 }
@@ -79,6 +108,8 @@ void MenuScene::newGameCallback(Ref* pSender)
 void MenuScene::loadGameCallback(Ref* pSender)
 {
     log("load game button pressed!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     // transition to the load game scene
     auto scene = MenuLoadScene::createScene();
@@ -91,6 +122,8 @@ void MenuScene::optionsCallback(Ref* pSender)
     log("options button pressed!");
     
     // transition to the menu options scene
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuOptionScene::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

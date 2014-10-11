@@ -26,6 +26,9 @@ public:
     
     void showLoadTable();
     
+    // back button callback function
+    void backButtonCallback(Ref* pSender);
+    
     std::vector<PlayerModel> players;
 
     // TableViewDataSource methods

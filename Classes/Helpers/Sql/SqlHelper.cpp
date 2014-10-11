@@ -12,6 +12,7 @@
 #include "sqlite3.h"
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"
+#include "AssessmentModel.h"
 #include "cocos2d.h"
 #include <cstdlib>
 #include <fstream>
@@ -31,7 +32,7 @@ sqlite3* SqlHelper::openDatabase(std::string name)
     std::string dbPath = CCFileUtils::getInstance()->getWritablePath();
     dbPath.append(dbName);
     
-    log("%s", dbPath.c_str());
+    //log("%s", dbPath.c_str());
     
     // open the database and create if it hasn't been already
     int result = sqlite3_open_v2(dbPath.c_str(), &db, SQLITE_OPEN_CREATE | SQLITE_OPEN_READWRITE, NULL);
@@ -396,10 +397,11 @@ int SqlHelper::getDegreeCode(std::string dname){
 std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
     
     sqlite3 *db = openDatabase("acadamia.db");
-    std::stringstream sqlstream;
-    sqlstream << "select scode from Subject where dcode=" << degnum << "AND year=" << semester << ";";
     
-    std::string sql=sqlstream.str();
+    std::string sql=  "select scode from Subject where dcode =";
+    sql.append(to_string(degnum));
+    sql.append(" AND year=");
+    sql.append(to_string(semester));
     
     sqlite3_stmt *Stmnt;
     std::vector<std::string> cList;
@@ -412,8 +414,6 @@ std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
         while ( 1 )
         {
             res = sqlite3_step(Stmnt);
-            
-            
             
             if ( res == SQLITE_ROW )
             {
@@ -444,56 +444,54 @@ std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string
     sqlite3 *db = openDatabase("acadamia.db");
 std:vector<subjectBlockClassModel> sList;
     
-    for (int i = 0; i < code.size(); ++i) {
-        
-        std::stringstream streamer;
-        
-        streamer << "select * from Classblock where subcode = \'" << code[i] << "\';";
-        
-    std::string sql=  streamer.str();
-    sqlite3_stmt *Stmnt;
-    
-    
-    
-    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    for (int i = 0; i < code.size(); ++i)
     {
-        int res = 0;
         
+        std::string sql = "select * from Classblock where subcode='";
+        sql.append(code[i] + "'");
         
-        while ( 1 )
+        sqlite3_stmt *Stmnt;
+    
+    
+    
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
         {
-            
-            
-            
-            if ( res == SQLITE_ROW )
+            int res = 0;
+        
+            while ( 1 )
             {
-                //sList.push_back((char*)sqlite3_column_text(Stmnt, 1));
+                res = sqlite3_step(Stmnt);
                 
-                //INSERTION WILL OCCURE HERE
+                if ( res == SQLITE_ROW )
+                {
+                    //sList.push_back((char*)sqlite3_column_text(Stmnt, 1));
                 
-                char blockID = sqlite3_column_int(Stmnt, 2);
-                int timelength = sqlite3_column_int(Stmnt, 3);
+                    //INSERTION WILL OCCURE HERE
                 
-                subjectBlockClassModel temp(blockID, timelength, code[i]);
+                    char blockID = (char) sqlite3_column_int(Stmnt, 1);
+                    int timelength = sqlite3_column_int(Stmnt, 2);
+                
+                    subjectBlockClassModel temp(blockID, timelength, code[i]);
                                             
                                             
-                sList.push_back(temp);
+                    sList.push_back(temp);
 
                 
-                
-            }
+                }
             
-            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
-            {
-                break;
+                if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+                {
+                    break;
+                }
             }
         }
-    }else{
-        log("ERROR WITH ACADEMIC DATABASE");
-        
-    }
+        else
+        {
+            log("ERROR WITH ACADEMIC DATABASE");
+        }
     
     }
+    
     // close the database
     closeDatabase(db);
     
@@ -501,16 +499,15 @@ std:vector<subjectBlockClassModel> sList;
 
 }
 
-std::vector<int> SqlHelper::getAssignments(std::string code){
+std::vector<AssessmentModel> SqlHelper::getAssignments(std::string code){
     
     sqlite3 *db = openDatabase("acadamia.db");
-    std::stringstream sqlstream;
-    sqlstream << "select anum, percentage from Assessment where scode=" << code <<";";
     
-    std::string sql=sqlstream.str();
+    std::string sql = "select anum, percentage from Assessment where scode='";
+    sql.append(code + "'");
     
     sqlite3_stmt *Stmnt;
-    std::vector<int> aList;
+    std::vector<AssessmentModel> aList;
     
     
     if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
@@ -521,11 +518,14 @@ std::vector<int> SqlHelper::getAssignments(std::string code){
         {
             res = sqlite3_step(Stmnt);
             
-            
-            
             if ( res == SQLITE_ROW )
             {
-                aList.push_back(sqlite3_column_int(Stmnt, 0));
+                AssessmentModel am;
+                am.setSubject(code);
+                am.setAssessmentId(sqlite3_column_int(Stmnt, 0));
+                am.setPercentage(sqlite3_column_int(Stmnt, 1));
+                
+                aList.push_back(am);
             }
             
             if ( res == SQLITE_DONE || res==SQLITE_ERROR)

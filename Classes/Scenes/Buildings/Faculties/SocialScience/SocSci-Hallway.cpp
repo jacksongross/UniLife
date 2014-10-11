@@ -80,6 +80,8 @@ void SocSciHallway::ToFoyer(Ref* pSender)
 void SocSciHallway::ToLecture(Ref* pSender){
     log("Going To Buisness Lecture!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){
         log("Not Enough Energy To Go To A Lecture");
@@ -105,6 +107,8 @@ void SocSciHallway::ToLecture(Ref* pSender){
 
 void SocSciHallway::ToTutorial(Ref* pSender){
     log("Going To Buisness Tutorial!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
     //Temporary Code for Debugging Purposes
     if(pm.getStats().getEnergy() < 5){

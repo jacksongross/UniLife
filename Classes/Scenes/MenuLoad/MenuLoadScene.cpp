@@ -172,3 +172,13 @@ void MenuLoadScene::tableCellUnhighlight (cocos2d::extension::TableView * table,
 {
     //Texture2D * aTexture = TextureCache :: sharedTextureCache () -> addImage ("options-border.png");
 }
+
+void MenuLoadScene::backButtonCallback(Ref* pSender)
+{
+    log("Going Back to Menu!");
+    
+    auto scene = MenuScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}

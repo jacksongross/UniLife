@@ -13,6 +13,8 @@
 #include <queue>
 #include <string>
 #include <iomanip>
+#include <vector>
+#include "AssessmentModel.h"
 using namespace std;
 
 class subjectBlockClassModel{
@@ -22,6 +24,7 @@ private:
     string subjNameString;
     int startTimeInt;
     char classID;
+    std::vector<AssessmentModel> assessments;
 public:
 
     subjectBlockClassModel();
@@ -34,12 +37,13 @@ public:
     string getNameString(){return subjNameString;};
     int getTotalTimeInt(){return theTimeInt;};
     char getClassIDChar(){return classID;};
+    std::vector<AssessmentModel> getAssessments(){return assessments;};
     friend ostream& operator<<(ostream& output,const subjectBlockClassModel print);
     //INSERT FUNCTIONS
     void putNameVoid(string nameString){subjNameString = nameString;};
     void putTimeVoid(int timeInt){theTimeInt = timeInt;};
     void putStartVoid(int startInt){startTimeInt = startInt;}
-    
+    void setAssessments(std::vector<AssessmentModel> assessments){this->assessments = assessments;};
     
 
 };

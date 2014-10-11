@@ -22,7 +22,7 @@ timeTableClassModel::timeTableClassModel(int dCode, int year){
     
     SqlHelper getSubjects;
     
-   classQueue = getSubjects.getBlocks( getSubjects.getClasses(degreeCode, currYear));
+    classQueue = getSubjects.getBlocks( getSubjects.getClasses(degreeCode, currYear));
     
     
     
