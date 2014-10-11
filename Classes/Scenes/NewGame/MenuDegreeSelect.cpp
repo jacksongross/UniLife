@@ -72,9 +72,6 @@ cocos2d::Scene* MenuDegreeSelect::createScene(PlayerModel inplayer)
 }
 
 
-
-
-
 // on "init" you need to initialize your instance
 bool MenuDegreeSelect::init()
 {
@@ -91,10 +88,10 @@ bool MenuDegreeSelect::init()
     
     last = -1;
     
-    // create the main menu
-    MenuDegreeSelectController::CreateMainMenu(this, visibleSize, origin);
-    loadthetestdata();
+    this->setDegreesList(SqlHelper::getDegrees());
     
+    // create the main menu
+    MenuDegreeSelectController::CreateMainMenu(this, visibleSize, origin);   
     
     return true;
 }
@@ -127,10 +124,18 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     log("ENERGY: %d" , newplayer.getStats().getEnergy());
     log("STRESS: %d", newplayer.getStats().getStress());
     
-    // set the player for the HUD
-    HUDLayer::setPlayer(newplayer);
+    TimeModel tm;
+    tm.setDay(1);
+    tm.setHoursMinutes(8);
+    tm.setWeek(1);
+    tm.setSemester(1);
     
-    auto scene = DormScene::createScene(newplayer);
+    PlayerModel pm(newplayer.getName(), newplayer.getDegree(), newplayer.getStats(), newplayer.getScene(), tm);
+    
+    // set the player for the HUD
+    HUDLayer::setPlayer(pm);
+    
+    auto scene = DormScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 
@@ -141,6 +146,8 @@ void MenuDegreeSelect::EIS_Selected(Ref* pSender)
 {
     
     facultySelected = 1;
+    
+    this->setDegreesList(SqlHelper::getDegrees("Engineering and Information Sciences"));
     
     log("Faculty 1 Selected :: EIS");
     
@@ -155,6 +162,8 @@ void MenuDegreeSelect::Buis_Selected(Ref* pSender)
 {
     facultySelected = 2;
     
+    this->setDegreesList(SqlHelper::getDegrees("Business"));
+    
     log("Faculty 2 Selected :: Buis");
     
     loadthelist(last);
@@ -166,6 +175,8 @@ void MenuDegreeSelect::Art_Selected(Ref* pSender)
 {
     facultySelected = 3;
     
+    this->setDegreesList(SqlHelper::getDegrees("Law, Humanities and the Arts"));
+    
     log("Faculty 3 Selected :: Art");
     
     loadthelist(last);
@@ -175,6 +186,8 @@ void MenuDegreeSelect::Art_Selected(Ref* pSender)
 void MenuDegreeSelect::SocSci_Selected(Ref* pSender)
 {
     facultySelected = 4;
+    
+    this->setDegreesList(SqlHelper::getDegrees("Social Science"));
     
     log("Faculty 4 Selected :: SocSci");
     
@@ -188,6 +201,8 @@ void MenuDegreeSelect::SciMed_Selected(Ref* pSender)
 {
     facultySelected = 5;
     
+    this->setDegreesList(SqlHelper::getDegrees("Science, Medicine and Health"));
+    
     log("Faculty 5 Selected :: SciMed");
     
     loadthelist(last);
@@ -196,7 +211,7 @@ void MenuDegreeSelect::SciMed_Selected(Ref* pSender)
 
 
 
-void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Text::TouchEventType type, int whosent)
+void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Text::TouchEventType type, int whosent, std::string degree)
 {
     
     switch (type)
@@ -207,8 +222,7 @@ void MenuDegreeSelect::LVTouch(Ref *pSender, cocos2d::ui::Text::TouchEventType t
         }
         case cocos2d::ui::ListView::TouchEventType::ENDED:
         {
-            log("Selected: %s",degrees[whosent].getDegreeName().c_str());
-            newplayer.setDegree(degrees[whosent].getDegreeName());
+            newplayer.setDegree(degree);
             loadthelist(whosent);
             break;
 
@@ -232,45 +246,49 @@ void MenuDegreeSelect::loadthelist(int withopt){
     
     lv->setItemModel(model);
     std::string compiled;
-
-    for (int i=0; i < degrees.size(); i++)
+    
+    std::vector<std::string> dList = this->getDegreesList();
+    
+    for(int i = 0; i < dList.size(); i++)
     {
-        if(facultySelected == degrees[i].getFacultyID()){
-            if(withopt == i){
-                model->setString(degrees[i].getDegreeName());
-                model->setTouchEnabled(true);
-                model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-                model->setScale(1.2);
-                model->setColor(Color3B::RED);
-                model->setBrightStyle(cocos2d::ui::Widget::BrightStyle::HIGHLIGHT);
-                compiled = facultySelected;
-                compiled += " ";
-                compiled += i;
-                last = i;
-                model->setName(compiled);
-                model->setTextAreaSize(Size(500,80));
-                model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-                model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-                lv->pushBackDefaultItem();
-            }else{
-                model->setColor(Color3B::BLACK);
-                model->setString(degrees[i].getDegreeName());
-                model->setTouchEnabled(true);
-                model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i));
-                
-                compiled = facultySelected;
-                compiled += " ";
-                compiled += i;
-                model->setScale(1.0);
-                model->setName(compiled);
-                model->setTextAreaSize(Size(500,80));
-                model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-                model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
-                lv->pushBackDefaultItem();
-                
-            }
+        if(withopt == i)
+        {
+            model->setString(dList[i]);
+            model->setTouchEnabled(true);
+            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i, dList[i]));
+            model->setScale(1.2);
+            model->setColor(Color3B::RED);
+            model->setBrightStyle(cocos2d::ui::Widget::BrightStyle::HIGHLIGHT);
+            compiled = facultySelected;
+            compiled += " ";
+            compiled += i;
+            last = i;
+            model->setName(compiled);
+            model->setTextAreaSize(Size(500,80));
+            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
+            lv->pushBackDefaultItem();
+        }
+        else
+        {
+            model->setColor(Color3B::BLACK);
+            model->setString(dList[i]);
+            model->setTouchEnabled(true);
+            model->addTouchEventListener(CC_CALLBACK_2(MenuDegreeSelect::LVTouch, this, i, dList[i]));
+            
+            compiled = facultySelected;
+            compiled += " ";
+            compiled += i;
+            model->setScale(1.0);
+            model->setName(compiled);
+            model->setTextAreaSize(Size(500,80));
+            model->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+            model->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
+            lv->pushBackDefaultItem();
+            
         }
     }
+
     lv->setItemsMargin(10);
     lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
     lv->setSize(Size(500, 350));
@@ -282,106 +300,14 @@ void MenuDegreeSelect::loadthelist(int withopt){
     
 }
 
-void MenuDegreeSelect::loadthetestdata(){
-    
-    //28 Is max Char Limit At Font Size 40
-    
-    Temp_Degree load;
-    load.setFacultyID(1);
-    load.setDegreeName("Computer Science");
-    degrees.push_back(load);
-    
-    load.setFacultyID(1);
-    load.setDegreeName("Engineering");
-    degrees.push_back(load);
-    
-    load.setFacultyID(1);
-    load.setDegreeName("Info Tech");
-    degrees.push_back(load);
-    
-    load.setFacultyID(1);
-    load.setDegreeName("Electrical Engineering");
-    degrees.push_back(load);
- 
-    load.setFacultyID(1);
-    load.setDegreeName("This is a really Long Degree");
-    degrees.push_back(load);
-    
-    load.setFacultyID(1);
-    load.setDegreeName("Games Development");
-    degrees.push_back(load);
-    
-    load.setFacultyID(2);
-    load.setDegreeName("Nunya Business");
-    degrees.push_back(load);
-    
-    load.setFacultyID(2);
-    load.setDegreeName("Commerce");
-    degrees.push_back(load);
-    
-    load.setFacultyID(2);
-    load.setDegreeName("Money Counting");
-    degrees.push_back(load);
-    
-    load.setFacultyID(2);
-    load.setDegreeName("Being a Banker");
-    degrees.push_back(load);
-    
-    load.setFacultyID(3);
-    load.setDegreeName("Un-Creative Arts");
-    degrees.push_back(load);
-    
-    load.setFacultyID(3);
-    load.setDegreeName("Drama Queenology");
-    degrees.push_back(load);
-    
-    load.setFacultyID(3);
-    load.setDegreeName("Modern Art");
-    degrees.push_back(load);
-    
-    load.setFacultyID(3);
-    load.setDegreeName("International Studies");
-    degrees.push_back(load);
-    
-    load.setFacultyID(4);
-    load.setDegreeName("Psycho-Logy");
-    degrees.push_back(load);
-    
-    load.setFacultyID(4);
-    load.setDegreeName("Science of Lovemaking");
-    degrees.push_back(load);
-    
-    load.setFacultyID(4);
-    load.setDegreeName("Teaching Little kids");
-    degrees.push_back(load);
-    
-    load.setFacultyID(4);
-    load.setDegreeName("Being A Soulless Lawyer");
-    degrees.push_back(load);
-    
-    load.setFacultyID(4);
-    load.setDegreeName("In Joblessness");
-    degrees.push_back(load);
-    
-    load.setFacultyID(5);
-    load.setDegreeName("Pharmacology");
-    degrees.push_back(load);
-
-    load.setFacultyID(5);
-    load.setDegreeName("Seussology");
-    degrees.push_back(load);
-
-    load.setFacultyID(5);
-    load.setDegreeName("Physics");
-    degrees.push_back(load);
-    
-    load.setFacultyID(5);
-    load.setDegreeName("Methology");
-    degrees.push_back(load);
-    
-    load.setFacultyID(5);
-    load.setDegreeName("Chemistry");
-    degrees.push_back(load);
-    
+void MenuDegreeSelect::setDegreesList(std::vector<std::string> degreesList)
+{
+    this->degreesList = degreesList;
 }
+
+std::vector<std::string> MenuDegreeSelect::getDegreesList()
+{
+    return this->degreesList;
+}
+
 

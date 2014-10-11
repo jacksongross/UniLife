@@ -53,6 +53,8 @@ public:
     // retrieve degree names from the database
     static std::vector<std::string> getDegrees();
     
+    // get list of degrees for a faculty
+    static std::vector<std::string> getDegrees(std::string faculty);
     
     static int getDegreeCode(std::string dname);
     

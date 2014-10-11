@@ -51,39 +51,6 @@ bool MenuScene::init()
         UserDefault::getInstance()->setBoolForKey("seeded", true);
     }
     
-    std::vector<string> list =  SqlHelper::getDegrees();
-    
-    for(int i = 0 ; i < list.size(); i++)
-    {
-        int code = SqlHelper::getDegreeCode(list[i]);
-        cout << list[i] << ", Code: " << code <<endl << endl;
-        
-        std::vector<string> classes = SqlHelper::getClasses(code, 1);
-        std::vector<subjectBlockClassModel> subjects = SqlHelper::getBlocks(classes);
-        
-        for(int j = 0; j < subjects.size(); j++)
-        {
-            cout << subjects[i] << endl;
-            
-            std::vector<AssessmentModel> marks = SqlHelper::getAssignments(subjects[i].getNameString());
-            
-            subjects[i].setAssessments(marks);
-            
-            for(int z = 0; z < subjects[i].getAssessments().size(); z++)
-            {
-                cout << subjects[i].getAssessments()[z].getSubject() << " " << subjects[i].getAssessments()[z].getAssessmentId() << " " << subjects[i].getAssessments()[z].getPercentage() << endl;
-            }
-            cout << endl;
-            
-            
-        }
-        cout << endl;
-
-    }
-    
-    
-    
-    
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();

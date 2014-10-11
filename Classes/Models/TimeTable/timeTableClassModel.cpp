@@ -19,12 +19,21 @@ timeTableClassModel::timeTableClassModel(int dCode, int year){
     degreeCode = dCode;
     currYear = year;
     
+    classQueue = SqlHelper::getBlocks( SqlHelper::getClasses(degreeCode, currYear));
     
-    SqlHelper getSubjects;
-    
-    classQueue = getSubjects.getBlocks( getSubjects.getClasses(degreeCode, currYear));
-    
-    
+    for(int i = 0; i < classQueue.size(); i++)
+    {
+        
+        classQueue[i].setAssessments(SqlHelper::getAssignments(classQueue[i].getNameString()));
+        
+        for(int z = 0; z < classQueue[i].getAssessments().size(); z++)
+        {
+            cout << classQueue[i].getAssessments()[z].getSubject() << " " << classQueue[i].getAssessments()[z].getAssessmentId() << " " << classQueue[i].getAssessments()[z].getPercentage() << endl;
+        }
+        cout << endl;
+        
+        
+    }
     
     for (int i=0; i < classQueue.size(); ++i) {
         randomAllocationInt(classQueue[i]);

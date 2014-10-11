@@ -145,10 +145,13 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
     log ("cell touched at index:% zi", cell->getIdx());
     PlayerModel player = this->players[cell->getIdx()];
     
-    // load the HUD player
-    HUDLayer::setPlayer(player);
+    // create the player with its relevant timetable
+    PlayerModel pm(player.getName(), player.getDegree(), player.getStats(), player.getScene(), player.getGameTime());
     
-    auto scene = DormScene::createScene(player);
+    // load the HUD player
+    HUDLayer::setPlayer(pm);
+    
+    auto scene = DormScene::createScene(pm);
     TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     

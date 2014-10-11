@@ -23,7 +23,7 @@ private:
     // current week
     int week;
     
-    // current semester
+    // current year
     int semester;
     
     //hours in 30 min blocks e.g 14.5 = 2:30pm

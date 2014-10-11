@@ -75,6 +75,15 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("ENERGY: %d" , inplayer.getStats().getEnergy());
     log("STRESS: %d", inplayer.getStats().getStress());
     
+    log("gonna log some time table data");
+    
+    std::vector<timeTableClassModel*> times = inplayer.getTimeTable();
+    
+    for(int i = 0; i < times.size(); i++)
+    {
+        times[i]->printAll();
+    }
+    
     // load the character
     Movement::loadSpriteFrames(scene);
     

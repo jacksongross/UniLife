@@ -37,10 +37,9 @@ private:
     // player game time
     TimeModel gameTime;
     
-    
-    //timetable
-    
-    timeTableClassModel *timetable;
+    // array of timetables, holding all your classes
+    // and assessments 
+    std::vector<timeTableClassModel*> timetable;
 
 public:
     
@@ -66,7 +65,7 @@ public:
     
     TimeModel getGameTime();
     
-    timeTableClassModel getTimeTable();
+    std::vector<timeTableClassModel*> getTimeTable();
     
     
     /********************************

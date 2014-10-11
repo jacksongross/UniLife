@@ -258,7 +258,7 @@ void HUDLayer::updateTimer()
             {
                 week = 1;
                 
-                if(semester == 6) // game over
+                if(semester == 3) // game over
                 {
                     cocos2d::log("...GAME OVER...");
                 }

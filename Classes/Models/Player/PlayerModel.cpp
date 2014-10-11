@@ -22,15 +22,18 @@ PlayerModel::PlayerModel()
 // new player constructor with values
 PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel stats, std::string scene, TimeModel gameTime)
 {
+    this->Id = -1;
     this->name = name;
     this->degree = degree;
     this->stats = stats;
     this->scene = scene;
     this->gameTime = gameTime;
     
-    SqlHelper temp;
-    
-    this->timetable = new timeTableClassModel(temp.getDegreeCode(degree), gameTime.getSemester());
+    for(int i = 0; i < 3; i++)
+    {
+        timeTableClassModel* t = new timeTableClassModel(SqlHelper::getDegreeCode(degree), i + 1);
+        this->timetable.push_back(t);
+    }
 }
 
 /********************************
@@ -68,9 +71,9 @@ TimeModel PlayerModel::getGameTime()
     return gameTime;
 }
 
-timeTableClassModel PlayerModel::getTimeTable()
+std::vector<timeTableClassModel*> PlayerModel::getTimeTable()
 {
-    return *timetable;
+    return timetable;
 }
 
 /********************************
