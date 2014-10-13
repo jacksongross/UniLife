@@ -136,7 +136,7 @@ bool PopUpLayer::init()
     
   
 }
-
+/*
 bool PopUpLayer::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
     auto *selected = (cocos2d::Sprite*)this->getChildByName("optBox");
@@ -169,7 +169,28 @@ void PopUpLayer::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event)
     
     
 }
+*/
 
+bool PopUpLayer::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event){
+    
+    return true;
+}
+
+
+void PopUpLayer::touchEnded(cocos2d::Touch* touch, cocos2d::Event* event){
+    
+    auto *selected = (cocos2d::Sprite*)this->getChildByName("optBox");
+    if( touch && selected->getPosition().getDistance(touch->getLocation())<100.0f){
+        log("Thats The Spot ;)");
+        return;
+    }else{
+        log("Touched Off the ScreenBox");
+        Director::getInstance()->resume();
+        this->getParent()->removeChild(this);
+        this->removeChild(selected);
+    }
+    
+}
 
 void PopUpLayer::createPopUp(PopUpLayer* that, Rect inRect){
 
@@ -191,6 +212,7 @@ void PopUpLayer::createPopUp(PopUpLayer* that, Rect inRect){
     optBorder->setPosition(Vec2(inRect.origin.x,inRect.origin.y));
     optBorder->setName("optBox");
     that->addChild(optBorder, 10);
+    
     
     
     
@@ -242,7 +264,7 @@ void PopUpLayer::createPopUpButtons(PopUpLayer* that, Rect inRect, vector<ui::Bu
     lv->setGravity(ui::ListView::Gravity::CENTER_HORIZONTAL);
     lv->setContentSize(Size(newsize2.size.width, newsize2.size.height));
     lv->setBackGroundColorType(cocos2d::ui::Layout::BackGroundColorType::SOLID);
-    lv->setBackGroundColor(Color3B::GREEN);
+    lv->setBackGroundColor(Color3B::WHITE);
     lv->setPosition(Vec2(inRect.origin.x - newsize2.size.width/2,inRect.origin.y - newsize2.size.height/2));
     that->addChild(lv,12);
     
