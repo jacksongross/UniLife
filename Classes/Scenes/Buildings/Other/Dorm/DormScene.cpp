@@ -81,6 +81,11 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     
     log("Assessment size: %lu", am.size());
     
+    for(int i = 0; i < am.size(); i++)
+    {
+        cout << "Subject: " << am[i].getSubject() << ", Weight: " << am[i].getPercentage() << ", Due on " << am[i].getDueTime() << " " << am[i].getdueDay() << " " << am[i].getDueWeek() << " " << am[i].getDueSemester() << endl;
+    }
+    
     // load the character
     Movement::loadSpriteFrames(scene);
     
