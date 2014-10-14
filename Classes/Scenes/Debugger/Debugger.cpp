@@ -25,6 +25,7 @@
 #include "BrickBreaker.h"
 #include "FCG_minigame.h"
 #include "PopUpLayer.h"
+#include "TutorialScene.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -102,6 +103,12 @@ void Debugger::SpawnList(){
     PopUp->setTouchEnabled(true);
     this->addChild(PopUp,5);
     
+    ui::Text* Tutorial = ui::Text::create("TUTORIAL", "Arial", 30);
+    Tutorial->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoTutorial, this));
+    Tutorial->setColor(Color3B::BLACK);
+    Tutorial->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 100));
+    Tutorial->setTouchEnabled(true);
+    this->addChild(Tutorial,5);
     
     
 }
@@ -116,6 +123,14 @@ void Debugger::gotoLogicGame(Ref* pSender){
 void Debugger::gotoBrickBreaker(Ref* pSender){
     log("BrickBreakInit");
     auto scene = BrickBreaker::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+void Debugger::gotoTutorial(Ref* pSender){
+    log("Tutorial Initalize");
+    auto scene = TutorialScene::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     

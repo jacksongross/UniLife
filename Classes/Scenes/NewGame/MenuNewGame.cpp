@@ -7,7 +7,6 @@
 //
 
 #include "MenuNewGame.h"
-
 #include "MenuScene.h"
 #include "PlayerModel.h"
 #include "PlayerStatsModel.h"

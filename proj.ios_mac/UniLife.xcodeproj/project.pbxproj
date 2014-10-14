@@ -183,6 +183,9 @@
 		D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A019D26A6D0042DB83 /* PQuiz_back.png */; };
 		D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A119D26A6D0042DB83 /* PQuiz_title.png */; };
 		D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D06F023319DA701600A36F84 /* PopUpLayer.cpp */; };
+		D08AFF9419ECB3C90089E0AF /* TutorialScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D08AFF9219ECB3C90089E0AF /* TutorialScene.cpp */; };
+		D08AFF9819ECB4F70089E0AF /* TutorialController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D08AFF9619ECB4F70089E0AF /* TutorialController.cpp */; };
+		D08AFF9B19ECB6FC0089E0AF /* legoDude.png in Resources */ = {isa = PBXBuildFile; fileRef = D08AFF9A19ECB6FC0089E0AF /* legoDude.png */; };
 		D098A99219AE3096005B13D3 /* green_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A99119AE3096005B13D3 /* green_bar.png */; };
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
@@ -583,6 +586,11 @@
 		D06135A119D26A6D0042DB83 /* PQuiz_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_title.png; sourceTree = "<group>"; };
 		D06F023319DA701600A36F84 /* PopUpLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopUpLayer.cpp; sourceTree = "<group>"; };
 		D06F023419DA701600A36F84 /* PopUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpLayer.h; sourceTree = "<group>"; };
+		D08AFF9219ECB3C90089E0AF /* TutorialScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialScene.cpp; sourceTree = "<group>"; };
+		D08AFF9319ECB3C90089E0AF /* TutorialScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialScene.h; sourceTree = "<group>"; };
+		D08AFF9619ECB4F70089E0AF /* TutorialController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialController.cpp; sourceTree = "<group>"; };
+		D08AFF9719ECB4F70089E0AF /* TutorialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialController.h; sourceTree = "<group>"; };
+		D08AFF9A19ECB6FC0089E0AF /* legoDude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = legoDude.png; sourceTree = "<group>"; };
 		D098A99119AE3096005B13D3 /* green_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_bar.png; sourceTree = "<group>"; };
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
@@ -1063,6 +1071,7 @@
 		7A89451D19ADACFC008E1EA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D08AFF9519ECB4E50089E0AF /* Tutorial */,
 				7A7880A119C18F2500BFF491 /* PauseMenu */,
 				7A0F1A6019BEE3F400679823 /* Buildings */,
 				7AB6AB0719AEDD58003CCD7E /* NewGame */,
@@ -1199,6 +1208,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D08AFF8A19ECB3BB0089E0AF /* Tutorial */,
 				7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */,
 				7ADE1EFB19CE6F3200AEFF00 /* PauseMenu */,
 				7ADE1EFE19CE6F3200AEFF00 /* LogicGame */,
@@ -1531,6 +1541,24 @@
 			name = PopUpLayer;
 			sourceTree = "<group>";
 		};
+		D08AFF8A19ECB3BB0089E0AF /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				D08AFF9219ECB3C90089E0AF /* TutorialScene.cpp */,
+				D08AFF9319ECB3C90089E0AF /* TutorialScene.h */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		D08AFF9519ECB4E50089E0AF /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				D08AFF9619ECB4F70089E0AF /* TutorialController.cpp */,
+				D08AFF9719ECB4F70089E0AF /* TutorialController.h */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
 		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -1577,6 +1605,7 @@
 		D0ED65BC19C933A80072EDD0 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				D08AFF9A19ECB6FC0089E0AF /* legoDude.png */,
 				D0ED65BD19C934160072EDD0 /* speech_big.png */,
 				D0ED65BE19C934160072EDD0 /* speech_small.png */,
 			);
@@ -1800,6 +1829,7 @@
 				7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */,
 				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
 				D0ED65C619C939B90072EDD0 /* fox.png in Resources */,
+				D08AFF9B19ECB6FC0089E0AF /* legoDude.png in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
@@ -1934,8 +1964,10 @@
 				7AAC241D19E8C2A2007A8331 /* AssessmentModel.cpp in Sources */,
 				7A0F1A8D19BEE3F400679823 /* EIS_Hallway_Controller.cpp in Sources */,
 				7A0F1A9119BEE3F400679823 /* SocSci-Foyer-Controller.cpp in Sources */,
+				D08AFF9419ECB3C90089E0AF /* TutorialScene.cpp in Sources */,
 				7ADE1F0619CE6F3200AEFF00 /* MyContactListener.cpp in Sources */,
 				7AE60C9219DA8D390063452F /* Movement.cpp in Sources */,
+				D08AFF9819ECB4F70089E0AF /* TutorialController.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,

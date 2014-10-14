@@ -27,7 +27,7 @@ public:
     void gotoPopUp(Ref* sender);
     void gotoLogicGame(Ref* sender);
     void gotoBrickBreaker(Ref* pSender);
-
+    void gotoTutorial(Ref* pSender);
     void SpawnList();
     
     // implement the "static create()" method manually
