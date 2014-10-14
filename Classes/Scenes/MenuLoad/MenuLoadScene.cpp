@@ -148,6 +148,10 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
     // create the player with its relevant timetable
     PlayerModel pm(player.getName(), player.getDegree(), player.getStats(), player.getScene(), player.getGameTime());
     
+    pm.setAssessments(player.getAssessments());
+    
+    pm.setId(player.getId());
+    
     // load the HUD player
     HUDLayer::setPlayer(pm);
     

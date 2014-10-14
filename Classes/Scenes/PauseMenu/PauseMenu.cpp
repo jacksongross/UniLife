@@ -123,12 +123,16 @@ void PauseMenu::saveCallback(cocos2d::Ref *pSender)
     
     if(pm.getId() > 0)
     {
+        log("Auto saving the game data");
         SqlHelper::autosave(pm);
+        SqlHelper::updateAssessments(pm);
     }
     else
     {
         log("First time saving game!");
-        SqlHelper::serialize(pm);
+        int id = SqlHelper::serialize(pm);
+        pm.setId(id);
+        SqlHelper::saveAssessments(pm);
     }
     
     log("game saved!");

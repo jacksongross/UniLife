@@ -37,7 +37,6 @@ Scene* ArtHallway::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
-    HUDLayer::updateHUD(pm);
     
     // return the scene
     return scene;

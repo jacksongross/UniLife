@@ -17,6 +17,12 @@ class AssessmentModel
     
 private:
     
+    // id for the record
+    int ID;
+    
+    // id for player related to this assessment
+    int playerID;
+    
     // subject code for assessment
     std::string subject;
     
@@ -33,11 +39,15 @@ private:
 public:
     
     AssessmentModel();
-    AssessmentModel(std::string subject, int assessmentId, int percentage, int mark);
+    AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark);
     
     /********************************
                 Getters
      *******************************/
+    
+    int getID();
+    
+    int getPlayerId();
     
     std::string getSubject();
     
@@ -51,6 +61,10 @@ public:
     /********************************
                 Setters
      *******************************/
+    
+    void setID(int ID);
+    
+    void setPlayerId(int playerID);
     
     void setSubject(std::string subject);
     

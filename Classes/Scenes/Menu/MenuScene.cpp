@@ -42,13 +42,13 @@ bool MenuScene::init()
     
     // checks if the database initialisation has been run before
     // to ensure it gets seeded once
-    bool isSeeded = UserDefault::getInstance()->getBoolForKey("seeded");
+    bool isSeeded = UserDefault::getInstance()->getBoolForKey("yo5");
     
     if(isSeeded == false)
     {
-        log("seeding the database!");
+        log("seeding the db");
         SqlHelper::initDatabase();
-        UserDefault::getInstance()->setBoolForKey("seeded", true);
+        UserDefault::getInstance()->setBoolForKey("yo5", true);
     }
     
     // get the size of the screen that is visible

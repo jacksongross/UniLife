@@ -132,6 +132,27 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     
     PlayerModel pm(newplayer.getName(), newplayer.getDegree(), newplayer.getStats(), newplayer.getScene(), tm);
     
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    
+    std::vector<AssessmentModel> assessments;
+    
+    for(int i = 0; i < timetable.size(); i++)
+    {
+        std::vector<subjectBlockClassModel> sb = timetable[i].getClassQueue();
+        
+        for(int j = 0; j < sb.size(); j++)
+        {
+            std::vector<AssessmentModel> am = sb[j].getAssessments();
+            
+            for(int k = 0; k < am.size(); k++)
+            {
+                assessments.push_back(am[k]);
+            }
+        }
+    }
+    
+    pm.setAssessments(assessments);
+    
     // set the player for the HUD
     HUDLayer::setPlayer(pm);
     
@@ -153,8 +174,6 @@ void MenuDegreeSelect::EIS_Selected(Ref* pSender)
     
     loadthelist(last);
 
-    
-    
     
 }
 

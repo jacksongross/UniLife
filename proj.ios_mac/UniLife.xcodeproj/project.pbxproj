@@ -114,6 +114,7 @@
 		7AAC241719E8ADB2007A8331 /* unlucky.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC241619E8ADB2007A8331 /* unlucky.wav */; };
 		7AAC241919E8AF21007A8331 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC241819E8AF21007A8331 /* background.wav */; };
 		7AAC241D19E8C2A2007A8331 /* AssessmentModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AAC241B19E8C2A2007A8331 /* AssessmentModel.cpp */; };
+		7AAC242019ECC9C1007A8331 /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7AAC241F19ECC9C1007A8331 /* acadamia.db */; };
 		7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */; };
 		7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */; };
 		7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AB6AB0819AEDD58003CCD7E /* MenuDegreeSelectController.cpp */; };
@@ -160,7 +161,6 @@
 		7AF557FC19DCDA560024A631 /* phone_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F819DCDA560024A631 /* phone_button.png */; };
 		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
 		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
-		7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */ = {isa = PBXBuildFile; fileRef = 7D7B39CA19CA086F00C80D1F /* acadamia.db */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -495,6 +495,7 @@
 		7AAC241819E8AF21007A8331 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
 		7AAC241B19E8C2A2007A8331 /* AssessmentModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AssessmentModel.cpp; path = Assessment/AssessmentModel.cpp; sourceTree = "<group>"; };
 		7AAC241C19E8C2A2007A8331 /* AssessmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssessmentModel.h; path = Assessment/AssessmentModel.h; sourceTree = "<group>"; };
+		7AAC241F19ECC9C1007A8331 /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		7AB6AAFE19AEDCE6003CCD7E /* MenuDegreeSelect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuDegreeSelect.cpp; sourceTree = "<group>"; };
 		7AB6AAFF19AEDCE6003CCD7E /* MenuDegreeSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuDegreeSelect.h; sourceTree = "<group>"; };
 		7AB6AB0019AEDCE6003CCD7E /* MenuNewGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuNewGame.cpp; sourceTree = "<group>"; };
@@ -557,7 +558,6 @@
 		7AF557F819DCDA560024A631 /* phone_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_button.png; sourceTree = "<group>"; };
 		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
-		7D7B39CA19CA086F00C80D1F /* acadamia.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = acadamia.db; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -772,9 +772,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AAC241F19ECC9C1007A8331 /* acadamia.db */,
 				7AF557F519DCDA560024A631 /* Interface */,
 				7AF557CC19DA9BFF0024A631 /* Bill */,
-				7D7B39CA19CA086F00C80D1F /* acadamia.db */,
 				D0ED65C119C9393B0072EDD0 /* LogicGame */,
 				D0ED65BC19C933A80072EDD0 /* Miscellaneous */,
 				7A6DBD7319C576FF006A83CB /* SoundEffects */,
@@ -1794,7 +1794,6 @@
 				7A89459C19ADAF3F008E1EA7 /* dorm-bed.png in Resources */,
 				D0B760F019BD5B6D00E53B52 /* SciMed_Rooms.png in Resources */,
 				7A78809719C17C4200BFF491 /* paddle.png in Resources */,
-				7D7B39CB19CA086F00C80D1F /* acadamia.db in Resources */,
 				D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
@@ -1848,6 +1847,7 @@
 				D0ED65C919C96ACF0072EDD0 /* Boat.png in Resources */,
 				D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */,
 				D03F389119C00804001956BD /* DegreeSelect_Title.png in Resources */,
+				7AAC242019ECC9C1007A8331 /* acadamia.db in Resources */,
 				7A8945A619ADAF3F008E1EA7 /* new_game_off.png in Resources */,
 				7AB6AB3219AEDDF5003CCD7E /* New-Game-slider.png in Resources */,
 				7A8945AC19ADAF3F008E1EA7 /* options-back.png in Resources */,

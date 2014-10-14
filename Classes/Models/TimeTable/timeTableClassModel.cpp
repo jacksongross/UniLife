@@ -23,30 +23,20 @@ timeTableClassModel::timeTableClassModel(int dCode, int year){
     
     for(int i = 0; i < classQueue.size(); i++)
     {
-        
         classQueue[i].setAssessments(SqlHelper::getAssignments(classQueue[i].getNameString()));
-        
-        for(int z = 0; z < classQueue[i].getAssessments().size(); z++)
-        {
-            cout << classQueue[i].getAssessments()[z].getSubject() << " " << classQueue[i].getAssessments()[z].getAssessmentId() << " " << classQueue[i].getAssessments()[z].getPercentage() << endl;
-        }
-        cout << endl;
-        
-        
     }
-    
-    for (int i=0; i < classQueue.size(); ++i) {
-        randomAllocationInt(classQueue[i]);
-    }
-    
-    
-    classQueue.clear();
-    
-   }
+}
 
-int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
+vector<subjectBlockClassModel> timeTableClassModel::getClassQueue()
+{
+    return this->classQueue;
+}
+
+int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins)
+{
     
     int timeInt = -1;
+    /*
     int dayInt = -1;
     //bool checker = false;
     unsigned int key = 0;
@@ -60,10 +50,13 @@ int timeTableClassModel::randomAllocationInt(subjectBlockClassModel ins){
     
     classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key, ins));
     
-    for (int i = 1; i<ins.getTotalTimeInt(); ++i) {
-        classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(key+i, subjectBlockClassModel()));
+    for (int i = 1; i < ins.getTotalTimeInt(); ++i) {
+        classTable.insert(std::pair<unsigned int, subjectBlockClassModel>(i, subjectBlockClassModel()));
     }
     //insertSubj(ins, timeInt, dayInt);
+     
+     */
+    
     
     
     return timeInt;
@@ -82,12 +75,17 @@ bool timeTableClassModel::checkTimeBool(unsigned int key){
 
 void timeTableClassModel::printAll(){
     
+    for(int i = 0; i < classQueue.size(); i++)
+    {
+        cout << classQueue[i] << endl;
+    }
     
-    
+    /*
     for ( std::map< unsigned int, subjectBlockClassModel, std::less< int > >::const_iterator iter = classTable.begin();
          iter != classTable.end(); ++iter ){
         cout << iter->first << '\t' << iter->second << '\n';
     }
+     */
     
     
 }

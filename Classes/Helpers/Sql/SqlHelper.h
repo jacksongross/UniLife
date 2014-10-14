@@ -36,10 +36,16 @@ public:
     static void initDatabase();
     
     // serialize a player to the database
-    static void serialize(PlayerModel &player);
+    static int serialize(PlayerModel &player);
     
     // overwrite existing player data in database
     static void autosave(PlayerModel player);
+    
+    // saves the player's marks
+    static void saveAssessments(PlayerModel player);
+    
+    // updates the player's marks
+    static void updateAssessments(PlayerModel player);
     
     // get list of all players
     static std::vector<PlayerModel> getAllPlayers();
@@ -67,6 +73,8 @@ public:
     static std::vector<AssessmentModel> getAssignments(std::string code);
    
     static std::vector<std::string> getFaculties();
+    
+    static std::vector<AssessmentModel> getAssessmentsForPlayer(int playerid);
     
     
 };

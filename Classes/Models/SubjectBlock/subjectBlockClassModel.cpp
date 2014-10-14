@@ -14,20 +14,24 @@ subjectBlockClassModel::subjectBlockClassModel(){
     subjNameString = "Free";
 }
 
-subjectBlockClassModel::subjectBlockClassModel(char cID, int timeInt, string nameString){
-    
-    theTimeInt = timeInt;
-    subjNameString = nameString;
-    startTimeInt = -1;
-    classID=cID;
+subjectBlockClassModel::subjectBlockClassModel(string subjNameString, char classID, int theTimeInt, int startTimeInt, int dayInt)
+{
+    this->subjNameString = subjNameString;
+    this->classID = classID;
+    this->theTimeInt = theTimeInt;
+    this->startTimeInt = startTimeInt;
+    this->dayInt = dayInt;
 }
 
 
 subjectBlockClassModel& subjectBlockClassModel::operator=(const subjectBlockClassModel rhs){
     
-    this->theTimeInt= rhs.theTimeInt;
-    this->subjNameString=rhs.subjNameString;
-    this->startTimeInt=rhs.startTimeInt;
+    this->subjNameString = rhs.subjNameString;
+    this->classID = rhs.classID;
+    this->theTimeInt = rhs.theTimeInt;
+    this->startTimeInt = rhs.startTimeInt;
+    this->dayInt = rhs.dayInt;
+    
     return *this;
 }
 
@@ -38,11 +42,13 @@ ostream& operator<<(ostream& output, const subjectBlockClassModel print){
     
     if (print.startTimeInt >= 0) {
     
-        output << std::setw(2) << setfill('0') << print.startTimeInt<<":30";
+        output << std::setw(2) << setfill('0') << print.startTimeInt<<":00";
     }else{
         output << "00:00";
     }
         output << "\t\t"<< print.theTimeInt<< " Hrs";
+    
+    output << "\t\t" << print.dayInt;
     
     return output;
 }

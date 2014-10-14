@@ -51,6 +51,9 @@ public:
     
     void printAll();
     
+    vector<subjectBlockClassModel> getClassQueue();
+    
+    
     //deprecated
     void insertSubj(subjectBlockClassModel insert, int timeInt, int dayInt);
     bool freeSpaceCheck(subjectBlockClassModel, int timeInt, int dayInt); //returns false if gap isn't free

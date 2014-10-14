@@ -10,14 +10,18 @@
 
 AssessmentModel::AssessmentModel()
 {
+    this->ID = -1;
+    this->playerID = -1;
     this->subject = "";
     this->assessmentId = -1;
     this->percentage = -1;
-    this->mark = -1;
+    this->mark = 0;
 }
 
-AssessmentModel::AssessmentModel(std::string subject, int assessmentId, int percentage, int mark)
+AssessmentModel::AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark)
 {
+    this->ID = ID;
+    this->playerID = playerID;
     this->subject = subject;
     this->assessmentId = assessmentId;
     this->percentage = percentage;
@@ -27,6 +31,16 @@ AssessmentModel::AssessmentModel(std::string subject, int assessmentId, int perc
 /********************************
             Getters
  *******************************/
+
+int AssessmentModel::getID()
+{
+    return this->ID;
+}
+
+int AssessmentModel::getPlayerId()
+{
+    return this->playerID;
+}
 
 std::string AssessmentModel::getSubject()
 {
@@ -51,6 +65,16 @@ int AssessmentModel::getMark()
 /********************************
             Setters
  *******************************/
+
+void AssessmentModel::setID(int ID)
+{
+    this->ID = ID;
+}
+
+void AssessmentModel::setPlayerId(int playerID)
+{
+    this->playerID = playerID;
+}
 
 void AssessmentModel::setSubject(std::string subject)
 {

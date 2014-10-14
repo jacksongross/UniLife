@@ -41,8 +41,6 @@ sqlite3* SqlHelper::openDatabase(std::string name)
     
     if(result!=SQLITE_OK)
         log("open database failed,  number%d",result);
-    else
-        log("db open successful!");
     
     return db;
 
@@ -82,16 +80,21 @@ void SqlHelper::initDatabase()
     else
         log("create table success!");
     
-    // create a test object
-    PlayerModel p("Charlie", "IT", PlayerStatsModel(1, 2, 3, 4, 5, 6), "LibraryScene", TimeModel(4, 3, 2, 14.5));
+    sql = "CREATE TABLE IF NOT EXISTS marks(ID INTEGER primary key autoincrement, playerid INTEGER, subject text, anum INTEGER, weight INTEGER, mark INTEGER)";
     
-    // save player data to database
-    SqlHelper::serialize(p);
+    sqlite3_prepare(db, sql.c_str(), static_cast<unsigned int>(sql.size()), &createStmt, NULL);
     
-    PlayerModel q("Jackson", "Computer Science", PlayerStatsModel(1, 2, 3, 4, 5, 6), "DormScene", TimeModel(4, 3, 2, 14.5));
-    SqlHelper::serialize(q);
+    result = sqlite3_step(createStmt);
     
-    // close the database
+    //to drop table, run below
+    //result = sqlite3_exec(db, "drop table player", NULL, NULL, &zErr);
+    
+    if(result!=SQLITE_DONE)
+        log("create table marks failed");
+    else
+        log("create table marks success!");
+    
+        // close the database
     SqlHelper::closeDatabase(db);
     
     //THE BELOW CODE MOVES THE ACADAMIA DATABASE TO A WORKING DIRECTORY
@@ -103,7 +106,7 @@ void SqlHelper::initDatabase()
     smth = fileUtils->getFileData("acadamia.db","r", &size);
     
     
-        //shoudl do a file check here somewhere- will write this later
+    //shoudl do a file check here somewhere- will write this later
     std::string path =  CCFileUtils::getInstance()->getWritablePath();
     path += "acadamia.db";
     
@@ -113,13 +116,15 @@ void SqlHelper::initDatabase()
     std::fstream outfile(path.c_str(),std::fstream::out);
     outfile.write((const char*)smth,size-1);
     outfile.close();
+    
+    log("saved the db file");
   
     
 }
 
 
 // serialize a player to the database
-void SqlHelper::serialize(PlayerModel &p)
+int SqlHelper::serialize(PlayerModel &p)
 {
     // set the db pointer to null ready for a query
     sqlite3 *db = SqlHelper::openDatabase("save.db");
@@ -153,9 +158,15 @@ void SqlHelper::serialize(PlayerModel &p)
     // from here on out
     int playerId = sqlite3_last_insert_rowid(db);
     
+    log("\nPlayerID: %d", playerId);
+    
     p.setId(playerId);
     
+    log("\nReal ID: %d", p.getId());
+        
     SqlHelper::closeDatabase(db);
+    
+    return playerId;
 
 }
 
@@ -190,9 +201,78 @@ void SqlHelper::autosave(PlayerModel p)
         sqlite3_finalize(Stmt);
         log("player save updated!");
     }
-    
+        
     SqlHelper::closeDatabase(db);
 
+}
+
+
+void SqlHelper::saveAssessments(PlayerModel player)
+{
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    std::vector<AssessmentModel> assessments = player.getAssessments();
+    
+    for(int i = 0; i < assessments.size(); i++)
+    {
+        std::stringstream strm;
+
+        strm << "INSERT INTO marks (playerid, subject, anum, weight, mark) VALUES(" << player.getId() << ",'" << assessments[i].getSubject() << "'," << assessments[i].getAssessmentId() << "," << assessments[i].getPercentage() << "," << assessments[i].getMark() << ")";
+        
+        sql = strm.str();
+        
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+        {
+            int res = sqlite3_step(Stmnt);
+            sqlite3_finalize(Stmnt);
+        }
+    }
+    
+    log("saved subject marks!");
+    
+    SqlHelper::closeDatabase(db);
+    
+}
+
+void SqlHelper::updateAssessments(PlayerModel player)
+{
+    // set the db pointer to null ready for a query
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    // used to create the query
+    std::string sql;
+    
+    // store sqlite result
+    int result;
+    
+    // create statement with this
+    sqlite3_stmt *Stmt;
+    
+    std::vector<AssessmentModel> assessments = player.getAssessments();
+    
+    for(int i = 0; i < assessments.size(); i++)
+    {
+        std::stringstream strm;
+        
+        strm << "UPDATE marks SET mark = " << assessments[i].getMark() << " WHERE id = " << player.getId();
+        
+        sql = strm.str();
+        
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmt, NULL ) == SQLITE_OK)
+        {
+            int res=sqlite3_step(Stmt);
+            result=res;
+            sqlite3_finalize(Stmt);
+        }
+    }
+    
+    log("updated player's marks!");
+    
+    SqlHelper::closeDatabase(db);
 }
 
 
@@ -233,6 +313,51 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
             }
         }
     }
+    
+    for(int i = 0; i < playersList.size(); i++)
+    {
+        std::vector<AssessmentModel> list = playersList[i].getAssessments();
+        
+        sql = "select * from marks where playerid = ";
+        sql.append(to_string(playersList[i].getId()));
+        
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+        {
+            int res = 0;
+            
+            while ( 1 )
+            {
+                res = sqlite3_step(Stmnt);
+                
+                // id, playerid, subject, anum, weight, mark
+                
+                if ( res == SQLITE_ROW )
+                {
+                    int id = sqlite3_column_int(Stmnt, 0);
+                    int playerid = sqlite3_column_int(Stmnt, 1);
+                    string subject = (char*) sqlite3_column_text(Stmnt, 2);
+                    int anum = sqlite3_column_int(Stmnt, 3);
+                    int weight = sqlite3_column_int(Stmnt, 4);
+                    int mark = sqlite3_column_int(Stmnt, 5);
+                    
+                    AssessmentModel am(id, playerid, subject, anum, weight, mark);
+                    
+                    list.push_back(am);
+                    
+                }
+                
+                if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+                {
+                    break;
+                }
+            }
+            
+            playersList[i].setAssessments(list);
+        }
+
+    }
+    
+    
     
     // close the database
     SqlHelper::closeDatabase(db);
@@ -280,6 +405,57 @@ PlayerModel SqlHelper::getPlayer(int playerId)
         }
     }
     
+    std::string degree = p.getDegree();
+    
+    std::vector<timeTableClassModel> timetable;
+    
+    for(int i = 0; i < 3; i++)
+    {
+        timeTableClassModel t(SqlHelper::getDegreeCode(degree), i + 1);
+        timetable.push_back(t);
+    }
+    
+    p.setTimeTable(timetable);
+    
+    sql = "select * from marks where playerid = ";
+    sql.append(to_string(p.getId()));
+    
+    std::vector<AssessmentModel> list = p.getAssessments();
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            // id, playerid, subject, anum, weight, mark
+            
+            if ( res == SQLITE_ROW )
+            {
+                int id = sqlite3_column_int(Stmnt, 0);
+                int playerid = sqlite3_column_int(Stmnt, 1);
+                string subject = (char*) sqlite3_column_text(Stmnt, 2);
+                int anum = sqlite3_column_int(Stmnt, 3);
+                int weight = sqlite3_column_int(Stmnt, 4);
+                int mark = sqlite3_column_int(Stmnt, 5);
+                
+                AssessmentModel am(id, playerid, subject, anum, weight, mark);
+                
+                list.push_back(am);
+                
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+        
+        p.setAssessments(list);
+    }
+    
     // close the database
     SqlHelper::closeDatabase(db);
     
@@ -308,6 +484,9 @@ void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, Pla
     
     p.setStats(s);
     p.setGameTime(t);
+    
+    
+    
 }
 
 std::vector<std::string> SqlHelper::getDegrees(){
@@ -325,8 +504,6 @@ std::vector<std::string> SqlHelper::getDegrees(){
         while ( 1 )
         {
             res = sqlite3_step(Stmnt);
-            
-            
             
             if ( res == SQLITE_ROW )
             {
@@ -358,7 +535,6 @@ std::vector<std::string> SqlHelper::getDegrees(std::string faculty){
     sqlite3_stmt *Stmnt;
     std::vector<std::string> dList;
     
-    
     if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
     {
         int res = 0;
@@ -377,9 +553,11 @@ std::vector<std::string> SqlHelper::getDegrees(std::string faculty){
                 break;
             }
         }
-    }else{
-        log("ERROR WITH ACADEMIC DATABASE");
+    }
+    else
+    {
         
+        log("ERROR WITH ACADEMIC DATABASE");
     }
     
     // close the database
@@ -426,10 +604,6 @@ int SqlHelper::getDegreeCode(std::string dname){
     return dcode;
     
 }
-
-
-
-
 
 std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
     
@@ -479,7 +653,7 @@ std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
 std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string> code){
     
     sqlite3 *db = openDatabase("acadamia.db");
-std:vector<subjectBlockClassModel> sList;
+    std:vector<subjectBlockClassModel> sList;
     
     for (int i = 0; i < code.size(); ++i)
     {
@@ -488,8 +662,6 @@ std:vector<subjectBlockClassModel> sList;
         sql.append(code[i] + "'");
         
         sqlite3_stmt *Stmnt;
-    
-    
     
         if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
         {
@@ -501,19 +673,18 @@ std:vector<subjectBlockClassModel> sList;
                 
                 if ( res == SQLITE_ROW )
                 {
-                    //sList.push_back((char*)sqlite3_column_text(Stmnt, 1));
                 
                     //INSERTION WILL OCCURE HERE
                 
                     char blockID = (char) sqlite3_column_int(Stmnt, 1);
                     int timelength = sqlite3_column_int(Stmnt, 2);
-                
-                    subjectBlockClassModel temp(blockID, timelength, code[i]);
-                                            
+                    int time = sqlite3_column_int(Stmnt, 3);
+                    int day = sqlite3_column_int(Stmnt, 4);
+                    
+                    subjectBlockClassModel temp(code[i], blockID, timelength, time, day);
                                             
                     sList.push_back(temp);
 
-                
                 }
             
                 if ( res == SQLITE_DONE || res==SQLITE_ERROR)
@@ -622,4 +793,45 @@ std::vector<std::string> SqlHelper::getFaculties(){
     
     return fList;
     
+}
+
+std::vector<AssessmentModel> SqlHelper::getAssessmentsForPlayer(int playerid)
+{
+    std::vector<AssessmentModel> assessments;
+    PlayerModel p;
+    PlayerStatsModel s;
+    TimeModel t;
+    
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    // check to see if it is saving correctly
+    sql =  "select * from marks";
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            if ( res == SQLITE_ROW )
+            {
+                SqlHelper::buildPlayerObjectFromDb(Stmnt, p, s, t);
+                //assessments.push_back(p);
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }
+    
+    return assessments;
+
 }

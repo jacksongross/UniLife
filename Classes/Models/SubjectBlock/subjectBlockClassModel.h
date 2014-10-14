@@ -24,11 +24,12 @@ private:
     string subjNameString;
     int startTimeInt;
     char classID;
+    int dayInt;
     std::vector<AssessmentModel> assessments;
 public:
 
     subjectBlockClassModel();
-    subjectBlockClassModel(char, int, string);
+    subjectBlockClassModel(string, char, int, int, int);
     
     subjectBlockClassModel& operator=(const subjectBlockClassModel rhs);
     
@@ -37,12 +38,15 @@ public:
     string getNameString(){return subjNameString;};
     int getTotalTimeInt(){return theTimeInt;};
     char getClassIDChar(){return classID;};
+    int getStartTime(){return startTimeInt;};
+    int getDay(){return dayInt;};
     std::vector<AssessmentModel> getAssessments(){return assessments;};
     friend ostream& operator<<(ostream& output,const subjectBlockClassModel print);
     //INSERT FUNCTIONS
     void putNameVoid(string nameString){subjNameString = nameString;};
     void putTimeVoid(int timeInt){theTimeInt = timeInt;};
     void putStartVoid(int startInt){startTimeInt = startInt;}
+    void putDayVoid(int day){dayInt = day;};
     void setAssessments(std::vector<AssessmentModel> assessments){this->assessments = assessments;};
     
 

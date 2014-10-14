@@ -13,6 +13,7 @@
 #include "PlayerStatsModel.h"
 #include "TimeModel.h"
 #include "timeTableClassModel.h"
+#include <ctime>
 class PlayerModel
 {
     
@@ -39,7 +40,13 @@ private:
     
     // array of timetables, holding all your classes
     // and assessments 
-    std::vector<timeTableClassModel*> timetable;
+    std::vector<timeTableClassModel> timetable;
+    
+    // array to hold assessments
+    std::vector<AssessmentModel> assessments;
+    
+    // used to track game time
+    time_t start;
 
 public:
     
@@ -65,7 +72,9 @@ public:
     
     TimeModel getGameTime();
     
-    std::vector<timeTableClassModel*> getTimeTable();
+    std::vector<timeTableClassModel> getTimeTable();
+    
+    std::vector<AssessmentModel> getAssessments();
     
     
     /********************************
@@ -83,6 +92,9 @@ public:
     
     void setGameTime(TimeModel gameTime);
     
+    void setTimeTable(std::vector<timeTableClassModel> timetable);
+    
+    void setAssessments(std::vector<AssessmentModel> assessments);
     
 };
 

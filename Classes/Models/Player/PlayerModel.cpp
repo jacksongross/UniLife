@@ -31,7 +31,7 @@ PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel 
     
     for(int i = 0; i < 3; i++)
     {
-        timeTableClassModel* t = new timeTableClassModel(SqlHelper::getDegreeCode(degree), i + 1);
+        timeTableClassModel t(SqlHelper::getDegreeCode(degree), i + 1);
         this->timetable.push_back(t);
     }
 }
@@ -42,38 +42,42 @@ PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel 
 
 int PlayerModel::getId()
 {
-    return Id;
+    return this->Id;
 }
 
 std::string PlayerModel::getName()
 {
-    return name;
+    return this->name;
 }
 
 std::string PlayerModel::getDegree()
 {
-    return degree;
+    return this->degree;
 }
 
 PlayerStatsModel PlayerModel::getStats()
 {
-    return stats;
+    return this->stats;
 }
 
 std::string PlayerModel::getScene()
 {
-    return scene;
+    return this->scene;
 }
-
 
 TimeModel PlayerModel::getGameTime()
 {
-    return gameTime;
+    return this->gameTime;
 }
 
-std::vector<timeTableClassModel*> PlayerModel::getTimeTable()
+std::vector<timeTableClassModel> PlayerModel::getTimeTable()
 {
-    return timetable;
+    return this->timetable;
+}
+
+std::vector<AssessmentModel> PlayerModel::getAssessments()
+{
+    return this->assessments;
 }
 
 /********************************
@@ -107,4 +111,14 @@ void PlayerModel::setScene(std::string scene)
 void PlayerModel::setGameTime(TimeModel gameTime)
 {
     this->gameTime = gameTime;
+}
+
+void PlayerModel::setTimeTable(std::vector<timeTableClassModel> timetable)
+{
+    this->timetable = timetable;
+}
+
+void PlayerModel::setAssessments(std::vector<AssessmentModel> assessments)
+{
+    this->assessments = assessments;
 }
