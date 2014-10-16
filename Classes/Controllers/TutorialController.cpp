@@ -15,7 +15,6 @@
 #include "ui/CocosGUI.h"
 using namespace cocos2d::extension;
 
-
 USING_NS_CC;
 
 // create the buttons for the main menu
@@ -79,7 +78,6 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     otherText->setColor(Color3B::BLACK);
     otherText->setName("OtherText");
     that->addChild(otherText, 2);
-    
 
     
     auto phoneButton = cocos2d::Sprite::create("phone_button.png");
@@ -108,24 +106,29 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
 }
 
 
+//Set code for going into faculty building
+//GoToSciMed->addTouchEventListener(CC_CALLBACK_2(TutorialController::FacultyPressed, that));
+
 void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int buildingID, int whichone)
 {
+    Rect newRect;
     auto highlighter = (Sprite*)that->getChildByName("highlighter");
-
+    auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+    
     if(buildingID == 1){
         Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185);
         auto GoToArt = ui::Button::create("map-art.png");
+        //GoToArt->addTouchEventListener(CC_CALLBACK_2(TutorialController::FacultyPressed, that));
         GoToArt->setPosition(newLoc);
         GoToArt->setScale(0.8);
         that->addChild(GoToArt,4);
         
         if(whichone == 1) {
-            Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToArt->getContentSize().width + 20, GoToArt->getContentSize().height + 20);
+            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToArt->getContentSize().width + 20, GoToArt->getContentSize().height + 20);
             highlighter->setTextureRect(newRect);
             highlighter->setVisible(true);
             highlighter->setScale(0.8);
             highlighter->setPosition(newLoc);
-            auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
         }
         
@@ -137,12 +140,11 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         that->addChild(GoToSocSci,4);
         
         if(whichone == 2) {
-            Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSocSci->getContentSize().width + 20, GoToSocSci->getContentSize().height + 20);
+            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSocSci->getContentSize().width + 20, GoToSocSci->getContentSize().height + 20);
             highlighter->setTextureRect(newRect);
             highlighter->setVisible(true);
             highlighter->setScale(0.8);
             highlighter->setPosition(newLoc);
-            auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
         }
     }else if(buildingID == 3){
@@ -153,12 +155,11 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         that->addChild(GoToBus,4);
         
         if(whichone == 3) {
-            Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToBus->getContentSize().width + 20, GoToBus->getContentSize().height + 20);
+            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToBus->getContentSize().width + 20, GoToBus->getContentSize().height + 20);
             highlighter->setTextureRect(newRect);
             highlighter->setVisible(true);
             highlighter->setScale(0.8);
             highlighter->setPosition(newLoc);
-            auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
         }
     }else if(buildingID == 4){
@@ -169,12 +170,11 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         that->addChild(GoToSciMed,4);
         
         if(whichone == 4) {
-            Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSciMed->getContentSize().width + 20, GoToSciMed->getContentSize().height + 20);
+            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSciMed->getContentSize().width + 20, GoToSciMed->getContentSize().height + 20);
             highlighter->setTextureRect(newRect);
             highlighter->setVisible(true);
             highlighter->setScale(0.8);
             highlighter->setPosition(newLoc);
-            auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
         }
         
@@ -186,17 +186,31 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         that->addChild(GoToEIS,4);
         
         if(whichone == 5) {
-            Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
+            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
             highlighter->setTextureRect(newRect);
             highlighter->setVisible(true);
             highlighter->setScale(0.8);
             highlighter->setPosition(newLoc);
-            auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
         }
         
     }else{
         log("Invalid Faculty");
     }
+    
+}
+
+void TutorialController::FacultyPressed(cocos2d::Ref *pSender, ui::Widget::TouchEventType eEventType)
+{
+    log("faculty building pressed");
+    //change sound effect for faculty press
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    log("you have touched the fac building!");
+    
+    // transition to the menu game scene test
+    // need to change to specific faculty building player has selected
+    auto scene = MenuScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }

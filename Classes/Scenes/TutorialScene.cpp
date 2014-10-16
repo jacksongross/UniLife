@@ -75,6 +75,12 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
+    auto startBG = Sprite::create("placeholder_background.png");
+    startBG->setPosition(Vec2(BG->getPositionX(),BG->getPositionY()));
+    this->removeChildByName("startBG");
+    this->addChild(startBG,0);
+
+    
     switch(whichpage){
         case 0:{
             TalkText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
@@ -119,6 +125,12 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         case 5:{
             TalkText->setString("Press The Compass Button To Continue");
             OtherText->setString("");
+            
+            bool compassPress = false;
+            while(!compassPress) {
+                
+            }
+            
             break;
         }case 6:{
             highlighter->stopAllActions();
