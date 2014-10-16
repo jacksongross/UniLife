@@ -156,8 +156,8 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
     HUDLayer::setPlayer(pm);
     
     auto scene = DormScene::createScene(pm);
-    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
     
 }
 
@@ -172,12 +172,10 @@ void MenuLoadScene::scrollViewDidZoom(cocos2d::extension::ScrollView *view)
 
 void MenuLoadScene::tableCellHighlight (cocos2d::extension::TableView * table,cocos2d::extension::TableViewCell * cell)
 {
-    //Texture2D * aTexture = TextureCache :: sharedTextureCache () -> addImage ("options-border.png");
 }
 
 void MenuLoadScene::tableCellUnhighlight (cocos2d::extension::TableView * table, cocos2d::extension::TableViewCell::TableViewCell * cell)
 {
-    //Texture2D * aTexture = TextureCache :: sharedTextureCache () -> addImage ("options-border.png");
 }
 
 void MenuLoadScene::backButtonCallback(Ref* pSender)
@@ -185,7 +183,7 @@ void MenuLoadScene::backButtonCallback(Ref* pSender)
     log("Going Back to Menu!");
     
     auto scene = MenuScene::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
     
 }

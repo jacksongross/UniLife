@@ -146,6 +146,9 @@
 		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
 		7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5474719D545CD00243401 /* HUDHelper.cpp */; };
 		7AE60C9219DA8D390063452F /* Movement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE60C9019DA8D390063452F /* Movement.cpp */; };
+		7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */; };
+		7AE67C2419EFD3D000E3586D /* hud-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2319EFD3D000E3586D /* hud-pic.png */; };
+		7AE67C2619EFD46300E3586D /* hud-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2519EFD46300E3586D /* hud-circle.png */; };
 		7AF557D719DA9BFF0024A631 /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CD19DA9BFF0024A631 /* bill_inside.png */; };
 		7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CE19DA9BFF0024A631 /* bill_outside.png */; };
 		7AF557D919DA9BFF0024A631 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CF19DA9BFF0024A631 /* Fred.png */; };
@@ -545,6 +548,10 @@
 		7AE5474819D545CD00243401 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		7AE60C9019DA8D390063452F /* Movement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movement.cpp; sourceTree = "<group>"; };
 		7AE60C9119DA8D390063452F /* Movement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movement.h; sourceTree = "<group>"; };
+		7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBStartScreen.cpp; sourceTree = "<group>"; };
+		7AE67C1419EFB73000E3586D /* BBStartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBStartScreen.h; sourceTree = "<group>"; };
+		7AE67C2319EFD3D000E3586D /* hud-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-pic.png"; sourceTree = "<group>"; };
+		7AE67C2519EFD46300E3586D /* hud-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-circle.png"; sourceTree = "<group>"; };
 		7AF557CD19DA9BFF0024A631 /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_inside.png; sourceTree = "<group>"; };
 		7AF557CE19DA9BFF0024A631 /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_outside.png; sourceTree = "<group>"; };
 		7AF557CF19DA9BFF0024A631 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fred.png; sourceTree = "<group>"; };
@@ -1424,6 +1431,8 @@
 				7ADE1EF819CE6F3200AEFF00 /* GameOverScene.h */,
 				7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */,
 				7ADE1EFA19CE6F3200AEFF00 /* MyContactListener.h */,
+				7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */,
+				7AE67C1419EFB73000E3586D /* BBStartScreen.h */,
 			);
 			path = BrickBreaker;
 			sourceTree = "<group>";
@@ -1503,6 +1512,8 @@
 		7AF557F519DCDA560024A631 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				7AE67C2519EFD46300E3586D /* hud-circle.png */,
+				7AE67C2319EFD3D000E3586D /* hud-pic.png */,
 				7AF5580719DCE7ED0024A631 /* power-off-100.png */,
 				7AF557F619DCDA560024A631 /* Map-marker.png */,
 				7AF557F719DCDA560024A631 /* phone.png */,
@@ -1831,6 +1842,7 @@
 				D0ED65C619C939B90072EDD0 /* fox.png in Resources */,
 				D08AFF9B19ECB6FC0089E0AF /* legoDude.png in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
+				7AE67C2619EFD46300E3586D /* hud-circle.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
 				7AF557D919DA9BFF0024A631 /* Fred.png in Resources */,
@@ -1851,6 +1863,7 @@
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
 				D0B760EF19BD5B6D00E53B52 /* SciMed_Foyer.png in Resources */,
 				7AB6AB2A19AEDDF5003CCD7E /* backtotoppressed.png in Resources */,
+				7AE67C2419EFD3D000E3586D /* hud-pic.png in Resources */,
 				7A8945A019ADAF3F008E1EA7 /* dorm-door.png in Resources */,
 				D0E73DD519B3F5FE00F4F720 /* door.png in Resources */,
 				7A8945A219ADAF3F008E1EA7 /* Marker Felt.ttf in Resources */,
@@ -1930,6 +1943,7 @@
 				7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */,
+				7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */,
 				7A0F1A9219BEE3F400679823 /* SocSci-Hallway-Controller.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,

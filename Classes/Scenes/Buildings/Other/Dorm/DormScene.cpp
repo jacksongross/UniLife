@@ -23,6 +23,7 @@
 #include "SimpleAudioEngine.h"
 #include "HUDHelper.h"
 #include "Movement.h"
+#include "BBStartScreen.h"
 
 USING_NS_CC;
 
@@ -74,17 +75,6 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("DEGREE: %s", inplayer.getDegree().c_str());
     log("ENERGY: %d" , inplayer.getStats().getEnergy());
     log("STRESS: %d", inplayer.getStats().getStress());
-    
-    log("gonna log some time table data");
-    
-    std::vector<AssessmentModel> am = pm.getAssessments();
-    
-    log("Assessment size: %lu", am.size());
-    
-    for(int i = 0; i < am.size(); i++)
-    {
-        cout << "Subject: " << am[i].getSubject() << ", Weight: " << am[i].getPercentage() << ", Due on " << am[i].getDueTime() << " " << am[i].getdueDay() << " " << am[i].getDueWeek() << " " << am[i].getDueSemester() << endl;
-    }
     
     // load the character
     Movement::loadSpriteFrames(scene);
@@ -157,10 +147,9 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     else
         updateStats.setStress(0);
     
-    updateStats.setEnergy(100);
-    newTime.setHoursMinutes(newTime.getHoursMinutes() + 8.0);
-    pm.setStats(updateStats);
-    pm.setGameTime(newTime);
+    HUDLayer::updateStats(0, 0, 0, 100, -10);
+    
+    HUDLayer::updateTime(8);
     
     log("PLAYER ID: %d", pm.getId());
     log("NAME: %s", pm.getName().c_str());
@@ -187,7 +176,7 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     // move the character there
     Movement::moveCharacter(this->getScene(), start, destination);
     
-    HUDLayer::updateHUD(pm);
+    //HUDLayer::updateHUD(pm);
     
 }
 
@@ -241,10 +230,9 @@ void DormScene::ComputerPressed(cocos2d::Ref *pSender)
     // move the character there
     Movement::moveCharacter(this->getScene(), start, destination);
     
-    // transition to the load game scene
-    auto scene = BrickBreaker::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    auto *p = BBStartScreen::createScene();
+    
+    this->addChild(p, 1);
 }
 
 /********************************

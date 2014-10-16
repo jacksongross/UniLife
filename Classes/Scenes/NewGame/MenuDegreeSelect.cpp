@@ -103,8 +103,8 @@ void MenuDegreeSelect::BackButtonCallback(Ref* pSender)
     log("Going Back to Menu!");
     
     auto scene = MenuScene::createScene();
-    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
     
 }
 

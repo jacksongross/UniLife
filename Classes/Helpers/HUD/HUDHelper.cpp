@@ -16,6 +16,7 @@
 /////////////////////////////
 time_t start;
 int gametime;
+bool firstTick;
 PlayerModel player;
 cocos2d::Scene* activeScene;
 ////////////////////////////
@@ -37,7 +38,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     cocos2d::ProgressTimer* pg2 = cocos2d::ProgressTimer::create(streSprite);
     // set up the timer
     cocos2d::Label* timer = cocos2d::Label::createWithSystemFont("", "Verdana", 64);
-    timer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height - 22));
+    timer->setPosition(cocos2d::Vec2(visibleSize.width * 0.5, visibleSize.height * 0.95));
     timer->setName("Timer");
     
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
@@ -81,7 +82,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     
     auto phoneButton = cocos2d::Sprite::create("phone_button.png");
     
-    phoneButton->setPosition(cocos2d::Vec2(visibleSize.width * .40, visibleSize.height * .90));
+    phoneButton->setPosition(cocos2d::Vec2(visibleSize.width * 0.95, visibleSize.height * .90));
     
     auto phoneListener = cocos2d::EventListenerTouchOneByOne::create();
     
@@ -107,18 +108,19 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     scene->getEventDispatcher()->addEventListenerWithSceneGraphPriority(phoneListener, phoneButton);
     
     engText->setContentSize(cocos2d::Size(400, 40));
-    engText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 310));
-    engText->setColor(cocos2d::Color3B(0,0,0));
+    engText->setPosition(cocos2d::Vec2(visibleSize.width * 0.28, visibleSize.height * 0.96));
+    engText->setColor(cocos2d::Color3B(255,255,255));
     
-    engSprite->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 300));
+    engSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.08, visibleSize.height * 0.95));
     engSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     engSprite->setScale(0.5 , 0.5);
     engSprite->setName("EnergyHUD");
     
     streText->setContentSize(cocos2d::Size(400, 40));
-    streText->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 360, visibleSize.height / 2 + 275));
-    streText->setColor(cocos2d::Color3B(0,0,0));
-    streSprite->setPosition(cocos2d::Vec2(origin.x + visibleSize.width / 2 - 475, origin.y + visibleSize.height / 2 + 265));
+    streText->setPosition(cocos2d::Vec2(visibleSize.width * 0.28, visibleSize.height * 0.91));
+    streText->setColor(cocos2d::Color3B(255,255,255));
+    
+    streSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.08, visibleSize.height * 0.90));
     streSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     streSprite->setScale(0.5 , 0.5);
     streSprite->setName("StressHUD");
@@ -134,6 +136,10 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     pg2->setScaleX(player.getStats().getStress()/100.0);
     pg->setPercentage(player.getStats().getEnergy()/100.0);
     pg2->setPercentage(player.getStats().getStress()/100.0);
+    
+    auto hudFace = cocos2d::Sprite::create("hud-pic.png");
+    
+    hudFace->setPosition(cocos2d::Vec2(visibleSize.width * 0.02, visibleSize.height * 0.90));
 
     activeScene->addChild(engText, 1);
     activeScene->addChild(engSprite);
@@ -141,19 +147,21 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     activeScene->addChild(streText, 1);
     activeScene->addChild(streSprite);
     activeScene->addChild(pg2);
-    activeScene->addChild(pauseButton);
+    //activeScene->addChild(pauseButton);
     activeScene->addChild(phoneButton);
     activeScene->addChild(timer);
+    activeScene->addChild(hudFace);
     
     scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
+    
+    firstTick = false;
     
 }
 
 // this method is used to update the HUD bars
-void HUDLayer::updateHUD(PlayerModel pm)
+void HUDLayer::updateHUD(PlayerModel &pm)
 {
-    
-    player = pm;
+    pm = player;
     
     auto pgTimer = (cocos2d::ProgressTimer*)activeScene->getChildByName("EnergyHUD");
     
@@ -195,6 +203,79 @@ void HUDLayer::setPlayer(PlayerModel pm)
     gametime = 0;
 }
 
+// update stats for a player
+void HUDLayer::updateStats(int intelligence, int stamina, int social, int energy, int stress)
+{
+    PlayerStatsModel stats = player.getStats();
+    
+    // set the stat changes for each stat
+    stats.setIntelligence(stats.getIntelligence() + intelligence);
+    stats.setStamina(stats.getStamina() + stamina);
+    stats.setSocial(stats.getSocial() + social);
+    stats.setEnergy(stats.getEnergy() + energy);
+    stats.setStress(stats.getStress() + stress);
+    
+    if(stats.getIntelligence() > 20)
+    {
+        stats.setIntelligence(20);
+    }
+    else if(stats.getIntelligence() < 0)
+    {
+        stats.setIntelligence(0);
+    }
+    
+    if(stats.getStamina() > 20)
+    {
+        stats.setStamina(20);
+    }
+    else if(stats.getStamina() < 0)
+    {
+        stats.setStamina(0);
+    }
+    
+    if(stats.getSocial() > 20)
+    {
+        stats.setSocial(20);
+    }
+    else if(stats.getSocial() < 0)
+    {
+        stats.setSocial(0);
+    }
+    
+    if(stats.getEnergy() > 100)
+    {
+        stats.setEnergy(100);
+    }
+    else if(stats.getEnergy() < 0)
+    {
+        stats.setEnergy(0);
+    }
+    
+    if(stats.getStress() > 100)
+    {
+        stats.setStress(100);
+    }
+    else if(stats.getStress() < 0)
+    {
+        stats.setStress(0);
+    }
+    
+    // update the stats
+    player.setStats(stats);
+    
+    // update the HUD bars
+    HUDLayer::updateHUD(player);
+    
+}
+
+void HUDLayer::updateTime(double hoursminutes)
+{
+    TimeModel tm = player.getGameTime();
+    tm.setHoursMinutes(tm.getHoursMinutes() + hoursminutes);
+    
+    player.setGameTime(tm);
+}
+
 void HUDLayer::updateGameTime(float t)
 {
     double seconds_since_start = difftime( time(0), start);
@@ -202,7 +283,7 @@ void HUDLayer::updateGameTime(float t)
     gametime = (int) seconds_since_start;
     
     // if the game has been played for 5 minute intervals
-    if( gametime % 300 == 0)
+    if(gametime % 300 == 0)
     {
         cocos2d::log("TIME TO AUTOSAVE");
         cocos2d::log("Player: %d", player.getId());
@@ -218,7 +299,17 @@ void HUDLayer::updateGameTime(float t)
         }
     }
     
-    HUDLayer::updateTimer();
+    if(firstTick == false)
+    {
+        HUDLayer::updateTimer();
+        firstTick = true;
+    }
+
+    // update the in-game time every 5 seconds
+    if(gametime % 5 == 0)
+    {
+        HUDLayer::updateTimer();
+    }
 }
 
 ///SOME STUFF HERE FOR THE TIMER CODE

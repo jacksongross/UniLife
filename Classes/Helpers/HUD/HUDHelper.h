@@ -26,7 +26,7 @@ public:
     static void createHUD(cocos2d::Scene* scene);
     
     // this method is used to update the HUD bars
-    static void updateHUD(PlayerModel pm);
+    static void updateHUD(PlayerModel &pm);
     
     // handles pause button being pressed in HUD
     static void PausedPressed(cocos2d::Scene* scene);
@@ -38,6 +38,12 @@ public:
     static void setPlayer(PlayerModel pm);
     
     static void setScene(cocos2d::Scene* scene);
+    
+    // update stats for a player
+    static void updateStats(int intelligence, int stamina, int social, int energy, int stress);
+    
+    // updates the time for a player
+    static void updateTime(double hoursminutes);
     
     // runs the code to validate autosaving
     void updateGameTime(float t);
