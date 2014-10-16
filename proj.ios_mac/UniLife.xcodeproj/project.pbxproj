@@ -165,6 +165,7 @@
 		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
 		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
+		B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -569,6 +570,7 @@
 		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_background.png; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -1344,6 +1346,7 @@
 				7A89459019ADAF3F008E1EA7 /* map-computing_engineering.png */,
 				7A89459119ADAF3F008E1EA7 /* map-library.png */,
 				7A89459219ADAF3F008E1EA7 /* map-science_medicine.png */,
+				B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */,
 				7A89459319ADAF3F008E1EA7 /* map-shop.png */,
 				7A89459419ADAF3F008E1EA7 /* map-social_science.png */,
 				7A89459519ADAF3F008E1EA7 /* map-sun.png */,
@@ -1873,6 +1876,7 @@
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */,
 				D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */,
+				B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */,
 				7A01645A19CF956B0021009A /* block.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,

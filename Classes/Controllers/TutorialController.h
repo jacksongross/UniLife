@@ -29,7 +29,8 @@ public:
     
     // creates the main menu
     static void CreateMainMenu(TutorialScene *that, Size visibleSize, Vec2 origin);
-    static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
+    static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int buildingID, int whichone);
+    
 };
 
 
