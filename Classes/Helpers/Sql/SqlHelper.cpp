@@ -222,7 +222,7 @@ void SqlHelper::saveAssessments(PlayerModel player)
         
         if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
         {
-            int res = sqlite3_step(Stmnt);
+            sqlite3_step(Stmnt);
             sqlite3_finalize(Stmnt);
         }
     }

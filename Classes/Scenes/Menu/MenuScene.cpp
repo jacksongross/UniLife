@@ -41,6 +41,7 @@ bool MenuScene::init()
     }
     
     // checks if the database initialisation has been run before
+    
     // to ensure it gets seeded once
     bool isSeeded = UserDefault::getInstance()->getBoolForKey("yo7");
     
@@ -68,8 +69,8 @@ void MenuScene::newGameCallback(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuNewGame::createScene();
-    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
 }
 
 void MenuScene::loadGameCallback(Ref* pSender)
@@ -80,8 +81,8 @@ void MenuScene::loadGameCallback(Ref* pSender)
     
     // transition to the load game scene
     auto scene = MenuLoadScene::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
 }
 
 void MenuScene::optionsCallback(Ref* pSender)
@@ -93,7 +94,7 @@ void MenuScene::optionsCallback(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuOptionScene::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
     
 }
