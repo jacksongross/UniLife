@@ -26,6 +26,7 @@
 #include "FCG_minigame.h"
 #include "PopUpLayer.h"
 #include "TutorialScene.h"
+#include "QDSplashScene.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -82,6 +83,13 @@ void Debugger::SpawnList(){
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     
+    ui::Text* QDGame = ui::Text::create("QUACKY DUCK GAME", "Arial", 30);
+    QDGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoQuackyDuck, this));
+    QDGame->setColor(Color3B::BLACK);
+    QDGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 200));
+    QDGame->setTouchEnabled(true);
+    this->addChild(QDGame,5);
+
     ui::Text* LGame = ui::Text::create("LOGIC GAME", "Arial", 30);
     LGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoLogicGame, this));
     LGame->setColor(Color3B::BLACK);
@@ -136,6 +144,12 @@ void Debugger::gotoTutorial(Ref* pSender){
     
 }
 
+void Debugger::gotoQuackyDuck(Ref* pSender) {
+    log("Quacky duck Initalize");
+    auto scene = QDSplashScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+}
 
 void Debugger::gotoPopUp(Ref* pSender){
     
