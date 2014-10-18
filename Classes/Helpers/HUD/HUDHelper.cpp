@@ -46,7 +46,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     // animate the menu button to spin
     auto pauseButton = cocos2d::Sprite::create("cog-110.png");
     
-    pauseButton->setPosition(cocos2d::Vec2(visibleSize.width * .95, visibleSize.height * .90));
+    pauseButton->setPosition(cocos2d::Vec2(visibleSize.width * .95, visibleSize.height * .10));
     
     auto rotate = cocos2d::RotateBy::create(5.0f, 360);
     
@@ -147,7 +147,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     activeScene->addChild(streText, 1);
     activeScene->addChild(streSprite);
     activeScene->addChild(pg2);
-    //activeScene->addChild(pauseButton);
+    activeScene->addChild(pauseButton);
     activeScene->addChild(phoneButton);
     activeScene->addChild(timer);
     activeScene->addChild(hudFace);
@@ -266,6 +266,11 @@ void HUDLayer::updateStats(int intelligence, int stamina, int social, int energy
     // update the HUD bars
     HUDLayer::updateHUD(player);
     
+}
+
+PlayerModel HUDLayer::getCurrentPlayer()
+{
+    return player;
 }
 
 void HUDLayer::updateTime(double hoursminutes)

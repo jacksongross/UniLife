@@ -70,7 +70,7 @@ bool BBStartScreen::init()
 {
     //////////////////////////////
     // 1. super init first
-    if( !LayerColor::initWithColor(Color4B(255,255,255,100)) )
+    if( !LayerColor::initWithColor(Color4B(255,255,255,255)) )
     {
         return false;
     }
@@ -108,6 +108,6 @@ void BBStartScreen::quitCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the quit button!");
     
-    this->getParent()->removeChild(this);
+    Director::getInstance()->popScene();
 
 }

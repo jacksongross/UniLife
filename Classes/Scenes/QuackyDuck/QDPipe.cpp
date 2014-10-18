@@ -46,7 +46,7 @@ void QDPipe::SpawnPipe(cocos2d::Layer *layer)
     bottomPipe->setPhysicsBody(bottomPipeBody);
     
     topPipe->setPosition(Point(visibleSize.width + topPipe->getContentSize().width + origin.x, topPipePosition));
-    bottomPipe->setPosition(Point(topPipe->getPositionX(), topPipePosition - (Sprite::create("Ducky2.png")->getContentSize().height * PIPE_GAP) - topPipe->getContentSize().height));
+    bottomPipe->setPosition(Point(topPipe->getPositionX(), topPipePosition - (Sprite::create("QuackyDuck/Ducky2.png")->getContentSize().height * PIPE_GAP) - topPipe->getContentSize().height));
     
     layer->addChild(topPipe);
     layer->addChild(bottomPipe);
@@ -58,14 +58,14 @@ void QDPipe::SpawnPipe(cocos2d::Layer *layer)
     bottomPipe->runAction(bottomPipeAction);
     
     auto pointNode = Node::create();
-    auto pointBody = PhysicsBody::createBox(Size(1, Sprite::create("Ducky2.png")->getContentSize().height * PIPE_GAP));
+    auto pointBody = PhysicsBody::createBox(Size(1, Sprite::create("QuackyDuck/Ducky2.png")->getContentSize().height * PIPE_GAP));
     
     pointBody->setDynamic(false);
     pointBody->setCollisionBitmask(POINT_COLLISION_BITMASK);
     pointBody->setContactTestBitmask(true);
     
     pointNode->setPhysicsBody(pointBody);
-    pointNode->setPosition(Point(topPipe->getPositionX(), topPipe->getPositionY() - (topPipe->getContentSize().height / 2) - ((Sprite::create("Ducky2.png")->getContentSize().height * PIPE_GAP) / 2)));
+    pointNode->setPosition(Point(topPipe->getPositionX(), topPipe->getPositionY() - (topPipe->getContentSize().height / 2) - ((Sprite::create("QuackyDuck/Ducky2.png")->getContentSize().height * PIPE_GAP) / 2)));
     
     layer->addChild(pointNode);
     

@@ -39,6 +39,9 @@ public:
     
     static void setScene(cocos2d::Scene* scene);
     
+    // returns current player instance
+    static PlayerModel getCurrentPlayer();
+    
     // update stats for a player
     static void updateStats(int intelligence, int stamina, int social, int energy, int stress);
     
@@ -47,6 +50,7 @@ public:
     
     // runs the code to validate autosaving
     void updateGameTime(float t);
+    
     
     // updates the timer in the HUD
     void updateTimer();

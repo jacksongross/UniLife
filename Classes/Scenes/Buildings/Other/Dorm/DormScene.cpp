@@ -221,8 +221,8 @@ void DormScene::ComputerPressed(cocos2d::Ref *pSender)
     Movement::moveCharacter(this->getScene(), start, destination);
     
     auto *p = BBStartScreen::createScene();
-    
-    this->addChild(p, 1);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, p);
+    Director::getInstance()->pushScene(crossfade);
 }
 
 /********************************

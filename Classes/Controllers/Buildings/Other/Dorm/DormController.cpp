@@ -87,7 +87,7 @@ cocos2d::Vector<cocos2d::MenuItem*> DormController::CreateDormButtons(DormScene 
     pMenuItems.pushBack(deskSprite);
     pMenuItems.pushBack(computerSprite);
     
-    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("walk.plist");
+    cocos2d::SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Walk.plist");
     
     return pMenuItems;
     
