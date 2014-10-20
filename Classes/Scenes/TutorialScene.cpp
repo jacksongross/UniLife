@@ -67,25 +67,34 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     auto OtherText = (cocos2d::ui::Text*)this->getChildByName("OtherText");
     auto phonebutton = (Sprite*)this->getChildByName("phonebutton");
     auto highlighter = (Sprite*)this->getChildByName("highlighter");
-    auto mapbutton = (Sprite*)this->getChildByName("mapbutton");
+    auto mapbutton = (cocos2d::ui::Button*)this->getChildByName("mapbutton");
     auto BG = (Sprite*)this->getChildByName("mapBG");
     auto legodude = (Sprite*)this->getChildByName("legodude");
     auto sBubble = (Sprite*)this->getChildByName("sBubble");
     
+    auto ph1 = (Sprite*)this->getChildByName("ph1");
+    auto ph2 = (Sprite*)this->getChildByName("ph2");
+    auto ph3 = (Sprite*)this->getChildByName("ph3");
+    auto ph4 = (Sprite*)this->getChildByName("ph4");
+    auto ph5 = (Sprite*)this->getChildByName("ph5");
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    int faculNum;
 
     
     switch(whichpage){
         case 0:{
             TalkText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
             TalkText->setString("I Am your guide for Orientation Week and will \nhelp you become familiar with your studies at university");
+             whichpage++;
         }
         break;
         case 1:{
             string tmp = "You are currently Enrolled In ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
+             whichpage++;
         }
         break;
         case 2:{
@@ -96,12 +105,14 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             highlighter->setVisible(true);
             auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
+            whichpage++;
         }
             break;
         case 3:{
             string tmp = "It Contains Important Information such as Player Statistics\n Your Objectives, Timetable and Course Progress,  ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
+            whichpage++;
         }
             break;
         case 4:{
@@ -115,6 +126,7 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             mapbutton->setVisible(true);
             auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
+            whichpage++;
             break;
         }
         case 5:{
@@ -128,8 +140,14 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             newBG->setPosition(Vec2(BG->getPositionX(),BG->getPositionY()));
             this->removeChildByName("mapBG");
             this->addChild(newBG,0);
+            ph1->setVisible(true);
+            ph2->setVisible(true);
+            ph3->setVisible(true);
+            ph4->setVisible(true);
+            ph5->setVisible(true);
             TalkText->setString("This is the Map Of The University");
             OtherText->setString("");
+            whichpage++;
             break;
         }case 7:{
             TalkText->setString("Your Faculty Buidling is Highlighted");
@@ -140,10 +158,17 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             OtherText->setVisible(false);
             legodude->setVisible(false);
             sBubble->setVisible(false);
-            TutorialController::loadMap(this, visibleSize, origin,1);
+            
+            srand(time(NULL)); // Seed the time
+            int faculNum = rand()%(5-1)+1; // Generate the number, assign to variable.
             
             
+            TutorialController::loadMap(this, visibleSize, origin,faculNum);
+            whichpage++;
             break;
+        }case 9:{
+             TutorialController::loadFaculty(this, visibleSize, origin,faculNum);
+            
         }
         default:{
             log("NUNYAFUCKINGBUSINESSMATE");
@@ -152,8 +177,6 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             
             
     }
-    
-    whichpage++;
     
     return true;
 }

@@ -57,28 +57,28 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     legoface->setPosition(Vec2(visibleSize.width/2 + origin.x - 425, visibleSize.height/2 + origin.y - 200));
     legoface->setScale(0.6);
     legoface->setName("legodude");
-    that->addChild(legoface, 1);
+    that->addChild(legoface, 9);
     
     
     auto sBubble = Sprite::create("speech_big.png");
     sBubble->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y -100 ));
     sBubble->setScaleX(1.8);
     sBubble->setName("sBubble");
-    that->addChild(sBubble, 1);
+    that->addChild(sBubble, 9);
 
     
     auto introText = ui::Text::create("Welcome to The University Of Wollongong", "Arial", 30);
     introText->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y -50 ));
     introText->setColor(Color3B::BLACK);
     introText->setName("IntroText");
-    that->addChild(introText, 2);
+    that->addChild(introText, 10);
     
     
     auto otherText = ui::Text::create("Tap Screen To Continue", "Arial", 20);
     otherText->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y -150 ));
     otherText->setColor(Color3B::BLACK);
     otherText->setName("OtherText");
-    that->addChild(otherText, 2);
+    that->addChild(otherText, 10);
     
 
     
@@ -98,12 +98,50 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     highlighter->setName("highlighter");
     that->addChild(highlighter, 3);
 
-    auto mapButton = cocos2d::Sprite::create("Map-marker.png");
+    auto mapButton = cocos2d::ui::Button::create("Map-marker.png");
     mapButton->setPosition(cocos2d::Vec2(visibleSize.width * .75, visibleSize.height * .85));
     mapButton->setScale(0.8);
+    mapButton->setTouchEnabled(false);
     mapButton->setName("mapbutton");
     mapButton->setVisible(false);
     that->addChild(mapButton,4);
+    
+    auto placeholder1 = cocos2d::Sprite::create("map-computing_engineering.png");
+    placeholder1->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
+    placeholder1->setScale(0.8);
+    placeholder1->setName("ph1");
+    placeholder1->setVisible(false);
+    that->addChild(placeholder1,4);
+    
+    auto placeholder2 = cocos2d::Sprite::create("map-science_medicine.png");
+    placeholder2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
+    placeholder2->setScale(0.8);
+    placeholder2->setName("ph2");
+    placeholder2->setVisible(false);
+    that->addChild(placeholder2,4);
+    
+    auto placeholder3 = cocos2d::Sprite::create("map-art.png");
+    placeholder3->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
+    placeholder3->setScale(0.8);
+    placeholder3->setName("ph3");
+    placeholder3->setVisible(false);
+    that->addChild(placeholder3,4);
+    
+    auto placeholder4 = cocos2d::Sprite::create("map-social_science.png");
+    placeholder4->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
+    placeholder4->setScale(0.9);
+    placeholder4->setName("ph4");
+    placeholder4->setVisible(false);
+    that->addChild(placeholder4,4);
+    
+    auto placeholder5 = cocos2d::Sprite::create("map-business.png");
+    placeholder5->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
+    placeholder5->setScale(0.9);
+    placeholder5->setName("ph5");
+    placeholder5->setVisible(false);
+    that->addChild(placeholder5,4);
+
+
     
 }
 
@@ -119,7 +157,7 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         auto GoToEIS = ui::Button::create("map-computing_engineering.png");
         GoToEIS->setPosition(newLoc);
         GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,4);
+        that->addChild(GoToEIS,5);
         
         Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
         highlighter->setTextureRect(newRect);
@@ -129,16 +167,13 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
         highlighter->runAction(action);
 
-        
-        
-        
     }else if(whichone == 2){
         
         Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180);
         auto GoToSciMed = ui::Button::create("map-science_medicine.png");
         GoToSciMed->setPosition(newLoc);
         GoToSciMed->setScale(0.8);
-        that->addChild(GoToSciMed,4);
+        that->addChild(GoToSciMed,5);
         
         Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSciMed->getContentSize().width + 20, GoToSciMed->getContentSize().height + 20);
         highlighter->setTextureRect(newRect);
@@ -148,18 +183,50 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
         highlighter->runAction(action);
 
-        
-        
-        
-        
     }else if(whichone == 3){
+        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185);
+        auto GoToArt = ui::Button::create("map-art.png");
+        GoToArt->setPosition(newLoc);
+        GoToArt->setScale(0.9);
+        that->addChild(GoToArt,5);
         
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToArt->getContentSize().width + 20, GoToArt->getContentSize().height + 20);
+        highlighter->setTextureRect(newRect);
+        highlighter->setVisible(true);
+        highlighter->setScale(0.9);
+        highlighter->setPosition(newLoc);
+        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+        highlighter->runAction(action);
         
     }else if(whichone == 4){
+        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60);
+        auto GoToSocSci = ui::Button::create("map-social_science.png");
+        GoToSocSci->setPosition(newLoc);
+        GoToSocSci->setScale(0.9);
+        that->addChild(GoToSocSci,5);
         
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSocSci->getContentSize().width + 20, GoToSocSci->getContentSize().height + 20);
+        highlighter->setTextureRect(newRect);
+        highlighter->setVisible(true);
+        highlighter->setScale(0.9);
+        highlighter->setPosition(newLoc);
+        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+        highlighter->runAction(action);
         
     }else if(whichone == 5){
+        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105);
+        auto GoToBuis = ui::Button::create("map-business.png");
+        GoToBuis->setPosition(newLoc);
+        GoToBuis->setScale(0.9);
+        that->addChild(GoToBuis,5);
         
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToBuis->getContentSize().width + 20, GoToBuis->getContentSize().height + 20);
+        highlighter->setTextureRect(newRect);
+        highlighter->setVisible(true);
+        highlighter->setScale(0.9);
+        highlighter->setPosition(newLoc);
+        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+        highlighter->runAction(action);
         
     }else{
         log("Invalid Faculty");
@@ -169,3 +236,18 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
     
 }
 
+
+
+void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone)
+{
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

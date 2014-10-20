@@ -30,6 +30,7 @@ public:
     // creates the main menu
     static void CreateMainMenu(TutorialScene *that, Size visibleSize, Vec2 origin);
     static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
+    static void loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
 };
 
 
