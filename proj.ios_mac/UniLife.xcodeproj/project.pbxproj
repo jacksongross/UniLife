@@ -52,7 +52,6 @@
 		7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */; };
 		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
-		7A647D1019F218CD000D36CF /* phone-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A647D0F19F218CD000D36CF /* phone-bg.png */; };
 		7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DBD7419C576FF006A83CB /* doorOpen.wav */; };
 		7A78809619C17C4200BFF491 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809419C17C4200BFF491 /* circle.png */; };
 		7A78809719C17C4200BFF491 /* paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A78809519C17C4200BFF491 /* paddle.png */; };
@@ -147,9 +146,6 @@
 		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
 		7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5474719D545CD00243401 /* HUDHelper.cpp */; };
 		7AE60C9219DA8D390063452F /* Movement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE60C9019DA8D390063452F /* Movement.cpp */; };
-		7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */; };
-		7AE67C2419EFD3D000E3586D /* hud-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2319EFD3D000E3586D /* hud-pic.png */; };
-		7AE67C2619EFD46300E3586D /* hud-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2519EFD46300E3586D /* hud-circle.png */; };
 		7AF557D719DA9BFF0024A631 /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CD19DA9BFF0024A631 /* bill_inside.png */; };
 		7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CE19DA9BFF0024A631 /* bill_outside.png */; };
 		7AF557D919DA9BFF0024A631 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557CF19DA9BFF0024A631 /* Fred.png */; };
@@ -166,14 +162,6 @@
 		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
 		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
-		B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */; };
-		B992950E19F18D9900E3E5E4 /* QuackyDuck in Resources */ = {isa = PBXBuildFile; fileRef = B992950D19F18D9900E3E5E4 /* QuackyDuck */; };
-		B992952319F18DB700E3E5E4 /* QDDuck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951719F18DB700E3E5E4 /* QDDuck.cpp */; };
-		B992952419F18DB700E3E5E4 /* QDGameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951919F18DB700E3E5E4 /* QDGameOverScene.cpp */; };
-		B992952519F18DB700E3E5E4 /* QDGameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951B19F18DB700E3E5E4 /* QDGameScene.cpp */; };
-		B992952619F18DB700E3E5E4 /* QDMainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951D19F18DB700E3E5E4 /* QDMainMenuScene.cpp */; };
-		B992952719F18DB700E3E5E4 /* QDPipe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951F19F18DB700E3E5E4 /* QDPipe.cpp */; };
-		B992952819F18DB700E3E5E4 /* QDSplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992952119F18DB700E3E5E4 /* QDSplashScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -431,7 +419,6 @@
 		7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
 		7A0F1A8819BEE3F400679823 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
-		7A647D0F19F218CD000D36CF /* phone-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-bg.png"; sourceTree = "<group>"; };
 		7A6DBD7419C576FF006A83CB /* doorOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorOpen.wav; sourceTree = "<group>"; };
 		7A78809419C17C4200BFF491 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		7A78809519C17C4200BFF491 /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
@@ -558,10 +545,6 @@
 		7AE5474819D545CD00243401 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		7AE60C9019DA8D390063452F /* Movement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movement.cpp; sourceTree = "<group>"; };
 		7AE60C9119DA8D390063452F /* Movement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movement.h; sourceTree = "<group>"; };
-		7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BBStartScreen.cpp; sourceTree = "<group>"; };
-		7AE67C1419EFB73000E3586D /* BBStartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBStartScreen.h; sourceTree = "<group>"; };
-		7AE67C2319EFD3D000E3586D /* hud-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-pic.png"; sourceTree = "<group>"; };
-		7AE67C2519EFD46300E3586D /* hud-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-circle.png"; sourceTree = "<group>"; };
 		7AF557CD19DA9BFF0024A631 /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_inside.png; sourceTree = "<group>"; };
 		7AF557CE19DA9BFF0024A631 /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_outside.png; sourceTree = "<group>"; };
 		7AF557CF19DA9BFF0024A631 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fred.png; sourceTree = "<group>"; };
@@ -579,21 +562,6 @@
 		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_background.png; sourceTree = "<group>"; };
-		B992950D19F18D9900E3E5E4 /* QuackyDuck */ = {isa = PBXFileReference; lastKnownFileType = folder; path = QuackyDuck; sourceTree = "<group>"; };
-		B992951619F18DB700E3E5E4 /* QDDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDDefinitions.h; path = QuackyDuck/QDDefinitions.h; sourceTree = "<group>"; };
-		B992951719F18DB700E3E5E4 /* QDDuck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDDuck.cpp; path = QuackyDuck/QDDuck.cpp; sourceTree = "<group>"; };
-		B992951819F18DB700E3E5E4 /* QDDuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDDuck.h; path = QuackyDuck/QDDuck.h; sourceTree = "<group>"; };
-		B992951919F18DB700E3E5E4 /* QDGameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDGameOverScene.cpp; path = QuackyDuck/QDGameOverScene.cpp; sourceTree = "<group>"; };
-		B992951A19F18DB700E3E5E4 /* QDGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDGameOverScene.h; path = QuackyDuck/QDGameOverScene.h; sourceTree = "<group>"; };
-		B992951B19F18DB700E3E5E4 /* QDGameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDGameScene.cpp; path = QuackyDuck/QDGameScene.cpp; sourceTree = "<group>"; };
-		B992951C19F18DB700E3E5E4 /* QDGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDGameScene.h; path = QuackyDuck/QDGameScene.h; sourceTree = "<group>"; };
-		B992951D19F18DB700E3E5E4 /* QDMainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDMainMenuScene.cpp; path = QuackyDuck/QDMainMenuScene.cpp; sourceTree = "<group>"; };
-		B992951E19F18DB700E3E5E4 /* QDMainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDMainMenuScene.h; path = QuackyDuck/QDMainMenuScene.h; sourceTree = "<group>"; };
-		B992951F19F18DB700E3E5E4 /* QDPipe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDPipe.cpp; path = QuackyDuck/QDPipe.cpp; sourceTree = "<group>"; };
-		B992952019F18DB700E3E5E4 /* QDPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDPipe.h; path = QuackyDuck/QDPipe.h; sourceTree = "<group>"; };
-		B992952119F18DB700E3E5E4 /* QDSplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = QDSplashScene.cpp; path = QuackyDuck/QDSplashScene.cpp; sourceTree = "<group>"; };
-		B992952219F18DB700E3E5E4 /* QDSplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDSplashScene.h; path = QuackyDuck/QDSplashScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -813,7 +781,6 @@
 			isa = PBXGroup;
 			children = (
 				7AAC241F19ECC9C1007A8331 /* acadamia.db */,
-				B992950D19F18D9900E3E5E4 /* QuackyDuck */,
 				7AF557F519DCDA560024A631 /* Interface */,
 				7AF557CC19DA9BFF0024A631 /* Bill */,
 				D0ED65C119C9393B0072EDD0 /* LogicGame */,
@@ -1241,7 +1208,6 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B99294BA19F18A5800E3E5E4 /* QuackyDuck */,
 				D08AFF8A19ECB3BB0089E0AF /* Tutorial */,
 				7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */,
 				7ADE1EFB19CE6F3200AEFF00 /* PauseMenu */,
@@ -1349,7 +1315,6 @@
 		7A89458619ADAF3F008E1EA7 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				7A647D0F19F218CD000D36CF /* phone-bg.png */,
 				D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */,
 				D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */,
 				D098A99119AE3096005B13D3 /* green_bar.png */,
@@ -1372,7 +1337,6 @@
 				7A89459019ADAF3F008E1EA7 /* map-computing_engineering.png */,
 				7A89459119ADAF3F008E1EA7 /* map-library.png */,
 				7A89459219ADAF3F008E1EA7 /* map-science_medicine.png */,
-				B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */,
 				7A89459319ADAF3F008E1EA7 /* map-shop.png */,
 				7A89459419ADAF3F008E1EA7 /* map-social_science.png */,
 				7A89459519ADAF3F008E1EA7 /* map-sun.png */,
@@ -1460,8 +1424,6 @@
 				7ADE1EF819CE6F3200AEFF00 /* GameOverScene.h */,
 				7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */,
 				7ADE1EFA19CE6F3200AEFF00 /* MyContactListener.h */,
-				7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */,
-				7AE67C1419EFB73000E3586D /* BBStartScreen.h */,
 			);
 			path = BrickBreaker;
 			sourceTree = "<group>";
@@ -1541,8 +1503,6 @@
 		7AF557F519DCDA560024A631 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				7AE67C2519EFD46300E3586D /* hud-circle.png */,
-				7AE67C2319EFD3D000E3586D /* hud-pic.png */,
 				7AF5580719DCE7ED0024A631 /* power-off-100.png */,
 				7AF557F619DCDA560024A631 /* Map-marker.png */,
 				7AF557F719DCDA560024A631 /* phone.png */,
@@ -1550,26 +1510,6 @@
 				7AF557F919DCDA560024A631 /* phone_selection.png */,
 			);
 			path = Interface;
-			sourceTree = "<group>";
-		};
-		B99294BA19F18A5800E3E5E4 /* QuackyDuck */ = {
-			isa = PBXGroup;
-			children = (
-				B992951619F18DB700E3E5E4 /* QDDefinitions.h */,
-				B992951719F18DB700E3E5E4 /* QDDuck.cpp */,
-				B992951819F18DB700E3E5E4 /* QDDuck.h */,
-				B992951919F18DB700E3E5E4 /* QDGameOverScene.cpp */,
-				B992951A19F18DB700E3E5E4 /* QDGameOverScene.h */,
-				B992951B19F18DB700E3E5E4 /* QDGameScene.cpp */,
-				B992951C19F18DB700E3E5E4 /* QDGameScene.h */,
-				B992951D19F18DB700E3E5E4 /* QDMainMenuScene.cpp */,
-				B992951E19F18DB700E3E5E4 /* QDMainMenuScene.h */,
-				B992951F19F18DB700E3E5E4 /* QDPipe.cpp */,
-				B992952019F18DB700E3E5E4 /* QDPipe.h */,
-				B992952119F18DB700E3E5E4 /* QDSplashScene.cpp */,
-				B992952219F18DB700E3E5E4 /* QDSplashScene.h */,
-			);
-			name = QuackyDuck;
 			sourceTree = "<group>";
 		};
 		D031093019B447A20030B59F /* Tavern */ = {
@@ -1866,7 +1806,6 @@
 				7AAC241919E8AF21007A8331 /* background.wav in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
 				7AF557EC19DA9E6F0024A631 /* walk.png in Resources */,
-				7A647D1019F218CD000D36CF /* phone-bg.png in Resources */,
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
@@ -1892,7 +1831,6 @@
 				D0ED65C619C939B90072EDD0 /* fox.png in Resources */,
 				D08AFF9B19ECB6FC0089E0AF /* legoDude.png in Resources */,
 				D03F389319C00804001956BD /* SocSci_Border.png in Resources */,
-				7AE67C2619EFD46300E3586D /* hud-circle.png in Resources */,
 				7A8945BA19ADAF3F008E1EA7 /* map-science_medicine.png in Resources */,
 				D03F388F19C00804001956BD /* Art_Border.png in Resources */,
 				7AF557D919DA9BFF0024A631 /* Fred.png in Resources */,
@@ -1908,12 +1846,11 @@
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
 				7A01645919CF956B0021009A /* ball.png in Resources */,
 				D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */,
+				7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */,
 				7AB6AB3719AEDDF5003CCD7E /* New-Game-Title.png in Resources */,
 				7A8945A719ADAF3F008E1EA7 /* new_game_on.png in Resources */,
-				7AF557EB19DA9E6F0024A631 /* walk.plist in Resources */,
 				D0B760EF19BD5B6D00E53B52 /* SciMed_Foyer.png in Resources */,
 				7AB6AB2A19AEDDF5003CCD7E /* backtotoppressed.png in Resources */,
-				7AE67C2419EFD3D000E3586D /* hud-pic.png in Resources */,
 				7A8945A019ADAF3F008E1EA7 /* dorm-door.png in Resources */,
 				D0E73DD519B3F5FE00F4F720 /* door.png in Resources */,
 				7A8945A219ADAF3F008E1EA7 /* Marker Felt.ttf in Resources */,
@@ -1923,7 +1860,6 @@
 				7A89459E19ADAF3F008E1EA7 /* dorm-computer.png in Resources */,
 				D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */,
 				D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */,
-				B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */,
 				7A01645A19CF956B0021009A /* block.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
@@ -1961,7 +1897,6 @@
 				7AF557D819DA9BFF0024A631 /* bill_outside.png in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
 				7AF557FA19DCDA560024A631 /* Map-marker.png in Resources */,
-				B992950E19F18D9900E3E5E4 /* QuackyDuck in Resources */,
 				D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */,
 				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,
 				7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */,
@@ -1995,7 +1930,6 @@
 				7A0F1A9419BEE3F400679823 /* LibraryFoyerController.cpp in Sources */,
 				7A89456819ADAD23008E1EA7 /* MenuLoadScene.cpp in Sources */,
 				7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */,
-				7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */,
 				7A0F1A9219BEE3F400679823 /* SocSci-Hallway-Controller.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
@@ -2007,14 +1941,11 @@
 				7A89455F19ADAD23008E1EA7 /* PlayerModel.cpp in Sources */,
 				7A0F1A8F19BEE3F400679823 /* SciMed-Foyer-Controller.cpp in Sources */,
 				7A89456219ADAD23008E1EA7 /* timeTableClassModel.cpp in Sources */,
-				B992952819F18DB700E3E5E4 /* QDSplashScene.cpp in Sources */,
 				7A0F1A8A19BEE3F400679823 /* Art-Hallway-Controller.cpp in Sources */,
 				7A0F1A5819BEE2FC00679823 /* SciMed-Hallway.cpp in Sources */,
 				7AB6AB0319AEDCE6003CCD7E /* MenuNewGame.cpp in Sources */,
-				B992952319F18DB700E3E5E4 /* QDDuck.cpp in Sources */,
 				7A0F1A5319BEE2FC00679823 /* Buis-Foyer.cpp in Sources */,
 				7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */,
-				B992952719F18DB700E3E5E4 /* QDPipe.cpp in Sources */,
 				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */,
@@ -2040,8 +1971,6 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,
-				B992952619F18DB700E3E5E4 /* QDMainMenuScene.cpp in Sources */,
-				B992952519F18DB700E3E5E4 /* QDGameScene.cpp in Sources */,
 				7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,
 				7A0F1A8E19BEE3F400679823 /* Inside_EIS_Controller.cpp in Sources */,
@@ -2051,7 +1980,6 @@
 				7A0F1A5F19BEE2FC00679823 /* TavernRoom.cpp in Sources */,
 				7A0F1A8919BEE3F400679823 /* Art-Foyer-Controller.cpp in Sources */,
 				7AB6AB0219AEDCE6003CCD7E /* MenuDegreeSelect.cpp in Sources */,
-				B992952419F18DB700E3E5E4 /* QDGameOverScene.cpp in Sources */,
 				7A89456419ADAD23008E1EA7 /* MapScene.cpp in Sources */,
 				7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */,
 				7A0F1A5719BEE2FC00679823 /* SciMed-Foyer.cpp in Sources */,

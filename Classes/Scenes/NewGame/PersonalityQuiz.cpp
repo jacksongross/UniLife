@@ -94,6 +94,7 @@ void PersonalityQuiz::SpawnQuiz(){
     this->addChild(QNum,2);
 
     
+    
     //The Introductory Text For the Personality Quiz
     ui::Text* IntroText = ui::Text::create("You Will Be Asked A Series Of Questions To Determine Your Personality Type, Select The Answer that Suits You The Best, Your Personality Profile Will Be Determined At The End Of the Quiz ", "Arial", 30);
     IntroText->setColor(Color3B::BLACK);

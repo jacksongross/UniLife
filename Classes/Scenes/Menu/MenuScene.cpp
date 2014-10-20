@@ -41,15 +41,14 @@ bool MenuScene::init()
     }
     
     // checks if the database initialisation has been run before
-    
     // to ensure it gets seeded once
-    bool isSeeded = UserDefault::getInstance()->getBoolForKey("yo9");
+    bool isSeeded = UserDefault::getInstance()->getBoolForKey("yo5");
     
     if(isSeeded == false)
     {
         log("seeding the db");
         SqlHelper::initDatabase();
-        UserDefault::getInstance()->setBoolForKey("yo9", true);
+        UserDefault::getInstance()->setBoolForKey("yo5", true);
     }
     
     // get the size of the screen that is visible
@@ -69,8 +68,8 @@ void MenuScene::newGameCallback(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuNewGame::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = CCTransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 void MenuScene::loadGameCallback(Ref* pSender)
@@ -81,8 +80,8 @@ void MenuScene::loadGameCallback(Ref* pSender)
     
     // transition to the load game scene
     auto scene = MenuLoadScene::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 void MenuScene::optionsCallback(Ref* pSender)
@@ -94,7 +93,7 @@ void MenuScene::optionsCallback(Ref* pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuOptionScene::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }

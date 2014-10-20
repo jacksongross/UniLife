@@ -35,6 +35,8 @@ BrickBreaker::~BrickBreaker()
 BrickBreaker::BrickBreaker()
 {
     
+    //setTouchEnabled(true);
+    
 	Size winSize = CCDirector::getInstance()->getWinSize();
     
 	// Define the gravity vector.
@@ -77,7 +79,7 @@ BrickBreaker::BrickBreaker()
     
     // Create sprite and add it to the layer
 	Sprite *ball = CCSprite::create("ball.png");
-    ball->setPosition(Point(winSize.width / 2, winSize.height / 2));
+    ball->setPosition(Point(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO));
     ball->setScale(0.25);
     ball->setTag(1);
     this->addChild(ball);
@@ -85,14 +87,14 @@ BrickBreaker::BrickBreaker()
     // Create ball body
     b2BodyDef ballBodyDef;
     ballBodyDef.type = b2_dynamicBody;
-    ballBodyDef.position.Set(winSize.width / 2, winSize.height / 2);
+    ballBodyDef.position.Set(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO);
     ballBodyDef.userData = ball;
     
     b2Body *ballBody = _world->CreateBody(&ballBodyDef);
     
     // Create circle shape
     b2CircleShape circle;
-    circle.m_radius = 26.0 / PTM_RATIO;
+    circle.m_radius = 26.0/PTM_RATIO;
     
     // Create shape definition and add body
     b2FixtureDef ballShapeDef;
@@ -178,15 +180,7 @@ BrickBreaker::BrickBreaker()
         
     }
     
-    auto delay =  DelayTime::create(3.0f);
-    
-    auto callback = CallFunc::create( [this]() {
-        this->schedule(schedule_selector(BrickBreaker::tick));
-    });
-    
-    auto seq = Sequence::createWithTwoActions(delay, callback);
-    
-    this->runAction(seq);
+    this->schedule(schedule_selector(BrickBreaker::tick));
     
     auto touchListener = EventListenerTouchOneByOne::create();
     touchListener->setSwallowTouches(true);

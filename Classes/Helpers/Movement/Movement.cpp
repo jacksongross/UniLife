@@ -65,12 +65,7 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     // change the height here
     auto move = cocos2d::MoveTo::create(2, cocos2d::Vec2(endX, visibleSize.height / 2 - 135));
     
-    auto easeMove = cocos2d::EaseInOut::create(move, 3);
-    
-    auto easeWalk = cocos2d::EaseInOut::create(walkAction, 3);
-    
-    character->runAction(easeWalk);
-    character->runAction(easeMove);
-    
+    character->runAction(walkAction);
+    character->runAction(move);
 }
 

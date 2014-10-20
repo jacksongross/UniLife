@@ -59,20 +59,22 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
     log("test!");
     
     auto scene = MenuScene::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
+
 
 void MenuOptionScene::debugButtonCallback(Ref* pSender)
 {
     log("Debug Screen!");
     
     auto scene = Debugger::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
+
 
 
 void MenuOptionScene::backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type)
@@ -87,6 +89,8 @@ void MenuOptionScene::backgroundMusicSliderChange(Ref* pSender, cocos2d::ui::Sli
     actualLevel = CocosDenshion::SimpleAudioEngine::getInstance()->getBackgroundMusicVolume();
     
     log("Background music volume changed to %0.2f", actualLevel);
+    
+
     
 }
 
@@ -104,6 +108,8 @@ void MenuOptionScene::soundEffectsSliderChange(Ref* pSender, cocos2d::ui::Slider
     actualLevel = CocosDenshion::SimpleAudioEngine::getInstance()->getEffectsVolume();
     
     log("Sound Effects volume changed to %0.2f", actualLevel);
+    
+    
     
 }
 

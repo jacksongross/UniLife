@@ -53,8 +53,6 @@ void MenuLoadController::CreateMainMenu(MenuLoadScene *that, Size visibleSize, V
 
     label->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height / 2 + 250));
     
-    label->setColor(Color3B(0, 0, 0));
-    
     that->addChild(label, 0);
     
     

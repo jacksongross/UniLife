@@ -97,8 +97,8 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
         newplayer.setStats(tmp);
         newplayer.setScene("DormScene");
         auto scene = MenuDegreeSelect::createScene(newplayer);
-        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-        Director::getInstance()->replaceScene(crossfade);
+        TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+        Director::getInstance()->replaceScene(crosssfade);
     }else{
         log("Cannot Go Until 20 Points Spent");
     }
@@ -111,8 +111,8 @@ void MenuNewGame::backButtonCallback(Ref* pSender)
     log("Going Back to Menu!");
     
     auto scene = MenuScene::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 
@@ -229,8 +229,8 @@ void MenuNewGame::quizButtonCallback(Ref* pSender)
     log("Going To Personality Quiz!");
     
     auto scene = PersonalityQuiz::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 
 }
 

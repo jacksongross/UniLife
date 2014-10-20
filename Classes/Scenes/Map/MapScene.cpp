@@ -27,8 +27,6 @@
 #include "LibraryFoyer.h"
 USING_NS_CC;
 
-extern PlayerModel pm;
-
 Scene* MapScene::createScene()
 {
     log("\nCreated Without passed Player\n");
@@ -57,8 +55,6 @@ Scene* MapScene::createScene(PlayerModel inplayer)
     
     // add layer as a child to scene
     scene->addChild(layer);
-    pm = inplayer;
-    pm.setStats(inplayer.getStats());
     
     
     // Report on the loaded player object
