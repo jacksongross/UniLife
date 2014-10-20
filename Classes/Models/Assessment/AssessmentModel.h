@@ -35,11 +35,23 @@ private:
     // player's mark for assessment
     int mark;
     
+    // assessment due day
+    int dueDay;
+    
+    // assessment due week
+    int dueWeek;
+    
+    // assessment due semester
+    int dueSemester;
+    
+    // assessment due time
+    int dueTime;
+    
     
 public:
     
     AssessmentModel();
-    AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark);
+    AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark, int time, int dueDay, int dueWeek, int dueSemester);
     
     /********************************
                 Getters
@@ -57,6 +69,14 @@ public:
     
     int getMark();
     
+    int getdueDay();
+    
+    int getDueWeek();
+    
+    int getDueSemester();
+    
+    int getDueTime();
+    
     
     /********************************
                 Setters
@@ -73,6 +93,14 @@ public:
     void setPercentage(int percentage);
     
     void setMark(int mark);
+    
+    void setDueDay(int dueDay);
+    
+    void setDueWeek(int dueWeek);
+    
+    void setDueSemester(int dueSemester);
+    
+    void setDueTime(int dueTime);
     
 };
 

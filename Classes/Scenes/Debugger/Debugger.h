@@ -28,6 +28,8 @@ public:
     void gotoLogicGame(Ref* sender);
     void gotoBrickBreaker(Ref* pSender);
     void gotoTutorial(Ref* pSender);
+    void gotoQuackyDuck(Ref* pSender);
+
     void SpawnList();
     
     // implement the "static create()" method manually

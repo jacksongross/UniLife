@@ -80,14 +80,11 @@ void SqlHelper::initDatabase()
     else
         log("create table success!");
     
-    sql = "CREATE TABLE IF NOT EXISTS marks(ID INTEGER primary key autoincrement, playerid INTEGER, subject text, anum INTEGER, weight INTEGER, mark INTEGER)";
+    sql = "CREATE TABLE IF NOT EXISTS marks(ID INTEGER primary key autoincrement, playerid INTEGER, subject text, anum INTEGER, weight INTEGER, mark INTEGER, duetime INTEGER, dueday INTEGER, dueweek INTEGER, duesemester INTEGER)";
     
     sqlite3_prepare(db, sql.c_str(), static_cast<unsigned int>(sql.size()), &createStmt, NULL);
     
     result = sqlite3_step(createStmt);
-    
-    //to drop table, run below
-    //result = sqlite3_exec(db, "drop table player", NULL, NULL, &zErr);
     
     if(result!=SQLITE_DONE)
         log("create table marks failed");
@@ -118,8 +115,6 @@ void SqlHelper::initDatabase()
     outfile.close();
     
     log("saved the db file");
-  
-    
 }
 
 
@@ -221,13 +216,13 @@ void SqlHelper::saveAssessments(PlayerModel player)
     {
         std::stringstream strm;
 
-        strm << "INSERT INTO marks (playerid, subject, anum, weight, mark) VALUES(" << player.getId() << ",'" << assessments[i].getSubject() << "'," << assessments[i].getAssessmentId() << "," << assessments[i].getPercentage() << "," << assessments[i].getMark() << ")";
+        strm << "INSERT INTO marks (playerid, subject, anum, weight, mark, duetime, dueday, dueweek, duesemester) VALUES(" << player.getId() << ",'" << assessments[i].getSubject() << "'," << assessments[i].getAssessmentId() << "," << assessments[i].getPercentage() << "," << assessments[i].getMark() << "," << assessments[i].getDueTime() << "," << assessments[i].getdueDay() << "," << assessments[i].getDueWeek() << "," << assessments[i].getDueSemester() << ")";
         
         sql = strm.str();
         
         if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
         {
-            int res = sqlite3_step(Stmnt);
+            sqlite3_step(Stmnt);
             sqlite3_finalize(Stmnt);
         }
     }
@@ -339,8 +334,12 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
                     int anum = sqlite3_column_int(Stmnt, 3);
                     int weight = sqlite3_column_int(Stmnt, 4);
                     int mark = sqlite3_column_int(Stmnt, 5);
+                    int time = sqlite3_column_int(Stmnt, 6);
+                    int day = sqlite3_column_int(Stmnt, 7);
+                    int week = sqlite3_column_int(Stmnt, 8);
+                    int semester = sqlite3_column_int(Stmnt, 9);
                     
-                    AssessmentModel am(id, playerid, subject, anum, weight, mark);
+                    AssessmentModel am(id, playerid, subject, anum, weight, mark, time, day, week, semester);
                     
                     list.push_back(am);
                     
@@ -440,8 +439,12 @@ PlayerModel SqlHelper::getPlayer(int playerId)
                 int anum = sqlite3_column_int(Stmnt, 3);
                 int weight = sqlite3_column_int(Stmnt, 4);
                 int mark = sqlite3_column_int(Stmnt, 5);
+                int time = sqlite3_column_int(Stmnt, 6);
+                int day = sqlite3_column_int(Stmnt, 7);
+                int week = sqlite3_column_int(Stmnt, 8);
+                int semester = sqlite3_column_int(Stmnt, 9);
                 
-                AssessmentModel am(id, playerid, subject, anum, weight, mark);
+                AssessmentModel am(id, playerid, subject, anum, weight, mark, time, day, week, semester);
                 
                 list.push_back(am);
                 
@@ -711,7 +714,7 @@ std::vector<AssessmentModel> SqlHelper::getAssignments(std::string code){
     
     sqlite3 *db = openDatabase("acadamia.db");
     
-    std::string sql = "select anum, percentage from Assessment where scode='";
+    std::string sql = "select * from Assessment where scode='";
     sql.append(code + "'");
     
     sqlite3_stmt *Stmnt;
@@ -730,8 +733,12 @@ std::vector<AssessmentModel> SqlHelper::getAssignments(std::string code){
             {
                 AssessmentModel am;
                 am.setSubject(code);
-                am.setAssessmentId(sqlite3_column_int(Stmnt, 0));
-                am.setPercentage(sqlite3_column_int(Stmnt, 1));
+                am.setAssessmentId(sqlite3_column_int(Stmnt, 1));
+                am.setPercentage(sqlite3_column_int(Stmnt, 2));
+                am.setDueTime(sqlite3_column_int(Stmnt, 3));
+                am.setDueDay(sqlite3_column_int(Stmnt, 4));
+                am.setDueWeek(sqlite3_column_int(Stmnt, 5));
+                am.setDueSemester(sqlite3_column_int(Stmnt, 6));
                 
                 aList.push_back(am);
             }
