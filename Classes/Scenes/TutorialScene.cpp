@@ -67,27 +67,50 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     auto OtherText = (cocos2d::ui::Text*)this->getChildByName("OtherText");
     auto phonebutton = (Sprite*)this->getChildByName("phonebutton");
     auto highlighter = (Sprite*)this->getChildByName("highlighter");
-    auto mapbutton = (Sprite*)this->getChildByName("mapbutton");
+    auto mapbutton = (cocos2d::ui::Button*)this->getChildByName("mapbutton");
     auto BG = (Sprite*)this->getChildByName("mapBG");
     auto legodude = (Sprite*)this->getChildByName("legodude");
     auto sBubble = (Sprite*)this->getChildByName("sBubble");
     
+    auto ph1 = (Sprite*)this->getChildByName("ph1");
+    auto ph2 = (Sprite*)this->getChildByName("ph2");
+    auto ph3 = (Sprite*)this->getChildByName("ph3");
+    auto ph4 = (Sprite*)this->getChildByName("ph4");
+    auto ph5 = (Sprite*)this->getChildByName("ph5");
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+<<<<<<< HEAD
+    int faculNum;
+=======
+    
+    auto startBG = Sprite::create("placeholder_background.png");
+    startBG->setPosition(Vec2(BG->getPositionX(),BG->getPositionY()));
+    this->removeChildByName("startBG");
+    this->addChild(startBG,0);
+>>>>>>> FETCH_HEAD
 
     
     switch(whichpage){
         case 0:{
             TalkText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
             TalkText->setString("I Am your guide for Orientation Week and will \nhelp you become familiar with your studies at university");
+<<<<<<< HEAD
+             whichpage++;
+=======
+            break;
+>>>>>>> FETCH_HEAD
         }
-        break;
         case 1:{
             string tmp = "You are currently Enrolled In ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
+<<<<<<< HEAD
+             whichpage++;
+=======
+            break;
+>>>>>>> FETCH_HEAD
         }
-        break;
         case 2:{
             string tmp = "This is Your Phone, It has much of the information needed\n to live comfortably at university. You can tap it\n at any time during gameplay to bring up the menu ";
             tmp.append(newplayer.getDegree());
@@ -96,14 +119,24 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             highlighter->setVisible(true);
             auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
+<<<<<<< HEAD
+            whichpage++;
         }
+=======
+>>>>>>> FETCH_HEAD
             break;
+        }
         case 3:{
             string tmp = "It Contains Important Information such as Player Statistics\n Your Objectives, Timetable and Course Progress,  ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
+<<<<<<< HEAD
+            whichpage++;
         }
+=======
+>>>>>>> FETCH_HEAD
             break;
+        }
         case 4:{
             TalkText->setString("Here Is A Map Of the Campus, \nYou can View it any time by Tapping the Compass Button");
             highlighter->stopAllActions();
@@ -115,12 +148,19 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             mapbutton->setVisible(true);
             auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
+            whichpage++;
             break;
         }
         case 5:{
             TalkText->setString("Press The Compass Button To Continue");
             OtherText->setString("");
-        break;
+            
+            bool compassPress = false;
+            while(!compassPress) {
+                
+            }
+            
+            break;
         }case 6:{
             highlighter->stopAllActions();
             highlighter->setVisible(false);
@@ -128,32 +168,76 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             newBG->setPosition(Vec2(BG->getPositionX(),BG->getPositionY()));
             this->removeChildByName("mapBG");
             this->addChild(newBG,0);
+            ph1->setVisible(true);
+            ph2->setVisible(true);
+            ph3->setVisible(true);
+            ph4->setVisible(true);
+            ph5->setVisible(true);
             TalkText->setString("This is the Map Of The University");
             OtherText->setString("");
+            whichpage++;
             break;
         }case 7:{
+            TalkText->setString("There Are A Total Of 5 Faculties On The Campus");
+            OtherText->setString("Tap The Screen To Continue");
+            break;
+        }case 8:{
+            TalkText->setString("Arts...");
+            OtherText->setString("Tap The Screen To Continue");
+            TutorialController::loadMap(this, visibleSize, origin,1, 3);
+            break;
+        }case 9:{
+            TalkText->setString("Social Science...");
+            OtherText->setString("Tap The Screen To Continue");
+            TutorialController::loadMap(this, visibleSize, origin,2, 3);
+            break;
+        }case 10:{
+            TalkText->setString("Business...");
+            OtherText->setString("Tap The Screen To Continue");
+            TutorialController::loadMap(this, visibleSize, origin,3, 3);
+            break;
+        }case 11:{
+            TalkText->setString("Science and Medicine...");
+            OtherText->setString("Tap The Screen To Continue");
+            TutorialController::loadMap(this, visibleSize, origin,4, 3);
+            break;
+        }case 12:{
+            TalkText->setString("and Computers and Engineering!");
+            OtherText->setString("Tap The Screen To Continue");
+            TutorialController::loadMap(this, visibleSize, origin,5, 3);
+            break;
+        }case 13:{
             TalkText->setString("Your Faculty Buidling is Highlighted");
             OtherText->setString("Find Your Faculty Building On the Map");
             break;
-        }case 8:{
+        }case 14:{
             TalkText->setVisible(false);
             OtherText->setVisible(false);
             legodude->setVisible(false);
             sBubble->setVisible(false);
-            TutorialController::loadMap(this, visibleSize, origin,1);
+<<<<<<< HEAD
+            
+            srand(time(NULL)); // Seed the time
+            int faculNum = rand()%(5-1)+1; // Generate the number, assign to variable.
             
             
+            TutorialController::loadMap(this, visibleSize, origin,faculNum);
+            whichpage++;
             break;
+        }case 9:{
+             TutorialController::loadFaculty(this, visibleSize, origin,faculNum);
+            
+=======
+
+>>>>>>> FETCH_HEAD
         }
         default:{
             log("NUNYAFUCKINGBUSINESSMATE");
             
         }
-            
+
             
     }
-    
-    whichpage++;
     
     return true;
 }

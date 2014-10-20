@@ -23,6 +23,7 @@
 #include "SimpleAudioEngine.h"
 #include "HUDHelper.h"
 #include "Movement.h"
+#include "BBStartScreen.h"
 
 USING_NS_CC;
 
@@ -74,12 +75,6 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("DEGREE: %s", inplayer.getDegree().c_str());
     log("ENERGY: %d" , inplayer.getStats().getEnergy());
     log("STRESS: %d", inplayer.getStats().getStress());
-    
-    log("gonna log some time table data");
-    
-    std::vector<AssessmentModel> am = pm.getAssessments();
-    
-    log("Assessment size: %lu", am.size());
     
     // load the character
     Movement::loadSpriteFrames(scene);
@@ -142,20 +137,9 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
 {
     log("You will rest and restore all energy and decrease stress by 5");
     
-    PlayerStatsModel updateStats;
-    TimeModel newTime;
-    updateStats = pm.getStats();
-    newTime = pm.getGameTime();
+    HUDLayer::updateStats(0, 0, 0, 100, -10);
     
-    if(updateStats.getStress() > 10)
-        updateStats.setStress(updateStats.getStress() - 10);
-    else
-        updateStats.setStress(0);
-    
-    updateStats.setEnergy(100);
-    newTime.setHoursMinutes(newTime.getHoursMinutes() + 8.0);
-    pm.setStats(updateStats);
-    pm.setGameTime(newTime);
+    HUDLayer::updateTime(8);
     
     log("PLAYER ID: %d", pm.getId());
     log("NAME: %s", pm.getName().c_str());
@@ -182,7 +166,7 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     // move the character there
     Movement::moveCharacter(this->getScene(), start, destination);
     
-    HUDLayer::updateHUD(pm);
+    //HUDLayer::updateHUD(pm);
     
 }
 
@@ -236,10 +220,9 @@ void DormScene::ComputerPressed(cocos2d::Ref *pSender)
     // move the character there
     Movement::moveCharacter(this->getScene(), start, destination);
     
-    // transition to the load game scene
-    auto scene = BrickBreaker::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    auto *p = BBStartScreen::createScene();
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, p);
+    Director::getInstance()->pushScene(crossfade);
 }
 
 /********************************

@@ -16,9 +16,13 @@ AssessmentModel::AssessmentModel()
     this->assessmentId = -1;
     this->percentage = -1;
     this->mark = 0;
+    this->dueDay = -1;
+    this->dueWeek = -1;
+    this->dueSemester = -1;
+    this->dueTime = -1;
 }
 
-AssessmentModel::AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark)
+AssessmentModel::AssessmentModel(int ID, int playerID, std::string subject, int assessmentId, int percentage, int mark, int dueTime, int dueDay, int dueWeek, int dueSemester)
 {
     this->ID = ID;
     this->playerID = playerID;
@@ -26,6 +30,10 @@ AssessmentModel::AssessmentModel(int ID, int playerID, std::string subject, int 
     this->assessmentId = assessmentId;
     this->percentage = percentage;
     this->mark = mark;
+    this->dueDay = dueDay;
+    this->dueWeek = dueWeek;
+    this->dueSemester = dueSemester;
+    this->dueTime = dueTime;
 }
 
 /********************************
@@ -62,6 +70,26 @@ int AssessmentModel::getMark()
     return this->mark;
 }
 
+int AssessmentModel::getDueTime()
+{
+    return this->dueTime;
+}
+
+int AssessmentModel::getdueDay()
+{
+    return this->dueDay;
+}
+
+int AssessmentModel::getDueWeek()
+{
+    return this->dueWeek;
+}
+
+int AssessmentModel::getDueSemester()
+{
+    return this->dueSemester;
+}
+
 /********************************
             Setters
  *******************************/
@@ -94,4 +122,24 @@ void AssessmentModel::setPercentage(int percentage)
 void AssessmentModel::setMark(int mark)
 {
     this->mark = mark;
+}
+
+void AssessmentModel::setDueTime(int dueTime)
+{
+    this->dueTime = dueTime;
+}
+
+void AssessmentModel::setDueDay(int dueDay)
+{
+    this->dueDay = dueDay;
+}
+
+void AssessmentModel::setDueWeek(int dueWeek)
+{
+    this->dueWeek = dueWeek;
+}
+
+void AssessmentModel::setDueSemester(int dueSemester)
+{
+    this->dueSemester = dueSemester;
 }
