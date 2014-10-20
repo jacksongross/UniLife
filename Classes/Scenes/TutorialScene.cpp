@@ -80,36 +80,22 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-<<<<<<< HEAD
     int faculNum;
-=======
-    
-    auto startBG = Sprite::create("placeholder_background.png");
-    startBG->setPosition(Vec2(BG->getPositionX(),BG->getPositionY()));
-    this->removeChildByName("startBG");
-    this->addChild(startBG,0);
->>>>>>> FETCH_HEAD
 
     
     switch(whichpage){
         case 0:{
             TalkText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
             TalkText->setString("I Am your guide for Orientation Week and will \nhelp you become familiar with your studies at university");
-<<<<<<< HEAD
              whichpage++;
-=======
             break;
->>>>>>> FETCH_HEAD
         }
         case 1:{
             string tmp = "You are currently Enrolled In ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
-<<<<<<< HEAD
              whichpage++;
-=======
             break;
->>>>>>> FETCH_HEAD
         }
         case 2:{
             string tmp = "This is Your Phone, It has much of the information needed\n to live comfortably at university. You can tap it\n at any time during gameplay to bring up the menu ";
@@ -119,22 +105,14 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             highlighter->setVisible(true);
             auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
             highlighter->runAction(action);
-<<<<<<< HEAD
             whichpage++;
         }
-=======
->>>>>>> FETCH_HEAD
             break;
-        }
         case 3:{
             string tmp = "It Contains Important Information such as Player Statistics\n Your Objectives, Timetable and Course Progress,  ";
             tmp.append(newplayer.getDegree());
             TalkText->setString(tmp);
-<<<<<<< HEAD
             whichpage++;
-        }
-=======
->>>>>>> FETCH_HEAD
             break;
         }
         case 4:{
@@ -184,27 +162,27 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         }case 8:{
             TalkText->setString("Arts...");
             OtherText->setString("Tap The Screen To Continue");
-            TutorialController::loadMap(this, visibleSize, origin,1, 3);
+            TutorialController::loadMap(this, visibleSize, origin,1);
             break;
         }case 9:{
             TalkText->setString("Social Science...");
             OtherText->setString("Tap The Screen To Continue");
-            TutorialController::loadMap(this, visibleSize, origin,2, 3);
+            TutorialController::loadMap(this, visibleSize, origin,2);
             break;
         }case 10:{
             TalkText->setString("Business...");
             OtherText->setString("Tap The Screen To Continue");
-            TutorialController::loadMap(this, visibleSize, origin,3, 3);
+            TutorialController::loadMap(this, visibleSize, origin,3);
             break;
         }case 11:{
             TalkText->setString("Science and Medicine...");
             OtherText->setString("Tap The Screen To Continue");
-            TutorialController::loadMap(this, visibleSize, origin,4, 3);
+            TutorialController::loadMap(this, visibleSize, origin,4);
             break;
         }case 12:{
             TalkText->setString("and Computers and Engineering!");
             OtherText->setString("Tap The Screen To Continue");
-            TutorialController::loadMap(this, visibleSize, origin,5, 3);
+            TutorialController::loadMap(this, visibleSize, origin,5);
             break;
         }case 13:{
             TalkText->setString("Your Faculty Buidling is Highlighted");
@@ -215,23 +193,12 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
             OtherText->setVisible(false);
             legodude->setVisible(false);
             sBubble->setVisible(false);
-<<<<<<< HEAD
-            
             srand(time(NULL)); // Seed the time
             int faculNum = rand()%(5-1)+1; // Generate the number, assign to variable.
-            
-            
             TutorialController::loadMap(this, visibleSize, origin,faculNum);
             whichpage++;
             break;
-        }case 9:{
-             TutorialController::loadFaculty(this, visibleSize, origin,faculNum);
-            
-=======
-
->>>>>>> FETCH_HEAD
-        }
-        default:{
+        }default:{
             log("NUNYAFUCKINGBUSINESSMATE");
             
         }

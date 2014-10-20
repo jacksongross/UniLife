@@ -77,12 +77,7 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     otherText->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y -150 ));
     otherText->setColor(Color3B::BLACK);
     otherText->setName("OtherText");
-<<<<<<< HEAD
     that->addChild(otherText, 10);
-    
-=======
-    that->addChild(otherText, 2);
->>>>>>> FETCH_HEAD
 
     
     auto phoneButton = cocos2d::Sprite::create("phone_button.png");
@@ -152,11 +147,10 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
 //Set code for going into faculty building
 //GoToSciMed->addTouchEventListener(CC_CALLBACK_2(TutorialController::FacultyPressed, that));
 
-void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int buildingID, int whichone)
+void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone)
 {
     Rect newRect;
     auto highlighter = (Sprite*)that->getChildByName("highlighter");
-<<<<<<< HEAD
     
     if(whichone == 1){
         Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
@@ -175,152 +169,55 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
         highlighter->runAction(action);
 
     }else if(whichone == 2){
+        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
         
-=======
-    auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-    
-    if(buildingID == 1){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185);
-        auto GoToArt = ui::Button::create("map-art.png");
-        //GoToArt->addTouchEventListener(CC_CALLBACK_2(TutorialController::FacultyPressed, that));
-        GoToArt->setPosition(newLoc);
-        GoToArt->setScale(0.8);
-        that->addChild(GoToArt,4);
+        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
+        GoToEIS->setPosition(newLoc);
+        GoToEIS->setScale(0.8);
+        that->addChild(GoToEIS,5);
         
-        if(whichone == 1) {
-            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToArt->getContentSize().width + 20, GoToArt->getContentSize().height + 20);
-            highlighter->setTextureRect(newRect);
-            highlighter->setVisible(true);
-            highlighter->setScale(0.8);
-            highlighter->setPosition(newLoc);
-            highlighter->runAction(action);
-        }
-        
-    }else if(buildingID == 2){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60);
-        auto GoToSocSci = ui::Button::create("map-social_science.png");
-        GoToSocSci->setPosition(newLoc);
-        GoToSocSci->setScale(0.8);
-        that->addChild(GoToSocSci,4);
-        
-        if(whichone == 2) {
-            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSocSci->getContentSize().width + 20, GoToSocSci->getContentSize().height + 20);
-            highlighter->setTextureRect(newRect);
-            highlighter->setVisible(true);
-            highlighter->setScale(0.8);
-            highlighter->setPosition(newLoc);
-            highlighter->runAction(action);
-        }
-    }else if(buildingID == 3){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105);
-        auto GoToBus = ui::Button::create("map-business.png");
-        GoToBus->setPosition(newLoc);
-        GoToBus->setScale(0.8);
-        that->addChild(GoToBus,4);
-        
-        if(whichone == 3) {
-            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToBus->getContentSize().width + 20, GoToBus->getContentSize().height + 20);
-            highlighter->setTextureRect(newRect);
-            highlighter->setVisible(true);
-            highlighter->setScale(0.8);
-            highlighter->setPosition(newLoc);
-            highlighter->runAction(action);
-        }
-    }else if(buildingID == 4){
->>>>>>> FETCH_HEAD
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180);
-        auto GoToSciMed = ui::Button::create("map-science_medicine.png");
-        GoToSciMed->setPosition(newLoc);
-        GoToSciMed->setScale(0.8);
-        that->addChild(GoToSciMed,5);
-        
-<<<<<<< HEAD
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSciMed->getContentSize().width + 20, GoToSciMed->getContentSize().height + 20);
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
         highlighter->setTextureRect(newRect);
         highlighter->setVisible(true);
         highlighter->setScale(0.8);
         highlighter->setPosition(newLoc);
         auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
         highlighter->runAction(action);
-
     }else if(whichone == 3){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185);
-        auto GoToArt = ui::Button::create("map-art.png");
-        GoToArt->setPosition(newLoc);
-        GoToArt->setScale(0.9);
-        that->addChild(GoToArt,5);
+        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
         
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToArt->getContentSize().width + 20, GoToArt->getContentSize().height + 20);
+        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
+        GoToEIS->setPosition(newLoc);
+        GoToEIS->setScale(0.8);
+        that->addChild(GoToEIS,5);
+        
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
         highlighter->setTextureRect(newRect);
         highlighter->setVisible(true);
-        highlighter->setScale(0.9);
+        highlighter->setScale(0.8);
         highlighter->setPosition(newLoc);
         auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
         highlighter->runAction(action);
         
     }else if(whichone == 4){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60);
-        auto GoToSocSci = ui::Button::create("map-social_science.png");
-        GoToSocSci->setPosition(newLoc);
-        GoToSocSci->setScale(0.9);
-        that->addChild(GoToSocSci,5);
-        
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSocSci->getContentSize().width + 20, GoToSocSci->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.9);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
-        
-    }else if(whichone == 5){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105);
-        auto GoToBuis = ui::Button::create("map-business.png");
-        GoToBuis->setPosition(newLoc);
-        GoToBuis->setScale(0.9);
-        that->addChild(GoToBuis,5);
-        
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToBuis->getContentSize().width + 20, GoToBuis->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.9);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
-=======
-        if(whichone == 4) {
-            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToSciMed->getContentSize().width + 20, GoToSciMed->getContentSize().height + 20);
-            highlighter->setTextureRect(newRect);
-            highlighter->setVisible(true);
-            highlighter->setScale(0.8);
-            highlighter->setPosition(newLoc);
-            highlighter->runAction(action);
-        }
-        
-    }else if(buildingID == 5){
         Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
+        
         auto GoToEIS = ui::Button::create("map-computing_engineering.png");
         GoToEIS->setPosition(newLoc);
         GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,4);
+        that->addChild(GoToEIS,5);
         
-        if(whichone == 5) {
-            newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
-            highlighter->setTextureRect(newRect);
-            highlighter->setVisible(true);
-            highlighter->setScale(0.8);
-            highlighter->setPosition(newLoc);
-            highlighter->runAction(action);
-        }
->>>>>>> FETCH_HEAD
+        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
+        highlighter->setTextureRect(newRect);
+        highlighter->setVisible(true);
+        highlighter->setScale(0.8);
+        highlighter->setPosition(newLoc);
+        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+        highlighter->runAction(action);
         
-    }else{
-        log("Invalid Faculty");
     }
     
 }
-
-<<<<<<< HEAD
 
 
 void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone)
@@ -336,9 +233,9 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
     
     
 }
-=======
-void TutorialController::FacultyPressed(cocos2d::Ref *pSender, ui::Widget::TouchEventType eEventType)
-{
+
+/*void TutorialController::FacultyPressed(cocos2d::Ref *pSender, ui::Widget::TouchEventType eEventType)
+/{
     log("faculty building pressed");
     //change sound effect for faculty press
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
@@ -351,4 +248,4 @@ void TutorialController::FacultyPressed(cocos2d::Ref *pSender, ui::Widget::Touch
     Director::getInstance()->replaceScene(crosssfade);
     
 }
->>>>>>> FETCH_HEAD
+*/
