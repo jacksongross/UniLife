@@ -8,7 +8,8 @@
 
 #include "Movement.h"
 #include <string>
-
+#include "cocos2d.h"
+USING_NS_CC;
 // GLOBALS FOR THE SPRITES USED FOR MOVEMENT/////////
 cocos2d::Vector<cocos2d::SpriteFrame*> animFrames(4);
 cocos2d::SpriteBatchNode *spritesheet;
@@ -26,7 +27,8 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
         std::string file = "walk";
         file.append(std::to_string(i));
         file.append(".png");
-        
+        log("THIS IS FILE: %d",i);
+        log("%s",file.c_str());
         auto frame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(file);
         animFrames.pushBack(frame);
     }

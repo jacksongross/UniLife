@@ -33,6 +33,7 @@ Scene* MenuNewGame::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
     
+    
     // return the scene
     return scene;
 }
@@ -50,6 +51,7 @@ bool MenuNewGame::init()
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
     
     // create the main menu
     MenuNewGameController::CreateMainMenu(this, visibleSize, origin);
@@ -86,7 +88,12 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
         }
         
         PlayerStatsModel tmp;
-        
+        this->players = SqlHelper::getAllPlayers();
+        log("Newplayer size %d" ,(int)players.size());
+        if(players.size() == 0){
+            newplayer.setId(1);
+        }
+
         newplayer.setName(g_PNAME);
         tmp = newplayer.getStats();
         tmp.setIntelligence(g_PINT);

@@ -30,6 +30,7 @@ public:
     
     // creates the main menu
     static void CreateMainMenu(MenuNewGame *that, Size visibleSize, Vec2 origin);
+
     
 };
 

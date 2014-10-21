@@ -20,6 +20,7 @@ USING_NS_CC;
 cocos2d::Vector<cocos2d::MenuItem*> MenuNewGameController::CreateMenuButtons(MenuNewGame *that, Size visibleSize, Vec2 origin)
 {
     
+    
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     

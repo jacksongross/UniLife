@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include "ui/CocosGUI.h"
+#include "PlayerModel.h"
 using namespace cocos2d::extension;
 
 
@@ -32,6 +33,8 @@ public:
     void socSliderChange(Ref* pSender, cocos2d::ui::Slider::EventType type);
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
+    std::vector<PlayerModel> players;
+    
     // implement the "static create()" method manually
     CREATE_FUNC(MenuNewGame);
     
