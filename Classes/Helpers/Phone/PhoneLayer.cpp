@@ -170,12 +170,19 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     playerLayer->setName("playerlayer");
     auto bg = cocos2d::Sprite::create("phone_selection.png");
     bg->setScale(4);
+    
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
+    playerLayer->setContentSize(Size(400, 300));
+    
+    log("width: %f, height: %f", playerLayer->getContentSize().width, playerLayer->getContentSize().height);
+    
+    Size lSize = playerLayer->getContentSize();
+    
     auto playersprite = cocos2d::Sprite::create("Fred.png");
     
-    playersprite->setPosition(cocos2d::Vec2(visibleSize.width * .20, visibleSize.height * 0.55));
+    playersprite->setPosition(cocos2d::Vec2(lSize.width * .20, lSize.height * 0.55));
     
     
     //current mood = (100 - stress) + energy)) / 2
@@ -207,15 +214,19 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     moodLabel->setContentSize(Size(380, 400));
     moodLabel->setTextHorizontalAlignment(TextHAlignment::CENTER);
     
-    moodLabel->setPosition(Vec2(visibleSize.width * .60, visibleSize.height * 0.45));
+    moodLabel->setPosition(Vec2(lSize.width * .60, lSize.height * 0.45));
     
-    this->addChild(playersprite, 10);
     
-    this->addChild(moodLabel, 10);
+    
+    
+    playerLayer->addChild(playersprite);
+    playerLayer->addChild(moodLabel);
+    
+    //this->addChild(playersprite, 10);
+    
+    //this->addChild(moodLabel, 10);
     
     this->addChild(playerLayer);
-    
-    
     
 }
 
@@ -236,10 +247,6 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
     cocos2d::log("pressed the objectives button");
-    
-    //current mood = (100 - stress) + energy)) / 2
-    double mood = ((100 - pm.getStats().getStress()) + pm.getStats().getEnergy()) / 2;
-    cocos2d::log("current mood: %f", mood);
     
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
@@ -269,10 +276,6 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
     
     cocos2d::log("pressed the subject button");
     
-    //current mood = (100 - stress) + energy)) / 2
-    double mood = ((100 - pm.getStats().getStress()) + pm.getStats().getEnergy()) / 2;
-    cocos2d::log("current mood: %f", mood);
-    
     // create the default panel for opening the phone
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
@@ -280,8 +283,6 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
     bg->setScale(4);
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
-    
-    
     
     this->addChild(playerLayer);
 }
@@ -303,10 +304,6 @@ void PhoneLayer::progressCallBack(Ref* pSender)
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
     cocos2d::log("pressed the progress button");
-    
-    //current mood = (100 - stress) + energy)) / 2
-    double mood = ((100 - pm.getStats().getStress()) + pm.getStats().getEnergy()) / 2;
-    cocos2d::log("current mood: %f", mood);
     
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
