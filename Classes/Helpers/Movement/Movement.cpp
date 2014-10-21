@@ -27,8 +27,6 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
         std::string file = "walk";
         file.append(std::to_string(i));
         file.append(".png");
-        log("THIS IS FILE: %d",i);
-        log("%s",file.c_str());
         auto frame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(file);
         animFrames.pushBack(frame);
     }

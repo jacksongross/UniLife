@@ -13,6 +13,7 @@
 #include "PlayerStatsModel.h"
 #include "TimeModel.h"
 #include "timeTableClassModel.h"
+#include "AttendanceModel.h"
 #include <ctime>
 class PlayerModel
 {
@@ -27,6 +28,7 @@ private:
     
     // player degree title
     std::string degree;
+    
     int degreeCode;
     
     // player stats
@@ -44,6 +46,9 @@ private:
     
     // array to hold assessments
     std::vector<AssessmentModel> assessments;
+    
+    // array to hold the attendance of each class
+    std::vector<AttendanceModel> attendance;
     
     // used to track game time
     time_t start;
@@ -76,6 +81,8 @@ public:
     
     std::vector<AssessmentModel> getAssessments();
     
+    std::vector<AttendanceModel> getAttendance();
+    
     
     /********************************
                 Setters
@@ -95,6 +102,8 @@ public:
     void setTimeTable(std::vector<timeTableClassModel> timetable);
     
     void setAssessments(std::vector<AssessmentModel> assessments);
+    
+    void setAttendance(std::vector<AttendanceModel> attendance);
     
 };
 

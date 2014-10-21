@@ -140,6 +140,7 @@
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
 		7AD8D78A19F60E8B00AF870C /* Bill in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8D78919F60E8B00AF870C /* Bill */; };
+		7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */; };
 		7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */; };
 		7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */; };
 		7ADE1F0619CE6F3200AEFF00 /* MyContactListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF919CE6F3200AEFF00 /* MyContactListener.cpp */; };
@@ -535,6 +536,8 @@
 		7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
 		7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "background-music-aac.wav"; sourceTree = "<group>"; };
 		7AD8D78919F60E8B00AF870C /* Bill */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bill; sourceTree = "<group>"; };
+		7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttendanceModel.cpp; sourceTree = "<group>"; };
+		7AD8D78D19F624F700AF870C /* AttendanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceModel.h; sourceTree = "<group>"; };
 		7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrickBreaker.cpp; sourceTree = "<group>"; };
 		7ADE1EF619CE6F3200AEFF00 /* BrickBreaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrickBreaker.h; sourceTree = "<group>"; };
 		7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverScene.cpp; sourceTree = "<group>"; };
@@ -1175,6 +1178,7 @@
 		7A89453E19ADAD23008E1EA7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7AD8D78B19F624D500AF870C /* Attendance */,
 				7AAC241A19E8C288007A8331 /* Assessment */,
 				7A89453819ADAD16008E1EA7 /* Time */,
 				7A89453F19ADAD23008E1EA7 /* Player */,
@@ -1433,6 +1437,15 @@
 				7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */,
 			);
 			path = NewCharacter;
+			sourceTree = "<group>";
+		};
+		7AD8D78B19F624D500AF870C /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */,
+				7AD8D78D19F624F700AF870C /* AttendanceModel.h */,
+			);
+			name = Attendance;
 			sourceTree = "<group>";
 		};
 		7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */ = {
@@ -2001,6 +2014,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,
 				B992952619F18DB700E3E5E4 /* QDMainMenuScene.cpp in Sources */,
+				7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */,
 				B992952519F18DB700E3E5E4 /* QDGameScene.cpp in Sources */,
 				7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */,
 				7A89456919ADAD23008E1EA7 /* MenuOptionScene.cpp in Sources */,

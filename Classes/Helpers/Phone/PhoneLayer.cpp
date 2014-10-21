@@ -167,23 +167,26 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     cocos2d::log("pressed the info button");
     
     auto playerLayer = cocos2d::Layer::create();
+    
     playerLayer->setName("playerlayer");
+    
     auto bg = cocos2d::Sprite::create("phone_selection.png");
+    
     bg->setScale(4);
+    
+    playerLayer->setContentSize(bg->getContentSize() * 4);
     
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
-    playerLayer->setContentSize(Size(400, 300));
     
-    log("width: %f, height: %f", playerLayer->getContentSize().width, playerLayer->getContentSize().height);
-    
-    Size lSize = playerLayer->getContentSize();
+    Size b = bg->getContentSize();
     
     auto playersprite = cocos2d::Sprite::create("Fred.png");
     
-    playersprite->setPosition(cocos2d::Vec2(lSize.width * .20, lSize.height * 0.55));
+    playersprite->setScale(playersprite->getScale() / 4);
     
+    playersprite->setPosition(b.width * 0.2, b.height * 0.55);
     
     //current mood = (100 - stress) + energy)) / 2
     int mood = ((100 - pm.getStats().getStress()) + pm.getStats().getEnergy()) / 2;
@@ -214,17 +217,11 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     moodLabel->setContentSize(Size(380, 400));
     moodLabel->setTextHorizontalAlignment(TextHAlignment::CENTER);
     
-    moodLabel->setPosition(Vec2(lSize.width * .60, lSize.height * 0.45));
+    moodLabel->setScale(moodLabel->getScale() / 4);
+    moodLabel->setPosition(Vec2(b.width * .60, b.height * 0.45));
     
-    
-    
-    
-    playerLayer->addChild(playersprite);
-    playerLayer->addChild(moodLabel);
-    
-    //this->addChild(playersprite, 10);
-    
-    //this->addChild(moodLabel, 10);
+    bg->addChild(playersprite);
+    bg->addChild(moodLabel);
     
     this->addChild(playerLayer);
     
@@ -249,12 +246,169 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
     cocos2d::log("pressed the objectives button");
     
     auto playerLayer = cocos2d::Layer::create();
+    
     playerLayer->setName("playerlayer");
+    
     auto bg = cocos2d::Sprite::create("phone_selection.png");
+    
     bg->setScale(4);
+    
+    playerLayer->setContentSize(bg->getContentSize() * 4);
+    
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
+    Size b = bg->getContentSize();
+    
+    auto subject = cocos2d::ui::Text::create("Subject", "Verdana", 50);
+    auto date = cocos2d::ui::Text::create("Date", "Verdana", 50);
+    auto time = cocos2d::ui::Text::create("Time", "Verdana", 50);
+    
+    subject->ignoreContentAdaptWithSize(false);
+    subject->setColor(Color3B(0, 0, 0));
+    subject->setTextHorizontalAlignment(TextHAlignment::CENTER);
+    
+    date->ignoreContentAdaptWithSize(false);
+    date->setColor(Color3B(0, 0, 0));
+    date->setTextHorizontalAlignment(TextHAlignment::CENTER);
+    
+    time->ignoreContentAdaptWithSize(false);
+    time->setColor(Color3B(0, 0, 0));
+    time->setTextHorizontalAlignment(TextHAlignment::CENTER);
+    
+    subject->setScale(subject->getScale() / 4);
+    subject->setPosition(Vec2(b.width * .2, b.height * 0.9));
+    
+    date->setScale(date->getScale() / 4);
+    date->setPosition(Vec2(b.width * .5, b.height * 0.9));
+    
+    time->setScale(time->getScale() / 4);
+    time->setPosition(Vec2(b.width * .8, b.height * 0.9));
+    
+    bg->addChild(subject);
+    bg->addChild(date);
+    bg->addChild(time);
+    
+    std::vector<AssessmentModel> am = pm.getAssessments();
+    std::vector<AssessmentModel> dueList;
+    
+    TimeModel tm = pm.getGameTime();
+    
+    for(int i = 0; i < am.size(); i++)
+    {
+        // if in the current session
+        if(am[i].getDueSemester() == tm.getSemester())
+        {
+            // if theres an assignment due within 2 weeks
+            if((am[i].getDueWeek() - tm.getWeek()) <= 2)
+            {
+                dueList.push_back(am[i]);
+            }
+        }
+    }
+    //create some objective labels with their due dates
+    
+    float padding = 0.7;
+    
+    for(int i = 0; i < dueList.size(); i++)
+    {
+        string subj = dueList[i].getSubject();
+        
+        string d = "";
+        
+        int day = dueList[i].getdueDay();
+        
+        switch(day)
+        {
+            case 1:
+            {
+                d.append("Monday");
+                break;
+            }
+                
+            case 2:
+            {
+                d.append("Tuesday");
+                break;
+            }
+                
+            case 3:
+            {
+                d.append("Wednesday");
+                break;
+            }
+                
+            case 4:
+            {
+                d.append("Thursday");
+                break;
+            }
+                
+            case 5:
+            {
+                d.append("Friday");
+                break;
+            }
+                
+            case 6:
+            {
+                d.append("Saturday");
+                break;
+            }
+                
+            case 7:
+            {
+                d.append("Sunday");
+                break;
+            }
+        };
+        
+        
+        d.append(", Week ");
+        d.append(to_string(dueList[i].getDueWeek()));
+        string t = to_string(dueList[i].getDueTime());
+        
+        if(dueList[i].getDueTime() > 11.5)
+        {
+            t.append(":00pm");
+        }
+        else
+        {
+            t.append(":00am");
+        }
+        
+        auto subject = cocos2d::ui::Text::create(subj, "Verdana", 32);
+        auto date = cocos2d::ui::Text::create(d, "Verdana", 32);
+        auto time = cocos2d::ui::Text::create(t, "Verdana", 32);
+        
+        subject->ignoreContentAdaptWithSize(false);
+        subject->setColor(Color3B(0, 0, 0));
+        subject->setTextHorizontalAlignment(TextHAlignment::CENTER);
+        
+        date->ignoreContentAdaptWithSize(false);
+        date->setColor(Color3B(0, 0, 0));
+        date->setTextHorizontalAlignment(TextHAlignment::CENTER);
+        
+        time->ignoreContentAdaptWithSize(false);
+        time->setColor(Color3B(0, 0, 0));
+        time->setTextHorizontalAlignment(TextHAlignment::CENTER);
+        
+        subject->setScale(subject->getScale() / 4);
+        subject->setPosition(Vec2(b.width * .2, b.height * padding));
+        
+        date->setScale(date->getScale() / 4);
+        date->setPosition(Vec2(b.width * .5, b.height * padding));
+        
+        time->setScale(time->getScale() / 4);
+        time->setPosition(Vec2(b.width * .8, b.height * padding));
+        
+        bg->addChild(subject, 5);
+        bg->addChild(date, 5);
+        bg->addChild(time, 5);
+        
+        padding -= 0.1;
+    }
+
     this->addChild(playerLayer);
 }
 

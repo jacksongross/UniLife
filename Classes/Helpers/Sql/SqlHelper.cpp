@@ -91,6 +91,18 @@ void SqlHelper::initDatabase()
     else
         log("create table marks success!");
     
+    sql = "CREATE TABLE IF NOT EXISTS attendance(ID INTEGER primary key autoincrement, playerid INTEGER, subject text, count text)";
+    
+    sqlite3_prepare(db, sql.c_str(), static_cast<unsigned int>(sql.size()), &createStmt, NULL);
+    
+    result = sqlite3_step(createStmt);
+    
+    if(result!=SQLITE_DONE)
+        log("create table attendance failed");
+    else
+        log("create table attendance success!");
+    
+    
         // close the database
     SqlHelper::closeDatabase(db);
     
@@ -151,7 +163,7 @@ int SqlHelper::serialize(PlayerModel &p)
     
     // get the newly saved player's id so autosave can function
     // from here on out
-    int playerId = sqlite3_last_insert_rowid(db);
+    int playerId = (int) sqlite3_last_insert_rowid(db);
     
     log("\nPlayerID: %d", playerId);
     
@@ -202,7 +214,7 @@ void SqlHelper::autosave(PlayerModel p)
 }
 
 
-void SqlHelper::saveAssessments(PlayerModel player)
+void SqlHelper::saveAssessments(PlayerModel &player)
 {
     std::string sql;
     
@@ -225,7 +237,13 @@ void SqlHelper::saveAssessments(PlayerModel player)
             sqlite3_step(Stmnt);
             sqlite3_finalize(Stmnt);
         }
+        
+        int assignmentID = (int) sqlite3_last_insert_rowid(db);
+        
+        assessments[i].setID(assignmentID);
     }
+    
+    player.setAssessments(assessments);
     
     log("saved subject marks!");
     
@@ -253,7 +271,7 @@ void SqlHelper::updateAssessments(PlayerModel player)
     {
         std::stringstream strm;
         
-        strm << "UPDATE marks SET mark = " << assessments[i].getMark() << " WHERE id = " << player.getId();
+        strm << "UPDATE marks SET mark = " << assessments[i].getMark() << " WHERE ID = " << assessments[i].getID();
         
         sql = strm.str();
         
@@ -266,6 +284,87 @@ void SqlHelper::updateAssessments(PlayerModel player)
     }
     
     log("updated player's marks!");
+    
+    SqlHelper::closeDatabase(db);
+}
+
+// save the attendance records
+void SqlHelper::saveAttendance(PlayerModel &player)
+{
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    std::vector<AttendanceModel> attendance = player.getAttendance();
+    
+    for(int i = 0; i < attendance.size(); i++)
+    {
+        std::stringstream strm;
+        
+        strm << "INSERT INTO attendance (playerid, subject, count) VALUES(" << player.getId() << ",'" << attendance[i].getSubject() << "','" << attendance[i].getCount() << "')";
+        
+        sql = strm.str();
+        
+        log(sql.c_str());
+        
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+        {
+            sqlite3_step(Stmnt);
+            sqlite3_finalize(Stmnt);
+        }
+        
+        int attendanceID = (int) sqlite3_last_insert_rowid(db);
+        
+        attendance[i].setID(attendanceID);
+
+    }
+    
+    player.setAttendance(attendance);
+    
+    log("saved attendance!");
+    
+    SqlHelper::closeDatabase(db);
+    
+}
+
+// update the attendance records
+void SqlHelper::updateAttendance(PlayerModel player)
+{
+    // set the db pointer to null ready for a query
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    // used to create the query
+    std::string sql;
+    
+    // store sqlite result
+    int result;
+    
+    // create statement with this
+    sqlite3_stmt *Stmt;
+    
+    std::vector<AttendanceModel> attendance = player.getAttendance();
+    
+    for(int i = 0; i < attendance.size(); i++)
+    {
+        std::stringstream strm;
+        
+        strm << "UPDATE attendance SET count = '" << attendance[i].getCount() << "' WHERE ID = " << attendance[i].getID();
+        
+        sql = strm.str();
+        
+        log(sql.c_str());
+        
+        if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmt, NULL ) == SQLITE_OK)
+        {
+            int res=sqlite3_step(Stmt);
+            result=res;
+            sqlite3_finalize(Stmt);
+        }
+    }
+    
+    log("updated player's attendance!");
     
     SqlHelper::closeDatabase(db);
 }
@@ -356,6 +455,10 @@ std::vector<PlayerModel> SqlHelper::getAllPlayers()
 
     }
     
+    for(int i = 0; i < playersList.size(); i++)
+    {
+        playersList[i].setAttendance(SqlHelper::getAttendance(playersList[i].getId()));
+    }
     
     
     // close the database
@@ -462,7 +565,61 @@ PlayerModel SqlHelper::getPlayer(int playerId)
     // close the database
     SqlHelper::closeDatabase(db);
     
+    p.setAttendance(SqlHelper::getAttendance(p.getId()));
+    
     return p;
+}
+
+std::vector<AttendanceModel> SqlHelper::getAttendance(int playerid)
+{
+    std::string sql;
+    
+    sqlite3_stmt *Stmnt;
+    
+    sqlite3 *db = SqlHelper::openDatabase("save.db");
+    
+    // check to see if it is saving correctly
+    sql =  "select * from attendance where playerid = ";
+    sql.append(std::to_string(playerid));
+    
+    log(sql.c_str());
+    
+    std::vector<AttendanceModel> am;
+    
+    if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
+    {
+        int res = 0;
+        
+        while ( 1 )
+        {
+            res = sqlite3_step(Stmnt);
+            
+            // id, subject, count
+            
+            if ( res == SQLITE_ROW )
+            {
+                int ID = sqlite3_column_int(Stmnt, 0);
+                std::string subject = (char*) sqlite3_column_text(Stmnt, 2);
+                std::string countStr = (char*) sqlite3_column_text(Stmnt, 3);
+                double count = atof(countStr.c_str());
+                
+                AttendanceModel a(ID, count, subject);
+                
+                am.push_back(a);
+            }
+            
+            if ( res == SQLITE_DONE || res==SQLITE_ERROR)
+            {
+                break;
+            }
+        }
+    }
+    
+    // close the database
+    SqlHelper::closeDatabase(db);
+    
+    return am;
+    
 }
 
 void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, PlayerStatsModel &s, TimeModel &t)
@@ -492,7 +649,8 @@ void SqlHelper::buildPlayerObjectFromDb(sqlite3_stmt *Stmnt, PlayerModel &p, Pla
     
 }
 
-std::vector<std::string> SqlHelper::getDegrees(){
+std::vector<std::string> SqlHelper::getDegrees()
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     std::string sql=  "select * from Degree;";
@@ -530,7 +688,8 @@ std::vector<std::string> SqlHelper::getDegrees(){
     
 }
 
-std::vector<std::string> SqlHelper::getDegrees(std::string faculty){
+std::vector<std::string> SqlHelper::getDegrees(std::string faculty)
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     std::string sql = "select * from Degree where faculty='";
@@ -570,7 +729,8 @@ std::vector<std::string> SqlHelper::getDegrees(std::string faculty){
     
 }
 
-int SqlHelper::getDegreeCode(std::string dname){
+int SqlHelper::getDegreeCode(std::string dname)
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     std::string sql=  "select dcode from Degree where dname=\'" +dname+"\';";
@@ -608,7 +768,8 @@ int SqlHelper::getDegreeCode(std::string dname){
     
 }
 
-std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
+std::vector<std::string> SqlHelper::getClasses(int degnum, int semester)
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     
@@ -653,7 +814,8 @@ std::vector<std::string> SqlHelper::getClasses(int degnum, int semester){
 }
 
 
-std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string> code){
+std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string> code)
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     std:vector<subjectBlockClassModel> sList;
@@ -710,7 +872,8 @@ std::vector<subjectBlockClassModel> SqlHelper::getBlocks(std::vector<std::string
 
 }
 
-std::vector<AssessmentModel> SqlHelper::getAssignments(std::string code){
+std::vector<AssessmentModel> SqlHelper::getAssignments(std::string code)
+{
     
     sqlite3 *db = openDatabase("acadamia.db");
     

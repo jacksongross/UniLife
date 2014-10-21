@@ -42,10 +42,16 @@ public:
     static void autosave(PlayerModel player);
     
     // saves the player's marks
-    static void saveAssessments(PlayerModel player);
+    static void saveAssessments(PlayerModel &player);
     
     // updates the player's marks
     static void updateAssessments(PlayerModel player);
+    
+    // save the attendance records
+    static void saveAttendance(PlayerModel &player);
+    
+    // update the attendance records
+    static void updateAttendance(PlayerModel player);
     
     // get list of all players
     static std::vector<PlayerModel> getAllPlayers();
@@ -69,8 +75,11 @@ public:
     
     static std::vector<subjectBlockClassModel> getBlocks(std::vector<std::string> code);
     
-    //gets assignments for one subject
+    // gets assignments for one subject
     static std::vector<AssessmentModel> getAssignments(std::string code);
+    
+    // attendance for a player
+    static std::vector<AttendanceModel> getAttendance(int playerid);
    
     static std::vector<std::string> getFaculties();
     

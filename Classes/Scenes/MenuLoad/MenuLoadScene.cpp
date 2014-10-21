@@ -150,6 +150,8 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
     
     pm.setAssessments(player.getAssessments());
     
+    pm.setAttendance(player.getAttendance());
+    
     pm.setId(player.getId());
     
     // load the HUD player

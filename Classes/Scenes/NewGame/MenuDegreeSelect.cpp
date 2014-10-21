@@ -140,7 +140,7 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     {
         std::vector<subjectBlockClassModel> sb = timetable[i].getClassQueue();
         
-        for(int j = 0; j < sb.size(); j++)
+        for(int j = 0; j < sb.size(); j+= 3)
         {
             std::vector<AssessmentModel> am = sb[j].getAssessments();
             

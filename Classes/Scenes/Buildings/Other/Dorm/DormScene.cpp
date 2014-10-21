@@ -76,6 +76,13 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     log("ENERGY: %d" , inplayer.getStats().getEnergy());
     log("STRESS: %d", inplayer.getStats().getStress());
     
+    std::vector<AttendanceModel> am = inplayer.getAttendance();
+    
+    for(int i = 0; i < am.size(); i++)
+    {
+        cout << am[i].getID() << " " << am[i].getSubject() << " " << am[i].getCount() << endl;
+    }
+    
     // load the character
     Movement::loadSpriteFrames(scene);
     

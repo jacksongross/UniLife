@@ -34,6 +34,20 @@ PlayerModel::PlayerModel(std::string name, std::string degree, PlayerStatsModel 
         timeTableClassModel t(SqlHelper::getDegreeCode(degree), i + 1);
         this->timetable.push_back(t);
     }
+    
+    for(int i = 0; i < this->timetable.size(); i++)
+    {
+        std::vector<subjectBlockClassModel> sb = this->timetable[i].getClassQueue();
+        
+        for(int j = 0; j < sb.size(); j+=3)
+        {
+            std::string name = sb[j].getNameString();
+            
+            AttendanceModel am(0, name);
+            
+            attendance.push_back(am);
+        }
+    }
 }
 
 /********************************
@@ -80,6 +94,11 @@ std::vector<AssessmentModel> PlayerModel::getAssessments()
     return this->assessments;
 }
 
+std::vector<AttendanceModel> PlayerModel::getAttendance()
+{
+    return this->attendance;
+}
+
 /********************************
             Setters
  *******************************/
@@ -121,4 +140,9 @@ void PlayerModel::setTimeTable(std::vector<timeTableClassModel> timetable)
 void PlayerModel::setAssessments(std::vector<AssessmentModel> assessments)
 {
     this->assessments = assessments;
+}
+
+void PlayerModel::setAttendance(std::vector<AttendanceModel> attendance)
+{
+    this->attendance = attendance;
 }

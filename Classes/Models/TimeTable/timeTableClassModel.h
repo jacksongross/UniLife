@@ -28,6 +28,7 @@ private:
     int totalTimeInt;
     int currentTimeInt;
     int currentDayInt;
+    
    // subjectBlockClassModel** timetableClassArray; //[day][time]
     map<unsigned int, subjectBlockClassModel> classTable;
     int degreeCode;
