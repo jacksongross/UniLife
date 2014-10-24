@@ -20,7 +20,7 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
 {
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     
-    spritesheet = cocos2d::SpriteBatchNode::create("walk.png");
+    spritesheet = cocos2d::SpriteBatchNode::create("Bill/walk.png");
     
     for(int i = 1; i <= 5; i++)
     {
