@@ -413,13 +413,17 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
         time->setColor(Color3B(0, 0, 0));
         time->setTextHorizontalAlignment(TextHAlignment::CENTER);
         
-        subject->setScale(subject->getScale() / 4);
+        
+        subject->setScaleX(subject->getScaleX() / bg->getScaleX());
+        subject->setScaleY(subject->getScaleY() / bg->getScaleY());
         subject->setPosition(Vec2(b.width * .2, b.height * padding));
         
-        date->setScale(date->getScale() / 4);
+        date->setScaleX(date->getScaleX() / bg->getScaleX());
+        date->setScaleY(date->getScaleY() / bg->getScaleY());
         date->setPosition(Vec2(b.width * .5, b.height * padding));
         
-        time->setScale(time->getScale() / 4);
+        time->setScaleX(time->getScaleX() / bg->getScaleX());
+        time->setScaleY(time->getScaleY() / bg->getScaleY());
         time->setPosition(Vec2(b.width * .8, b.height * padding));
         
         bg->addChild(subject, 5);
