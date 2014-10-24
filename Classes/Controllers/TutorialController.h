@@ -30,7 +30,12 @@ public:
     // creates the main menu
     static void CreateMainMenu(TutorialScene *that, Size visibleSize, Vec2 origin);
     static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
+    //static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
     static void loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
+    static void createHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active);
+    static void removeHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active);
+    static void createHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active);
+    static void removeHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active);
 };
 
 

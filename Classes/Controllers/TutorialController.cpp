@@ -25,6 +25,8 @@ cocos2d::Vector<cocos2d::MenuItem*> TutorialController::CreateMenuButtons(Tutori
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     
+    
+    
     return pMenuItems;
     
 }
@@ -43,14 +45,24 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     that->addChild(menu, 2);
     
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("New-Game-background.png");
+    auto sprite = Sprite::create("placeholder_background.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-    sprite->setName("mapBG");
+    sprite->setName("phBG");
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
 
+    
+    auto mapBG = Sprite::create("map_background.png");
+    
+    // position the sprite on the center of the screen
+    mapBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    mapBG->setName("mapBG");
+    mapBG->setVisible(false);
+    // add the sprite as a child to this layer
+    that->addChild(mapBG, 0);
+    
     
     auto legoface = Sprite::create("legoDude.png");
     legoface->setPosition(Vec2(visibleSize.width/2 + origin.x - 425, visibleSize.height/2 + origin.y - 200));
@@ -86,62 +98,69 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     phoneButton->setVisible(false);
     that->addChild(phoneButton,4);
     
-    auto highlighter = Sprite::create();
-    highlighter->setColor(Color3B::BLUE);
-    highlighter->setOpacity(90);
-    Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, phoneButton->getContentSize().width + 25, phoneButton->getContentSize().height + 25);
-    highlighter->setTextureRect(newRect);
-    highlighter->setVisible(false);
-    highlighter->setPosition(Vec2(cocos2d::Vec2(visibleSize.width * .90, visibleSize.height * .85)));
-    highlighter->setName("highlighter");
-    that->addChild(highlighter, 3);
 
     auto mapButton = cocos2d::ui::Button::create("Map-marker.png");
     mapButton->setPosition(cocos2d::Vec2(visibleSize.width * .75, visibleSize.height * .85));
     mapButton->setScale(0.8);
     mapButton->setTouchEnabled(false);
-    mapButton->setName("mapbutton");
     mapButton->setVisible(false);
+    mapButton->setName("mapbutton");
+    mapButton->addTouchEventListener(CC_CALLBACK_2(TutorialScene::compassPress, that));
     that->addChild(mapButton,4);
     
-    auto placeholder1 = cocos2d::Sprite::create("map-computing_engineering.png");
-    placeholder1->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
-    placeholder1->setScale(0.8);
-    placeholder1->setName("ph1");
-    placeholder1->setVisible(false);
-    that->addChild(placeholder1,4);
+    auto GoToEIS = ui::Button::create("map-computing_engineering.png");
+    GoToEIS->setName("fac5");
+    GoToEIS->setPosition(Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75));
+    GoToEIS->addTouchEventListener(CC_CALLBACK_2(TutorialScene::buildingPress, that));
+    GoToEIS->setScale(0.8);
+    GoToEIS->setVisible(false);
+    GoToEIS->setTouchEnabled(false);
+    that->addChild(GoToEIS,5);
     
-    auto placeholder2 = cocos2d::Sprite::create("map-science_medicine.png");
-    placeholder2->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
-    placeholder2->setScale(0.8);
-    placeholder2->setName("ph2");
-    placeholder2->setVisible(false);
-    that->addChild(placeholder2,4);
+    auto GoToSciMed = ui::Button::create("map-science_medicine.png");
+    GoToSciMed->setName("fac4");
+    GoToSciMed->addTouchEventListener(CC_CALLBACK_2(TutorialScene::buildingPress, that));
+    GoToSciMed->setScale(0.8);
+    GoToSciMed->setVisible(false);
+    GoToSciMed->setPosition(Vec2(origin.x + visibleSize.width / 2 - 20, origin.y + visibleSize.height / 2 + 180));
+    GoToSciMed->setScale(0.8);
+    GoToSciMed->setTouchEnabled(false);
+    that->addChild(GoToSciMed,5);
     
-    auto placeholder3 = cocos2d::Sprite::create("map-art.png");
-    placeholder3->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
-    placeholder3->setScale(0.8);
-    placeholder3->setName("ph3");
-    placeholder3->setVisible(false);
-    that->addChild(placeholder3,4);
+    auto GoToBuis = ui::Button::create("map-business.png");
+    GoToBuis->setName("fac3");
+    GoToBuis->addTouchEventListener(CC_CALLBACK_2(TutorialScene::buildingPress, that));
+    GoToBuis->setScale(0.8);
+    GoToBuis->setVisible(false);
+    GoToBuis->setEnabled(false);
+    GoToBuis->setTouchEnabled(false);
+    GoToBuis->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
+    GoToBuis->setScale(0.9);
+    that->addChild(GoToBuis,5);
     
-    auto placeholder4 = cocos2d::Sprite::create("map-social_science.png");
-    placeholder4->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
-    placeholder4->setScale(0.9);
-    placeholder4->setName("ph4");
-    placeholder4->setVisible(false);
-    that->addChild(placeholder4,4);
-    
-    auto placeholder5 = cocos2d::Sprite::create("map-business.png");
-    placeholder5->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 + 105));
-    placeholder5->setScale(0.9);
-    placeholder5->setName("ph5");
-    placeholder5->setVisible(false);
-    that->addChild(placeholder5,4);
+    auto GoToSocSci = ui::Button::create("map-social_science.png");
+    GoToSocSci->setPosition(Vec2(origin.x + visibleSize.width / 2 - 400, origin.y + visibleSize.height / 2 - 60));
+    GoToSocSci->setScale(0.9);
+    GoToSocSci->setName("fac2");
+    GoToSocSci->addTouchEventListener(CC_CALLBACK_2(TutorialScene::buildingPress, that));
+    GoToSocSci->setVisible(false);
+    GoToSocSci->setEnabled(false);
+    GoToSocSci->setTouchEnabled(false);
+    that->addChild(GoToSocSci,5);
 
-
+    auto GoToArt = ui::Button::create("map-art.png");
+    GoToArt->setPosition(Vec2(origin.x + visibleSize.width / 2 -240, origin.y + visibleSize.height / 2 - 185));
+    GoToArt->setScale(0.9);
+    GoToArt->setName("fac1");
+    GoToArt->addTouchEventListener(CC_CALLBACK_2(TutorialScene::buildingPress, that));
+    GoToArt->setVisible(false);
+    GoToArt->setTouchEnabled(false);
+    that->addChild(GoToArt,5);
+    
     
 }
+
+
 
 
 //Set code for going into faculty building
@@ -149,72 +168,41 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
 
 void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone)
 {
-    Rect newRect;
-    auto highlighter = (Sprite*)that->getChildByName("highlighter");
     
+    auto ph1 = (Sprite*)that->getChildByName("ph1");
+    auto ph2 = (Sprite*)that->getChildByName("ph2");
+    auto ph3 = (Sprite*)that->getChildByName("ph3");
+    auto ph4 = (Sprite*)that->getChildByName("ph4");
+    auto ph5 = (Sprite*)that->getChildByName("ph5");
+    
+
     if(whichone == 1){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
-        
-        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
-        GoToEIS->setPosition(newLoc);
-        GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,5);
-        
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.8);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
+        auto facButton = (ui::Button*)that->getChildByName("fac1");
+        removeHighlightedSprite(that,visibleSize, origin, ph1);
+        createHighlightedButton(that, visibleSize, origin, facButton);
 
     }else if(whichone == 2){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
-        
-        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
-        GoToEIS->setPosition(newLoc);
-        GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,5);
-        
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.8);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
+        auto facButton = (ui::Button*)that->getChildByName("fac2");
+        removeHighlightedSprite(that,visibleSize, origin, ph2);
+        createHighlightedButton(that, visibleSize, origin, facButton);
     }else if(whichone == 3){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
-        
-        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
-        GoToEIS->setPosition(newLoc);
-        GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,5);
-        
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.8);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
+        auto facButton = (ui::Button*)that->getChildByName("fac3");
+        removeHighlightedSprite(that,visibleSize, origin, ph3);
+        createHighlightedButton(that, visibleSize, origin, facButton);
         
     }else if(whichone == 4){
-        Vec2 newLoc = Vec2(origin.x + visibleSize.width / 2 + 325, origin.y + visibleSize.height / 2 + 75);
+        auto facButton = (ui::Button*)that->getChildByName("fac4");
+        removeHighlightedSprite(that,visibleSize, origin, ph4);
+        createHighlightedButton(that, visibleSize, origin, facButton);
         
-        auto GoToEIS = ui::Button::create("map-computing_engineering.png");
-        GoToEIS->setPosition(newLoc);
-        GoToEIS->setScale(0.8);
-        that->addChild(GoToEIS,5);
+    }else if(whichone == 5){
+        auto facButton = (ui::Button*)that->getChildByName("fac5");
+        removeHighlightedSprite(that,visibleSize, origin, ph5);
+        createHighlightedButton(that, visibleSize, origin, facButton);
         
-        Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, GoToEIS->getContentSize().width + 20, GoToEIS->getContentSize().height + 20);
-        highlighter->setTextureRect(newRect);
-        highlighter->setVisible(true);
-        highlighter->setScale(0.8);
-        highlighter->setPosition(newLoc);
-        auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
-        highlighter->runAction(action);
+    }else{
         
+        log(" BAD FACULTY INPUT ");
     }
     
 }
@@ -222,30 +210,156 @@ void TutorialController::loadMap(TutorialScene *that, Size visibleSize, Vec2 ori
 
 void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone)
 {
+    Rect newRect;
     
     
     
+    Sprite *foyerDesk = Sprite::create("desk.png");
+    foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
+    foyerDesk->setScale(1.25);
+    that->addChild(foyerDesk,2);
     
+    Sprite *foyerBoard = Sprite::create("whiteboard.png");
+    foyerBoard->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 + 100));
+    foyerBoard->setScale(1);
+    that->addChild(foyerBoard,2);
     
+    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("Engineering & Information Sciences\n Notice Board", "Verdana", 15);
+    LocName->setColor(Color3B(0,0,0));
+    LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+    LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
+    that->addChild(LocName,3);
     
+    ui::Button *officePerson = ui::Button::create("wendy.png");
+    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
+    officePerson->addTouchEventListener(CC_CALLBACK_2(TutorialScene::receptPress, that));
+    that->addChild(officePerson, 1);
     
+    auto fac1 = (ui::Button*)that->getChildByName("fac1");
+    auto fac2 = (ui::Button*)that->getChildByName("fac2");
+    auto fac3 = (ui::Button*)that->getChildByName("fac3");
+    auto fac4 = (ui::Button*)that->getChildByName("fac4");
+    auto fac5 = (ui::Button*)that->getChildByName("fac5");
+    fac1->setTouchEnabled(false);
+    fac1->setVisible(false);
+    fac2->setTouchEnabled(false);
+    fac2->setVisible(false);
+    fac3->setTouchEnabled(false);
+    fac3->setVisible(false);
+    fac4->setTouchEnabled(false);
+    fac4->setVisible(false);
+    fac5->setTouchEnabled(false);
+    fac5->setVisible(false);
     
+    if(whichone == 1){
+        removeHighlightedButton(that, visibleSize, origin, fac1);
+        auto facBG = Sprite::create("Art_Foyer.png");
+        facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        facBG->setName("facBG");
+        facBG->setVisible(true);
+        // add the sprite as a child to this layer
+        that->addChild(facBG, 0);
+
+        
+    }else if(whichone == 2){
+        removeHighlightedButton(that, visibleSize, origin, fac2);
+        auto facBG = Sprite::create("SocSci_Foyer.png");
+        facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        facBG->setName("facBG");
+        facBG->setVisible(true);
+        // add the sprite as a child to this layer
+        that->addChild(facBG, 0);
+
+    }else if(whichone == 3){
+        removeHighlightedButton(that, visibleSize, origin, fac3);
+        auto facBG = Sprite::create("Buis_Foyer.png");
+        facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        facBG->setName("facBG");
+        facBG->setVisible(true);
+        // add the sprite as a child to this layer
+        that->addChild(facBG, 0);
+
+        
+    }else if(whichone == 4){
+        removeHighlightedButton(that, visibleSize, origin, fac4);
+        auto facBG = Sprite::create("SciMed_Foyer.png");
+        facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        facBG->setName("facBG");
+        facBG->setVisible(true);
+        // add the sprite as a child to this layer
+        that->addChild(facBG, 0);
+        
+    }else if(whichone == 5){
+        removeHighlightedButton(that, visibleSize, origin, fac5);
+        auto facBG = Sprite::create("EIS_Foyer.png");
+        facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        facBG->setName("facBG");
+        facBG->setVisible(true);
+        // add the sprite as a child to this layer
+        that->addChild(facBG, 0);
+
+        
+    }else{
+        
+        log(" BAD FACULTY INPUT ");
+    }
+    
+}
+
+
+void TutorialController::createHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active){
+    
+    auto highlighter = Sprite::create();
+    highlighter->setColor(Color3B::BLUE);
+    highlighter->setOpacity(90);
+    Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, active->getContentSize().width + 25, active->getContentSize().height + 25);
+    highlighter->setTextureRect(newRect);
+    highlighter->setVisible(true);
+    highlighter->setScale(active->getScale());
+    highlighter->setPosition(active->getPosition());
+    highlighter->setName("highlighter");
+    auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+    highlighter->runAction(action);
+    that->addChild(highlighter, 3);
+
     
     
 }
 
-/*void TutorialController::FacultyPressed(cocos2d::Ref *pSender, ui::Widget::TouchEventType eEventType)
-/{
-    log("faculty building pressed");
-    //change sound effect for faculty press
-    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
-    log("you have touched the fac building!");
+
+void TutorialController::removeHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active){
     
-    // transition to the menu game scene test
-    // need to change to specific faculty building player has selected
-    auto scene = MenuScene::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    that->removeChildByName("highlighter");
+
+}
+
+
+void TutorialController::createHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active){
+    
+    
+    auto highlighter = Sprite::create();
+    highlighter->setColor(Color3B::BLUE);
+    highlighter->setOpacity(90);
+    Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, active->getContentSize().width + 25, active->getContentSize().height + 25);
+    highlighter->setTextureRect(newRect);
+    highlighter->setVisible(true);
+    highlighter->setScale(active->getScale());
+    highlighter->setPosition(active->getPosition());
+    highlighter->setName("highlighter");
+    auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+    highlighter->runAction(action);
+    that->addChild(highlighter, 3);
+
+    
     
 }
-*/
+
+
+void TutorialController::removeHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active){
+    
+    that->removeChildByName("highlighter");
+    
+    
+}
+
+

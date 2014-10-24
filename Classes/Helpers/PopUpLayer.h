@@ -31,7 +31,6 @@ public:
     static void createPopUpButtons(PopUpLayer* that, Rect inRect, std::vector<cocos2d::ui::Button*>);
     bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
     void touchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
-    
     // implement the "static create()" method manually
     CREATE_FUNC(PopUpLayer);
     

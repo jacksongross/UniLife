@@ -195,6 +195,11 @@
 		D098A9BD19AE3A81005B13D3 /* HUD_energy_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */; };
 		D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */; };
 		D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */; };
+		D0B163DE19F9D44300672A4C /* fred.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B163D919F9D44300672A4C /* fred.png */; };
+		D0B163DF19F9D44300672A4C /* glen.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B163DA19F9D44300672A4C /* glen.png */; };
+		D0B163E019F9D44300672A4C /* philip.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B163DB19F9D44300672A4C /* philip.png */; };
+		D0B163E119F9D44300672A4C /* steve.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B163DC19F9D44300672A4C /* steve.png */; };
+		D0B163E219F9D44300672A4C /* wendy.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B163DD19F9D44300672A4C /* wendy.png */; };
 		D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760DD19BD43F500E53B52 /* door_opened.png */; };
 		D0B760E919BD5B6D00E53B52 /* Art_Foyer.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760DF19BD5B6D00E53B52 /* Art_Foyer.png */; };
 		D0B760EA19BD5B6D00E53B52 /* Art_Rooms.png in Resources */ = {isa = PBXBuildFile; fileRef = D0B760E019BD5B6D00E53B52 /* Art_Rooms.png */; };
@@ -614,6 +619,11 @@
 		D098A9BB19AE3A81005B13D3 /* HUD_energy_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_energy_bar.png; sourceTree = "<group>"; };
 		D098A9BC19AE3A81005B13D3 /* HUD_stress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUD_stress_bar.png; sourceTree = "<group>"; };
 		D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Go_Left_Arrow.png; sourceTree = "<group>"; };
+		D0B163D919F9D44300672A4C /* fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fred.png; path = People/fred.png; sourceTree = "<group>"; };
+		D0B163DA19F9D44300672A4C /* glen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = glen.png; path = People/glen.png; sourceTree = "<group>"; };
+		D0B163DB19F9D44300672A4C /* philip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = philip.png; path = People/philip.png; sourceTree = "<group>"; };
+		D0B163DC19F9D44300672A4C /* steve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = steve.png; path = People/steve.png; sourceTree = "<group>"; };
+		D0B163DD19F9D44300672A4C /* wendy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = wendy.png; path = People/wendy.png; sourceTree = "<group>"; };
 		D0B760DD19BD43F500E53B52 /* door_opened.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = door_opened.png; path = InsideViewSprites/door_opened.png; sourceTree = "<group>"; };
 		D0B760DF19BD5B6D00E53B52 /* Art_Foyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Art_Foyer.png; path = InsideViewSprites/Art_Foyer.png; sourceTree = "<group>"; };
 		D0B760E019BD5B6D00E53B52 /* Art_Rooms.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Art_Rooms.png; path = InsideViewSprites/Art_Rooms.png; sourceTree = "<group>"; };
@@ -799,6 +809,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0B163D119F9D34D00672A4C /* People */,
 				7AD8D78919F60E8B00AF870C /* Bill */,
 				7AAC241F19ECC9C1007A8331 /* acadamia.db */,
 				B992950D19F18D9900E3E5E4 /* QuackyDuck */,
@@ -1600,6 +1611,18 @@
 			name = Tutorial;
 			sourceTree = "<group>";
 		};
+		D0B163D119F9D34D00672A4C /* People */ = {
+			isa = PBXGroup;
+			children = (
+				D0B163D919F9D44300672A4C /* fred.png */,
+				D0B163DA19F9D44300672A4C /* glen.png */,
+				D0B163DB19F9D44300672A4C /* philip.png */,
+				D0B163DC19F9D44300672A4C /* steve.png */,
+				D0B163DD19F9D44300672A4C /* wendy.png */,
+			);
+			name = People;
+			sourceTree = "<group>";
+		};
 		D0D709D419BEB56E0023B5A6 /* LibraryAssets */ = {
 			isa = PBXGroup;
 			children = (
@@ -1816,6 +1839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D098A9BE19AE3A81005B13D3 /* HUD_stress_bar.png in Resources */,
+				D0B163E019F9D44300672A4C /* philip.png in Resources */,
 				D0E73DD819B3F5FE00F4F720 /* whiteboard.png in Resources */,
 				D0B760F119BD5B6D00E53B52 /* SocSci_Foyer.png in Resources */,
 				D03642C4199C290B00ECA5DA /* Icon-57.png in Resources */,
@@ -1843,9 +1867,11 @@
 				D0B760F219BD5B6D00E53B52 /* SocSci_Rooms.png in Resources */,
 				7AAC241919E8AF21007A8331 /* background.wav in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
+				D0B163DE19F9D44300672A4C /* fred.png in Resources */,
 				7A647D1019F218CD000D36CF /* phone-bg.png in Resources */,
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
+				D0B163DF19F9D44300672A4C /* glen.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
 				7AB6AB3119AEDDF5003CCD7E /* New-Game-next_on.png in Resources */,
 				7A8945BF19ADAF3F008E1EA7 /* map-uni_centre.png in Resources */,
@@ -1863,6 +1889,7 @@
 				D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */,
 				7A8945AD19ADAF3F008E1EA7 /* options-bg.png in Resources */,
 				7A8945BB19ADAF3F008E1EA7 /* map-shop.png in Resources */,
+				D0B163E119F9D44300672A4C /* steve.png in Resources */,
 				7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */,
 				7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */,
 				D0ED65C619C939B90072EDD0 /* fox.png in Resources */,
@@ -1930,6 +1957,7 @@
 				D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */,
+				D0B163E219F9D44300672A4C /* wendy.png in Resources */,
 				7A8945B519ADAF3F008E1EA7 /* phone_selection.png in Resources */,
 				7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */,
 				7AB6AB3319AEDDF5003CCD7E /* New-Game-take_quiz_off.png in Resources */,
