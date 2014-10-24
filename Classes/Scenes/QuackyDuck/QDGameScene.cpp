@@ -7,7 +7,7 @@ Scene* QDGameScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
-    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_NONE);
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
     scene->getPhysicsWorld()->setGravity(Vect(0, 0));
     
     // 'layer' is an autorelease object
@@ -39,7 +39,7 @@ bool QDGameScene::init()
     
     this->addChild(backgroundSprite);
     
-    auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 3);
+    auto edgeBody = PhysicsBody::createEdgeBox(visibleSize, PHYSICSBODY_MATERIAL_DEFAULT, 1);
     edgeBody->setCollisionBitmask(OBSTACLE_COLLISION_BITMASK);
     edgeBody->setContactTestBitmask(true);
     

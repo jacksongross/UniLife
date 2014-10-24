@@ -20,7 +20,6 @@
 #include "MenuLoadScene.h"
 #include "box2D/box2D.h"
 #include "HUDHelper.h"
-#include "PauseHelpScene.h"
 
 USING_NS_CC;
 
@@ -70,14 +69,6 @@ Scene* PauseMenu::createScene()
     quitButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 * 0.20));
     quitButton->setTouchEnabled(true);
     layer->addChild(quitButton,5);
-    
-    ui::Text* helpButton = ui::Text::create("?", "Arial", 100);
-    helpButton->addTouchEventListener(CC_CALLBACK_1(PauseMenu::helpCallback, layer));
-    helpButton->setColor(Color3B::BLACK);
-    helpButton->setPosition(Vec2(50, 50));
-    helpButton->setTouchEnabled(true);
-    layer->addChild(helpButton,5);
-    
     
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
@@ -161,13 +152,5 @@ void PauseMenu::quitCallback(cocos2d::Ref *pSender)
 
 }
 
-void PauseMenu::helpCallback(cocos2d::Ref *pSender)
-{
-    log("help\n");
-    
-    Director::getInstance()->resume();
-    auto scene = PauseHelpScene::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
-}
+
 
