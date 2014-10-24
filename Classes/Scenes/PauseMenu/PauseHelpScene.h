@@ -1,18 +1,19 @@
 //
-//  PauseMenu.h
+//  PauseHelpScene.h
 //  UniLife
 //
-//  Created by Jackson Gross on 11/09/2014.
+//  Created by Kurt Robinson on 22/10/2014.
 //
 //
 
-#ifndef UniLife_PauseMenu_h
-#define UniLife_PauseMenu_h
+#ifndef __UniLife__PauseHelpScene__
+#define __UniLife__PauseHelpScene__
 
 #include "cocos2d.h"
 
-class PauseMenu : public cocos2d::LayerColor
+class PauseHelpScene : public cocos2d::Layer
 {
+    
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
@@ -20,18 +21,10 @@ public:
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
     
-    void resumeCallback(cocos2d::Ref *pSender);
+    //bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
     
-    void saveCallback(cocos2d::Ref *pSender);
-    
-    void quitCallback(cocos2d::Ref *pSender);
-
-    void helpCallback(Ref* pSender);
-    
-    bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
-
     // implement the "static create()" method manually
-    CREATE_FUNC(PauseMenu);
+    CREATE_FUNC(PauseHelpScene);
     
 private:
     void backButtonCallback(Ref* pSender);
@@ -39,9 +32,9 @@ private:
     void faqCallback(Ref* pSender);
     void gameplayCallback(Ref* pSender);
     void hudCallback(Ref* pSender);
-    
-    cocos2d::Size visibleSize;
-    cocos2d::Vec2 origin;
+
+    Size visibleSize;
+    Vec2 origin;
 };
 
-#endif
+#endif /* defined(__UniLife__PauseHelpScene__) */

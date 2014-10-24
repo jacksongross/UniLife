@@ -139,7 +139,6 @@
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
-		7AD8D78A19F60E8B00AF870C /* Bill in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8D78919F60E8B00AF870C /* Bill */; };
 		7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */; };
 		7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */; };
 		7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF719CE6F3200AEFF00 /* GameOverScene.cpp */; };
@@ -159,6 +158,18 @@
 		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
 		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
+		B904FF6B19FA4B200035DB80 /* PauseHelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B904FF6919FA4B200035DB80 /* PauseHelpScene.cpp */; };
+		B904FF7619FA6D880035DB80 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7519FA6D880035DB80 /* Help */; };
+		B904FF8219FAB9AD0035DB80 /* bill_inside.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7819FAB9AD0035DB80 /* bill_inside.png */; };
+		B904FF8319FAB9AD0035DB80 /* bill_outside.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7919FAB9AD0035DB80 /* bill_outside.png */; };
+		B904FF8419FAB9AD0035DB80 /* Fred.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7A19FAB9AD0035DB80 /* Fred.png */; };
+		B904FF8519FAB9AD0035DB80 /* walk.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7B19FAB9AD0035DB80 /* walk.png */; };
+		B904FF8619FAB9AD0035DB80 /* walk1.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7C19FAB9AD0035DB80 /* walk1.png */; };
+		B904FF8719FAB9AD0035DB80 /* walk2.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7D19FAB9AD0035DB80 /* walk2.png */; };
+		B904FF8819FAB9AD0035DB80 /* walk3.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7E19FAB9AD0035DB80 /* walk3.png */; };
+		B904FF8919FAB9AD0035DB80 /* walk4.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7F19FAB9AD0035DB80 /* walk4.png */; };
+		B904FF8A19FAB9AD0035DB80 /* walk5.png in Resources */ = {isa = PBXBuildFile; fileRef = B904FF8019FAB9AD0035DB80 /* walk5.png */; };
+		B904FF8B19FAB9AD0035DB80 /* Walk.plist in Resources */ = {isa = PBXBuildFile; fileRef = B904FF8119FAB9AD0035DB80 /* Walk.plist */; };
 		B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */ = {isa = PBXBuildFile; fileRef = B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */; };
 		B992950E19F18D9900E3E5E4 /* QuackyDuck in Resources */ = {isa = PBXBuildFile; fileRef = B992950D19F18D9900E3E5E4 /* QuackyDuck */; };
 		B992952319F18DB700E3E5E4 /* QDDuck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B992951719F18DB700E3E5E4 /* QDDuck.cpp */; };
@@ -540,7 +551,6 @@
 		7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
 		7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "background-music-aac.wav"; sourceTree = "<group>"; };
-		7AD8D78919F60E8B00AF870C /* Bill */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bill; sourceTree = "<group>"; };
 		7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttendanceModel.cpp; sourceTree = "<group>"; };
 		7AD8D78D19F624F700AF870C /* AttendanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceModel.h; sourceTree = "<group>"; };
 		7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BrickBreaker.cpp; sourceTree = "<group>"; };
@@ -571,6 +581,19 @@
 		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B904FF6919FA4B200035DB80 /* PauseHelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseHelpScene.cpp; sourceTree = "<group>"; };
+		B904FF6A19FA4B200035DB80 /* PauseHelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseHelpScene.h; sourceTree = "<group>"; };
+		B904FF7519FA6D880035DB80 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Help; sourceTree = "<group>"; };
+		B904FF7819FAB9AD0035DB80 /* bill_inside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bill_inside.png; path = Bill/bill_inside.png; sourceTree = "<group>"; };
+		B904FF7919FAB9AD0035DB80 /* bill_outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bill_outside.png; path = Bill/bill_outside.png; sourceTree = "<group>"; };
+		B904FF7A19FAB9AD0035DB80 /* Fred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Fred.png; path = Bill/Fred.png; sourceTree = "<group>"; };
+		B904FF7B19FAB9AD0035DB80 /* walk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk.png; path = Bill/walk.png; sourceTree = "<group>"; };
+		B904FF7C19FAB9AD0035DB80 /* walk1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk1.png; path = Bill/walk1.png; sourceTree = "<group>"; };
+		B904FF7D19FAB9AD0035DB80 /* walk2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk2.png; path = Bill/walk2.png; sourceTree = "<group>"; };
+		B904FF7E19FAB9AD0035DB80 /* walk3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk3.png; path = Bill/walk3.png; sourceTree = "<group>"; };
+		B904FF7F19FAB9AD0035DB80 /* walk4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk4.png; path = Bill/walk4.png; sourceTree = "<group>"; };
+		B904FF8019FAB9AD0035DB80 /* walk5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = walk5.png; path = Bill/walk5.png; sourceTree = "<group>"; };
+		B904FF8119FAB9AD0035DB80 /* Walk.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Walk.plist; path = Bill/Walk.plist; sourceTree = "<group>"; };
 		B90D0E4819EFD0B800C5A4E3 /* placeholder_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_background.png; sourceTree = "<group>"; };
 		B992950D19F18D9900E3E5E4 /* QuackyDuck */ = {isa = PBXFileReference; lastKnownFileType = folder; path = QuackyDuck; sourceTree = "<group>"; };
 		B992951619F18DB700E3E5E4 /* QDDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QDDefinitions.h; path = QuackyDuck/QDDefinitions.h; sourceTree = "<group>"; };
@@ -809,8 +832,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B904FF7719FAB99F0035DB80 /* Bill */,
+				B904FF7519FA6D880035DB80 /* Help */,
 				D0B163D119F9D34D00672A4C /* People */,
-				7AD8D78919F60E8B00AF870C /* Bill */,
 				7AAC241F19ECC9C1007A8331 /* acadamia.db */,
 				B992950D19F18D9900E3E5E4 /* QuackyDuck */,
 				7AF557F519DCDA560024A631 /* Interface */,
@@ -1479,6 +1503,8 @@
 			children = (
 				7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */,
 				7ADE1EFD19CE6F3200AEFF00 /* PauseMenu.h */,
+				B904FF6919FA4B200035DB80 /* PauseHelpScene.cpp */,
+				B904FF6A19FA4B200035DB80 /* PauseHelpScene.h */,
 			);
 			path = PauseMenu;
 			sourceTree = "<group>";
@@ -1542,6 +1568,23 @@
 				7AF557F919DCDA560024A631 /* phone_selection.png */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		B904FF7719FAB99F0035DB80 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				B904FF7819FAB9AD0035DB80 /* bill_inside.png */,
+				B904FF7919FAB9AD0035DB80 /* bill_outside.png */,
+				B904FF7A19FAB9AD0035DB80 /* Fred.png */,
+				B904FF7B19FAB9AD0035DB80 /* walk.png */,
+				B904FF7C19FAB9AD0035DB80 /* walk1.png */,
+				B904FF7D19FAB9AD0035DB80 /* walk2.png */,
+				B904FF7E19FAB9AD0035DB80 /* walk3.png */,
+				B904FF7F19FAB9AD0035DB80 /* walk4.png */,
+				B904FF8019FAB9AD0035DB80 /* walk5.png */,
+				B904FF8119FAB9AD0035DB80 /* Walk.plist */,
+			);
+			name = Bill;
 			sourceTree = "<group>";
 		};
 		B99294BA19F18A5800E3E5E4 /* QuackyDuck */ = {
@@ -1865,6 +1908,7 @@
 				D0B760EC19BD5B6D00E53B52 /* Buis_Rooms.png in Resources */,
 				7A8945BD19ADAF3F008E1EA7 /* map-sun.png in Resources */,
 				D0B760F219BD5B6D00E53B52 /* SocSci_Rooms.png in Resources */,
+				B904FF8419FAB9AD0035DB80 /* Fred.png in Resources */,
 				7AAC241919E8AF21007A8331 /* background.wav in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
 				D0B163DE19F9D44300672A4C /* fred.png in Resources */,
@@ -1872,6 +1916,8 @@
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				D0B163DF19F9D44300672A4C /* glen.png in Resources */,
+				B904FF8A19FAB9AD0035DB80 /* walk5.png in Resources */,
+				B904FF8719FAB9AD0035DB80 /* walk2.png in Resources */,
 				7A89459B19ADAF3F008E1EA7 /* dorm-background.png in Resources */,
 				7AB6AB3119AEDDF5003CCD7E /* New-Game-next_on.png in Resources */,
 				7A8945BF19ADAF3F008E1EA7 /* map-uni_centre.png in Resources */,
@@ -1903,6 +1949,7 @@
 				7A78809619C17C4200BFF491 /* circle.png in Resources */,
 				7A8945B019ADAF3F008E1EA7 /* bars.png in Resources */,
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
+				B904FF7619FA6D880035DB80 /* Help in Resources */,
 				D0ED65C719C939B90072EDD0 /* wheat.png in Resources */,
 				D0ED65C519C939B90072EDD0 /* chicken.png in Resources */,
 				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
@@ -1926,12 +1973,12 @@
 				D0D709DB19BEB6290023B5A6 /* Library_Foyer.png in Resources */,
 				B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */,
 				7A01645A19CF956B0021009A /* block.png in Resources */,
-				7AD8D78A19F60E8B00AF870C /* Bill in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
 				7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */,
 				7AB6AB2D19AEDDF5003CCD7E /* New-Game-Back.png in Resources */,
+				B904FF8819FAB9AD0035DB80 /* walk3.png in Resources */,
 				7AB6AB2E19AEDDF5003CCD7E /* New-Game-background.png in Resources */,
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
@@ -1948,13 +1995,18 @@
 				7A8945AC19ADAF3F008E1EA7 /* options-back.png in Resources */,
 				7A8945BC19ADAF3F008E1EA7 /* map-social_science.png in Resources */,
 				D03F389219C00804001956BD /* EIS_Border.png in Resources */,
+				B904FF8619FAB9AD0035DB80 /* walk1.png in Resources */,
+				B904FF8319FAB9AD0035DB80 /* bill_outside.png in Resources */,
 				7A8945B819ADAF3F008E1EA7 /* map-computing_engineering.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */,
 				7AAC240B19E8A879007A8331 /* dorm-door-opening.wav in Resources */,
 				D031093519B447C20030B59F /* Tavern_background.png in Resources */,
+				B904FF8B19FAB9AD0035DB80 /* Walk.plist in Resources */,
 				7AB6AB2F19AEDDF5003CCD7E /* New-Game-Border.png in Resources */,
+				B904FF8219FAB9AD0035DB80 /* bill_inside.png in Resources */,
 				D0B760DE19BD43F500E53B52 /* door_opened.png in Resources */,
+				B904FF8919FAB9AD0035DB80 /* walk4.png in Resources */,
 				7A8945A819ADAF3F008E1EA7 /* options_off.png in Resources */,
 				D0D709D919BEB6290023B5A6 /* Library_book_shelf.png in Resources */,
 				D0B163E219F9D44300672A4C /* wendy.png in Resources */,
@@ -1965,6 +2017,7 @@
 				B992950E19F18D9900E3E5E4 /* QuackyDuck in Resources */,
 				D0ED65CD19C96C4E0072EDD0 /* river-blue.png in Resources */,
 				D0E73DD419B3F5FE00F4F720 /* desk.png in Resources */,
+				B904FF8519FAB9AD0035DB80 /* walk.png in Resources */,
 				7A8945BE19ADAF3F008E1EA7 /* map-tavern.png in Resources */,
 				B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */,
 				7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */,
@@ -2040,6 +2093,7 @@
 				D08AFF9819ECB4F70089E0AF /* TutorialController.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				B904FF6B19FA4B200035DB80 /* PauseHelpScene.cpp in Sources */,
 				7ADE1F0519CE6F3200AEFF00 /* GameOverScene.cpp in Sources */,
 				B992952619F18DB700E3E5E4 /* QDMainMenuScene.cpp in Sources */,
 				7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */,

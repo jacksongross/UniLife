@@ -27,6 +27,7 @@
 #include "PopUpLayer.h"
 #include "TutorialScene.h"
 #include "QDSplashScene.h"
+#include "PauseHelpScene.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -66,58 +67,51 @@ bool Debugger::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
-    
-    
-    
+
     SpawnList();
-    
     
     return true;
 }
-
-
 
 void Debugger::SpawnList(){
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
     
-    ui::Text* QDGame = ui::Text::create("QUACKY DUCK GAME", "Arial", 30);
+    ui::Text* QDGame = ui::Text::create("QUACKY DUCK GAME", "Arial", 20);
     QDGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoQuackyDuck, this));
     QDGame->setColor(Color3B::BLACK);
-    QDGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 200));
+    QDGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 100));
     QDGame->setTouchEnabled(true);
     this->addChild(QDGame,5);
 
-    ui::Text* LGame = ui::Text::create("LOGIC GAME", "Arial", 30);
+    ui::Text* LGame = ui::Text::create("LOGIC GAME", "Arial", 20);
     LGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoLogicGame, this));
     LGame->setColor(Color3B::BLACK);
     LGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 ));
     LGame->setTouchEnabled(true);
     this->addChild(LGame,5);
     
-    ui::Text* BBGame = ui::Text::create("BRICK BREAKER", "Arial", 30);
+    ui::Text* BBGame = ui::Text::create("BRICK BREAKER", "Arial", 20);
     BBGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoBrickBreaker, this));
     BBGame->setColor(Color3B::BLACK);
-    BBGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 - 100));
+    BBGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 - 50));
     BBGame->setTouchEnabled(true);
     this->addChild(BBGame,5);
 
-    ui::Text* PopUp = ui::Text::create("POPUP MENU", "Arial", 30);
+    ui::Text* PopUp = ui::Text::create("POPUP MENU", "Arial", 20);
     PopUp->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoPopUp, this));
     PopUp->setColor(Color3B::BLACK);
-    PopUp->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 - 200));
+    PopUp->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 - 100));
     PopUp->setTouchEnabled(true);
     this->addChild(PopUp,5);
     
-    ui::Text* Tutorial = ui::Text::create("TUTORIAL", "Arial", 30);
+    ui::Text* Tutorial = ui::Text::create("TUTORIAL", "Arial", 20);
     Tutorial->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoTutorial, this));
     Tutorial->setColor(Color3B::BLACK);
-    Tutorial->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 100));
+    Tutorial->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 50));
     Tutorial->setTouchEnabled(true);
     this->addChild(Tutorial,5);
-    
     
 }
 
@@ -151,6 +145,7 @@ void Debugger::gotoQuackyDuck(Ref* pSender) {
     Director::getInstance()->replaceScene(crosssfade);
 }
 
+
 void Debugger::gotoPopUp(Ref* pSender){
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -176,5 +171,4 @@ void Debugger::gotoPopUp(Ref* pSender){
     this->addChild(p, 10);
     
 }
-
 

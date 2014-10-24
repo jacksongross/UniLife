@@ -7,7 +7,7 @@ Scene* QDGameScene::createScene()
 {
     // 'scene' is an autorelease object
     auto scene = Scene::createWithPhysics();
-    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
+    scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_NONE);
     scene->getPhysicsWorld()->setGravity(Vect(0, 0));
     
     // 'layer' is an autorelease object
