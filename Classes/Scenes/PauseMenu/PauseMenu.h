@@ -26,6 +26,8 @@ public:
     
     void quitCallback(cocos2d::Ref *pSender);
     
+    void helpCallback(cocos2d::Ref *pSender);
+    
     bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 
     // implement the "static create()" method manually

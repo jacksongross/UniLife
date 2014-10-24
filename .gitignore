@@ -24,3 +24,7 @@ proj.ios_mac/UniLife.xcodeproj/project.xcworkspace/xcuserdata/kurtrobinson.xcuse
 *.xcuserstate
 
 proj.ios_mac/UniLife.xcodeproj/xcuserdata/kurtrobinson.xcuserdatad/xcschemes/UniLife iOS.xcscheme
+
+proj.ios_mac/UniLife.xcodeproj/project.pbxproj
+
+proj.ios_mac/UniLife.xcodeproj/project.xcworkspace/xcshareddata/UniLife.xccheckout
