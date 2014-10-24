@@ -58,14 +58,10 @@ Scene* PhoneLayer::createScene()
 
     closeButton->setScale(0.7);
     
-    playerButton->setPosition(Vec2(visibleSize.width * .16, visibleSize.height * .2));
-    
-    objectivesButton->setPosition(Vec2(visibleSize.width * .38, visibleSize.height * .2));
-    
-    subjectButton->setPosition(Vec2(visibleSize.width * .62, visibleSize.height * .2));
-    
-    progressButton->setPosition(Vec2(visibleSize.width * .84, visibleSize.height * .2));
-    
+    playerButton->setPosition(Vec2(10 + 174, playerButton->getContentSize().height));
+    objectivesButton->setPosition(Vec2(10 + playerButton->getPositionX() + playerButton->getContentSize().width, playerButton->getContentSize().height));
+    subjectButton->setPosition(Vec2(10 + objectivesButton->getPositionX() + playerButton->getContentSize().width, playerButton->getContentSize().height));
+    progressButton->setPosition(Vec2(10 + subjectButton->getPositionX() + playerButton->getContentSize().width, playerButton->getContentSize().height));
     closeButton->setPosition(Vec2(visibleSize.width * .92, visibleSize.height * .85));
     
     // set names for buttons
@@ -73,20 +69,6 @@ Scene* PhoneLayer::createScene()
     objectivesButton->setName("objectivesbutton");
     subjectButton->setName("subjectbutton");
     progressButton->setName("progressbutton");
-    
-    
-    playerButton->setScaleX(220 / playerButton->getContentSize().width);
-    playerButton->setScaleY(125 / playerButton->getContentSize().height);
-    
-    objectivesButton->setScaleX(220 / objectivesButton->getContentSize().width);
-    objectivesButton->setScaleY(125 / objectivesButton->getContentSize().height);
-    
-    subjectButton->setScaleX(220 / subjectButton->getContentSize().width);
-    subjectButton->setScaleY(125 / subjectButton->getContentSize().height);
-    
-    progressButton->setScaleX(220 / progressButton->getContentSize().width);
-    progressButton->setScaleY(125 / progressButton->getContentSize().height);
-    
     
     // add menu items to array
     pMenuItems.pushBack(playerButton);
@@ -106,7 +88,7 @@ Scene* PhoneLayer::createScene()
     auto subjectLabel = Label::createWithSystemFont("Subjects", "Verdana", 32);
     auto progressLabel = Label::createWithSystemFont("Progress", "Verdana", 32);
     
-    playerLabel->setPosition(Vec2(visibleSize.width * 0.16, visibleSize.height * 0.2));
+    playerLabel->setPosition(Vec2(visibleSize.width * 0.15, visibleSize.height * 0.2));
     objectivesLabel->setPosition(Vec2(visibleSize.width * 0.38, visibleSize.height * 0.2));
     subjectLabel->setPosition(Vec2(visibleSize.width * 0.62, visibleSize.height * 0.2));
     progressLabel->setPosition(Vec2(visibleSize.width * 0.84, visibleSize.height * 0.2));
@@ -125,10 +107,7 @@ Scene* PhoneLayer::createScene()
     playerLayer->setName("playerlayer");
     active = "playerbutton";
     auto bgl = cocos2d::Sprite::create("phone_selection.png");
-    
-    bgl->setScaleX(1000 / bgl->getContentSize().width);
-    bgl->setScaleY(500 / bgl->getContentSize().height);
-    
+    bgl->setScale(4);
     playerLayer->addChild(bgl);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
@@ -193,8 +172,7 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     
     auto bg = cocos2d::Sprite::create("phone_selection.png");
     
-    bg->setScaleX(1000 / bg->getContentSize().width);
-    bg->setScaleY(500 / bg->getContentSize().height);
+    bg->setScale(4);
     
     playerLayer->setContentSize(bg->getContentSize() * 4);
     
@@ -204,10 +182,9 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     
     Size b = bg->getContentSize();
     
-    auto playersprite = cocos2d::Sprite::create("Bill/Fred.png");
+    auto playersprite = cocos2d::Sprite::create("Fred.png");
     
-    playersprite->setScaleX(playersprite->getScaleX() / bg->getScaleX());
-    playersprite->setScaleY(playersprite->getScaleY() / bg->getScaleY());
+    playersprite->setScale(playersprite->getScale() / 4);
     
     playersprite->setPosition(b.width * 0.2, b.height * 0.55);
     
@@ -240,8 +217,7 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     moodLabel->setContentSize(Size(380, 400));
     moodLabel->setTextHorizontalAlignment(TextHAlignment::CENTER);
     
-    moodLabel->setScaleX(moodLabel->getScaleX() / bg->getScaleX());
-    moodLabel->setScaleY(moodLabel->getScaleY() / bg->getScaleY());
+    moodLabel->setScale(moodLabel->getScale() / 4);
     moodLabel->setPosition(Vec2(b.width * .60, b.height * 0.45));
     
     bg->addChild(playersprite);
@@ -275,8 +251,7 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
     
     auto bg = cocos2d::Sprite::create("phone_selection.png");
     
-    bg->setScaleX(1000 / bg->getContentSize().width);
-    bg->setScaleY(500 / bg->getContentSize().height);
+    bg->setScale(4);
     
     playerLayer->setContentSize(bg->getContentSize() * 4);
     
@@ -301,16 +276,13 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
     time->setColor(Color3B(0, 0, 0));
     time->setTextHorizontalAlignment(TextHAlignment::CENTER);
     
-    subject->setScaleX(subject->getScaleX() / bg->getScaleX());
-    subject->setScaleY(subject->getScaleY() / bg->getScaleY());
+    subject->setScale(subject->getScale() / 4);
     subject->setPosition(Vec2(b.width * .2, b.height * 0.9));
     
-    date->setScaleX(date->getScaleX() / bg->getScaleX());
-    date->setScaleY(date->getScaleY() / bg->getScaleY());
+    date->setScale(date->getScale() / 4);
     date->setPosition(Vec2(b.width * .5, b.height * 0.9));
     
-    time->setScaleX(time->getScaleX() / bg->getScaleX());
-    time->setScaleY(time->getScaleY() / bg->getScaleY());
+    time->setScale(time->getScale() / 4);
     time->setPosition(Vec2(b.width * .8, b.height * 0.9));
     
     bg->addChild(subject);
@@ -421,16 +393,13 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
         time->setColor(Color3B(0, 0, 0));
         time->setTextHorizontalAlignment(TextHAlignment::CENTER);
         
-        subject->setScaleX(subject->getScaleX() / bg->getScaleX());
-        subject->setScaleY(subject->getScaleY() / bg->getScaleY());
+        subject->setScale(subject->getScale() / 4);
         subject->setPosition(Vec2(b.width * .2, b.height * padding));
         
-        date->setScaleX(date->getScaleX() / bg->getScaleX());
-        date->setScaleY(date->getScaleY() / bg->getScaleY());
+        date->setScale(date->getScale() / 4);
         date->setPosition(Vec2(b.width * .5, b.height * padding));
         
-        time->setScaleX(time->getScaleX() / bg->getScaleX());
-        time->setScaleY(time->getScaleY() / bg->getScaleY());
+        time->setScale(time->getScale() / 4);
         time->setPosition(Vec2(b.width * .8, b.height * padding));
         
         bg->addChild(subject, 5);
@@ -465,10 +434,7 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
     auto bg = cocos2d::Sprite::create("phone_selection.png");
-    
-    bg->setScaleX(1000 / bg->getContentSize().width);
-    bg->setScaleY(500 / bg->getContentSize().height);
-    
+    bg->setScale(4);
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
@@ -496,10 +462,7 @@ void PhoneLayer::progressCallBack(Ref* pSender)
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
     auto bg = cocos2d::Sprite::create("phone_selection.png");
-    
-    bg->setScaleX(1000 / bg->getContentSize().width);
-    bg->setScaleY(500 / bg->getContentSize().height);
-    
+    bg->setScale(4);
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
     
