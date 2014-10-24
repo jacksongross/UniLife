@@ -28,6 +28,8 @@ public:
 
     void helpCallback(Ref* pSender);
     
+    void changeLabel(Node* label);
+    
     bool touchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
 
     // implement the "static create()" method manually

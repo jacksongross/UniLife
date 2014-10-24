@@ -165,6 +165,8 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
 {
     this->removeChildByName("playerlayer");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
     prevButton->setColor(Color3B(255, 255, 255));
@@ -246,6 +248,8 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
 void PhoneLayer::objectivesCallBack(Ref* pSender)
 {
     this->removeChildByName("playerlayer");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
@@ -440,6 +444,8 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
 {
     this->removeChildByName("playerlayer");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
     prevButton->setColor(Color3B(255, 255, 255));
@@ -469,6 +475,8 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
 void PhoneLayer::progressCallBack(Ref* pSender)
 {
     this->removeChildByName("playerlayer");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);

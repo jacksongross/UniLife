@@ -177,6 +177,8 @@ void HUDLayer::updateHUD(PlayerModel &pm)
 
 void HUDLayer::PausedPressed(cocos2d::Scene* scene)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     cocos2d::Director::getInstance()->pause();
     cocos2d::log("Pausing the game");
     
@@ -188,6 +190,8 @@ void HUDLayer::PausedPressed(cocos2d::Scene* scene)
 void HUDLayer::PhonePressed(cocos2d::Scene* scene)
 {
     cocos2d::log("Showing the Phone screen game");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto *p = PhoneLayer::createScene();
     

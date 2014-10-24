@@ -307,8 +307,6 @@ void SqlHelper::saveAttendance(PlayerModel &player)
         
         sql = strm.str();
         
-        log(sql.c_str());
-        
         if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmnt, NULL ) == SQLITE_OK)
         {
             sqlite3_step(Stmnt);
@@ -353,8 +351,6 @@ void SqlHelper::updateAttendance(PlayerModel player)
         strm << "UPDATE attendance SET count = '" << attendance[i].getCount() << "' WHERE ID = " << attendance[i].getID();
         
         sql = strm.str();
-        
-        log(sql.c_str());
         
         if(sqlite3_prepare( db, sql.c_str(), static_cast<unsigned int>(sql.size()), &Stmt, NULL ) == SQLITE_OK)
         {
@@ -581,8 +577,6 @@ std::vector<AttendanceModel> SqlHelper::getAttendance(int playerid)
     // check to see if it is saving correctly
     sql =  "select * from attendance where playerid = ";
     sql.append(std::to_string(playerid));
-    
-    log(sql.c_str());
     
     std::vector<AttendanceModel> am;
     

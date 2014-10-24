@@ -44,6 +44,8 @@ Scene* PauseMenu::createScene()
     
     auto label = Label::createWithSystemFont("Game Paused", "Helvetica", 74);
     
+    label->setName("pauseLabel");
+    
     label->setColor(Color3B(0, 0, 0));
     
     label->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * 0.90));
@@ -120,6 +122,8 @@ void PauseMenu::resumeCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the resume button!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     this->getParent()->removeChild(this);
     
     Director::getInstance()->resume();
@@ -128,6 +132,8 @@ void PauseMenu::resumeCallback(cocos2d::Ref *pSender)
 void PauseMenu::saveCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the save button!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     if(pm.getId() > 0)
     {
@@ -147,11 +153,34 @@ void PauseMenu::saveCallback(cocos2d::Ref *pSender)
     
     log("game saved!");
     
+    auto label = (Label*) this->getChildByName("pauseLabel");
+    
+    label->setString("Game Saved!");
+    
+    auto delay = DelayTime::create(0.5);
+    
+    auto seq = Sequence::createWithTwoActions(delay, CallFunc::create([label](){
+        label->setString("Game Paused");
+    }));
+    
+    this->runAction(seq);
+
+    
+}
+
+void PauseMenu::changeLabel(Node* label)
+{
+    log("getting here");
+    
+    auto lbl = (Label*) label;
+    lbl->setString("Game Paused");
 }
 
 void PauseMenu::quitCallback(cocos2d::Ref *pSender)
 {
     log("you have touched the quit button!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     Director::getInstance()->resume();
     auto scene = MenuScene::createScene();
@@ -163,6 +192,8 @@ void PauseMenu::quitCallback(cocos2d::Ref *pSender)
 void PauseMenu::helpCallback(Ref* pSender)
 {
     log("Help Screen Initalize");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     Director::getInstance()->resume();
     auto scene = PauseHelpScene::createScene();
