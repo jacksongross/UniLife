@@ -91,11 +91,9 @@ bool PauseHelpScene::init()
 
 void PauseHelpScene::backButtonCallback(Ref* pSender)
 {
-    log("Going Back to Debug!");
+    log("Going Back to pause screen!");
     
-    auto scene = PauseMenu::createScene();
-    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
-    Director::getInstance()->replaceScene(crossfade);
+    this->getParent()->getScene()->removeChild(this);
     
 }
 

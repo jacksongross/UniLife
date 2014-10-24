@@ -34,11 +34,6 @@ public:
     CREATE_FUNC(PauseMenu);
     
 private:
-    void backButtonCallback(Ref* pSender);
-    void aboutCallback(Ref* pSender);
-    void faqCallback(Ref* pSender);
-    void gameplayCallback(Ref* pSender);
-    void hudCallback(Ref* pSender);
     
     cocos2d::Size visibleSize;
     cocos2d::Vec2 origin;
