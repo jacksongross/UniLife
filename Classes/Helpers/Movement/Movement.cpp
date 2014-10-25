@@ -13,6 +13,7 @@ USING_NS_CC;
 // GLOBALS FOR THE SPRITES USED FOR MOVEMENT/////////
 cocos2d::Vector<cocos2d::SpriteFrame*> animFrames(4);
 cocos2d::SpriteBatchNode *spritesheet;
+bool locked;
 /////////////////////////////////////////////////////
 
 // load the sprite frames for the character
@@ -41,15 +42,13 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
     
     scene->addChild(spritesheet, 1);
     
+    locked = false;
 }
 
 // move character in the scene from start position to end position (touch point)
 void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
 {
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
-    
-    auto animation = cocos2d::Animation::createWithSpriteFrames(animFrames, 0.1f);
-    auto walkAction = cocos2d::Repeat::create(cocos2d::Animate::create(animation), 3);
     
     auto ss = (cocos2d::Sprite*)scene->getChildByName("test");
     auto character = ss->getChildByName<cocos2d::Sprite*>("bill");
@@ -62,15 +61,27 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     if(endX > startX)
         character->setFlippedX(true);
     
-    // change the height here
     auto move = cocos2d::MoveTo::create(2, cocos2d::Vec2(endX, visibleSize.height / 2 - 135));
     
-    auto easeMove = cocos2d::EaseInOut::create(move, 3);
+    auto animation = cocos2d::Animation::createWithSpriteFrames(animFrames, 0.1f);
     
-    auto easeWalk = cocos2d::EaseInOut::create(walkAction, 3);
+    float duration = move->getDuration();
     
-    character->runAction(easeWalk);
-    character->runAction(easeMove);
+    auto walkAction = cocos2d::Repeat::create(cocos2d::Animate::create(animation), duration * 2);
+    
+    if(locked == false)
+    {
+        character->runAction(walkAction);
+        
+        locked = true;
+        
+        auto callback = CallFunc::create([](){
+            locked = false;
+        });
+        
+        character->runAction(Sequence::createWithTwoActions(move, callback));
+        
+    }
     
 }
 

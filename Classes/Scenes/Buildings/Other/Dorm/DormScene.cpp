@@ -172,7 +172,6 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
 
 void DormScene::ShelfPressed(cocos2d::Ref *pSender)
 {
-    log("You touched the shelf");
     // get the character and bed positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
     auto shelf = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("shelf");
@@ -182,8 +181,18 @@ void DormScene::ShelfPressed(cocos2d::Ref *pSender)
     // get the character's sprite position
     float start = character->getPositionX();
     
-    // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination]()
+    {
+        // move the character
+        Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    auto callback = CallFunc::create([](){
+        log("You touched the shelf");
+    });
+
+    // run the actions!
+    this->runAction(Sequence::createWithTwoActions(moveCallback, callback));
 }
 
 void DormScene::DeskPressed(cocos2d::Ref *pSender)
