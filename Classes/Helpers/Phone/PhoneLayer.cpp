@@ -21,6 +21,7 @@
 #include "MenuLoadScene.h"
 #include "box2D/box2D.h"
 #include "HUDHelper.h"
+#include "PhoneTableCell.h"
 
 USING_NS_CC;
 
@@ -79,7 +80,6 @@ Scene* PhoneLayer::createScene()
     subjectButton->setScaleY(125 / subjectButton->getContentSize().height);
     progressButton->setScaleX(220 / progressButton->getContentSize().width);
     progressButton->setScaleY(125 / progressButton->getContentSize().height);
-
     
     
     // add menu items to array
@@ -158,6 +158,12 @@ bool PhoneLayer::init()
     
     pm = HUDLayer::getCurrentPlayer();
     
+    int semester = pm.getGameTime().getSemester();
+    
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    
+    this->classes = timetable[semester - 1].getClassQueue();
+    
     return true;
 }
 
@@ -166,6 +172,13 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     this->removeChildByName("playerlayer");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
+    auto tbl = (TableView*) this->getChildByName("tableview");
+    
+    if(tbl != NULL)
+    {
+        this->removeChild(tbl);
+    }
     
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
@@ -250,6 +263,13 @@ void PhoneLayer::objectivesCallBack(Ref* pSender)
     this->removeChildByName("playerlayer");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
+    auto tbl = (TableView*) this->getChildByName("tableview");
+    
+    if(tbl != NULL)
+    {
+        this->removeChild(tbl);
+    }
     
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
@@ -446,6 +466,13 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
+    auto tbl = (TableView*) this->getChildByName("tableview");
+    
+    if(tbl != NULL)
+    {
+        this->removeChild(tbl);
+    }
+    
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
     prevButton->setColor(Color3B(255, 255, 255));
@@ -463,11 +490,37 @@ void PhoneLayer::subjectsCallBack(Ref* pSender)
     // create the default panel for opening the phone
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
+    
+    
     auto bg = cocos2d::Sprite::create("phone_selection.png");
+    
     bg->setScaleX(1000 / bg->getContentSize().width);
     bg->setScaleY(500 / bg->getContentSize().height);
+    
+    playerLayer->setContentSize(bg->getContentSize() * 4);
+    
     playerLayer->addChild(bg);
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    
+    Size b = bg->getContentSize();
+    
+    // create the tableview for the timetable
+    
+    //for creating a table view
+    
+    TableView* tableView = TableView::create(this, Size(900, 400));
+    tableView->setDirection(TableView::Direction::VERTICAL);
+    tableView->setPosition(Vec2(visibleSize.width * 0.25, visibleSize.height * 0.3));
+    
+    tableView->setContentSize(b);
+    
+    tableView->setName("tableview");
+    
+    tableView->setDelegate(this);
+    tableView->setVerticalFillOrder(TableView::VerticalFillOrder::TOP_DOWN);
+    this->addChild(tableView, 10);
+    tableView->reloadData();
+    
     
     this->addChild(playerLayer);
 }
@@ -477,6 +530,13 @@ void PhoneLayer::progressCallBack(Ref* pSender)
     this->removeChildByName("playerlayer");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
+    auto tbl = (TableView*) this->getChildByName("tableview");
+    
+    if(tbl != NULL)
+    {
+        this->removeChild(tbl);
+    }
     
     // get the previous tab selected and revert its selected state
     auto prevButton = (MenuItemImage *) this->getChildByName("menu")->getChildByName(active);
@@ -559,4 +619,239 @@ std::string PhoneLayer::getTimeAsString(TimeModel tm)
     return time;
     
 }
+
+Size PhoneLayer::cellSizeForTable(TableView *table) {
+    return Size(100, 400);
+}
+
+TableViewCell* PhoneLayer::tableCellAtIndex(TableView *table, unsigned int idx) {
+    
+    PhoneTableCell *cell = (PhoneTableCell*)table->dequeueCell();
+    
+    if (cell == NULL)
+    {
+        cell = new PhoneTableCell;
+        cell->setScale(0.5f);
+        cell->setContentSize(Size(100, 400));
+    }
+    
+    cell->setColor(Color3B(255, 255, 255));
+    auto bg = Sprite::create("load-table-cell.png");
+    bg->setContentSize(Size(200,400));
+    bg->setScale(0.5f);
+    cell->setCellBackground(bg);
+    
+    std::string d = "";
+    int day = this->classes[idx].getDay();
+    
+    switch(day)
+    {
+        case 1:
+        {
+            d.append("Monday");
+            break;
+        }
+        
+        case 2:
+        {
+            d.append("Tuesday");
+            break;
+        }
+        
+        case 3:
+        {
+            d.append("Wednesday");
+            break;
+        }
+        
+        case 4:
+        {
+            d.append("Thursday");
+            break;
+        }
+        
+        case 5:
+        {
+            d.append("Friday");
+            break;
+        }
+        
+        case 6:
+        {
+            d.append("Saturday");
+            break;
+        }
+        
+        case 7:
+        {
+            d.append("Sunday");
+            break;
+        }
+    };
+    
+    string ampm = "";
+    
+    int startTime = this->classes[idx].getStartTime();
+    
+    if(startTime < 9 || startTime > 11)
+        ampm = "pm";
+    else
+        ampm = "am";
+    
+    string className = "lecture";
+    
+    if((idx + 1) % 3 == 0)
+    {
+        className = "tutorial";
+    }
+
+    string timeString = d;
+    timeString.append(" ");
+    timeString.append(to_string(this->classes[idx].getStartTime()));
+    timeString.append(":00");
+    timeString.append(ampm);
+    timeString.append(" ");
+    
+    cell->getsubjectLabel()->setString(this->classes[idx].getNameString().c_str());
+    cell->gettimeLabel()->setString(timeString);
+    cell->getclassLabel()->setString(className);
+
+    
+    return cell;
+}
+
+
+
+cocos2d::extension::TableViewCell* PhoneLayer::tableCellAtIndex(cocos2d::extension::TableView *table, ssize_t idx)
+{
+    PhoneTableCell *cell = (PhoneTableCell*)table->dequeueCell();
+    
+    if (cell == NULL)
+    {
+        cell = new PhoneTableCell;
+        cell->setScale(0.5f);
+        cell->setContentSize(Size(100, 400));
+    }
+    
+    cell->setColor(Color3B(255, 255, 255));
+    auto bg = Sprite::create("load-table-cell.png");
+    bg->setContentSize(Size(200,400));
+    bg->setScale(0.5f);
+    cell->setCellBackground(bg);
+    
+    std::string d = "";
+    int day = this->classes[idx].getDay();
+    
+    switch(day)
+    {
+        case 1:
+        {
+            d.append("Monday");
+            break;
+        }
+        
+        case 2:
+        {
+            d.append("Tuesday");
+            break;
+        }
+        
+        case 3:
+        {
+            d.append("Wednesday");
+            break;
+        }
+        
+        case 4:
+        {
+            d.append("Thursday");
+            break;
+        }
+        
+        case 5:
+        {
+            d.append("Friday");
+            break;
+        }
+        
+        case 6:
+        {
+            d.append("Saturday");
+            break;
+        }
+        
+        case 7:
+        {
+            d.append("Sunday");
+            break;
+        }
+    };
+    
+    string ampm = "";
+    
+    int startTime = this->classes[idx].getStartTime();
+    
+    if(startTime < 9 || startTime > 11)
+    ampm = "pm";
+    else
+    ampm = "am";
+    
+    string className = "lecture";
+    
+    if((idx + 1) % 3 == 0)
+    {
+        className = "tutorial";
+    }
+    
+    string timeString = d;
+    timeString.append(" ");
+    timeString.append(to_string(this->classes[idx].getStartTime()));
+    timeString.append(":00");
+    timeString.append(ampm);
+    timeString.append(" ");
+    
+    cell->getsubjectLabel()->setString(this->classes[idx].getNameString().c_str());
+    cell->gettimeLabel()->setString(timeString);
+    cell->getclassLabel()->setString(className);
+    
+    return cell;
+}
+
+
+ssize_t PhoneLayer::numberOfCellsInTableView(cocos2d::extension::TableView *table)
+{
+    return this->classes.size();
+}
+
+
+cocos2d::Size PhoneLayer::tableCellSizeForIndex(cocos2d::extension::TableView *table, ssize_t idx)
+{
+    return Size (100, 300);
+}
+
+void PhoneLayer::tableCellTouched(cocos2d::extension::TableView *table, cocos2d::extension::TableViewCell *cell)
+{
+    log ("cell touched at index:% zi", cell->getIdx());
+    
+}
+
+
+void PhoneLayer::scrollViewDidScroll(cocos2d::extension::ScrollView *view)
+{
+}
+
+void PhoneLayer::scrollViewDidZoom(cocos2d::extension::ScrollView *view)
+{
+}
+
+void PhoneLayer::tableCellHighlight (cocos2d::extension::TableView * table,cocos2d::extension::TableViewCell * cell)
+{
+}
+
+void PhoneLayer::tableCellUnhighlight (cocos2d::extension::TableView * table, cocos2d::extension::TableViewCell::TableViewCell * cell)
+{
+}
+
+
+
 

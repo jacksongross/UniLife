@@ -51,6 +51,7 @@
 		7A0F1A9519BEE3F400679823 /* LibraryRoomsController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8219BEE3F400679823 /* LibraryRoomsController.cpp */; };
 		7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8519BEE3F400679823 /* TavernFoyerController.cpp */; };
 		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
+		7A555E9D19FB3BD000B5D9A8 /* PhoneTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A555E9B19FB3BD000B5D9A8 /* PhoneTableCell.cpp */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
 		7A647D1019F218CD000D36CF /* phone-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A647D0F19F218CD000D36CF /* phone-bg.png */; };
 		7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DBD7419C576FF006A83CB /* doorOpen.wav */; };
@@ -439,6 +440,8 @@
 		7A0F1A8619BEE3F400679823 /* TavernFoyerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernFoyerController.h; sourceTree = "<group>"; };
 		7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TavernRoomController.cpp; sourceTree = "<group>"; };
 		7A0F1A8819BEE3F400679823 /* TavernRoomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TavernRoomController.h; sourceTree = "<group>"; };
+		7A555E9B19FB3BD000B5D9A8 /* PhoneTableCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneTableCell.cpp; sourceTree = "<group>"; };
+		7A555E9C19FB3BD000B5D9A8 /* PhoneTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneTableCell.h; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
 		7A647D0F19F218CD000D36CF /* phone-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-bg.png"; sourceTree = "<group>"; };
 		7A6DBD7419C576FF006A83CB /* doorOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorOpen.wav; sourceTree = "<group>"; };
@@ -1552,6 +1555,8 @@
 			children = (
 				7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */,
 				7AF557F219DAA6FC0024A631 /* PhoneLayer.h */,
+				7A555E9B19FB3BD000B5D9A8 /* PhoneTableCell.cpp */,
+				7A555E9C19FB3BD000B5D9A8 /* PhoneTableCell.h */,
 			);
 			path = Phone;
 			sourceTree = "<group>";
@@ -2070,6 +2075,7 @@
 				7A0F1A9019BEE3F400679823 /* SciMed-Hallway-Controller.cpp in Sources */,
 				B992952719F18DB700E3E5E4 /* QDPipe.cpp in Sources */,
 				7A0F1A5419BEE2FC00679823 /* Buis-Hallway.cpp in Sources */,
+				7A555E9D19FB3BD000B5D9A8 /* PhoneTableCell.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */,
 				7A89453119ADACFC008E1EA7 /* MenuOptionController.cpp in Sources */,

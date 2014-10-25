@@ -372,8 +372,6 @@ void TutorialScene::buildingPress(Ref *pSender, ui::Widget::TouchEventType type)
 
 void TutorialScene::receptPress(Ref *pSender, ui::Widget::TouchEventType type){
     
-    
-    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
