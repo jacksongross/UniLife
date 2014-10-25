@@ -32,6 +32,7 @@ public:
     void compassPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     void buildingPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     void receptPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
+    void phonePress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     // implement the "static create()" method manually
     CREATE_FUNC(TutorialScene);
     

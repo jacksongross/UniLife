@@ -16,6 +16,7 @@
 #include "MenuNewGameController.h"
 #include "MenuOptionScene.h"
 #include <CCTransition.h>
+#include "PhoneLayer.h"
 #include <string>
 #include <vector>
 USING_NS_CC;
@@ -70,7 +71,7 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     auto sBubble = (Sprite*)this->getChildByName("sBubble");
     auto TalkText = (cocos2d::ui::Text*)this->getChildByName("IntroText");
     auto OtherText = (cocos2d::ui::Text*)this->getChildByName("OtherText");
-    auto phonebutton = (Sprite*)this->getChildByName("phonebutton");
+    auto phonebutton = (ui::Button*)this->getChildByName("phonebutton");
     auto mapbutton = (cocos2d::ui::Button*)this->getChildByName("mapbutton");
     auto fac1 = (cocos2d::ui::Button*)this->getChildByName("fac1");
     auto fac2 = (cocos2d::ui::Button*)this->getChildByName("fac2");
@@ -79,6 +80,9 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     auto fac5 = (cocos2d::ui::Button*)this->getChildByName("fac5");
     auto phBG = (Sprite*)this->getChildByName("phBG");
     auto mapBG = (Sprite*)this->getChildByName("mapBG");
+    auto officePerson = (ui::Button*)this->getChildByName("officePerson");
+    auto pBubble = (Sprite*)this->getChildByName("pBubble");
+    auto pBubbleText = (ui::Text*)this->getChildByName("pBubbleText");
     
     log("GO TO NEXT PAGE %d",whichpage);
     
@@ -96,7 +100,7 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         string tmp = "This is Your Phone, It has much of the information needed\n to live comfortably at university. You can tap it\n at any time during gameplay to bring up the menu ";
         TalkText->setString(tmp);
         phonebutton->setVisible(true);
-        TutorialController::createHighlightedSprite(this, visibleSize, origin, phonebutton);
+        TutorialController::createHighlightedButton(this, visibleSize, origin, phonebutton);
         whichpage++;
     }else if(whichpage ==  3){
         string tmp = "It Contains Important Information such as Player Statistics\n Your Objectives, Timetable and Course Progress,  ";
@@ -105,7 +109,7 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         whichpage++;
     }else if(whichpage ==  4){
         TalkText->setString("Here Is A Map Of the Campus, \nYou can View it any time by Tapping the Compass Button");
-        TutorialController::removeHighlightedSprite(this, visibleSize, origin, phonebutton);
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, phonebutton);
         TutorialController::createHighlightedButton(this, visibleSize, origin, mapbutton);
         mapbutton->setVisible(true);
         whichpage++;
@@ -223,26 +227,77 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         TalkText2->setString("This is Your Faculty Building");
         OtherText2->setString("Tap the Receptionist to talk to them");
 
+        
+        pBubble->setVisible(true);
+        pBubbleText->setVisible(true);
+        pBubbleText->setTextAreaSize(Size(235,150));
+        pBubbleText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+        pBubbleText->setString("Hello");
+        
         lock = false;
         whichpage++;
         
         
-    }else if(whichpage == 16){
-        auto TalkText2 = (cocos2d::ui::Text*)this->getChildByName("IntroText");
-        auto OtherText2 = (cocos2d::ui::Text*)this->getChildByName("OtherText");
+    }else if(whichpage == 16 && lock == false){
+        TutorialController::createHighlightedButton(this, visibleSize, origin, officePerson);
         legodude->setVisible(false);
         sBubble->setVisible(false);
-        TalkText2->setString("");
-        OtherText2->setString("");
+        TalkText->setString("");
+        OtherText->setString("");
+        officePerson->setTouchEnabled(true);
+        lock = true;
+        
+    }else if(whichpage == 17 && lock == false){
+        
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, officePerson);
+        lock = false;
+        officePerson->setTouchEnabled(false);
         
         
         
-    }else if(whichpage == 17){
+        pBubble->setVisible(true);
+        pBubbleText->setVisible(true);
+        pBubbleText->setTextAreaSize(Size(235,150));
+        pBubbleText->setString("Here is Your Timetable for this Session");
         
+        whichpage++;
+        
+        
+    }else if(whichpage == 18){
+        
+        lock = true;
+        officePerson->setTouchEnabled(false);
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, officePerson);
+        
+        
+        pBubble->setVisible(true);
+        pBubbleText->setVisible(true);
+        pBubbleText->setTextAreaSize(Size(235,150));
+        pBubbleText->setString("You Can View Your Timetable By Selecting it On Your Phone");
+        TutorialController::createHighlightedButton(this, visibleSize, origin, phonebutton);
+        phonebutton->setTouchEnabled(true);
+        
+    }else if(whichpage == 19 && lock == false){
+        
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, phonebutton);
+        
+        auto coverSprite = Sprite::create();
+        coverSprite->setPosition(Vec2(visibleSize.width * 0.2, visibleSize.height * 0.9));
+        coverSprite->setName("coversprite");
+        this->addChild(coverSprite);
+        TutorialController::createHighlightedSprite(this, visibleSize, origin, coverSprite);
         
         
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
     return true;
 }
 
@@ -332,15 +387,52 @@ void TutorialScene::receptPress(Ref *pSender, ui::Widget::TouchEventType type){
             break;
             
         case ui::Widget::TouchEventType::ENDED:{
-            whichpage++;
-            
-            if(whichbuild == 1){
-                
-                TutorialController::loadFaculty(this, visibleSize, origin, 1);
+                whichpage++;
                 Touch* newtouch;
                 Event* newEvent;
                 TutorialScene::nextPage(newtouch,newEvent);
-            }
+                lock = false;
+            
+            break;
+        }
+        case ui::Widget::TouchEventType::CANCELED:
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+
+void TutorialScene::phonePress(Ref *pSender, ui::Widget::TouchEventType type){
+    
+    
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    switch (type)
+    {
+        case ui::Widget::TouchEventType::BEGAN:
+            
+            break;
+            
+        case ui::Widget::TouchEventType::MOVED:
+            break;
+            
+        case ui::Widget::TouchEventType::ENDED:{
+            whichpage++;
+            Touch* newtouch;
+            Event* newEvent;
+            TutorialScene::nextPage(newtouch,newEvent);
+            
+            this->pause();
+            auto *p = PhoneLayer::createScene();
+            this->addChild(p, 10);
+            lock = false;
+            
+            
             
             
             break;

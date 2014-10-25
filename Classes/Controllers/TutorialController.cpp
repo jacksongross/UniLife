@@ -45,7 +45,7 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     that->addChild(menu, 2);
     
     // add "MenuScene" splash screen"
-    auto sprite = Sprite::create("placeholder_background.png");
+    auto sprite = Sprite::create("gates.png");
     
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
@@ -92,11 +92,15 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     that->addChild(otherText, 10);
 
     
-    auto phoneButton = cocos2d::Sprite::create("phone_button.png");
+    
+    auto phoneButton = cocos2d::ui::Button::create("phone_button.png");
     phoneButton->setPosition(cocos2d::Vec2(visibleSize.width * .90, visibleSize.height * .85));
-    phoneButton->setName("phonebutton");
+    phoneButton->setTouchEnabled(false);
     phoneButton->setVisible(false);
+    phoneButton->setName("phonebutton");
+    phoneButton->addTouchEventListener(CC_CALLBACK_2(TutorialScene::phonePress, that));
     that->addChild(phoneButton,4);
+
     
 
     auto mapButton = cocos2d::ui::Button::create("Map-marker.png");
@@ -158,6 +162,21 @@ void TutorialController::CreateMainMenu(TutorialScene *that, Size visibleSize, V
     that->addChild(GoToArt,5);
     
     
+    auto pBubble = Sprite::create("speech_small.png");
+    pBubble->setPosition(Vec2(origin.x + visibleSize.width / 2 -50, origin.y + visibleSize.height / 2 +150));
+    pBubble->setVisible(false);
+    pBubble->setName("pBubble");
+    that->addChild(pBubble,5);
+    
+    auto pBubbleText = ui::Text::create("NANANANA BATMAN", "Verdana", 20);
+    pBubbleText->setPosition(Vec2(origin.x + visibleSize.width / 2 - 50, origin.y + visibleSize.height / 2 +165));
+    pBubbleText->setVisible(false);
+    pBubbleText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+    pBubbleText->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
+    pBubbleText->setColor(Color3B::BLACK);
+    pBubbleText->setName("pBubbleText");
+    that->addChild(pBubbleText,6);
+    
 }
 
 
@@ -217,14 +236,17 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
     Sprite *foyerDesk = Sprite::create("desk.png");
     foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
     foyerDesk->setScale(1.25);
-    that->addChild(foyerDesk,2);
+    that->addChild(foyerDesk,5);
     
     Sprite *foyerBoard = Sprite::create("whiteboard.png");
     foyerBoard->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 + 100));
     foyerBoard->setScale(1);
     that->addChild(foyerBoard,2);
     
-    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("Engineering & Information Sciences\n Notice Board", "Verdana", 15);
+    
+    
+    
+    cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("", "Verdana", 15);
     LocName->setColor(Color3B(0,0,0));
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
@@ -233,7 +255,9 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
     ui::Button *officePerson = ui::Button::create("wendy.png");
     officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
     officePerson->addTouchEventListener(CC_CALLBACK_2(TutorialScene::receptPress, that));
-    that->addChild(officePerson, 1);
+    officePerson->setTouchEnabled(false);
+    officePerson->setName("officePerson");
+    that->addChild(officePerson, 4);
     
     auto fac1 = (ui::Button*)that->getChildByName("fac1");
     auto fac2 = (ui::Button*)that->getChildByName("fac2");
@@ -257,6 +281,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
         facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
         facBG->setName("facBG");
         facBG->setVisible(true);
+        LocName->setString("Arts \n Notice Board");
         // add the sprite as a child to this layer
         that->addChild(facBG, 0);
 
@@ -267,6 +292,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
         facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
         facBG->setName("facBG");
         facBG->setVisible(true);
+        LocName->setString("Social Sciences \n Notice Board");
         // add the sprite as a child to this layer
         that->addChild(facBG, 0);
 
@@ -276,6 +302,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
         facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
         facBG->setName("facBG");
         facBG->setVisible(true);
+        LocName->setString("Business \n Notice Board");
         // add the sprite as a child to this layer
         that->addChild(facBG, 0);
 
@@ -286,6 +313,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
         facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
         facBG->setName("facBG");
         facBG->setVisible(true);
+        LocName->setString("Medical Science \n Notice Board");
         // add the sprite as a child to this layer
         that->addChild(facBG, 0);
         
@@ -295,6 +323,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
         facBG->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
         facBG->setName("facBG");
         facBG->setVisible(true);
+        LocName->setString("Engineering & Information Sciences \n Notice Board");
         // add the sprite as a child to this layer
         that->addChild(facBG, 0);
 
