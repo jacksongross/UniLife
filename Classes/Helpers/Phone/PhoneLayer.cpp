@@ -555,10 +555,119 @@ void PhoneLayer::progressCallBack(Ref* pSender)
     auto playerLayer = cocos2d::Layer::create();
     playerLayer->setName("playerlayer");
     auto bg = cocos2d::Sprite::create("phone_selection.png");
+    
     bg->setScaleX(1000 / bg->getContentSize().width);
     bg->setScaleY(500 / bg->getContentSize().height);
+    
+    playerLayer->setContentSize(bg->getContentSize() * 4);
     playerLayer->addChild(bg);
+    
     playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    
+    
+    Size b = bg->getContentSize();
+    
+    // array for labels
+    string labels[7] = {"Intelligence:", "Stamina:", "Social:",
+    "Energy:", "Stress:", "Attendenace Average:", "Assessment Average:"};
+    
+    
+    float padding = 0.9;
+    
+    for(int i = 0; i < 7; i++)
+    {
+        auto label = cocos2d::ui::Text::create(labels[i], "Verdana", 32);
+        
+        label->ignoreContentAdaptWithSize(false);
+        label->setColor(Color3B(0, 0, 0));
+        label->setTextHorizontalAlignment(TextHAlignment::CENTER);
+        
+        label->setScaleX(label->getScaleX() / bg->getScaleX());
+        label->setScaleY(label->getScaleY() / bg->getScaleY());
+        label->setPosition(Vec2(b.width * .3, b.height * padding));
+        
+        bg->addChild(label);
+        
+        padding -= 0.1;
+    }
+    
+    // show stats on screen
+    // intelligence, stamina, social, energy, stress
+    // class attendance average
+    // assessment score average
+    
+    PlayerStatsModel stats = pm.getStats();
+    
+    string intelligence = to_string(stats.getIntelligence());
+    intelligence.append(" / 20");
+    
+    string stamina = to_string(stats.getStamina());
+    stamina.append(" / 20");
+    
+    string social = to_string(stats.getSocial());
+    social.append(" / 20");
+    
+    string energy = to_string(stats.getEnergy());
+    energy.append(" / 100");
+    
+    string stress = to_string(stats.getStress());
+    stress.append(" / 100");
+    
+    std::vector<AttendanceModel> attendance = pm.getAttendance();
+    
+    float attCount = 0;
+    
+    for(int i = 0; i < attendance.size(); i++)
+    {
+        attCount += attendance[i].getCount();
+    }
+    
+    float attendanceAvg = attCount / attendance.size();
+    
+    std::vector<AssessmentModel> assessments = pm.getAssessments();
+    
+    float assCount = 0;
+    
+    for(int i = 0; i < assessments.size(); i++)
+    {
+        assCount += assessments[i].getMark();
+    }
+    
+    float assessmentAvg = assCount / assessments.size();
+    
+    string attendanceLabel = to_string(attendanceAvg);
+    string assessmentLabel = to_string(assessmentAvg);
+    
+    std::vector<string> labelArray;
+    //intelligence, stamina, social, energy, stress
+    labelArray.push_back(intelligence);
+    labelArray.push_back(stamina);
+    labelArray.push_back(social);
+    labelArray.push_back(energy);
+    labelArray.push_back(stress);
+    labelArray.push_back(attendanceLabel);
+    labelArray.push_back(assessmentLabel);
+    
+    padding = 0.9;
+    
+    for(int i = 0; i < labelArray.size(); i++)
+    {
+        auto label = cocos2d::ui::Text::create(labelArray[i], "Verdana", 32);
+        
+        label->ignoreContentAdaptWithSize(false);
+        label->setColor(Color3B(0, 0, 0));
+        label->setTextHorizontalAlignment(TextHAlignment::CENTER);
+        
+        label->setScaleX(label->getScaleX() / bg->getScaleX());
+        label->setScaleY(label->getScaleY() / bg->getScaleY());
+        label->setPosition(Vec2(b.width * .7, b.height * padding));
+        
+        bg->addChild(label);
+        
+        padding -= 0.1;
+    }
+    
+    
     
     this->addChild(playerLayer);
 }
