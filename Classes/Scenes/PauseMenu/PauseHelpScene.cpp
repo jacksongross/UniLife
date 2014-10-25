@@ -66,14 +66,16 @@ bool PauseHelpScene::init()
     auto faqButton = MenuItemImage::create("Help/faq_off.png", "Help/faq_on.png", CC_CALLBACK_1(PauseHelpScene::faqCallback, this));
     auto gameplayButton = MenuItemImage::create("Help/gameplay_off.png", "Help/gameplay_on.png", CC_CALLBACK_1(PauseHelpScene::gameplayCallback, this));
     auto hudButton = MenuItemImage::create("Help/hud_off.png", "Help/hud_on.png", CC_CALLBACK_1(PauseHelpScene::hudCallback, this));
+    auto tutorialButton = MenuItemImage::create("Help/tutorial_off.png", "Help/tutorial_on.png", CC_CALLBACK_1(PauseHelpScene::tutorialCallback, this));
     
     backButton->setPosition(Point(visibleSize.width * .09, visibleSize.height * .83));
-    aboutButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .15));
-    faqButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .38));
-    gameplayButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .62));
-    hudButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height  * .85));
+    tutorialButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .13));
+    aboutButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .315));
+    faqButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height/2));
+    gameplayButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .685));
+    hudButton->setPosition(Point(visibleSize.width * 0.87, visibleSize.height  * .868));
     
-    auto menu = Menu::create(backButton, aboutButton, faqButton, gameplayButton, hudButton, NULL);
+    auto menu = Menu::create(backButton, aboutButton, faqButton, gameplayButton, hudButton, tutorialButton, NULL);
     menu->setPosition(Point::ZERO);
     
     auto defaultLayer = Layer::create();
@@ -109,7 +111,7 @@ void PauseHelpScene::aboutCallback(Ref* pSender)
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto selectedAbout = Sprite::create("Help/about_on.png");
-    selectedAbout->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .15));
+    selectedAbout->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .315));
     
     auto aboutPanelText = Sprite::create("Help/panel-about.png");
     aboutPanelText->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
@@ -138,7 +140,7 @@ void PauseHelpScene::faqCallback(Ref* pSender)
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto selectedFaq = Sprite::create("Help/faq_on.png");
-    selectedFaq->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .38));
+    selectedFaq->setPosition(Point(visibleSize.width * 0.87, visibleSize.height/2));
     
     auto faqPanelText = Sprite::create("Help/panel-faq.png");
     faqPanelText->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
@@ -167,7 +169,7 @@ void PauseHelpScene::gameplayCallback(Ref* pSender)
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto selectedGameplay = Sprite::create("Help/gameplay_on.png");
-    selectedGameplay->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .62));
+    selectedGameplay->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .685));
     
     auto gameplayPanelText = Sprite::create("Help/panel-gameplay.png");
     gameplayPanelText->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
@@ -195,7 +197,7 @@ void PauseHelpScene::hudCallback(Ref* pSender)
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     auto selectedHud = Sprite::create("Help/hud_on.png");
-    selectedHud->setPosition(Point(visibleSize.width * 0.87, visibleSize.height  * .85));
+    selectedHud->setPosition(Point(visibleSize.width * 0.87, visibleSize.height  * .868));
     
     auto hudPanelText = Sprite::create("Help/panel-hud.png");
     hudPanelText->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
@@ -210,3 +212,30 @@ void PauseHelpScene::hudCallback(Ref* pSender)
     this->addChild(helpLayer);
 }
 
+void PauseHelpScene::tutorialCallback(cocos2d::Ref *pSender)
+{
+    log("hud");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
+    this->removeChildByName("helplayer");
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    auto selectedTutorial = Sprite::create("Help/tutorial_on.png");
+    selectedTutorial->setPosition(Point(visibleSize.width * 0.87, visibleSize.height * .13));
+    
+    auto hudPanelText = Sprite::create("Help/panel-default.png");
+    hudPanelText->setPosition(Point(visibleSize.width/2, visibleSize.height/2));
+    
+    auto helpLayer = Layer::create();
+    
+    helpLayer->addChild(hudPanelText);
+    helpLayer->addChild(selectedTutorial);
+    
+    helpLayer->setName("helplayer");
+    
+    this->addChild(helpLayer);
+    
+}

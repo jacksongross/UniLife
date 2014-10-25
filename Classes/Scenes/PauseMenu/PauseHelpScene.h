@@ -32,6 +32,7 @@ private:
     void faqCallback(Ref* pSender);
     void gameplayCallback(Ref* pSender);
     void hudCallback(Ref* pSender);
+    void tutorialCallback(Ref* pSender);
 
     Size visibleSize;
     Vec2 origin;
