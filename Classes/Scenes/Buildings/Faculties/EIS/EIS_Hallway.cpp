@@ -78,17 +78,67 @@ void EIS_Hallway::ToLecture(Ref* pSender){
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
-    //Temporary Code for Debugging Purposes
-    if(pm.getStats().getEnergy() < 5){
-        log("Not Enough Energy To Go To A Lecture");
-    }else if(pm.getStats().getStress() > 95){
-        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
-    }else{
-        log("You Went To A Lecture (+1 INT, +10 Stress)");
+    // check whether the player is due for a lecture
+    
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    TimeModel tm = HUDLayer::getCurrentPlayer().getGameTime();
+    
+    std::vector<subjectBlockClassModel> classes = timetable[tm.getSemester() - 1].getClassQueue();
+    
+    float attendance = 0;
+    
+    log("time: %f", tm.getHoursMinutes());
+    
+    for(int i = 0; i < classes.size(); i++)
+    {
+        cout << classes[i].getNameString() << " " << classes[i].getDay() << " " << classes[i].getStartTime() << " " << classes[i].getTotalTimeInt() << endl;
         
-        // update the stats
+        double start = classes[i].getStartTime();
+        
+        if(start < 9)
+        {
+            start += 12.0;
+        }
+        
+        double end = classes[i].getTotalTimeInt() + start;
+        
+        log("Start: %f", start);
+        log("End: %f", end);
+        
+        if(tm.getDay() == classes[i].getDay())
+        {
+            // calculate a buffer for attendance
+            
+            double bufferMin = start - 0.5;
+            double bufferMax = start + 1;
+            
+            log("MIN: %f", bufferMin);
+            log("MAX: %f", bufferMax);
+            
+            if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
+            {
+                attendance = 1;
+            }
+            // if you enter the class after the start time and before the end
+            else if(tm.getHoursMinutes() > bufferMax
+                    && tm.getHoursMinutes() <= end)
+            {
+                attendance = 0.5;
+            }
+        }
+    }
+    
+    log("Attendance: %f", attendance);
+    
+    if(attendance == 1)
+    {
         HUDLayer::updateStats(0, 0, 0, -5, 10);
     }
+    else if(attendance == 0.5)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 15);
+    }
+
     
 }
 
@@ -98,18 +148,66 @@ void EIS_Hallway::ToTutorial(Ref* pSender){
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
-    //Temporary Code for Debugging Purposes
-    if(pm.getStats().getEnergy() < 5){
-        log("Not Enough Energy To Go To A Lecture");
-    }else if(pm.getStats().getStress() > 95){
-        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
-    }else{
-        log("You Went To A Lecture (+1 INT, +10 Stress)");
+    // check whether the player is due for a tutorial
+    
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    TimeModel tm = HUDLayer::getCurrentPlayer().getGameTime();
+    
+    std::vector<subjectBlockClassModel> classes = timetable[tm.getSemester() - 1].getClassQueue();
+    
+    float attendance = 0;
+    
+    log("time: %f", tm.getHoursMinutes());
+    
+    for(int i = 0; i < classes.size(); i++)
+    {
+        cout << classes[i].getNameString() << " " << classes[i].getDay() << " " << classes[i].getStartTime() << " " << classes[i].getTotalTimeInt() << endl;
         
-        // update the stats
-        HUDLayer::updateStats(0, 0, 0, -5, 10);
+        double start = classes[i].getStartTime();
+        
+        if(start < 9)
+        {
+            start += 12.0;
+        }
+        
+        double end = classes[i].getTotalTimeInt() + start;
+        
+        log("Start: %f", start);
+        log("End: %f", end);
+        
+        if(tm.getDay() == classes[i].getDay())
+        {
+            // calculate a buffer for attendance
+            
+            double bufferMin = start - 0.5;
+            double bufferMax = start + 1;
+            
+            log("MIN: %f", bufferMin);
+            log("MAX: %f", bufferMax);
+            
+            if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
+            {
+                attendance = 1;
+            }
+            // if you enter the class after the start time and before the end
+            else if(tm.getHoursMinutes() > bufferMax
+                    && tm.getHoursMinutes() <= end)
+            {
+                attendance = 0.5;
+            }
+        }
     }
     
+    log("Attendance: %f", attendance);
+    
+    if(attendance == 1)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 10);
+    }
+    else if(attendance == 0.5)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 15);
+    }
     
     
 }

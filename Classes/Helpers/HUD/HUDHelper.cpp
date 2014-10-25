@@ -347,7 +347,7 @@ void HUDLayer::updateTimer()
     
     if(hour > 23.5) // roll over to new day
     {
-        hour = 12;
+        hour = 0;
         ampm = "am";
         
         if(day ==  7) // roll over to new week
