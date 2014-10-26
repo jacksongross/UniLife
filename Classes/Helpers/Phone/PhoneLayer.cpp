@@ -211,7 +211,7 @@ void PhoneLayer::playerInfoCallback(Ref* pSender)
     
     Size b = bg->getContentSize();
     
-    auto playersprite = cocos2d::Sprite::create("Bill/Fred.png");
+    auto playersprite = cocos2d::Sprite::create("walk1.png");
     
     playersprite->setScaleX(playersprite->getScaleX() / bg->getScaleX());
     playersprite->setScaleY(playersprite->getScaleY() / bg->getScaleY());

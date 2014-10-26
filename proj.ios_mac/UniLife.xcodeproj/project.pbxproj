@@ -141,6 +141,7 @@
 		7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2619AEDDF5003CCD7E /* slider_bar_active_9patch.png */; };
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
+		7ACD662F19FCDCE900774BFE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD662E19FCDCE900774BFE /* Info.plist */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
 		7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */; };
 		7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */; };
@@ -377,7 +378,6 @@
 		503AE10417EB98FF00D1A890 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = mac/Prefix.pch; sourceTree = "<group>"; };
 		503AE11117EB99EE00D1A890 /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = usr/lib/libcurl.dylib; sourceTree = SDKROOT; };
 		503AE11A17EB9C5A00D1A890 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
-		5087E77C17EB970100C73F5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5087E78817EB974C00C73F5D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5087E78A17EB975400C73F5D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		7A01645719CF956B0021009A /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
@@ -557,6 +557,7 @@
 		7AB6AB2619AEDDF5003CCD7E /* slider_bar_active_9patch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_bar_active_9patch.png; sourceTree = "<group>"; };
 		7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderThumb.png; sourceTree = "<group>"; };
 		7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sliderTrack2.png; sourceTree = "<group>"; };
+		7ACD662E19FCDCE900774BFE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ios/Info.plist; sourceTree = SOURCE_ROOT; };
 		7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "background-music-aac.wav"; sourceTree = "<group>"; };
 		7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AttendanceModel.cpp; sourceTree = "<group>"; };
 		7AD8D78D19F624F700AF870C /* AttendanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendanceModel.h; sourceTree = "<group>"; };
@@ -718,6 +719,7 @@
 		080E96DDFE201D6D7F000001 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				7ACD662E19FCDCE900774BFE /* Info.plist */,
 				5087E77117EB970100C73F5D /* Icons */,
 				503AE0FA17EB989F00D1A890 /* AppController.h */,
 				503AE0FB17EB989F00D1A890 /* AppController.mm */,
@@ -830,7 +832,6 @@
 		5087E77117EB970100C73F5D /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				5087E77C17EB970100C73F5D /* Info.plist */,
 			);
 			name = Icons;
 			path = ios;
@@ -1995,6 +1996,7 @@
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
 				D0ED65BF19C934160072EDD0 /* speech_big.png in Resources */,
+				7ACD662F19FCDCE900774BFE /* Info.plist in Resources */,
 				7AB6AB3419AEDDF5003CCD7E /* New-Game-take_quiz_on.png in Resources */,
 				D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */,
 				7AB6AB3519AEDDF5003CCD7E /* New-Game-text.png in Resources */,
@@ -2167,6 +2169,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2184,11 +2187,11 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -2200,6 +2203,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -2215,11 +2219,11 @@
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
