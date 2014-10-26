@@ -125,8 +125,8 @@ void Debugger::gotoLogicGame(Ref* pSender){
 void Debugger::gotoBrickBreaker(Ref* pSender){
     log("BrickBreakInit");
     auto scene = BrickBreaker::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    Director::getInstance()->replaceScene(crosssfade);
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
     
 }
 

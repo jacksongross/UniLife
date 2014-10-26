@@ -102,6 +102,8 @@ void MenuDegreeSelect::BackButtonCallback(Ref* pSender)
 {
     log("Going Back to Menu!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     auto scene = MenuScene::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
     Director::getInstance()->replaceScene(crossfade);
@@ -156,6 +158,8 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     // set the player for the HUD
     HUDLayer::setPlayer(pm);
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     auto scene = DormScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
@@ -167,6 +171,8 @@ void MenuDegreeSelect::EIS_Selected(Ref* pSender)
 {
     
     facultySelected = 1;
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     this->setDegreesList(SqlHelper::getDegrees("Engineering and Information Sciences"));
     
@@ -181,6 +187,8 @@ void MenuDegreeSelect::Buis_Selected(Ref* pSender)
 {
     facultySelected = 2;
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     this->setDegreesList(SqlHelper::getDegrees("Business"));
     
     log("Faculty 2 Selected :: Buis");
@@ -194,6 +202,8 @@ void MenuDegreeSelect::Art_Selected(Ref* pSender)
 {
     facultySelected = 3;
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     this->setDegreesList(SqlHelper::getDegrees("Law, Humanities and the Arts"));
     
     log("Faculty 3 Selected :: Art");
@@ -205,6 +215,8 @@ void MenuDegreeSelect::Art_Selected(Ref* pSender)
 void MenuDegreeSelect::SocSci_Selected(Ref* pSender)
 {
     facultySelected = 4;
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     this->setDegreesList(SqlHelper::getDegrees("Social Science"));
     
@@ -219,6 +231,8 @@ void MenuDegreeSelect::SocSci_Selected(Ref* pSender)
 void MenuDegreeSelect::SciMed_Selected(Ref* pSender)
 {
     facultySelected = 5;
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     this->setDegreesList(SqlHelper::getDegrees("Science, Medicine and Health"));
     

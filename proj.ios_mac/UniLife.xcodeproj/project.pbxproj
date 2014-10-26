@@ -53,6 +53,7 @@
 		7A0F1A9719BEE3F400679823 /* TavernRoomController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F1A8719BEE3F400679823 /* TavernRoomController.cpp */; };
 		7A555E9D19FB3BD000B5D9A8 /* PhoneTableCell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A555E9B19FB3BD000B5D9A8 /* PhoneTableCell.cpp */; };
 		7A555EA619FC837000B5D9A8 /* NPC in Resources */ = {isa = PBXBuildFile; fileRef = 7A555EA519FC837000B5D9A8 /* NPC */; };
+		7A555EAA19FC8A4900B5D9A8 /* brickbreaker-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A555EA919FC8A4900B5D9A8 /* brickbreaker-bg.jpg */; };
 		7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A60F3FA19AF0AFA003D3292 /* cog-110.png */; };
 		7A647D1019F218CD000D36CF /* phone-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A647D0F19F218CD000D36CF /* phone-bg.png */; };
 		7A6DBD7519C576FF006A83CB /* doorOpen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A6DBD7419C576FF006A83CB /* doorOpen.wav */; };
@@ -444,6 +445,7 @@
 		7A555E9B19FB3BD000B5D9A8 /* PhoneTableCell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneTableCell.cpp; sourceTree = "<group>"; };
 		7A555E9C19FB3BD000B5D9A8 /* PhoneTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneTableCell.h; sourceTree = "<group>"; };
 		7A555EA519FC837000B5D9A8 /* NPC */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NPC; sourceTree = "<group>"; };
+		7A555EA919FC8A4900B5D9A8 /* brickbreaker-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "brickbreaker-bg.jpg"; sourceTree = "<group>"; };
 		7A60F3FA19AF0AFA003D3292 /* cog-110.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cog-110.png"; path = "../HUD/cog-110.png"; sourceTree = "<group>"; };
 		7A647D0F19F218CD000D36CF /* phone-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-bg.png"; sourceTree = "<group>"; };
 		7A6DBD7419C576FF006A83CB /* doorOpen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorOpen.wav; sourceTree = "<group>"; };
@@ -1114,6 +1116,7 @@
 		7A78809319C17C4200BFF491 /* BrickBreaker */ = {
 			isa = PBXGroup;
 			children = (
+				7A555EA919FC8A4900B5D9A8 /* brickbreaker-bg.jpg */,
 				7A01645719CF956B0021009A /* ball.png */,
 				7A01645819CF956B0021009A /* block.png */,
 				7A78809419C17C4200BFF491 /* circle.png */,
@@ -1920,6 +1923,7 @@
 				7AAC241919E8AF21007A8331 /* background.wav in Resources */,
 				7AB6AB3A19AEDDF5003CCD7E /* slider.png in Resources */,
 				D0B163DE19F9D44300672A4C /* fred.png in Resources */,
+				7A555EAA19FC8A4900B5D9A8 /* brickbreaker-bg.jpg in Resources */,
 				7A647D1019F218CD000D36CF /* phone-bg.png in Resources */,
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,

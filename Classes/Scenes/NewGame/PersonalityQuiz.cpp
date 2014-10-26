@@ -587,6 +587,8 @@ void PersonalityQuiz::AnswerA(Ref* sender){
     
     log("Answer A Was Clicked");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
 }
 
 void PersonalityQuiz::AnswerB(Ref* pSender){
@@ -601,6 +603,8 @@ void PersonalityQuiz::AnswerB(Ref* pSender){
     makevisible();
     
     log("Answer B Was Clicked");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
 }
 
 void PersonalityQuiz::AnswerC(Ref* sender){
@@ -614,6 +618,8 @@ void PersonalityQuiz::AnswerC(Ref* sender){
     makevisible();
     
     log("Answer C Was Clicked");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
 }
 
 void PersonalityQuiz::AnswerD(Ref* pSender){
@@ -628,6 +634,8 @@ void PersonalityQuiz::AnswerD(Ref* pSender){
     makevisible();
     
     log("Answer D Was Clicked");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
 }
 
@@ -654,6 +662,8 @@ void PersonalityQuiz::hidebutton(){
 void PersonalityQuiz::gotoNextPage(Ref* pSender, ui::Widget::TouchEventType eEventType){
     
     std::string newstring;
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     
     if (eEventType == ui::Widget::TouchEventType::ENDED){
@@ -803,6 +813,8 @@ void PersonalityQuiz::gotoDormScene(Ref* pSender, ui::Widget::TouchEventType eEv
         log("DEGREE: %s", newplayer.getDegree().c_str());
         log("ENERGY: %d" , newplayer.getStats().getEnergy());
         log("STRESS: %d", newplayer.getStats().getStress());
+        
+        CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
         
         auto scene = DormScene::createScene(newplayer);
         TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

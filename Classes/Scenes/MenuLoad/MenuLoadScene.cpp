@@ -145,6 +145,8 @@ void MenuLoadScene::tableCellTouched(cocos2d::extension::TableView *table, cocos
     log ("cell touched at index:% zi", cell->getIdx());
     PlayerModel player = this->players[cell->getIdx()];
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     // create the player with its relevant timetable
     PlayerModel pm(player.getName(), player.getDegree(), player.getStats(), player.getScene(), player.getGameTime());
     
@@ -183,6 +185,8 @@ void MenuLoadScene::tableCellUnhighlight (cocos2d::extension::TableView * table,
 void MenuLoadScene::backButtonCallback(Ref* pSender)
 {
     log("Going Back to Menu!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuScene::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);

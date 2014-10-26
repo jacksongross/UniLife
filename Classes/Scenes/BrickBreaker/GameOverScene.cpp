@@ -8,6 +8,8 @@
 
 #include "GameOverScene.h"
 #include "BrickBreaker.h"
+#include "DormScene.h"
+#include "Debugger.h"
 
 USING_NS_CC;
 
@@ -19,26 +21,49 @@ bool GameOverLayer::init()
 	}
 	
 	Size winSize = Director::getInstance()->getWinSize();
-	this->_label = Label::createWithSystemFont("", "Arial", 12);
+	this->_label = Label::createWithSystemFont("", "Arial", 64);
 	this->_label->retain();
-	this->getLabel()->setColor(Color3B(0,0,0));
-	this->getLabel()->setPosition(Point(winSize.width/2, winSize.height/2));
-	this->addChild(_label);
+	this->getLabel()->setPosition(Point(winSize.width / 2, winSize.height * .90));
+	this->addChild(_label, 2);
     
-    DelayTime *delay = DelayTime::create(1);
+    auto bg = Sprite::create("brickbreaker-bg.jpg");
+    bg->setPosition(Vec2(winSize.width / 2, winSize.height / 2));
+    this->addChild(bg, 1);
     
-    // perform the selector call
-    CallFunc *callback = CallFunc::create(this, callfunc_selector(GameOverLayer::gameOverDone));
+    auto retryButton = MenuItemFont::create("Retry", CC_CALLBACK_1(GameOverLayer::retryCallback, this));
+    auto quitButton = MenuItemFont::create("Quit", CC_CALLBACK_1(GameOverLayer::quitCallback, this));
     
-    // run the action
-    this->runAction( Sequence::createWithTwoActions(delay, callback));
+    retryButton->setPosition(Vec2(winSize.width * 0.5, winSize.height * 0.4));
+    quitButton->setPosition(Vec2(winSize.width * 0.5, winSize.height * 0.3));
+    
+    retryButton->setFontSize(50);
+    quitButton->setFontSize(50);
+    
+    auto menu = Menu::create(retryButton, quitButton, NULL);
+    menu->setPosition(Point::ZERO);
+    
+    this->addChild(menu, 2);
+
 	
 	return true;
 }
 
-void GameOverLayer::gameOverDone()
+void GameOverLayer::retryCallback(Ref* pSender)
 {
-	Director::getInstance()->replaceScene(BrickBreaker::createScene());
+    log("retry pressed!");
+    
+    auto scene = BrickBreaker::createScene();
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
+}
+
+void GameOverLayer::quitCallback(Ref* pSender)
+{
+    log("quit pressed!");
+    auto scene = DormScene::createScene();
+    TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
+    Director::getInstance()->replaceScene(crossfade);
+
 }
 
 GameOverLayer::~GameOverLayer()

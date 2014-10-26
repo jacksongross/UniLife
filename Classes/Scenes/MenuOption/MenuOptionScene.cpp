@@ -58,6 +58,8 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
 {
     log("test!");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     auto scene = MenuScene::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
     Director::getInstance()->replaceScene(crossfade);
@@ -67,6 +69,8 @@ void MenuOptionScene::backButtonCallback(Ref* pSender)
 void MenuOptionScene::debugButtonCallback(Ref* pSender)
 {
     log("Debug Screen!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = Debugger::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);

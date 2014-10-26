@@ -68,6 +68,8 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
     
     log("Next Button Pressed");
     
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
+    
     if(totpoints >= 20){
         auto ebox = (EditBox*)this->getChildByTag(1);//Access to EditBox via tag
         
@@ -116,6 +118,8 @@ void MenuNewGame::NextButtonCallback(Ref* pSender)
 void MenuNewGame::backButtonCallback(Ref* pSender)
 {
     log("Going Back to Menu!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = MenuScene::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);
@@ -234,6 +238,8 @@ void MenuNewGame::socSliderChange(Ref *pSender, cocos2d::ui::Slider::EventType t
 void MenuNewGame::quizButtonCallback(Ref* pSender)
 {
     log("Going To Personality Quiz!");
+    
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
     auto scene = PersonalityQuiz::createScene();
     TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, scene);

@@ -19,7 +19,9 @@ public:
 	
     virtual ~GameOverLayer();
     bool init();
-    void gameOverDone();
+    
+    void retryCallback(Ref* pSender);
+    void quitCallback(Ref* pSender);
 	
 };
 

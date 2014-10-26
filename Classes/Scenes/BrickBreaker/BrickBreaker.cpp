@@ -35,49 +35,51 @@ BrickBreaker::~BrickBreaker()
 BrickBreaker::BrickBreaker()
 {
     
-	Size winSize = CCDirector::getInstance()->getWinSize();
+    //setTouchEnabled(true);
     
-	// Define the gravity vector.
-	b2Vec2 gravity;
-	gravity.Set(0.0f, 0.0f);
+    Size winSize = CCDirector::getInstance()->getWinSize();
     
-	// Construct a world object, which will hold and simulate the rigid bodies.
-	_world = new b2World(gravity);
+    // Define the gravity vector.
+    b2Vec2 gravity;
+    gravity.Set(0.0f, 0.0f);
+    
+    // Construct a world object, which will hold and simulate the rigid bodies.
+    _world = new b2World(gravity);
     
     _world->SetAllowSleeping(true);
     
     // Create edges around the entire screen
-	// Define the ground body.
-	b2BodyDef groundBodyDef;
-	groundBodyDef.position.Set(0, 0); // bottom-left corner
-	
-	// Call the body factory which allocates memory for the ground body
-	// from a pool and creates the ground box shape (also from a pool).
-	// The body is also added to the world.
-	_groundBody = _world->CreateBody(&groundBodyDef);
-	
-	// Define the ground box shape.
-	b2EdgeShape groundBox;
+    // Define the ground body.
+    b2BodyDef groundBodyDef;
+    groundBodyDef.position.Set(0, 0); // bottom-left corner
     
-	// bottom
-	groundBox.Set(b2Vec2(0,0), b2Vec2(winSize.width/PTM_RATIO,0));
-	_bottomFixture = _groundBody->CreateFixture(&groundBox, 0);
-	
-	// top
-	groundBox.Set(b2Vec2(0,winSize.height/PTM_RATIO), b2Vec2(winSize.width/PTM_RATIO,winSize.height/PTM_RATIO));
-	_groundBody->CreateFixture(&groundBox, 0);
-	
-	// left
-	groundBox.Set(b2Vec2(0,winSize.height/PTM_RATIO), b2Vec2(0,0));
-	_groundBody->CreateFixture(&groundBox, 0);
-	
-	// right
-	groundBox.Set(b2Vec2(winSize.width/PTM_RATIO,winSize.height/PTM_RATIO), b2Vec2(winSize.width/PTM_RATIO,0));
-	_groundBody->CreateFixture(&groundBox, 0);
+    // Call the body factory which allocates memory for the ground body
+    // from a pool and creates the ground box shape (also from a pool).
+    // The body is also added to the world.
+    _groundBody = _world->CreateBody(&groundBodyDef);
+    
+    // Define the ground box shape.
+    b2EdgeShape groundBox;
+    
+    // bottom
+    groundBox.Set(b2Vec2(0,0), b2Vec2(winSize.width/PTM_RATIO,0));
+    _bottomFixture = _groundBody->CreateFixture(&groundBox, 0);
+    
+    // top
+    groundBox.Set(b2Vec2(0,winSize.height/PTM_RATIO), b2Vec2(winSize.width/PTM_RATIO,winSize.height/PTM_RATIO));
+    _groundBody->CreateFixture(&groundBox, 0);
+    
+    // left
+    groundBox.Set(b2Vec2(0,winSize.height/PTM_RATIO), b2Vec2(0,0));
+    _groundBody->CreateFixture(&groundBox, 0);
+    
+    // right
+    groundBox.Set(b2Vec2(winSize.width/PTM_RATIO,winSize.height/PTM_RATIO), b2Vec2(winSize.width/PTM_RATIO,0));
+    _groundBody->CreateFixture(&groundBox, 0);
     
     // Create sprite and add it to the layer
-	Sprite *ball = CCSprite::create("ball.png");
-    ball->setPosition(Point(winSize.width / 2, winSize.height / 2));
+    Sprite *ball = CCSprite::create("ball.png");
+    ball->setPosition(Point(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO));
     ball->setScale(0.25);
     ball->setTag(1);
     this->addChild(ball);
@@ -85,14 +87,14 @@ BrickBreaker::BrickBreaker()
     // Create ball body
     b2BodyDef ballBodyDef;
     ballBodyDef.type = b2_dynamicBody;
-    ballBodyDef.position.Set(winSize.width / 2, winSize.height / 2);
+    ballBodyDef.position.Set(winSize.width / 2 /PTM_RATIO, winSize.height / 2 /PTM_RATIO);
     ballBodyDef.userData = ball;
     
     b2Body *ballBody = _world->CreateBody(&ballBodyDef);
     
     // Create circle shape
     b2CircleShape circle;
-    circle.m_radius = 26.0 / PTM_RATIO;
+    circle.m_radius = 26.0/PTM_RATIO;
     
     // Create shape definition and add body
     b2FixtureDef ballShapeDef;
@@ -151,15 +153,16 @@ BrickBreaker::BrickBreaker()
         
         // Create block and add it to the layer
         Sprite *block = Sprite::create("block.png");
-        int xOffset = padding+block->getContentSize().width / 2 + ((block->getContentSize().width + padding) * i);
-        block->setPosition(Point(xOffset, 550));
+        int xOffset = padding+block->getContentSize().width/2+
+        ((block->getContentSize().width+padding)*i);
+        block->setPosition(Point(xOffset, 250));
         block->setTag(2);
         this->addChild(block);
         
         // Create block body
         b2BodyDef blockBodyDef;
         blockBodyDef.type = b2_dynamicBody;
-        blockBodyDef.position.Set(xOffset/PTM_RATIO, 550/PTM_RATIO);
+        blockBodyDef.position.Set(xOffset/PTM_RATIO, 250/PTM_RATIO);
         blockBodyDef.userData = block;
         b2Body *blockBody = _world->CreateBody(&blockBodyDef);
         
@@ -178,15 +181,7 @@ BrickBreaker::BrickBreaker()
         
     }
     
-    auto delay =  DelayTime::create(3.0f);
-    
-    auto callback = CallFunc::create( [this]() {
-        this->schedule(schedule_selector(BrickBreaker::tick));
-    });
-    
-    auto seq = Sequence::createWithTwoActions(delay, callback);
-    
-    this->runAction(seq);
+    this->schedule(schedule_selector(BrickBreaker::tick));
     
     auto touchListener = EventListenerTouchOneByOne::create();
     touchListener->setSwallowTouches(true);
@@ -201,31 +196,31 @@ BrickBreaker::BrickBreaker()
 
 void BrickBreaker::draw(cocos2d::Renderer *renderer, const cocos2d::Mat4 &transform, bool transformUpdated)
 {
-	glDisable(GL_TEXTURE_2D);
-		
-	glEnable(GL_TEXTURE_2D);
+    glDisable(GL_TEXTURE_2D);
+    
+    glEnable(GL_TEXTURE_2D);
 }
 
 void BrickBreaker::tick(float dt)
 {
-	
-	int velocityIterations = 8;
-	int positionIterations = 1;
     
-	// Instruct the world to perform a single step of simulation. It is
-	// generally best to keep the time step and iterations fixed.
-	_world->Step(dt, velocityIterations, positionIterations);
-	
+    int velocityIterations = 8;
+    int positionIterations = 1;
+    
+    // Instruct the world to perform a single step of simulation. It is
+    // generally best to keep the time step and iterations fixed.
+    _world->Step(dt, velocityIterations, positionIterations);
+    
     bool blockFound = false;
     
-	//Iterate over the bodies in the physics world
-	for (b2Body* b = _world->GetBodyList(); b; b = b->GetNext())
-	{
-		if (b->GetUserData() != NULL) {
-			//Synchronize the AtlasSprites position and rotation with the corresponding body
-			Sprite* myActor = (Sprite*)b->GetUserData();
-			myActor->setPosition( Point( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO) );
-			myActor->setRotation( -1 * CC_RADIANS_TO_DEGREES(b->GetAngle()) );
+    //Iterate over the bodies in the physics world
+    for (b2Body* b = _world->GetBodyList(); b; b = b->GetNext())
+    {
+        if (b->GetUserData() != NULL) {
+            //Synchronize the AtlasSprites position and rotation with the corresponding body
+            Sprite* myActor = (Sprite*)b->GetUserData();
+            myActor->setPosition( Point( b->GetPosition().x * PTM_RATIO, b->GetPosition().y * PTM_RATIO) );
+            myActor->setRotation( -1 * CC_RADIANS_TO_DEGREES(b->GetAngle()) );
             
             if (myActor->getTag() == 1) {
                 static int maxSpeed = 10;
@@ -244,8 +239,8 @@ void BrickBreaker::tick(float dt)
             if (myActor->getTag() == 2) {
                 blockFound = true;
             }
-		}
-	}
+        }
+    }
     
     std::vector<b2Body *>toDestroy;
     std::vector<MyContact>::iterator pos;
@@ -256,7 +251,7 @@ void BrickBreaker::tick(float dt)
         if ((contact.fixtureA == _bottomFixture && contact.fixtureB == _ballFixture) ||
             (contact.fixtureA == _ballFixture && contact.fixtureB == _bottomFixture)) {
             GameOverScene *gameOverScene = GameOverScene::create();
-            gameOverScene->getLayer()->getLabel()->setString("You Lose! :[");
+            gameOverScene->getLayer()->getLabel()->setString("Game Over!");
             CCDirector::getInstance()->replaceScene(gameOverScene);
         }
         
@@ -369,7 +364,16 @@ Scene* BrickBreaker::createScene()
     // add layer as a child to scene
     Layer* layer = new BrickBreaker();
     
-    scene->addChild(layer);
+    Size visiblesize = Director::getInstance()->getVisibleSize();
+    
+    auto bg = Sprite::create("brickbreaker-bg.jpg");
+    
+    bg->setPosition(Vec2(visiblesize.width / 2, visiblesize.height / 2));
+    
+    scene->addChild(bg);
+    
+    scene->addChild(layer, 2);
+    
     
     layer->release();
     

@@ -36,9 +36,16 @@ Scene* DormScene::createScene()
     
     // 'layer' is an autorelease object
     auto layer = DormScene::create();
+    layer->setName("dorm");
     
     // add layer as a child to scene
     scene->addChild(layer);
+    
+    // create the HUD
+    HUDLayer::createHUD(scene);
+    
+    // load the character
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
