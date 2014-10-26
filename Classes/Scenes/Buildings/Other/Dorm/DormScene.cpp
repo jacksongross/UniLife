@@ -166,8 +166,6 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     // move the character there
     Movement::moveCharacter(this->getScene(), start, destination);
     
-    //HUDLayer::updateHUD(pm);
-    
 }
 
 void DormScene::ShelfPressed(cocos2d::Ref *pSender)

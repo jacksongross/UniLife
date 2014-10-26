@@ -18,6 +18,8 @@
 #include "MapScene.h"
 #include "LogicGame.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -28,6 +30,7 @@ Scene* LibraryRooms::createScene()
     
     // 'layer' is an autorelease object
     auto layer = LibraryRooms::create();
+    layer->setName("libraryrooms");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -36,6 +39,9 @@ Scene* LibraryRooms::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -73,18 +79,43 @@ void LibraryRooms::ToFoyer(Ref* pSender)
 }
 
 
-void LibraryRooms::ToMeet1(Ref* pSender){
+void LibraryRooms::ToMeet1(Ref* pSender)
+{
   
     log("You Went To Meeting Room 1");
+    
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<LibraryRooms*>("libraryrooms")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("meet1");
+    
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
     
 }
 
 
-void LibraryRooms::ToMeet2(Ref* pSender){
+void LibraryRooms::ToMeet2(Ref* pSender)
+{
     
     log("You Went To Meeting Room 2");
     
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<LibraryRooms*>("libraryrooms")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("meet2");
+    
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
 }
 

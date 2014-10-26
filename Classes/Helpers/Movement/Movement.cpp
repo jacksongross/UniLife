@@ -13,7 +13,6 @@ USING_NS_CC;
 // GLOBALS FOR THE SPRITES USED FOR MOVEMENT/////////
 cocos2d::Vector<cocos2d::SpriteFrame*> animFrames(4);
 cocos2d::SpriteBatchNode *spritesheet;
-bool locked;
 /////////////////////////////////////////////////////
 
 // load the sprite frames for the character
@@ -42,7 +41,6 @@ void Movement::loadSpriteFrames(cocos2d::Scene* scene)
     
     scene->addChild(spritesheet, 1);
     
-    locked = false;
 }
 
 // move character in the scene from start position to end position (touch point)
@@ -69,19 +67,10 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     
     auto walkAction = cocos2d::Repeat::create(cocos2d::Animate::create(animation), duration * 2);
     
-    if(locked == false)
-    {
-        character->runAction(walkAction);
-        
-        locked = true;
-        
-        auto callback = CallFunc::create([](){
-            locked = false;
-        });
-        
-        character->runAction(Sequence::createWithTwoActions(move, callback));
-        
-    }
+    character->runAction(walkAction);
+    
+    character->runAction(move);
+    
     
 }
 

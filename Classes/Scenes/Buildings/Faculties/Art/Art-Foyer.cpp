@@ -19,6 +19,8 @@
 #include <vector>
 #include "MapScene.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -29,6 +31,7 @@ Scene* ArtFoyer::createScene()
     
     // 'layer' is an autorelease object
     auto layer = ArtFoyer::create();
+    layer->setName("artfoyer");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -37,6 +40,9 @@ Scene* ArtFoyer::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -81,5 +87,22 @@ void ArtFoyer::ToMap(Ref* pSender)
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
+}
+
+void ArtFoyer::staffTouched(Ref* pSender)
+{
+    log("staff member touched");
+    
+    // get the character and staff positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto staff = this->getScene()->getChildByName<ArtFoyer*>("artfoyer")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("officeperson");
+    
+    float destination = staff->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
 }
 

@@ -19,6 +19,7 @@
 #include <vector>
 #include "MapScene.h"
 #include "HUDHelper.h"
+#include "Movement.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -30,6 +31,7 @@ Scene* SocSciFoyer::createScene()
     
     // 'layer' is an autorelease object
     auto layer = SocSciFoyer::create();
+    layer->setName("socscifoyer");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -38,6 +40,9 @@ Scene* SocSciFoyer::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -84,4 +89,23 @@ void SocSciFoyer::ToMap(Ref* pSender)
     Director::getInstance()->replaceScene(crosssfade);
     
 }
+
+void SocSciFoyer::staffTouched(cocos2d::Ref *pSender)
+{
+    log("staff member touched");
+    
+    // get the character and staff positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto staff = this->getScene()->getChildByName<SocSciFoyer*>("socscifoyer")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("staff");
+    
+    float destination = staff->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
+
+}
+
 

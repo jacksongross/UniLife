@@ -38,7 +38,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     cocos2d::ProgressTimer* pg2 = cocos2d::ProgressTimer::create(streSprite);
     // set up the timer
     cocos2d::Label* timer = cocos2d::Label::createWithSystemFont("", "Verdana", 64);
-    timer->setPosition(cocos2d::Vec2(visibleSize.width * 0.5, visibleSize.height * 0.95));
+    timer->setPosition(cocos2d::Vec2(visibleSize.width * 0.52, visibleSize.height * 0.95));
     timer->setName("Timer");
     
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
@@ -111,7 +111,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     engText->setPosition(cocos2d::Vec2(visibleSize.width * 0.28, visibleSize.height * 0.96));
     engText->setColor(cocos2d::Color3B(255,255,255));
     
-    engSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.08, visibleSize.height * 0.95));
+    engSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.1, visibleSize.height * 0.95));
     engSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     engSprite->setScale(0.5 , 0.5);
     engSprite->setName("EnergyHUD");
@@ -120,7 +120,7 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     streText->setPosition(cocos2d::Vec2(visibleSize.width * 0.28, visibleSize.height * 0.91));
     streText->setColor(cocos2d::Color3B(255,255,255));
     
-    streSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.08, visibleSize.height * 0.90));
+    streSprite->setPosition(cocos2d::Vec2(visibleSize.width * 0.1, visibleSize.height * 0.90));
     streSprite->setAnchorPoint(cocos2d::Vec2(0.f,0.5f));
     streSprite->setScale(0.5 , 0.5);
     streSprite->setName("StressHUD");

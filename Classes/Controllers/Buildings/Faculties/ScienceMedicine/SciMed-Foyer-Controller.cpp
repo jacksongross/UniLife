@@ -31,11 +31,15 @@ cocos2d::Vector<cocos2d::MenuItem*> SciMedFoyerController::CreateMenuButtons(Sci
     
     
     auto ToMap = MenuItemImage::create("Map-marker.png","Map-marker.png" , CC_CALLBACK_1(SciMedFoyer::ToMap, that));
-    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.15);
+    ToMap->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.9 ));
+    ToMap->setScale(0.85);
     pMenuItems.pushBack(ToMap);
     
     
+    auto officePerson = MenuItemImage::create("glen.png", "glen.png", CC_CALLBACK_1(SciMedFoyer::staffTouched, that));
+    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, visibleSize.height * .45));
+    officePerson->setName("staff");
+    pMenuItems.pushBack(officePerson);
     
     return pMenuItems;
     
@@ -52,6 +56,7 @@ void SciMedFoyerController::CreateMainMenu(SciMedFoyer *that, Size visibleSize, 
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
@@ -62,11 +67,6 @@ void SciMedFoyerController::CreateMainMenu(SciMedFoyer *that, Size visibleSize, 
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
-    
-    
-    
-    
-    
     
     Sprite *foyerDesk = Sprite::create("desk.png");
     foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
@@ -83,12 +83,6 @@ void SciMedFoyerController::CreateMainMenu(SciMedFoyer *that, Size visibleSize, 
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
     that->addChild(LocName);
-    
-    Sprite *officePerson = Sprite::create("bill_inside.png");
-    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
-    that->addChild(officePerson, 1);
-    
-    
     
     
 }

@@ -17,6 +17,7 @@
 #include <vector>
 #include "MapScene.h"
 #include "HUDHelper.h"
+#include "Movement.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -28,6 +29,7 @@ Scene* EIS_Hallway::createScene()
     
     // 'layer' is an autorelease object
     auto layer = EIS_Hallway::create();
+    layer->setName("eishallway");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -36,6 +38,9 @@ Scene* EIS_Hallway::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -73,10 +78,24 @@ void EIS_Hallway::ToFoyer(Ref* pSender)
 }
 
 
-void EIS_Hallway::ToLecture(Ref* pSender){
+void EIS_Hallway::ToLecture(Ref* pSender)
+{
     log("Going To EIS Lecture!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<Inside_EIS*>("eishallway")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("lectdoor");
+    
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
+    
     
     // check whether the player is due for a lecture
     
@@ -143,10 +162,23 @@ void EIS_Hallway::ToLecture(Ref* pSender){
 }
 
 
-void EIS_Hallway::ToTutorial(Ref* pSender){
+void EIS_Hallway::ToTutorial(Ref* pSender)
+{
     log("Going To EIS Tutorial!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
+    
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<Inside_EIS*>("eishallway")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("tutdoor");
+    
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
     // check whether the player is due for a tutorial
     

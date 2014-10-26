@@ -34,8 +34,11 @@ cocos2d::Vector<cocos2d::MenuItem*> Inside_EIS_Controller::CreateMenuButtons(Ins
     ToMap->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.9 ));
     ToMap->setScale(0.85);
     pMenuItems.pushBack(ToMap);
-
     
+    auto officePerson = MenuItemImage::create("steve.png", "steve.png", CC_CALLBACK_1(Inside_EIS::staffTouched, that));
+    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
+    officePerson->setName("staff");
+    pMenuItems.pushBack(officePerson);
     
     return pMenuItems;
     
@@ -52,6 +55,7 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
@@ -62,8 +66,6 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
-    
-    
     
     
     Sprite *foyerDesk = Sprite::create("desk.png");
@@ -81,13 +83,6 @@ void Inside_EIS_Controller::CreateMainMenu(Inside_EIS *that, Size visibleSize, V
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
     that->addChild(LocName);
-    
-    Sprite *officePerson = Sprite::create("bill_inside.png");
-    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
-    that->addChild(officePerson, 1);
-    
-    
-    
     
 }
 

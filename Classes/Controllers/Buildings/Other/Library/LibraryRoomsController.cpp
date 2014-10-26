@@ -18,18 +18,21 @@ cocos2d::Vector<cocos2d::MenuItem*> LibraryRoomsController::CreateMenuButtons(Li
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
     auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(LibraryRooms::ToFoyer, that));
-    ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2, origin.y + (visibleSize.height / 2 + 275)));
+    ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2, visibleSize.height * 0.85));
     ToFoyer->setScale(0.3,0.3);
     ToFoyer->setRotation(180);
+    ToFoyer->setName("tofoyer");
     pMenuItems.pushBack(ToFoyer);
     
     
     auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(LibraryRooms::ToMeet1, that));
     LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 424, origin.y + (visibleSize.height / 2 - 10)));
+    LectDoor->setName("meet1");
     pMenuItems.pushBack(LectDoor);
     
     auto TutDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(LibraryRooms::ToMeet2, that));
     TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 422, origin.y + (visibleSize.height / 2 - 10)));
+    TutDoor->setName("meet2");
     pMenuItems.pushBack(TutDoor);
     
     
@@ -49,6 +52,7 @@ void LibraryRoomsController::CreateMainMenu(LibraryRooms *that, Size visibleSize
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"

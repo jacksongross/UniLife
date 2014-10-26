@@ -17,8 +17,8 @@ cocos2d::Vector<cocos2d::MenuItem*> TavernFoyerController::CreateMenuButtons(Tav
     
     
     auto ToMap = MenuItemImage::create("Map-marker.png","Map-marker.png" , CC_CALLBACK_1(TavernFoyer::ToMap, that));
-    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.15);
+    ToMap->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.9 ));
+    ToMap->setScale(0.85);
     pMenuItems.pushBack(ToMap);
     
     

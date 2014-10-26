@@ -26,12 +26,13 @@ cocos2d::Vector<cocos2d::MenuItem*> SciMedHallwayController::CreateMenuButtons(S
     
     auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(SciMedHallway::ToLecture, that));
     LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
+    LectDoor->setName("lectdoor");
     pMenuItems.pushBack(LectDoor);
     
     auto TutDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(SciMedHallway::ToTutorial, that));
     TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 397, origin.y + (visibleSize.height / 2 - 26)));
+    TutDoor->setName("tutdoor");
     pMenuItems.pushBack(TutDoor);
-    
     
     
     return pMenuItems;
@@ -49,6 +50,7 @@ void SciMedHallwayController::CreateMainMenu(SciMedHallway *that, Size visibleSi
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"

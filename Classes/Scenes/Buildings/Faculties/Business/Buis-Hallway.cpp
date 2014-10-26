@@ -19,6 +19,8 @@
 #include <vector>
 #include "MapScene.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -29,6 +31,7 @@ Scene* BuisHallway::createScene()
     
     // 'layer' is an autorelease object
     auto layer = BuisHallway::create();
+    layer->setName("buishallway");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -37,6 +40,9 @@ Scene* BuisHallway::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -75,55 +81,46 @@ void BuisHallway::ToFoyer(Ref* pSender)
 
 
 
-void BuisHallway::ToLecture(Ref* pSender){
+void BuisHallway::ToLecture(Ref* pSender)
+{
     log("Going To Buisness Lecture!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
-    //Temporary Code for Debugging Purposes
-    if(pm.getStats().getEnergy() < 5){
-        log("Not Enough Energy To Go To A Lecture");
-    }else if(pm.getStats().getStress() > 95){
-        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
-    }else{
-        log("You Went To A Lecture (+1 INT, +10 Stress)");
-        
-        PlayerStatsModel updateStats;
-        updateStats = pm.getStats();
-        
-        updateStats.setIntelligence(updateStats.getIntelligence() + 1);
-        updateStats.setStress(updateStats.getStress() + 10);
-        updateStats.setEnergy(updateStats.getEnergy() - 5);
-        pm.setStats(updateStats);
-        HUDLayer::updateHUD(pm);
-    }
+
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<BuisHallway*>("buishallway")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("lectdoor");
     
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
     
 }
 
 
-void BuisHallway::ToTutorial(Ref* pSender){
+void BuisHallway::ToTutorial(Ref* pSender)
+{
     log("Going To Buisness Tutorial!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
-    //Temporary Code for Debugging Purposes
-    if(pm.getStats().getEnergy() < 5){
-        log("Not Enough Energy To Go To A Lecture");
-    }else if(pm.getStats().getStress() > 95){
-        log("You are so Stressed, Man. I Think You Should Go Home & Relax.");
-    }else{
-        log("You Went To A Lecture (+1 INT, +10 Stress)");
-        PlayerStatsModel updateStats;
-        updateStats = pm.getStats();
-        
-        updateStats.setIntelligence(updateStats.getIntelligence() + 1);
-        updateStats.setStress(updateStats.getStress() + 10);
-        updateStats.setEnergy(updateStats.getEnergy() - 5);
-        pm.setStats(updateStats);
-        HUDLayer::updateHUD(pm);
-    }
+    // get the character and door positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto door = this->getScene()->getChildByName<BuisHallway*>("buishallway")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("tutdoor");
+    
+    float destination = door->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
     
     

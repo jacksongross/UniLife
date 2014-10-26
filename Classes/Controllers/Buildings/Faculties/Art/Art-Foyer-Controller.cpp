@@ -31,10 +31,14 @@ cocos2d::Vector<cocos2d::MenuItem*> ArtFoyerController::CreateMenuButtons(ArtFoy
     
     
     auto ToMap = MenuItemImage::create("Map-marker.png","Map-marker.png" , CC_CALLBACK_1(ArtFoyer::ToMap, that));
-    ToMap->setPosition(Vec2(origin.x + visibleSize.width / 2 + 450, origin.y + (visibleSize.height / 2 + 275)));
-    ToMap->setScale(0.5);
+    ToMap->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.9 ));
+    ToMap->setScale(0.85);
     pMenuItems.pushBack(ToMap);
     
+    auto officePerson = MenuItemImage::create("philip.png", "philip.png", CC_CALLBACK_1(ArtFoyer::staffTouched, that));
+    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
+    officePerson->setName("officeperson");
+    pMenuItems.pushBack(officePerson);
     
     
     return pMenuItems;
@@ -52,6 +56,7 @@ void ArtFoyerController::CreateMainMenu(ArtFoyer *that, Size visibleSize, Vec2 o
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
@@ -64,7 +69,6 @@ void ArtFoyerController::CreateMainMenu(ArtFoyer *that, Size visibleSize, Vec2 o
     that->addChild(sprite, 0);
     
 
-    
     Sprite *foyerDesk = Sprite::create("desk.png");
     foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
     foyerDesk->setScale(1.25);
@@ -80,10 +84,6 @@ void ArtFoyerController::CreateMainMenu(ArtFoyer *that, Size visibleSize, Vec2 o
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
     that->addChild(LocName);
-    
-    Sprite *officePerson = Sprite::create("bill_inside.png");
-    officePerson->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2));
-    that->addChild(officePerson, 1);
     
     
     

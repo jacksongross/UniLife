@@ -18,6 +18,8 @@
 #include "MapScene.h"
 #include "TavernRoom.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -36,6 +38,9 @@ Scene* TavernFoyer::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;

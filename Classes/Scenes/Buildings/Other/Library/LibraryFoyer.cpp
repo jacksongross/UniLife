@@ -18,6 +18,8 @@
 #include "LibraryRooms.h"
 #include "LibraryFoyerController.h"
 #include "HUDHelper.h"
+#include "Movement.h"
+
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -28,6 +30,7 @@ Scene* LibraryFoyer::createScene()
     
     // 'layer' is an autorelease object
     auto layer = LibraryFoyer::create();
+    layer->setName("libraryfoyer");
     
     // add layer as a child to scene
     scene->addChild(layer);
@@ -36,6 +39,9 @@ Scene* LibraryFoyer::createScene()
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    
+    // load the sprite into the scene
+    Movement::loadSpriteFrames(scene);
     
     // return the scene
     return scene;
@@ -80,6 +86,24 @@ void LibraryFoyer::ToMeetingRoom(Ref* pSender)
    auto scene = LibraryRooms::createScene();
    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
+    
+}
+
+void LibraryFoyer::staffTouched(Ref* pSender)
+{
+    log("you touched the staff member!");
+    
+    // get the character and staff positions
+    auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
+    auto staff = this->getScene()->getChildByName<LibraryFoyer*>("libraryfoyer")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("staff");
+    
+    float destination = staff->getPositionX();
+    
+    // get the character's sprite position
+    float start = character->getPositionX();
+    
+    // move the character there
+    Movement::moveCharacter(this->getScene(), start, destination);
     
 }
 

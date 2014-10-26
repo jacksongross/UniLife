@@ -26,10 +26,12 @@ cocos2d::Vector<cocos2d::MenuItem*> EIS_Hallway_Controller::CreateMenuButtons(EI
     
     auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(EIS_Hallway::ToLecture, that));
     LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
+    LectDoor->setName("lectdoor");
     pMenuItems.pushBack(LectDoor);
 
     auto TutDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(EIS_Hallway::ToTutorial, that));
     TutDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 - 397, origin.y + (visibleSize.height / 2 - 26)));
+    TutDoor->setName("tutdoor");
     pMenuItems.pushBack(TutDoor);
 
     
@@ -49,6 +51,7 @@ void EIS_Hallway_Controller::CreateMainMenu(EIS_Hallway *that, Size visibleSize,
     // create menu, it's an autorelease object
     auto menu = Menu::createWithArray(pMenuItems);
     menu->setPosition(Vec2::ZERO);
+    menu->setName("menu");
     that->addChild(menu, 1);
     
     // add "MenuScene" splash screen"
