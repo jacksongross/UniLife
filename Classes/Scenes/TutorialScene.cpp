@@ -63,6 +63,43 @@ bool TutorialScene::init()
 }
 
 
+bool TutorialScene::nextPageOnMap(cocos2d::Touch* touch, cocos2d::Event* event){
+    
+    auto legodude = (Sprite*)this->getChildByName("legodude");
+    auto sBubble = (Sprite*)this->getChildByName("sBubble");
+    auto TalkText = (cocos2d::ui::Text*)this->getChildByName("IntroText");
+    auto OtherText = (cocos2d::ui::Text*)this->getChildByName("OtherText");
+    
+    auto dormbutton = (cocos2d::ui::Button*)this->getChildByName("Dorm");
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+    
+    
+    
+    if(lock == false){
+        lock = true;
+        legodude->setVisible(false);
+        sBubble->setVisible(false);
+        TalkText->setVisible(false);
+        OtherText->setVisible(false);
+        
+        auto dormbutton = cocos2d::ui::Button::create("dorm.png");
+        dormbutton->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + visibleSize.height / 2 -250));
+        dormbutton->setScale(0.8);
+        dormbutton->setName("dormbutton");
+        dormbutton->addTouchEventListener(CC_CALLBACK_2(TutorialScene::dormPress, this));
+        this->addChild(dormbutton,4);
+        
+        TutorialController::createHighlightedButton(this, visibleSize, origin, dormbutton);
+        
+
+    
+    }
+    return true;
+    
+}
+
 bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
@@ -85,7 +122,12 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
     auto pBubbleText = (ui::Text*)this->getChildByName("pBubbleText");
     
     log("GO TO NEXT PAGE %d",whichpage);
-    
+    if(lock == false){
+        log("IsLocked?: false");
+    }
+    else{
+        log("IsLocked?: true");
+    }
     
     if(whichpage ==  0){
         TalkText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
@@ -217,22 +259,19 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         auto OtherText2 = (cocos2d::ui::Text*)this->getChildByName("OtherText");
         TutorialController::removeHighlightedButton(this, visibleSize, origin, mapbutton);
         mapBG->setVisible(false);
+        
         this->removeChild(fac1);
         this->removeChild(fac2);
         this->removeChild(fac3);
         this->removeChild(fac4);
         this->removeChild(fac5);
+        
         legodude->setVisible(true);
         sBubble->setVisible(true);
         TalkText2->setString("This is Your Faculty Building");
         OtherText2->setString("Tap the Receptionist to talk to them");
 
         
-        pBubble->setVisible(true);
-        pBubbleText->setVisible(true);
-        pBubbleText->setTextAreaSize(Size(235,150));
-        pBubbleText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
-        pBubbleText->setString("Hello");
         
         lock = false;
         whichpage++;
@@ -240,24 +279,28 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         
     }else if(whichpage == 16 && lock == false){
         TutorialController::createHighlightedButton(this, visibleSize, origin, officePerson);
+        pBubble->setVisible(true);
+        pBubbleText->setVisible(true);
+        pBubbleText->setTextAreaSize(Size(235,150));
+        pBubbleText->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
+        pBubbleText->setString("Hello");
+        
         legodude->setVisible(false);
         sBubble->setVisible(false);
         TalkText->setString("");
         OtherText->setString("");
         officePerson->setTouchEnabled(true);
         lock = true;
-        
+        whichpage++;
     }else if(whichpage == 17 && lock == false){
         
         TutorialController::removeHighlightedButton(this, visibleSize, origin, officePerson);
-        lock = false;
+        lock = true;
         officePerson->setTouchEnabled(false);
         
         
         
         pBubble->setVisible(true);
-        pBubbleText->setVisible(true);
-        pBubbleText->setTextAreaSize(Size(235,150));
         pBubbleText->setString("Here is Your Timetable for this Session");
         
         whichpage++;
@@ -269,26 +312,77 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         officePerson->setTouchEnabled(false);
         TutorialController::removeHighlightedButton(this, visibleSize, origin, officePerson);
         
-        
-        pBubble->setVisible(true);
-        pBubbleText->setVisible(true);
+        ;
         pBubbleText->setTextAreaSize(Size(235,150));
         pBubbleText->setString("You Can View Your Timetable By Selecting it On Your Phone");
         TutorialController::createHighlightedButton(this, visibleSize, origin, phonebutton);
         phonebutton->setTouchEnabled(true);
         
     }else if(whichpage == 19 && lock == false){
-        
+        phonebutton->setTouchEnabled(false);
         TutorialController::removeHighlightedButton(this, visibleSize, origin, phonebutton);
         
-        auto coverSprite = Sprite::create();
-        coverSprite->setPosition(Vec2(visibleSize.width * 0.2, visibleSize.height * 0.9));
-        coverSprite->setName("coversprite");
-        this->addChild(coverSprite);
-        TutorialController::createHighlightedSprite(this, visibleSize, origin, coverSprite);
+        
+        Sprite* overlayer = Sprite::create("phone_selection.png");
+        overlayer->setVisible(false);
+        overlayer->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        this->addChild(overlayer,20);
+        TutorialController::createHighlightedSprite(this, visibleSize, origin, overlayer);
+        log("isthis");
+        whichpage++;
+    }else if(whichpage == 20 && lock == false){
+        
+        phonebutton->setTouchEnabled(false);
+        mapbutton->setTouchEnabled(true);
+        
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, phonebutton);
+        auto TalkText2 = (cocos2d::ui::Text*)this->getChildByName("IntroText");
+        auto OtherText2 = (cocos2d::ui::Text*)this->getChildByName("OtherText");
+
+        pBubbleText->setVisible(false);
+        pBubble->setVisible(false);
+        
+        legodude->setVisible(true);
+        sBubble->setVisible(true);
+        TalkText2->setString("Your Phone also contains A lot of other \nimportant information");
+        OtherText2->setString("Tap the compass to head back to the map");
+        TutorialController::createHighlightedButton(this, visibleSize, origin, mapbutton);
+        
+        
+        lock = true;
         
         
         
+    }else if(whichpage == 21){
+        lock = false;
+        TutorialController::removeHighlightedButton(this, visibleSize, origin, mapbutton);
+        mapbutton->setTouchEnabled(false);
+        TutorialController::removeFaculty(this);
+        auto TalkText2 = (cocos2d::ui::Text*)this->getChildByName("IntroText");
+        auto OtherText2 = (cocos2d::ui::Text*)this->getChildByName("OtherText");
+        
+        mapBG->setVisible(true);
+        
+        TalkText2->setString("Lets Go To Your Dorm");
+        OtherText2->setString("The Dorm Button Is Highlighted ");
+        
+        this->_eventDispatcher->removeAllEventListeners();
+        
+        auto touchListener2 = EventListenerTouchOneByOne::create();
+        touchListener2->setSwallowTouches(true);
+        touchListener2->onTouchBegan = CC_CALLBACK_2(TutorialScene::nextPageOnMap, this);
+        _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener2, this);
+        
+        
+    }else if(whichpage == 22){
+        legodude->setVisible(false);
+        sBubble->setVisible(false);
+        
+        whichpage++;
+    }else if(whichpage >= 23){
+        
+        
+        log("EOF");
     }
     
     
@@ -321,6 +415,7 @@ void TutorialScene::compassPress(Ref *pSender, ui::Widget::TouchEventType type){
             Touch* newtouch;
             Event* newEvent;
             TutorialScene::nextPage(newtouch,newEvent);
+            lock = false;
             break;
         }
         case ui::Widget::TouchEventType::CANCELED:
@@ -356,6 +451,7 @@ void TutorialScene::buildingPress(Ref *pSender, ui::Widget::TouchEventType type)
             Touch* newtouch;
             Event* newEvent;
             TutorialScene::nextPage(newtouch,newEvent);
+            lock = false;
             break;
         }
         case ui::Widget::TouchEventType::CANCELED:
@@ -385,7 +481,6 @@ void TutorialScene::receptPress(Ref *pSender, ui::Widget::TouchEventType type){
             break;
             
         case ui::Widget::TouchEventType::ENDED:{
-                whichpage++;
                 Touch* newtouch;
                 Event* newEvent;
                 TutorialScene::nextPage(newtouch,newEvent);
@@ -443,3 +538,40 @@ void TutorialScene::phonePress(Ref *pSender, ui::Widget::TouchEventType type){
     }
     
 }
+
+
+
+
+void TutorialScene::dormPress(Ref *pSender, ui::Widget::TouchEventType type){
+    
+    
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    auto dormbutton = (cocos2d::ui::Button*)this->getChildByName("dormbutton");
+    switch (type)
+    {
+        case ui::Widget::TouchEventType::BEGAN:
+            
+            break;
+            
+        case ui::Widget::TouchEventType::MOVED:
+            break;
+            
+        case ui::Widget::TouchEventType::ENDED:{
+            TutorialController::removeHighlightedButton(this,visibleSize, origin, dormbutton);
+            this->removeChildByName("dormbutton");
+            TutorialController::loadDorm(this,visibleSize, origin);
+           
+            
+            break;
+        }
+        case ui::Widget::TouchEventType::CANCELED:
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+

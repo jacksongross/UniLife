@@ -203,6 +203,7 @@
 		D06135A219D26A6D0042DB83 /* PQuiz_back.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A019D26A6D0042DB83 /* PQuiz_back.png */; };
 		D06135A319D26A6D0042DB83 /* PQuiz_title.png in Resources */ = {isa = PBXBuildFile; fileRef = D06135A119D26A6D0042DB83 /* PQuiz_title.png */; };
 		D06F023519DA701600A36F84 /* PopUpLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D06F023319DA701600A36F84 /* PopUpLayer.cpp */; };
+		D0780AA219FB58F4007109AE /* dorm.png in Resources */ = {isa = PBXBuildFile; fileRef = D0780AA119FB58F4007109AE /* dorm.png */; };
 		D08AFF9419ECB3C90089E0AF /* TutorialScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D08AFF9219ECB3C90089E0AF /* TutorialScene.cpp */; };
 		D08AFF9819ECB4F70089E0AF /* TutorialController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D08AFF9619ECB4F70089E0AF /* TutorialController.cpp */; };
 		D08AFF9B19ECB6FC0089E0AF /* legoDude.png in Resources */ = {isa = PBXBuildFile; fileRef = D08AFF9A19ECB6FC0089E0AF /* legoDude.png */; };
@@ -641,6 +642,7 @@
 		D06135A119D26A6D0042DB83 /* PQuiz_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PQuiz_title.png; sourceTree = "<group>"; };
 		D06F023319DA701600A36F84 /* PopUpLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PopUpLayer.cpp; sourceTree = "<group>"; };
 		D06F023419DA701600A36F84 /* PopUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpLayer.h; sourceTree = "<group>"; };
+		D0780AA119FB58F4007109AE /* dorm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dorm.png; sourceTree = "<group>"; };
 		D08AFF9219ECB3C90089E0AF /* TutorialScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialScene.cpp; sourceTree = "<group>"; };
 		D08AFF9319ECB3C90089E0AF /* TutorialScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialScene.h; sourceTree = "<group>"; };
 		D08AFF9619ECB4F70089E0AF /* TutorialController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TutorialController.cpp; sourceTree = "<group>"; };
@@ -1399,6 +1401,7 @@
 		7A89458D19ADAF3F008E1EA7 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				D0780AA119FB58F4007109AE /* dorm.png */,
 				D098A9BF19AE3F14005B13D3 /* Go_Left_Arrow.png */,
 				7A89458E19ADAF3F008E1EA7 /* map-art.png */,
 				7A89458F19ADAF3F008E1EA7 /* map-business.png */,
@@ -1928,6 +1931,7 @@
 				7A647D1019F218CD000D36CF /* phone-bg.png in Resources */,
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
+				D0780AA219FB58F4007109AE /* dorm.png in Resources */,
 				D0B163DF19F9D44300672A4C /* glen.png in Resources */,
 				B904FF8A19FAB9AD0035DB80 /* walk5.png in Resources */,
 				B904FF8719FAB9AD0035DB80 /* walk2.png in Resources */,

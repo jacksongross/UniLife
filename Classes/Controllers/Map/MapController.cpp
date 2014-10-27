@@ -19,10 +19,10 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     
     
     
-    auto GoToNext = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
-    GoToNext->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
-    GoToNext->setScale(0.3,0.3);
-    pMenuItems.pushBack(GoToNext);
+    auto GoToDorm = MenuItemImage::create("dorm.png","dorm.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
+    GoToDorm->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
+    GoToDorm->setScale(0.3,0.3);
+    pMenuItems.pushBack(GoToDorm);
 
     
     auto GoToEIS = MenuItemImage::create("map-computing_engineering.png", "map-computing_engineering.png", CC_CALLBACK_1(MapScene::GoToEIS, that));
@@ -69,6 +69,9 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoToUniCentre->setPosition(Vec2(origin.x + visibleSize.width / 2 + 320, origin.y + visibleSize.height / 2 - 200));
     GoToUniCentre->setScale(0.9);
     pMenuItems.pushBack(GoToUniCentre);
+    
+    
+    
     
     return pMenuItems;
     

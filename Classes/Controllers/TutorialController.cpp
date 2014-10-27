@@ -236,11 +236,13 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
     Sprite *foyerDesk = Sprite::create("desk.png");
     foyerDesk->setPosition(Vec2(origin.x + visibleSize.width / 2 + 200, origin.y + visibleSize.height / 2 -125));
     foyerDesk->setScale(1.25);
+    foyerDesk->setName("foyerDesk");
     that->addChild(foyerDesk,5);
     
     Sprite *foyerBoard = Sprite::create("whiteboard.png");
     foyerBoard->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 + 100));
     foyerBoard->setScale(1);
+    foyerBoard->setName("foyerBoard");
     that->addChild(foyerBoard,2);
     
     
@@ -248,6 +250,7 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
     
     cocos2d::ui::Text* LocName = cocos2d::ui::Text::create("", "Verdana", 15);
     LocName->setColor(Color3B(0,0,0));
+        LocName->setName("LocName");
     LocName->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
     LocName->setPosition(Vec2(origin.x + visibleSize.width / 2 - 250, origin.y + visibleSize.height / 2 +165));
     that->addChild(LocName,3);
@@ -336,6 +339,88 @@ void TutorialController::loadFaculty(TutorialScene *that, Size visibleSize, Vec2
 }
 
 
+
+void TutorialController::removeFaculty(TutorialScene *that)
+{
+    
+    that->removeChildByName("foyerDesk");
+    that->removeChildByName("foyerBoard");
+    that->removeChildByName("officePerson");
+    that->removeChildByName("LocName");
+    that->removeChildByName("facBG");
+    that->removeChildByName("LocName");
+    
+}
+
+
+
+void TutorialController::loadDorm(TutorialScene *that, Size visibleSize, Vec2 origin)
+{
+    
+    // create dorm room
+    auto dormbg = Sprite::create("dorm-background.png");
+    
+    // position the sprite on the center of the screen
+    dormbg->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    dormbg->setName("dormbg");
+    // add the sprite as a child to this layer
+    that->addChild(dormbg, 0);
+    
+    // add the door
+    
+    auto dormdoor = Sprite::create("dorm-door.png");
+    dormdoor->setPosition(Vec2(visibleSize.width / 2 - origin.x - dormdoor->getContentSize().width - 39, visibleSize.height / 2 + origin.y - 10));
+    dormdoor->setName("dormdoor");
+    that->addChild(dormdoor,2);
+    
+    // add the bed
+    auto dormbed = Sprite::create("dorm-bed.png");
+    dormbed->setPosition(Vec2(visibleSize.width - origin.x - dormbed->getContentSize().width + 202, visibleSize.height - dormbed->getContentSize().height - 220));
+    dormbed->setName("dormbed");
+    that->addChild(dormbed,2);
+    
+    
+    // add the book shelf
+    auto dormshelf = Sprite::create("dorm-book_shelf.png");
+    dormshelf->setPosition(Vec2(visibleSize.width - dormshelf->getContentSize().width - 333, visibleSize.height / 2 + origin.y - 91));
+    dormshelf->setName("dormshelf");
+    that->addChild(dormshelf,2);
+    
+    // add the desk
+    auto dormdesk = Sprite::create("dorm-desk.png");
+    dormdesk->setPosition(Vec2(origin.x + dormdesk->getContentSize().width / 2 + 11, visibleSize.height / 2 - 120));
+    dormdesk->setName("dormdesk");
+    that->addChild(dormdesk,2);
+    
+    auto dormcomputer = Sprite::create("dorm-computer.png");
+    dormcomputer->setPosition(Vec2(origin.x + dormcomputer->getContentSize().width / 2 + 12, visibleSize.height / 2 + 58));
+    dormcomputer->setName("dormcomputer");
+    that->addChild(dormcomputer,2);
+    
+    auto dormstool = Sprite::create("dorm-stool.png");
+    dormstool->setPosition(Vec2(origin.x + dormstool->getContentSize().width / 2 + 12, visibleSize.height / 2 + 58));
+    dormstool->setName("dormstool");
+    that->addChild(dormstool,2);
+    
+    
+}
+
+void TutorialController::removeDorm(TutorialScene *that, Size visibleSize, Vec2 origin)
+{
+    
+    
+    that->removeChildByName("dormstool");
+    that->removeChildByName("dormcomputer");
+    that->removeChildByName("dormshelf");
+    that->removeChildByName("dormdesk");
+    that->removeChildByName("dormbed");
+    that->removeChildByName("dormdoor");
+    that->removeChildByName("dormbg");
+    
+    
+    
+}
+
 void TutorialController::createHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active){
     
     auto highlighter = Sprite::create();
@@ -349,7 +434,7 @@ void TutorialController::createHighlightedSprite(TutorialScene *that, Size visib
     highlighter->setName("highlighter");
     auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
     highlighter->runAction(action);
-    that->addChild(highlighter, 3);
+    that->addChild(highlighter, active->getLocalZOrder()+1);
 
     
     
@@ -377,7 +462,7 @@ void TutorialController::createHighlightedButton(TutorialScene *that, Size visib
     highlighter->setName("highlighter");
     auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
     highlighter->runAction(action);
-    that->addChild(highlighter, 3);
+    that->addChild(highlighter, active->getLocalZOrder()+1);
 
     
     
@@ -391,4 +476,31 @@ void TutorialController::removeHighlightedButton(TutorialScene *that, Size visib
     
 }
 
+void TutorialController::createHighlightedMenuImage(TutorialScene *that, Size visibleSize, Vec2 origin,MenuItemImage* active){
+    
+    
+    auto highlighter = Sprite::create();
+    highlighter->setColor(Color3B::BLUE);
+    highlighter->setOpacity(90);
+    Rect newRect = Rect(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y, active->getContentSize().width + 25, active->getContentSize().height + 25);
+    highlighter->setTextureRect(newRect);
+    highlighter->setVisible(true);
+    highlighter->setScale(active->getScale());
+    highlighter->setPosition(active->getPosition());
+    highlighter->setName("highlighter");
+    auto action = RepeatForever::create(Sequence::create(Blink::create(10, 20),Blink::create(10, 20),nullptr));
+    highlighter->runAction(action);
+    that->addChild(highlighter, active->getLocalZOrder()+1);
+    
+    
+    
+}
+
+
+void TutorialController::removeHighlightedMenuImage(TutorialScene *that, Size visibleSize, Vec2 origin,MenuItemImage* active){
+    
+    that->removeChildByName("highlighter");
+    
+    
+}
 

@@ -29,10 +29,12 @@ public:
     virtual bool init();
     
     bool nextPage(cocos2d::Touch* touch, cocos2d::Event* event);
+    bool nextPageOnMap(cocos2d::Touch* touch, cocos2d::Event* event);
     void compassPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     void buildingPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     void receptPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     void phonePress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
+    void dormPress(Ref *pSender, cocos2d::ui::Widget::TouchEventType type);
     // implement the "static create()" method manually
     CREATE_FUNC(TutorialScene);
     

@@ -32,10 +32,17 @@ public:
     static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
     //static void loadMap(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
     static void loadFaculty(TutorialScene *that, Size visibleSize, Vec2 origin, int whichone);
+    static void removeFaculty(TutorialScene *that);
+    
+    static void loadDorm(TutorialScene *that, Size visibleSize, Vec2 origin);
+    static void removeDorm(TutorialScene *that, Size visibleSize, Vec2 origin);
+    
     static void createHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active);
     static void removeHighlightedButton(TutorialScene *that, Size visibleSize, Vec2 origin,ui::Button* active);
     static void createHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active);
     static void removeHighlightedSprite(TutorialScene *that, Size visibleSize, Vec2 origin,Sprite* active);
+    static void createHighlightedMenuImage(TutorialScene *that, Size visibleSize, Vec2 origin,MenuItemImage* active);
+    static void removeHighlightedMenuImage(TutorialScene *that, Size visibleSize, Vec2 origin,MenuItemImage* active);
 };
 
 
