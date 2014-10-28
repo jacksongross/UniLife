@@ -24,6 +24,7 @@
 #include "HUDHelper.h"
 #include "Movement.h"
 #include "BBStartScreen.h"
+#include "EventScene.h"
 
 USING_NS_CC;
 
@@ -148,8 +149,6 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     
     HUDLayer::updateStats(0, 0, 0, 100, -10);
     
-    HUDLayer::updateTime(8);
-    
     log("PLAYER ID: %d", pm.getId());
     log("NAME: %s", pm.getName().c_str());
     log("INT: %d", pm.getStats().getIntelligence());
@@ -173,7 +172,24 @@ void DormScene::BedPressed(cocos2d::Ref *pSender)
     float start = character->getPositionX();
     
     // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination](){
+         Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    // run the event screen
+    auto eventCallback = CallFunc::create([](){
+        
+        auto event = EventScene::createScene("events/bed-event.png");
+        
+        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, event);
+        Director::getInstance()->pushScene(crossfade);
+    });
+    
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
+    
+    HUDLayer::updateTime(8);
+    
+    
     
 }
 
