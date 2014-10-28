@@ -193,7 +193,7 @@ void HUDLayer::PhonePressed(cocos2d::Scene* scene)
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
-    auto *p = PhoneLayer::createScene();
+    auto *p = PhoneLayer::createScene(player);
     
     scene->addChild(p, 10);
 }

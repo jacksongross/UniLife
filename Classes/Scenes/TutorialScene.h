@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "extensions/cocos-ext.h"
 #include "ui/CocosGUI.h"
+#include "PlayerModel.h"
+
 using namespace cocos2d::extension;
 
 
@@ -22,6 +24,12 @@ class TutorialScene : public cocos2d::Layer
 public:
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
+    
+    // overloaded createScene to pass in player
+    static cocos2d::Scene* createScene(PlayerModel player);
+    
+    // overloaded create method to take player data
+    static TutorialScene* create(PlayerModel player);
     
     // new game callback method
    
@@ -38,10 +46,17 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(TutorialScene);
     
+    // set current player
+    void setPlayer(PlayerModel player);
+    
+    PlayerModel getPlayer();
+    
 private:
     int whichpage = 0;
     int whichbuild = 0;
     bool lock = false;
+    
+    PlayerModel playerModel;
 };
 
 

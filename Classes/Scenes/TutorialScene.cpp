@@ -15,6 +15,7 @@
 #include "cocos2d.h"
 #include "MenuNewGameController.h"
 #include "MenuOptionScene.h"
+#include "DormScene.h"
 #include <CCTransition.h>
 #include "PhoneLayer.h"
 #include <string>
@@ -35,6 +36,42 @@ Scene* TutorialScene::createScene()
     
     // return the scene
     return scene;
+}
+
+// overloaded createScene to pass in player
+cocos2d::Scene* TutorialScene::createScene(PlayerModel inplayer)
+{
+    // 'scene' is an autorelease object
+    auto scene = Scene::create();
+    
+    // 'layer' is an autorelease object
+    auto layer = TutorialScene::create(inplayer);
+    layer->setName("initlayer");
+    
+    // add layer as a child to scene
+    scene->addChild(layer);
+    newplayer = inplayer;
+    newplayer.setStats(inplayer.getStats());
+    
+    
+    // return the scene
+    return scene;
+}
+
+// overloaded create method to take player data
+TutorialScene* TutorialScene::create(PlayerModel inplayer)
+{
+    TutorialScene *ts = new TutorialScene();
+    if (ts->init())
+    {
+        ts->autorelease();
+        ts->setPlayer(inplayer);
+        newplayer = inplayer;
+    }
+    else{
+        ts = NULL;
+    }
+    return ts;
 }
 
 // on "init" you need to initialize your instance
@@ -221,7 +258,34 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         auto TalkText2 = (cocos2d::ui::Text*)this->getChildByName("IntroText");
         auto OtherText2 = (cocos2d::ui::Text*)this->getChildByName("OtherText");
         
-        whichbuild = rand()%(6-1)+1;
+        
+        // change this to the player's building
+        
+        string degree = newplayer.getDegree();
+        
+        if(degree == "Bachelor of Arts" || degree == "Bachelor of Law")
+        {
+            whichbuild = 1;
+        }
+        else if(degree == "Bachelor of Education" || degree == "Bachelor of Psychology")
+        {
+            whichbuild = 2;
+        }
+        else if(degree == "Bachelor of Commerce" || degree == "Bachelor of Business")
+        {
+            whichbuild = 3;
+        }
+        else if(degree == "Bachelor of Nursing" || degree == "Bachelor of Science")
+        {
+            whichbuild = 4;
+        }
+        else
+        {
+            whichbuild = 5;
+        }
+        
+        
+        
         log("whichbuild: %d", whichbuild);
         TutorialController::loadMap(this, visibleSize, origin,whichbuild);
         if(whichbuild == 1){
@@ -363,7 +427,7 @@ bool TutorialScene::nextPage(cocos2d::Touch* touch, cocos2d::Event* event){
         
         mapBG->setVisible(true);
         
-        TalkText2->setString("Lets Go To Your Dorm");
+        TalkText2->setString("Lets Go To Your Dorm \nand start playing");
         OtherText2->setString("The Dorm Button Is Highlighted ");
         
         this->_eventDispatcher->removeAllEventListeners();
@@ -521,7 +585,7 @@ void TutorialScene::phonePress(Ref *pSender, ui::Widget::TouchEventType type){
             TutorialScene::nextPage(newtouch,newEvent);
             
             this->pause();
-            auto *p = PhoneLayer::createScene();
+            auto *p = PhoneLayer::createScene(newplayer);
             this->addChild(p, 10);
             lock = false;
             
@@ -561,7 +625,11 @@ void TutorialScene::dormPress(Ref *pSender, ui::Widget::TouchEventType type){
         case ui::Widget::TouchEventType::ENDED:{
             TutorialController::removeHighlightedButton(this,visibleSize, origin, dormbutton);
             this->removeChildByName("dormbutton");
-            TutorialController::loadDorm(this,visibleSize, origin);
+            //TutorialController::loadDorm(this,visibleSize, origin);
+            
+            auto scene = DormScene::createScene(newplayer);
+            TransitionCrossFade *crosssfade = TransitionCrossFade::create(1,scene);
+            Director::getInstance()->replaceScene(crosssfade);
            
             
             break;
@@ -574,4 +642,15 @@ void TutorialScene::dormPress(Ref *pSender, ui::Widget::TouchEventType type){
     }
     
 }
+
+void TutorialScene::setPlayer(PlayerModel player)
+{
+    this->playerModel = player;
+}
+
+PlayerModel TutorialScene::getPlayer()
+{
+    return this->playerModel;
+}
+
 

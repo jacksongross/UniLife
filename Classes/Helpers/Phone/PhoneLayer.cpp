@@ -40,6 +40,14 @@ Scene* PhoneLayer::createScene()
     // add layer as a child to scene
     scene->addChild(layer);
     
+    pm = HUDLayer::getCurrentPlayer();
+    
+    int semester = pm.getGameTime().getSemester();
+    
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    
+    layer->classes = timetable[semester - 1].getClassQueue();
+    
     Size visibleSize = Director::getInstance()->getVisibleSize();
     
     // create the background for the phone layer
@@ -156,16 +164,157 @@ bool PhoneLayer::init()
         return false;
     }
     
-    pm = HUDLayer::getCurrentPlayer();
-    
-    int semester = pm.getGameTime().getSemester();
-    
-    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
-    
-    this->classes = timetable[semester - 1].getClassQueue();
-    
     return true;
 }
+
+// overloaded createScene to pass in player
+cocos2d::Scene* PhoneLayer::createScene(PlayerModel inplayer)
+{
+    // 'scene' is an autorelease object
+    auto scene = Scene::create();
+    
+    // 'layer' is an autorelease object
+    auto layer = PhoneLayer::create(inplayer);
+    layer->setName("phone");
+    
+    // add layer as a child to scene
+    scene->addChild(layer);
+    pm = inplayer;
+    pm.setStats(inplayer.getStats());
+    
+    
+    
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    
+    // create the background for the phone layer
+    auto bg = Sprite::create("phone-bg.png");
+    bg->setPosition(visibleSize.width / 2, visibleSize.height / 2);
+    layer->addChild(bg);
+    
+    // create the buttons for the phone
+    cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
+    
+    // player, objectives, subject, stats
+    auto playerButton = MenuItemImage::create("phone_selection.png", "phone_selection.png", CC_CALLBACK_1(PhoneLayer::playerInfoCallback, layer));
+    auto objectivesButton = MenuItemImage::create("phone_selection.png", "phone_selection.png", CC_CALLBACK_1(PhoneLayer::objectivesCallBack, layer));
+    auto subjectButton = MenuItemImage::create("phone_selection.png", "phone_selection.png", CC_CALLBACK_1(PhoneLayer::subjectsCallBack, layer));
+    auto progressButton = MenuItemImage::create("phone_selection.png", "phone_selection.png", CC_CALLBACK_1(PhoneLayer::progressCallBack, layer));
+    auto closeButton = MenuItemImage::create("power-off-100.png", "power-off-100.png", CC_CALLBACK_1(PhoneLayer::closeCallBack, layer));
+    
+    closeButton->setScale(0.7);
+    
+    playerButton->setPosition(Vec2(visibleSize.width * .16, visibleSize.height * .2));
+    objectivesButton->setPosition(Vec2(visibleSize.width * .38, visibleSize.height * .2));
+    subjectButton->setPosition(Vec2(visibleSize.width * .62, visibleSize.height * .2));
+    progressButton->setPosition(Vec2(visibleSize.width * .84, visibleSize.height * .2));
+    closeButton->setPosition(Vec2(visibleSize.width * .92, visibleSize.height * .85));
+    
+    // set names for buttons
+    playerButton->setName("playerbutton");
+    objectivesButton->setName("objectivesbutton");
+    subjectButton->setName("subjectbutton");
+    progressButton->setName("progressbutton");
+    
+    
+    playerButton->setScaleX(220 / playerButton->getContentSize().width);
+    playerButton->setScaleY(125 / playerButton->getContentSize().height);
+    objectivesButton->setScaleX(220 / objectivesButton->getContentSize().width);
+    objectivesButton->setScaleY(125 / objectivesButton->getContentSize().height);
+    subjectButton->setScaleX(220 / subjectButton->getContentSize().width);
+    subjectButton->setScaleY(125 / subjectButton->getContentSize().height);
+    progressButton->setScaleX(220 / progressButton->getContentSize().width);
+    progressButton->setScaleY(125 / progressButton->getContentSize().height);
+    
+    
+    // add menu items to array
+    pMenuItems.pushBack(playerButton);
+    pMenuItems.pushBack(objectivesButton);
+    pMenuItems.pushBack(subjectButton);
+    pMenuItems.pushBack(progressButton);
+    pMenuItems.pushBack(closeButton);
+    
+    auto menu = Menu::createWithArray(pMenuItems);
+    menu->setName("menu");
+    menu->setPosition(Vec2::ZERO);
+    layer->addChild(menu, 1);
+    
+    // create the labels for the buttons
+    auto playerLabel = Label::createWithSystemFont(pm.getName(), "Verdana", 32);
+    auto objectivesLabel = Label::createWithSystemFont("Objectives", "Verdana", 32);
+    auto subjectLabel = Label::createWithSystemFont("Subjects", "Verdana", 32);
+    auto progressLabel = Label::createWithSystemFont("Progress", "Verdana", 32);
+    
+    playerLabel->setPosition(Vec2(visibleSize.width * 0.16, visibleSize.height * 0.2));
+    objectivesLabel->setPosition(Vec2(visibleSize.width * 0.38, visibleSize.height * 0.2));
+    subjectLabel->setPosition(Vec2(visibleSize.width * 0.62, visibleSize.height * 0.2));
+    progressLabel->setPosition(Vec2(visibleSize.width * 0.84, visibleSize.height * 0.2));
+    
+    playerLabel->setTextColor(Color4B(0, 0, 0, 0));
+    objectivesLabel->setTextColor(Color4B(0, 0, 0, 0));
+    subjectLabel->setTextColor(Color4B(0, 0, 0, 0));
+    progressLabel->setTextColor(Color4B(0, 0, 0, 0));
+    
+    layer->addChild(playerLabel, 10);
+    layer->addChild(objectivesLabel, 10);
+    layer->addChild(subjectLabel, 10);
+    layer->addChild(progressLabel, 10);
+    
+    auto playerLayer = cocos2d::Layer::create();
+    playerLayer->setName("playerlayer");
+    active = "playerbutton";
+    auto bgl = cocos2d::Sprite::create("phone_selection.png");
+    bgl->setScaleX(1000 / bgl->getContentSize().width);
+    bgl->setScaleY(500 / bgl->getContentSize().height);
+    playerLayer->addChild(bgl);
+    playerLayer->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    
+    // add some details, such as time, session details, player name
+    
+    string time = getTimeAsString(pm.getGameTime());
+    string date = getDateAsString(pm.getGameTime());
+    
+    auto timeLabel = Label::createWithSystemFont(time, "Verdana", 50);
+    auto dateLabel = Label::createWithSystemFont(date, "Verdana", 50);
+    
+    timeLabel->setColor(Color3B(0,0,0));
+    dateLabel->setColor(Color3B(0,0,0));
+    
+    timeLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * .80));
+    dateLabel->setPosition(Vec2(visibleSize.width / 2, visibleSize.height * .60));
+    
+    layer->addChild(playerLayer);
+    layer->addChild(timeLabel);
+    layer->addChild(dateLabel);
+
+    
+    // return the scene
+    return scene;
+}
+
+// overloaded create method to take player data
+PhoneLayer* PhoneLayer::create(PlayerModel inplayer)
+{
+    PhoneLayer *pl = new PhoneLayer();
+    if (pl->init())
+    {
+        pl->autorelease();
+        pl->setPlayerForPhone(inplayer);
+        pm = inplayer;
+        
+        
+        int semester = inplayer.getGameTime().getSemester();
+        
+        std::vector<timeTableClassModel> timetable = inplayer.getTimeTable();
+        
+        pl->classes = timetable[semester - 1].getClassQueue();
+        
+    }
+    else{
+        pl = NULL;
+    }
+    return pl;
+}
+
 
 void PhoneLayer::playerInfoCallback(Ref* pSender)
 {
@@ -959,6 +1108,12 @@ void PhoneLayer::tableCellHighlight (cocos2d::extension::TableView * table,cocos
 
 void PhoneLayer::tableCellUnhighlight (cocos2d::extension::TableView * table, cocos2d::extension::TableViewCell::TableViewCell * cell)
 {
+}
+
+void PhoneLayer::setPlayerForPhone(PlayerModel player)
+{
+    pm = player;
+    
 }
 
 

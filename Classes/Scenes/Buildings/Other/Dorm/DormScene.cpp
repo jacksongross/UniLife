@@ -67,9 +67,11 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     pm.setStats(inplayer.getStats());
     
     layer->setHUDScene(scene);
+    layer->setPlayer(inplayer);
     
     // create the HUD
     HUDLayer::createHUD(scene);
+    HUDLayer::setPlayer(inplayer);
     HUDLayer::updateHUD(pm);
     
     // Report on the loaded player object

@@ -6,6 +6,8 @@
 //
 //
 #include "PersonalityQuiz.h"
+#include "TutorialScene.h"
+
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -356,70 +358,70 @@ void PersonalityQuiz::EndQuiz(){
         PlayerStatsModel newstats(8, 5, 7, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Nursing & Medicine");
+        newplayer.setDegree("Bachelor of Nursing");
     }else if(pCode == "INFJ" ){
         resultname =("The Counselor");
         resultdesc = "INFJs are creative nurturers with a strong sense of personal integrity and a drive to help others realize their potential. Creative and dedicated, they have a talent for helping others with original solutions to their personal challenges.";
         PlayerStatsModel newstats(8, 4, 8, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Psychology");
+        newplayer.setDegree("Bachelor of Psychology");
     }else if(pCode == "INTJ" ){
         resultname =("The Mastermind");
         resultdesc = "INTJs are analytical problem-solvers, eager to improve systems and processes with their innovative ideas. They have a talent for seeing possibilities for improvement, whether at work, at home, or in themselves.";
         PlayerStatsModel newstats(12, 4, 4, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Engineering");
+        newplayer.setDegree("Bachelor of Engineering");
     }else if(pCode == "INTP" ){
         resultname =("The Architect");
         resultdesc = "INTPs are philosophical innovators, fascinated by logical analysis, systems, and design. They are preoccupied with theory, and search for the universal law behind everything they see. They want to understand the unifying themes of life, in all their complexity.";
         PlayerStatsModel newstats(11, 4, 5, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Computer Science");
+        newplayer.setDegree("Bachelor of Computer Science");
     }else if(pCode == "ISFJ" ){
         resultname =("The Protector");
         resultdesc = "ISFJs are industrious caretakers, loyal to traditions and organizations. They are practical, compassionate, and caring, and are motivated to provide for others and protect them from the perils of life.";
         PlayerStatsModel newstats(8, 5, 5, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Biological Sciences");
+        newplayer.setDegree("Bachelor of Science");
     }else if(pCode == "ISFP" ){
         resultname =("The Composer");
         resultdesc = "ISFPs are gentle caretakers who live in the present moment and enjoy their surroundings with cheerful, low-key enthusiasm. They are flexible and spontaneous, and like to go with the flow to enjoy what life has to offer. ISFPs are quiet and unassuming, and may be hard to get to know. However, to those who know them well, the ISFP is warm and friendly, eager to share in life's many experiences.";
         PlayerStatsModel newstats(5, 7, 8, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Music");
+        newplayer.setDegree("Bachelor of Arts");
     }else if(pCode == "ISTJ" ){
         resultname =("The Inspector");
         resultdesc = "ISTJs are responsible organizers, driven to create and enforce order within systems and institutions. They are neat and orderly, inside and out, and tend to have a procedure for everything they do. Reliable and dutiful, ISTJs want to uphold tradition and follow regulations.";
         PlayerStatsModel newstats(8, 6, 6, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Law");
+        newplayer.setDegree("Bachelor of Law");
     }else if(pCode == "ISTP" ){
         resultname =("The Craftsman");
         resultdesc = "ISTPs are observant artisans with an understanding of mechanics and an interest in troubleshooting. They approach their environments with a flexible logic, looking for practical solutions to the problems at hand. They are independent and adaptable, and typically interact with the world around them in a self-directed, spontaneous manner.";
         PlayerStatsModel newstats(9, 7, 4, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Architecture");
+        newplayer.setDegree("Bachelor of Engineering");
     }else if(pCode == "ENFJ" ){
         resultname =("The Teacher");
         resultdesc = "ENFJs are idealist organizers, driven to implement their vision of what is best for humanity. They often act as catalysts for human growth because of their ability to see potential in other people and their charisma in persuading others to their ideas. They are focused on values and vision, and are passionate about the possibilities for people.";
         PlayerStatsModel newstats(6, 6, 8, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Teaching");
+        newplayer.setDegree("Bachelor of Education");
     }else if(pCode == "ENFP" ){
         resultname =("The Champion");
         resultdesc = "ENFPs are people-centered creators with a focus on possibilities and a contagious enthusiasm for new ideas, people and activities. Energetic, warm, and passionate, ENFPs love to help other people explore their their creative potential.";
         PlayerStatsModel newstats(5, 10, 5, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Sport Sciences");
+        newplayer.setDegree("Bachelor of Science");
 
     }else if(pCode == "ENTJ" ){
         resultname =("The Commander");
@@ -427,42 +429,42 @@ void PersonalityQuiz::EndQuiz(){
         PlayerStatsModel newstats(4, 8, 8, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Commerce");
+        newplayer.setDegree("Bachelor of Commerce");
     }else if(pCode == "ENTP" ){
         resultname =("The Visionary");
         resultdesc = "ENTPs are inspired innovators, motivated to find new solutions to intellectually challenging problems. They are curious and clever, and seek to comprehend the people, systems, and principles that surround them. Open-minded and unconventional, Visionaries want to analyze, understand, and influence other people.";
         PlayerStatsModel newstats(4, 7, 9, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Creative Arts");
+        newplayer.setDegree("Bachelor of Arts");
     }else if(pCode == "ESFJ" ){
         resultname =("The Provider");
         resultdesc = "ENTPs are inspired innovators, motivated to find new solutions to intellectually challenging problems. They are curious and clever, and seek to comprehend the people, systems, and principles that surround them. Open-minded and unconventional, Visionaries want to analyze, understand, and influence other people.";
         PlayerStatsModel newstats(5, 9, 6, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Political Science");
+        newplayer.setDegree("Bachelor of Science");
     }else if(pCode == "ESFP" ){
         resultname =("The Performer");
         resultdesc = "ESFJs are conscientious helpers, sensitive to the needs of others and energetically dedicated to their responsibilities. They are highly attuned to their emotional environment and attentive to both the feelings of others and the perception others have of them. ESFJs like a sense of harmony and cooperation around them, and are eager to please and provide.";
         PlayerStatsModel newstats(4, 6, 10, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Performing Arts");
+        newplayer.setDegree("Bachelor of Arts");
     }else if(pCode == "ESTJ" ){
         resultname =("The Supervisor");
         resultdesc = "ESTJs are hardworking traditionalists, eager to take charge in organizing projects and people. Orderly, rule-abiding, and conscientious, ESTJs like to get things done, and tend to go about projects in a systematic, methodical way.";
         PlayerStatsModel newstats(6, 6, 8, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Management");
+        newplayer.setDegree("Bachelor of Business");
     }else if(pCode == "ESTP" ){
         resultname =("The Dynamo");
         resultdesc = "ESTPs are energetic thrillseekers who are at their best when putting out fires, whether literal or metaphorical. They bring a sense of dynamic energy to their interactions with others and the world around them. They assess situations quickly and move adeptly to respond to immediate problems with practical solutions.";
         PlayerStatsModel newstats(7, 7, 6, 100, 100, 0);
         newplayer.setStats(newstats);
         newplayer.setScene("DormScene");
-        newplayer.setDegree("Marketing");
+        newplayer.setDegree("Bachelor of Business");
     }
     
     
@@ -804,19 +806,42 @@ void PersonalityQuiz::gotoDormScene(Ref* pSender, ui::Widget::TouchEventType eEv
 
     
     if (eEventType == ui::Widget::TouchEventType::ENDED){
-        
-        log("==========PLAYER BEING SENT==========");
-        log("NAME: %s", newplayer.getName().c_str());
-        log("INT: %d", newplayer.getStats().getIntelligence());
-        log("STA: %d", newplayer.getStats().getStamina());
-        log("SOC: %d", newplayer.getStats().getSocial());
-        log("DEGREE: %s", newplayer.getDegree().c_str());
-        log("ENERGY: %d" , newplayer.getStats().getEnergy());
-        log("STRESS: %d", newplayer.getStats().getStress());
-        
+    
         CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
         
-        auto scene = DormScene::createScene(newplayer);
+        
+        TimeModel tm;
+        tm.setDay(1);
+        tm.setHoursMinutes(8);
+        tm.setWeek(1);
+        tm.setSemester(1);
+        
+        PlayerModel pm(newplayer.getName(), newplayer.getDegree(), newplayer.getStats(), newplayer.getScene(), tm);
+        pm.setScene("DormScene");
+        
+        std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+        
+        std::vector<AssessmentModel> assessments;
+        
+        for(int i = 0; i < timetable.size(); i++)
+        {
+            std::vector<subjectBlockClassModel> sb = timetable[i].getClassQueue();
+            
+            for(int j = 0; j < sb.size(); j+= 3)
+            {
+                std::vector<AssessmentModel> am = sb[j].getAssessments();
+                
+                for(int k = 0; k < am.size(); k++)
+                {
+                    assessments.push_back(am[k]);
+                }
+            }
+        }
+        
+        pm.setAssessments(assessments);
+
+        
+        auto scene = TutorialScene::createScene(pm);
         TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
         Director::getInstance()->replaceScene(crosssfade);
         

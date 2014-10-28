@@ -155,6 +155,11 @@
 		7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */; };
 		7AE67C2419EFD3D000E3586D /* hud-pic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2319EFD3D000E3586D /* hud-pic.png */; };
 		7AE67C2619EFD46300E3586D /* hud-circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE67C2519EFD46300E3586D /* hud-circle.png */; };
+		7AF4E0E719FF328E00AF3BBB /* lectures in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4E0E519FF328E00AF3BBB /* lectures */; };
+		7AF4E0E819FF328E00AF3BBB /* tutorials in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4E0E619FF328E00AF3BBB /* tutorials */; };
+		7AF4E0F119FF331300AF3BBB /* gates.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4E0F019FF331300AF3BBB /* gates.png */; };
+		7AF4E0F519FF4A0000AF3BBB /* EventScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF4E0F319FF4A0000AF3BBB /* EventScene.cpp */; };
+		7AF4E0F719FF4A7A00AF3BBB /* events in Resources */ = {isa = PBXBuildFile; fileRef = 7AF4E0F619FF4A7A00AF3BBB /* events */; };
 		7AF557F319DAA6FC0024A631 /* PhoneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */; };
 		7AF557FA19DCDA560024A631 /* Map-marker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F619DCDA560024A631 /* Map-marker.png */; };
 		7AF557FB19DCDA560024A631 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F719DCDA560024A631 /* phone.png */; };
@@ -582,6 +587,12 @@
 		7AE67C1419EFB73000E3586D /* BBStartScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBStartScreen.h; sourceTree = "<group>"; };
 		7AE67C2319EFD3D000E3586D /* hud-pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-pic.png"; sourceTree = "<group>"; };
 		7AE67C2519EFD46300E3586D /* hud-circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hud-circle.png"; sourceTree = "<group>"; };
+		7AF4E0E519FF328E00AF3BBB /* lectures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lectures; sourceTree = "<group>"; };
+		7AF4E0E619FF328E00AF3BBB /* tutorials */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorials; sourceTree = "<group>"; };
+		7AF4E0F019FF331300AF3BBB /* gates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gates.png; sourceTree = "<group>"; };
+		7AF4E0F319FF4A0000AF3BBB /* EventScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EventScene.cpp; path = Event/EventScene.cpp; sourceTree = "<group>"; };
+		7AF4E0F419FF4A0000AF3BBB /* EventScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventScene.h; path = Event/EventScene.h; sourceTree = "<group>"; };
+		7AF4E0F619FF4A7A00AF3BBB /* events */ = {isa = PBXFileReference; lastKnownFileType = folder; path = events; sourceTree = "<group>"; };
 		7AF557F119DAA6FC0024A631 /* PhoneLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PhoneLayer.cpp; sourceTree = "<group>"; };
 		7AF557F219DAA6FC0024A631 /* PhoneLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneLayer.h; sourceTree = "<group>"; };
 		7AF557F619DCDA560024A631 /* Map-marker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Map-marker.png"; sourceTree = "<group>"; };
@@ -842,6 +853,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AF4E0F619FF4A7A00AF3BBB /* events */,
+				7AF4E0E519FF328E00AF3BBB /* lectures */,
+				7AF4E0E619FF328E00AF3BBB /* tutorials */,
 				7A555EA519FC837000B5D9A8 /* NPC */,
 				B904FF7719FAB99F0035DB80 /* Bill */,
 				B904FF7519FA6D880035DB80 /* Help */,
@@ -1190,6 +1204,7 @@
 		7A89453219ADAD16008E1EA7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7AF4E0F219FF49E300AF3BBB /* Event */,
 				7AF557F019DAA6FC0024A631 /* Phone */,
 				7AE60C8F19DA8D390063452F /* Movement */,
 				D06F023D19DA701A00A36F84 /* PopUpLayer */,
@@ -1560,6 +1575,15 @@
 			path = Movement;
 			sourceTree = "<group>";
 		};
+		7AF4E0F219FF49E300AF3BBB /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				7AF4E0F319FF4A0000AF3BBB /* EventScene.cpp */,
+				7AF4E0F419FF4A0000AF3BBB /* EventScene.h */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
 		7AF557F019DAA6FC0024A631 /* Phone */ = {
 			isa = PBXGroup;
 			children = (
@@ -1727,6 +1751,7 @@
 		D0ED65BC19C933A80072EDD0 /* Miscellaneous */ = {
 			isa = PBXGroup;
 			children = (
+				7AF4E0F019FF331300AF3BBB /* gates.png */,
 				D08AFF9A19ECB6FC0089E0AF /* legoDude.png */,
 				D0ED65BD19C934160072EDD0 /* speech_big.png */,
 				D0ED65BE19C934160072EDD0 /* speech_small.png */,
@@ -1968,8 +1993,10 @@
 				7A8945B219ADAF3F008E1EA7 /* options_button.png in Resources */,
 				B904FF7619FA6D880035DB80 /* Help in Resources */,
 				D0ED65C719C939B90072EDD0 /* wheat.png in Resources */,
+				7AF4E0F119FF331300AF3BBB /* gates.png in Resources */,
 				D0ED65C519C939B90072EDD0 /* chicken.png in Resources */,
 				D031093819B447C20030B59F /* Tavern_table.png in Resources */,
+				7AF4E0E719FF328E00AF3BBB /* lectures in Resources */,
 				7A8945B919ADAF3F008E1EA7 /* map-library.png in Resources */,
 				D0B760EB19BD5B6D00E53B52 /* Buis_Foyer.png in Resources */,
 				7A01645919CF956B0021009A /* ball.png in Resources */,
@@ -2003,6 +2030,7 @@
 				7ACD662F19FCDCE900774BFE /* Info.plist in Resources */,
 				7AB6AB3419AEDDF5003CCD7E /* New-Game-take_quiz_on.png in Resources */,
 				D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */,
+				7AF4E0E819FF328E00AF3BBB /* tutorials in Resources */,
 				7AB6AB3519AEDDF5003CCD7E /* New-Game-text.png in Resources */,
 				D0ED65C919C96ACF0072EDD0 /* Boat.png in Resources */,
 				D098A9C019AE3F14005B13D3 /* Go_Left_Arrow.png in Resources */,
@@ -2018,6 +2046,7 @@
 				7A8945B819ADAF3F008E1EA7 /* map-computing_engineering.png in Resources */,
 				D03642C6199C290B00ECA5DA /* Icon-57@2x~iphone.png in Resources */,
 				7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */,
+				7AF4E0F719FF4A7A00AF3BBB /* events in Resources */,
 				7A555EA619FC837000B5D9A8 /* NPC in Resources */,
 				7AAC240B19E8A879007A8331 /* dorm-door-opening.wav in Resources */,
 				D031093519B447C20030B59F /* Tavern_background.png in Resources */,
@@ -2101,6 +2130,7 @@
 				7A89453D19ADAD16008E1EA7 /* TimeModel.cpp in Sources */,
 				7A0F1A5519BEE2FC00679823 /* EIS_Hallway.cpp in Sources */,
 				7A0F1A5619BEE2FC00679823 /* Inside_EIS.cpp in Sources */,
+				7AF4E0F519FF4A0000AF3BBB /* EventScene.cpp in Sources */,
 				7A0F1A9619BEE3F400679823 /* TavernFoyerController.cpp in Sources */,
 				D0ED65E119CA02C70072EDD0 /* PersonalityQuiz.cpp in Sources */,
 				7A89453B19ADAD16008E1EA7 /* SqlHelper.cpp in Sources */,
