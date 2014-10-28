@@ -107,7 +107,6 @@ bool TutorialScene::nextPageOnMap(cocos2d::Touch* touch, cocos2d::Event* event){
     auto TalkText = (cocos2d::ui::Text*)this->getChildByName("IntroText");
     auto OtherText = (cocos2d::ui::Text*)this->getChildByName("OtherText");
     
-    auto dormbutton = (cocos2d::ui::Button*)this->getChildByName("Dorm");
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
@@ -532,7 +531,6 @@ void TutorialScene::buildingPress(Ref *pSender, ui::Widget::TouchEventType type)
 
 void TutorialScene::receptPress(Ref *pSender, ui::Widget::TouchEventType type){
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     switch (type)
@@ -564,9 +562,6 @@ void TutorialScene::receptPress(Ref *pSender, ui::Widget::TouchEventType type){
 
 void TutorialScene::phonePress(Ref *pSender, ui::Widget::TouchEventType type){
     
-    
-    
-    Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
     switch (type)

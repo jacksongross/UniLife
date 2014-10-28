@@ -194,6 +194,8 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
         Director::getInstance()->pushScene(crossfade);
     });
     
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
+    
     // check whether the player is due for a tutorial
     
     std::vector<timeTableClassModel> timetable = pm.getTimeTable();

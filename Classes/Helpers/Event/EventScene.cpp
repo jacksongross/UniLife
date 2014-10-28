@@ -88,11 +88,6 @@ bool EventScene::init()
         return false;
     }
     
-    // get the size of the screen that is visible
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    
-    
     return true;
 }
 

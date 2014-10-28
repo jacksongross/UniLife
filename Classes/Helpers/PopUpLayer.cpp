@@ -131,8 +131,6 @@ Scene* PopUpLayer::createScene(Rect rect, std::string text, int btnCallback)
     // add layer as a child to scene
     scene->addChild(layer);
     
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
