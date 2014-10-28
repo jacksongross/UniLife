@@ -48,6 +48,12 @@ public:
     // updates the time for a player
     static void updateTime(double hoursminutes);
     
+    // pause the timer
+    static void pauseTimer();
+    
+    // resume timer
+    static void resumeTimer();
+    
     // runs the code to validate autosaving
     void updateGameTime(float t);
     

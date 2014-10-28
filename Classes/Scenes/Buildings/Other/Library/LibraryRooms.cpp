@@ -19,6 +19,7 @@
 #include "LogicGame.h"
 #include "HUDHelper.h"
 #include "Movement.h"
+#include "EventScene.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -65,12 +66,14 @@ bool LibraryRooms::init()
     // create the main menu
     LibraryRoomsController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void LibraryRooms::ToFoyer(Ref* pSender)
 {
-    log("Going To Library Foyer!");
+    HUDLayer::pauseTimer();
     
     auto scene = LibraryFoyer::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -94,7 +97,22 @@ void LibraryRooms::ToMeet1(Ref* pSender)
     float start = character->getPositionX();
     
     // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination](){
+        Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    // run the event screen
+    auto eventCallback = CallFunc::create([](){
+        
+        auto event = EventScene::createScene("events/group_study.png");
+        
+        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, event);
+        Director::getInstance()->pushScene(crossfade);
+    });
+    
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
+    
+    HUDLayer::updateStats(1, 0, 1, -10, -5);
     
     
 }
@@ -115,7 +133,22 @@ void LibraryRooms::ToMeet2(Ref* pSender)
     float start = character->getPositionX();
     
     // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination](){
+        Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    // run the event screen
+    auto eventCallback = CallFunc::create([](){
+        
+        auto event = EventScene::createScene("events/study.png");
+        
+        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, event);
+        Director::getInstance()->pushScene(crossfade);
+    });
+    
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
+    
+    HUDLayer::updateStats(1, 0, 0, -10, -5);
     
 }
 

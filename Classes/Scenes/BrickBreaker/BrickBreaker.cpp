@@ -18,6 +18,7 @@
 #include "DormScene.h"
 #include "MenuLoadScene.h"
 #include "BrickBreaker.h"
+#include "HUDHelper.h"
 
 USING_NS_CC;
 using namespace cocos2d;
@@ -292,6 +293,7 @@ void BrickBreaker::tick(float dt)
     {
         GameOverScene *gameOverScene = GameOverScene::create();
         gameOverScene->getLayer()->getLabel()->setString("You Win!");
+        HUDLayer::updateStats(0, 0, 0, 100, -10);
         CCDirector::getInstance()->replaceScene(gameOverScene);
     }
     

@@ -59,13 +59,17 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     if(endX > startX)
         character->setFlippedX(true);
     
-    auto move = cocos2d::MoveTo::create(2, cocos2d::Vec2(endX, visibleSize.height / 2 - 135));
-    
     auto animation = cocos2d::Animation::createWithSpriteFrames(animFrames, 0.1f);
     
-    float duration = move->getDuration();
+    Vec2 start;
+    start.set(startX, visibleSize.height / 2 - 135);
     
-    auto walkAction = cocos2d::Repeat::create(cocos2d::Animate::create(animation), duration * 2);
+    Vec2 end;
+    end.set(endX, visibleSize.height / 2 - 135);
+    
+    auto move = cocos2d::MoveTo::create(2, cocos2d::Vec2(endX, visibleSize.height / 2 - 135));
+    
+    auto walkAction = cocos2d::Repeat::create(cocos2d::Animate::create(animation), 4);
     
     character->runAction(walkAction);
     

@@ -41,8 +41,6 @@ cocos2d::Vector<cocos2d::MenuItem*> ArtHallwayController::CreateMenuButtons(ArtH
 // call this method in the main menu scene to create the main menu
 void ArtHallwayController::CreateMainMenu(ArtHallway *that, Size visibleSize, Vec2 origin)
 {
-    log("You Went to the Buisness Hallway");
-    
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);
     

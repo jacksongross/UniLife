@@ -19,6 +19,7 @@
 #include "DormScene.h"
 #include "MenuLoadScene.h"
 #include "MessageLayer.h"
+#include "HUDHelper.h"
 
 USING_NS_CC;
 using namespace cocos2d;
@@ -424,6 +425,9 @@ void LogicGame::checkwin(){
     if(onleft[1] == false && onleft[1] == onleft[2] && onleft[2] == onleft[3]){
         log("They All Made It Safely Across");
         log("You Win!");
+        
+        HUDLayer::updateStats(0, 0, 0, 100, -10);
+        
         PushMessage("You Win!");
     }
     //IF FOX AND CHICKEN LEFT TOGETHER
@@ -487,12 +491,7 @@ void LogicGame::updatemoves(){
     
     std::string newstring;
     newstring = std::to_string(moveamt);
-    log("Move String: %s",newstring.c_str());
     MoveCounter->setString(newstring);
-    log("Move Amount: %d",moveamt);
-    
-    
-    
     
 }
 
@@ -500,7 +499,6 @@ void LogicGame::updatemoves(){
 void LogicGame::PushMessage(std::string inMessage)
 {
     Director::getInstance()->pause();
-    log("Pausing the game");
     
     auto scene = MessageLayer::createScene(inMessage);
     Director::getInstance()->pushScene(scene);

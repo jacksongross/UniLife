@@ -10,6 +10,9 @@
 #include "DormScene.h"
 #include "PauseMenu.h"
 #include "PhoneLayer.h"
+#include "extensions/cocos-ext.h"
+#include "ui/CocosGUI.h"
+#include "PopUpLayer.h"
 #include <ctime>
 
 // SOME GLOBALS FOR AUTOSAVE
@@ -19,6 +22,8 @@ int gametime;
 bool firstTick;
 PlayerModel player;
 cocos2d::Scene* activeScene;
+bool running = false;
+std::vector<int> used;
 ////////////////////////////
 
 // this method is used to create the HUD for each scene
@@ -152,7 +157,13 @@ void HUDLayer::createHUD(cocos2d::Scene* scene)
     activeScene->addChild(timer);
     activeScene->addChild(hudFace);
     
-    scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
+    running = false;
+    
+    if(!running)
+    {
+        scene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
+        running = true;
+    }
     
     firstTick = false;
     
@@ -405,15 +416,27 @@ void HUDLayer::checkForEvents()
 {
     TimeModel tm = player.getGameTime();
     
-    cocos2d::log("checking for events");
-    
-    //srand( static_cast<unsigned int>(time(0)));
-    
     // 1 to 7 days
     int day = rand() % 7 + 1;
     int currDay = tm.getDay();
     
-    cocos2d::log("currday: %d, rand: %d", currDay, day);
+    if(used.size() == 7)
+    {
+        for(int i = 0; i < used.size(); i++)
+        {
+            used.pop_back();
+        }
+    }
+    else
+    {
+        for(int i = 0; i < used.size(); i++)
+        {
+            if(used[i] == day)
+                return;
+        }
+    }
+    
+    cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     
     switch (day)
     {
@@ -422,6 +445,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("monday");
+                
+                used.push_back(1);
+            
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Wanna play a game?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 1);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -432,6 +466,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("tuesday");
+                
+                used.push_back(2);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Relieve some stress?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 2);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -442,6 +487,18 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("wednesday");
+                
+                used.push_back(3);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Wanna study?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 3);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
+                
             }
             
             break;
@@ -452,6 +509,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("thursday");
+                
+                used.push_back(4);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Feeling tired?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 4);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -462,6 +530,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("friday");
+                
+                used.push_back(5);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Seen your friends lately?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 5);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -472,6 +551,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("saturday");
+                
+                used.push_back(6);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Have a drink?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 6);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -482,6 +572,17 @@ void HUDLayer::checkForEvents()
             if(currDay == day)
             {
                 cocos2d::log("sunday");
+                
+                used.push_back(7);
+                
+                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                std::string msg = "Think you're smart?";
+                
+                auto *p = PopUpLayer::createScene(a, msg, 7);
+                
+                Director::getInstance()->pause();
+                
+                activeScene->addChild(p, 10);
             }
             
             break;
@@ -490,3 +591,23 @@ void HUDLayer::checkForEvents()
     }
     
 }
+
+void HUDLayer::pauseTimer()
+{
+    if(running)
+    {
+        activeScene->unschedule(schedule_selector(HUDLayer::updateGameTime));
+        running = false;
+    }
+}
+
+void HUDLayer::resumeTimer()
+{
+    if(!running && activeScene != NULL)
+    {
+        activeScene->schedule(schedule_selector(HUDLayer::updateGameTime),1.0f);
+        running = true;
+    }
+}
+
+                                              

@@ -66,12 +66,14 @@ bool BuisFoyer::init()
     // create the main menu
     BuisFoyerController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void BuisFoyer::ToHallway(Ref* pSender)
 {
-    log("Going To SciMed Hallway!");
+    HUDLayer::pauseTimer();
     
     auto scene = BuisHallway::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -82,7 +84,7 @@ void BuisFoyer::ToHallway(Ref* pSender)
 
 void BuisFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -92,7 +94,6 @@ void BuisFoyer::ToMap(Ref* pSender)
 
 void BuisFoyer::staffTouched(cocos2d::Ref *pSender)
 {
-    log("staff member touched");
     
     // get the character and staff positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");

@@ -398,9 +398,9 @@
 		7A0F1A2C19BEE2FC00679823 /* Art-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer.h"; sourceTree = "<group>"; };
 		7A0F1A2D19BEE2FC00679823 /* Art-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway.cpp"; sourceTree = "<group>"; };
 		7A0F1A2E19BEE2FC00679823 /* Art-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway.h"; sourceTree = "<group>"; };
-		7A0F1A3019BEE2FC00679823 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; };
+		7A0F1A3019BEE2FC00679823 /* Buis-Foyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = "Buis-Foyer.cpp"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		7A0F1A3119BEE2FC00679823 /* Buis-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer.h"; sourceTree = "<group>"; };
-		7A0F1A3219BEE2FC00679823 /* Buis-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway.cpp"; sourceTree = "<group>"; };
+		7A0F1A3219BEE2FC00679823 /* Buis-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = "Buis-Hallway.cpp"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		7A0F1A3319BEE2FC00679823 /* Buis-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway.h"; sourceTree = "<group>"; };
 		7A0F1A3519BEE2FC00679823 /* EIS_Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway.cpp; sourceTree = "<group>"; };
 		7A0F1A3619BEE2FC00679823 /* EIS_Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway.h; sourceTree = "<group>"; };
@@ -414,7 +414,7 @@
 		7A0F1A4019BEE2FC00679823 /* SocSci-Foyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Foyer.h"; sourceTree = "<group>"; };
 		7A0F1A4119BEE2FC00679823 /* SocSci-Hallway.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "SocSci-Hallway.cpp"; sourceTree = "<group>"; };
 		7A0F1A4219BEE2FC00679823 /* SocSci-Hallway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocSci-Hallway.h"; sourceTree = "<group>"; };
-		7A0F1A4519BEE2FC00679823 /* DormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DormScene.cpp; sourceTree = "<group>"; };
+		7A0F1A4519BEE2FC00679823 /* DormScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = DormScene.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		7A0F1A4619BEE2FC00679823 /* DormScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DormScene.h; sourceTree = "<group>"; };
 		7A0F1A4819BEE2FC00679823 /* LibraryFoyer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LibraryFoyer.cpp; sourceTree = "<group>"; };
 		7A0F1A4919BEE2FC00679823 /* LibraryFoyer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryFoyer.h; sourceTree = "<group>"; };
@@ -428,9 +428,9 @@
 		7A0F1A6419BEE3F400679823 /* Art-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Foyer-Controller.h"; sourceTree = "<group>"; };
 		7A0F1A6519BEE3F400679823 /* Art-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Art-Hallway-Controller.cpp"; sourceTree = "<group>"; };
 		7A0F1A6619BEE3F400679823 /* Art-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Art-Hallway-Controller.h"; sourceTree = "<group>"; };
-		7A0F1A6819BEE3F400679823 /* Buis-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Foyer-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6819BEE3F400679823 /* Buis-Foyer-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = "Buis-Foyer-Controller.cpp"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		7A0F1A6919BEE3F400679823 /* Buis-Foyer-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Foyer-Controller.h"; sourceTree = "<group>"; };
-		7A0F1A6A19BEE3F400679823 /* Buis-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Buis-Hallway-Controller.cpp"; sourceTree = "<group>"; };
+		7A0F1A6A19BEE3F400679823 /* Buis-Hallway-Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = "Buis-Hallway-Controller.cpp"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		7A0F1A6B19BEE3F400679823 /* Buis-Hallway-Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Buis-Hallway-Controller.h"; sourceTree = "<group>"; };
 		7A0F1A6D19BEE3F400679823 /* EIS_Hallway_Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EIS_Hallway_Controller.cpp; sourceTree = "<group>"; };
 		7A0F1A6E19BEE3F400679823 /* EIS_Hallway_Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EIS_Hallway_Controller.h; sourceTree = "<group>"; };
@@ -583,8 +583,8 @@
 		7ADE1EFD19CE6F3200AEFF00 /* PauseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseMenu.h; sourceTree = "<group>"; };
 		7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogicGame.cpp; sourceTree = "<group>"; };
 		7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGame.h; sourceTree = "<group>"; };
-		7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
-		7ADE1F0319CE6F3200AEFF00 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
+		7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; path = Debugger.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		7ADE1F0319CE6F3200AEFF00 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Debugger.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7AE5077819FF61DB004873A8 /* dartboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dartboard.png; path = TavernSprites/dartboard.png; sourceTree = "<group>"; };
 		7AE5078119FF61E3004873A8 /* pool_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pool_table.png; path = TavernSprites/pool_table.png; sourceTree = "<group>"; };
 		7AE5078319FF6689004873A8 /* shop */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shop; sourceTree = "<group>"; };

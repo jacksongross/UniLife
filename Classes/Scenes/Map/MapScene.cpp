@@ -27,6 +27,7 @@
 #include "LibraryFoyer.h"
 #include "UniCenterScene.h"
 #include "ShopScene.h"
+#include "HUDHelper.h"
 
 USING_NS_CC;
 
@@ -43,6 +44,8 @@ Scene* MapScene::createScene()
     
     // add layer as a child to scene
     scene->addChild(layer);
+    
+    HUDLayer::createHUD(scene);
     
     // return the scene
     return scene;
@@ -62,6 +65,8 @@ Scene* MapScene::createScene(PlayerModel inplayer)
     scene->addChild(layer);
     pm = inplayer;
     pm.setStats(inplayer.getStats());
+    
+    HUDLayer::createHUD(scene);
     
     // return the scene
     return scene;
@@ -99,13 +104,17 @@ bool MapScene::init()
     // create the dorm scene
     MapController::CreateMapView(this, visibleSize, origin);
     
+    
+    //HUDLayer::resumeTimer();
+    
     return true;
 }
 
 
 void MapScene::GoToDorm(Ref* pSender)
 {
-    log("Going Back to Menu!");
+    
+    HUDLayer::pauseTimer();
     
     auto scene = DormScene::createScene(pm);
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -115,7 +124,7 @@ void MapScene::GoToDorm(Ref* pSender)
 
 void MapScene::GoToEIS(Ref* pSender)
 {
-    log("Going To Inside EIS Building!");
+    HUDLayer::pauseTimer();
     
     auto scene = Inside_EIS::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -125,7 +134,7 @@ void MapScene::GoToEIS(Ref* pSender)
 
 void MapScene::GoToTavern(Ref* pSender)
 {
-    log("Going To Tavern!");
+    HUDLayer::pauseTimer();
     
     auto scene = TavernFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -135,7 +144,7 @@ void MapScene::GoToTavern(Ref* pSender)
 
 void MapScene::GoToMedSci(Ref* pSender)
 {
-    log("Going To SciMed!");
+    HUDLayer::pauseTimer();
     
     auto scene = SciMedFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -145,7 +154,7 @@ void MapScene::GoToMedSci(Ref* pSender)
 
 void MapScene::GoToBuis(Ref* pSender)
 {
-    log("Going To Buisness!");
+    HUDLayer::pauseTimer();
     
     auto scene = BuisFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -155,7 +164,7 @@ void MapScene::GoToBuis(Ref* pSender)
 
 void MapScene::GoToArt(Ref* pSender)
 {
-    log("Going To Art!");
+    HUDLayer::pauseTimer();
     
     auto scene = ArtFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -165,7 +174,7 @@ void MapScene::GoToArt(Ref* pSender)
 
 void MapScene::GoToSocSci(Ref* pSender)
 {
-    log("Going To Social Science!");
+    HUDLayer::pauseTimer();
     
     auto scene = SocSciFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -175,7 +184,7 @@ void MapScene::GoToSocSci(Ref* pSender)
 
 void MapScene::GoToLibrary(Ref* pSender)
 {
-    log("Going To Library!");
+    HUDLayer::pauseTimer();
     
     auto scene = LibraryFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -185,7 +194,7 @@ void MapScene::GoToLibrary(Ref* pSender)
 
 void MapScene::GoToShop(Ref* pSender)
 {
-    log("Going To Shop!");
+    HUDLayer::pauseTimer();
     
     auto scene = ShopScene::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
@@ -195,7 +204,7 @@ void MapScene::GoToShop(Ref* pSender)
 
 void MapScene::GoToUniCentre(Ref* pSender)
 {
-    log("Going To UniCentre!");
+    HUDLayer::pauseTimer();
     
     auto scene = UniCenterScene::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);

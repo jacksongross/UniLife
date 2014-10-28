@@ -96,13 +96,11 @@ bool BBStartScreen::init()
 // handles touches on the pause layer
 bool BBStartScreen::touchBegan(cocos2d::Touch* touch, cocos2d::Event* event)
 {
-    log("touches on the layer!");
     return true;
 }
 
 void BBStartScreen::playCallback(cocos2d::Ref *pSender)
 {
-    log("you have touched the play button!");
     
     // transition to the load game scene
     auto scene = BrickBreaker::createScene();
@@ -113,8 +111,7 @@ void BBStartScreen::playCallback(cocos2d::Ref *pSender)
 
 void BBStartScreen::quitCallback(cocos2d::Ref *pSender)
 {
-    log("you have touched the quit button!");
-    
     Director::getInstance()->popScene();
+    HUDLayer::resumeTimer();
 
 }

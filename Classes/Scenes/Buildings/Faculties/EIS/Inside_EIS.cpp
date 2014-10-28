@@ -64,15 +64,17 @@ bool Inside_EIS::init()
     // create the main menu
     Inside_EIS_Controller::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void Inside_EIS::ToHallway(Ref* pSender)
 {
-    log("Going To EIS Hallway!");
+    HUDLayer::pauseTimer();
     
     auto scene = EIS_Hallway::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(0.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -80,10 +82,10 @@ void Inside_EIS::ToHallway(Ref* pSender)
 
 void Inside_EIS::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(0.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }

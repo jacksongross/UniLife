@@ -65,12 +65,14 @@ bool LibraryFoyer::init()
     // create the main menu
     LibraryFoyerController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void LibraryFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -80,19 +82,17 @@ void LibraryFoyer::ToMap(Ref* pSender)
 
 void LibraryFoyer::ToMeetingRoom(Ref* pSender)
 {
-    log("Going To The Library Meeting Room!");
+    HUDLayer::pauseTimer();
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
-   auto scene = LibraryRooms::createScene();
-   TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    auto scene = LibraryRooms::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
 
 void LibraryFoyer::staffTouched(Ref* pSender)
 {
-    log("you touched the staff member!");
-    
     // get the character and staff positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
     auto staff = this->getScene()->getChildByName<LibraryFoyer*>("libraryfoyer")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("staff");

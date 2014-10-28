@@ -72,8 +72,6 @@ bool ArtHallway::init()
 
 void ArtHallway::ToFoyer(Ref* pSender)
 {
-    log("Going To Buisness Hallway!");
-    
     auto scene = ArtFoyer::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
@@ -82,9 +80,8 @@ void ArtHallway::ToFoyer(Ref* pSender)
 
 
 
-void ArtHallway::ToLecture(Ref* pSender){
-    log("Going To Art Lecture!");
-    
+void ArtHallway::ToLecture(Ref* pSender)
+{
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
     
@@ -113,13 +110,60 @@ void ArtHallway::ToLecture(Ref* pSender){
     
     this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
     
+    // check whether the player is due for a lecture
     
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    TimeModel tm = HUDLayer::getCurrentPlayer().getGameTime();
+    
+    std::vector<subjectBlockClassModel> classes = timetable[tm.getSemester() - 1].getClassQueue();
+    
+    float attendance = 0;
+    
+    for(int i = 0; i < classes.size(); i++)
+    {
+        
+        double start = classes[i].getStartTime();
+        
+        if(start < 9)
+        {
+            start += 12.0;
+        }
+        
+        double end = classes[i].getTotalTimeInt() + start;
+        
+        if(tm.getDay() == classes[i].getDay())
+        {
+            // calculate a buffer for attendance
+            
+            double bufferMin = start - 0.5;
+            double bufferMax = start + 1;
+            
+            if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
+            {
+                attendance = 1;
+            }
+            // if you enter the class after the start time and before the end
+            else if(tm.getHoursMinutes() > bufferMax
+                    && tm.getHoursMinutes() <= end)
+            {
+                attendance = 0.5;
+            }
+        }
+    }
+    
+    if(attendance == 1)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 10);
+    }
+    else if(attendance == 0.5)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 15);
+    }
     
 }
 
 
 void ArtHallway::ToTutorial(Ref* pSender){
-    log("Going To Art Tutorial!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
@@ -148,7 +192,55 @@ void ArtHallway::ToTutorial(Ref* pSender){
     
     this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
 
+    // check whether the player is due for a tutorial
     
+    std::vector<timeTableClassModel> timetable = pm.getTimeTable();
+    TimeModel tm = HUDLayer::getCurrentPlayer().getGameTime();
+    
+    std::vector<subjectBlockClassModel> classes = timetable[tm.getSemester() - 1].getClassQueue();
+    
+    float attendance = 0;
+    
+    for(int i = 0; i < classes.size(); i++)
+    {
+        
+        double start = classes[i].getStartTime();
+        
+        if(start < 9)
+        {
+            start += 12.0;
+        }
+        
+        double end = classes[i].getTotalTimeInt() + start;
+        
+        if(tm.getDay() == classes[i].getDay())
+        {
+            // calculate a buffer for attendance
+            
+            double bufferMin = start - 0.5;
+            double bufferMax = start + 1;
+            
+            if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
+            {
+                attendance = 1;
+            }
+            // if you enter the class after the start time and before the end
+            else if(tm.getHoursMinutes() > bufferMax
+                    && tm.getHoursMinutes() <= end)
+            {
+                attendance = 0.5;
+            }
+        }
+    }
+    
+    if(attendance == 1)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 10);
+    }
+    else if(attendance == 0.5)
+    {
+        HUDLayer::updateStats(0, 0, 0, -5, 15);
+    }
     
     
 }

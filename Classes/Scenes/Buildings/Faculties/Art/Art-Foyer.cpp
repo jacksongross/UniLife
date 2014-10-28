@@ -64,13 +64,15 @@ bool ArtFoyer::init()
     
     // create the main menu
     ArtFoyerController::CreateMainMenu(this, visibleSize, origin);
-     
+    
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void ArtFoyer::ToHallway(Ref* pSender)
 {
-    log("Going To Art Hallway!");
+    HUDLayer::pauseTimer();
     
     auto scene = ArtHallway::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -81,7 +83,7 @@ void ArtFoyer::ToHallway(Ref* pSender)
 
 void ArtFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -91,8 +93,6 @@ void ArtFoyer::ToMap(Ref* pSender)
 
 void ArtFoyer::staffTouched(Ref* pSender)
 {
-    log("staff member touched");
-    
     // get the character and staff positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
     auto staff = this->getScene()->getChildByName<ArtFoyer*>("artfoyer")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("officeperson");

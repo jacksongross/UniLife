@@ -47,7 +47,6 @@ cocos2d::Vector<cocos2d::MenuItem*> BuisFoyerController::CreateMenuButtons(BuisF
 // call this method in the main menu scene to create the main menu
 void BuisFoyerController::CreateMainMenu(BuisFoyer *that, Size visibleSize, Vec2 origin)
 {
-    log("You Went to the Buisness Foyer");
     
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);

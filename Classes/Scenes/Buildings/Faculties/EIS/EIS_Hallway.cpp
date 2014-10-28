@@ -65,15 +65,17 @@ bool EIS_Hallway::init()
     // create the main menu
     EIS_Hallway_Controller::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void EIS_Hallway::ToFoyer(Ref* pSender)
 {
-    log("Going To EIS Foyer!");
+    HUDLayer::pauseTimer();
     
     auto scene = Inside_EIS::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(0.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -81,7 +83,6 @@ void EIS_Hallway::ToFoyer(Ref* pSender)
 
 void EIS_Hallway::ToLecture(Ref* pSender)
 {
-    log("Going To EIS Lecture!");
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     
@@ -120,11 +121,8 @@ void EIS_Hallway::ToLecture(Ref* pSender)
     
     float attendance = 0;
     
-    log("time: %f", tm.getHoursMinutes());
-    
     for(int i = 0; i < classes.size(); i++)
     {
-        cout << classes[i].getNameString() << " " << classes[i].getDay() << " " << classes[i].getStartTime() << " " << classes[i].getTotalTimeInt() << endl;
         
         double start = classes[i].getStartTime();
         
@@ -135,18 +133,12 @@ void EIS_Hallway::ToLecture(Ref* pSender)
         
         double end = classes[i].getTotalTimeInt() + start;
         
-        log("Start: %f", start);
-        log("End: %f", end);
-        
         if(tm.getDay() == classes[i].getDay())
         {
             // calculate a buffer for attendance
             
             double bufferMin = start - 0.5;
             double bufferMax = start + 1;
-            
-            log("MIN: %f", bufferMin);
-            log("MAX: %f", bufferMax);
             
             if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
             {
@@ -161,8 +153,6 @@ void EIS_Hallway::ToLecture(Ref* pSender)
         }
     }
     
-    log("Attendance: %f", attendance);
-    
     if(attendance == 1)
     {
         HUDLayer::updateStats(0, 0, 0, -5, 10);
@@ -171,7 +161,6 @@ void EIS_Hallway::ToLecture(Ref* pSender)
     {
         HUDLayer::updateStats(0, 0, 0, -5, 15);
     }
-
     
 }
 
@@ -205,8 +194,6 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
         Director::getInstance()->pushScene(crossfade);
     });
     
-    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
-    
     // check whether the player is due for a tutorial
     
     std::vector<timeTableClassModel> timetable = pm.getTimeTable();
@@ -216,11 +203,8 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
     
     float attendance = 0;
     
-    log("time: %f", tm.getHoursMinutes());
-    
     for(int i = 0; i < classes.size(); i++)
     {
-        cout << classes[i].getNameString() << " " << classes[i].getDay() << " " << classes[i].getStartTime() << " " << classes[i].getTotalTimeInt() << endl;
         
         double start = classes[i].getStartTime();
         
@@ -231,18 +215,12 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
         
         double end = classes[i].getTotalTimeInt() + start;
         
-        log("Start: %f", start);
-        log("End: %f", end);
-        
         if(tm.getDay() == classes[i].getDay())
         {
             // calculate a buffer for attendance
             
             double bufferMin = start - 0.5;
             double bufferMax = start + 1;
-            
-            log("MIN: %f", bufferMin);
-            log("MAX: %f", bufferMax);
             
             if(bufferMin == tm.getHoursMinutes() || start == tm.getHoursMinutes())
             {
@@ -257,8 +235,6 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
         }
     }
     
-    log("Attendance: %f", attendance);
-    
     if(attendance == 1)
     {
         HUDLayer::updateStats(0, 0, 0, -5, 10);
@@ -267,7 +243,6 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
     {
         HUDLayer::updateStats(0, 0, 0, -5, 15);
     }
-    
     
 }
 

@@ -53,6 +53,8 @@ bool ShopScene::init()
         return false;
     }
     
+    HUDLayer::resumeTimer();
+    
     // get the size of the screen that is visible
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
@@ -96,6 +98,8 @@ bool ShopScene::init()
 
 void ShopScene::toMap(cocos2d::Ref *pSender)
 {
+    HUDLayer::pauseTimer();
+    
     auto scene = MapScene::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);

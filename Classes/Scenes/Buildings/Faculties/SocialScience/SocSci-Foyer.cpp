@@ -66,12 +66,14 @@ bool SocSciFoyer::init()
     // create the main menu
     SocSciFoyerController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void SocSciFoyer::ToHallway(Ref* pSender)
 {
-    log("Going To Art Hallway!");
+    HUDLayer::pauseTimer();
     
     auto scene = SocSciHallway::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -82,7 +84,7 @@ void SocSciFoyer::ToHallway(Ref* pSender)
 
 void SocSciFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

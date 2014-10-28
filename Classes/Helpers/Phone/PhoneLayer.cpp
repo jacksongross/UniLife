@@ -301,7 +301,6 @@ PhoneLayer* PhoneLayer::create(PlayerModel inplayer)
         pl->setPlayerForPhone(inplayer);
         pm = inplayer;
         
-        
         int semester = inplayer.getGameTime().getSemester();
         
         std::vector<timeTableClassModel> timetable = inplayer.getTimeTable();

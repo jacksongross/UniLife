@@ -66,12 +66,14 @@ bool SciMedFoyer::init()
     // create the main menu
     SciMedFoyerController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void SciMedFoyer::ToHallway(Ref* pSender)
 {
-    log("Going To SciMed Hallway!");
+    HUDLayer::pauseTimer();
     
     auto scene = SciMedHallway::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -82,7 +84,7 @@ void SciMedFoyer::ToHallway(Ref* pSender)
 
 void SciMedFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

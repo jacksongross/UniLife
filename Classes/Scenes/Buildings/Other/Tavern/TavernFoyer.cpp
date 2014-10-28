@@ -64,12 +64,14 @@ bool TavernFoyer::init()
     // create the main menu
     TavernFoyerController::CreateMainMenu(this, visibleSize, origin);
     
+    HUDLayer::resumeTimer();
+    
     return true;
 }
 
 void TavernFoyer::ToMap(Ref* pSender)
 {
-    log("Going To The Map!");
+    HUDLayer::pauseTimer();
     
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -79,7 +81,7 @@ void TavernFoyer::ToMap(Ref* pSender)
 
 void TavernFoyer::ToTavernRoom(Ref* pSender)
 {
-    log("Going To The Tavern Games Room!");
+    HUDLayer::pauseTimer();
     
     auto scene = TavernRoom::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);

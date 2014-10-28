@@ -75,17 +75,6 @@ cocos2d::Scene* DormScene::createScene(PlayerModel inplayer)
     HUDLayer::setPlayer(inplayer);
     HUDLayer::updateHUD(pm);
     
-    // Report on the loaded player object
-    log("==========PLAYER IN DORM==========");
-    log("PLAYER ID: %d", inplayer.getId());
-    log("NAME: %s", inplayer.getName().c_str());
-    log("INT: %d", inplayer.getStats().getIntelligence());
-    log("STA: %d", inplayer.getStats().getStamina());
-    log("SOC: %d", inplayer.getStats().getSocial());
-    log("DEGREE: %s", inplayer.getDegree().c_str());
-    log("ENERGY: %d" , inplayer.getStats().getEnergy());
-    log("STRESS: %d", inplayer.getStats().getStress());
-    
     // load the character
     Movement::loadSpriteFrames(scene);
     
@@ -127,6 +116,8 @@ bool DormScene::init()
     // create the dorm scene
     DormController::CreateDormRoom(this, visibleSize, origin);
     
+    //HUDLayer::resumeTimer();
+    
     return true;
 }
 
@@ -136,6 +127,8 @@ void DormScene::DoorPressed(cocos2d::Ref *pSender)
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("dorm-door-opening.wav");
     log("you have touched the door!");
     
+    HUDLayer::pauseTimer();
+    
     // transition to the load game scene
     auto scene = MapScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
@@ -144,24 +137,7 @@ void DormScene::DoorPressed(cocos2d::Ref *pSender)
 }
 
 void DormScene::BedPressed(cocos2d::Ref *pSender)
-{
-    log("You will rest and restore all energy and decrease stress by 5");
-    
-    HUDLayer::updateStats(0, 0, 0, 100, -10);
-    
-    log("PLAYER ID: %d", pm.getId());
-    log("NAME: %s", pm.getName().c_str());
-    log("INT: %d", pm.getStats().getIntelligence());
-    log("STA: %d", pm.getStats().getStamina());
-    log("SOC: %d", pm.getStats().getSocial());
-    log("DEGREE: %s", pm.getDegree().c_str());
-    log("ENERGY: %d" , pm.getStats().getEnergy());
-    log("STRESS: %d", pm.getStats().getStress());
-    log("DAY: %d", pm.getGameTime().getDay());
-    log("WEEK: %d", pm.getGameTime().getWeek());
-    log("SEMESTER: %d", pm.getGameTime().getSemester());
-    log("TIME: %f", pm.getGameTime().getHoursMinutes());
-    
+{    
     // get the character and bed positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");
     auto bed = this->getScene()->getChildByName<DormScene*>("dorm")->getChildByName("menu")->getChildByName<cocos2d::Sprite*>("bed");
@@ -239,6 +215,8 @@ void DormScene::DeskPressed(cocos2d::Ref *pSender)
 void DormScene::ComputerPressed(cocos2d::Ref *pSender)
 {
     log("You touched the computer!");
+    
+    HUDLayer::pauseTimer();
     
     // get the character and computer positions
     auto character = this->getScene()->getChildByName<SpriteBatchNode*>("test")->getChildByName<Sprite*>("bill");

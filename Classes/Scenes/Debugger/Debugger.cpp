@@ -28,6 +28,7 @@
 #include "TutorialScene.h"
 #include "QDSplashScene.h"
 #include "PauseHelpScene.h"
+
 USING_NS_CC;
 using namespace cocos2d;
 

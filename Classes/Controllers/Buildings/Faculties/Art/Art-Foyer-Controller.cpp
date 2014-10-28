@@ -48,8 +48,6 @@ cocos2d::Vector<cocos2d::MenuItem*> ArtFoyerController::CreateMenuButtons(ArtFoy
 // call this method in the main menu scene to create the main menu
 void ArtFoyerController::CreateMainMenu(ArtFoyer *that, Size visibleSize, Vec2 origin)
 {
-    log("You Went to the Art Foyer");
-    
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems = CreateMenuButtons(that, visibleSize, origin);
     

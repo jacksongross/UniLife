@@ -3,6 +3,8 @@
 #include "QDMainMenuScene.h"
 #include "QDDefinitions.h"
 #include "Debugger.h"
+#include "DormScene.h"
+
 USING_NS_CC;
 
 unsigned int score;
@@ -43,9 +45,6 @@ bool QDGameOverScene::init()
     
     this->addChild(backgroundSprite);
     
-    //auto retryItem = MenuItemImage::create("Retry Button.png", "Retry Button Clicked.png", CC_CALLBACK_1(GameOverScene::GoToGameScene, this));
-    //retryItem->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/4 * 3));
-    
     auto mainMenuItem = MenuItemImage::create("QuackyDuck/Menu Button.png", "QuackyDuck/Menu Button Clicked.png", CC_CALLBACK_1(QDGameOverScene::GoToMainMenuScene, this));
     mainMenuItem->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/4 * 1));
     
@@ -69,15 +68,8 @@ bool QDGameOverScene::init()
 
 void QDGameOverScene::GoToMainMenuScene(cocos2d::Ref *pSender)
 {
-    auto scene = Debugger::createScene();
+    auto scene = DormScene::createScene();
     Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, scene));
 }
 
 
-//Retry button
-/*void QDGameOverScene::GoToGameScene(cocos2d::Ref *pSender)
-{
-    auto scene = QDGameScene::createScene();
-    Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, scene));
-   
-}*/

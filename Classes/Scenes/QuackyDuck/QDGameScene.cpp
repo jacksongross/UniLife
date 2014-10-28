@@ -1,6 +1,8 @@
 #include "QDGameScene.h"
 #include "QDGameOverScene.h"
 #include "QDDefinitions.h"
+#include "HUDHelper.h"
+
 USING_NS_CC;
 
 Scene* QDGameScene::createScene()
@@ -94,6 +96,9 @@ bool QDGameScene::onContactBegin (PhysicsContact &contact)
     if((DUCK_COLLISION_BITMASK == a->getCollisionBitmask() && OBSTACLE_COLLISION_BITMASK == b->getCollisionBitmask()) ||
        (DUCK_COLLISION_BITMASK == b->getCollisionBitmask() && OBSTACLE_COLLISION_BITMASK == a->getCollisionBitmask())) {
         CCLOG("SCORE: %i ", score);
+        
+        //HUDLayer::updateStats(0, 0, 0, 100, ((int) score * -1));
+        
         auto scene = QDGameOverScene::createScene(score);
         
         Director::getInstance()->replaceScene(TransitionFade::create( TRANSITION_TIME, scene));
