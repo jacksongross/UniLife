@@ -51,6 +51,8 @@ public:
     // runs the code to validate autosaving
     void updateGameTime(float t);
     
+    // checks for events at each tick of the clock
+    void checkForEvents();
     
     // updates the timer in the HUD
     void updateTimer();

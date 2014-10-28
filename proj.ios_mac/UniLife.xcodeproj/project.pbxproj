@@ -150,6 +150,12 @@
 		7ADE1F0719CE6F3200AEFF00 /* PauseMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFC19CE6F3200AEFF00 /* PauseMenu.cpp */; };
 		7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EFF19CE6F3200AEFF00 /* LogicGame.cpp */; };
 		7ADE1F0919CE6F3200AEFF00 /* Debugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */; };
+		7AE5077919FF61DB004873A8 /* dartboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE5077819FF61DB004873A8 /* dartboard.png */; };
+		7AE5078219FF61E3004873A8 /* pool_table.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AE5078119FF61E3004873A8 /* pool_table.png */; };
+		7AE5078519FF6689004873A8 /* shop in Resources */ = {isa = PBXBuildFile; fileRef = 7AE5078319FF6689004873A8 /* shop */; };
+		7AE5078619FF6689004873A8 /* unicenter in Resources */ = {isa = PBXBuildFile; fileRef = 7AE5078419FF6689004873A8 /* unicenter */; };
+		7AE5078C19FF6790004873A8 /* ShopScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5078A19FF6790004873A8 /* ShopScene.cpp */; };
+		7AE5078F19FF67A2004873A8 /* UniCenterScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5078D19FF67A2004873A8 /* UniCenterScene.cpp */; };
 		7AE5474919D545CD00243401 /* HUDHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5474719D545CD00243401 /* HUDHelper.cpp */; };
 		7AE60C9219DA8D390063452F /* Movement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE60C9019DA8D390063452F /* Movement.cpp */; };
 		7AE67C1519EFB73000E3586D /* BBStartScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AE67C1319EFB73000E3586D /* BBStartScreen.cpp */; };
@@ -579,6 +585,14 @@
 		7ADE1F0019CE6F3200AEFF00 /* LogicGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicGame.h; sourceTree = "<group>"; };
 		7ADE1F0219CE6F3200AEFF00 /* Debugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Debugger.cpp; sourceTree = "<group>"; };
 		7ADE1F0319CE6F3200AEFF00 /* Debugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debugger.h; sourceTree = "<group>"; };
+		7AE5077819FF61DB004873A8 /* dartboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dartboard.png; path = TavernSprites/dartboard.png; sourceTree = "<group>"; };
+		7AE5078119FF61E3004873A8 /* pool_table.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pool_table.png; path = TavernSprites/pool_table.png; sourceTree = "<group>"; };
+		7AE5078319FF6689004873A8 /* shop */ = {isa = PBXFileReference; lastKnownFileType = folder; path = shop; sourceTree = "<group>"; };
+		7AE5078419FF6689004873A8 /* unicenter */ = {isa = PBXFileReference; lastKnownFileType = folder; path = unicenter; sourceTree = "<group>"; };
+		7AE5078A19FF6790004873A8 /* ShopScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShopScene.cpp; path = Shop/ShopScene.cpp; sourceTree = "<group>"; };
+		7AE5078B19FF6790004873A8 /* ShopScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShopScene.h; path = Shop/ShopScene.h; sourceTree = "<group>"; };
+		7AE5078D19FF67A2004873A8 /* UniCenterScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UniCenterScene.cpp; path = Unicenter/UniCenterScene.cpp; sourceTree = "<group>"; };
+		7AE5078E19FF67A2004873A8 /* UniCenterScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UniCenterScene.h; path = Unicenter/UniCenterScene.h; sourceTree = "<group>"; };
 		7AE5474719D545CD00243401 /* HUDHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HUDHelper.cpp; sourceTree = "<group>"; };
 		7AE5474819D545CD00243401 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
 		7AE60C9019DA8D390063452F /* Movement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Movement.cpp; sourceTree = "<group>"; };
@@ -853,6 +867,8 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AE5078319FF6689004873A8 /* shop */,
+				7AE5078419FF6689004873A8 /* unicenter */,
 				7AF4E0F619FF4A7A00AF3BBB /* events */,
 				7AF4E0E519FF328E00AF3BBB /* lectures */,
 				7AF4E0E619FF328E00AF3BBB /* tutorials */,
@@ -962,6 +978,8 @@
 		7A0F1A4319BEE2FC00679823 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				7AE5078919FF6779004873A8 /* Unicenter */,
+				7AE5078819FF6772004873A8 /* Shop */,
 				7A0F1A4419BEE2FC00679823 /* Dorm */,
 				7A0F1A4719BEE2FC00679823 /* Library */,
 				7A0F1A4C19BEE2FC00679823 /* Tavern */,
@@ -1557,6 +1575,24 @@
 			path = Debugger;
 			sourceTree = "<group>";
 		};
+		7AE5078819FF6772004873A8 /* Shop */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5078A19FF6790004873A8 /* ShopScene.cpp */,
+				7AE5078B19FF6790004873A8 /* ShopScene.h */,
+			);
+			name = Shop;
+			sourceTree = "<group>";
+		};
+		7AE5078919FF6779004873A8 /* Unicenter */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5078D19FF67A2004873A8 /* UniCenterScene.cpp */,
+				7AE5078E19FF67A2004873A8 /* UniCenterScene.h */,
+			);
+			name = Unicenter;
+			sourceTree = "<group>";
+		};
 		7AE5474619D545CD00243401 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -1649,6 +1685,8 @@
 		D031093019B447A20030B59F /* Tavern */ = {
 			isa = PBXGroup;
 			children = (
+				7AE5078119FF61E3004873A8 /* pool_table.png */,
+				7AE5077819FF61DB004873A8 /* dartboard.png */,
 				D031093119B447C20030B59F /* Tavern_background.png */,
 				D031093219B447C20030B59F /* Tavern_bar.png */,
 				D031093319B447C20030B59F /* Tavern_couches.png */,
@@ -1931,6 +1969,7 @@
 				7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */,
 				D0E4680919C6A2D800254367 /* SciMed_Border.png in Resources */,
 				7A8945A519ADAF3F008E1EA7 /* load_game_on.png in Resources */,
+				7AE5077919FF61DB004873A8 /* dartboard.png in Resources */,
 				7A89459F19ADAF3F008E1EA7 /* dorm-desk.png in Resources */,
 				7AF557FB19DCDA560024A631 /* phone.png in Resources */,
 				7A8945A319ADAF3F008E1EA7 /* background.png in Resources */,
@@ -1942,6 +1981,7 @@
 				D0D709DA19BEB6290023B5A6 /* Library_couch.png in Resources */,
 				7AB6AB2919AEDDF5003CCD7E /* backtotopnormal.png in Resources */,
 				7AAC241519E8AD9A007A8331 /* select.wav in Resources */,
+				7AE5078619FF6689004873A8 /* unicenter in Resources */,
 				D098A99219AE3096005B13D3 /* green_bar.png in Resources */,
 				7A8945B419ADAF3F008E1EA7 /* phone_button.png in Resources */,
 				D0B760EE19BD5B6D00E53B52 /* EIS_Rooms.png in Resources */,
@@ -1954,6 +1994,7 @@
 				D0B163DE19F9D44300672A4C /* fred.png in Resources */,
 				7A555EAA19FC8A4900B5D9A8 /* brickbreaker-bg.jpg in Resources */,
 				7A647D1019F218CD000D36CF /* phone-bg.png in Resources */,
+				7AE5078519FF6689004873A8 /* shop in Resources */,
 				7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */,
 				7A8945AE19ADAF3F008E1EA7 /* options-border.png in Resources */,
 				D0780AA219FB58F4007109AE /* dorm.png in Resources */,
@@ -2018,6 +2059,7 @@
 				B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */,
 				7A01645A19CF956B0021009A /* block.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				7AE5078219FF61E3004873A8 /* pool_table.png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
 				7A60F3FB19AF0AFA003D3292 /* cog-110.png in Resources */,
@@ -2101,6 +2143,8 @@
 				7A0F1A9219BEE3F400679823 /* SocSci-Hallway-Controller.cpp in Sources */,
 				7A89452F19ADACFC008E1EA7 /* MenuController.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				7AE5078F19FF67A2004873A8 /* UniCenterScene.cpp in Sources */,
+				7AE5078C19FF6790004873A8 /* ShopScene.cpp in Sources */,
 				7A0F1A5D19BEE2FC00679823 /* LibraryRooms.cpp in Sources */,
 				7AB6AB0E19AEDD58003CCD7E /* MenuNewGameController.cpp in Sources */,
 				7A0F1A5219BEE2FC00679823 /* Art-Hallway.cpp in Sources */,

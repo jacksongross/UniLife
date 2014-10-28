@@ -24,7 +24,7 @@ cocos2d::Vector<cocos2d::MenuItem*> LibraryFoyerController::CreateMenuButtons(Li
     
     
     auto ToTavernRoom = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(LibraryFoyer::ToMeetingRoom, that));
-    ToTavernRoom->setPosition(Vec2(origin.x + visibleSize.width / 2 - 450 , origin.y + (visibleSize.height / 2 )));
+    ToTavernRoom->setPosition(Vec2(visibleSize.width * 0.2, visibleSize.height * 0.8));
     ToTavernRoom->setScale(0.25);
     ToTavernRoom->setName("totavern");
     pMenuItems.pushBack(ToTavernRoom);
@@ -70,10 +70,14 @@ void LibraryFoyerController::CreateMainMenu(LibraryFoyer *that, Size visibleSize
     that->addChild(desksprite, 2);
     
     Sprite *shelfsprite = Sprite::create("Library_book_shelf.png");
-    shelfsprite->setPosition(Vec2(origin.x + visibleSize.width / 2 - 170, origin.y + visibleSize.height * 0.51));
+    shelfsprite->setPosition(Vec2(visibleSize.width * 0.5, origin.y + visibleSize.height * 0.51));
     shelfsprite->setScale(1);
     shelfsprite->setName("shelf");
     that->addChild(shelfsprite);
+    
+    Sprite *couchsprite = Sprite::create("Library_couch.png");
+    couchsprite->setPosition(Vec2(visibleSize.width * 0.17, visibleSize.height * 0.41));
+    that->addChild(couchsprite);
     
     
     

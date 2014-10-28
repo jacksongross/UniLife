@@ -64,7 +64,18 @@ void LibraryRoomsController::CreateMainMenu(LibraryRooms *that, Size visibleSize
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
     
+    // add labels to the doors
+    auto solo = Label::createWithSystemFont("Study", "verdana", 20);
+    auto group = Label::createWithSystemFont("Group", "verdana", 20);
     
+    solo->setColor(Color3B(0, 0, 0));
+    group->setColor(Color3B(0, 0, 0));
+    
+    solo->setPosition(Vec2(visibleSize.width * 0.13, visibleSize.height * 0.6));
+    group->setPosition(Vec2(visibleSize.width * 0.87, visibleSize.height * 0.6));
+    
+    that->addChild(solo, 2);
+    that->addChild(group, 2);
     
 }
 

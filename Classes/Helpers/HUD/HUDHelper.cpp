@@ -321,8 +321,6 @@ void HUDLayer::updateGameTime(float t)
     }
 }
 
-///SOME STUFF HERE FOR THE TIMER CODE
-
 void HUDLayer::updateTimer()
 {
     std::string ampm;
@@ -399,5 +397,96 @@ void HUDLayer::updateTimer()
     //Added an update for the HUD Stress & Energy Bars
     HUDLayer::updateHUD(player);
     
+    checkForEvents();
+    
 }
 
+void HUDLayer::checkForEvents()
+{
+    TimeModel tm = player.getGameTime();
+    
+    cocos2d::log("checking for events");
+    
+    //srand( static_cast<unsigned int>(time(0)));
+    
+    // 1 to 7 days
+    int day = rand() % 7 + 1;
+    int currDay = tm.getDay();
+    
+    cocos2d::log("currday: %d, rand: %d", currDay, day);
+    
+    switch (day)
+    {
+        case 1:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("monday");
+            }
+            
+            break;
+        }
+        
+        case 2:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("tuesday");
+            }
+            
+            break;
+        }
+            
+        case 3:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("wednesday");
+            }
+            
+            break;
+        }
+        
+        case 4:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("thursday");
+            }
+            
+            break;
+        }
+            
+        case 5:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("friday");
+            }
+            
+            break;
+        }
+            
+        case 6:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("saturday");
+            }
+            
+            break;
+        }
+            
+        case 7:
+        {
+            if(currDay == day)
+            {
+                cocos2d::log("sunday");
+            }
+            
+            break;
+        }
+
+    }
+    
+}

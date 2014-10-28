@@ -18,6 +18,7 @@
 #include "MapScene.h"
 #include "HUDHelper.h"
 #include "Movement.h"
+#include "EventScene.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -94,7 +95,20 @@ void EIS_Hallway::ToLecture(Ref* pSender)
     float start = character->getPositionX();
     
     // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination](){
+        Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    // run the event screen
+    auto eventCallback = CallFunc::create([](){
+        
+        auto event = EventScene::createScene("events/computing_engineering_lecture.png");
+        
+        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, event);
+        Director::getInstance()->pushScene(crossfade);
+    });
+    
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
     
     
     // check whether the player is due for a lecture
@@ -178,7 +192,20 @@ void EIS_Hallway::ToTutorial(Ref* pSender)
     float start = character->getPositionX();
     
     // move the character there
-    Movement::moveCharacter(this->getScene(), start, destination);
+    auto moveCallback = CallFunc::create([this, start, destination](){
+        Movement::moveCharacter(this->getScene(), start, destination);
+    });
+    
+    // run the event screen
+    auto eventCallback = CallFunc::create([](){
+        
+        auto event = EventScene::createScene("events/computing_engineering_tutorial.png");
+        
+        TransitionCrossFade *crossfade = TransitionCrossFade::create(0.5, event);
+        Director::getInstance()->pushScene(crossfade);
+    });
+    
+    this->runAction(Sequence::createWithTwoActions(moveCallback, eventCallback));
     
     // check whether the player is due for a tutorial
     

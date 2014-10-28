@@ -59,6 +59,19 @@ void BuisHallwayController::CreateMainMenu(BuisHallway *that, Size visibleSize, 
     
     // add the sprite as a child to this layer
     that->addChild(sprite, 0);
+    
+    // add labels for the doors
+    auto lectLabel = Label::createWithSystemFont("Lecture", "Verdana", 20);
+    auto tutLabel = Label::createWithSystemFont("Tutorial", "Verdana", 20);
+    
+    lectLabel->setColor(Color3B(0, 0, 0));
+    tutLabel->setColor(Color3B(0, 0, 0));
+    
+    lectLabel->setPosition(Vec2(visibleSize.width * .54, visibleSize.height * 0.5));
+    tutLabel->setPosition(Vec2(visibleSize.width * .15, visibleSize.height * 0.5));
+    
+    that->addChild(lectLabel, 5);
+    that->addChild(tutLabel, 5);
 
 }
 

@@ -25,6 +25,9 @@
 #include "Art-Foyer.h"
 #include "SocSci-Foyer.h"
 #include "LibraryFoyer.h"
+#include "UniCenterScene.h"
+#include "ShopScene.h"
+
 USING_NS_CC;
 
 extern PlayerModel pm;
@@ -59,15 +62,6 @@ Scene* MapScene::createScene(PlayerModel inplayer)
     scene->addChild(layer);
     pm = inplayer;
     pm.setStats(inplayer.getStats());
-    
-    
-    // Report on the loaded player object
-    log("==========PLAYER IN MAP==========");
-    log("NAME: %s", inplayer.getName().c_str());
-    log("INT: %d", inplayer.getStats().getIntelligence());
-    log("STA: %d", inplayer.getStats().getStamina());
-    log("SOC: %d", inplayer.getStats().getSocial());
-    log("DEGREE: %s", inplayer.getDegree().c_str());
     
     // return the scene
     return scene;
@@ -113,8 +107,8 @@ void MapScene::GoToDorm(Ref* pSender)
 {
     log("Going Back to Menu!");
     
-    auto scene = DormScene::createScene(player);
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    auto scene = DormScene::createScene(pm);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -124,7 +118,7 @@ void MapScene::GoToEIS(Ref* pSender)
     log("Going To Inside EIS Building!");
     
     auto scene = Inside_EIS::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -134,7 +128,7 @@ void MapScene::GoToTavern(Ref* pSender)
     log("Going To Tavern!");
     
     auto scene = TavernFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -144,7 +138,7 @@ void MapScene::GoToMedSci(Ref* pSender)
     log("Going To SciMed!");
     
     auto scene = SciMedFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -154,7 +148,7 @@ void MapScene::GoToBuis(Ref* pSender)
     log("Going To Buisness!");
     
     auto scene = BuisFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -164,7 +158,7 @@ void MapScene::GoToArt(Ref* pSender)
     log("Going To Art!");
     
     auto scene = ArtFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -174,7 +168,7 @@ void MapScene::GoToSocSci(Ref* pSender)
     log("Going To Social Science!");
     
     auto scene = SocSciFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -184,7 +178,7 @@ void MapScene::GoToLibrary(Ref* pSender)
     log("Going To Library!");
     
     auto scene = LibraryFoyer::createScene();
-    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
 }
@@ -193,9 +187,9 @@ void MapScene::GoToShop(Ref* pSender)
 {
     log("Going To Shop!");
     
-    //auto scene = SocSciFoyer::createScene();
-    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    //Director::getInstance()->replaceScene(crosssfade);
+    auto scene = ShopScene::createScene();
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 
@@ -203,9 +197,9 @@ void MapScene::GoToUniCentre(Ref* pSender)
 {
     log("Going To UniCentre!");
     
-    //auto scene = SocSciFoyer::createScene();
-    //TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
-    //Director::getInstance()->replaceScene(crosssfade);
+    auto scene = UniCenterScene::createScene();
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
+    Director::getInstance()->replaceScene(crosssfade);
     
 }
 

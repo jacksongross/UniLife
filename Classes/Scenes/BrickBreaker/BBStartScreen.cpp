@@ -38,9 +38,16 @@ cocos2d::Scene* BBStartScreen::createScene()
     
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     
+    auto bg = Sprite::create("brickbreaker-bg.jpg");
+    
+    bg->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    
+    layer->addChild(bg);
+    
+    
     auto label = cocos2d::Label::createWithSystemFont("Brick Breaker", "Helvetica", 74);
     
-    label->setColor(cocos2d::Color3B(0, 0, 0));
+    //label->setColor(cocos2d::Color3B(0, 0, 0));
     
     label->setPosition(cocos2d::Vec2(visibleSize.width / 2, visibleSize.height * 0.90));
     
@@ -49,14 +56,14 @@ cocos2d::Scene* BBStartScreen::createScene()
     ui::Text* playButton = cocos2d::ui::Text::create("Play", "Arial", 88);
     
     playButton->addTouchEventListener(CC_CALLBACK_1(BBStartScreen::playCallback, layer));
-    playButton->setColor(cocos2d::Color3B::BLACK);
+    //playButton->setColor(cocos2d::Color3B::BLACK);
     playButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
     playButton->setTouchEnabled(true);
     layer->addChild(playButton, 5);
     
     ui::Text* quitButton = ui::Text::create("Quit", "Arial", 88);
     quitButton->addTouchEventListener(CC_CALLBACK_1(BBStartScreen::quitCallback, layer));
-    quitButton->setColor(cocos2d::Color3B::BLACK);
+    //quitButton->setColor(cocos2d::Color3B::BLACK);
     quitButton->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2 * 0.60));
     quitButton->setTouchEnabled(true);
     layer->addChild(quitButton, 5);

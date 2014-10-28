@@ -20,8 +20,8 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     
     
     auto GoToDorm = MenuItemImage::create("dorm.png","dorm.png" , CC_CALLBACK_1(MapScene::GoToDorm, that));
-    GoToDorm->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height / 2 -275)));
-    GoToDorm->setScale(0.3,0.3);
+    GoToDorm->setPosition(Vec2(origin.x + visibleSize.width / 2 -450, origin.y + (visibleSize.height * 0.15)));
+    //GoToDorm->setScale(0.3,0.3);
     pMenuItems.pushBack(GoToDorm);
 
     
