@@ -141,7 +141,6 @@
 		7AB6AB3B19AEDDF5003CCD7E /* slider_bar_active_9patch.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2619AEDDF5003CCD7E /* slider_bar_active_9patch.png */; };
 		7AB6AB3C19AEDDF5003CCD7E /* sliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2719AEDDF5003CCD7E /* sliderThumb.png */; };
 		7AB6AB3D19AEDDF5003CCD7E /* sliderTrack2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AB6AB2819AEDDF5003CCD7E /* sliderTrack2.png */; };
-		7ACD662F19FCDCE900774BFE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ACD662E19FCDCE900774BFE /* Info.plist */; };
 		7AD4B57319C69CFB00CE6A43 /* background-music-aac.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7AD4B57219C69CFB00CE6A43 /* background-music-aac.wav */; };
 		7AD8D78E19F624F700AF870C /* AttendanceModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8D78C19F624F700AF870C /* AttendanceModel.cpp */; };
 		7ADE1F0419CE6F3200AEFF00 /* BrickBreaker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE1EF519CE6F3200AEFF00 /* BrickBreaker.cpp */; };
@@ -1888,7 +1887,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 5R64B2P9EG;
@@ -2114,7 +2113,6 @@
 				7A8945B319ADAF3F008E1EA7 /* phone.png in Resources */,
 				7A8945A919ADAF3F008E1EA7 /* options_on.png in Resources */,
 				D0ED65BF19C934160072EDD0 /* speech_big.png in Resources */,
-				7ACD662F19FCDCE900774BFE /* Info.plist in Resources */,
 				7AB6AB3419AEDDF5003CCD7E /* New-Game-take_quiz_on.png in Resources */,
 				D0D709DC19BEB6290023B5A6 /* Library_Rooms.png in Resources */,
 				7AF4E0E819FF328E00AF3BBB /* tutorials in Resources */,
