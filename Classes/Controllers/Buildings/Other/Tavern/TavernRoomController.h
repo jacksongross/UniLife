@@ -31,5 +31,8 @@ public:
     
     // creates the main menu
     static void CreateMainMenu(TavernRoom *that, Size visibleSize, Vec2 origin);
+    
+    void RunDartGame(Ref *pSender);
+    
 };
 #endif /* defined(__UniLife__TavernRoomController__) */

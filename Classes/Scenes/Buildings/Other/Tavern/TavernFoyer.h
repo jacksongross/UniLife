@@ -32,6 +32,7 @@ public:
     cocos2d::Scene* getHUDScene(){return this->HUDScene;};
     
     void setHUDScene(cocos2d::Scene* HUDScene){this->HUDScene = HUDScene;};
+    void ShowSpeech(Ref *pSender);
     
 private:
     cocos2d::Scene* HUDScene;

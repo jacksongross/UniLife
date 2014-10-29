@@ -89,3 +89,11 @@ void TavernFoyer::ToTavernRoom(Ref* pSender)
     
 }
 
+void TavernFoyer::ShowSpeech(Ref* pSender) {
+    
+    auto sBubble = (Sprite*)this->getChildByName("sBubble");
+    auto TalkText = (cocos2d::ui::Text*)this->getChildByName("Text");
+    
+    sBubble->setVisible(true);
+    TalkText->setVisible(true);
+}

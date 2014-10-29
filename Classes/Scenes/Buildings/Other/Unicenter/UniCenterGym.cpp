@@ -74,11 +74,6 @@ bool UniCenterGym::init()
     // create the a vector to hold the menu items
     cocos2d::Vector<cocos2d::MenuItem*> pMenuItems;
     
-    auto ToMap = MenuItemImage::create("Map-marker.png","Map-marker.png" , CC_CALLBACK_1(UniCenterGym::toMap, this));
-    ToMap->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.9 ));
-    ToMap->setScale(0.85);
-    pMenuItems.pushBack(ToMap);
-    
     auto ToFoyer = MenuItemImage::create("Go_Left_Arrow.png","Go_Left_Arrow.png" , CC_CALLBACK_1(UniCenterGym::ToFoyer, this));
     ToFoyer->setPosition(Vec2(origin.x + visibleSize.width / 2 - 450, origin.y + (visibleSize.height / 2)));
     ToFoyer->setScale(0.25);
@@ -95,15 +90,6 @@ bool UniCenterGym::init()
     this->addChild(weights, 2);
     
     return true;
-}
-
-void UniCenterGym::toMap(cocos2d::Ref *pSender)
-{
-    HUDLayer::pauseTimer();
-    
-    auto scene = MapScene::createScene();
-    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
-    Director::getInstance()->replaceScene(crosssfade);
 }
 
 void UniCenterGym::ToFoyer(Ref* pSender)

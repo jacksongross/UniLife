@@ -1,0 +1,33 @@
+//
+//  DartGame.h
+//  UniLife
+//
+//  Created by Kurt Robinson on 29/10/2014.
+//
+//
+
+#ifndef __UniLife__DartGame__
+#define __UniLife__DartGame__
+
+#include <iostream>
+#include "PlayerModel.h"
+#include "cocos2d.h"
+#include "extensions/cocos-ext.h"
+#include "ui/CocosGUI.h"
+
+class DartGame : public cocos2d::Layer
+{
+public:
+    // there's no 'id' in cpp, so we recommend returning the class instance pointer
+    static cocos2d::Scene* createScene();
+    
+    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+    virtual bool init();
+    
+    // implement the "static create()" method manually
+    CREATE_FUNC(DartGame);
+private:
+
+};
+
+#endif /* defined(__UniLife__TavernFoyer__) */

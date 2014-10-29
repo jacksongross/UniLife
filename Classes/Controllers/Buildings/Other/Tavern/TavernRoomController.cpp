@@ -23,6 +23,11 @@ cocos2d::Vector<cocos2d::MenuItem*> TavernRoomController::CreateMenuButtons(Tave
     pMenuItems.pushBack(ToFoyer);
     
     
+    // dart board
+    auto ToDartGame = MenuItemImage::create("dartboard.png","dartboard.png" , CC_CALLBACK_1(TavernRoom::RunDartGame, that));
+    ToDartGame->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.6));
+    pMenuItems.pushBack(ToDartGame);
+    
     return pMenuItems;
     
 }
@@ -58,11 +63,7 @@ void TavernRoomController::CreateMainMenu(TavernRoom *that, Size visibleSize, Ve
     auto pooltable = Sprite::create("pool_table.png");
     pooltable->setPosition(Vec2(visibleSize.width * .35, visibleSize.height * .25));
     that->addChild(pooltable, 2);
-    
-    // dart board
-    auto dartboard = Sprite::create("dartboard.png");
-    dartboard->setPosition(Vec2(visibleSize.width * 0.8, visibleSize.height * 0.6));
-    that->addChild(dartboard, 2);
+
 }
 
 

@@ -19,6 +19,7 @@
 #include "MapScene.h"
 #include "HUDHelper.h"
 #include "Movement.h"
+#include "DartGame.h"
 
 USING_NS_CC;
 extern PlayerModel pm;
@@ -79,3 +80,12 @@ void TavernRoom::ToFoyer(Ref* pSender)
     
 }
 
+void TavernRoom::RunDartGame(Ref* pSender)
+{
+    HUDLayer::pauseTimer();
+    
+    auto scene = DartGame::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+    
+}

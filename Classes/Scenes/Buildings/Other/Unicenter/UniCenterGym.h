@@ -23,7 +23,6 @@ public:
     
     virtual bool init();
     
-    void toMap(Ref* pSender);
     void ToFoyer(Ref* pSender);
     
     // implement the "static create()" method manually
