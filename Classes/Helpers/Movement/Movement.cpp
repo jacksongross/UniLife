@@ -69,9 +69,9 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     
     auto animation = cocos2d::Animation::createWithSpriteFrames(animFrames, 0.1f);
     
-    float duration = 4;
+    float duration = move->getDuration();
     
-    auto act = cocos2d::Repeat::create(cocos2d::Animate::create(animation), duration);
+    auto act = cocos2d::Repeat::create(cocos2d::Animate::create(animation), duration * 2);
     act->setDuration(2);
     
     character->runAction(move);
