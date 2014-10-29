@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/NewGame/MenuDegreeSelect.cpp"
-            timestampString = "435979606.480986"
+            timestampString = "436314084.649027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "MenuDegreeSelect::NextButtonCallback(Ref* pSender)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/Scenes/NewGame/MenuDegreeSelect.cpp"
-            timestampString = "435979606.480986"
+            timestampString = "436314084.649027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "MenuDegreeSelect::NextButtonCallback(Ref* pSender)"
             landmarkType = "5">
          </BreakpointContent>

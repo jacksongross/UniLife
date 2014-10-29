@@ -14,6 +14,7 @@
 #include "cocos2d.h"
 #include "MenuDegreeSelectController.h"
 #include "MenuOptionScene.h"
+#include "TutorialScene.h"
 #include "DormScene.h"
 #include "HUDHelper.h"
 #include <CCTransition.h>
@@ -160,10 +161,9 @@ void MenuDegreeSelect::NextButtonCallback(Ref* pSender)
     
     CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("select.wav");
     
-    auto scene = DormScene::createScene(pm);
+    auto scene = TutorialScene::createScene(pm);
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
-
     
 }
 
