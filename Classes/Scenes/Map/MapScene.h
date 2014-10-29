@@ -48,6 +48,8 @@ public:
     void GoToLibrary(Ref* pSender);
     void GoToShop(Ref* pSender);
     void GoToUniCentre(Ref* pSender);
+    void GoToQuackyDuck(Ref* pSender);
+    
     /********************************
                 Getters
      *******************************/

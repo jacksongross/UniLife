@@ -70,7 +70,10 @@ cocos2d::Vector<cocos2d::MenuItem*> MapController::CreateMapButtons(MapScene *th
     GoToUniCentre->setScale(0.9);
     pMenuItems.pushBack(GoToUniCentre);
     
-    
+    auto GoToQuackyDuck = MenuItemImage::create("map_pond.png", "map_pond.png", CC_CALLBACK_1(MapScene::GoToQuackyDuck, that));
+    GoToQuackyDuck->setPosition(Vec2(origin.x + visibleSize.width / 2 + 90, origin.y + visibleSize.height / 2 - 30));
+    GoToQuackyDuck->setScale(1);
+    pMenuItems.pushBack(GoToQuackyDuck);
     
     
     return pMenuItems;

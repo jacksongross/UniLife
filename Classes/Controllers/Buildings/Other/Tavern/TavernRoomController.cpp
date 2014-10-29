@@ -51,6 +51,10 @@ void TavernRoomController::CreateMainMenu(TavernRoom *that, Size visibleSize, Ve
     
     // pool table
     
+    auto poolNPC = Sprite::create("fred_pool.png");
+    poolNPC->setPosition(Vec2(visibleSize.width / 2, visibleSize.height / 2));
+    that->addChild(poolNPC, 1);
+    
     auto pooltable = Sprite::create("pool_table.png");
     pooltable->setPosition(Vec2(visibleSize.width * .35, visibleSize.height * .25));
     that->addChild(pooltable, 2);

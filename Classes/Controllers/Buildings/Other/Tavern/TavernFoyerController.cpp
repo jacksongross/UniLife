@@ -72,8 +72,8 @@ void TavernFoyerController::CreateMainMenu(TavernFoyer *that, Size visibleSize, 
     barTable->setPosition(Vec2(origin.x + visibleSize.width / 2 + 260, origin.y + visibleSize.height / 2 - 80));
     that->addChild(barTable,2);
     
-    Sprite* barCouches = Sprite::create("Tavern_couches.png");
-    barCouches->setPosition(Vec2(origin.x + visibleSize.width / 2 + 260, origin.y + visibleSize.height / 2 - 60));
+    Sprite* barCouches = Sprite::create("Tavern_couches2.png");
+    barCouches->setPosition(Vec2(origin.x + visibleSize.width / 2 + 260, origin.y + visibleSize.height / 2 + 10));
     that->addChild(barCouches,1);
     
     

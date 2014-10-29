@@ -69,7 +69,7 @@ void LibraryFoyerController::CreateMainMenu(LibraryFoyer *that, Size visibleSize
     desksprite->setName("desk");
     that->addChild(desksprite, 2);
     
-    Sprite *shelfsprite = Sprite::create("Library_book_shelf.png");
+    Sprite *shelfsprite = Sprite::create("Library_book_shelf_full.png");
     shelfsprite->setPosition(Vec2(visibleSize.width * 0.5, origin.y + visibleSize.height * 0.51));
     shelfsprite->setScale(1);
     shelfsprite->setName("shelf");

@@ -3,7 +3,7 @@
 #include "QDMainMenuScene.h"
 #include "QDDefinitions.h"
 #include "Debugger.h"
-#include "DormScene.h"
+#include "MapScene.h"
 
 USING_NS_CC;
 
@@ -68,7 +68,7 @@ bool QDGameOverScene::init()
 
 void QDGameOverScene::GoToMainMenuScene(cocos2d::Ref *pSender)
 {
-    auto scene = DormScene::createScene();
+    auto scene = MapScene::createScene();
     Director::getInstance()->replaceScene(TransitionFade::create(TRANSITION_TIME, scene));
 }
 

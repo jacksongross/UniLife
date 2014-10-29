@@ -25,9 +25,10 @@
 #include "Art-Foyer.h"
 #include "SocSci-Foyer.h"
 #include "LibraryFoyer.h"
-#include "UniCenterScene.h"
+#include "UniCenterFoyer.h"
 #include "ShopScene.h"
 #include "HUDHelper.h"
+#include "QDSplashScene.h"
 
 USING_NS_CC;
 
@@ -206,10 +207,16 @@ void MapScene::GoToUniCentre(Ref* pSender)
 {
     HUDLayer::pauseTimer();
     
-    auto scene = UniCenterScene::createScene();
+    auto scene = UniCenterFoyer::createScene();
     TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
     Director::getInstance()->replaceScene(crosssfade);
     
+}
+
+void MapScene::GoToQuackyDuck(Ref* pSender) {
+    auto scene = QDSplashScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
 }
 
 /********************************
