@@ -82,10 +82,11 @@ void TavernRoom::ToFoyer(Ref* pSender)
 
 void TavernRoom::RunDartGame(Ref* pSender)
 {
+    /*
     HUDLayer::pauseTimer();
     
     auto scene = DartGame::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
-    
+    */
 }
