@@ -23,6 +23,9 @@ public:
     // move character in the scene from start position to end position (touch point)
     static void moveCharacter(cocos2d::Scene* scene, float startX, float endX);
     
+    // returns the player x position
+    static float getPlayerPosition(cocos2d::Scene* scene);
+    
     
 private:
     

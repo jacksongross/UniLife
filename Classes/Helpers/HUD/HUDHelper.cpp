@@ -609,5 +609,4 @@ void HUDLayer::resumeTimer()
         running = true;
     }
 }
-
                                               

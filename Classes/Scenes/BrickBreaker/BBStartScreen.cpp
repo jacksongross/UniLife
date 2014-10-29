@@ -111,7 +111,8 @@ void BBStartScreen::playCallback(cocos2d::Ref *pSender)
 
 void BBStartScreen::quitCallback(cocos2d::Ref *pSender)
 {
-    Director::getInstance()->popScene();
-    HUDLayer::resumeTimer();
+    auto scene = DormScene::createScene();
+    TransitionCrossFade *crosssfade = TransitionCrossFade::create(.5,scene);
+    Director::getInstance()->replaceScene(crosssfade);
 
 }

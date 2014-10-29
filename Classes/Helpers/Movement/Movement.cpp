@@ -75,6 +75,14 @@ void Movement::moveCharacter(cocos2d::Scene* scene, float startX, float endX)
     
     character->runAction(move);
     
+}
+
+// returns the player x position
+float Movement::getPlayerPosition(cocos2d::Scene* scene)
+{
+    auto ss = (cocos2d::Sprite*)scene->getChildByName("test");
+    auto character = ss->getChildByName<cocos2d::Sprite*>("bill");
     
+    return character->getPositionX();
 }
 
