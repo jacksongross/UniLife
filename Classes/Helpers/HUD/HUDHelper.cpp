@@ -438,156 +438,160 @@ void HUDLayer::checkForEvents()
     
     cocos2d::Size visibleSize = cocos2d::Director::getInstance()->getVisibleSize();
     
-    switch (day)
+    if(tm.getHoursMinutes() > 10)
     {
-        case 1:
+    
+        switch (day)
         {
-            if(currDay == day)
+            case 1:
             {
-                cocos2d::log("monday");
+                if(currDay == day)
+                {
+                    cocos2d::log("monday");
+                    
+                    used.push_back(1);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Wanna play a game?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 1);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(1);
-            
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Wanna play a game?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 1);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
-        }
-        
-        case 2:
-        {
-            if(currDay == day)
+                
+            case 2:
             {
-                cocos2d::log("tuesday");
+                if(currDay == day)
+                {
+                    cocos2d::log("tuesday");
+                    
+                    used.push_back(2);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Relieve some stress?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 2);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(2);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Relieve some stress?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 2);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
-        }
-            
-        case 3:
-        {
-            if(currDay == day)
+                
+            case 3:
             {
-                cocos2d::log("wednesday");
+                if(currDay == day)
+                {
+                    cocos2d::log("wednesday");
+                    
+                    used.push_back(3);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Wanna study?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 3);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                    
+                }
                 
-                used.push_back(3);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Wanna study?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 3);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
-                
+                break;
             }
-            
-            break;
-        }
-        
-        case 4:
-        {
-            if(currDay == day)
+                
+            case 4:
             {
-                cocos2d::log("thursday");
+                if(currDay == day)
+                {
+                    cocos2d::log("thursday");
+                    
+                    used.push_back(4);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Feeling tired?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 4);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(4);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Feeling tired?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 4);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
-        }
-            
-        case 5:
-        {
-            if(currDay == day)
+                
+            case 5:
             {
-                cocos2d::log("friday");
+                if(currDay == day)
+                {
+                    cocos2d::log("friday");
+                    
+                    used.push_back(5);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Seen your friends lately?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 5);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(5);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Seen your friends lately?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 5);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
-        }
-            
-        case 6:
-        {
-            if(currDay == day)
+                
+            case 6:
             {
-                cocos2d::log("saturday");
+                if(currDay == day)
+                {
+                    cocos2d::log("saturday");
+                    
+                    used.push_back(6);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Have a drink?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 6);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(6);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Have a drink?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 6);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
-        }
-            
-        case 7:
-        {
-            if(currDay == day)
+                
+            case 7:
             {
-                cocos2d::log("sunday");
+                if(currDay == day)
+                {
+                    cocos2d::log("sunday");
+                    
+                    used.push_back(7);
+                    
+                    cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
+                    std::string msg = "Think you're smart?";
+                    
+                    auto *p = PopUpLayer::createScene(a, msg, 7);
+                    
+                    Director::getInstance()->pause();
+                    
+                    activeScene->addChild(p, 10);
+                }
                 
-                used.push_back(7);
-                
-                cocos2d::Rect a = cocos2d::Rect(visibleSize.width / 2, visibleSize.height / 2 , 600, 300);
-                std::string msg = "Think you're smart?";
-                
-                auto *p = PopUpLayer::createScene(a, msg, 7);
-                
-                Director::getInstance()->pause();
-                
-                activeScene->addChild(p, 10);
+                break;
             }
-            
-            break;
+                
         }
-
     }
     
 }
