@@ -7,6 +7,7 @@
 //
 
 #include "Art-Hallway-Controller.h"
+#include "MapScene.h"
 extern PlayerModel pm;
 USING_NS_CC;
 
@@ -23,7 +24,7 @@ cocos2d::Vector<cocos2d::MenuItem*> ArtHallwayController::CreateMenuButtons(ArtH
     ToFoyer->setRotation(180);
     pMenuItems.pushBack(ToFoyer);
     
-    auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(ArtHallway::ToLecture, that));
+    auto LectDoor = MenuItemImage::create("door.png","door_opened.png" , CC_CALLBACK_1(ArtHallway::GoToLawGame, that));
     LectDoor->setPosition(Vec2(origin.x + visibleSize.width / 2 + 50, origin.y + (visibleSize.height / 2 - 26)));
     LectDoor->setName("lectdoor");
     pMenuItems.pushBack(LectDoor);

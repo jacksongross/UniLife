@@ -170,6 +170,8 @@
 		7AF557FC19DCDA560024A631 /* phone_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F819DCDA560024A631 /* phone_button.png */; };
 		7AF557FD19DCDA560024A631 /* phone_selection.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF557F919DCDA560024A631 /* phone_selection.png */; };
 		7AF5580819DCE7ED0024A631 /* power-off-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 7AF5580719DCE7ED0024A631 /* power-off-100.png */; };
+		7D02C9E61A174BFA00B35108 /* LawGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D02C9E41A174BFA00B35108 /* LawGame.cpp */; };
+		7D0BF9531A1C5CD40012001E /* LawGame in Resources */ = {isa = PBXBuildFile; fileRef = 7D0BF9521A1C5CD40012001E /* LawGame */; };
 		B6012573199C96A3006A6778 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6012572199C96A3006A6778 /* Default-568h@2x.png */; };
 		B904FF6B19FA4B200035DB80 /* PauseHelpScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B904FF6919FA4B200035DB80 /* PauseHelpScene.cpp */; };
 		B904FF7619FA6D880035DB80 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = B904FF7519FA6D880035DB80 /* Help */; };
@@ -620,6 +622,9 @@
 		7AF557F819DCDA560024A631 /* phone_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_button.png; sourceTree = "<group>"; };
 		7AF557F919DCDA560024A631 /* phone_selection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone_selection.png; sourceTree = "<group>"; };
 		7AF5580719DCE7ED0024A631 /* power-off-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "power-off-100.png"; sourceTree = "<group>"; };
+		7D02C9E41A174BFA00B35108 /* LawGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LawGame.cpp; path = "../Classes/Scenes/Law Game/LawGame.cpp"; sourceTree = "<group>"; };
+		7D02C9E51A174BFA00B35108 /* LawGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LawGame.h; path = "../Classes/Scenes/Law Game/LawGame.h"; sourceTree = "<group>"; };
+		7D0BF9521A1C5CD40012001E /* LawGame */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LawGame; sourceTree = "<group>"; };
 		B6012572199C96A3006A6778 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B904FF6919FA4B200035DB80 /* PauseHelpScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PauseHelpScene.cpp; sourceTree = "<group>"; };
 		B904FF6A19FA4B200035DB80 /* PauseHelpScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseHelpScene.h; sourceTree = "<group>"; };
@@ -902,6 +907,7 @@
 				D0ED65BC19C933A80072EDD0 /* Miscellaneous */,
 				7A6DBD7319C576FF006A83CB /* SoundEffects */,
 				7A78809319C17C4200BFF491 /* BrickBreaker */,
+				7D0BF9521A1C5CD40012001E /* LawGame */,
 				D0D709D419BEB56E0023B5A6 /* LibraryAssets */,
 				D031093019B447A20030B59F /* Tavern */,
 				D0E73DC719B3F5A200F4F720 /* InsideViewSprites */,
@@ -1329,6 +1335,7 @@
 		7A89454B19ADAD23008E1EA7 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7D02C9DC1A174BE700B35108 /* LawGame */,
 				B99294BA19F18A5800E3E5E4 /* QuackyDuck */,
 				D08AFF8A19ECB3BB0089E0AF /* Tutorial */,
 				7ADE1EF419CE6F3200AEFF00 /* BrickBreaker */,
@@ -1668,6 +1675,16 @@
 				7AF557F919DCDA560024A631 /* phone_selection.png */,
 			);
 			path = Interface;
+			sourceTree = "<group>";
+		};
+		7D02C9DC1A174BE700B35108 /* LawGame */ = {
+			isa = PBXGroup;
+			children = (
+				7D02C9E41A174BFA00B35108 /* LawGame.cpp */,
+				7D02C9E51A174BFA00B35108 /* LawGame.h */,
+			);
+			name = LawGame;
+			path = ../../classes;
 			sourceTree = "<group>";
 		};
 		B904FF7719FAB99F0035DB80 /* Bill */ = {
@@ -2102,6 +2119,7 @@
 				B90D0E4919EFD0B800C5A4E3 /* placeholder_background.png in Resources */,
 				7A01645A19CF956B0021009A /* block.png in Resources */,
 				D03642C3199C290B00ECA5DA /* AppIcon60x60@2x[1].png in Resources */,
+				7D0BF9531A1C5CD40012001E /* LawGame in Resources */,
 				7AE5078219FF61E3004873A8 /* pool_table.png in Resources */,
 				D031093619B447C20030B59F /* Tavern_bar.png in Resources */,
 				D03642C5199C290B00ECA5DA /* Icon-57@2x.png in Resources */,
@@ -2171,6 +2189,7 @@
 				B95E93BB1A011AC70031F5A5 /* DartGame.cpp in Sources */,
 				7A89452E19ADACFC008E1EA7 /* MapController.cpp in Sources */,
 				7ADE1F0819CE6F3200AEFF00 /* LogicGame.cpp in Sources */,
+				7D02C9E61A174BFA00B35108 /* LawGame.cpp in Sources */,
 				D04F1C5119DA4755006B7AA1 /* MessageLayer.cpp in Sources */,
 				7AB6AB0D19AEDD58003CCD7E /* MenuDegreeSelectController.cpp in Sources */,
 				7A89456119ADAD23008E1EA7 /* subjectBlockClassModel.cpp in Sources */,

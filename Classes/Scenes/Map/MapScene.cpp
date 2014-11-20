@@ -29,7 +29,7 @@
 #include "ShopScene.h"
 #include "HUDHelper.h"
 #include "QDSplashScene.h"
-
+#include "LawGame.h"
 USING_NS_CC;
 
 extern PlayerModel pm;
@@ -215,6 +215,12 @@ void MapScene::GoToUniCentre(Ref* pSender)
 
 void MapScene::GoToQuackyDuck(Ref* pSender) {
     auto scene = QDSplashScene::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+}
+
+void MapScene::GoToLawGame(Ref* pSender) {
+    auto scene = LawGame::createScene();
     TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
     Director::getInstance()->replaceScene(crosssfade);
 }

@@ -27,6 +27,14 @@ cocos2d::Vector<cocos2d::MenuItem*> MenuOptionController::CreateMenuButtons(Menu
     
     pMenuItems.pushBack(backButton);
     
+    /*
+    auto debugButton = MenuItemImage::create("speech_small.png", "speech_small.png", CC_CALLBACK_1(MenuOptionScene::debugButtonCallback, that));
+       debugButton->setScale(0.75);
+       debugButton->setPosition(Vec2(visibleSize.width / 2 + 365, visibleSize.height / 2 - 150));
+    
+        pMenuItems.pushBack(debugButton);
+    */
+    
     return pMenuItems;
     
 }

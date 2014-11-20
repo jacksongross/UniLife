@@ -21,7 +21,8 @@
 #include "HUDHelper.h"
 #include "Movement.h"
 #include "EventScene.h"
-
+#include "LawGame.h"
+#include "MapScene.h"
 USING_NS_CC;
 extern PlayerModel pm;
 
@@ -78,6 +79,11 @@ void ArtHallway::ToFoyer(Ref* pSender)
     
 }
 
+void ArtHallway::GoToLawGame(Ref* pSender) {
+    auto scene = LawGame::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+}
 
 
 void ArtHallway::ToLecture(Ref* pSender)
@@ -118,6 +124,8 @@ void ArtHallway::ToLecture(Ref* pSender)
     std::vector<subjectBlockClassModel> classes = timetable[tm.getSemester() - 1].getClassQueue();
     
     float attendance = 0;
+    
+    
     
     for(int i = 0; i < classes.size(); i++)
     {
@@ -241,6 +249,8 @@ void ArtHallway::ToTutorial(Ref* pSender){
     {
         HUDLayer::updateStats(0, 0, 0, -5, 15);
     }
+    
+    
     
     
 }

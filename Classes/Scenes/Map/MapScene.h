@@ -49,6 +49,8 @@ public:
     void GoToShop(Ref* pSender);
     void GoToUniCentre(Ref* pSender);
     void GoToQuackyDuck(Ref* pSender);
+    void GoToLawGame(Ref* pSender);
+    
     
     /********************************
                 Getters

@@ -28,7 +28,7 @@
 #include "TutorialScene.h"
 #include "QDSplashScene.h"
 #include "PauseHelpScene.h"
-
+#include "LawGame.h"
 USING_NS_CC;
 using namespace cocos2d;
 
@@ -114,6 +114,14 @@ void Debugger::SpawnList(){
     Tutorial->setTouchEnabled(true);
     this->addChild(Tutorial,5);
     
+    
+    ui::Text* LawGame = ui::Text::create("LawGame", "Arial", 20);
+    LawGame->addTouchEventListener(CC_CALLBACK_1(Debugger::gotoTutorial, this));
+    LawGame->setColor(Color3B::BLACK);
+    LawGame->cocos2d::Node::setPosition(Point(visibleSize.width/2, visibleSize.height/2 + 150));
+    LawGame->setTouchEnabled(true);
+    this->addChild(LawGame,5);
+    
 }
 
 void Debugger::gotoLogicGame(Ref* pSender){
@@ -146,6 +154,12 @@ void Debugger::gotoQuackyDuck(Ref* pSender) {
     Director::getInstance()->replaceScene(crosssfade);
 }
 
+void Debugger::gotoLawGame(Ref* pSender) {
+    log("Law Game Initalize");
+    auto scene = LawGame::createScene();
+    TransitionPageTurn *crosssfade = TransitionPageTurn::create(1,scene, true);
+    Director::getInstance()->replaceScene(crosssfade);
+}
 
 void Debugger::gotoPopUp(Ref* pSender){
     

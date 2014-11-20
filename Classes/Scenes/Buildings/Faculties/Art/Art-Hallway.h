@@ -34,6 +34,8 @@ public:
     
     void setHUDScene(cocos2d::Scene* HUDScene){this->HUDScene = HUDScene;};
     
+    void GoToLawGame(Ref* pSender);
+    
 private:
     cocos2d::Scene* HUDScene;
 };
