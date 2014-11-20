@@ -2,7 +2,7 @@
 //  LawGame.cpp
 //  UniLife
 //
-//  Created by csci321ga2a on 18/09/2014.
+//  Created by James Glennan on 30/10/2014.
 //
 //
 #include "LawGame.h"
