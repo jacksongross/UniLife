@@ -97,7 +97,7 @@ public:
     CREATE_FUNC(LawGame);
 private:
     
-    PlayerModel player;
+    
     std::vector<QuestionContainer> generateQ();
     //Vector Containers
     
